@@ -1,7 +1,3 @@
----
-layout: page
-title: READ|ME
-published: false
----
+Source code for my GitHub Pages:
 
-# Start Page
+https://shikhalev.github.io/
