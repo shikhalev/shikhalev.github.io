@@ -8,6 +8,9 @@ web:
 blogs:
   title: Блоги
   description: Блогосфера и технологии, ее обеспечивающие
+hardware:
+  title: Железо
+  description: Всякие разные интересные или не очень устройства
 
 photo:
   title: Фото

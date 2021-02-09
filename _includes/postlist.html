@@ -1,0 +1,25 @@
+{%- if posts.size > 0 -%}
+<ul class="post-list">
+  {%- for post in posts -%}
+  <li>
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    <span class="post-meta">{{ post.date | date: date_format }}
+    | Разделы: {% include cats.html %}</span>
+    <h3>
+      <a class="post-link" href="{{ post.url | relative_url }}">
+        {{ post.title | escape }}
+      </a>
+    </h3>
+    {%- if site.show_excerpts -%}
+    {{ post.excerpt }}
+    {%- endif -%}
+    <p class="small"><a href="{{ post.url | relative_url }}">Читать далее »</a></p>
+    <p class="post-meta">Тэги: {% include tags.html %}</p>
+  </li>
+  {%- endfor -%}
+</ul>
+
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+{%- endif -%}
+
+<!-- TODO: отдельные фиды для разных списков -->

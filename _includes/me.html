@@ -1,0 +1,19 @@
+<h4>О себе</h4>
+
+<ul class="contact-list">
+  <li class="p-name">
+    {%- if site.author -%} {{ site.author | escape }} {%- else -%} {{ site.title
+    | escape }} {%- endif -%}
+  </li>
+  {%- if site.email -%}
+  <li>
+    <a class="u-email" href="mailto:{{ site.email }}">🖆 {{ site.email }}</a>
+  </li>
+  {%- endif -%}
+</ul>
+
+<ul class="contact-list">
+  <li>⛰ Живу на Урале</li>
+  <li>💻 Программист</li>
+  <li>📷 Хобби — фотография</li>
+</ul>

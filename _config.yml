@@ -21,6 +21,7 @@
 lang: ru
 title: Иван Шихалев
 email: shikhalev@gmail.com
+author: Иван Шихалев
 description: >- # this means to ignore newlines until "baseurl:"
   Блог. Склад текстов. И прочее городу и миру.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -43,6 +44,12 @@ plugins:
 minima:
   date_format: "%Y.%m.%d"
 
+header_pages:
+  - cats/it.md
+  - cats/photo.md
+  - about.markdown
+
+# TODO: normal about
 
 # Exclude from processing.
 # The following items will not be processed, by default.

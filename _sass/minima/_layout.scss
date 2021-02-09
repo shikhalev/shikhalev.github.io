@@ -8,6 +8,10 @@
 
   // Positioning context for the mobile navigation icon
   position: relative;
+
+  @media print {
+    display: none;
+  }
 }
 
 .site-title {
@@ -17,6 +21,7 @@
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
+  font-family: $caption-font-family;
 
   &,
   &:visited {
@@ -107,6 +112,10 @@
   padding: 10px;
   border-top: solid $grey-color-light 5px;
   border-left: solid $grey-color-light 1px;
+
+  @media print {
+    display: none;
+  }
 }
 
 /**
@@ -115,6 +124,10 @@
 .site-footer {
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
+
+  @media print {
+    display: none;
+  }
 }
 
 .footer-heading {
@@ -206,7 +219,12 @@
 
 .post-meta {
   font-size: $small-font-size;
+  font-family: $caption-font-family;
   color: $grey-color;
+
+  a {
+    color: $grey-color;
+  }
 }
 
 .post-link {
@@ -240,6 +258,7 @@
   padding: 3px;
   font-size: $small-font-size;
   color: $brand-color;
+  font-family: $caption-font-family;
 
   a:link {
     color: $brand-color;
@@ -305,6 +324,7 @@
   }
 
   .caption {
+    font-family: $caption-font-family;
     font-style: italic;
     text-align: center;
   }
@@ -312,7 +332,7 @@
 
 .center-box {
   text-align: center;
-  width: 800px;
+  max-width: 800px;
   padding: 0px;
   margin-top: 0px;
   margin-bottom: 10px;
@@ -331,8 +351,46 @@
     margin-bottom: 3px;
   }
 
+  table {
+    margin-bottom: 0px;
+  }
+
   .caption {
+    font-family: $caption-font-family;
     font-style: italic;
     text-align: center;
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $caption-font-family;
+}
+
+.taglist {
+  font-size: $small-font-size;
+  font-family: $caption-font-family;
+  color: $grey-color;
+
+  a {
+    color: $grey-color;
+  }
+}
+
+.small {
+  font-size: small;
+}
+
+img.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  box-shadow: 1px 1px 10px $grey-color;
+}
+
+p.description {
+  font-style: italic;
+  font-family: $caption-font-family;
+  color: $grey-color;
 }
