@@ -1,0 +1,14 @@
+
+it:
+  title: IT
+  description: Информационные технологии
+web:
+  title: Web
+  description: Интернет, всемирная паутина и все, что с ними связано
+blogs:
+  title: Блоги
+  description: Блогосфера и технологии, ее обеспечивающие
+
+photo:
+  title: Фото
+  description: Фотография
