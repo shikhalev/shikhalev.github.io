@@ -12,3 +12,6 @@ blogs:
 photo:
   title: Фото
   description: Фотография
+processing:
+  title: Обработка
+  description: Обработка фотографий
