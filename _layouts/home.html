@@ -7,7 +7,7 @@ layout: default
 {% include postlist.html %}
 {% endcapture %}
 {% capture main_toc %}
-{{ main_text | toc_only }}
+{% include toc.html html = main_text sanitize = true item_class = "toc-entry" %}
 {% endcapture %}
 
 {% include sidebar.html toc = main_toc %}
