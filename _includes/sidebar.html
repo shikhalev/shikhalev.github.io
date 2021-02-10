@@ -1,4 +1,11 @@
 <aside class="sidebar">
-  {% include me.html %}
-  {%- include social.html -%}
+
+  <div class="block">
+    {{ include.toc }}
+  </div>
+
+  <div class="block">
+    {% include me.html %}
+    {%- include social.html -%}
+  </div>
 </aside>

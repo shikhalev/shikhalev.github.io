@@ -2,7 +2,15 @@
 layout: default
 ---
 
-{% include sidebar.html %}
+{% capture main_text %}
+{% assign posts = site.posts %}
+{% include postlist.html %}
+{% endcapture %}
+{% capture main_toc %}
+{{ main_text | toc_only }}
+{% endcapture %}
+
+{% include sidebar.html toc = main_toc %}
 
 <div class="home">
 
@@ -15,8 +23,6 @@ layout: default
   {{ content }}
 </div>
 
-{% assign posts = site.posts %}
-
-{% include postlist.html %}
+{{ main_text }}
 
 </div>

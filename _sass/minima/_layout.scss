@@ -109,9 +109,19 @@
   float: right;
   width: 300px;
   margin-left: 10px;
-  padding: 10px;
+  padding: 0px;
+
+  .block {
+  padding: 10px 10px 0px;
   border-top: solid $grey-color-light 5px;
   border-left: solid $grey-color-light 1px;
+  margin-bottom: 10px;
+
+  li.toc-entry::marker {
+      content: "🗈 ";
+  }
+
+  }
 
   @media print {
     display: none;
@@ -318,20 +328,22 @@
   border: solid $grey-color-light 1px;
 
   p {
-    font-size: small;
-    margin-top: 5px;
-    margin-bottom: 3px;
+    margin: 0px;
   }
 
   .caption {
     font-family: $caption-font-family;
     font-style: italic;
     text-align: center;
+    font-size: small;
+    margin-top: 5px;
+    margin-bottom: 3px;
   }
 }
 
 .center-box {
   text-align: center;
+  width: 800px;
   max-width: 800px;
   padding: 0px;
   margin-top: 0px;

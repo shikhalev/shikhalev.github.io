@@ -1,11 +1,11 @@
 {%- if posts.size > 0 -%}
 <ul class="post-list">
   {%- for post in posts -%}
-  <li>
+  <li id="li-{{ post.url | slugify }}">
     {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
     <span class="post-meta">{{ post.date | date: date_format }}
     | Разделы: {% include cats.html %}</span>
-    <h3>
+    <h3 id="h-{{ post.url | slugify }}">
       <a class="post-link" href="{{ post.url | relative_url }}">
         {{ post.title | escape }}
       </a>
