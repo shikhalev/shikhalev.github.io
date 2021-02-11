@@ -1,8 +1,12 @@
 <aside class="sidebar">
 
+  {% assign flag = include.toc | strip %}
+  {% if flag != "" %}
   <div class="block">
+    <h4>Содержание</h4>
     {{ include.toc }}
   </div>
+  {% endif %}
 
   <div class="block">
     {% include me.html %}

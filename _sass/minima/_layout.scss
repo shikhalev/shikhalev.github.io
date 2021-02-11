@@ -318,7 +318,7 @@
 
 .right-box {
   float: right;
-  width: 320px;
+  // width: 320px;
   padding: 0px;
   margin-top: 0px;
   margin-bottom: 10px;
@@ -338,6 +338,7 @@
     font-size: small;
     margin-top: 5px;
     margin-bottom: 3px;
+    max-width: 310px;
   }
 }
 

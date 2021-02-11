@@ -1,8 +1,11 @@
 ---
 layout: default
 ---
+{% capture main_toc %}
+{% include toc.html html = content sanitize = true item_class = "toc-entry" %}
+{% endcapture %}
 
-{% include sidebar.html %}
+{% include sidebar.html toc = main_toc %}
 
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
