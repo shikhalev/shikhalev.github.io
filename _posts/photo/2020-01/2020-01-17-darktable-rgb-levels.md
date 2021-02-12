@@ -13,25 +13,25 @@ author: Иван Шихалев
 ---
 
 Продолжаю изучать новые возможности Darktable 3.0. Пробежался по некоторым новым модулям,
-пока не впечатлен,  но кое-что интересное нашлось. Модуль называется «Уровни RGB» и делает,
-в общем, то же самое, что и старый модуль «Уровни» (правда, без полностью автоматического
+пока не впечатлен,  но кое-что интересное нашлось. Модуль называется «Уровни RGB[^foot-rgb-levels]»
+и делает, в общем, то же самое, что и старый модуль «Уровни» (правда, без полностью автоматического
 режима), но с возможностью работы по отдельным каналам красного, зеленого и синего. Что это
 дает на практике, сейчас и рассмотрим.
 
 <div class="center-box">
-<a href="/assets/img/2020-01/RGB.png" title="Панели модуля «Уровни RGB»"><img src="/assets/img/2020-01/RGB.png" alt="Панели модуля «Уровни RGB»"></a>
+[![Панели модуля «Уровни RGB»][img-module]][img-module]
 </div>
 
 <!--more-->
 
 Итак, есть вот такая фотография, снятая при плохих условиях освещения — зима, тень, веточки,
 сквозь которые просвечивает черте-что... Вот так она выглядит при проявке по умолчанию
-с моими обычными предустановками:
+[с моими обычными предустановками][quickstart]:
 
 <!-- TODO: ссылка на предустановки -->
 
 <div class="center-box">
-<a href="/assets/photo/2020-01/default.jpg" title="Фотография с обычными предустановками"><img src="/assets/img/2020-01/default.jpg" alt="Фотография с обычными предустановками"></a>
+[![Фотография с обычными предустановками][img-default]][photo-default]
 </div>
 
 Что характерно, настройка сохранения цветов в модуле базовой кривой не влияет на картинку
@@ -42,22 +42,18 @@ author: Иван Шихалев
 <!-- TODO: ссылка на настройку сохранения цветов -->
 
 Что ж, попробуем исправить проблему старыми средствами. Для начала поправим контраст
-посредством «Тональной кривой<sup>[<a
-href="https://photoredroom.blogspot.com/2018/07/dttonegroup3.html">ru</a>/<a
-href="https://darktable.gitlab.io/doc/en/tone_group.html#tone_curve">en</a>]</sup>»,
+посредством «Тональной кривой[^foot-tonecurve][^foot-tonecurve-ru]»,
 выбрав предустановку «Сжатие контраста»:
 
 <div class="center-box">
-<a href="/assets/photo/2020-01/contrast.jpg" title="Фотография со сжатием контраста"><img src="/assets/img/2020-01/contrast.jpg" alt="Фотография со сжатием контраста"></a>
+[![Фотография со сжатием контраста][img-contrast]][photo-contrast]
 </div>
 
-Затем в настройках баланса белого<sup>[<a
-href="https://photoredroom.blogspot.com/2018/06/dtbasicgroup10.html">ru</a>/<a
-href="https://darktable.gitlab.io/doc/en/modules.html#whitebalance">en</a>]</sup>
+Затем в настройках баланса белого[^foot-bb][^foot-bb-ru]
 вместо профиля камеры выберем вариант «Пипетка» и область всей картинки (или большей части):
 
 <div class="center-box">
-<a href="/assets/photo/2020-01/bb.jpg" title="Фотография с исправленным балансом белого"><img src="/assets/img/2020-01/bb.jpg" alt="Фотография с исправленным балансом белого"></a>
+[![Фотография с исправленным балансом белого][img-bb]][photo-bb]
 </div>
 
 В целом, уже неплохо.
@@ -67,7 +63,7 @@ href="https://darktable.gitlab.io/doc/en/modules.html#whitebalance">en</a>]</sup
 потыкаем кнопку «Авто» (просто автоматического режима, как я уже сказал, тут не предусмотрено):
 
 <div class="center-box">
-<a href="/assets/photo/2020-01/levels.jpg" title="Фотография после применения модуля"><img src="/assets/img/2020-01/levels.jpg" alt="Фотография после применения модуля"></a>
+[![Фотография после применения модуля «Уровни RGB»][img-levels]][photo-levels]
 </div>
 
 Удивительным образом мы получили более чистую и отчетливую картинку, чем в предыдущем
@@ -75,3 +71,22 @@ href="https://darktable.gitlab.io/doc/en/modules.html#whitebalance">en</a>]</sup
 поигравшись вручную с уровнями и кривыми, но вручную же).
 
 Итого: инструмент, конечно, для очень специфических случаев, но вполне годный.
+
+[img-module]: /assets/img/2020-01/RGB.png "Панели модуля «Уровни RGB»"
+[img-default]: /assets/img/2020-01/default.jpg
+[img-contrast]: /assets/img/2020-01/contrast.jpg
+[img-bb]: /assets/img/2020-01/bb.jpg
+[img-levels]: /assets/img/2020-01/levels.jpg
+
+[photo-default]: /assets/photo/2020-01/default.jpg "Фотография с обычными предустановками"
+[photo-contrast]: /assets/photo/2020-01/contrast.jpg "Фотография со сжатием контраста"
+[photo-bb]: /assets/photo/2020-01/bb.jpg "Фотография с исправленным балансом белого"
+[photo-levels]: /assets/photo/2020-01/levels.jpg "Фотография после применения модуля «Уровни RGB»"
+
+[quickstart]: {% link _posts/photo/2019-09/2019-09-21-darktable-quickstart.md %} "Darktable — (не очень) быстрый старт"
+
+[^foot-rgb-levels]: Документация по модулю «Уровни RGB» (en, v3.4): <https://www.darktable.org/usermanual/en/module-reference/processing-modules/rgb-levels/>
+[^foot-tonecurve]: Тоновая кривая (en, v3.4): <https://www.darktable.org/usermanual/en/module-reference/processing-modules/base-curve/>
+[^foot-tonecurve-ru]: Тоновая кривая (ru, v2.4): <https://photoredroom.blogspot.com/2018/07/dttonegroup3.html>
+[^foot-bb]: Баланс белого (en, v3.4): <https://www.darktable.org/usermanual/en/module-reference/processing-modules/white-balance/>
+[^foot-bb-ru]: Баланс белого (ru, v2.4): <https://photoredroom.blogspot.com/2018/06/dtbasicgroup10.html>

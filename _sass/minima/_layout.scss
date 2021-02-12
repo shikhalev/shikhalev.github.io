@@ -318,12 +318,36 @@
 
 .right-box {
   float: right;
-  // width: 320px;
   padding: 0px;
   margin-top: 0px;
   margin-bottom: 10px;
   margin-left: 10px;
   margin-right: 0px;
+
+  border: solid $grey-color-light 1px;
+
+  p {
+    margin: 0px;
+  }
+
+  .caption {
+    font-family: $caption-font-family;
+    font-style: italic;
+    text-align: center;
+    font-size: small;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    max-width: 310px;
+  }
+}
+
+.left-box {
+  float: left;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 10px;
 
   border: solid $grey-color-light 1px;
 
@@ -358,25 +382,28 @@
     max-width: 800px;
   }
 
-  p {
-    font-size: small;
-    margin-top: 5px;
-    margin-bottom: 3px;
-  }
-
   table {
     margin-bottom: 0px;
+  }
+
+p {
+    margin: 0px;
   }
 
   .caption {
     font-family: $caption-font-family;
     font-style: italic;
     text-align: center;
+    font-size: small;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    max-width: 800px;
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, dt {
     font-family: $caption-font-family;
+    margin-top: 15px;
 }
 
 .taglist {
@@ -406,4 +433,55 @@ p.description {
   font-style: italic;
   font-family: $caption-font-family;
   color: $grey-color;
+}
+
+sup[role="doc-noteref"] {
+  font-size: x-small;
+  ::after {
+    content: ")";
+  }
+}
+
+div.note {
+  font-size: small;
+  font-style: italic;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+hr {
+  margin: 10px;
+}
+
+dt {
+  margin-top: 15px;
+}
+
+dd {
+  margin-left: 2em;
+}
+
+.footnotes {
+  font-size: 90%;
+  columns: 2;
+
+  padding-top: 10px;
+  border-top: solid 2px $grey-color-light;
+
+  li p {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  p {
+    margin-bottom: 5px;
+    text-align: left;
+  }
+}
+
+li, p, dd {
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  text-align: justify;
+  margin-bottom: 5px;
 }
