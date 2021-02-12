@@ -34,7 +34,7 @@
   line-height: $base-line-height * $base-font-size * 2.25;
 
   .nav-trigger {
-      display: none;
+    display: none;
   }
 
   .menu-icon {
@@ -112,15 +112,17 @@
   padding: 0px;
 
   .block {
-  padding: 10px 10px 0px;
-  border-top: solid $grey-color-light 5px;
-  border-left: solid $grey-color-light 1px;
-  margin-bottom: 10px;
+    padding: 10px 10px 0px;
+    border-top: solid $grey-color-light 5px;
+    border-left: solid $grey-color-light 1px;
+    margin-bottom: 10px;
 
-  li.toc-entry::marker {
-      content: "🗈 ";
-  }
-
+    li.toc-entry {
+      margin-bottom: 0px;
+      ::marker {
+        content: "🗈 ";
+      }
+    }
   }
 
   @media print {
@@ -166,29 +168,29 @@
 
 .footer-col-1 {
   width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-  width:         calc(35% - (#{$spacing-unit} / 2));
+  width: calc(35% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
   width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-  width:         calc(20% - (#{$spacing-unit} / 2));
+  width: calc(20% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
   width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-  width:         calc(45% - (#{$spacing-unit} / 2));
+  width: calc(45% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
   .footer-col-1,
   .footer-col-2 {
     width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-    width:         calc(50% - (#{$spacing-unit} / 2));
+    width: calc(50% - (#{$spacing-unit} / 2));
   }
 
   .footer-col-3 {
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
+    width: calc(100% - (#{$spacing-unit} / 2));
   }
 }
 
@@ -196,11 +198,9 @@
   .footer-col {
     float: none;
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
+    width: calc(100% - (#{$spacing-unit} / 2));
   }
 }
-
-
 
 /**
  * Page content
@@ -242,8 +242,8 @@
   @include relative-font-size(1.5);
 }
 
-
-.post, .home {
+.post,
+.home {
   max-width: 900px;
 }
 
@@ -386,7 +386,7 @@
     margin-bottom: 0px;
   }
 
-p {
+  p {
     margin: 0px;
   }
 
@@ -401,9 +401,15 @@ p {
   }
 }
 
-h1, h2, h3, h4, h5, h6, dt {
-    font-family: $caption-font-family;
-    margin-top: 15px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dt {
+  font-family: $caption-font-family;
+  margin-top: 15px;
 }
 
 .taglist {
@@ -479,7 +485,9 @@ dd {
   }
 }
 
-li, p, dd {
+li,
+p,
+dd {
   -webkit-hyphens: auto;
   hyphens: auto;
   text-align: justify;
