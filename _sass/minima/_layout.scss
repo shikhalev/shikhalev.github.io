@@ -117,11 +117,13 @@
     border-left: solid $grey-color-light 1px;
     margin-bottom: 10px;
 
+    li.toc-entry::marker {
+      content: "🗈 ";
+    }
+
     li.toc-entry {
       margin-bottom: 0px;
-      ::marker {
-        content: "🗈 ";
-      }
+      text-align: left;
     }
   }
 
