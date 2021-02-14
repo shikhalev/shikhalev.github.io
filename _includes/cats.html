@@ -3,9 +3,11 @@
 {% else %}
 {% assign categories = page.categories %}
 {% endif %}
-{% capture catpath %}{{site.baseurl}}/{% endcapture %}
+<!-- {% capture catpath %}{{site.baseurl}}/{% endcapture %} -->
 {% for category in categories %}
-{% capture catpath %}{{catpath}}{{category|slugize}}/{% endcapture %}
-<a href="{{catpath}}" title="{{site.data.cats[category].description}}">{{site.data.cats[category].title}}</a>
+<!-- {% capture catpath %}{{catpath}}{{category|slugize}}/{% endcapture %}
+<a href="{{catpath}}" title="{{site.data.cats[category].description}}">{{site.data.cats[category].title}}</a> -->
+{% assign catpage = site.pages | find: 'selected',category %}
+<a href="{{catpage.url}}" title="{{catpage.description}}">{{ catpage.short | default: catpage.title }}</a>
 {% unless forloop.last %} / {% endunless %}
 {% endfor %}
