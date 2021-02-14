@@ -11,6 +11,11 @@ tags:
   - цвет
   - RAW
 author: Иван Шихалев
+description: >-
+  Настоящим постом я хочу рассказать, какие я использую настройки для уменьшения телодвижений в процессе
+  обработки фотографий, и какие же движения никто не отменял. Сразу скажу, что это а) мой личный опыт,
+  б) только базовая обработка. Повторять страницы мануала нет никакого желания, а если говорить об осмысленном
+  применении всех возможностей, то и компетентности.
 ---
 <div class="center-box">
 [![Скриншот darktable.org][img-site]][img-site]
@@ -503,7 +508,7 @@ XMP-файла, т.е. с текущей историей действий; а 
 
 * Чем больше я узнаю Darktable, тем больше он мне нравится, чего и вам желаю.
 
-
+<!--details-->
 
 [^orientation]: Ориентация (en, v3.4): <https://www.darktable.org/usermanual/en/module-reference/processing-modules/orientation/>
 [^orientation-ru]: Ориентация (ru, v2.4): <https://photoredroom.blogspot.com/2018/05/dtbasicgroup2.html>
@@ -561,7 +566,6 @@ XMP-файла, т.е. с текущей историей действий; а 
 [^styles-ru]: Стили обработки (ru, v2.4): <https://photoredroom.blogspot.com/2018/02/dtstyles.html>
 [^export]: Экспорт снимков (en, v3.4): <https://www.darktable.org/usermanual/en/module-reference/utility-modules/lighttable/export-selected/>
 [^export-ru]: Экспорт снимков (ru, v2.4): <https://photoredroom.blogspot.com/2018/02/dtexportselected.html>
-
 
 [img-site]: /assets/img/2019-09/dtqs/site.jpg "Скриншот сайта darktable.org"
 [img-icon]: /assets/img/2019-09/dtqs/darktable-icon.png
