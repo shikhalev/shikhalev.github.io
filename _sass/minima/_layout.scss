@@ -414,6 +414,13 @@ dt {
   margin-top: 15px;
 }
 
+.sidebar {
+  h4 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+}
+
 .taglist {
   font-size: $small-font-size;
   font-family: $caption-font-family;
@@ -494,4 +501,8 @@ dd {
   hyphens: auto;
   text-align: justify;
   margin-bottom: 5px;
+}
+
+.post-item {
+  margin-top: 0px;
 }
