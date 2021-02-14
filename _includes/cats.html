@@ -7,7 +7,7 @@
 {% for category in categories %}
 <!-- {% capture catpath %}{{catpath}}{{category|slugize}}/{% endcapture %}
 <a href="{{catpath}}" title="{{site.data.cats[category].description}}">{{site.data.cats[category].title}}</a> -->
-{% assign catpage = site.pages | find: 'selected',category %}
+{% assign catpage = site.pages | where: 'selected',category | first %}
 <a href="{{catpage.url}}" title="{{catpage.description}}">{{ catpage.short | default: catpage.title }}</a>
 {% unless forloop.last %} / {% endunless %}
 {% endfor %}
