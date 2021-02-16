@@ -79,7 +79,7 @@ author: Иван Шихалев
 [quickstart]: {% link _posts/photo/2019-09/2019-09-21-darktable-quickstart.md %} "Darktable — (не очень) быстрый старт"
 
 [^foot-rgb-levels]: Документация по модулю «Уровни RGB» (en, v3.4): <https://www.darktable.org/usermanual/en/module-reference/processing-modules/rgb-levels/>
-[^foot-tonecurve]: Тоновая кривая (en, v3.4): <https://www.darktable.org/usermanual/en/module-reference/processing-modules/base-curve/>
+[^foot-tonecurve]: Тоновая кривая (en, v3.4): <https://www.darktable.org/usermanual/en/module-reference/processing-modules/tone-curve/>
 [^foot-tonecurve-ru]: Тоновая кривая (ru, v2.4): <https://photoredroom.blogspot.com/2018/07/dttonegroup3.html>
 [^foot-bb]: Баланс белого (en, v3.4): <https://www.darktable.org/usermanual/en/module-reference/processing-modules/white-balance/>
 [^foot-bb-ru]: Баланс белого (ru, v2.4): <https://photoredroom.blogspot.com/2018/06/dtbasicgroup10.html>
