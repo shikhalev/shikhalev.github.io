@@ -58,7 +58,6 @@ minima:
 header_pages:
   - cats/it.md
   - cats/photo.md
-  - about.markdown
 
 # TODO: normal about
 

@@ -32,12 +32,10 @@ author: Иван Шихалев
 ![Фотография с обычными предустановками][img-default]
 </div>
 
-Что характерно, настройка сохранения цветов в модуле базовой кривой не влияет на картинку
+Что характерно, [настройка сохранения цветов в модуле базовой кривой][basecurve] не влияет на картинку
 *совсем*, а полное отключение этого модуля не влияет *почти*. В любом случае мы получаем
 отсутствие контраста в тенях (т.е. в данном случае именно в значимой части снимка)
 и перекос в сторону синевы.
-
-<!-- TODO: ссылка на настройку сохранения цветов -->
 
 Что ж, попробуем исправить проблему старыми средствами. Для начала поправим контраст
 посредством «Тональной кривой[^foot-tonecurve][^foot-tonecurve-ru]»,
@@ -77,6 +75,7 @@ author: Иван Шихалев
 [img-levels]: /assets/img/2020-01/rgb/levels.jpg "Фотография после применения модуля «Уровни RGB»"
 
 [quickstart]: {% link _posts/photo/2019-09/2019-09-21-darktable-quickstart.md %} "Darktable — (не очень) быстрый старт"
+[basecurve]: {% link _posts/photo/2020-01/2020-01-14-darktable-new-basecurve.md %} "Новая базовая кривая в Darktable"
 
 [^foot-rgb-levels]: Документация по модулю «Уровни RGB» (en, v3.4): <https://www.darktable.org/usermanual/en/module-reference/processing-modules/rgb-levels/>
 [^foot-tonecurve]: Тоновая кривая (en, v3.4): <https://www.darktable.org/usermanual/en/module-reference/processing-modules/tone-curve/>
