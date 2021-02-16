@@ -467,6 +467,11 @@ div.note {
   margin-right: 2em;
 }
 
+div.abstract {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
 hr {
   margin: 10px;
 }
@@ -508,4 +513,11 @@ dd {
 
 .post-item {
   margin-top: 0px;
+}
+
+figure.highlight {
+  pre {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
 }
