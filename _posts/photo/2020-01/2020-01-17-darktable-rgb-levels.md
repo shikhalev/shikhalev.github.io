@@ -70,11 +70,11 @@ author: Иван Шихалев
 
 Итого: инструмент, конечно, для очень специфических случаев, но вполне годный.
 
-[img-module]: /assets/img/2020-01/RGB.png "Панели модуля «Уровни RGB»"
-[img-default]: /assets/img/2020-01/default.jpg "Фотография с обычными предустановками"
-[img-contrast]: /assets/img/2020-01/contrast.jpg "Фотография со сжатием контраста"
-[img-bb]: /assets/img/2020-01/bb.jpg "Фотография с исправленным балансом белого"
-[img-levels]: /assets/img/2020-01/levels.jpg "Фотография после применения модуля «Уровни RGB»"
+[img-module]: /assets/img/2020-01/rgb/RGB.png "Панели модуля «Уровни RGB»"
+[img-default]: /assets/img/2020-01/rgb/default.jpg "Фотография с обычными предустановками"
+[img-contrast]: /assets/img/2020-01/rgb/contrast.jpg "Фотография со сжатием контраста"
+[img-bb]: /assets/img/2020-01/rgb/bb.jpg "Фотография с исправленным балансом белого"
+[img-levels]: /assets/img/2020-01/rgb/levels.jpg "Фотография после применения модуля «Уровни RGB»"
 
 [quickstart]: {% link _posts/photo/2019-09/2019-09-21-darktable-quickstart.md %} "Darktable — (не очень) быстрый старт"
 
