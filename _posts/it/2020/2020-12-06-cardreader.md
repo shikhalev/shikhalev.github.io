@@ -97,4 +97,4 @@ description: Встраиваемый кардридер с AliExpress
 [ref-analogs]: http://ali.pub/5cv8ud "Ссылка на аналогичный товар"
 [ref-search]: http://ali.pub/5cv90l "Ссылка на поиск аналогов"
 
-[storages]: {% link _posts/it/2019-07/2019-07-17-storages.md %} "Поиздевался над железками"
+[storages]: {% link _posts/it/2019/2019-07-17-storages.md %} "Поиздевался над железками"

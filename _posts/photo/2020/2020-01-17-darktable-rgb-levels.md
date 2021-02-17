@@ -75,8 +75,8 @@ description: Новый модуль в Darktable 3.0 — пример испо�
 [img-bb]: /assets/img/2020-01/rgb/bb.jpg "Фотография с исправленным балансом белого"
 [img-levels]: /assets/img/2020-01/rgb/levels.jpg "Фотография после применения модуля «Уровни RGB»"
 
-[quickstart]: {% link _posts/photo/2019-09/2019-09-21-darktable-quickstart.md %} "Darktable — (не очень) быстрый старт"
-[basecurve]: {% link _posts/photo/2020-01/2020-01-14-darktable-new-basecurve.md %} "Новая базовая кривая в Darktable"
+[quickstart]: {% link _posts/photo/2019/2019-09-21-darktable-quickstart.md %} "Darktable — (не очень) быстрый старт"
+[basecurve]: {% link _posts/photo/2020/2020-01-14-darktable-new-basecurve.md %} "Новая базовая кривая в Darktable"
 
 [^foot-rgb-levels]: Документация по модулю «Уровни RGB» (en, v3.4): <https://www.darktable.org/usermanual/en/module-reference/processing-modules/rgb-levels/>
 [^foot-tonecurve]: Тоновая кривая (en, v3.4): <https://www.darktable.org/usermanual/en/module-reference/processing-modules/tone-curve/>

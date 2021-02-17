@@ -130,4 +130,4 @@ description: Новые возможности и нюансы модуля «Б
 [light-1013]: /assets/img/2020-01/nbc/light-IMG_1013.jpg
 
 
-[quickstart]: {% link _posts/photo/2019-09/2019-09-21-darktable-quickstart.md %} "Darktable — (не очень) быстрый старт"
+[quickstart]: {% link _posts/photo/2019/2019-09-21-darktable-quickstart.md %} "Darktable — (не очень) быстрый старт"
