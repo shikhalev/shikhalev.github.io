@@ -4,6 +4,9 @@ layout: default
 
 {% capture main_text %}
 {% assign posts = site.categories[page.selected] %}
+<div class="post-content">
+  {{ content }}
+</div>
 {% include postlist.html %}
 {% endcapture %}
 {% capture main_toc %}
@@ -22,9 +25,9 @@ layout: default
 <p class="description">{{ page.description }}</p>
 </header>
 
-<div class="post-content">
+<!-- <div class="post-content">
   {{ content }}
-</div>
+</div> -->
 
 {{ main_text }}
 

@@ -12,8 +12,10 @@
     </h3>
     {%- if site.show_excerpts -%}
     {{ post.excerpt }}
-    {%- endif -%}
+    {% if post.content contains site.excerpt_separator %}
     <p class="small"><a href="{{ post.url | relative_url }}">Читать далее »</a></p>
+    {% endif %}
+    {%- endif -%}
     <p class="post-meta">Тэги: {% include tags.html %}</p>
   </li>
   {%- endfor -%}
