@@ -36,6 +36,8 @@ rss: rss
 
 excerpt_separator: <!--more-->
 
+permalink: /:year/:month/:slug:output_ext
+
 markdown: kramdown
 kramdown:
   parse_block_html: true
