@@ -25,11 +25,9 @@ description: >-
 Скриншот с [официального сайта Darktable][official]
 </div>
 
-Со времени моего прошлого поста про **[![][img-icon] Darktable][official]** прошло, страшно подумать,
+Со времени [моего прошлого поста][mydark] про **[Darktable][official]** прошло, страшно подумать,
 три с лишним года. За это время и инструмент вырос (версия 2.6.2 сейчас у меня вместо 2.0.4),
 и я научился им лучше пользоваться.
-
-<!-- TODO: ссылка на пост -->
 
 <div class="note">
 Кстати, за это время вышла [официальная сборка Darktable под Windows][windows]. Если кому не хочется
@@ -569,7 +567,6 @@ XMP-файла, т.е. с текущей историей действий; а 
 [^export-ru]: Экспорт снимков (ru, v2.4): <https://photoredroom.blogspot.com/2018/02/dtexportselected.html>
 
 [img-site]: /assets/img/2019-09/dtqs/site.jpg "Скриншот сайта darktable.org"
-[img-icon]: /assets/img/2019-09/dtqs/darktable-icon.png
 [img-001]: /assets/img/2019-09/dtqs/001.jpg "Скриншот обработки"
 [img-002]: /assets/img/2019-09/dtqs/002.png
 [img-003]: /assets/img/2019-09/dtqs/003.png
@@ -615,6 +612,8 @@ XMP-файла, т.е. с текущей историей действий; а 
 [translation]: http://photoredroom.blogspot.com/p/darktable.html "Перевод «Руководства пользователя Darktable» (v2.4) на русский язык"
 [lab]: https://ru.wikipedia.org/wiki/LAB
 [free-desktop]: https://www.freedesktop.org/wiki/Specifications/ "Спецификации Free Desktop"
+
+[mydark]: {% link _posts/photo/2016/2016-06-13-raw.md %}
 
 *[EXIF]: Exchangeable Image File Format
 *[JPEG]: Joint Photographic Experts Group, по названию организации-разработчика

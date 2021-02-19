@@ -22,8 +22,7 @@ lang: ru
 title: Иван Шихалев
 email: shikhalev@gmail.com
 author: Иван Шихалев
-description: >- # this means to ignore newlines until "baseurl:"
-  Блог. Склад текстов. И прочее городу и миру.
+description: Блог. Склад текстов. И прочее городу и миру.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 show_excerpts: true
@@ -60,6 +59,11 @@ minima:
 header_pages:
   - cats/it.md
   - cats/photo.md
+
+feed:
+  categories:
+    - it
+    - photo
 
 # TODO: normal about
 

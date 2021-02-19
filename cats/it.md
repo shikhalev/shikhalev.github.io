@@ -2,6 +2,6 @@
 layout: category
 permalink: /it/
 selected: it
-title: IT
+title: Технологии
 description: Цифровой мир как он есть
 ---
