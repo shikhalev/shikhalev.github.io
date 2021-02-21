@@ -14,6 +14,9 @@
     {% if post.layout == "verse" %}
     <div class="verse-list">
     {{ post.excerpt }}
+    {% if post.write_date %}
+    <p class="verse-date">{{ post.write_date }}</p>
+    {% endif %}
     </div>
     {% else %}
     {{ post.excerpt }}
