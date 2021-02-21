@@ -59,11 +59,13 @@ minima:
 header_pages:
   - cats/tech.md
   - cats/photo.md
+  - cats/life.md
 
 feed:
   categories:
     - it
     - photo
+    - life
 
 # TODO: normal about
 
