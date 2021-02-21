@@ -1,7 +1,7 @@
 ---
 layout: category
-categories: [it, web]
-permalink: /it/web/blogs/
+categories: [tech, web]
+permalink: /blogs/
 selected: blogs
 title: О блогах
 description: Блогосфера и технологии, ее поддерживающие

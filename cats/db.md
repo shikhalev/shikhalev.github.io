@@ -1,7 +1,7 @@
 ---
 layout: category
-categories: [ it, programming ]
-permalink: /it/programming/db/
+categories: [ tech, programming ]
+permalink: /db/
 selected: db
 title: Базы данных
 short: БД

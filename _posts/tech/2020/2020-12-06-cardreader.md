@@ -2,7 +2,7 @@
 layout: post
 title: Новая железяка
 date: 2020-12-06
-categories: [ it, hardware ]
+categories: [ tech, hardware ]
 tags:
   - железо
   - кардридер
@@ -97,4 +97,4 @@ description: Встраиваемый кардридер с AliExpress
 [ref-analogs]: http://ali.pub/5cv8ud "Ссылка на аналогичный товар"
 [ref-search]: http://ali.pub/5cv90l "Ссылка на поиск аналогов"
 
-[storages]: {% link _posts/it/2019/2019-07-17-storages.md %} "Поиздевался над железками"
+[storages]: {% link _posts/tech/2019/2019-07-17-storages.md %} "Поиздевался над железками"

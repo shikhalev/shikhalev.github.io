@@ -1,7 +1,7 @@
 ---
 layout: category
-permalink: /photo/processing/
-categories: photo
+permalink: /photo-processing/
+categories: [ photo, tech ]
 selected: processing
 title: Обработка фотографий
 short: Обработка
