@@ -1,8 +1,9 @@
-<div class="inat-widget">
+<div id="inat-creator" style="display: none;">
+<div class="inat-widget" id="inat-widget">
     <div class="inat-widget-header">
       <a href="https://www.inaturalist.org"><img alt="iNaturalist" src="https://www.inaturalist.org/assets/logo-small-c1caecf8d38ed3d4ddeb7a1da076ec97.png" /></a>
     </div>
-  <script type="text/javascript" charset="utf-8" src="https://www.inaturalist.org/observations/shikhalev.widget?layout=large&limit=7&order=desc&order_by=observed_on"></script>
+  <script type="text/javascript" charset="utf-8" src="https://www.inaturalist.org/observations/shikhalev.widget?layout=large&limit=7&order=desc&order_by=created_at"></script>
   <table class="inat-footer">
     <tr class="inat-user">
         <td class="inat-user-image">
@@ -14,3 +15,14 @@
     </tr>
   </table>
 </div>
+</div>
+<script type="text/javascript">
+  window.addEventListener('load', function(e) {
+    var widget = document.getElementById('inat-widget');
+    var target = document.getElementById('inat-sideblock');
+    console.log({widget:widget,target:target});
+    if (widget && target) {
+      target.appendChild(widget);
+    }
+  });
+</script>

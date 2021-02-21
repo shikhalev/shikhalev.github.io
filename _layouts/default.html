@@ -15,6 +15,10 @@
 
     {%- include footer.html -%}
 
+  {% if page.categories contains 'photo' or page.selected == 'photo' %}
+  {% include inat.html %}
+  {% endif %}
+
   </body>
 
 </html>

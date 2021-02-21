@@ -533,3 +533,21 @@ img.icon {
 a.with-icon {
   display: inline-block;
 }
+
+div.verse {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  p {
+    white-space: pre;
+  }
+}
+
+p.verse-date .epigraph {
+  text-align: right;
+  font-style: italic;
+}
+
+h1.verse-title {
+  text-align: center;
+}
