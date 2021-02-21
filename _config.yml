@@ -60,12 +60,15 @@ header_pages:
   - cats/tech.md
   - cats/photo.md
   - cats/life.md
+  - cats/text.md
 
 feed:
   categories:
     - it
     - photo
     - life
+    - text
+    - poems
 
 # TODO: normal about
 
