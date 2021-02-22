@@ -14,15 +14,18 @@
     {% if post.layout == "verse" %}
     <div class="verse-list">
     {{ post.excerpt }}
+    {% if post.content contains site.excerpt_separator %}
+    <p class="small"><a href="{{ post.url | relative_url }}">Читать далее »</a></p>
+    {% endif %}
     {% if post.write_date %}
     <p class="verse-date">{{ post.write_date }}</p>
     {% endif %}
     </div>
     {% else %}
     {{ post.excerpt }}
-    {% endif %}
     {% if post.content contains site.excerpt_separator %}
     <p class="small"><a href="{{ post.url | relative_url }}">Читать далее »</a></p>
+    {% endif %}
     {% endif %}
     {%- endif -%}
     <p class="post-meta">Тэги: {% include tags.html %}</p>
