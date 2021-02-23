@@ -1,0 +1,56 @@
+{% if include.source %}
+  {% assign source = include.source %}
+{% else %}
+  {% assign source = site.posts %}
+{% endif %}
+
+{% if include.limit %}
+  {% assign limit = include.limit %}
+  {% if include.maximum %}
+    {% assign maximum = include.maximum %}
+  {% else %}
+    {% assign maximum = limit %}
+  {% endif %}
+  {% assign flag = true %}
+{% else %}
+  {% if include.maximum %}
+    {% assign maximum = include.maximum %}
+    {% assign limit = maximum %}
+    {% assign flag = true %}
+  {% else %}
+    {% assign flag = false %}
+  {% endif %}
+{% endif %}
+
+{% if include.prefix %}
+  {% assign prefix = include.prefix %}
+{% else %}
+  {% assign prefix = "post" %}
+{% endif %}
+
+{% assign need_calendar = false %}
+{% if source.size > 0 %}
+  <h2 id="last-entries">Последние записи</h2>
+  <ul class="{{prefix}}-list">
+  {% if flag and maximum < source.size %}
+    {% for item in source limit:limit %}
+      {% include list/{{item.layout}}_item.html item=item %}
+    {% endfor %}
+    {% assign need_calendar = true %}
+  {% else %}
+    {% for item in source %}
+      {% include list/{{item.layout}}_item.html item=item %}
+    {% endfor %}
+  {% endif %}
+  </ul>
+  {% if need_calendar %}
+    {% if page.calendar %}
+    <a href="{% link {{page.calendar}} %}">
+      <p class="list-meta">Показаны {{limit}} записей из {{source.size}}</p>
+      <h2 class="calendar-link-header" id="calendar-link">Читать далее »</h2>
+    </a>
+    {% else %}
+      {{ page | pretty_inspect }}
+    {% endif %}
+  {% endif %}
+{% endif %}

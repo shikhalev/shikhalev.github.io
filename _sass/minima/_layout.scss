@@ -570,3 +570,23 @@ div.verse-list {
 h1.verse-title {
   text-align: center;
 }
+
+.list-meta {
+  text-align: center;
+  font-size: small;
+  color: $grey-color-dark;
+  background-color: $grey-color-light;
+  margin-bottom: 0px;
+  padding-top: 5px;
+  border-top: solid 3px $grey-color-dark;
+}
+
+.calendar-link-header {
+  margin-top: 0px;
+  text-align: center;
+  background-color: $grey-color-light;
+}
+
+.calendar-post-link {
+  font-family: $caption-font-family;
+}

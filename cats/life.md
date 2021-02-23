@@ -4,4 +4,5 @@ permalink: /life/
 selected: life
 title: Жизнь
 description: О жизни, обществе и всяком прочем
+calendar: calendars/life.md
 ---

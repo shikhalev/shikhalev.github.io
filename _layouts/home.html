@@ -2,15 +2,18 @@
 layout: default
 ---
 
-{% capture main_text %}
-{% assign posts = site.posts %}
-{% include postlist.html %}
-{% endcapture %}
-{% capture main_toc %}
-{% include toc.html html = main_text sanitize = true item_class = "toc-entry" %}
+{% capture page_content %}
+<div class="post-content">
+  {{ content }}
+</div>
+{% include list/last.html limit=10 maximum=12 %}
 {% endcapture %}
 
-{% include sidebar.html toc = main_toc %}
+{% capture page_toc %}
+{% include toc.html html = page_content sanitize = true item_class = "toc-entry" %}
+{% endcapture %}
+
+{% include sidebar.html toc = page_toc %}
 
 <div class="home">
 
@@ -19,10 +22,6 @@ layout: default
 <h1 class="page-heading">{{ page.list_title | default: site.title }}</h1>
 <p class="description">{{ page.description | default: site.description }}</p>
 
-<div class="post-content">
-  {{ content }}
-</div>
-
-{{ main_text }}
+{{ page_content }}
 
 </div>

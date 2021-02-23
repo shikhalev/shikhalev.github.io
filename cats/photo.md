@@ -5,4 +5,5 @@ selected: photo
 title: О фото
 short: Фото
 description: "Тексты о фотографии"
+calendar: calendars/photo.md
 ---

@@ -5,4 +5,5 @@ permalink: /programming/
 selected: programming
 title: Программирование
 description: Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное
+calendar: calendars/programming.md
 ---

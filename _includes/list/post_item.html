@@ -1,0 +1,18 @@
+{% assign item = source.item %}
+{% assign date_format = site.minima.date_format | default: "%Y.%m.%d" %}
+
+<li>
+  <p class="post-meta">{{ item.date | date: date_format }} | Разделы: {% include list/categories.html item=item %}</p>
+  <h3 class="post-item" id="{{ item.url | slugify }}">
+    <a class="post-link" href="{{ item.url | relative_url }}">
+      {{ item.title | escape }}
+    </a>
+  </h3>
+  {% if site.show_excerpts %}
+    {{ item.excerpt }}
+    {% if item.content contains site.excerpt_separator %}
+      <p class="small"><a href="{{ item.url | relative_url }}">Читать далее »</a></p>
+    {% endif %}
+  {% endif %}
+  <p class="post-meta">Тэги: {% include list/tags.html item=item %}</p>
+</li>

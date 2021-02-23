@@ -6,6 +6,7 @@ selected: penguin
 title: «Пингвин-фотолюбитель»
 short: Пингвин-фотолюбитель
 description: Цикл постов 2016 года об обработке фотографий под Linux
+calendar: calendars/penguin.md
 ---
 
 ## Содержание

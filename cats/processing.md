@@ -6,4 +6,5 @@ selected: processing
 title: Обработка фотографий
 short: Обработка
 description: Софт для обработки фотографий
+calendar: calendars/processing.md
 ---

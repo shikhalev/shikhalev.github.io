@@ -1,13 +1,16 @@
 ---
 layout: default
 ---
+{% if page.category %}
+  {% assign source = site.categories[page.category] %}
+{% else %}
+  {% assign source = site.posts %}
+{% endif %}
 
 {% capture page_content %}
-<div class="post-content">
   {{ content }}
-</div>
-{% assign source = site.categories[page.selected] %}
-{% include list/last.html source=source limit=10 maximum=12 %}
+
+  {% include list/calendar.html %}
 {% endcapture %}
 
 {% capture page_toc %}
@@ -15,8 +18,6 @@ layout: default
 {% endcapture %}
 
 {% include sidebar.html toc = page_toc %}
-
-<article class="post">
 
 <header class="post-header">
 
@@ -27,5 +28,3 @@ layout: default
 </header>
 
 {{ page_content }}
-
-</article>
