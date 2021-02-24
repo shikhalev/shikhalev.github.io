@@ -45,7 +45,13 @@
   </ul>
   {% if need_calendar %}
     {% if page.calendar %}
-    <a href="{% link {{page.calendar}} %}">
+    {% assign calendar_url = "" %}
+    {% for p in site.pages %}
+      {% if p.path == page.calendar %}
+        {% assign calendar_url = p.url %}
+      {% endif %}
+    {% endfor %}
+    <a href="{{ calendar_url }}">
       <p class="list-meta">Показаны {{limit}} записей из {{source.size}}</p>
       <h2 class="calendar-link-header" id="calendar-link">Читать далее »</h2>
     </a>
