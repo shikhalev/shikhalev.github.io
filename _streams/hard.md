@@ -1,9 +1,7 @@
 ---
 layout: category
-categories: tech
-permalink: /hardware/
-selected: hardware
+category_id: hard
+parent: tech
 title: Железо
 description: Всякие разные интересные или не очень устройства
-calendar: calendars/hardware.md
 ---

@@ -1,9 +1,7 @@
 ---
 layout: category
-categories: [ text ]
-permalink: /best/
-selected: best
+category_id: best
+parent: text
 title: Избранное
 description: «Самому себе он наиболее симпатичен» ©
-calendar: calendars/best.md
 ---

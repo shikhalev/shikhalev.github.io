@@ -1,14 +1,11 @@
 ---
 layout: category
-permalink: /penguin/
-categories: [ photo, processing ]
-selected: penguin
+category_id: penguin
+parent: processing
 title: «Пингвин-фотолюбитель»
 short: Пингвин-фотолюбитель
 description: Цикл постов 2016 года об обработке фотографий под Linux
-calendar: calendars/penguin.md
 ---
-
 ## Содержание
 
 <div class="center-box">

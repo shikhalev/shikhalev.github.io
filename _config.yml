@@ -71,6 +71,15 @@ feed:
     - text
     - poems
 
+collections:
+  streams:
+    output: true
+    permalink: /cat/:name
+  calendars:
+    output: true
+    permalink: /cal/:name
+
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

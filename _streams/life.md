@@ -1,8 +1,6 @@
 ---
 layout: category
-permalink: /life/
-selected: life
+category_id: life
 title: Жизнь
 description: О жизни, обществе и всяком прочем
-calendar: calendars/life.md
 ---

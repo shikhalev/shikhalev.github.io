@@ -1,9 +1,7 @@
 ---
 layout: category
-categories: [ text, prose ]
-permalink: /tales/
-selected: tales
+category_id: tales
+parent: prose
 title: Сказочки
 description: Все персонажи вымышлены, все совпадения неслучайны
-calendar: calendars/tales.md
 ---

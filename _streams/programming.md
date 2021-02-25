@@ -1,9 +1,7 @@
 ---
 layout: category
-categories: tech
-permalink: /programming/
-selected: programming
+category_id: programming
+parent: tech
 title: Программирование
 description: Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное
-calendar: calendars/programming.md
 ---

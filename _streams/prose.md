@@ -1,9 +1,7 @@
 ---
 layout: category
-categories: [ text ]
-permalink: /prose/
-selected: prose
+category_id: prose
+parent: text
 title: Проза
 description: Сказочки, рассказики...
-calendar: calendars/prose.md
 ---

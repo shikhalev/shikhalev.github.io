@@ -1,10 +1,8 @@
 ---
 layout: category
-permalink: /photo-processing/
-categories: [ photo, tech ]
-selected: processing
+category_id: processing
+parent: photo
 title: Обработка фотографий
 short: Обработка
 description: Софт для обработки фотографий
-calendar: calendars/processing.md
 ---
