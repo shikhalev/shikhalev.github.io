@@ -56,9 +56,6 @@ description: Цикл постов 2016 года об обработке фот�
 Он намного свежее и подробнее (но только про Darktable).
 
 
-## Посты
-
-
 [peng]: /assets/img/2016-06/p-00/peng.jpg
 [commons]: https://commons.wikimedia.org/wiki/File:Penguin_in_Antarctica_jumping_out_of_the_water.jpg
 

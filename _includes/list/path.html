@@ -1,0 +1,19 @@
+{% if include.separator %}
+  {% assign separator = include.separator %}
+{% else %}
+  {% assign separator = ' / ' %}
+{% endif %}
+
+{% assign current = site.streams | where: "category_id",include.category_id | first %}
+{% if current.parent and current.parent != blank %}
+  {% include list/path.html category_id=current.parent separator=separator %}
+  {{separator}}
+{% else %}
+  <a href="/" title="Верхний уровень">🏠</a>&nbsp;&nbsp;
+{% endif %}
+{% comment %}
+  Рекурсивный вызов выше переопределяет переменную.
+  Приходится ее снова поиском того.
+{% endcomment %}
+{% assign current = site.streams | where: "category_id",include.category_id | first %}
+<a href="{{current.url | relative_url }}" title="{{current.description}}">{{current.short | default: current.title}}</a>

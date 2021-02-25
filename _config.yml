@@ -58,18 +58,19 @@ minima:
   date_format: "%Y.%m.%d"
 
 header_pages:
-  - cats/tech.md
-  - cats/photo.md
-  - cats/life.md
-  - cats/text.md
+  - _streams/tech.md
+  - _streams/photo.md
+  - _streams/life.md
+  - _streams/text.md
 
 feed:
   categories:
-    - it
+    - tech
     - photo
     - life
     - text
-    - poems
+    - verses
+    - best
 
 collections:
   streams:
