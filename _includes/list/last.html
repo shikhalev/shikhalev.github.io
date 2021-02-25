@@ -44,6 +44,19 @@
   {% endif %}
   </ul>
   {% if need_calendar %}
+    {% if page.category_id %}
+      {% assign cat_id = page.category_id %}
+    {% else %}
+      {% assign cat_id = 'home' %}
+    {% endif %}
+    {% assign calendar = site.calendars | where: 'category_id', cat_id | first %}
+    {% if calendar.url %}
+      <a href="{{ calendar.url | relative_url }}">
+        <p class="list-meta">Показаны {{limit}} записей из {{source.size}}</p>
+        <h2 class="calendar-link-header" id="calendar-link">Читать далее »</h2>
+      </a>
+    {% endif %}
+    {% comment %}
     {% if page.calendar %}
     {% assign calendar_url = "" %}
     {% for p in site.pages %}
@@ -58,5 +71,6 @@
     {% else %}
       {{ page | pretty_inspect }}
     {% endif %}
+    {% endcomment %}
   {% endif %}
 {% endif %}

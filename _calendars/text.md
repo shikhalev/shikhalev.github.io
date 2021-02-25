@@ -1,5 +1,5 @@
 ---
 layout: calendar
 title: Все тексты
-category: text
+category_id: text
 ---

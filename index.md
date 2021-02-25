@@ -4,7 +4,6 @@
 
 layout: home
 list_title: Городу и миру...
-calendar: calendar.md
 ---
 
 ## ⚠🏗 Under construction
