@@ -2,7 +2,7 @@
 layout: post
 title: Новая железяка
 date: 2020-12-06
-categories: [ tech, hardware ]
+categories: [ tech, hard ]
 tags:
   - железо
   - кардридер
