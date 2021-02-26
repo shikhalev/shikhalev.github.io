@@ -24,7 +24,7 @@
             {% else %}
               {% assign my_page = site.streams | where: "path", path | first %}
               {% if my_page.title %}
-                <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.short | default: my_page.title | escape }}</a>
+                <a class="page-link" href="{{ my_page.url | relative_url }}">{% if my_page.icon %}{{my_page.icon}} {% endif %}{{ my_page.short | default: my_page.title | escape }}</a>
               {% endif %}
             {%- endif -%}
           {%- endfor -%}
