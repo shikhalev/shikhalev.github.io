@@ -9,7 +9,7 @@ layout: default
 
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-{% include categories.html %}
+{% include list/full_categories.html %}
 
   <header class="post-header">
 
@@ -22,7 +22,7 @@ layout: default
     {%- if page.author -%}
       • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
     {%- endif -%}</p>
-  <div class="post-meta">Тэги: {% include tags.html %}</div>
+  <div class="post-meta">Тэги: {% include list/tags.html %}</div>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">

@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-list_title: Городу и миру...
+title: Городу и миру...
 ---
 
 ## ⚠🏗 Under construction
