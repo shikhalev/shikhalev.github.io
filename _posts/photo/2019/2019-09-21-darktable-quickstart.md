@@ -2,7 +2,7 @@
 layout: post
 title: Darktable — (не очень) быстрый старт
 date: 2019-09-21
-categories: [ photo, processing ]
+category: [ photo, processing ]
 tags:
   - фотография
   - обработка фото

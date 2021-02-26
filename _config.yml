@@ -71,6 +71,7 @@ feed:
     - text
     - verses
     - best
+  excerpt_only: true
 
 collections:
   streams:

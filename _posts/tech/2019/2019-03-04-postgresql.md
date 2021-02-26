@@ -2,7 +2,7 @@
 layout: post
 title: Всё для людей!
 date: 2019-03-04
-categories: [ tech, programming, db ]
+category: [ tech, programming, db ]
 tags:
   - базы данных
   - программирование

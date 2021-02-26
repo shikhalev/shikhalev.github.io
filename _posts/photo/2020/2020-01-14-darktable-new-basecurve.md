@@ -2,7 +2,7 @@
 layout: post
 title: Новая базовая кривая в Darktable
 date: 2020-01-14
-categories: [ photo, processing ]
+category: [ photo, processing ]
 tags:
   - фотография
   - обработка фото

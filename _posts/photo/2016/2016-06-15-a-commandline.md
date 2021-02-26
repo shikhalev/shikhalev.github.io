@@ -2,7 +2,7 @@
 layout: post
 title: "Пингвин-фотолюбитель: 2. Командная строка и пакетная обработка"
 date: 2016-06-15
-categories: [ photo, processing, penguin ]
+category: [ photo, processing, penguin ]
 tags:
   - графика
   - пингвин-фотолюбитель
