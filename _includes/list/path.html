@@ -14,6 +14,9 @@
 {% comment %}
   Рекурсивный вызов выше переопределяет переменную.
   Приходится ее снова поиском того.
+  Условие же проверяет, а не находимся ли мы часом в календаре верхнего уровня.
 {% endcomment %}
-{% assign current = site.streams | where: "category_id",include.category_id | first %}
-<a href="{{current.url | relative_url }}" title="{{current.description}}">{{current.short | default: current.title}}</a>
+{% if include.category_id and include.category_id != 'home' %}
+  {% assign current = site.streams | where: "category_id",include.category_id | first %}
+  <a href="{{current.url | relative_url }}" title="{{current.description}}">{{current.short | default: current.title}}</a>
+{% endif %}
