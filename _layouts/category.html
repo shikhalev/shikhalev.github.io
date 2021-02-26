@@ -2,7 +2,20 @@
 layout: default
 ---
 
+{% capture subcats %}
+{% include list/subcategories.html category_id=page.category_id%}
+{% endcapture %}
+{% assign subcats_flag = subcats | strip %}
+
 {% capture page_content %}
+
+{% if subcats_flag != '' %}
+<div class="subcategories">
+<h2 id="subcategories">Подразделы</h2>
+{{ subcats }}
+</div>
+{% endif %}
+
 <div class="post-content">
   {{ content }}
 </div>

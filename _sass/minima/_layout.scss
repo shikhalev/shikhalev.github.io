@@ -549,15 +549,17 @@ div.verse-list {
     white-space: pre;
     margin-bottom: 10px;
   }
-.verse-date, .epigraph {
-  text-align: left;
-  font-style: italic;
-  margin-bottom: 15px;
-  margin-left: 12em;
-}
+  .verse-date,
+  .epigraph {
+    text-align: left;
+    font-style: italic;
+    margin-bottom: 15px;
+    margin-left: 12em;
+  }
 }
 
-.verse-date, .epigraph {
+.verse-date,
+.epigraph {
   text-align: right;
   font-style: italic;
   margin-bottom: 15px;
@@ -589,4 +591,16 @@ h1.verse-title {
 
 .calendar-post-link {
   font-family: $caption-font-family;
+}
+
+.subcategories {
+  li::marker {
+    content: "🗁 ";
+  }
+
+  li {
+    margin-bottom: 0px;
+    text-align: left;
+    font-family: $caption-font-family;
+  }
 }
