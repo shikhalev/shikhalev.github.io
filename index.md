@@ -1,9 +1,6 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
-title: Городу и миру...
+title: Блог. Склад текстов. И прочее городу и миру...
 ---
 
 ## ⚠🏗 Under construction
