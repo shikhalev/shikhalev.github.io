@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% capture subcats %}
-{% include list/subcategories.html category_id=page.category_id%}
+{% include list/subcategories.html category_id=page.category_id %}
 {% endcapture %}
 {% assign subcats_flag = subcats | strip %}
 

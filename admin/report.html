@@ -1,0 +1,96 @@
+---
+layout: default
+title: Диагностика
+permalink: /admin/report
+---
+{% unless jekyll.environment == 'production' %}
+<h1>Диагностика</h1>
+<table>
+  <tr><td><code>jekyll.environment</code></td><td><code>{{ jekyll.environment | inspect }}</code></td></tr>
+</table>
+{% endunless %}
+
+<h2>Посты без категорий или с одной</h2>
+
+{% for post in site.posts %}
+  {% if forloop.first %}<ul>{% endif %}
+  {% if post.categories.size == 1 %}
+  <li><a href="{{post.url}}">{{post.title}}</a></li>
+  {% elsif post.categories.size == 0 %}
+  <li style="font-weight: bold;"><a href="{{post.url}}">{{post.title}}</a></li>
+  {% endif %}
+  {% if forloop.last%}</ul>{% endif %}
+{% endfor %}
+
+<h2>Страницы без категорий</h2>
+
+{% for post in site.pages %}
+  {% if forloop.first %}<ul>{% endif %}
+  {% if post.categories.size == 0 %}
+  <li><a href="{{post.url}}">{{post.title}}</a></li>
+  {% endif %}
+  {% if forloop.last%}</ul>{% endif %}
+{% endfor %}
+
+<h2>Посты без тегов</h2>
+
+{% for post in site.posts %}
+  {% if forloop.first %}<ul>{% endif %}
+  {% if post.tags.size == 0 %}
+  <li><a href="{{post.url}}">{{post.title}}</a></li>
+  {% endif %}
+  {% if forloop.last%}</ul>{% endif %}
+{% endfor %}
+
+<h2>Страницы без тегов</h2>
+
+{% for post in site.pages %}
+  {% if forloop.first %}<ul>{% endif %}
+  {% if post.tags.size == 0 %}
+  <li><a href="{{post.url}}">{{post.title}}</a></li>
+  {% endif %}
+  {% if forloop.last%}</ul>{% endif %}
+{% endfor %}
+
+<h2>Категории без потока</h2>
+
+{% for category in site.categories %}
+  {% if forloop.first %}<ul>{% endif %}
+  {% assign ss = site.streams | where: 'category_id',category[0] %}
+  {% if ss.size == 0 %}
+    <li>{{category[0]}}</li>
+  {% endif %}
+  {% if forloop.last%}</ul>{% endif %}
+{% endfor %}
+
+<h2>Категории без календаря</h2>
+
+{% for category in site.categories %}
+  {% if forloop.first %}<ul>{% endif %}
+  {% assign ss = site.calendars | where: 'category_id',category[0] %}
+  {% if ss.size == 0 %}
+    <li>{{category[0]}}</li>
+  {% endif %}
+  {% if forloop.last%}</ul>{% endif %}
+{% endfor %}
+
+<h2>Лишние потоки</h2>
+
+{% for stream in site.streams %}
+  {% if forloop.first %}<ul>{% endif %}
+  {% unless site.categories[stream.category_id] %}
+  <li>{{stream.title}} (<code>{{stream.path}}</code>)</li>
+  {% endunless%}
+  {% if forloop.last%}</ul>{% endif %}
+{% endfor %}
+
+
+<h2>Лишние календари</h2>
+
+{% for stream in site.calendars %}
+  {% if forloop.first %}<ul>{% endif %}
+  {% unless site.categories[stream.category_id] %}
+  <li>{{stream.title}} (<code>{{stream.path}}</code>)</li>
+  {% endunless%}
+  {% if forloop.last%}</ul>{% endif %}
+{% endfor %}
