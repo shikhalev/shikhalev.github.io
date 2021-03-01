@@ -95,6 +95,32 @@ permalink: /admin/report
   {% if forloop.last%}</ul>{% endif %}
 {% endfor %}
 
+<h2>Тэги без представления</h2>
+
+{% for tag in site.tags %}
+  {% if forloop.first %}<ul>{% endif %}
+  {% assign ss = site.tagpages | where: 'tag_id',tag[0] %}
+  {% if ss.size == 0 %}
+    <li>{{tag[0]}}</li>
+    <ul>
+      {% for post in tag[1] %}
+      <li><a href="{{post.url}}">{{post.title}}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  {% if forloop.last%}</ul>{% endif %}
+{% endfor %}
+
+<h2>Представления без тегов</h2>
+
+{% for tp in site.tagpages %}
+  {% if forloop.first %}<ul>{% endif %}
+  {% unless site.tags[tp.tag_id] %}
+  <li>{{tp.tag_id}} (<code>{{tp.path}}</code>)</li>
+  {% endunless%}
+  {% if forloop.last%}</ul>{% endif %}
+{% endfor %}
+
 
 
 {% endunless %}

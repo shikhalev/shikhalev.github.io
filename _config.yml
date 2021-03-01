@@ -80,6 +80,9 @@ collections:
   calendars:
     output: true
     permalink: /cal/:name
+  tagpages:
+    output: true
+    permalink: /tag/:name
 
 
 # Exclude from processing.
