@@ -4,11 +4,11 @@ title: Диагностика
 permalink: /admin/report
 ---
 {% unless jekyll.environment == 'production' %}
+
 <h1>Диагностика</h1>
 <table>
   <tr><td><code>jekyll.environment</code></td><td><code>{{ jekyll.environment | inspect }}</code></td></tr>
 </table>
-{% endunless %}
 
 <h2>Посты без категорий или с одной</h2>
 
@@ -94,3 +94,7 @@ permalink: /admin/report
   {% endunless%}
   {% if forloop.last%}</ul>{% endif %}
 {% endfor %}
+
+
+
+{% endunless %}
