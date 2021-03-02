@@ -22,8 +22,8 @@ layout: default
     <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
       {{ post_date }}
     </time>
-    {%- if page.author -%}
-      • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+    {%- if page.author or site.author -%}
+      • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | default: site.author }}</span></span>
     {%- endif -%}</p>
   <h1 hidden class="post-title verse-title p-name" itemprop="name headline">{{ page.description | default: page.title | escape }}</h1>
   <h1 class="post-title verse-title p-name">{{ page.caption | default: page.title | escape }}</h1>
