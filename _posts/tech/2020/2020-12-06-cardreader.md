@@ -13,6 +13,7 @@ tags:
   - USB
 author: Иван Шихалев
 description: Встраиваемый кардридер с AliExpress
+image: /assets/img/2020-12/cardreader.jpg
 ---
 Приобрел на Али очередную железку, сегодня руки дошли проверить.
 
