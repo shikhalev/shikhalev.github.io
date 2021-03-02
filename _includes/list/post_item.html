@@ -2,6 +2,7 @@
 {% assign date_format = site.minima.date_format | default: "%Y.%m.%d" %}
 
 <li>
+  <div class="right-box"><div class="ya-share2" data-curtain data-url="{{item.url | absolute_url }}" data-copy="extraItem" data-title="{{item.title}}" data-color-scheme="whiteblack" data-services="vkontakte,facebook,telegram,twitter,evernote"></div></div>
   <p class="post-meta">{{ item.date | date: date_format }} | Разделы: {% include list/categories.html item=item %}</p>
   <h3 class="post-item" id="{{ item.url | slugify }}">
     <a class="post-link" href="{{ item.url | relative_url }}">
