@@ -35,5 +35,9 @@ layout: default
     <p class="verse-date">{{page.write_date | default: post_date}}</p>
   </div>
 
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
