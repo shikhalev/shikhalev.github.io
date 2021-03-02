@@ -84,6 +84,8 @@ collections:
     output: true
     permalink: /tag/:name
 
+disqus:
+  shortname: shikhalev
 
 # Exclude from processing.
 # The following items will not be processed, by default.
