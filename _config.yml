@@ -53,6 +53,7 @@ defaults:
       path: ""
     values:
       toc: true
+      image: /assets/img/icon.jpg
 
 minima:
   date_format: "%Y.%m.%d"
