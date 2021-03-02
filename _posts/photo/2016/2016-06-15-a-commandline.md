@@ -15,6 +15,7 @@ tags:
   - командная строка
 author: Иван Шихалев
 description: Работа с фотографиями из командной строки
+image: /assets/img/2016-06/p-02/kdpv.png
 ---
 <div class="right-box" style="width: 320px;">
 [![][kdpvs]][kdpv]
