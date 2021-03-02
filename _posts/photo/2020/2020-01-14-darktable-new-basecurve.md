@@ -6,9 +6,11 @@ category: [ photo, processing ]
 tags:
   - фотография
   - обработка фото
-  - darktable
+  - Darktable
   - цвет
   - RAW
+  - Linux
+  - графика
 author: Иван Шихалев
 description: Новые возможности и нюансы модуля «Базовая кривая» в Darktable 3.0
 ---

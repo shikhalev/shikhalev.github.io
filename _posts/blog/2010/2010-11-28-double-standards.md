@@ -1,6 +1,6 @@
 ---
 title: Я вот чего не понимаю...
-category: [ life ]
+category: [ life, social, politics ]
 tags:
   - политика
   - Лужков

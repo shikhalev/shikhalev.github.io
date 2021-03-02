@@ -6,9 +6,11 @@ category: [ photo, processing ]
 tags:
   - фотография
   - обработка фото
-  - darktable
+  - Darktable
   - цвет
   - RAW
+  - Linux
+  - графика
 author: Иван Шихалев
 description: Новый модуль в Darktable 3.0 — пример использования
 ---

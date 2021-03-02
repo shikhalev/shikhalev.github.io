@@ -11,7 +11,7 @@ tags:
   - EXIF
   - exiftool
   - ImageMagick
-  - linux
+  - Linux
   - командная строка
 author: Иван Шихалев
 description: Работа с фотографиями из командной строки
