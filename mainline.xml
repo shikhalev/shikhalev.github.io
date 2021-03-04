@@ -1,0 +1,27 @@
+---
+permalink: /mainline.xml
+---
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>Иван Шихалев: Блог. Склад текстов. И прочее...</title>
+    <link>https://shikhalev.org/</link>
+    <description>Блог. Склад текстов. И прочее городу и миру.</description>
+    <language>ru</language>
+    {% assign line = site.posts | where: 'mainline',true %}
+    {% for post in line %}
+    <item>
+      <title>{{ post.title }}</title>
+      <link>{{ post.url | absolute_url }}</link>
+      <description>{{ post.content }}</description>
+      <author>{{ post.author | default: site.author }}</author>
+      {% for category in post.categories %}
+      {% assign category_page = site.streams | where: 'category_id',category | first %}
+      <category>{{ category_page.title }}</category>
+      {% endfor %}
+      <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
