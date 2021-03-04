@@ -6,4 +6,5 @@ title: Обработка фотографий
 short: Обработка
 description: Софт для обработки фотографий
 permalink: /photo/processing/
+inaturalist: true
 ---

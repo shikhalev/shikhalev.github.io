@@ -1,8 +1,10 @@
+{% include external/inaturalist_check.html %}
+{% if inaturalist_show %}
 <div id="inat-creator" style="display: none;">
 <div class="inat-widget" id="inat-widget">
-    <div class="inat-widget-header">
-      <a href="https://www.inaturalist.org"><img alt="iNaturalist" src="https://www.inaturalist.org/assets/logo-small-c1caecf8d38ed3d4ddeb7a1da076ec97.png" /></a>
-    </div>
+  <div class="inat-widget-header">
+    <a href="https://www.inaturalist.org/" title="iNaturalist"><img alt="iNaturalist" src="https://www.inaturalist.org/assets/logo-small-c1caecf8d38ed3d4ddeb7a1da076ec97.png" /></a>
+  </div>
   <script type="text/javascript" charset="utf-8" src="https://www.inaturalist.org/observations/shikhalev.widget?layout=large&limit=7&order=desc&order_by=created_at"></script>
   <table class="inat-footer">
     <tr class="inat-user">
@@ -26,3 +28,4 @@
     }
   });
 </script>
+{% endif %}

@@ -13,12 +13,6 @@
     {%- include social.html -%}
   </div>
 
-  {% if page.categories contains 'photo' or page.selected == 'photo' %}
-  {% comment %}
-    TODO: сделать нормальный механизм включений
-  {% endcomment %}
-  <div class="block" id="inat-sideblock">
-  </div>
-  {% endif %}
+  {% include external/inaturalist_block.html %}
 
 </aside>

@@ -1,6 +1,7 @@
 ---
 layout: home
 title: Блог. Склад текстов. И прочее городу и миру...
+inaturalist: true
 ---
 
 ## ⚠🏗 Under construction

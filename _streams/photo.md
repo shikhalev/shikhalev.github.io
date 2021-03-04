@@ -6,4 +6,5 @@ short: Фото
 description: Тексты о фотографии
 icon: 📷
 permalink: /photo/
+inaturalist: true
 ---

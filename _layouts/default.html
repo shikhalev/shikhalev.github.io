@@ -15,9 +15,7 @@
 
     {%- include footer.html -%}
 
-  {% if page.categories contains 'photo' or page.selected == 'photo' %}
-  {% include external/inat.html %}
-  {% endif %}
+  {% include external/inaturalist_loader.html %}
 
   </body>
 

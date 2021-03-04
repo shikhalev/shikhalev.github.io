@@ -6,6 +6,7 @@ title: «Пингвин-фотолюбитель»
 short: Пингвин-фотолюбитель
 description: Цикл постов 2016 года об обработке фотографий под Linux
 permalink: /photo/processing/penguin/
+inaturalist: true
 ---
 ## Содержание
 
