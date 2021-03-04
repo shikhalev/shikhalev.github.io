@@ -85,7 +85,7 @@ collections:
     permalink: /tag/:name
 
 
-staticman_url: https://api.staticman.net/v3/entry/github/shikhalev/shikhalev.github.io/main/comments
+staticman_url: https://shikhalev-comments.herokuapp.com/v3/entry/github/shikhalev/shikhalev.github.io/main/comments
 
 # disqus:
 #   shortname: shikhalev
