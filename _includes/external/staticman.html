@@ -1,11 +1,6 @@
 <!-- Comments -->
 {% if site.data.comments[page.slug] %}
-    <h3>
-    {% if site.data.comments[page.slug].size > 1 %}
-      {{ site.data.comments[page.slug] | size }}
-    {% endif %}
-    Comments:
-    </h3>
+    <h3>Комментарии</h3>
   {% assign comments = site.data.comments[page.slug] | sort %}
     {% for comment in comments %}
       <label>
@@ -22,6 +17,7 @@
     {% endfor %}
 {% endif %}
 <!-- Comments Form -->
+  <h3>Добавить комментарий</h3>
   <form method="POST" action="{{ site.staticman_url }}">
     <input name="options[redirect]" type="hidden" value="{{page.url | absolute_url}}">
     <input name="options[slug]" type="hidden" value="{{ page.slug }}">
