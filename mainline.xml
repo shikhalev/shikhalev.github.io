@@ -13,7 +13,7 @@ permalink: /mainline.xml
     <item turbo="true">
       <title>{{ post.title }}</title>
       <link>{{ post.url | absolute_url }}</link>
-      <description>{{ post.content }}</description>
+      <description>{{ post.description }}</description>
       <author>{{ post.author | default: site.author }}</author>
       {% for category in post.categories %}
       {% assign category_page = site.streams | where: 'category_id',category | first %}
@@ -21,6 +21,7 @@ permalink: /mainline.xml
       {% endfor %}
       <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <turbo:content>{{ post.content | xml_escape }}</turbo:content>
     </item>
     {% endfor %}
   </channel>
