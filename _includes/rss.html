@@ -2,7 +2,7 @@
   {% if site.feed.categories contains page.category_id %}
     <div class="rss-box">
       <a class="rss-link" href="/feed/{{page.category_id}}.xml" title="Лента новостей категории «{{page.title}}»">
-        <svg class="svg-rss-icon" style="fill: #fdb;"><use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg><span>Feed</span>
+        <svg class="svg-rss-icon" style="fill: #fdb;"><use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg><span>Atom</span>
       </a>
     </div>
   {% endif %}
@@ -12,7 +12,7 @@
   {% endcomment %}
     <div class="rss-box">
       <a class="rss-link" href="/feed.xml" title="Лента новостей сайта">
-        <svg class="svg-rss-icon" style="fill: #fdb;"><use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg><span>Feed</span>
+        <svg class="svg-rss-icon" style="fill: #fdb;"><use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg><span>Atom</span>
       </a>
     </div>
 {% endif %}
