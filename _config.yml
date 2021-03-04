@@ -84,8 +84,11 @@ collections:
     output: true
     permalink: /tag/:name
 
-disqus:
-  shortname: shikhalev
+
+staticman_url: https://api.staticman.net/v3/entry/github/shikhalev/shikhalev.github.io/main/comments
+
+# disqus:
+#   shortname: shikhalev
 
 # Exclude from processing.
 # The following items will not be processed, by default.
