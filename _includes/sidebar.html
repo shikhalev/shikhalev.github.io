@@ -1,5 +1,9 @@
 <aside class="sidebar">
 
+  <div class="block">
+    {% include external/google_search.html %}
+  </div>
+
   {% assign flag = include.toc | strip %}
   {% if flag != "" %}
   <div class="block">

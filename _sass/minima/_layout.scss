@@ -649,3 +649,14 @@ a.rss-link, a.rss-link:visited, a.rss-link:hover, a.rss-link:link {
     display: none;
   }
 }
+
+.gsc-control-cse {
+  margin: 0px !important;
+  padding: 0px !important;
+  border: none !important;
+  table, td {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+  }
+}
