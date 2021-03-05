@@ -21,16 +21,18 @@
   <form method="POST" action="{{ site.staticman_url }}">
     <input name="options[redirect]" type="hidden" value="{{page.url | absolute_url}}">
     <input name="options[slug]" type="hidden" value="{{ page.slug }}">
-      <label>Name</label>
+      <div>
+      <label style="font-weight: bold;">Имя:</label>
       <input name="fields[name]" type="text">
-      <label>E-mail (optional)</label>
+      <label>E-mail (необязательно):</label>
       <input name="fields[email]" type="email">
-      <label>Website (optional)</label>
+      <label>Сайт (необязательно):</label>
       <input name="fields[url]" type="url">
-      <label>Message</label>
+      </div>
+      <label style="font-weight: bold;">Сообщение:</label>
       <textarea style="width:100%" name="fields[message]" rows="12"></textarea>
-      <small>Comments will appear after moderation.</small>
       <div class="g-recaptcha" data-sitekey="6Ld9L3IaAAAAACZDaeBKKiL35iyzoTtTA0OlAv4C"></div>
+      <small>Комментарии появляются на сайте с задержкой, если ваш комментарий не виден, попробуйте обновить страницу через пару минут.</small>
       <button type="submit">Submit comment</button>
       <input type="hidden" name="options[reCaptcha][siteKey]" value="6Ld9L3IaAAAAACZDaeBKKiL35iyzoTtTA0OlAv4C">
       <input type="hidden" name="options[reCaptcha][secret]" value="VjFrTeDnGPwiAxGNvgtpKpVONHPqCvDKUsPHxrVbIbK43lWqxMx03CbynrBLkZjxw0SDUjrZ386vLLIeuKNdiD0b/qxpogeNjyRKw//4PznckWmKlTzO0VpQsyf6PvhvKtKHev28xrs8uuUPITNHSpW7IQECvMbm2njxr5hSFEA=">
