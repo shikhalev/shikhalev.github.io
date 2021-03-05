@@ -626,3 +626,8 @@ a.rss-link, a.rss-link:visited, a.rss-link:hover, a.rss-link:link {
   @extend .svg-icon;
   fill: #fdb;
 }
+
+.g-recaptcha {
+  display: inline-block;
+  vertical-align: top;
+}

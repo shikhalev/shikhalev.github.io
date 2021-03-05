@@ -1,9 +1,12 @@
 <!-- Comments -->
 {% if site.data.comments[page.slug] %}
-    <h3>Комментарии</h3>
-  {% assign comments = site.data.comments[page.slug] | sort %}
+    <h2>Комментарии</h2>
+    <small>Комментарии не проходят премодерацию, автор сайта не несет ответственость за их содержание.</small>
+    <table>
+    {% assign comments = site.data.comments[page.slug] | sort %}
     {% for comment in comments %}
-      <label>
+      <tr>
+        <td align="right" width="200px" valign="top">
         {% if comment[1].url %}
           <a href="{{ comment[1].url }}">
         {% endif %}
@@ -11,10 +14,14 @@
         {% if comment[1].url %}
           </a>
         {% endif %}
-      </label>
-      <em>{{ comment[1].date | date: "%B %d, %Y" }}</em>
-      <p>{{ comment[1].message | markdownify }}</p>
+        <p class="post-meta" style="text-align: right;">{{ comment[1].date | date: "%Y.%m.%d %H.%M.%S" }}</p>
+        </td>
+        <td valign="top">
+          {{ comment[1].message | markdownify }}
+        </td>
+      </tr>
     {% endfor %}
+    </table>
 {% endif %}
 <!-- Comments Form -->
   <h3>Добавить комментарий</h3>
@@ -22,18 +29,34 @@
     <input name="options[redirect]" type="hidden" value="{{page.url | absolute_url}}">
     <input name="options[slug]" type="hidden" value="{{ page.slug }}">
       <div>
-      <label style="font-weight: bold;">Имя:</label>
-      <input name="fields[name]" type="text">
-      <label>E-mail (необязательно):</label>
-      <input name="fields[email]" type="email">
-      <label>Сайт (необязательно):</label>
-      <input name="fields[url]" type="url">
-      </div>
-      <label style="font-weight: bold;">Сообщение:</label>
-      <textarea style="width:100%" name="fields[message]" rows="12"></textarea>
+        <table align="left">
+          <tr>
+            <td align="right" width="200px"><label for="comment_name" style="font-weight: bold;">Имя:</label></td>
+            <td><input id="comment_name" name="fields[name]" type="text"></td>
+          </tr>
+          <tr>
+            <td align="right"><label for="comment_email">E-mail (необязательно):</label></td>
+            <td><input id="comment_email" name="fields[email]" type="email"></td>
+          </tr>
+          <tr>
+            <td align="right"><label for"comment_site">Сайт (необязательно):</label></td>
+            <td><input id="comment_site" name="fields[url]" type="url"></td>
+          </tr>
+          <tr>
+            <td align="right" valign="top"><label for="comment_message" style="font-weight: bold;">Сообщение:</label></td>
+            <td><textarea id="comment_message" style="width:100%" name="fields[message]" rows="12"></textarea></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+      <div style="float: right;">
       <div class="g-recaptcha" data-sitekey="6Ld9L3IaAAAAACZDaeBKKiL35iyzoTtTA0OlAv4C"></div>
-      <small>Комментарии появляются на сайте с задержкой, если ваш комментарий не виден, попробуйте обновить страницу через пару минут.</small>
-      <button type="submit">Submit comment</button>
+      <button type="submit" style="height: 78px; vertical-align: top;">Отправить</button>
+      </div>
+      <small>Комментарии появляются на сайте с задержкой, если ваш комментарий не виден, попробуйте обновить страницу через минуту-другую.</small>
+            </td>
+          </tr>
+        </table>
+      </div>
       <input type="hidden" name="options[reCaptcha][siteKey]" value="6Ld9L3IaAAAAACZDaeBKKiL35iyzoTtTA0OlAv4C">
       <input type="hidden" name="options[reCaptcha][secret]" value="VjFrTeDnGPwiAxGNvgtpKpVONHPqCvDKUsPHxrVbIbK43lWqxMx03CbynrBLkZjxw0SDUjrZ386vLLIeuKNdiD0b/qxpogeNjyRKw//4PznckWmKlTzO0VpQsyf6PvhvKtKHev28xrs8uuUPITNHSpW7IQECvMbm2njxr5hSFEA=">
   </form>
