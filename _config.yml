@@ -59,10 +59,10 @@ minima:
   date_format: "%Y.%m.%d"
 
 header_pages:
-  - _streams/tech.md
-  - _streams/photo.md
-  - _streams/life.md
-  - _streams/text.md
+  - _streams/1_tech.md
+  - _streams/2_photo.md
+  - _streams/3_life.md
+  - _streams/4_text.md
 
 feed:
   categories:
