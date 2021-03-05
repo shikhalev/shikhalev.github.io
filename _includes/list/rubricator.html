@@ -1,0 +1,13 @@
+  {% if page.layout != 'home' and page.layout != 'tag' %}
+  <div class="block subcategories">
+    {% if page.categories.size > 0 %}
+      {% assign f = page.categories | first %}
+      {% include list/get_top.html category_id=f %}
+    {% elsif page.category_id %}
+      {% include list/get_top.html category_id=page.category_id %}
+    {% endif %}
+    {% assign top_page = site.streams | where: 'category_id', top_category | first %}
+    <h4><a href="{{top_page.url}}">{{top_page.title}}</a></h4>
+    {% include list/subcategories.html category_id=top_category %}
+  </div>
+  {% endif %}

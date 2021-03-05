@@ -3,6 +3,12 @@ layout: default
 ---
 
 {% capture page_content %}
+
+<h2 id="subcategories">Подразделы</h2>
+<div class="subcategories" style="columns: 2;">
+{% include list/subcategories.html category_id='home' %}
+</div>
+
 <div class="post-content">
   {{ content }}
 </div>

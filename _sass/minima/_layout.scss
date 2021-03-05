@@ -599,8 +599,19 @@ h1.verse-title {
 }
 
 .subcategories {
+
   li::marker {
     content: "🗁 ";
+  }
+
+  // h4::before {
+  //   content: "🗁 ";
+  // }
+
+  li {
+  -webkit-column-break-inside: avoid;
+            page-break-inside: avoid; /* Makes effect only in Firefox */
+                 break-inside: avoid; /* IE10+, Opera 11.1—12.1 */
   }
 
   li {
@@ -660,3 +671,9 @@ a.rss-link, a.rss-link:visited, a.rss-link:hover, a.rss-link:link {
     border: none;
   }
 }
+
+// .block.subcategories {
+//   li {
+//     font-family: $base-font-family;
+//   }
+// }

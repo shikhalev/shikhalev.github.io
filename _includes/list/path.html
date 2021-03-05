@@ -5,7 +5,7 @@
 {% endif %}
 
 {% assign current = site.streams | where: "category_id",include.category_id | first %}
-{% if current.parent and current.parent != blank %}
+{% if current.parent and current.parent != blank and current.parent != 'home' %}
   {% include list/path.html category_id=current.parent separator=separator %}
   {{separator}}
 {% else %}

@@ -1,0 +1,6 @@
+{% assign category_page = site.streams | where: 'category_id', include.category_id | first %}
+{% if category_page.parent %}
+  {% include list/get_top.html category_id=category_page.parent %}
+{% else %}
+  {% assign top_category = include.category_id %}
+{% endif %}
