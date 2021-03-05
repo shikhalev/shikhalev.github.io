@@ -631,3 +631,21 @@ a.rss-link, a.rss-link:visited, a.rss-link:hover, a.rss-link:link {
   display: inline-block;
   vertical-align: top;
 }
+
+.add-comment-section {
+  @media print {
+    display: none;
+  }
+}
+
+.post-categories {
+  @media print {
+    display: none;
+  }
+}
+
+.not-printable {
+  @media print {
+    display: none;
+  }
+}

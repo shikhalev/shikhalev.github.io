@@ -24,6 +24,7 @@
     </table>
 {% endif %}
 <!-- Comments Form -->
+<div class="add-comment-section">
   <h3>Добавить комментарий</h3>
   <form method="POST" action="{{ site.staticman_url }}">
     <input name="options[redirect]" type="hidden" value="{{page.url | absolute_url}}">
@@ -61,3 +62,4 @@
       <input type="hidden" name="options[reCaptcha][secret]" value="HCMKZ36nsLtl0ppFxIaaupVsykrGzEmwqrYBl8KwiCCHOoKtH8Kx272sbCuEzFjQmOrnZtfBLXrsk8HpgiRiqM17PvY3zIfSnqINMAtDzdrLMefyU5KwA8hXVF1DH5Qh7AFg/+MFw3BgQ+p7awlwm4K0vcjjsflRXF5NzpUnqyrSqBH++UltkKc1CN0/xETMzECLfNUysXDI4rtXkpHHox+Sha9scF/e+i8vl/cW5d6vjqbo/ojFui4WVf1izKINA2fQs/fzomBWzBkOmTc0xVrLs54uRLibE6Xw/gkmpEGtN7askwVYJXZaYPDhuPULzslunqudU+TjmhCDENfKEw==">
   </form>
 <script src='https://www.google.com/recaptcha/api.js'></script>
+</div>
