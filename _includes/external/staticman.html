@@ -7,11 +7,11 @@
     {% for comment in comments %}
       <tr>
         <td align="right" width="200px" valign="top">
-        {% if comment[1].url %}
+        {% if comment[1].url and comment[1].url != '' %}
           <a href="{{ comment[1].url }}">
         {% endif %}
         <strong>{{ comment[1].name }}</strong>
-        {% if comment[1].url %}
+        {% if comment[1].url and comment[1].url != '' %}
           </a>
         {% endif %}
         <p class="post-meta" style="text-align: right;">{{ comment[1].date | date: "%Y.%m.%d %H.%M.%S" }}</p>
@@ -58,6 +58,6 @@
         </table>
       </div>
       <input type="hidden" name="options[reCaptcha][siteKey]" value="6Ld9L3IaAAAAACZDaeBKKiL35iyzoTtTA0OlAv4C">
-      <input type="hidden" name="options[reCaptcha][secret]" value="VjFrTeDnGPwiAxGNvgtpKpVONHPqCvDKUsPHxrVbIbK43lWqxMx03CbynrBLkZjxw0SDUjrZ386vLLIeuKNdiD0b/qxpogeNjyRKw//4PznckWmKlTzO0VpQsyf6PvhvKtKHev28xrs8uuUPITNHSpW7IQECvMbm2njxr5hSFEA=">
+      <input type="hidden" name="options[reCaptcha][secret]" value="HCMKZ36nsLtl0ppFxIaaupVsykrGzEmwqrYBl8KwiCCHOoKtH8Kx272sbCuEzFjQmOrnZtfBLXrsk8HpgiRiqM17PvY3zIfSnqINMAtDzdrLMefyU5KwA8hXVF1DH5Qh7AFg/+MFw3BgQ+p7awlwm4K0vcjjsflRXF5NzpUnqyrSqBH++UltkKc1CN0/xETMzECLfNUysXDI4rtXkpHHox+Sha9scF/e+i8vl/cW5d6vjqbo/ojFui4WVf1izKINA2fQs/fzomBWzBkOmTc0xVrLs54uRLibE6Xw/gkmpEGtN7askwVYJXZaYPDhuPULzslunqudU+TjmhCDENfKEw==">
   </form>
 <script src='https://www.google.com/recaptcha/api.js'></script>
