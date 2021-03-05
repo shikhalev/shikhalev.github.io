@@ -1,7 +1,7 @@
 <!-- Comments -->
 {% if site.data.comments[page.slug] %}
     <h2>Комментарии</h2>
-    <small>Комментарии не проходят премодерацию, автор сайта не несет ответственость за их содержание.</small>
+    <small>Комментарии не проходят премодерацию, автор сайта не может нести ответственость за их содержание.</small>
     <table>
     {% assign comments = site.data.comments[page.slug] | sort %}
     {% for comment in comments %}
