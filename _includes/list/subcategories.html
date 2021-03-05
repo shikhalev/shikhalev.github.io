@@ -5,7 +5,7 @@
   {% endif %}
 
   <li>
-    <a href="{{sub.url}}" title="{{sub.description}}">{{sub.title | escape}}</a>
+    <a href="{{sub.url}}" title="{{sub.description}}">{{sub.title | escape}} ({{site.categories[sub.category_id].size}})</a>
     {% include list/subcategories.html category_id=sub.category_id %}
   </li>
 

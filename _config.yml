@@ -61,8 +61,8 @@ minima:
 header_pages:
   - _streams/1_tech.md
   - _streams/2_photo.md
-  - _streams/3_life.md
-  - _streams/4_text.md
+  - _streams/4_life.md
+  - _streams/5_text.md
 
 feed:
   categories:
