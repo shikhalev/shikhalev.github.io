@@ -691,8 +691,7 @@ a.rss-link, a.rss-link:visited, a.rss-link:hover, a.rss-link:link {
   }
 }
 
-// .block.subcategories {
-//   li {
-//     font-family: $base-font-family;
-//   }
-// }
+p.post-meta {
+  hyphens: manual;
+  text-align: left;
+}

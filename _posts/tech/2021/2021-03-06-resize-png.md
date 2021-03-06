@@ -2,7 +2,7 @@
 layout: post
 title: О ресайзе PNG на примерах
 description: Способы ресайза картинок формата PNG — какие возможности у нас есть под Linux...
-category: [ tech ]
+category: [ tech, soft, graphics ]
 tags:
   - Linux
   - графика

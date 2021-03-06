@@ -2,7 +2,7 @@
 layout: post
 title: Новый модуль Darktable — «Уровни RGB»
 date: 2020-01-17
-category: [ photo, processing ]
+category: [ photo, processing, soft, graphics ]
 tags:
   - фотография
   - обработка фото
