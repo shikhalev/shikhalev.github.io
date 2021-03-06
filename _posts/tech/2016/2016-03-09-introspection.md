@@ -8,9 +8,9 @@ tags:
   - программирование
   - публикации
   - Ruby
-  - web-программирование
   - интроспекция
   - метапрограммирование
+image: /assets/img/2016-03/samag146-147.jpg
 ---
 <div class="right-box">
 [![][cover]][samag]
