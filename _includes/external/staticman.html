@@ -1,9 +1,11 @@
+{% assign page_id = page.path | slugify %}
+
 <!-- Comments -->
-{% if site.data.comments[page.slug] %}
+{% if site.data.comments[page_id] %}
     <h2>Комментарии</h2>
     <small>Комментарии не проходят премодерацию, автор сайта не может нести ответственость за их содержание.</small>
     <table>
-    {% assign comments = site.data.comments[page.slug] | sort %}
+    {% assign comments = site.data.comments[page_id] | sort %}
     {% for comment in comments %}
       <tr>
         <td align="right" width="200px" valign="top">
@@ -28,7 +30,7 @@
   <h3>Добавить комментарий</h3>
   <form method="POST" action="{{ site.staticman_url }}">
     <input name="options[redirect]" type="hidden" value="{{page.url | absolute_url}}">
-    <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+    <input name="options[slug]" type="hidden" value="{{ page_id }}">
       <div>
         <table align="left">
           <tr>
