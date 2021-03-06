@@ -2,10 +2,10 @@
 
 // Define defaults for each variable.
 
-$base-font-family: "PT Sans", "Droid Sans", Helvetica, Arial, sans-serif !default;
-$caption-font-family: "PT Sans Caption", Helvetica, Arial, sans-serif !default;
-$mono-font-family: "Fira Code", "PT Mono", "Droid Sans Mono", monospace !default;
-// -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$base-font-family: "PT Sans", 'gsans', Arial, sans-serif !default;
+$caption-font-family: "PT Sans Caption", 'gcaption', "Trebuchet MS" !default;
+$compact-font-family: "PT Sans Narrow", 'gnarrow', "Arial Narrow", Arial, sans-serif !default;
+$mono-font-family: "PT Mono", 'gmono', monospace !default;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
@@ -48,6 +48,7 @@ $on-laptop:        1300px !default;
 
 // Import partials.
 @import
+  "minima/google-fonts",
   "minima/base",
   "minima/layout",
   "minima/solarized-light",

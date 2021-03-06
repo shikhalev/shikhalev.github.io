@@ -124,6 +124,8 @@
     li.toc-entry {
       margin-bottom: 0px;
       text-align: left;
+      hyphens: manual;
+      font-family: $compact-font-family;
     }
   }
 
@@ -509,6 +511,7 @@ dd {
 
 div.footnotes {
   font-size: 90%;
+  font-family: $compact-font-family;
   columns: 2;
 
   padding-top: 10px;
