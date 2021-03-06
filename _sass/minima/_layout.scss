@@ -322,6 +322,25 @@
   }
 }
 
+.inline {
+  display: inline-block;
+
+  p {
+    margin: 0px;
+  }
+
+  .caption {
+    font-family: $caption-font-family;
+    font-style: italic;
+    text-align: center;
+    font-size: small;
+    margin-top: 5px;
+    margin-bottom: 7px;
+    max-width: 310px;
+    hyphens: manual;
+  }
+}
+
 .right-box {
   float: right;
   padding: 0px;
