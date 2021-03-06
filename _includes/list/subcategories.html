@@ -5,7 +5,7 @@
   {% endif %}
 
   <li>
-    <a href="{{sub.url}}" title="{{sub.description}}">{{sub.title | escape}} ({{site.categories[sub.category_id].size}})</a>
+    <a href="{{sub.url}}" title="{{sub.description}}">{{sub.title | escape}}{%- if site.categories[sub.category_id] and site.categories[sub.category_id].size > 0 -%}&nbsp;({{site.categories[sub.category_id].size}}){%- endif -%}</a>
     {% include list/subcategories.html category_id=sub.category_id %}
   </li>
 

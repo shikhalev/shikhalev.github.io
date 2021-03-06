@@ -63,6 +63,7 @@ header_pages:
   - _streams/2_photo.md
   - _streams/4_life.md
   - _streams/5_text.md
+  - _streams/6_about.md
 
 feed:
   categories:
