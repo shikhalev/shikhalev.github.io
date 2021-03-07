@@ -68,6 +68,7 @@ header_pages:
 feed:
   categories:
     - tech
+    - pub
     - photo
     - life
     - text

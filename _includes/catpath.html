@@ -1,0 +1,5 @@
+{%- comment -%} Возвращает строку с цепочкой категорий, разделенных «|» {%- endcomment -%}
+{%- if include.current != '' -%}{%- assign r = include.current | prepend: '|' -%}{%- endif -%}
+{%- assign r = r | prepend: include.category_id -%}
+{%- assign p = site.streams | where: 'category_id', include.category_id | first -%}
+{%- if p.parent and p.parent != 'home' -%}{%- include catpath.html category_id=p.parent current=r -%}{%- else -%}{{r}}{%- endif -%}
