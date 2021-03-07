@@ -73,7 +73,7 @@ feed:
     - life
     - text
     - best
-  excerpt_only: false
+  excerpt_only: true
 
 collections:
   streams:
