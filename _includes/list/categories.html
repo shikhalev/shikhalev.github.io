@@ -7,5 +7,5 @@
 {% for category in categories %}
   {% assign category_page = site.streams | where: 'category_id',category | first %}
   <a href="{{category_page.url}}" title="{{category_page.description}}">{{category_page.short | default: category_page.title}}</a>
-  {% unless forloop.last %} / {% endunless %}
+  {% unless forloop.last %} :: {% endunless %}
 {% endfor %}

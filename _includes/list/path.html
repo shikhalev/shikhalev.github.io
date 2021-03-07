@@ -1,7 +1,7 @@
 {% if include.separator %}
   {% assign separator = include.separator %}
 {% else %}
-  {% assign separator = ' / ' %}
+  {% assign separator = ' :: ' %}
 {% endif %}
 
 {% assign current = site.streams | where: "category_id",include.category_id | first %}
