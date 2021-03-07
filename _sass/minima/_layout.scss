@@ -721,3 +721,18 @@ p.post-meta {
     height: 14px;
   }
 }
+
+hr {
+  border-color: $grey-color-light;
+  color: $grey-color-light;
+}
+
+.sticker-right {
+  float: right;
+  font-family: $compact-font-family;
+  font-size: 90%;
+  background-color: #fec;
+  width: 320px;
+  padding: 5px 10px;
+  margin: 0px 0px 0px 10px;
+}
