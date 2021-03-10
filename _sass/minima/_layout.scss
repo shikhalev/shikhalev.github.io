@@ -112,10 +112,12 @@
   padding: 0px;
 
   .block {
-    padding: 10px 10px 0px;
-    border-top: solid $grey-color-light 5px;
-    border-left: solid $grey-color-light 1px;
+    padding: 10px;
+    // border-top: solid $grey-color-light 5px;
+    border: solid $grey-color-light 1px;
     margin-bottom: 10px;
+
+    box-shadow: 1px 1px 3px $grey-color-light;
 
     li.toc-entry::marker {
       content: "🗈 ";
@@ -126,6 +128,10 @@
       text-align: left;
       hyphens: manual;
       font-family: $compact-font-family;
+    }
+
+    ul {
+      margin-bottom: 0px;
     }
   }
 
