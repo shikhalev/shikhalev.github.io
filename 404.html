@@ -2,30 +2,18 @@
 permalink: /404.html
 layout: default
 ---
+<div style="max-width: 900px;">
+<h1>404 Not Found</h1>
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+<p style="font-style: italic;">Увы, такой страницы нет. Вы можете воспользоваться поиском или навигацией по разделам сайта, представленной ниже.</p>
 
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+<div style="max-width: 500px;">
+<h2 id="search">Поиск</h2>
+{% include external/google_search.html %}
 </div>
 
-<h3>⚠🏗 Under construction</h3>
-
-<p>Тексты здесь пока только собираются с различных площадок. Верстка тоже далека от окончательной.
-<em>Могут поменяться адреса ссылок</em> и все такое. Когда состояние сайта станет более-менее стабильным,
-это предупреждение будет удалено.</p>
+<h2 id="subcategories">Рубрикатор</h2>
+<div class="subcategories" style="columns: 2;">
+{% include list/subcategories.html category_id='home' %}
+</div>
+</div>
