@@ -31,6 +31,9 @@
   <form method="POST" action="{{ site.staticman_url }}">
     <input name="options[redirect]" type="hidden" value="{{page.url | absolute_url}}">
     <input name="options[slug]" type="hidden" value="{{ page_id }}">
+    <input name="fields[slug]" type="hidden" value="{{ page_id}}">
+    <input name="fields[comment_id]" type="hidden" value="{{ "now" | date: "%N" }}">
+    <input name="fields[parent_id]" type="hidden" value="">
       <div>
         <table align="left">
           <tr>
