@@ -1,0 +1,20 @@
+---
+permalink: /admin/last-comments.json
+---
+[
+  {%- assign comments = '' | split: ',' -%}
+  {%- for cc in site.data.comments -%}
+    {%- if cc[1] -%}
+      {%- for ccc in cc[1] -%}
+        {%- if ccc[1] -%}
+          {%- assign comments = comments | push: ccc[1] -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- assign comments = comments | sort: 'date' | reverse -%}
+  {%- for comment in comments limit:20 -%}
+    {{ comment | jsonify }}
+    {%- unless forloop.last -%}, {%- endunless -%}
+  {%- endfor -%}
+]
