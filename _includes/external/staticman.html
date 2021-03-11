@@ -7,12 +7,17 @@
     <table>
     {% assign comments = site.data.comments[page_id] | sort %}
     {% for comment in comments %}
+      {% if comment.comment_id and comment.comment_id != '' %}
+        {% assign cid = comment.comment_id %}
+      {% else %}
+        {% assign cid = comment._id %}
+      {% endif %}
       <tr>
         <td align="right" width="200px" valign="top">
         {% if comment[1].url and comment[1].url != '' %}
           <a href="{{ comment[1].url }}">
         {% endif %}
-        <strong>{{ comment[1].name }}</strong>
+        <strong id="{{ cid }}">{{ comment[1].name }}</strong>
         {% if comment[1].url and comment[1].url != '' %}
           </a>
         {% endif %}
