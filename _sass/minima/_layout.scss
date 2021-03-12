@@ -646,6 +646,10 @@ h1.verse-title {
   padding: 5px;
   background-color: #f9f9fe;
   border-radius: 5px;
+
+  @media print {
+    display: none;
+  }
 }
 a.rss-link,
 a.rss-link:visited,
@@ -738,4 +742,10 @@ hr {
 
 .italic {
   font-style: italic;
+}
+
+.home-heading {
+  @media screen {
+    display: none;
+  }
 }
