@@ -54,6 +54,7 @@ defaults:
     values:
       toc: true
       image: /assets/img/icon.jpg
+      author: Иван Шихалев
 
 minima:
   date_format: "%Y.%m.%d"
@@ -87,7 +88,7 @@ collections:
     permalink: /tag/:name
 
 
-staticman_url: https://shikhalev-comments.herokuapp.com/v3/entry/github/shikhalev/shikhalev.github.io/main/comments
+staticman_url: http://comments.shikhalev.org/v3/entry/github/shikhalev/shikhalev.github.io/main/comments
 
 # disqus:
 #   shortname: shikhalev
