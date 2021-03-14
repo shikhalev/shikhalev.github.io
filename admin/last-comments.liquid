@@ -14,14 +14,13 @@ permalink: /admin/last-comments.json
   {%- endfor -%}
   {%- assign comments = comments | sort: 'date' | reverse -%}
   {%- for comment in comments limit:site.comments_json_limit -%}
-  {
-    "date": {{- comment.date | jsonify -}},
-    "name": {{- comment.name | jsonify -}},
-    "url": {{- comment.url | jsonify -}},
-    "message": {{- comment.message | xml_escape | markdownify | jsonify -}},
-    "slug": {{- comment.slug | jsonify -}},
-    "comment_id": {{- comment.comment_id | jsonify -}},
-    "parent_id": {{- comment.parent_id | jsonify -}}
+  {"date": {{- comment.date | jsonify -}}
+   ,"name": {{- comment.name | jsonify -}}
+   ,"url": {{- comment.url | jsonify -}}
+   ,"message": {{- comment.message | xml_escape | markdownify | jsonify -}}
+   ,"slug": {{- comment.slug | jsonify -}}
+   ,"comment_id": {{- comment.comment_id | jsonify -}}
+   ,"parent_id": {{- comment.parent_id | jsonify -}}
   }{%- unless forloop.last -%},{%- endunless -%}
   {%- endfor -%}
 ]
