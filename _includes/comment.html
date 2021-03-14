@@ -1,0 +1,18 @@
+{%- assign c = include.comment -%}
+<div class="comment" id="{{- c.comment_id -}}">
+  <h5 class="comment-title"><span class="comment-author">
+      {%- if c.url and c.url != '' -%}
+      <a href="{{- c.url -}}">{{- c.name -}}</a>
+      {%- else -%}
+      {{- c.name -}}
+      {%- endif -%}
+    </span> <span class="comment-meta"><a href="#{{- c.comment_id -}}">#{{- c.comment_id -}}</a>&nbsp;{{- c.date | date: "%Y.%m.%d %H.%M" -}}
+    {%- if c.parent_id and c.parent_id != '' -%}
+    ответ на <a href="#{{- c.parent_id -}}">#{{- c.parent_id -}}</a>
+    {%- endif -%}
+    </span>
+  </h5>
+  <div class="comment-message">
+    {{- c.message | xml_escape | markdownify -}}
+  </div>
+</div>

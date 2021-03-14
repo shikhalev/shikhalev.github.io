@@ -1,43 +1,44 @@
-if (self.fetch) {
-  window.addEventListener("load", function (e) {
-    // var slug = document.getElementById('slug').value;
-    // var splash = document.getElementById('splash');
-    // var comment_re = /^#\d{9}$/;
+(function () {
+  const PATH = "/admin/last-comments.json";
+  const INTERVAL = 2000;
+  const SLUG = document.getElementById("slug").value;
 
-    // var i_pos = 0;
-    // var intervals = [1000, 2000, 4000];
+  function make(html) {
+    var template = document.createElement('template');
+    template.innerHTML = html.trim();
+    var result = template.content.firstChild;
+    result.classList.add('loaded');
+    console.log(result);
+    return result;
+  }
 
-    // function check_comment() {
-    //   // console.log({check_comment:i_pos});
-    //   fetch("/admin/last-comments.json")
-    //     .then((response) => {
-    //       return response.json();
-    //     })
-    //     .then((data) => {
-    //       for (var i = 0, l = data.length; i < l; i++) {
-    //         var c = data[i];
-    //         if (c.slug == slug && c.comment_id == comment_id) {
-    //           window.location.reload();
-    //         }
-    //       }
-    //       i_pos = i_pos + 1;
-    //       if (i_pos <= intervals.length) {
-    //         setTimeout(check_comment, intervals[i_pos - 1]);
-    //       } else {
-    //         splash.style.display = "none";
-    //       }
-    //     });
-    // }
+  function process(data) {
+    data.forEach(comment => {
+      var parent;
+      if (comment.parent_id && comment.parent_id != '') {
+        parent = document.getElementById(comment.parent_id);
+      } else {
+        parent = document.getElementById('comments');
+      }
+      if (parent) {
+        parent.appendChild(make(comment.content));
+      }
+    });
+  }
 
-    // var comment_id = window.location.hash;
-    // if (comment_id && comment_id != "" && comment_re.test(comment_id)) {
-    //   comment_id = comment_id.substr(1);
-    //   var element = document.getElementById(comment_id);
-    //   if (!element) {
-    //     splash.style.display = 'block';
-    //     i_pos = 1;
-    //     setTimeout(check_comment, intervals[0]);
-    //   }
-    // }
-  });
-}
+  function check() {
+    fetch(PATH)
+      .then((response) => response.json())
+      .then((data) => process(data.filter(comment => comment.slug == SLUG && !document.getElementById(comment.comment_id))));
+    setTimeout(check, INTERVAL);
+  }
+
+  function init() {
+    setTimeout(check, INTERVAL);
+  }
+
+  if (self.fetch) {
+    // в старых браузерах работать не будет, но это их проблемы
+    window.addEventListener("load", init);
+  }
+})();
