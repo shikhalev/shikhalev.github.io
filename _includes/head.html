@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' -%}
-    {%- include ganal.html -%}
-    {% include metrica.html %}
+    {%- include external/google_analytics.html -%}
+    {% include external/yandex_metrica.html %}
   {%- endif -%}
   <script src="https://yastatic.net/share2/share.js" async></script>
 </head>
