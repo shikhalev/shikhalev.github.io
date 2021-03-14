@@ -17,7 +17,7 @@ permalink: /admin/last-comments.json
   {
     "date": {{- comment.date | jsonify -}},
     "name": {{- comment.name | jsonify -}},
-    "url": {{- comment.utl | jsonify -}},
+    "url": {{- comment.url | jsonify -}},
     "message": {{- comment.message | xml_escape | markdownify | jsonify -}},
     "slug": {{- comment.slug | jsonify -}},
     "comment_id": {{- comment.comment_id | jsonify -}},
