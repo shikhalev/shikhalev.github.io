@@ -21,7 +21,7 @@ layout: default
 </div>
 {% assign source = site.categories[page.category_id] %}
 {% if source and source.size > 0 %}
-{% include list/last.html source=source limit=10 maximum=12 %}
+{% include list/last.html source=source limit=site.category_page_limit maximum=site.category_page_maximum %}
 {% endif %}
 {% endcapture %}
 

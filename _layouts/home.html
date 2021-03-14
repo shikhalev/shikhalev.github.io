@@ -12,7 +12,8 @@ layout: default
 <div class="post-content">
   {{ content }}
 </div>
-{% include list/last.html limit=10 maximum=12 %}
+{{ site.home_page_limit | inspect }}
+{% include list/last.html limit=site.home_page_limit maximum=site.home_page_maximum %}
 {% endcapture %}
 
 {% capture page_toc %}

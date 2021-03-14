@@ -115,3 +115,12 @@ exclude:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+
+# Собственные настройки сайта
+
+comments_json_limit: 20
+category_page_limit: 10
+category_page_maximum: 12
+home_page_limit: 12
+home_page_maximum: 15

@@ -13,8 +13,8 @@ permalink: /admin/last-comments.json
     {%- endif -%}
   {%- endfor -%}
   {%- assign comments = comments | sort: 'date' | reverse -%}
-  {%- for comment in comments limit:20 -%}
-    {
+  {%- for comment in comments limit:site.comments_json_limit -%}
+  {
     "date": {{- comment.date | jsonify -}},
     "name": {{- comment.name | jsonify -}},
     "url": {{- comment.utl | jsonify -}},
@@ -22,7 +22,6 @@ permalink: /admin/last-comments.json
     "slug": {{- comment.slug | jsonify -}},
     "comment_id": {{- comment.comment_id | jsonify -}},
     "parent_id": {{- comment.parent_id | jsonify -}}
-    }
-    {%- unless forloop.last -%}, {%- endunless -%}
+  }{%- unless forloop.last -%},{%- endunless -%}
   {%- endfor -%}
 ]
