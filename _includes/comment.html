@@ -7,14 +7,20 @@
       {{- c.name -}}
       {%- endif -%}
     </span> <span class="comment-meta"><a href="#{{- c.comment_id -}}">#{{- c.comment_id -}}</a>&nbsp;{{- c.date | date: "%Y.%m.%d %H.%M" -}}
-    {%- if c.parent_id and c.parent_id != '' -%}
+    {%- if c.parent_id and c.parent_id != '' %}
     ответ на <a href="#{{- c.parent_id -}}">#{{- c.parent_id -}}</a>
     {%- endif -%}
     </span>
   </h5>
   <div class="comment-message">
-    {{- c.message | xml_escape | markdownify -}}
+    {{- c.message | xml_escape | replace: '&gt;', '>' | markdownify -}}
   </div>
   <p class="comment-actions"><a style="cursor: pointer;" data-action="answer" data-comment="{{- c.comment_id -}}">Ответить</a> |
-                             <a style="cursor: pointer;"  data-action="cite" data-comment="{{- c.comment_id -}}">Цитировать</a></p>
+                             <a style="cursor: pointer;" data-action="cite" data-comment="{{- c.comment_id -}}">Цитировать</a></p>
+  {%- for cc in include.source -%}
+    {%- if cc[1].parent_id == c.comment_id -%}
+      {%- assign sub = cc[1] -%}
+      {%- include comment.html comment=sub source=include.source -%}
+    {%- endif -%}
+  {%- endfor -%}
 </div>

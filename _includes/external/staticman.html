@@ -14,7 +14,9 @@
     {% assign comments = site.data.comments[page_id] | sort %}
     {% for comment in comments %}
       {% assign c = comment[1] %}
-      {% include comment.html comment=c %}
+      {% if c.parent_id == '' %}
+      {% include comment.html comment=c source=comments %}
+      {% endif %}
     {% endfor %}
     {% endif %}
   </section>
