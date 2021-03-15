@@ -25,11 +25,10 @@
 <div class="add-comment-section">
   <h3>Добавить комментарий</h3>
   <form method="POST" action="{{ site.staticman_url }}">
-    {%- assign comment_id = "now" | date: "%N" -%}
     <input name="options[redirect]" type="hidden" value="{{page.url | absolute_url}}#comments">
     <input id="slug" name="options[slug]" type="hidden" value="{{ page_id }}">
     <input name="fields[slug]" type="hidden" value="{{ page_id}}">
-    <input name="fields[comment_id]" type="hidden" value="{{ comment_id }}">
+    <input id="comment_id" name="fields[comment_id]" type="hidden" value="">
     <input id="parent_id" name="fields[parent_id]" type="hidden" value="">
       <div>
         <table>

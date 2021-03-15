@@ -1,24 +1,23 @@
-{%- assign c = include.comment -%}
-<div class="comment" id="{{- c.comment_id -}}">
+<div class="comment" id="{{- include.comment.comment_id -}}">
   <h5 class="comment-title"><span class="comment-author">
-      {%- if c.url and c.url != '' -%}
-      <a href="{{- c.url -}}">{{- c.name -}}</a>
+      {%- if include.comment.url and include.comment.url != '' -%}
+      <a href="{{- include.comment.url -}}">{{- include.comment.name -}}</a>
       {%- else -%}
-      {{- c.name -}}
+      {{- include.comment.name -}}
       {%- endif -%}
-    </span> <span class="comment-meta"><a href="#{{- c.comment_id -}}">#{{- c.comment_id -}}</a>&nbsp;{{- c.date | date: "%Y.%m.%d %H.%M" -}}
-    {%- if c.parent_id and c.parent_id != '' %}
-    ответ на <a href="#{{- c.parent_id -}}">#{{- c.parent_id -}}</a>
+    </span> <span class="comment-meta"><a href="#{{- include.comment.comment_id -}}">#{{- include.comment.comment_id -}}</a>&nbsp;{{- include.comment.date | date: "%Y.%m.%d %H.%M" -}}
+    {%- if include.comment.parent_id and include.comment.parent_id != '' %}
+    ответ на <a href="#{{- include.comment.parent_id -}}">#{{- include.comment.parent_id -}}</a>
     {%- endif -%}
     </span>
   </h5>
   <div class="comment-message">
-    {{- c.message | xml_escape | replace: '&gt;', '>' | markdownify -}}
+    {{- include.comment.message | xml_escape | replace: '&gt;', '>' | markdownify -}}
   </div>
-  <p class="comment-actions"><a style="cursor: pointer;" data-action="answer" data-comment="{{- c.comment_id -}}">Ответить</a> |
-                             <a style="cursor: pointer;" data-action="cite" data-comment="{{- c.comment_id -}}">Цитировать</a></p>
+  <p class="comment-actions"><a style="cursor: pointer;" data-action="answer" data-comment="{{- include.comment.comment_id -}}">Ответить</a> |
+                             <a style="cursor: pointer;" data-action="cite" data-comment="{{- include.comment.comment_id -}}">Цитировать</a></p>
   {%- for cc in include.source -%}
-    {%- if cc[1].parent_id == c.comment_id -%}
+    {%- if cc[1].parent_id == include.comment.comment_id -%}
       {%- assign sub = cc[1] -%}
       {%- include comment.html comment=sub source=include.source -%}
     {%- endif -%}

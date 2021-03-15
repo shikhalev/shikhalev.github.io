@@ -84,10 +84,19 @@
     }
   }
 
+  function init_id() {
+    var new_id = Math.floor(Math.random() * 16 * 16 * 16 * 16 * 16 * 16).toString(16);
+    var field = document.getElementById('comment_id');
+    field.value = new_id;
+  }
+
   function init() {
     init_answers();
     setTimeout(check, INTERVAL);
   }
+
+  // а вот это должно работать везде!
+  init_id();
 
   if (self.fetch) {
     // в старых браузерах работать не будет, но это их проблемы
