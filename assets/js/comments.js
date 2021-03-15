@@ -61,12 +61,16 @@
     header.innerHTML = `Будет добавлен ответ на комментарий <a href="#${comment_id}">#${comment_id}</a> [<a id="action-reset" style="cursor: pointer;" data-action="reset">сбросить</a>]`;
     field.value = comment_id;
 
+    let message = document.getElementById("comment_message");
     if (action == 'cite') {
       let source = document.getElementById(comment_id).getElementsByClassName('comment-message')[0];
-      let target = document.getElementById('comment_message');
-      target.value += '\r\n> ' + source.textContent + '\r\n';
-      target.scrollIntoView({block:'nearest',inline:'nearest'});
+      let source_lines = source.textContent.trim().split('\n');
+      for (let line of source_lines) {
+        message.value += '\r\n> ' + line.trim();
+      }
+      message.value += "\r\n";
     }
+    message.scrollIntoView({ block: "nearest", inline: "nearest" });
 
     let reset_a = document.getElementById('action-reset');
     reset_a.addEventListener('click', reset_answer);
