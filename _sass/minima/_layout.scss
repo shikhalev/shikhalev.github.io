@@ -399,7 +399,6 @@
 
 .center-box {
   text-align: center;
-  width: 800px;
   max-width: 800px;
   padding: 0px;
   margin-top: 5px;
@@ -412,6 +411,7 @@
   img {
     display: inline-block;
     max-width: 800px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
