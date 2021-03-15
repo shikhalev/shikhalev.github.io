@@ -769,7 +769,7 @@ hr {
     font-family: $caption-font-family;
 
     .comment-meta {
-      font-size: 75%;
+      font-size: 80%;
       font-family: $compact-font-family;
       color: $grey-color;
       a,
@@ -793,7 +793,40 @@ hr {
   h5,
   h6 {
     font-size: $base-font-size;
-    font-weight: medium;
+    font-weight: normal;
     font-family: $caption-font-family;
+  }
+}
+
+.comment-actions {
+  font-size: 80%;
+  font-family: $compact-font-family;
+  color: $grey-color;
+
+  a, a:visited {
+    color: $grey-color;
+  }
+
+  display: none;
+
+}
+
+.add-comment-section {
+  table {
+      border: 0px;
+      tr {
+        background-color: white;
+      }
+    td {
+      border: 0px;
+    }
+    th {
+      border: 0px;
+      background-color: white;
+      text-align: center;
+      font-weight: normal;
+      font-family: $compact-font-family;
+      font-size: small;
+    }
   }
 }

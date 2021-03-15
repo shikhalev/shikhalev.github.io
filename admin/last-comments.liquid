@@ -23,6 +23,7 @@ permalink: /admin/last-comments.json
    ,"parent_id": {{- comment.parent_id | jsonify -}}
   }{%- unless forloop.last -%},{%- endunless -%}
   {%- endfor -%}
+  {%- comment -%}
   {%- if jekyll.environment != 'production' -%}
   ,{
     "content":"<div class=\"comment\" id=\"000000000\">\n  <h5 class=\"comment-title\"><span class=\"comment-author\"><a href=\"https://shikhalev.org\">Тестер</a></span> <span class=\"comment-meta\"><a href=\"#482099859\">#482099859</a>&nbsp;2021.03.14 16.47</span>\n  </h5>\n  <div class=\"comment-message\"><p>Лорем ипсум :)</p>\n\n<p>Так победим!</p>\n</div>\n</div>\n",
@@ -31,4 +32,5 @@ permalink: /admin/last-comments.json
     "parent_id":""
   }
   {%- endif -%}
+  {%- endcomment -%}
 ]

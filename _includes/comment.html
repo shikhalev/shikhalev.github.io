@@ -15,4 +15,6 @@
   <div class="comment-message">
     {{- c.message | xml_escape | markdownify -}}
   </div>
+  <p class="comment-actions"><a style="cursor: pointer;" data-action="answer" data-comment="{{- c.comment_id -}}">Ответить</a> |
+                             <a style="cursor: pointer;"  data-action="cite" data-comment="{{- c.comment_id -}}">Цитировать</a></p>
 </div>
