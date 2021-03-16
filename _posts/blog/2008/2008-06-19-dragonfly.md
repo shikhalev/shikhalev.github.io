@@ -1,6 +1,6 @@
 ---
 title: Наблюдательское
-category: [ life, dybr ]
+category: [ life, dybr, nature ]
 tags:
   - жизнь
   - природа
