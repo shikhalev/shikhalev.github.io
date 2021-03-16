@@ -805,20 +805,20 @@ hr {
   font-family: $compact-font-family;
   color: $grey-color;
 
-  a, a:visited {
+  a,
+  a:visited {
     color: $grey-color;
   }
 
   display: none;
-
 }
 
 .add-comment-section {
   table {
-      border: 0px;
-      tr {
-        background-color: white;
-      }
+    border: 0px;
+    tr {
+      background-color: white;
+    }
     td {
       border: 0px;
     }
@@ -839,4 +839,56 @@ hr {
     page-break-inside: avoid; /* Makes effect only in Firefox */
     break-inside: avoid; /* IE10+, Opera 11.1—12.1 */
   }
+}
+
+#watermark-container {
+  z-index: 0;
+  /* Center the content */
+  align-items: center;
+  display: none;
+  justify-content: center;
+
+  /* Absolute position */
+  left: 0px;
+  position: fixed;
+  top: 0px;
+
+  /* Take full size */
+  height: 100%;
+  width: 100%;
+
+  @media print {
+    display: flex;
+  }
+}
+
+main {
+  z-index: 1;
+  position: relative;
+}
+
+.ya-share2 {
+  @media print {
+    display: none;
+  }
+}
+
+#global-box {
+  /* Used to position the watermark */
+  position: relative;
+}
+
+#watermark {
+  /* Text color */
+  color: rgba(0, 0, 0, 0.1);
+
+  /* Text styles */
+  font-size: 140pt;
+  font-weight: bold;
+
+  /* Rotate the text */
+  transform: rotate(-60deg);
+
+  /* Disable the selection */
+  user-select: none;
 }

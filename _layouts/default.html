@@ -5,7 +5,16 @@
 
   <body>
 
-    {%- include header.html -%}
+<div id="global-box">
+    <!-- Watermark container -->
+    <div id="watermark-container">
+        <!-- The watermark -->
+        <div id="watermark">shikhalev.org</div>
+    </div>
+
+    <!-- Other content -->
+
+{%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -16,6 +25,8 @@
     {%- include footer.html -%}
 
   {% include external/inaturalist_loader.html %}
+
+</div>
 
   </body>
 
