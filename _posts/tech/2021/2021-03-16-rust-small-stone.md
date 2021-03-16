@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Небольшой подводный камень в Rust
-description: Нечастый случай, когда Rust (его стандартная библиотека) прямо-таки подталкивает сделать ошибку по невнимательности.
+description: Нечастый случай, когда Rust (его стандартная библиотека) прямо-таки подталкивает сделать ошибку по невнимательности при чтении из файла в вектор.
 category: [ tech, programming, rust ]
 tags:
   - Rust
@@ -60,7 +60,7 @@ pub fn crc64(path: &PathBuf) -> io::Result<u64> {
 let mut buffer = Vec::<u8>::with_capacity(buffer_size);
 {% endhighlight %}
 
-~~*(Слава турборыбе!)*~~ Ну, в самом деле, мне же нужно выделить память, а не проинициализировать ее — все равно перезапишется
+~~*(Слава [турборыбе][turbofish]!)*~~ Ну, в самом деле, мне же нужно выделить память, а не проинициализировать ее — все равно перезапишется
 при чтении. В чем тут подвох? Подвох в том, что превращаясь в `&mut [u8]` такой вектор демонстрирует именно что нулевую
 длину. И никаких ошибок я при этом не получаю, просто все файлы почему-то кончаются, не успев начаться. Хорошо, что у меня
 была достаточно простая в целом задача, я логировал множество промежуточных моментов и заметил, что контрольные суммы как-то
@@ -85,8 +85,10 @@ let mut buffer = vec![0; buffer_size];
 
 [logo]: /assets/img/2021-03/rust_logo.png
 
-[^crc64fast]: https://crates.io/crates/crc64fast
-[^read]: https://doc.rust-lang.org/std/io/trait.Read.html#tymethod.read
-[^write]: https://docs.rs/crc64fast/1.0.0/crc64fast/struct.Digest.html#method.write
-[^bufreader]: https://doc.rust-lang.org/std/io/struct.BufReader.html
-[^wc]: https://doc.rust-lang.org/std/vec/struct.Vec.html#method.with_capacity
+[^crc64fast]: <https://crates.io/crates/crc64fast>
+[^read]: <https://doc.rust-lang.org/std/io/trait.Read.html#tymethod.read>
+[^write]: <https://docs.rs/crc64fast/1.0.0/crc64fast/struct.Digest.html#method.write>
+[^bufreader]: <https://doc.rust-lang.org/std/io/struct.BufReader.html>
+[^wc]: <https://doc.rust-lang.org/std/vec/struct.Vec.html#method.with_capacity>
+
+[turbofish]: https://turbo.fish/
