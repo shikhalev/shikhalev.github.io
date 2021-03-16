@@ -842,7 +842,7 @@ hr {
 }
 
 #watermark-container {
-  z-index: 0;
+  z-index: 1;
   /* Center the content */
   align-items: center;
   display: none;
@@ -863,7 +863,7 @@ hr {
 }
 
 main {
-  z-index: 1;
+  z-index: 0;
   position: relative;
 }
 
@@ -883,7 +883,8 @@ main {
   color: rgba(0, 0, 0, 0.1);
 
   /* Text styles */
-  font-size: 140pt;
+  font-size: 100pt;
+  font-family: $mono-font-family;
   font-weight: bold;
 
   /* Rotate the text */
