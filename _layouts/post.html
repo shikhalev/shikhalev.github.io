@@ -14,7 +14,7 @@ layout: default
   <header class="post-header">
 
   <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-  <div class="right-box"><div class="ya-share2" data-curtain data-copy="extraItem" data-color-scheme="whiteblack" data-services="vkontakte,facebook,telegram,twitter,evernote"></div></div>
+  {%- include external/yandex_share2.html item=page -%}
   <p class="post-meta">
     <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
@@ -23,7 +23,7 @@ layout: default
     {%- if page.author or site.author -%}
       • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | default: site.author }}</span></span>
     {%- endif -%}</p>
-  <div class="post-meta">Тэги: {% include list/tags.html %}</div>
+  <div class="post-meta">Теги: {% include list/tags.html %}</div>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">

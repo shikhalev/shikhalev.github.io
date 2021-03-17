@@ -1,6 +1,6 @@
 ---
 layout: tags
-title: Предметный указатель
+title: (Бес-)предметный указатель
 description: Список тегов с указателем страниц
 permalink: /tags
 ---

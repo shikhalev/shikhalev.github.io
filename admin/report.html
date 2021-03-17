@@ -12,7 +12,7 @@ comments: false
   <tr><td><code>jekyll.environment</code></td><td><code>{{ jekyll.environment | inspect }}</code></td></tr>
 </table>
 
-<h2>Посты без категорий или с одной</h2>
+<h2 id="oneorzero">Посты без категорий или с одной</h2>
 
 {% for post in site.posts %}
   {% if forloop.first %}<ul>{% endif %}
@@ -24,7 +24,7 @@ comments: false
   {% if forloop.last%}</ul>{% endif %}
 {% endfor %}
 
-<h2>Страницы без категорий</h2>
+<h2 id="zero">Страницы без категорий</h2>
 
 {% for post in site.pages %}
   {% if forloop.first %}<ul>{% endif %}
@@ -34,6 +34,7 @@ comments: false
   {% if forloop.last%}</ul>{% endif %}
 {% endfor %}
 
+{% comment %}
 <h2>Посты без тегов</h2>
 
 {% for post in site.posts %}
@@ -53,8 +54,9 @@ comments: false
   {% endif %}
   {% if forloop.last%}</ul>{% endif %}
 {% endfor %}
+{% endcomment %}
 
-<h2>Категории без потока</h2>
+<h2 id="wo-stream">Категории без потока</h2>
 
 {% for category in site.categories %}
   {% if forloop.first %}<ul>{% endif %}
@@ -65,7 +67,7 @@ comments: false
   {% if forloop.last%}</ul>{% endif %}
 {% endfor %}
 
-<h2>Категории без календаря</h2>
+<h2 id="wo-calendar">Категории без календаря</h2>
 
 {% for category in site.categories %}
   {% if forloop.first %}<ul>{% endif %}
@@ -76,7 +78,7 @@ comments: false
   {% if forloop.last%}</ul>{% endif %}
 {% endfor %}
 
-<h2>Лишние потоки</h2>
+<h2 id="l-streams">Лишние потоки</h2>
 
 {% for stream in site.streams %}
   {% if forloop.first %}<ul>{% endif %}
@@ -87,7 +89,7 @@ comments: false
 {% endfor %}
 
 
-<h2>Лишние календари</h2>
+<h2 id="l-cals">Лишние календари</h2>
 
 {% for stream in site.calendars %}
   {% if forloop.first %}<ul>{% endif %}
@@ -97,32 +99,8 @@ comments: false
   {% if forloop.last%}</ul>{% endif %}
 {% endfor %}
 
-<h2>Тэги без представления</h2>
+<h2 id="dubles">Дублирующиеся теги</h2>
 
-{% for tag in site.tags %}
-  {% if forloop.first %}<ul>{% endif %}
-  {% assign ss = site.tagpages | where: 'tag_id',tag[0] %}
-  {% if ss.size == 0 %}
-    <li>{{tag[0]}}</li>
-    <ul>
-      {% for post in tag[1] %}
-      <li><a href="{{post.url}}">{{post.title}}</a></li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-  {% if forloop.last%}</ul>{% endif %}
-{% endfor %}
-
-<h2>Представления без тегов</h2>
-
-{% for tp in site.tagpages %}
-  {% if forloop.first %}<ul>{% endif %}
-  {% unless site.tags[tp.tag_id] %}
-  <li>{{tp.tag_id}} (<code>{{tp.path}}</code>)</li>
-  {% endunless%}
-  {% if forloop.last%}</ul>{% endif %}
-{% endfor %}
-
-
+<p>Пока не  знаю, как сделать :(</p>
 
 {% endunless %}

@@ -1,8 +1,8 @@
-{% assign item = source.item %}
+{% assign item = include.item %}
 {% assign date_format = site.minima.date_format | default: "%Y.%m.%d" %}
 
 <li style="display: table; width: 100%;">
-  <div class="right-box"><div class="ya-share2" data-curtain data-url="{{item.url | absolute_url }}" data-copy="extraItem" data-title="{{item.title}}" data-color-scheme="whiteblack" data-services="vkontakte,facebook,telegram,twitter,evernote"></div></div>
+  {%- include external/yandex_share2.html item=include.item -%}
   <p class="post-meta">{{ item.date | date: date_format }} | Разделы: {% include list/categories.html item=item %}</p>
   <h3 class="post-item" id="{{ item.url | slugify }}">
     <a class="post-link" href="{{ item.url | relative_url }}">
@@ -15,5 +15,5 @@
       <p class="small"><a href="{{ item.url | relative_url }}">Читать далее »</a></p>
     {% endif %}
   {% endif %}
-  <p class="post-meta">Тэги: {% include list/tags.html item=item %}</p>
+  <p class="post-meta">Теги: {% include list/tags.html item=item %}</p>
 </li>
