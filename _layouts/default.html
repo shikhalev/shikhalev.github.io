@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
+{%- include head.html -%}
 
-  <body>
+<body>
 
 <div id="global-box">
-    <!-- Watermark container -->
-    <div id="watermark-container">
-        <!-- The watermark -->
-        <div id="watermark">shikhalev.org</div>
-    </div>
 
-    <!-- Other content -->
+  <div id="watermark-container">
+    <div id="watermark">shikhalev.org</div>
+  </div>
 
-{%- include header.html -%}
+  <div id="page-container">
+
+    {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -24,10 +23,12 @@
 
     {%- include footer.html -%}
 
-  {% include external/inaturalist_loader.html %}
+    {%- include external/inaturalist_loader.html -%}
+
+  </div>
 
 </div>
 
-  </body>
+</body>
 
 </html>

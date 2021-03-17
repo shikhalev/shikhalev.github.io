@@ -841,55 +841,10 @@ hr {
   }
 }
 
-#watermark-container {
-  z-index: 1;
-  /* Center the content */
-  align-items: center;
-  display: none;
-  justify-content: center;
-
-  /* Absolute position */
-  left: 0px;
-  position: fixed;
-  top: 0px;
-
-  /* Take full size */
-  height: 100%;
-  width: 100%;
-
-  @media print {
-    display: flex;
-  }
-}
-
-main {
-  z-index: 0;
-  position: relative;
-}
-
 .ya-share2 {
+  opacity: 0.8;
+
   @media print {
     display: none;
   }
-}
-
-#global-box {
-  /* Used to position the watermark */
-  position: relative;
-}
-
-#watermark {
-  /* Text color */
-  color: rgba(0, 0, 0, 0.1);
-
-  /* Text styles */
-  font-size: 100pt;
-  font-family: $mono-font-family;
-  font-weight: bold;
-
-  /* Rotate the text */
-  transform: rotate(-60deg);
-
-  /* Disable the selection */
-  user-select: none;
 }
