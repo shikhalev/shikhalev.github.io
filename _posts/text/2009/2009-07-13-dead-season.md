@@ -3,8 +3,6 @@ layout: verse
 title: Мертвый сезон
 write_date: 2002
 category: [ text, verses, best ]
-tags:
-  - стихи
 ---
 За окном матом ругается,
 Рассыпает дешевый звон,

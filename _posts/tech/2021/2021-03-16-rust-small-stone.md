@@ -4,7 +4,6 @@ title: Небольшой подводный камень в Rust
 description: Нечастый случай, когда Rust (его стандартная библиотека) прямо-таки подталкивает сделать ошибку по невнимательности при чтении из файла в вектор.
 category: [ tech, programming, rust ]
 tags:
-  - Rust
   - грабли
 image: /assets/img/2021-03/rust_logo.png
 ---

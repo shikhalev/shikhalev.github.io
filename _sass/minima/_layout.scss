@@ -836,8 +836,8 @@ hr {
 .verse {
   p {
     -webkit-column-break-inside: avoid;
-    page-break-inside: avoid; /* Makes effect only in Firefox */
-    break-inside: avoid; /* IE10+, Opera 11.1—12.1 */
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
 }
 
@@ -847,4 +847,34 @@ hr {
   @media print {
     display: none;
   }
+}
+
+.site-index {
+  columns: 3;
+
+  h5 {
+    font-size: 16px;
+  }
+
+  p {
+    font-family: $compact-font-family;
+    text-align: left;
+    hyphens: manual;
+
+    .post-meta {
+      font-family: $compact-font-family;
+    }
+  }
+
+  .tag-inner {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, dt {
+    -webkit-column-break-after: avoid;
+    page-break-after: avoid;
+    break-after: avoid;
 }

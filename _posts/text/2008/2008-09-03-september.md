@@ -3,8 +3,6 @@ layout: verse
 title: Сентябрь...
 caption: "* * *"
 category: [ text, verses, best ]
-tags:
-  - стихи
 ---
 Сентябрь: и дождь, и ветер, и прохлада,
 Чуть подтянулась диафрагма дня.

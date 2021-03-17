@@ -5,6 +5,5 @@
 {% endif %}
 
 {% for tag in tags %}
-  {% assign tagpage = site.tagpages | where: 'tag_id',tag | first %}
-  {% if tagpage %}<a href="{{tagpage.url}}">{{tag}}</a>{% else %}{{tag}}{% endif %}{% unless forloop.last %}, {% endunless %}
+  <a href="{%- link pages/tags.md -%}#{{- tag | slugify -}}">{{tag}}</a>{% unless forloop.last %}, {% endunless %}
 {% endfor %}

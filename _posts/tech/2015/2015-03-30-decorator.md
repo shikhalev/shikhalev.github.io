@@ -4,10 +4,6 @@ title: Декораторы в Ruby
 description: Реализация паттерна «декоратор» на языке Ruby
 category: [ tech, programming, ruby, pub, samag ]
 tags:
-  - «Системный администратор»
-  - программирование
-  - публикации
-  - Ruby
   - метапрограммирование
 image: /assets/img/2015-04/samag130.gif
 ---

@@ -5,11 +5,9 @@ description: Способы ресайза картинок формата PNG �
 category: [ tech, soft, graphics ]
 tags:
   - Linux
-  - графика
   - ImageMagick
   - GIMP
   - PNG
-  - софт
 image: /assets/img/2021-03/resize/screen/source.png
 ---
 <div class="right-box">

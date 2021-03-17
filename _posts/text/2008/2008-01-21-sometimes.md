@@ -2,8 +2,6 @@
 layout: verse
 title: Иногда
 category: [ text, verses ]
-tags:
-  - стихи
 ---
 Иногда мне кажется,
     что я существую

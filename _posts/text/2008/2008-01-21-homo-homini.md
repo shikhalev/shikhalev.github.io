@@ -2,8 +2,6 @@
 layout: verse
 title: Homo homini
 category: [ text, verses, best ]
-tags:
-  - стихи
 ---
 Человек человеку —
     необитаемый остров.

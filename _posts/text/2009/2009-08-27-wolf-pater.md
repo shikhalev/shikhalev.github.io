@@ -3,8 +3,6 @@ layout: verse
 title: Волчий пастух
 write_date: 1999–2000
 category: [ text, verses, best ]
-tags:
-  - стихи
 ---
 Тишина,
 Ночь в лесу,

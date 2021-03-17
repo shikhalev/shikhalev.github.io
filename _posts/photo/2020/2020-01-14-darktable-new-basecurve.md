@@ -4,13 +4,10 @@ title: Новая базовая кривая в Darktable
 date: 2020-01-14
 category: [ photo, processing, tech, soft, graphics ]
 tags:
-  - фотография
-  - обработка фото
   - Darktable
   - цвет
   - RAW
   - Linux
-  - графика
 author: Иван Шихалев
 description: Новые возможности и нюансы модуля «Базовая кривая» в Darktable 3.0
 image: /assets/img/2020-01/nbc/none-IMG_0875.jpg

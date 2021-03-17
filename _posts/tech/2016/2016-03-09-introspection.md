@@ -4,10 +4,6 @@ title: Средства самопознания в Ruby
 description: Что программа может знать о самой себе?
 category: [ tech, programming, ruby, pub, samag ]
 tags:
-  - «Системный администратор»
-  - программирование
-  - публикации
-  - Ruby
   - интроспекция
   - метапрограммирование
 image: /assets/img/2016-03/samag146-147.jpg

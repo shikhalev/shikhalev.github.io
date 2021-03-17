@@ -83,10 +83,6 @@ collections:
   calendars:
     output: true
     permalink: /cal/:name
-  tagpages:
-    output: true
-    permalink: /tag/:name
-
 
 staticman_url: https://shikhalev-comments.herokuapp.com/v3/entry/github/shikhalev/shikhalev.github.io/main/comments
 

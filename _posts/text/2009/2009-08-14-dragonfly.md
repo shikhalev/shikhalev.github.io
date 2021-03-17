@@ -3,8 +3,6 @@ layout: verse
 title: Стрекоза-коромысло
 write_date: ~ 1995–96
 category: [ text, verses ]
-tags:
-  - стихи
 ---
 Сумерки догорали
 Над лесной темнотой,

@@ -4,9 +4,6 @@ title: "Пингвин-фотолюбитель: 2. Командная стро
 date: 2016-06-15
 category: [ photo, processing, penguin, tech, soft, graphics ]
 tags:
-  - графика
-  - пингвин-фотолюбитель
-  - фотография
   - bash
   - EXIF
   - exiftool

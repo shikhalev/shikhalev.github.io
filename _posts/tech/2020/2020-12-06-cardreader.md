@@ -4,9 +4,7 @@ title: Новая железяка
 date: 2020-12-06
 category: [ tech, hard, dybr ]
 tags:
-  - железо
   - кардридер
-  - дыбр
   - AliExpress
   - SD
   - SDXC
