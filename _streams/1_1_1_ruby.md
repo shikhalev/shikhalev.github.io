@@ -2,7 +2,7 @@
 layout: category
 category_id: ruby
 parent: programming
-title: Язык Ruby
-short: Ruby
+title: Ruby
+description: Язык программирования Ruby
 permalink: /tech/programming/ruby/
 ---
