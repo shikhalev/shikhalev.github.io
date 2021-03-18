@@ -2,7 +2,7 @@
 {% assign date_format = site.minima.date_format | default: "%Y.%m.%d" %}
 
 <li style="display: table; width: 100%;">
-  {%- include external/yandex_share2.html item=include.item -%}
+  {%- include yandex/share2.html item=include.item -%}
   <p class="post-meta">{{ item.date | date: date_format }} | Разделы: {% include list/categories.html item=item %}</p>
   <h3 class="post-item" id="{{ item.url | slugify }}">
     <a class="post-link" href="{{ item.url | relative_url }}">
