@@ -2,7 +2,7 @@
 layout: default
 ---
 {% capture main_toc %}
-{% include toc.html html = content sanitize = true item_class = "toc-entry" %}
+{% include allejo/jekyll-toc.liquid html = content sanitize = true item_class = "toc-entry" %}
 {% endcapture %}
 
 {% include sidebar.html toc = main_toc %}

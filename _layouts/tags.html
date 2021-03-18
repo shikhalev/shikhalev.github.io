@@ -40,7 +40,7 @@ layout: default
 {% endcapture %}
 
 {% capture page_toc %}
-{% include toc.html html = content sanitize = true h_max = 3 item_class = "toc-entry" %}
+{% include allejo/jekyll-toc.liquid html = content sanitize = true h_max = 3 item_class = "toc-entry" %}
 {% endcapture %}
 
 {% include sidebar.html toc = page_toc %}

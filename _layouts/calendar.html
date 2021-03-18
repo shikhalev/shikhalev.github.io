@@ -14,7 +14,7 @@ layout: default
 {% endcapture %}
 
 {% capture page_toc %}
-{% include toc.html html = page_content sanitize = true item_class = "toc-entry" %}
+{% include allejo/jekyll-toc.liquid html = page_content sanitize = true item_class = "toc-entry" %}
 {% endcapture %}
 
 {% include sidebar.html toc = page_toc %}
