@@ -16,10 +16,12 @@
   </div>
   <p class="comment-actions"><a style="cursor: pointer;" data-action="answer" data-comment="{{- include.comment.comment_id -}}">Ответить</a> |
                              <a style="cursor: pointer;" data-action="cite" data-comment="{{- include.comment.comment_id -}}">Цитировать</a></p>
-  {%- for cc in include.source -%}
-    {%- if cc[1].parent_id == include.comment.comment_id -%}
-      {%- assign sub = cc[1] -%}
-      {%- include comment.html comment=sub source=include.source -%}
-    {%- endif -%}
-  {%- endfor -%}
+  {%- if include.expand != false -%}
+    {%- for cc in include.source -%}
+      {%- if cc[1].parent_id == include.comment.comment_id -%}
+        {%- assign sub = cc[1] -%}
+        {%- include staticman/comment.liquid comment=sub source=include.source -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
 </div>

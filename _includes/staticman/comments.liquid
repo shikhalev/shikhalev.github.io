@@ -1,0 +1,18 @@
+<!-- Comments -->
+{% if site.data.comments[page_id] %}
+<section id="comments" style="display: block;">
+{% else %}
+<section id="comments" style="display: none;">
+{% endif %}
+  <h2>Комментарии</h2>
+  <small>Комментарии не проходят премодерацию, автор сайта не может нести ответственость за их содержание.</small>
+{% if site.data.comments[page_id] %}
+{% assign comments = site.data.comments[page_id] | sort %}
+  {% for comment in comments %}
+    {% assign c = comment[1] %}
+    {% if c.parent_id == '' %}
+    {% include staticman/comment.liquid comment=c source=comments %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+</section>
