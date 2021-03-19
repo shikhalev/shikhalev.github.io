@@ -743,6 +743,9 @@ hr {
 
 .italic {
   font-style: italic;
+  code {
+    font-style: normal;
+  }
 }
 
 .home-heading {
@@ -873,8 +876,32 @@ hr {
   }
 }
 
-h1, h2, h3, h4, h5, h6, dt {
-    -webkit-column-break-after: avoid;
-    page-break-after: avoid;
-    break-after: avoid;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dt {
+  -webkit-column-break-after: avoid;
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+.small {
+  font-size: 90%;
+}
+
+.coded {
+  font-size: 90%;
+
+  td {
+    vertical-align: top;
+
+    code {
+      font-size: 90%;
+      display: inline-block;
+      white-space: nowrap;
+    }
+  }
 }
