@@ -12,7 +12,6 @@ tags:
   - KDE
   - GNOME
   - Xfce
-comments: false
 ---
 <div class="right-box" style="width: 320px">
 [![Раскладка клавиатуры с третьим и четвертым уровнями][layout]][layout]
