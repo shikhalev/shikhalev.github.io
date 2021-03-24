@@ -16,4 +16,6 @@
     {% endif %}
   {% endif %}
   <p class="post-meta">Теги: {% include list/tags.html item=item %}</p>
+  {% assign slug = item.url | slugify %}
+  <p class="post-meta">{%- include list/list_comments.liquid slug=slug url=item.url -%}</p>
 </li>

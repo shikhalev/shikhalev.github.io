@@ -1,5 +1,5 @@
 <div class="add-comment-section">
-  <h3>Добавить комментарий</h3>
+  <h3 id="add-comment">Добавить комментарий</h3>
   <form method="POST" action="{{ site.staticman_url }}">
     <input name="options[redirect]" type="hidden" value="{{page.url | absolute_url}}#comments">
     <input id="slug" name="options[slug]" type="hidden" value="{{ page_id }}">
