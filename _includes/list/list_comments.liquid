@@ -3,7 +3,8 @@
   Нет комментариев
 {%- else -%}
   <a href="{{- include.url -}}#comments">
-  {%-if count < 10 or count > 20 -%}
+  {%- assign check = count | modulo: 100 -%}
+  {%-if check < 10 or check > 20 -%}
     {%- assign sign = count | modulo: 10 -%}
     {%- if sign >= 1 and sign <= 4 -%}
       {{- count -}} комментария

@@ -20,5 +20,11 @@
     {% endif %}
     </div>
   {% endif %}
-  <p class="post-meta">Теги: {% include list/tags.html item=item %}</p>
+  {% if item.tags and item.tags.size > 0 %}
+    <p class="post-meta">Теги: {% include list/tags.html item=item %}</p>
+  {% endif %}
+  {% if item.comments != false %}
+    {% assign slug = item.url | slugify %}
+    <p class="post-meta">{%- include list/list_comments.liquid slug=slug url=item.url -%}</p>
+  {% endif %}
 </li>
