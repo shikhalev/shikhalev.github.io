@@ -913,6 +913,7 @@ dt {
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid-column;
+    display: table;
   }
 
   .post-meta {
