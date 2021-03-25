@@ -905,3 +905,35 @@ dt {
     }
   }
 }
+
+.calendar-year {
+  columns: 2;
+
+  .box {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+  }
+
+  .post-meta {
+    font-family: $compact-font-family;
+  }
+
+  p {
+    text-align: left;
+    hyphens: manual;
+  }
+
+  p.post-meta {
+    margin-left: 2em;
+  }
+
+}
+
+.calendar-list {
+  h2 {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: solid 3px $grey-color-light;
+  }
+}

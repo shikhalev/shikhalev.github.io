@@ -1,16 +1,23 @@
 {% assign year = "" %}
 {% assign month = "" %}
+{% assign year_open = false %}
 
 {% for item in source %}
   {% assign item_year = item.date | date: "%Y" %}
   {% if year != item_year %}
+    {% if year_open %}
+      </div>
+    {% endif %}
     <h2 id="year-{{item_year}}">{{item_year}}</h2>
+    <div class="calendar-year">
+    {% assign year_open = true %}
     {% assign year = item_year %}
     {% assign month = "" %}
   {% endif %}
+  <div class="box">
   {% assign item_month = item.date | date: "%m" %}
   {% if month != item_month %}
-    <h3 id="month-{{item_month}}">
+    <h3 id="month-{{item_year}}-{{item_month}}">
       {% case item_month %}
         {% when '01' %}Январь
         {% when '02' %}Февраль
@@ -32,6 +39,10 @@
   <p>
     <span class="post-meta">{{ item.date | date: "%Y.%m.%d" }} |</span>
     <a href="{{ item.url | relative_url }}" title="{{ item.description }}" class="calendar-post-link">{{ item.title }}</a>
-    <span class="post-meta">  | {% include list/categories.html item=item %}</span>
   </p>
+  <p class="post-meta">{% include list/categories.html item=item %}</p>
+  </div>
 {% endfor %}
+{% if year_open %}
+  </div>
+{% endif %}
