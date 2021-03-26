@@ -845,10 +845,16 @@ hr {
 }
 
 .ya-share2 {
-  opacity: 0.8;
-
   @media print {
     display: none;
+  }
+}
+
+.ya-share2__item {
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 0.8;
   }
 }
 
