@@ -617,6 +617,10 @@ h1.verse-title {
   margin-top: 0px;
   text-align: center;
   background-color: $grey-color-light;
+
+  @media print {
+    display: none;
+  }
 }
 
 .calendar-post-link {
