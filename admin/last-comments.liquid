@@ -6,7 +6,7 @@ permalink: /admin/last-comments.json
   {%- for cc in site.data.comments -%}
     {%- if cc[1] -%}
       {%- for ccc in cc[1] -%}
-        {%- if ccc[1] -%}
+        {%- if ccc[1] and ccc[1].comment_id and ccc[1].comment_id != '' -%}
           {%- assign comments = comments | push: ccc[1] -%}
         {%- endif -%}
       {%- endfor -%}
@@ -23,14 +23,4 @@ permalink: /admin/last-comments.json
    ,"parent_id": {{- comment.parent_id | jsonify -}}
   }{%- unless forloop.last -%},{%- endunless -%}
   {%- endfor -%}
-  {%- comment -%}
-  {%- if jekyll.environment != 'production' -%}
-  ,{
-    "content":"<div class=\"comment\" id=\"000000000\">\n  <h5 class=\"comment-title\"><span class=\"comment-author\"><a href=\"https://shikhalev.org\">Тестер</a></span> <span class=\"comment-meta\"><a href=\"#482099859\">#482099859</a>&nbsp;2021.03.14 16.47</span>\n  </h5>\n  <div class=\"comment-message\"><p>Лорем ипсум :)</p>\n\n<p>Так победим!</p>\n</div>\n</div>\n",
-    "slug":"2021-03-start-html",
-    "comment_id":"000000000",
-    "parent_id":""
-  }
-  {%- endif -%}
-  {%- endcomment -%}
 ]
