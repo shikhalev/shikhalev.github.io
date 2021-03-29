@@ -1,0 +1,41 @@
+{% if page.recommendations != false %}
+  {% if page.recommendations %}
+    {% assign source_id = page.recommendations %}
+  {% else %}
+    {%if page.layout == 'category' %}
+      {% assign category_id = page.category_id %}
+    {% else %}
+      {% assign category_id = page.category[0] %}
+    {% endif %}
+    {% assign category_page = site.streams | where: 'category_id', category_id | first %}
+    {% if category_page.recommendations %}
+      {% assign source_id = category_page.recommendations %}
+    {% else %}
+      {% assign source_id = category_id %}
+    {% endif %}
+  {% endif %}
+  {% if source_id == 'all' %}
+    {% assign source = site.posts | where: 'recommend', true %}
+  {% elsif source_id == 'best' %} {% comment %} Тут берем все записи — они уже в избранном {% endcomment %}
+    {% assign source = site.categories['best'] %}
+  {% else %}
+    {% assign source = site.categories[source_id] | where: 'recommend', true %}
+  {% endif %}
+  {% if source.size >= 3 %}
+    {% assign three = source | sample: 3 %}
+    <section class="recommendations">
+    <p style="font-style: italic;">Три случайных рекомендованных поста</p>
+    <div class="recommendations-list">
+    {% for sample_post in three %}
+      <div class="box">
+    <p class="recommendations-item">
+      <span class="post-meta">{{ sample_post.date | date: "%Y.%m.%d" }} |</span>
+      <a href="{{ sample_post.url | relative_url }}" title="{{ sample_post.description }}">{{ sample_post.title }}</a>
+    </p>
+    <p class="post-meta">{% include list/categories.html item=sample_post %}</p>
+      </div>
+    {% endfor %}
+    </div>
+    </section>
+  {% endif %}
+{% endif %}

@@ -5,4 +5,5 @@ parent: text
 title: Проза
 description: Сказочки, рассказики...
 permalink: /text/prose/
+recommendations: best
 ---

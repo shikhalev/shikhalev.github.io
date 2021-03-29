@@ -8,6 +8,7 @@ tags:
   - оптимизация
   - многозадачность
 image: /assets/img/2015-04/136.gif
+recommend: true
 ---
 <div class="right-box">
 [![][cover]][samag]

@@ -7,6 +7,7 @@ tags:
   - контекст
   - замыкания
 image: /assets/img/2015-04/134-5.gif
+recommend: true
 ---
 <div class="right-box">
 [![][cover]][samag]

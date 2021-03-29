@@ -5,6 +5,7 @@ parent: pub
 title: «Системный администратор»
 description: Публикации в журнале «Системный администратор»
 permalink: /pub/samag/
+recommendations: false
 ---
 <div class="right-box">
 [![][logo]][samag]

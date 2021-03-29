@@ -15,7 +15,7 @@ description: >-
   б) только базовая обработка. Повторять страницы мануала нет никакого желания, а если говорить об осмысленном
   применении всех возможностей, то и компетентности.
 image: /assets/img/2019-09/dtqs/site.jpg
-mainline: true
+recommend: true
 ---
 <div class="center-box">
 [![Скриншот darktable.org][img-site]][img-site]

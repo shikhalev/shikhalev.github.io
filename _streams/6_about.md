@@ -7,6 +7,7 @@ description: О себе, этом сайте и т.д.
 icon: 🎭
 permalink: /about/
 inaturalist: true
+recommendations: all
 ---
 <div class="right-box">
 ![Я][icon]

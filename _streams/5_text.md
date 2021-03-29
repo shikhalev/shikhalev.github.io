@@ -6,4 +6,5 @@ title: Тексты
 description: Попытки литературного творчества
 icon: 📚
 permalink: /text/
+recommendations: best
 ---

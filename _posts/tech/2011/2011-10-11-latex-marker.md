@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Выделение «маркером» в LaTeX
+title: Выделение «маркером» в LaTeX
 description: Выделение цветным фоном в тексте, аккуратный способ.
 category: [ tech, soft ]
 tags:
@@ -9,6 +9,7 @@ tags:
   - обработка текста
   - вёрстка
 image: /assets/img/2011-10/marker.png
+recommend: true
 ---
 Иногда бывает полезно выделить в тексте небольшой фрагмент так, как это делается
 <span style="background-color: yellow;">на бумаге маркером</span>. В HTML это делается посредством указания атрибута стиля

@@ -9,6 +9,7 @@ tags:
   - GIMP
   - PNG
 image: /assets/img/2021-03/resize/screen/source.png
+recommend: true
 ---
 <div class="right-box">
 {: style="width: 320px"}

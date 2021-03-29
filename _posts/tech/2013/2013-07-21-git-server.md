@@ -8,6 +8,7 @@ tags:
   - Gentoo
   - Git
 image: /assets/img/2013-07/gitweb.png
+recommend: true
 ---
 <div class="right-box" style="width: 320px;">
 [![][gitweb]][gitweb]

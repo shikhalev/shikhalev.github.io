@@ -13,6 +13,7 @@ tags:
   - GNOME
   - Xfce
 image: /assets/img/2021-03/typo/keyboard-layout.png
+recommend: true
 ---
 <div class="right-box" style="width: 320px">
 [![Раскладка клавиатуры с третьим и четвертым уровнями][layout]][layout]

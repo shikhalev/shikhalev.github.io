@@ -937,10 +937,55 @@ dt {
 
 }
 
+.recommendations-list {
+  columns: 3;
+
+  @media screen and (max-width: 800px) {
+    columns: 2;
+  }
+
+  @media screen and (max-width: 500px) {
+    columns: 1;
+  }
+
+  .box {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    display: table;
+  }
+
+  .post-meta {
+    font-family: $compact-font-family;
+  }
+
+  p {
+    margin-left: 1rem;
+    text-align: left;
+    hyphens: manual;
+  }
+
+  p.recommendations-item {
+    text-indent: -1rem;
+  }
+
+}
+
 .calendar-list {
   h2 {
     margin-top: 20px;
     padding-top: 10px;
     border-top: solid 3px $grey-color-light;
+  }
+}
+
+section.recommendations {
+
+  padding: 10px 1rem 10px;
+    border: solid $grey-color-light 1px;
+    box-shadow: 1px 1px 3px $grey-color-light;
+
+  @media print {
+    display: none;
   }
 }
