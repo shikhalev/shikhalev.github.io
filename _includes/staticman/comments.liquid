@@ -10,8 +10,8 @@
 {% assign comments = site.data.comments[page_id] | sort %}
   {% for comment in comments %}
     {% assign c = comment[1] %}
-    {% if c.parent_id == '' %}
-    {% include staticman/comment.liquid comment=c source=comments %}
+    {% if c.parent_id == '' and c.comment_id != '' %}
+      {% include staticman/comment.liquid comment=c source=comments %}
     {% endif %}
   {% endfor %}
 {% endif %}
