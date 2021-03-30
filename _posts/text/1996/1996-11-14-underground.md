@@ -1,8 +1,6 @@
 ---
 layout: verse
 title: Мы строим подземный город
-date: 2014-02-12
-write_date: 14 ноября 1996 года
 category: [ text, verses, best ]
 tags:
   - песенка
