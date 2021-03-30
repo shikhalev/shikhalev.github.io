@@ -1,7 +1,7 @@
 ---
 layout: verse
 title: Рок-н-ролл
-write_date: ~ 1996–97
+write_date: предположительно весна 1997
 category: [ text, verses, best ]
 tags:
   - песенка
