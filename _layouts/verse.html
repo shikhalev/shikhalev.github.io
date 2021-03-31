@@ -8,8 +8,23 @@ layout: default
 {% include sidebar.html toc = main_toc %}
 
 {% capture post_date %}
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {{ page.date | date: date_format }}
+  {%- assign item_month = page.date | date: "%m" -%}
+  {%- case item_month -%}
+    {%- when '01' -%}январь
+    {%- when '02' -%}февраль
+    {%- when '03' -%}март
+    {%- when '04' -%}апрель
+    {%- when '05' -%}май
+    {%- when '06' -%}июнь
+    {%- when '07' -%}июль
+    {%- when '08' -%}август
+    {%- when '09' -%}сентябрь
+    {%- when '10' -%}октябрь
+    {%- when '11' -%}ноябрь
+    {%- when '12' -%}декабрь
+    {%- else -%}неизвестный месяц
+  {%- endcase -%}
+  &nbsp;{{- page.date | date: "%Y" -}}
 {% endcapture %}
 
 <article class="post h-entry" itemscope itemtype="http://schema.org/CreativeWork">
