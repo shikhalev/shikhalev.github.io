@@ -935,12 +935,14 @@ dt {
   }
 
   p {
+    margin-left: 2rem;
+    text-indent: -2rem;
     text-align: left;
     hyphens: manual;
   }
 
   p.post-meta {
-    margin-left: 2em;
+    text-indent: 0px;
   }
 
 }

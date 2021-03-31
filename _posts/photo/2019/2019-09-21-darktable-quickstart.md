@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Darktable — (не очень) быстрый старт
-date: 2019-09-21
 category: [ photo, processing, tech, soft, graphics ]
 tags:
   - Darktable

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Новая базовая кривая в Darktable
-date: 2020-01-14
 category: [ photo, processing, tech, soft, graphics ]
 tags:
   - Darktable

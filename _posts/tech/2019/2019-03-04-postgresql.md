@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Всё для людей!
-date: 2019-03-04
 category: [ tech, programming, db ]
 tags:
   - PostgreSQL
