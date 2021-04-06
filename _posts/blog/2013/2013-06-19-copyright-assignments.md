@@ -7,6 +7,7 @@ tags:
   - свободное ПО
   - Free Software
   - FSF
+recommend: true
 ---
 ... или Знаете ли вы что...
 
