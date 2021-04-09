@@ -8,6 +8,7 @@ tags:
   - Free Software
   - FSF
 recommend: true
+last_modified_at: 2021-04-09 12:00 +0500
 ---
 ... или Знаете ли вы что...
 
