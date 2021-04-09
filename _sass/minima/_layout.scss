@@ -517,6 +517,7 @@ div.footnotes {
   font-family: $compact-font-family;
   columns: 2;
 
+  margin-top: 10px;
   padding-top: 10px;
   border-top: solid 2px $grey-color-light;
 
@@ -998,4 +999,8 @@ section.recommendations {
   @media print {
     display: none;
   }
+}
+
+blockquote.epigraph {
+  margin-left: 4rem;
 }
