@@ -12,6 +12,7 @@ tags:
   - свободное ПО
   - компиляторы
   - языки программирования
+image: /assets/img/2011-10/fpc/lazarus-over.png
 ---
 <div class="right-box" style="width: 300px">
 [![Скриншот IDE Lazarus][cover]][cover]
