@@ -5,7 +5,7 @@
       {%- else -%}
       {{- include.comment.name -}}
       {%- endif -%}
-    </span> <span class="comment-meta"><a href="#{{- include.comment.comment_id -}}">#{{- include.comment.comment_id -}}</a>&nbsp;{{- include.comment.date | date: "%Y.%m.%d %H.%M" -}}
+    </span> <span class="comment-meta"><a href="#{{- include.comment.comment_id -}}">#{{- include.comment.comment_id -}}</a>&nbsp;{{- include.comment.date | date: "%Y.%m.%d %H:%M" -}}
     {%- if include.comment.parent_id and include.comment.parent_id != '' %}
     ответ на <a href="#{{- include.comment.parent_id -}}">#{{- include.comment.parent_id -}}</a>
     {%- endif -%}
