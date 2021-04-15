@@ -8,6 +8,9 @@ category: [ tech, programming, fpc ]
 tags:
   - Pascal
   - Hello, World!
+  - свободное ПО
+  - компиляторы
+  - языки программирования
 image: /assets/img/2013-11/fpc.png
 last_modified_at: 2021-04-14 10:00 +0500
 ---
