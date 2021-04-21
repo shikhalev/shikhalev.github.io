@@ -1,7 +1,7 @@
-{% if jekyll.environment == 'development' %}
+{% if jekyll.environment == 'development' and false %}
   {% assign item = page %}
-  {% capture embed %}
-  <div class="embed-shikhalev-org" style="box-shadow: 1px 1px 3px silver; padding: 10px;">
+  {%- capture embed -%}
+  <div class="embed-shikhalev-org" style="box-shadow: 1px 1px 3px silver; padding: 10px 0px;">
     <style>
       .embed-shikhalev-org {
         font-family: "PT Sans", Arial, sans-serif;
@@ -288,9 +288,11 @@
     <p class="post-meta">{%- include list/list_comments.liquid slug=slug url=item.url -%}</p>
   {% endif %}
   </div>
-  {% endcapture %}
+  {%- endcapture -%}
   {% assign embed = embed | replace: 'href="/', 'href="https://shikhalev.org/' | replace: 'src="/', 'src="https://shikhalev.org/' | replace: "'", '&#39' %}
-  <iframe width="900px" height="600px" srcdoc='{{ embed }}'></iframe>
-
-  <textarea cols="120" rows="40">{{ embed | xml_escape }}</textarea>
+  {%- capture frame -%}
+    <iframe frameborder="0" width="100%" height="400px" srcdoc='{{ embed }}'></iframe>
+  {%- endcapture -%}
+  {{ frame }}
+  <textarea cols="120" rows="20">{{ frame | xml_escape }}</textarea>
 {% endif %}
