@@ -1,7 +1,7 @@
 ---
 layout: category
 category_id: web
-parent: programming
+parent: tech
 title: Веб-технологии
 short: Web
 description: HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.
