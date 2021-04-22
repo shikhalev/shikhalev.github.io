@@ -5,5 +5,5 @@ parent: tech
 title: Веб-технологии
 short: Web
 description: HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.
-permalink: /tech/programming/web/
+permalink: /tech/web/
 ---
