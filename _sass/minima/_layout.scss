@@ -1039,3 +1039,27 @@ abbr {
     hyphens: manual;
   }
 }
+
+sup.source {
+  font-family: $compact-font-family;
+  color: $grey-color;
+
+  a, a:hover, a:visited, a:link {
+    color: $grey-color;
+  }
+}
+
+table.topped {
+
+th {
+  border-top: solid 5px $grey-color-light;
+  border-color: $grey-color-light;
+  font-weight: normal;
+  font-family: $caption-font-family;
+  margin-top: 5px;
+}
+
+  td {
+  vertical-align: top;
+}
+}
