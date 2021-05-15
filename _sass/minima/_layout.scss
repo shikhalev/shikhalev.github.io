@@ -259,6 +259,9 @@
 .post,
 .home {
   max-width: 900px;
+  @media print {
+    max-width: 100%;
+  }
 }
 
 /**
@@ -1066,6 +1069,8 @@ th {
 
 @media print {
   @page {
-    margin: 0.7cm;
+    margin: 1cm 1cm 1.5cm;
+    orphans: 2;
+    widows: 2;
   }
 }
