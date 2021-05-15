@@ -492,7 +492,7 @@ image: /assets/img/2021-04/b-in-c/IMG_0280.jpg
 
 [^processes]: Конечно, индустриализация, урбанизация, механизация и химизация сельского хозяйства — не синхронные процессы. Я их объединил не столько по временному принципу (хотя это близкие и во многом пересекающиеся периоды), сколько именно по общности процессов.
 
-[^biston]: См. «Промышленный меланизм бабочек получил генетическое объяснение», Александр Марков, «Элементы», 2016. <https://elementy.ru/novosti_nauki/432764/Promyshlennyy_melanizm_babochek_poluchil_geneticheskoe_obyasnenie>
+[^biston]: См. «Промышленный меланизм бабочек получил генетическое объяснение», Александр Марков, «Элементы», 2016.<br>[https://elementy.ru/&#8203;novosti_nauki/&#8203;432764/&#8203;Promyshlennyy&#8203;_melanizm&#8203;_babochek&#8203;_poluchil&#8203;_geneticheskoe&#8203;_obyasnenie](https://elementy.ru/novosti_nauki/432764/Promyshlennyy_melanizm_babochek_poluchil_geneticheskoe_obyasnenie)
 
 [^wild]: Строго говоря, по настоящему дикую природу в наше время еще пойди поищи, и уж точно не в окрестностях больших городов... Но все-таки.
 
@@ -500,11 +500,11 @@ image: /assets/img/2021-04/b-in-c/IMG_0280.jpg
 
 [^see-nab]: См. также [старый пост «Наблюдательское» от 2008.06.19][nab].
 
-[^charadrii]: Латинского названия не даю, поскольку сейчас кулики не являются отдельным таксоном.
+[^charadrii]: Латинского названия не даю, поскольку сейчас кулики не являются отдельным таксоном.
 
-[^may-first]: И запустили, см. <https://www.e1.ru/text/entertainment/2021/05/02/69896984/>.
+[^may-first]: И запустили, см. [https://www.e1.ru/&#8203;text/&#8203;entertainment/&#8203;2021/&#8203;05/&#8203;02/&#8203;69896984/](https://www.e1.ru/text/entertainment/2021/05/02/69896984/).
 
-[^may-nine]: См. <https://www.e1.ru/text/gorod/2021/05/09/69906401/>.
+[^may-nine]: См. [https://www.e1.ru/&#8203;text/&#8203;gorod/&#8203;2021/&#8203;05/&#8203;09/&#8203;69906401/](https://www.e1.ru/text/gorod/2021/05/09/69906401/).
 
 [^noise-society]: См. <https://66.ru/news/society/240470/>.
 
