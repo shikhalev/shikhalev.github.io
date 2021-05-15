@@ -1063,3 +1063,9 @@ th {
   vertical-align: top;
 }
 }
+
+@media print {
+  @page {
+    margin: 0.7cm;
+  }
+}
