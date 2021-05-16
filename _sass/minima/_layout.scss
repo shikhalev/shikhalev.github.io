@@ -1074,3 +1074,10 @@ th {
     widows: 2;
   }
 }
+
+p, li, dd {
+  @media print {
+    orphans: 2;
+    widows: 2;
+  }
+}
