@@ -1,5 +1,6 @@
 ---
 title: README
+description: README for GitHub
 permalink: /README
 ---
 # Репозиторий https://shikhalev.org/
