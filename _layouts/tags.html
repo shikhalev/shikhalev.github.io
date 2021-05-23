@@ -14,11 +14,11 @@ layout: default
 
 {%- capture taglist_string -%}
 {%- for tag in site.tags -%}
-  {{- tag[0] -}}{%- unless forloop.last -%},{%- endunless -%}
+  {{- tag[0] -}}{%- unless forloop.last -%}␀{%- endunless -%}
 {%- endfor -%}
 {%- endcapture -%}
 
-{%- assign taglist = taglist_string | split: ',' | sort -%}
+{%- assign taglist = taglist_string | split: '␀' | sort -%}
 
 {%- for tag_name in taglist -%}
 {%- assign tag_posts = site.tags[tag_name] -%}
