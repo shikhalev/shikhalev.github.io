@@ -1,6 +1,7 @@
 ---
 layout: post
 title: iNaturalist — рекомендую
+description: "Проект iNaturalist: краткое введение и личный опыт"
 category: [ life, nature, photo, birdwatching, social ]
 tags:
   - птицы
