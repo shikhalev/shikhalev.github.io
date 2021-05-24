@@ -13,6 +13,7 @@ tags:
   - растения
   - EXIF
 image: /assets/img/2021-05/inat/1414.png
+recommend: true
 ---
 <div class="right-box" style="max-width:320px">
 [![iNaturalist][l1414]][inat]
