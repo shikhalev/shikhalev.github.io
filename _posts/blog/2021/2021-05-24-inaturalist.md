@@ -15,6 +15,7 @@ tags:
   - EXIF
 image: /assets/img/2021-05/inat/1414.png
 recommend: true
+date: 2021-05-24 21:12 +0500
 ---
 <div class="right-box" style="max-width:320px">
 [![iNaturalist][l1414]][inat]
