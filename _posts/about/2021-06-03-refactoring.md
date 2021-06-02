@@ -7,6 +7,7 @@ tags:
   - shikhalev.org
   - сайты
   - верстка
+image: /assets/img/2021-06/refactoring.png
 ---
 <div class="right-box" style="max-width:320px;">
 [![][refactoring]][refactoring]
