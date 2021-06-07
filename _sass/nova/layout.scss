@@ -1,0 +1,161 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+#grid {
+  padding: 0px;
+  margin: 0px;
+
+  display: grid;
+
+  @media screen and (min-width: 1230px) {
+    grid-template-columns: 1fr 400px 500px 10px 300px 1fr;
+    // grid-template-rows: $site-header-height auto auto auto auto $site-footer-height;
+    grid-template-areas:
+      "hl header navy   navy   navy     hr"
+      ".  main   main   .      search   ."
+      ".  main   main   .      toc      ."
+      ".  main   main   .      donate   ."
+      ".  main   main   .      gads     ."
+      ".  main   main   .      feeds    ."
+      ".  main   main   .      contacts ."
+      ".  main   main   .      extra    ."
+      ".  main   main   .      .        ."
+      "fl footer footer footer footer   fr";
+  }
+
+  @media screen and (max-width: 1229px) and (min-width: 1150px) {
+    grid-template-columns: 1fr 500px 10px 300px;
+    // grid-template-rows: $site-header-height auto auto auto auto $site-footer-height;
+    grid-template-areas:
+      "header navy   navy   navy"
+      "main   main   .      search"
+      "main   main   .      toc"
+      "main   main   .      donate"
+      "main   main   .      gads"
+      "main   main   .      feeds"
+      "main   main   .      contacts"
+      "main   main   .      extra"
+      "main   main   .      ."
+      "footer footer footer footer";
+  }
+
+  @media screen and (max-width: 1149px) and (min-width: 920px) {
+    grid-template-columns: 1fr 900px 1fr;
+    grid-template-rows: $site-header-height auto $site-footer-height;
+    grid-template-areas:
+      "hl header hr"
+      ".  main   ."
+      "fl footer fr";
+  }
+
+  @media screen and (max-width: 919px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: $site-header-height auto $site-footer-height;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+}
+
+#site-header {
+  grid-area: header;
+  background-color: blue; // FIXME:
+}
+
+#navy {
+  grid-area: navy;
+  background-color: cornflowerblue; // FIXME:
+  text-align: right;
+}
+
+#site-footer {
+  grid-area: footer;
+  background-color: cyan; // FIXME:
+}
+
+#search {
+  grid-area: search;
+  background-color: lightcoral; // FIXME:
+  @media screen and (max-width: 1149px) {
+    display: none;
+  }
+}
+
+#toc {
+  grid-area: toc;
+  background-color: lightsalmon; // FIXME:
+  // height: 0px; // TODO: test and do
+  @media screen and (max-width: 1149px) {
+    display: none;
+  }
+}
+
+#donate {
+  grid-area: donate;
+  background-color: lightpink; // FIXME:
+  height: 300px;
+  @media screen and (max-width: 1149px) {
+    display: none;
+  }
+}
+
+#ga {
+  grid-area: gads;
+  background-color: lightsteelblue; // FIXME:
+  height: 300px;
+  @media screen and (max-width: 1149px) {
+    display: none;
+  }
+}
+
+#feeds {
+  grid-area: feeds;
+  background-color: lightgreen; // FIXME:
+  @media screen and (max-width: 1149px) {
+    display: none;
+  }
+}
+
+#contacts {
+  grid-area: contacts;
+  background-color: lightseagreen; // FIXME:
+  @media screen and (max-width: 1149px) {
+    display: none;
+  }
+}
+
+#sidebar {
+  grid-area: extra;
+  background-color: yellow; // FIXME:
+  @media screen and (max-width: 1149px) {
+    display: none;
+  }
+}
+
+#main {
+  grid-area: main;
+  background-color: silver;  // FIXME:
+}
+
+#hl {
+  grid-area: hl;
+  background-color: lightblue; // FIXME:
+}
+
+#hr {
+  grid-area: hr;
+  background-color: lightblue; // FIXME:
+}
+
+#fl {
+  grid-area: fl;
+  background-color: lightcyan; // FIXME:
+}
+
+#fr {
+  grid-area: fr;
+  background-color: lightcyan; // FIXME:
+}
