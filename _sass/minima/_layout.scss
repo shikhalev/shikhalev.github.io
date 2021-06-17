@@ -1081,3 +1081,8 @@ p, li, dd {
     widows: 2;
   }
 }
+
+sup {
+  font-size: x-small;
+  font-family: $compact-font-family;
+}
