@@ -11,7 +11,6 @@ body {
 
   @media screen and (min-width: 1230px) {
     grid-template-columns: 1fr 400px 500px 10px 300px 1fr;
-    // grid-template-rows: $site-header-height auto auto auto auto $site-footer-height;
     grid-template-areas:
       "hl header navy   navy   navy     hr"
       ".  main   main   .      search   ."
@@ -27,7 +26,6 @@ body {
 
   @media screen and (max-width: 1229px) and (min-width: 1150px) {
     grid-template-columns: 1fr 500px 10px 300px;
-    // grid-template-rows: $site-header-height auto auto auto auto $site-footer-height;
     grid-template-areas:
       "header navy   navy   navy"
       "main   main   .      search"
@@ -42,33 +40,98 @@ body {
   }
 
   @media screen and (max-width: 1149px) and (min-width: 920px) {
-    grid-template-columns: 1fr 900px 1fr;
-    grid-template-rows: $site-header-height auto $site-footer-height;
+    grid-template-columns: 1fr 300px 300px 300px 1fr;
     grid-template-areas:
-      "hl header hr"
-      ".  main   ."
-      "fl footer fr";
+      "hl header navy   navy     hr"
+      "hl header search search   hr"
+      ".  gads   gads   gads     ."
+      ".  main   main   main     ."
+      ".  donate extra  feeds    ."
+      ".  donate extra  contacts ."
+      ".  .      extra  .        ."
+      "fl footer footer footer   fr";
   }
 
-  @media screen and (max-width: 919px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: $site-header-height auto $site-footer-height;
+  @media screen and (max-width: 919px) and (min-width: 750px) {
+    grid-template-columns: 300px 1fr 1fr;
     grid-template-areas:
-      "header"
-      "main"
-      "footer";
+      "header navy   navy"
+      "header search search"
+      "gads   gads   gads"
+      "main   main   main"
+      "donate extra  feeds"
+      "donate extra  contacts"
+      ".      extra  ."
+      "footer footer footer";
   }
+
+  @media screen and (max-width: 749px) and (min-width: 550px) {
+    grid-template-columns: 300px 10px 1fr;
+    grid-template-areas:
+      "header navy   navy"
+      "header search search"
+      "gads   gads   gads"
+      "main   main   main"
+      "donate .      feeds"
+      "donate .      contacts"
+      ".      .      extra"
+      "footer footer footer";
+  }
+
+  @media screen and (max-width: 549px) {
+    grid-template-columns: 300px 1fr;
+    grid-template-areas:
+      "header   navy"
+      "search   search"
+      "gads     gads"
+      "main     main"
+      "donate   ."
+      "feeds    ."
+      "contacts ."
+      "extra    ."
+      "footer   footer";
+  }
+}
+
+@mixin header-top {
+  border-top: solid 5px $base-font-color;
+}
+
+@mixin header-bottom {
+  border-bottom: solid 2px $base-border-color;
 }
 
 #site-header {
   grid-area: header;
-  background-color: blue; // FIXME:
+  font-size: $header-font-size;
+  font-family: $caption-font-family;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+
+  @include header-top;
+  @include header-bottom;
+
+  a, a:link, a:visited {
+    color: $base-font-color;
+    text-decoration: none;
+  }
+  a:hover, a:focus {
+    text-decoration: underline;
+  }
 }
 
 #navy {
   grid-area: navy;
-  background-color: cornflowerblue; // FIXME:
   text-align: right;
+
+  padding-right: 5px;
+
+  @include header-top;
+
+  @media screen and (max-width:1150px) {
+    @include header-bottom;
+  }
 }
 
 #site-footer {
@@ -79,9 +142,9 @@ body {
 #search {
   grid-area: search;
   background-color: lightcoral; // FIXME:
-  @media screen and (max-width: 1149px) {
-    display: none;
-  }
+  // @media screen and (max-width: 1149px) {
+  //   display: none;
+  // }
 }
 
 #toc {
@@ -97,9 +160,9 @@ body {
   grid-area: donate;
   background-color: lightpink; // FIXME:
   height: 300px;
-  @media screen and (max-width: 1149px) {
-    display: none;
-  }
+  // @media screen and (max-width: 1149px) {
+  //   display: none;
+  // }
 }
 
 #ga {
@@ -107,32 +170,32 @@ body {
   background-color: lightsteelblue; // FIXME:
   height: 300px;
   @media screen and (max-width: 1149px) {
-    display: none;
+    height: 100px;
   }
 }
 
 #feeds {
   grid-area: feeds;
   background-color: lightgreen; // FIXME:
-  @media screen and (max-width: 1149px) {
-    display: none;
-  }
+  // @media screen and (max-width: 1149px) {
+  //   display: none;
+  // }
 }
 
 #contacts {
   grid-area: contacts;
   background-color: lightseagreen; // FIXME:
-  @media screen and (max-width: 1149px) {
-    display: none;
-  }
+  // @media screen and (max-width: 1149px) {
+  //   display: none;
+  // }
 }
 
 #sidebar {
   grid-area: extra;
   background-color: yellow; // FIXME:
-  @media screen and (max-width: 1149px) {
-    display: none;
-  }
+  // @media screen and (max-width: 1149px) {
+  //   display: none;
+  // }
 }
 
 #main {
@@ -142,12 +205,15 @@ body {
 
 #hl {
   grid-area: hl;
-  background-color: lightblue; // FIXME:
 }
 
 #hr {
   grid-area: hr;
-  background-color: lightblue; // FIXME:
+}
+
+#hl, #hr {
+  @include header-top;
+  @include header-bottom;
 }
 
 #fl {
@@ -158,4 +224,8 @@ body {
 #fr {
   grid-area: fr;
   background-color: lightcyan; // FIXME:
+}
+
+#toc, #donate, #ga, #feeds, #contacts {
+  margin-bottom: 10px;
 }

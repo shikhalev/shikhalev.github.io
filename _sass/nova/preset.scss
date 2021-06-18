@@ -4,6 +4,7 @@ $base-font-size: 16px !default;
 $small-font-size: 14px !default;
 $notes-font-size: 12px !default;
 $index-font-size: 8px !default;
+$header-font-size: 24px !default;
 
 $base-font-family: "PT Sans", gsans, Arial, sans-serif !default;
 $caption-font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif !default;
@@ -12,3 +13,6 @@ $mono-font-family: "PT Mono", gmono, monospace !default;
 
 $site-header-height: 100px !default;   // FIXME: value
 $site-footer-height: 100px !default;
+
+$base-font-color: #222;
+$base-border-color: #EEE;
