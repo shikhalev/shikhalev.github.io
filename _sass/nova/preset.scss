@@ -16,3 +16,10 @@ $site-footer-height: 100px !default;
 
 $base-font-color: #222;
 $base-border-color: #EEE;
+
+$frame-color-dark: #3e5662 !default;
+$frame-color-light: lighten($frame-color-dark, 50%) !default;
+
+$highlight-color: #ffdb4d !default;
+
+// https://colorscheme.ru/#3i21Tw0w0w0w0

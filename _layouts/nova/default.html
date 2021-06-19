@@ -11,7 +11,7 @@
 
 <div id="grid">
 
-<header id="site-header"><a href="/">Иван Шихалев</a></header>
+<header id="site-header"><p class="logo"><a href="/">{{- site.title -}}</a></p></header>
 
 <nav id="navy">NAVY</nav>
 
@@ -23,11 +23,15 @@
 
 </main>
 
-<aside id="search">SEARCH</aside>
+<aside id="search">
+  {%- include google/search.html -%}
+</aside>
 
 <aside id="toc">TOC</aside>
 
-<aside id="donate">DONATE</aside>
+<aside id="donate">
+  {%- include yoomoney/form.html -%}
+</aside>
 
 <aside id="ga">GADS</aside>
 
@@ -37,10 +41,11 @@
 
 <aside id="sidebar">EXTRA</aside>
 
-<footer id="site-footer">FOOTER</footer>
+<footer id="site-footer">Last site update: {{ site.time }}</footer>
 
 <div id="hl"></div>
 <div id="hr"></div>
+<div id="hb"></div>
 <div id="fl"></div>
 <div id="fr"></div>
 
