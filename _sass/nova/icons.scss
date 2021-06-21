@@ -1,0 +1,35 @@
+
+.fa-icon-laptop-code {
+  &::before {
+    content: "\f5fc ";
+    @extend .fas;
+  }
+}
+
+.fa-icon-camera {
+  &::before {
+    content: "\f030 ";
+    @extend .fas;
+  }
+}
+
+.fa-icon-newspaper {
+  &::before {
+    content: "\f1ea ";
+    @extend .far;
+  }
+}
+
+.fa-icon-feather {
+  &::before {
+    content: "\f52d ";
+    @extend .fas;
+  }
+}
+
+.fa-icon-id-card {
+  &::before {
+    content: "\f2c2 ";
+    @extend .far;
+  }
+}

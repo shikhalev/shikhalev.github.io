@@ -8,11 +8,43 @@ permalink: /test.html
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius pharetra consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eleifend gravida neque. Curabitur in augue purus. Aliquam vitae mi ac ligula pellentesque facilisis quis id mi. Sed molestie bibendum malesuada. Aenean erat nulla, lacinia eleifend neque vel, aliquam consectetur tellus. Aliquam id vestibulum enim, nec volutpat purus. Ut aliquam metus a varius luctus. Nullam egestas sagittis augue eget rutrum. Nunc lacinia eu tortor at vestibulum. Donec ac purus vehicula, accumsan justo eget, rutrum ex. Sed et eleifend mauris. Quisque ut posuere nisl, ac pulvinar libero. Suspendisse sollicitudin, tellus a commodo maximus, nisl urna maximus mi, eu molestie purus lacus ornare diam. Vestibulum vulputate ex at ipsum condimentum consequat.
 
-Etiam rhoncus ipsum ut felis auctor porttitor. Praesent scelerisque eros quis tortor dignissim sodales. Morbi convallis sem vitae neque aliquam, non aliquam justo eleifend. Morbi iaculis leo a arcu tempor accumsan. Pellentesque vitae tortor sed elit laoreet feugiat. Nullam porttitor sed enim a aliquam. Etiam fermentum, erat vitae maximus semper, lacus velit semper lacus, vitae convallis ex lorem a eros. In odio turpis, egestas non turpis et, tempor ultrices ligula. Phasellus ornare diam id eros malesuada, quis aliquam tortor egestas. Quisque commodo rutrum nunc ac faucibus. Proin ut ullamcorper lacus, eget aliquam nunc. Sed tincidunt varius erat, quis dictum ligula blandit vitae. Donec vel suscipit justo, eget tristique velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+* Etiam rhoncus ipsum ut felis auctor porttitor. Praesent scelerisque eros quis tortor dignissim sodales.
+
+* Morbi convallis sem vitae neque aliquam, non aliquam justo eleifend.
+
+* Morbi iaculis leo a arcu tempor accumsan. Pellentesque vitae tortor sed elit laoreet feugiat. Nullam porttitor sed enim a aliquam.
+  Etiam fermentum, erat vitae maximus semper, lacus velit semper lacus, vitae convallis ex lorem a eros. In odio turpis, egestas non
+  turpis et, tempor ultrices ligula. Phasellus ornare diam id eros malesuada, quis aliquam tortor egestas.
+
+  Quisque commodo rutrum nunc ac faucibus. Proin ut ullamcorper lacus, eget aliquam nunc. Sed tincidunt varius erat, quis dictum ligula
+  blandit vitae. Donec vel suscipit justo, eget tristique velit. Pellentesque habitant morbi tristique senectus et netus et malesuada
+  fames ac turpis egestas.
 
 Donec feugiat posuere massa, eget accumsan mauris interdum at. Nulla maximus ullamcorper quam eu dignissim. Donec tempus nibh sit amet leo tempus, laoreet porttitor massa finibus. Donec congue tempor maximus. Phasellus nec velit id sem rutrum blandit. Pellentesque sed ultricies sapien. Etiam nec risus condimentum, vehicula sapien in, auctor sapien. Nulla facilisi. In non imperdiet felis. Ut pharetra iaculis enim, quis viverra ex aliquet eu. Fusce interdum vitae felis id interdum. Suspendisse ante justo, cursus et neque in, congue suscipit magna.
 
-Sed et ligula vel justo viverra vehicula vitae quis lacus. Mauris convallis ullamcorper vehicula. Aenean ac tortor varius, sollicitudin turpis at, auctor mi. Etiam sit amet facilisis purus, eget pharetra nisi. Pellentesque vel viverra orci. Nam et laoreet augue. Ut ut volutpat tortor, quis faucibus purus. Donec semper tincidunt imperdiet. Donec sit amet ornare felis. Nam rhoncus eu metus id molestie.
+<ul class="categories">
+<li>Sed et ligula vel justo viverra vehicula vitae quis lacus.</li>
+<li>Mauris convallis ullamcorper vehicula.
+  <ul>
+  <li class="fas-icon">Aenean ac tortor varius, sollicitudin turpis at, auctor mi.</li>
+  <li>Etiam sit amet facilisis purus, eget pharetra nisi.</li>
+  </ul>
+</li>
+<li>Pellentesque vel viverra orci. Nam et laoreet augue. Ut ut volutpat tortor, quis faucibus purus. Donec semper tincidunt imperdiet. Donec sit amet ornare felis. Nam rhoncus eu metus id molestie.</li>
+</ul>
+
+-----
+
+<ul class="toc">
+<li>Sed et ligula vel justo viverra vehicula vitae quis lacus.</li>
+<li>Mauris convallis ullamcorper vehicula.
+  <ul>
+  <li>Aenean ac tortor varius, sollicitudin turpis at, auctor mi.</li>
+  <li>Etiam sit amet facilisis purus, eget pharetra nisi.</li>
+  </ul>
+</li>
+<li>Pellentesque vel viverra orci. Nam et laoreet augue. Ut ut volutpat tortor, quis faucibus purus. Donec semper tincidunt imperdiet. Donec sit amet ornare felis. Nam rhoncus eu metus id molestie.</li>
+</ul>
 
 Vivamus dapibus, nibh vel ornare volutpat, felis libero maximus nunc, non scelerisque nunc mauris id risus. Fusce accumsan, ex sit amet iaculis eleifend, risus ex auctor ante, ut semper magna lectus bibendum elit. Duis ac dolor non elit blandit volutpat in non eros. In hac habitasse platea dictumst. Integer a imperdiet libero. Vestibulum ultrices sapien nec ligula vulputate interdum. Nam suscipit orci quis ante viverra finibus. Sed ultricies orci est, posuere laoreet risus ultrices id. Maecenas viverra tristique pharetra. Cras pulvinar, enim eget hendrerit congue, mi diam porta nisl, et volutpat diam eros eget erat. In vitae imperdiet mi. Etiam pellentesque libero efficitur feugiat scelerisque. Maecenas urna risus, eleifend vel lacus nec, fermentum imperdiet diam.
 

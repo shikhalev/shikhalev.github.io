@@ -1,0 +1,21 @@
+{%- assign paths = site.header_pages -%}
+{%- if paths -%}
+<div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu">
+    {%- for path in paths -%}
+      {%- assign item = site.pages | where: "path", path | first -%}
+      {%- if item and item.title -%}
+      {%- else -%}
+        {%- assign item = site.streams | where: "path", path | first -%}
+      {%- endif -%}
+      {%- if item and item.title -%}
+        <a class="navy-item fa-icon-{{- item.icon -}}" href="{{- item.url | relative_url -}}">{{- item.short | default: item.title | escape -}}</a>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+{%- endif -%}

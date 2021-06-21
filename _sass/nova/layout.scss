@@ -9,6 +9,10 @@ body {
 
   display: grid;
 
+  @media print {
+    display: block;
+  }
+
   @media screen and (min-width: 1230px) {
     grid-template-columns: 1fr 400px 500px 10px 300px 1fr;
     grid-template-areas:
@@ -85,10 +89,10 @@ body {
       "search   search"
       "gads     gads"
       "main     main"
-      "donate   ."
-      "feeds    ."
-      "contacts ."
-      "extra    ."
+      "donate   donate"
+      "feeds    feeds"
+      "contacts contacts"
+      "extra    extra"
       "footer   footer";
   }
 }
@@ -117,11 +121,14 @@ body {
   @include header-top;
   @include header-bottom;
 
-  a, a:link, a:visited {
+  a,
+  a:link,
+  a:visited {
     color: $frame-color-dark;
     text-decoration: none;
   }
-  a:hover, a:focus {
+  a:hover,
+  a:focus {
     text-decoration: underline;
   }
 
@@ -134,36 +141,123 @@ body {
   grid-area: navy;
   text-align: right;
 
-  padding-right: 5px;
+  min-height: 44px;
+
+  // padding-right: 5px;
 
   @include header-top;
 
-  @media screen and (min-width:1150px), screen and (max-width:549px)  {
+  @media screen and (min-width: 1150px), screen and (max-width: 549px) {
     @include header-bottom;
     margin-bottom: 10px;
+  }
+
+  .wrapper {
+
+    font-family: $caption-font-family;
+
+    #navy-check {
+      display: none;
+    }
+
+    #menu-icon {
+      display: none;
+    }
+
+    .navy-item {
+      &:not(:last-child) {
+        padding-right: 10px;
+      }
+      padding-left: 10px;
+      padding-top: 3px;
+      padding-bottom: 2px;
+    }
+
+    a, a:link, a:visited, a:hover {
+      color: $frame-color-dark;
+      text-decoration: none;
+    }
+
+    a:hover {
+      background-color: $highlight-color;
+    }
+
+    @media screen and (min-width: 820px){
+      padding-top: 5px;
+    }
+
+    @media screen and (max-width: 819px) {
+      position: absolute;
+      top: 9px;
+      right: 5px;
+      background-color: $frame-color-light;  // FIXME
+      border: 1px solid $frame-color-dark;
+      border-radius: 5px;
+      text-align: right;
+
+      label[for="nav-trigger"] {
+        display: block;
+        float: right;
+        width: 36px;
+        height: 36px;
+        z-index: 2;
+        cursor: pointer;
+      }
+
+      #menu-icon {
+        display: block;
+        float: right;
+        width: 36px;
+        height: 26px;
+        line-height: 0.5;
+        padding-top: 10px;
+        text-align: center;
+        font-size: 26px;
+        color: $frame-color-dark;
+      }
+
+      input ~ #navy-menu {
+        clear: both;
+        display: none;
+      }
+
+      input:checked ~ #navy-menu {
+        display: block;
+        padding-bottom: 5px;
+      }
+
+      .navy-item {
+        display: block;
+        padding: 5px 10px;
+
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+        margin-left: 20px;
+      }
+    }
   }
 }
 
 #site-footer {
   grid-area: footer;
-  background-color: cyan; // FIXME:
 }
 
 #search {
   grid-area: search;
   margin-bottom: 10px;
 
-  @media screen and (max-width:1149px) and (min-width:550px) {
+  @media screen and (max-width: 1149px) and (min-width: 550px) {
     @include header-bottom;
   }
 
-  @media screen and (min-width:1150px)  {
+  @media screen and (min-width: 1150px) {
     border: solid $frame-color-light 1px;
     box-shadow: 1px 1px 3px $frame-color-light;
     padding: 5px 5px 0px;
   }
 
-  @media screen and (max-width:549px) {
+  @media screen and (max-width: 549px) {
     padding: 0px 5px;
   }
 
@@ -204,7 +298,6 @@ body {
 
 #ga {
   grid-area: gads;
-  background-color: lightsteelblue; // FIXME:
   height: 300px;
   @media screen and (max-width: 1149px) {
     height: 100px;
@@ -213,7 +306,6 @@ body {
 
 #feeds {
   grid-area: feeds;
-  background-color: lightgreen; // FIXME:
   // @media screen and (max-width: 1149px) {
   //   display: none;
   // }
@@ -221,7 +313,6 @@ body {
 
 #contacts {
   grid-area: contacts;
-  background-color: lightseagreen; // FIXME:
   // @media screen and (max-width: 1149px) {
   //   display: none;
   // }
@@ -229,7 +320,6 @@ body {
 
 #sidebar {
   grid-area: extra;
-  background-color: yellow; // FIXME:
   // @media screen and (max-width: 1149px) {
   //   display: none;
   // }
@@ -243,6 +333,11 @@ body {
   }
 
   margin-bottom: 10px;
+
+  p {
+    text-align: justify;
+    hyphens: auto;
+  }
 }
 
 #hl {
@@ -264,7 +359,8 @@ body {
   }
 }
 
-#hl, #hr {
+#hl,
+#hr {
   @include header-top;
   @include header-bottom;
   margin-bottom: 10px;
@@ -272,19 +368,68 @@ body {
 
 #fl {
   grid-area: fl;
-  background-color: lightcyan; // FIXME:
 }
 
 #fr {
   grid-area: fr;
-  background-color: lightcyan; // FIXME:
 }
 
-#toc, #ga, #feeds, #contacts, #sidebar {
+#toc,
+#ga,
+#feeds,
+#contacts,
+#sidebar {
   margin-bottom: 10px;
 }
 
-#toc, #feeds, #contacts, #sidebar {
+#toc,
+#feeds,
+#contacts,
+#sidebar {
   border: solid $frame-color-light 1px;
   box-shadow: 1px 1px 3px $frame-color-light;
+}
+
+@media print {
+  #site-header,
+  #site-footer,
+  #hl,
+  #hr,
+  #hb,
+  #fl,
+  #fr,
+  #search,
+  #navy,
+  #toc,
+  #ga,
+  #donate,
+  #feeds,
+  #contacts,
+  #sidebar {
+    display: none;
+  }
+}
+
+// FIXME:
+ul.categories {
+  li::marker {
+    content: "\f07c ";
+    color: $frame-color-dark;
+    @extend .far;
+  }
+  // FIXME:
+  li.fas-icon {
+    &::marker {
+      @extend .fas;
+    }
+  }
+}
+
+// FIXME:
+ul.toc {
+  li::marker {
+    content: "\f15c ";
+    color: silver;
+    @extend .far;
+  }
 }

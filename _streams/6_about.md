@@ -4,7 +4,7 @@ category_id: about
 parent: home
 title: О себе
 description: О себе, этом сайте и т.д.
-icon: 🎭
+icon: id-card
 permalink: /about/
 inaturalist: true
 recommendations: all
