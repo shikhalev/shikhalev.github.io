@@ -2,9 +2,15 @@
 body {
   font-family: $base-font-family;
   font-size: $base-font-size;
+  color: $base-font-color;
 }
 
 h1,h2,h3, h4, h5, h6, dt {
   font-family: $caption-font-family;
   font-weight: normal;
+}
+
+p {
+  margin-top: 2px;
+  margin-bottom: 5px;
 }
