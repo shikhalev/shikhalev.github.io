@@ -332,6 +332,9 @@ aside {
   a:hover {
     text-decoration: underline;
   }
+  @media print {
+    display: none;
+  }
 }
 
 #toc {
@@ -414,9 +417,7 @@ aside {
 #main {
   grid-area: main;
   padding-left: 5px;
-  @media screen and (max-width: 919px) {
-    padding-right: 5px;
-  }
+  padding-right: 5px;
 
   margin-bottom: 10px;
 
@@ -501,6 +502,103 @@ aside {
   #sidebar {
     display: none;
   }
+}
+
+aside.categories {
+  //font-size: $small-font-size;
+
+  a {
+    padding: 2px 10px 2px;
+    &:first-child {
+      padding-left: 0px;
+    }
+  }
+  a:hover {
+    text-decoration: none;
+    background-color: $highlight-color;
+  }
+}
+
+.meta {
+  color: $frame-color-dark;
+}
+
+h1 + aside + .meta {
+  margin-top: -1em;
+  margin-bottom: 2em;
+
+  font-family: $caption-font-family;
+  font-size: $small-font-size;
+}
+
+h1 + aside + .meta + .tags {
+  @extend .meta;
+
+  margin-top: -1.5em;
+  margin-bottom: 2em;
+
+  font-family: $caption-font-family;
+  font-size: $small-font-size;
+}
+
+aside.tags {
+  a {
+    padding: 2px 5px 2px;
+
+    &:first-child {
+      padding-left: 0px;
+    }
+
+    &::before {
+      @extend .fa-icon-tag;
+      font-size: $notes-font-size;
+    }
+  }
+  a, a:link, a:visited {
+    color: $frame-color-dark;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+    background-color: $highlight-color;
+  }
+}
+
+.share {
+  float: right;
+  font-size: $share-font-size;
+
+  max-width: 50%;
+
+  a, a:link, a:visited {
+    padding: 2px 5px 2px;
+    color: $frame-color-light;
+
+    &:last-child {
+      padding-right: 0px;
+    }
+  }
+
+  a:hover {
+    color: $frame-color-dark;
+    text-decoration: none;
+    text-shadow: 1px 1px 3px $frame-color-light;
+  }
+}
+
+// old. FIXME:
+
+.right-box {
+  float: right;
+  padding: 0px;
+  margin-left: 10px;
+
+  img {
+    max-width: 100%;
+  }
+}
+.left-box {
+  float: left;
 }
 
 // FIXME:

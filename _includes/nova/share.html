@@ -1,0 +1,12 @@
+{%- if include.item -%}
+  {%- assign item = include.item -%}
+{%- else -%}
+  {%- assign item = page -%}
+{%- endif -%}
+<aside class="share">
+  <a class="fab" href="https://vk.com/share.php?url={{- item.url | absolute_url | url_encode -}}">&#xf189;</a>
+  <a class="fab" href="https://www.facebook.com/sharer.php?u={{- item.url | absolute_url | url_encode -}}">&#xf39e;</a>
+  <a class="fab" href="https://t.me/share/url?url={{- item.url | absolute_url | url_encode -}}">&#xf3fe;</a>
+  <a class="fab" href="https://twitter.com/intent/tweet?url={{- item.url | absolute_url | url_encode -}}&text={{- item.title | url_encode -}}">&#xf099;</a>
+  <a class="fab" href="https://www.evernote.com/clip.action?title={{- item.title | url_encode -}}&url={{ item.url | absolute_url | url_encode -}}">&#xf839;</a>
+</aside>

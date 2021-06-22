@@ -6,4 +6,5 @@ title: Природа
 description: О лесах, полях и реках...
 permalink: /life/nature/
 inaturalist: true
+icon: leaf
 ---

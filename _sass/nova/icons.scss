@@ -41,6 +41,34 @@ $icons: (
     "symbol": "\f073",
     "font": "far",
   ),
+  "home": (
+    "symbol": "\f015",
+    "font": "fas",
+  ),
+  "leaf": (
+    "symbol": "\f06c",
+    "font": "fas",
+  ),
+  "users": (
+    "symbol": "\f0c0",
+    "font": "fas",
+  ),
+  "folder-open": (
+    "symbol": "\f07c",
+    "font": "far",
+  ),
+  "folder-open-black": (
+    "symbol": "\f07c",
+    "font": "fas",
+  ),
+  "star-of-life": (
+    "symbol":"\f621",
+    "font":"fas",
+  ),
+  "tag": (
+    "symbol":"\f02b",
+    "font":"fas",
+  ),
 );
 
 @each $name, $data in $icons {
@@ -73,38 +101,3 @@ $icons: (
     }
   }
 }
-
-// .fa-icon-laptop-code {
-//   &::before {
-//     content: "\f5fc ";
-//     @extend .fas;
-//   }
-// }
-
-// .fa-icon-camera {
-//   &::before {
-//     content: "\f030 ";
-//     @extend .fas;
-//   }
-// }
-
-// .fa-icon-newspaper {
-//   &::before {
-//     content: "\f1ea ";
-//     @extend .far;
-//   }
-// }
-
-// .fa-icon-feather {
-//   &::before {
-//     content: "\f52d ";
-//     @extend .fas;
-//   }
-// }
-
-// .fa-icon-id-card {
-//   &::before {
-//     content: "\f2c2 ";
-//     @extend .far;
-//   }
-// }

@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <title>{{- page.title -}} | {{- site.title -}}</title>
+  <title>{{- page.title | escape -}} | {{- site.title -}}</title>
   <link rel="stylesheet" href="/assets/styles.css" type="text/css">
 </head>
 
@@ -19,9 +19,36 @@
 
 <main id="main">
 
-<h1>{{- page.caption | default: page.title -}}</h1>
+{%- include nova/cats.html -%}
+
+{%- if page.itemtype -%}
+<article itemscope itemtype="{{- page.itemtype -}}">
+{%- endif -%}
+
+<header class="page-header">
+<h1 class="title-{{- page.layout | split: '/' | last -}}" itemprop="name headline">{{- page.title | escape -}}</h1>
+{%- include nova/share.html -%}
+<p class="meta">
+  <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+    {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+    {{ page.date | date: date_format }}
+  </time>
+  {%- if page.author or site.author -%}
+    • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | default: site.author }}</span></span>
+  {%- endif -%}
+</p>
+{%- if page.tags and page.tags.size > 0 -%}
+  <aside class="tags">
+    {%- include nova/tags.html -%}
+  </aside>
+{%- endif -%}
+</header>
 
 {{- content -}}
+
+{%- if page.itemtype -%}
+</article>
+{%- endif -%}
 
 </main>
 

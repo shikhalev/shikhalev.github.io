@@ -34,12 +34,12 @@
   <ul class="{{prefix}}-list">
   {% if flag and maximum < source.size %}
     {% for item in source limit:limit %}
-      {% include list/{{item.layout}}_item.html item=item %}
+      {% include list/{{item.layout | split: '/' | last }}_item.html item=item %}
     {% endfor %}
     {% assign need_calendar = true %}
   {% else %}
     {% for item in source %}
-      {% include list/{{item.layout}}_item.html item=item %}
+      {% include list/{{item.layout | split: '/' | last }}_item.html item=item %}
     {% endfor %}
   {% endif %}
   </ul>

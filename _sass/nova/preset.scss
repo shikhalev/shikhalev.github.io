@@ -5,6 +5,7 @@ $small-font-size: 14px !default;
 $notes-font-size: 12px !default;
 $index-font-size: 8px !default;
 $header-font-size: 24px !default;
+$share-font-size: 18px !default;
 
 $base-font-family: "PT Sans", gsans, Arial, sans-serif !default;
 $caption-font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif !default;
@@ -15,7 +16,7 @@ $far-font-family: "Font Awesome 5 Regular";
 $site-header-height: 100px !default;   // FIXME: value
 $site-footer-height: 100px !default;
 
-$base-font-color: #222;
+$base-font-color: #444;
 
 $frame-color-dark: #3e5662 !default;
 $frame-color-light: lighten($frame-color-dark, 50%) !default;

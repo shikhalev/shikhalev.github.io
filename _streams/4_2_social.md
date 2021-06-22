@@ -5,4 +5,5 @@ parent: life
 title: Общество
 description: Заметки на общественные темы
 permalink: /life/social/
+icon: users
 ---
