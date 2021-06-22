@@ -1,35 +1,110 @@
+// @use "sass:map";
 
-.fa-icon-laptop-code {
-  &::before {
-    content: "\f5fc ";
-    @extend .fas;
+$icons: (
+  "laptop-code": (
+    "symbol": "\f5fc",
+    "font": "fas",
+  ),
+  "camera": (
+    "symbol": "\f030",
+    "font": "fas",
+  ),
+  "newspaper": (
+    "symbol": "\f1ea",
+    "font": "far",
+  ),
+  "feather": (
+    "symbol": "\f52d",
+    "font": "fas",
+  ),
+  "id-card": (
+    "symbol": "\f2c2",
+    "font": "far",
+  ),
+  "link": (
+    "symbol": "\f0c1",
+    "font": "fas",
+  ),
+  "hashtag": (
+    "symbol": "\f292",
+    "font": "fas",
+  ),
+  "file-alt": (
+    "symbol": "\f15c",
+    "font": "far",
+  ),
+  "bookmark": (
+    "symbol": "\f02e",
+    "font": "far",
+  ),
+  "calendar-alt": (
+    "symbol": "\f073",
+    "font": "far",
+  ),
+);
+
+@each $name, $data in $icons {
+  .fa-li-include-#{$name} {
+    content: "#{map-get($data, "symbol")} ";
+    @extend .#{map-get($data, "font")};
+  }
+
+  .fa-icon-#{$name} {
+    &::before {
+      content: "#{map-get($data, "symbol")} ";
+      @extend .#{map-get($data, "font")};
+    }
+  }
+  li.fa-icon-#{$name} {
+    &::marker {
+      content: "#{map-get($data, "symbol")} ";
+      @extend .#{map-get($data, "font")};
+    }
   }
 }
 
-.fa-icon-camera {
-  &::before {
-    content: "\f030 ";
-    @extend .fas;
+@mixin icon-fix {
+  @each $name, $data in $icons {
+    li.fa-icon-#{$name} {
+      &::marker {
+        content: "#{map-get($data, "symbol")} ";
+        @extend .#{map-get($data, "font")};
+      }
+    }
   }
 }
 
-.fa-icon-newspaper {
-  &::before {
-    content: "\f1ea ";
-    @extend .far;
-  }
-}
+// .fa-icon-laptop-code {
+//   &::before {
+//     content: "\f5fc ";
+//     @extend .fas;
+//   }
+// }
 
-.fa-icon-feather {
-  &::before {
-    content: "\f52d ";
-    @extend .fas;
-  }
-}
+// .fa-icon-camera {
+//   &::before {
+//     content: "\f030 ";
+//     @extend .fas;
+//   }
+// }
 
-.fa-icon-id-card {
-  &::before {
-    content: "\f2c2 ";
-    @extend .far;
-  }
-}
+// .fa-icon-newspaper {
+//   &::before {
+//     content: "\f1ea ";
+//     @extend .far;
+//   }
+// }
+
+// .fa-icon-feather {
+//   &::before {
+//     content: "\f52d ";
+//     @extend .fas;
+//   }
+// }
+
+// .fa-icon-id-card {
+//   &::before {
+//     content: "\f2c2 ";
+//     @extend .far;
+//   }
+// }

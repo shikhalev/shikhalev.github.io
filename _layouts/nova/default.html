@@ -29,7 +29,18 @@
   {%- include google/search.html -%}
 </aside>
 
-<aside id="toc">TOC</aside>
+{%- capture toc -%}
+{%- include allejo/jekyll-toc.liquid html = content sanitize = true item_class = "toc-entry" -%}
+{%- endcapture -%}
+{%- assign flag = toc | strip -%}
+{%- if flag != "" -%}
+<aside id="toc" class="toc toc-{{- page.layout | split: '/' | last -}}">
+  <h4>Содержание</h4>
+  {{ toc }}
+</aside>
+{%- else -%}
+<aside id="toc" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside>
+{%- endif -%}
 
 <aside id="donate">
   {%- include yoomoney/form.html -%}
