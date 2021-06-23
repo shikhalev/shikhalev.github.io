@@ -62,12 +62,52 @@ $icons: (
     "font": "fas",
   ),
   "star-of-life": (
-    "symbol":"\f621",
-    "font":"fas",
+    "symbol": "\f621",
+    "font": "fas",
   ),
   "tag": (
-    "symbol":"\f02b",
-    "font":"fas",
+    "symbol": "\f02b",
+    "font": "fas",
+  ),
+  "rss-square": (
+    "symbol": "\f143",
+    "font": "fas",
+  ),
+  "envelope": (
+    "symbol": "\f0e0",
+    "font": "far",
+  ),
+  "keyboard": (
+    "symbol": "\f11c",
+    "font": "far",
+  ),
+  "map-marked-alt": (
+    "symbol": "\f5a0",
+    "font": "fas",
+  ),
+  "vk": (
+    "symbol": "\f189",
+    "font": "fab",
+  ),
+  "twitter": (
+    "symbol": "\f099",
+    "font": "fab",
+  ),
+  "facebook-f": (
+    "symbol": "\f39e",
+    "font": "fab",
+  ),
+  "github": (
+    "symbol": "\f09b",
+    "font": "fab",
+  ),
+  "instagram": (
+    "symbol": "\f16d",
+    "font": "fab",
+  ),
+  "linkedin": (
+    "symbol": "\f08c",
+    "font": "fab",
   ),
 );
 
@@ -83,7 +123,7 @@ $icons: (
       @extend .#{map-get($data, "font")};
     }
   }
-  li.fa-icon-#{$name} {
+  li.fa-icon-li-#{$name} {
     &::marker {
       content: "#{map-get($data, "symbol")} ";
       @extend .#{map-get($data, "font")};
@@ -93,7 +133,7 @@ $icons: (
 
 @mixin icon-fix {
   @each $name, $data in $icons {
-    li.fa-icon-#{$name} {
+    li.fa-icon-li-#{$name} {
       &::marker {
         content: "#{map-get($data, "symbol")} ";
         @extend .#{map-get($data, "font")};

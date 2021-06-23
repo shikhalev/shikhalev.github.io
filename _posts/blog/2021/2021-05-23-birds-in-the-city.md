@@ -6,6 +6,7 @@ category:
   - life
   - nature
   - social
+  - photo
 tags:
   - птицы
   - животные

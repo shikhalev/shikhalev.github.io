@@ -406,16 +406,51 @@ aside {
 
 #feeds {
   grid-area: feeds;
-  // @media screen and (max-width: 1149px) {
-  //   display: none;
-  // }
+
+  padding: 10px;
+
+  ul {
+    padding-left: 20px;
+
+    li::marker {
+      @extend .fa-li-include-rss-square;
+      color: $highlight-color;
+    }
+
+    ul {
+      columns: 2;
+    }
+  }
 }
 
 #contacts {
   grid-area: contacts;
-  // @media screen and (max-width: 1149px) {
-  //   display: none;
-  // }
+  padding: 10px;
+
+  .person {
+    font-family: $caption-font-family;
+    margin-bottom: 5px;
+  }
+
+  ul {
+    padding-left: 25px;
+  }
+
+  p.social {
+    @extend .fab;
+    margin-top: 10px;
+
+    a {
+      color: $frame-color-light;
+      padding: 2px 5px 2px;
+
+      &:hover {
+        color: $frame-color-dark;
+        text-shadow: 1px 1px 3px $frame-color-light;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 #sidebar {

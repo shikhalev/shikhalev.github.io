@@ -1,0 +1,22 @@
+<h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="{{site.title}}">Все записи</a>
+    <ul>
+      {% if page.categories.size > 0 %}
+        {% assign src = page.categories %}
+      {% elsif page.category_id and page.category_id != 'about' %}
+        {%- capture lst -%}{%- include catpath.html category_id=page.category_id current='' -%}{%- endcapture -%}
+        {% assign src = lst | split: '|' %}
+      {% else %}
+        {% assign src = site.feed.categories %}
+      {% endif %}
+      {% for cat in src %}
+        {% if site.feed.categories contains cat %}
+          {% assign catpage = site.streams | where: 'category_id', cat | first %}
+          <li><a href="/feed/{{cat}}.xml" title="{{catpage.description}}">{{catpage.title}}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </li>
+</ul>
