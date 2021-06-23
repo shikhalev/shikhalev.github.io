@@ -10,7 +10,7 @@
 <aside class="categories">
   <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>
   {%- for cat in cats -%}
-    {%- assign catpage = site.streams | where: 'category_id', cat | first %}
-    <a class="fa-icon-{{- catpage.icon | default: 'folder-open' -}}" href="{{- catpage.url | relative_url -}}" title="{{- catpage.description -}}">{{- catpage.short | default: catpage.title -}}</a>
-  {% endfor -%}
+    {%- assign catpage = site.streams | where: 'category_id', cat | first -%}
+    ​<a class="fa-icon-{{- catpage.icon | default: 'folder-open' -}}" href="{{- catpage.url | relative_url -}}" title="{{- catpage.description -}}">{{- catpage.short | default: catpage.title -}}</a>
+  {%- endfor -%}
 </aside>

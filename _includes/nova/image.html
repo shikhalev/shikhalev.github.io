@@ -1,0 +1,35 @@
+{%- assign alt = include.alt | default: include.title | default: include.caption -%}
+{%- assign title = include.title | default: include.caption -%}
+{%- assign caption = include.caption -%}
+{%- assign place = include.place | default: 'center' -%}
+{%- if include.link == false -%}
+  {%- assign link = false -%}
+{%- else -%}
+  {%- assign link = include.link | default: include.src -%}
+{%- endif -%}
+{%- assign src = include.src -%}
+{%- assign slug = src | split: '/' | last | slugify -%}
+{%- assign id = include.id | default: slug -%}
+{%- assign class_prefix = '' -%}
+{%- if place == 'center' -%}
+  {%- assign width = include.width | 800 -%}
+{%- else -%}
+  {%- assign width = include.width | 320 -%}
+  {%- if width <= 200 -%}
+    {%- assign class_prefix = 'strict-' -%}
+  {%- endif -%}
+{%- endif -%}
+<figure id="{{- id -}}" class="{{- class_prefix -}}{{- place -}}" style="max-width: {{- width -}}px;">
+  <p>
+  {%- if link -%}
+    <a href="{{- link -}}" title="{{- title -}}">
+  {%- endif -%}
+  <img src="{{- src -}}" title="{{- title -}}" alt="{{- alt -}}">
+  {%- if link -%}
+    </a>
+  {%- endif -%}
+  </p>
+  {%- if caption -%}
+    <figcaption>{{- caption -}}</figcaption>
+  {%- endif -%}
+</figure>

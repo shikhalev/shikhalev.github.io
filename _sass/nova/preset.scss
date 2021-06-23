@@ -17,6 +17,7 @@ $site-header-height: 100px !default;   // FIXME: value
 $site-footer-height: 100px !default;
 
 $base-font-color: #444;
+$base-gray-color: lighten($base-font-color, 50%) !default;
 
 $frame-color-dark: #3e5662 !default;
 $frame-color-light: lighten($frame-color-dark, 50%) !default;

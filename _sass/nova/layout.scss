@@ -423,6 +423,8 @@ aside {
 }
 
 article {
+  font-optical-sizing: auto;
+
   p {
     text-align: justify;
     hyphens: auto;
@@ -665,6 +667,58 @@ a.footnote::after {
     columns: 1;
   }
 }
+
+figure {
+  display: block;
+  padding: 0px;
+  margin: 5px 0px 5px;
+  border: solid $base-gray-color 1px;
+  box-shadow: 1px 1px 3px $base-gray-color;
+
+  p {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  figcaption {
+    display: block;
+    font-family: $caption-font-family;
+    text-align: center;
+  }
+}
+
+.strict_left {
+  float: left;
+  margin-right: 10px;
+}
+.strict_right {
+  float: right;
+  margin-left: 10px;
+}
+.center {
+  float: none;
+  margin: 5px auto 5px;
+}
+.left {
+  @extend .strict_left;
+  @media screen and (max-width: 500px) {
+    float: none;
+    margin: 5px auto 5px;
+  }
+}
+.right {
+  @extend .strict_right;
+  @media screen and (max-width: 500px) {
+    float: none;
+    margin: 5px auto 5px;
+  }
+}
+
 
 // FIXME:
 ul.categories {
