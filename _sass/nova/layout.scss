@@ -439,6 +439,7 @@ aside {
   p.social {
     @extend .fab;
     margin-top: 10px;
+    font-size: 17px;
 
     a {
       color: $frame-color-light;
@@ -455,9 +456,6 @@ aside {
 
 #sidebar {
   grid-area: extra;
-  // @media screen and (max-width: 1149px) {
-  //   display: none;
-  // }
 }
 
 #main {
@@ -549,8 +547,7 @@ article {
 
 #toc,
 #feeds,
-#contacts,
-#sidebar {
+#contacts {
   border: solid $frame-color-light 1px;
   box-shadow: 1px 1px 3px $frame-color-light;
 }
