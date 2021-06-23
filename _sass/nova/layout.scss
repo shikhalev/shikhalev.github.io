@@ -318,7 +318,7 @@ aside {
   color: $frame-color-dark;
 
   h4 {
-    margin: 0px 0px 5px;
+    margin: 0px 0px 10px;
   }
   ul {
     margin: 0px;
@@ -368,7 +368,7 @@ aside {
   }
 
   &.toc-calendar {
-    ul{
+    ul {
       li::marker {
         @extend .fa-li-include-calendar-alt;
       }
@@ -425,21 +425,30 @@ aside {
 article {
   font-optical-sizing: auto;
 
+  hr {
+    color: $base-gray-color;
+    border-top: dotted 1px $base-gray-color;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    max-width: 90%;
+  }
+
   p {
     text-align: justify;
     hyphens: auto;
-  }
 
-  a:link {
-    color: $base-link-color;
-    text-decoration: none;
-  }
-  a:visited {
-    color: $visited-link-color;
-    text-decoration: none;
-  }
-  a:link:hover {
-    text-decoration: underline;
+    a:link {
+      color: $base-link-color;
+      text-decoration: none;
+    }
+    a:visited {
+      color: $visited-link-color;
+      text-decoration: none;
+    }
+    a:link:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -570,7 +579,9 @@ aside.tags {
       font-size: $notes-font-size;
     }
   }
-  a, a:link, a:visited {
+  a,
+  a:link,
+  a:visited {
     color: $frame-color-dark;
     text-decoration: none;
   }
@@ -586,9 +597,12 @@ aside.tags {
 
   max-width: 50%;
 
-  a, a:link, a:visited {
+  a,
+  a:link,
+  a:visited {
     padding: 2px 5px 2px;
     color: $frame-color-light;
+    text-decoration: none;
 
     &:last-child {
       padding-right: 0px;
@@ -623,7 +637,7 @@ aside.tags {
   }
 }
 .center-box {
-  padding:0px;
+  padding: 0px;
   margin: 0px auto;
 
   img {
@@ -632,11 +646,11 @@ aside.tags {
 }
 
 sup {
-  font-size: $notes-font-size;
+  font-size: $index-font-size;
 }
 
 a.footnote::after {
-  content: ')';
+  content: ")";
 }
 
 .footnotes {
@@ -675,9 +689,19 @@ figure {
   border: solid $base-gray-color 1px;
   box-shadow: 1px 1px 3px $base-gray-color;
 
-  p {
-    padding: 0px;
-    margin: 0px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+
+  a:link {
+    color: $base-link-color;
+    text-decoration: none;
+  }
+  a:visited {
+    color: $visited-link-color;
+    text-decoration: none;
+  }
+  a:link:hover {
+    text-decoration: underline;
   }
 
   img {
@@ -688,7 +712,10 @@ figure {
   figcaption {
     display: block;
     font-family: $caption-font-family;
+    font-size: $small-font-size;
     text-align: center;
+    margin-top: 3px;
+    margin-bottom: 2px;
   }
 }
 
@@ -719,6 +746,25 @@ figure {
   }
 }
 
+blockquote {
+  margin: 5px 0px 5px 15px;
+  padding: 0px 0px 0px 10px;
+  border-left: solid 5px $base-gray-color;
+}
+
+ul {
+  margin: 0px;
+}
+
+.note {
+  margin-left: 2em;
+  margin-right: 2em;
+  font-size: $small-font-size;
+}
+
+.italic {
+  font-style: italic;
+}
 
 // FIXME:
 ul.categories {

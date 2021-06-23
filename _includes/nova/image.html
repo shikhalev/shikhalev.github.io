@@ -19,8 +19,7 @@
     {%- assign class_prefix = 'strict-' -%}
   {%- endif -%}
 {%- endif -%}
-<figure id="{{- id -}}" class="{{- class_prefix -}}{{- place -}}" style="max-width: {{- width -}}px;">
-  <p>
+<figure markdown="0" id="{{- id -}}" class="{{- class_prefix -}}{{- place -}}" style="max-width: {{- width -}}px;">
   {%- if link -%}
     <a href="{{- link -}}" title="{{- title -}}">
   {%- endif -%}
@@ -28,8 +27,7 @@
   {%- if link -%}
     </a>
   {%- endif -%}
-  </p>
   {%- if caption -%}
-    <figcaption>{{- caption -}}</figcaption>
+    <figcaption markdown="span">{{- caption -}}</figcaption>
   {%- endif -%}
 </figure>

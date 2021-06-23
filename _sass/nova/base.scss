@@ -1,13 +1,43 @@
-
 body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   color: $base-font-color;
 }
 
-h1,h2,h3, h4, h5, h6, dt {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dt {
   font-family: $caption-font-family;
   font-weight: normal;
+  break-after: avoid;
+  page-break-after: avoid;
+  margin: 1em 0em 0.5em;
+}
+
+h5,
+h6,
+dt {
+  font-size: $base-font-size;
+}
+
+h4 {
+  font-size: $base-font-size * 1.2;
+}
+
+h3 {
+  font-size: $base-font-size * 1.2 * 1.2;
+}
+
+h2 {
+  font-size: $base-font-size * 1.2 * 1.2 * 1.2;
+}
+
+h1 {
+  font-size: $base-font-size * 1.2 * 1.2 * 1.2 * 1.2;
 }
 
 p {
