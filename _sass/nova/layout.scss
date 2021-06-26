@@ -196,7 +196,7 @@ body {
       position: absolute;
       top: 9px;
       right: 5px;
-      background-color: $frame-color-light; // FIXME
+      background-color: $frame-color-light;
       border: 1px solid $frame-color-dark;
       border-radius: 5px;
       text-align: right;
@@ -394,6 +394,7 @@ aside {
   }
 }
 
+/* ненужно
 .adsbygoogle {
   display: inline-block;
   width: 300px;
@@ -404,6 +405,9 @@ aside {
     height: 120px;
   }
 }
+*/
+
+// TODO: сделать посимпатичнее на узких экранах, как feeds, так и contacts
 
 #feeds {
   grid-area: feeds;
@@ -660,7 +664,7 @@ aside.tags {
   }
 }
 
-// old. FIXME:
+// FIXME: удалить, когда можно будет
 
 .right-box {
   float: right;
@@ -822,14 +826,5 @@ ul.categories {
     &::marker {
       @extend .fas;
     }
-  }
-}
-
-// FIXME:
-ul.toc {
-  li::marker {
-    content: "\f15c ";
-    color: silver;
-    @extend .far;
   }
 }

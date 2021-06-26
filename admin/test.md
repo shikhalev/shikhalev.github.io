@@ -7,7 +7,9 @@ categories:
   - life
   - nature
 tags:
-  - хуяк
+  - разное
+  - ерунда
+toc: true
 ---
 > Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
 

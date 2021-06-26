@@ -35,7 +35,12 @@
 
 <header class="page-header">
 <h1 class="title-{{- page.layout | split: '/' | last -}}" itemprop="name headline">{{- page.title | escape -}}</h1>
-{%- include nova/share.html -%}
+
+{%- if layout.sharing -%}
+  {%- include nova/share.html -%}
+{%- endif -%}
+
+{%- if layout.meta -%}
 <p class="meta">
   <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
     {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
@@ -45,6 +50,8 @@
     • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | default: site.author }}</span></span>
   {%- endif -%}
 </p>
+{%- endif -%}
+
 {%- if page.tags and page.tags.size > 0 -%}
   <aside class="tags">
     {%- include nova/tags.html -%}
@@ -54,7 +61,7 @@
 
 {{- content -}}
 
-{%- if page.itemtype -%}
+{%- if layout.itemtype -%}
 </article>
 {%- endif -%}
 
@@ -64,10 +71,21 @@
   {%- include google/search.html -%}
 </aside>
 
-{%- capture toc -%}
-{%- include allejo/jekyll-toc.liquid html = content sanitize = true item_class = "toc-entry" -%}
-{%- endcapture -%}
-{%- assign flag = toc | strip -%}
+{%- if page.toc -%}
+  {% assign allow_toc = true %}
+{%- elsif page.toc == false -%}
+  {%- assign allow_toc = false -%}
+{%- else -%}
+  {%- assign allow_toc = layout.toc -%}
+{%- endif -%}
+{%- if allow_toc -%}
+  {%- capture toc -%}
+  {%- include allejo/jekyll-toc.liquid html = content sanitize = true item_class = "toc-entry" -%}
+  {%- endcapture -%}
+  {%- assign flag = toc | strip -%}
+{%- else -%}
+  {%- assign flag = "" -%}
+{%- endif -%}
 {%- if flag != "" -%}
 <aside id="toc" class="toc toc-{{- page.layout | split: '/' | last -}}">
   <h4>Содержание</h4>
@@ -96,7 +114,7 @@
   {%- include nova/contacts.html -%}
 </aside>
 
-<!-- TODO -->
+<!-- пока не использую, дальше видно будет -->
 <aside id="sidebar"></aside>
 
 <footer id="site-footer">

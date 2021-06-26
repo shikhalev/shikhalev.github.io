@@ -52,7 +52,6 @@ defaults:
   - scope:
       path: ""
     values:
-      toc: true
       image: /assets/img/icon.jpg
       author: Иван Шихалев
 
