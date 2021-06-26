@@ -4,10 +4,15 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>{{- page.title | escape -}} | {{- site.title -}}</title>
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="{{ '/favicon.svg' | absolute_url }}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+
+  {% seo %}
 </head>
 
 <body>
@@ -76,8 +81,11 @@
   {%- include yoomoney/form.html -%}
 </aside>
 
-<aside id="ga">
+<!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;">
+  {%- comment -%}
   {%- include google/ads.html -%}
+  {%- endcomment -%}
 </aside>
 
 <aside id="feeds">

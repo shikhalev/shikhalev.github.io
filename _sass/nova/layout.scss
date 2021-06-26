@@ -284,7 +284,7 @@ body {
 
   @media screen and (min-width: 1150px) {
     border: solid $frame-color-light 1px;
-    box-shadow: 1px 1px 3px $frame-color-light;
+    box-shadow: $base-shadow $frame-color-light;
     padding: 5px 5px 0px;
   }
 
@@ -382,6 +382,7 @@ aside {
 
 #donate {
   grid-area: donate;
+  place-self: center;
   margin-bottom: -8px;
 }
 
@@ -439,15 +440,15 @@ aside {
   p.social {
     @extend .fab;
     margin-top: 10px;
-    font-size: 17px;
+    font-size: $share-font-size;
 
     a {
-      color: $frame-color-light;
+      color: $frame-color-dark;
       padding: 2px 5px 2px;
 
       &:hover {
-        color: $frame-color-dark;
-        text-shadow: 1px 1px 3px $frame-color-light;
+        color: $frame-color-light;
+        text-shadow: $thin-shadow $frame-color-dark;
         text-decoration: none;
       }
     }
@@ -549,7 +550,7 @@ article {
 #feeds,
 #contacts {
   border: solid $frame-color-light 1px;
-  box-shadow: 1px 1px 3px $frame-color-light;
+  box-shadow: $base-shadow $frame-color-light;
 }
 
 @media print {
@@ -644,7 +645,7 @@ aside.tags {
   a:link,
   a:visited {
     padding: 2px 5px 2px;
-    color: $frame-color-light;
+    color: $frame-color-dark;
     text-decoration: none;
 
     &:last-child {
@@ -653,9 +654,9 @@ aside.tags {
   }
 
   a:hover {
-    color: $frame-color-dark;
+    color: $frame-color-light;
     text-decoration: none;
-    text-shadow: 1px 1px 3px $frame-color-light;
+    text-shadow: $base-shadow $frame-color-dark;
   }
 }
 
@@ -730,7 +731,7 @@ figure {
   padding: 0px;
   margin: 5px 0px 5px;
   border: solid $base-gray-color 1px;
-  box-shadow: 1px 1px 3px $base-gray-color;
+  box-shadow: $base-shadow $base-gray-color;
 
   break-inside: avoid;
   page-break-inside: avoid;
