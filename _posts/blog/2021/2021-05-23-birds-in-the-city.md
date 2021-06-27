@@ -621,19 +621,6 @@ last_modified_at: 2021-05-24 21:12 +0500
 
 [^inat]: ~~Очень надеюсь в ближайшее время написать~~ Написал [подробный пост]({% link _posts/blog/2021/2021-05-24-inaturalist.md %}) про сайт **[iNaturalist.org](https://www.inaturalist.org/)**, дабы и самому внести малый вклад в эту популяризацию.
 
-[cover]: /assets/img/2021-04/b-in-c/IMG_0280.jpg "Чайка на фоне зданий"
-[belyanka]: /assets/img/2021-04/b-in-c/belyanka.jpg "Белянка брюквенная"
-[vorona]: /assets/img/2021-04/b-in-c/IMG_1281.jpg "Серая ворона"
-[sunrise]: /assets/img/2021-04/b-in-c/sunrise.jpg "Рассвет в Екатеринбурге"
-[paris]: /assets/img/2021-04/b-in-c/map_640.png "Карта Парижа"
-[dragonfly]: /assets/img/2021-04/b-in-c/IMG_4409.jpg "Стрекоза"
-[pen]: /assets/img/2021-04/b-in-c/IMG_8128.jpg "Интерьер лесопарка лесоводов"
-[klumba]: /assets/img/2021-04/b-in-c/IMG_9921.jpg "ЦПКиО им. Маяковского"
-[fields]: /assets/img/2021-04/b-in-c/IMG_4595.jpg "Сибирский черноголовый чекан в разнотравье на пустыре"
-[fonar]: /assets/img/2021-04/b-in-c/IMG_9003.jpg "Береза на искусственном строении"
-[shartash]: /assets/img/2021-04/b-in-c/IMG_7685.jpg "Шарташский лесопарк, озеро Шарташ"
-[trez]: /assets/img/2021-04/b-in-c/IMG_8263.jpg "Трёхозёрка"
-
 [columba-livia]: https://ru.wikipedia.org/wiki/Сизый_голубь
 [mus-musculus]: https://ru.wikipedia.org/wiki/Домовая_мышь
 [rattus-norvegicus]: https://ru.wikipedia.org/wiki/Серая_крыса

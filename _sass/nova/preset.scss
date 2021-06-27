@@ -18,6 +18,7 @@ $base-gray-color: lighten($base-font-color, 50%) !default;
 
 $frame-color-dark: #3e5662 !default;
 $frame-color-light: lighten($frame-color-dark, 50%) !default;
+$frame-color-back: lighten($frame-color-dark, 63%) !default;
 
 $base-link-color: #11A !default;
 $visited-link-color: #246 !default;

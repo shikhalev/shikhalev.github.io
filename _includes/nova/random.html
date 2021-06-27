@@ -1,0 +1,96 @@
+{%- if page.recommendations != false -%}
+
+  {%- comment -%} Выясняем, откуда брать {%- endcomment -%}
+  {%- if page.recommendations -%}
+    {%- assign random_source_id = page.recommendations -%}
+  {%- else -%}
+    {%- if page.category_id -%}
+      {%- assign random_category_id = page.category_id -%}
+    {%- elsif page.categories -%}
+      {%- assign random_category_id = page.categories | first -%}
+    {%- else -%}
+      {%- assign random_category_id = nil -%}
+      {%- assign random_source_id = 'all' -%}
+    {%- endif -%}
+    {%- if random_category_id -%}
+      {%- assign random_category_page = site.streams | where: 'category_id', random_category_id | first -%}
+      {%- if random_category_page.recommendations == false -%}
+        {%- assign random_source_id = false -%}
+      {%- elsif random_category_page.recommendations -%}
+        {%- assign random_source_id = random_category_page.recommendations -%}
+      {%- else -%}
+        {%- assign random_source_id = random_category_id -%}
+      {%- endif -%}
+    {%- else -%}
+      {%- assign random_source_id = 'all' -%}
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- comment -%} Получаем список подходящих {%- endcomment -%}
+  {%- if random_source_id -%}
+    {%- if random_source_id == 'all' -%}
+      {%- assign random_source = site.posts | where: 'recommend', true | where_exp: 'item', 'item.path != page.path' -%}
+    {%- elsif random_source_id == 'best' -%}
+      {%- comment -%} Сама категория подразумевает избранное {%- endcomment -%}
+      {%- assign random_source = site.categories['best'] | where_exp: 'item', 'item.path != page.path' -%}
+    {%- else -%}
+      {%- assign random_source = site.categories[random_source_id] | where: 'recommend', true | where_exp: 'item', 'item.path != page.path' -%}
+    {%- endif -%}
+  {%- else -%}
+    {%- assign random_source = nil -%}
+  {%- endif -%}
+
+  {%- comment -%} Получаем три случайных и формируем HTML {%- endcomment -%}
+  {%- if random_source and random_source.size >= 3 -%}
+
+    {%- assign randoms = random_source | sample: 3 -%}
+
+    <aside id="randoms" class="recommendations">
+      <div id="random-first" class="random-item">
+        {%- assign random_post = randoms[0] -%}
+        <dl>
+          <dt>
+            <span class="meta">{{- random_post.date | date: '%Y.%m.%d' -}} |</span>
+            <a href="{{- random_post.url | relative_url -}}" title="{{- random_post.description -}}">{{- random_post.title -}}</a>
+          </dt>
+          <dd class="meta">
+            {%- for random_post_category in random_post.categories -%}
+              {%- assign category_page = site.streams | where: 'category_id', random_post_category | first -%}
+              ​<a class="fa-icon-{{- category_page.icon | default: 'folder-open' -}}" href="{{- category_page.url | relative_url -}}" title="{{- category_page.description -}}">{{- category_page.short | default: category_page.title -}}</a>
+            {%- endfor -%}
+          </dd>
+        </dl>
+      </div>
+      <div id="random-second" class="random-item">
+        {%- assign random_post = randoms[1] -%}
+        <dl>
+          <dt>
+            <span class="meta">{{- random_post.date | date: '%Y.%m.%d' -}} |</span>
+            <a href="{{- random_post.url | relative_url -}}" title="{{- random_post.description -}}">{{- random_post.title -}}</a>
+          </dt>
+          <dd class="meta">
+            {%- for random_post_category in random_post.categories -%}
+              {%- assign category_page = site.streams | where: 'category_id', random_post_category | first -%}
+              ​<a class="fa-icon-{{- category_page.icon | default: 'folder-open' -}}" href="{{- category_page.url | relative_url -}}" title="{{- category_page.description -}}">{{- category_page.short | default: category_page.title -}}</a>
+            {%- endfor -%}
+          </dd>
+        </dl>
+      </div>
+      <div id="random-third" class="random-item">
+        {%- assign random_post = randoms[2] -%}
+        <dl>
+          <dt>
+            <span class="meta">{{- random_post.date | date: '%Y.%m.%d' -}} |</span>
+            <a href="{{- random_post.url | relative_url -}}" title="{{- random_post.description -}}">{{- random_post.title -}}</a>
+          </dt>
+          <dd class="meta">
+            {%- for random_post_category in random_post.categories -%}
+              {%- assign category_page = site.streams | where: 'category_id', random_post_category | first -%}
+              ​<a class="fa-icon-{{- category_page.icon | default: 'folder-open' -}}" href="{{- category_page.url | relative_url -}}" title="{{- category_page.description -}}">{{- category_page.short | default: category_page.title -}}</a>
+            {%- endfor -%}
+          </dd>
+        </dl>
+      </div>
+    </aside>
+  {%- endif -%}
+{%- endif -%}

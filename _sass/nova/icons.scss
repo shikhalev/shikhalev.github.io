@@ -109,6 +109,30 @@ $icons: (
     "symbol": "\f08c",
     "font": "fab",
   ),
+  "bullhorn": (
+    "symbol": "\f0a1",
+    "font": "fas",
+  ),
+  "icons": (
+    "symbol": "\f86d",
+    "font": "fas",
+  ),
+  "dove": (
+    "symbol": "\f4ba",
+    "font": "fas",
+  ),
+  "yin-yang": (
+    "symbol": "\f6ad",
+    "font": "fas",
+  ),
+  "globe": (
+    "symbol": "\f0ac",
+    "font": "fas",
+  ),
+  "brain": (
+    "symbol": "\f5dc",
+    "font": "fas",
+  ),
 );
 
 @each $name, $data in $icons {

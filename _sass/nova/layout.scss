@@ -796,7 +796,7 @@ figure {
 
 .sticker {
   color: $frame-color-dark;
-  background-color: $frame-color-light;
+  background-color: $frame-color-back;
   font-family: $compact-font-family;
   padding: 10px;
   border: solid $frame-color-dark 1px;
@@ -819,6 +819,7 @@ blockquote {
   border-left: solid 5px $base-gray-color;
 
   &.epigraph {
+    border: none;
     margin-left: 50px;
     font-style: italic;
   }
@@ -836,6 +837,73 @@ ul {
 
 .italic {
   font-style: italic;
+}
+
+#randoms {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  grid-template-areas:
+    "first second third";
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 749px) and (min-width: 500px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "first first second second"
+      ".     third third  .";
+  }
+
+  @media screen and (max-width: 499px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "first"
+      "second"
+      "third";
+  }
+}
+
+#random-first {
+  grid-area: first;
+}
+
+#random-second {
+  grid-area: second;
+}
+
+#random-third {
+  grid-area: third;
+}
+
+.random-item {
+  // background-color: $frame-color-back;
+  padding: 10px;
+  border: solid $frame-color-light 1px;
+  box-shadow: $base-shadow $frame-color-light;
+  // border-radius: 5px;
+
+  .meta {
+    font-size: $small-font-size;
+    font-family: $compact-font-family;
+  }
+
+  dl {
+    padding: 0px;
+    margin: 0px;
+
+    dt {
+      margin-top: 0px;
+      margin-bottom: 5px;
+      margin-left: 3em;
+      text-indent: -3em;
+    }
+  }
+
+  a {
+    margin-right: 10px;
+  }
 }
 
 // FIXME:
