@@ -133,6 +133,18 @@ $icons: (
     "symbol": "\f5dc",
     "font": "fas",
   ),
+  "gem": (
+    "symbol": "\f3a5",
+    "font": "far",
+  ),
+  "magic": (
+    "symbol": "\f0d0",
+    "font": "fas",
+  ),
+  "photo-video": (
+    "symbol": "\f87c",
+    "font": "fas",
+  ),
 );
 
 @each $name, $data in $icons {
