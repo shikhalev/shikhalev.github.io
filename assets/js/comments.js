@@ -49,7 +49,7 @@
   }
 
   function reset_answer(e) {
-    let header = document.getElementById("comment-form-header");
+    let header = document.getElementById("add-comment-target");
     let field = document.getElementById("parent_id");
     header.innerHTML = "Будет добавлен комментарий верхнего уровня";
     field.value = "";
@@ -59,12 +59,12 @@
     let target = e.target;
     let action = target.dataset.action;
     let comment_id = target.dataset.comment;
-    let header = document.getElementById("comment-form-header");
+    let header = document.getElementById("add-comment-target");
     let field = document.getElementById("parent_id");
     header.innerHTML = `Будет добавлен ответ на комментарий <a href="#${comment_id}">#${comment_id}</a> [<a id="action-reset" style="cursor: pointer;" data-action="reset">сбросить</a>]`;
     field.value = comment_id;
 
-    let message = document.getElementById("comment_message");
+    let message = document.getElementById("add-comment-message");
     if (action == "cite") {
       let source = document
         .getElementById(comment_id)

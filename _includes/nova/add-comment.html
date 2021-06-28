@@ -1,0 +1,55 @@
+<p id="add-comment-title">Добавить комментарий</p>
+
+<form method="POST" action="{{ site.staticman_url }}">
+
+  <input name="options[redirect]" type="hidden" value="{{page.url | absolute_url}}#comments">
+  <input id="slug" name="options[slug]" type="hidden" value="{{ page_id }}">
+  <input name="fields[slug]" type="hidden" value="{{ page_id}}">
+  <input id="comment_id" name="fields[comment_id]" type="hidden" value="">
+  <input id="parent_id" name="fields[parent_id]" type="hidden" value="">
+
+  <div id="add-comment-form">
+
+    <p id="add-comment-target">Будет добавлен комментарий верхнего уровня.</p>
+
+    <label id="add-comment-name-label" for="add-comment-name-input">Имя:</label>
+
+    <input id="add-comment-name-input" name="fields[name]" type="text" autocomplete="on">
+
+    <label id="add-comment-email-label" for="add-comment-email-input">E-mail:</label>
+
+    <input id="add-comment-email-input" name="fields[email]" type="email" autocomplete="on">
+
+    <label id="add-comment-site-label" for="add-comment-site-input">Сайт:</label>
+
+    <input id="add-comment-site-input" name="fields[url]" type="url" autocomplete="on">
+
+    <label id="add-comment-msg-label" for="add-comment-message">Сообщение:</label>
+
+    <p id="add-comment-msg-hint">В тексте комментария можно использовать markdown-разметку,
+       например, <span style="font-style: italic">*курсив*</span> или <span style="font-weight: bold;">**полужирный**</span>.
+       HTML-разметку использовать нельзя.</p>
+
+    <textarea id="add-comment-message" name="fields[message]" rows="12"></textarea>
+
+    <div  id="add-comment-recaptcha">
+
+    <div class="g-recaptcha" data-sitekey="6Ld9L3IaAAAAACZDaeBKKiL35iyzoTtTA0OlAv4C"></div>
+
+    <div id="add-comment-post-hint">
+      <p>Комментарии появляются на сайте с задержкой, если ваш комментарий не виден, попробуйте обновить страницу через минуту-другую.</p>
+      <p>В случае каких-то проблем с reCAPTCHA, пожалуйста, напишите мне на <a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a>.</p>
+    </div>
+
+    </div>
+
+    <button id="add-comment-button" type="submit">Отправить</button>
+
+  </div>
+
+  <input type="hidden" name="options[reCaptcha][siteKey]" value="6Ld9L3IaAAAAACZDaeBKKiL35iyzoTtTA0OlAv4C">
+  <input type="hidden" name="options[reCaptcha][secret]" value="HCMKZ36nsLtl0ppFxIaaupVsykrGzEmwqrYBl8KwiCCHOoKtH8Kx272sbCuEzFjQmOrnZtfBLXrsk8HpgiRiqM17PvY3zIfSnqINMAtDzdrLMefyU5KwA8hXVF1DH5Qh7AFg/+MFw3BgQ+p7awlwm4K0vcjjsflRXF5NzpUnqyrSqBH++UltkKc1CN0/xETMzECLfNUysXDI4rtXkpHHox+Sha9scF/e+i8vl/cW5d6vjqbo/ojFui4WVf1izKINA2fQs/fzomBWzBkOmTc0xVrLs54uRLibE6Xw/gkmpEGtN7askwVYJXZaYPDhuPULzslunqudU+TjmhCDENfKEw==">
+</form>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="/assets/js/comments.js" type="text/javascript"></script>

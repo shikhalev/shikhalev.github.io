@@ -30,7 +30,7 @@
 {%- include nova/cats.html -%}
 
 {%- if layout.itemtype -%}
-<article itemscope itemtype="{{- page.itemtype -}}">
+<article itemscope itemtype="{{- layout.itemtype -}}">
 {%- endif -%}
 
 <header class="page-header">
@@ -80,7 +80,7 @@
 {%- endif -%}
 {%- if allow_toc -%}
   {%- capture toc -%}
-  {%- include allejo/jekyll-toc.liquid html = content sanitize = true item_class = "toc-entry" -%}
+  {%- include allejo/jekyll-toc.liquid html=content sanitize=true item_class="toc-entry" h_max=4 -%}
   {%- endcapture -%}
   {%- assign flag = toc | strip -%}
 {%- else -%}
