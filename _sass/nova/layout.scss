@@ -429,7 +429,6 @@ aside {
       @media screen and (max-width: 639px) and (min-width: 550px) {
         columns: 1;
       }
-
     }
   }
 }
@@ -723,6 +722,10 @@ a.footnote::after {
     li {
       break-inside: avoid;
       page-break-inside: avoid;
+      p {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
     }
   }
 
@@ -1121,9 +1124,9 @@ ul {
   grid-area: recaptcha;
 
   p {
-  text-align: left;
-  font-size: $notes-font-size;
-  hyphens: manual;
+    text-align: left;
+    font-size: $notes-font-size;
+    hyphens: manual;
   }
 }
 
@@ -1145,6 +1148,14 @@ ul {
   font-weight: bold;
 
   height: 78px;
+}
+
+#add-comment-title,
+#add-comment-form,
+.comment-actions-wrapper {
+  @media print {
+    display: none;
+  }
 }
 
 // FIXME:
