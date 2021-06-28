@@ -8,6 +8,7 @@ description: Цикл постов 2016 года об обработке фот�
 permalink: /photo/processing/penguin/
 inaturalist: true
 recommendations: false
+icon: linux
 ---
 ## Содержание
 

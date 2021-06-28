@@ -145,6 +145,14 @@ $icons: (
     "symbol": "\f87c",
     "font": "fas",
   ),
+  "microchip": (
+    "symbol": "\f2db",
+    "font": "fas",
+  ),
+  "linux": (
+    "symbol": "\f17c",
+    "font": "fab",
+  ),
 );
 
 @each $name, $data in $icons {
