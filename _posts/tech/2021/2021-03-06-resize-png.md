@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: nova/post
 title: О ресайзе PNG на примерах
 description: Способы ресайза картинок формата PNG — какие возможности у нас есть под Linux...
 category: [ tech, soft, graphics ]
@@ -11,10 +11,7 @@ tags:
 image: /assets/img/2021-03/resize/screen/source.png
 recommend: true
 ---
-<div class="right-box">
-{: style="width: 320px"}
-[![Исходный скриншот диалога изменения размеров в GIMP][source]][source]
-</div>
+{% include nova/image.html place="right" width=320 src="/assets/img/2021-03/resize/screen/source.png" title="Исходный скриншот диалога изменения размеров в GIMP" %}
 
 Недавно мне задали такой вопрос:
 
@@ -38,10 +35,10 @@ recommend: true
 запросто можно при уменьшении картинки получить файл большего объема...
 
 В общем, я взял два типичных, как мне кажется, случая, когда применяется именно этот формат: уменьшение скриншота (небольшое,
-чтобы можно было говорить о читаемости) и увеличение иконки (тут — в разы). Экспериментировать я буду с применением **[GIMP][gimp]**
+чтобы можно было говорить о читаемости) и увеличение иконки (тут — в разы). Экспериментировать я буду с при­ме­не­ни­ем **[GIMP][gimp]**
 и **[ImageMagick][im]**.
 
-**Disclaimer:** я не специалист в данной теме и все, что могу — потыкаться с точки зрения продвинутого юзера. Вышеприведенные ссылки
+**Disclaimer:** я не специалист в данной теме и все, что могу — потыкаться с точки зрения продвинутого юзера. Вы­ше­при­ве­ден­ные ссылки
 могут стать отправной точкой для желающих разобраться по настоящему.
 
 <!--more-->
@@ -50,9 +47,7 @@ recommend: true
 
 Вот такой скриншот диалогового окна собственно GIMP и собственно изменения размеров. В оригинальном разрешении:
 
-<div class="center-box" style="width: 415px;">
-![Исходный скриншот диалога изменения размеров в GIMP][source]
-</div>
+{% include nova/image.html place="center" width=415 src="/assets/img/2021-03/resize/screen/source.png" title="Исходный скриншот диалога изменения размеров в GIMP" %}
 
 Ширина в оригинале — 415px. Ужимать будем до 320px, то есть, если очень грубо, на 20%. Точно такая же картинка вверху этого поста,
 но сделанная движком браузера автоматически, что там, какие алгоритмы использованы — то мне неведомо.
@@ -74,25 +69,10 @@ GIMP предлагает пять вариантов интерполяции:
 
 Пять вариантов достаточно мало, для того, чтобы все попробовать. Что же мы получим?
 
-<div style="text-align: center;">
-<div class="inline">
-![][sc-gimp-none]
-
-{:.caption}
-«Нет»
-</div>
-<div class="inline">
-![][sc-gimp-linear]
-
-{:.caption}
-«Линейная»
-</div>
-<div class="inline">
-![][sc-gimp-cubic]
-
-{:.caption}
-«Кубическая»
-</div>
+<div class="image-box">
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/gimp-none.png" caption="«Нет»" %}
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/gimp-linear.png" caption="«Линейная»" %}
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/gimp-cubic.png" caption="«Кубическая»" %}
 </div>
 
 Разницу между линейной и кубической уловить трудно, а последние два варианта — с гало и без — вообще от кубической на глаз не отличаются,
@@ -105,7 +85,7 @@ $ optipng -dir ./opt1/ -o7 source.png gimp-*.png
 
 Получилось:
 
-<table>
+<table class="wide">
 
   <tbody><tr><th align="left">Файл</th><th align="center">Пиксели</th><th align="right">Байты</th><th align="right">Опт.</th></tr>
 
@@ -122,8 +102,10 @@ $ optipng -dir ./opt1/ -o7 source.png gimp-*.png
 В целом, выводы можно сделать такие:
 
 * Метод ближайшего соседа для уменьшения скриншотов не годится совсем — надписи не читаемы.
+
 * Если качество линейной интерполяции нас устраивает, берем ее — она не только выполняется быстрее, но и дает результат меньшего объема.
-* Если нам нужно максимальное качество, в GIMP выбираем вариант «Без гало» — за счет более резкой картинки (а именно это и делает подавление
+
+* Если нам нужно максимальное качество, в GIMP выбираем вариант «Без гало» — за счет более резкой картинки (а именно это и делает подавление
   гало) файл лучше сжимается.
 
 И помним, что *на другой исходной картинке результаты могут отличаться существенно*, так что стоит экспериментировать.
@@ -159,148 +141,57 @@ done;
 
 Итого у меня получилось 65(!) вариантов, все я, естественно, приводить не буду. Начнем с умолчательных:
 
-<div style="text-align: center">
-<div class="inline">
-![][sc-im-resize-default]
-
-{:.caption}
--resize
-</div>
-<div class="inline">
-![][sc-im-distort-default]
-
-{:.caption}
--distort Resize
-</div>
-<div class="inline">
-![][sc-im-resize-adaptive]
-
-{:.caption}
--adaptive-resize
-</div>
+<div class="image-box">
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/0-resize-default.png" caption="-resize" %}
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/0-distort-default.png" caption="-distort Resize" %}
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/0-resize-adaptive.png" caption="-adaptive-resize" %}
 </div>
 
 Далее проверим алгоритмы, которые должны соответствовать GIMP'овским (на самом деле не совсем).
 
-<div style="text-align: center">
-<div class="inline">
-![][sc-im-resize-Point]
-
-{:.caption}
--filter Point -resize
-</div>
-<div class="inline">
-![][sc-im-distort-Point]
-
-{:.caption}
--filter Point -distort Resize
-</div>
+<div class="image-box">
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Point.png" caption="-filter Point -resize" %}
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Point.png" caption="-filter Point -distort Resize" %}
 </div>
 
 `-filter Point` — это метод ближайшего соседа, как из него `-distort` получил нечто приемлемое — мне не очень понятно.
 
-<div style="text-align: center">
-<div class="inline">
-![][sc-im-resize-Triangle]
+<div class="image-box">
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Triangle.png" caption="-filter Triangle -resize" %}
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Triangle.png" caption="-filter Triangle -distort Resize" %}
 
-{:.caption}
--filter Triangle -resize
-</div>
-<div class="inline">
-![][sc-im-distort-Triangle]
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Cubic.png" caption="-filter Cubic -resize" %}
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Cubic.png" caption="-filter Cubic -distort Resize" %}
 
-{:.caption}
--filter Triangle -distort Resize
-</div>
-<div class="inline">
-![][sc-im-resize-Cubic]
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Lanczos2.png" caption="-filter Lanczos2 -resize" %}
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Lanczos2.png" caption="-filter Lanczos2 -distort Resize" %}
 
-{:.caption}
--filter Cubic -resize
-</div>
-<div class="inline">
-![][sc-im-distort-Cubic]
-
-{:.caption}
--filter Cubic -distort Resize
-</div>
-<div class="inline">
-![][sc-im-resize-Lanczos2]
-
-{:.caption}
--filter Lanczos2 -resize
-</div>
-<div class="inline">
-![][sc-im-distort-Lanczos2]
-
-{:.caption}
--filter Lanczos2 -distort Resize
-</div>
-<div class="inline">
-![][sc-im-resize-Lanczos2Sharp]
-
-{:.caption}
--filter Lanczos2Sharp -resize
-</div>
-<div class="inline">
-![][sc-im-distort-Lanczos2Sharp]
-
-{:.caption}
--filter Lanczos2Sharp -distort Resize
-</div>
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Lanczos2Sharp.png" caption="-filter Lanczos2Sharp -resize" %}
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Lanczos2Sharp.png" caption="-filter Lanczos2Sharp -distort Resize" %}
 </div>
 
 Курьеза ради, и чтобы не создалось впечатления, что `-distort` всегда лучше, чем `-resize`, приведу варианты
 с фильтром `Sinc`:
 
-<div style="text-align: center">
-<div class="inline">
-![][sc-im-resize-Sinc]
-
-{:.caption}
--filter Sinc -resize
-</div>
-<div class="inline">
-![][sc-im-distort-Sinc]
-
-{:.caption}
--filter Sinc -distort Resize
-</div>
+<div class="image-box">
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Sinc.png" caption="-filter Sinc -resize" %}
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Sinc.png" caption="-filter Sinc -distort Resize" %}
 </div>
 
 Завершу этот парад почти одинаковых картинок еще двумя фильтрами, которые показали приемлемые результаты
 по размеру выходного файла.
 
-<div style="text-align: center">
-<div class="inline">
-![][sc-im-resize-Box]
+<div class="image-box">
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Box.png" caption="-filter Box -resize" %}
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Box.png" caption="-filter Box -distort Resize" %}
 
-{:.caption}
--filter Box -resize
-</div>
-<div class="inline">
-![][sc-im-distort-Box]
-
-{:.caption}
--filter Box -distort Resize
-</div>
-<div class="inline">
-![][sc-im-resize-Hermite]
-
-{:.caption}
--filter Hermite -resize
-</div>
-<div class="inline">
-![][sc-im-distort-Hermite]
-
-{:.caption}
--filter Hermite -distort Resize
-</div>
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Hermite.png" caption="-filter Hermite -resize" %}
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Hermite.png" caption="-filter Hermite -distort Resize" %}
 </div>
 
 Теперь о размерах выходных файлов подробно (напомню, что исходный файл был 34K/25K):
 
-<table>
+<table class="wide">
 
 <tbody><tr><th rowspan="2" align="left">Фильтр</th><th colspan="2" align="center">-resize</th><th colspan="2" align="center">-distort</th></tr>
 <tr><th align="right">Байты</th><th align="right">Опт.</th><th align="right">Байты</th><th align="right">Опт.</th></tr>
@@ -327,70 +218,38 @@ done;
 2. Но лучше вообще без этого обойтись, например, в вебе просто задав размеры у тега `IMG` и отдав масштабирование на откуп браузеру —
    трафик так можно сэкономить заметно.
 
-<div style="text-align: center">
-<div class="inline">
-{: style="width: 320px"}
-[![Исходный скриншот диалога изменения размеров в GIMP][source]][source]
-
-{:.caption}
-Исходная картинка, отмасштабированная браузером
-</div>
-</div>
+{% include nova/image.html place="center" width=320 src="/assets/img/2021-03/resize/screen/source.png" caption="Исходная картинка, отмасштабированная браузером" title="Исходная картинка" %}
 
 Это все, конечно, оносится только к случаям, подобным рассмотренному — когда размеры картинки ужимаются процентов на 20, чтобы,
 скажем, вписаться в верстку. При сильном уменьшении про читаемость можно просто забыть и использовать простейшие методы, дающие
 минимальный выходной файл. Кстати, на этот случай в ImageMagick есть еще и оператор `-thumbnail`, который работает еще быстрее
 и грубее, чем `-resize`, а заодно выбрасывает всю метаинформацию.
 
-
 ## Увеличение иконки
 
 Здесь я решил поиздеваться над иконкой Darktable, в оригинале — 64x64px.
 
-<div style="text-align: center">
-<div class="inline">
-![][dt-source]
-</div>
-</div>
+{% include nova/image.html place="center" width=64 src="/assets/img/2021-03/resize/icon/darktable.png" alt="Иконка Darktable" %}
 
 Будем увеличивать ее в 5 раз по линейным размерам, т.е. в 25 по площади — до 320x320px. Вот так это может сделать браузер:
 
-<div style="text-align: center">
-<div class="inline">
-<img src="/assets/img/2021-03/resize/icon/darktable.png" style="width: 320px; height: 320px;">
-</div>
-</div>
+{% include nova/image.html place="center" width=320 src="/assets/img/2021-03/resize/icon/darktable.png" alt="Иконка Darktable" img_style="width:320px;height:320px;" %}
 
 ### GIMP
 
 А вот что нам предлагает GIMP:
 
-<div style="text-align: center">
-<div class="inline">
-![][dt-gimp-none]
-
-{:.caption}
-«Нет»
-</div>
-<div class="inline">
-![][dt-gimp-linear]
-
-{:.caption}
-«Линейная»
-</div>
-<div class="inline">
-![][dt-gimp-wo-galo]
-
-{:.caption}
-«Без гало»
-</div>
+<div class="image-box">
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/icon/ico-gimp-none.png" caption="«Нет»" %}
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/icon/ico-gimp-linear.png" caption="«Линейная»" %}
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/icon/ico-gimp-wo-galo.png" caption="«Без гало»" %}
 </div>
 
 В режиме «Нет интерполяции» мы ожидаемо видим увеличение каждого пикселя, а в режиме «Линейная» — какое-то мыло. «Без гало»
 дает нам мыло немножко по краям подшарпленое, что, кстати, наиболее похоже на вариант от браузера. Что же до оставшихся «Кубической»
 и «Мало гало» — я не смог их отличить от «Линейной», даже быстро переключаясь с одной на другую.
 
-<table>
+<table class="wide">
 
   <tbody><tr><th align="left">Файл</th><th align="center">Пиксели</th><th align="right">Байты</th><th align="right">Опт.</th></tr>
 
@@ -411,32 +270,17 @@ done;
 Вероятно, без применения каких-нибудь AI-методов (т.е. распознавания и перерисовывания по сути) ничего принципиально улучшить и не получится.
 Поэтому ограничусь только тремя примерами:
 
-<div style="text-align: center">
-<div class="inline">
-![][dt-im-resize-adaptive]
-
-{:.caption}
--adaptive-resize
-</div>
-<div class="inline">
-![][dt-im-distort-Parzen]
-
-{:.caption}
--filter Parzen -distort Resize
-</div>
-<div class="inline">
-![][dt-im-distort-Sinc]
-
-{:.caption}
--filter Sinc -distort Resize
-</div>
+<div class="image-box">
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/icon/0-resize-adaptive.png" caption="-adaptive-resize" %}
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/icon/2-distort-Parzen.png" caption="-filter Parzen -distort Resize" %}
+{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/icon/2-distort-Sinc.png" caption="-filter Sinc -distort Resize" %}
 </div>
 
 Третий пример, если кто не догадался, вставлен забавы ради.
 
 Как можно видеть, `-adaptive-resize` справляется, как минимум, не хуже GIMP'а... Что же по размерам файлов?
 
-<table>
+<table class="wide">
 
 <tbody><tr><th rowspan="2" align="left">Фильтр</th><th colspan="2" align="center">-resize</th><th colspan="2" align="center">-distort</th></tr>
 <tr><th align="right">Байты</th><th align="right">Опт.</th><th align="right">Байты</th><th align="right">Опт.</th></tr>
@@ -461,12 +305,17 @@ done;
 * Во-первых, формат PNG применяется для тех случаев, когда нам важно сохранить каждый пиксель как он есть. Т.е. любое масштабирование
   для таких картинок противопоказано. Именно для картинок как таковых, а не для формата. Если мы храним в PNG что-то хорошо масштабируемое,
   возможно, мы что-то делаем не так.
+
 * Как только мы вместо резких переходов получаем сглаживание или размытие, файлы раздуваются непотребно. И это уже особенность формата, да,
   сжатие которого рассчитано на одноцветные области.
+
 * *Если* всё же необходимо ресайзить PNG и именно в PNG, я бы, пожалуй, первым делом попробовал оператор `-adaptive-resize` пакета ImageMagick.
   А если результат не устраивает — прогнал бы скриптом прочие варианты фильтров. Можно, конечно, заморочиться и на подгонку их параметров,
   но боюсь, мои глаза не справятся с отловом тончайших отличий в огромном количестве файлов.
+
 * GIMP, честно говоря, удивил бедностью возможностей — уж с десяток алгоритмов могли бы и завезти...
+
+-----
 
 **PS.** Для удобства оригиналы ссылкой: [скрин][source] и [значок][dt-source]. Желающие могут попробовать поиграть с их размерами
 в разном другом софте, включая фотошоп.

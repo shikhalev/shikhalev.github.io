@@ -3,7 +3,7 @@
   <section id="comments" itemprop="comment">
     {%- if site.data.comments[page_id] -%}
 
-      <h2>Комментарии</h2>
+      <h2 id="comments-h">Комментарии</h2>
       <p class="small italic">Комментарии не проходят премодерацию, автор сайта не может нести ответственность за их содержание.</p>
 
       {%- assign comments = site.data.comments[page_id] | sort -%}

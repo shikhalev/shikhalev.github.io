@@ -153,6 +153,26 @@ $icons: (
     "symbol": "\f17c",
     "font": "fab",
   ),
+  "book": (
+    "symbol": "\f02d",
+    "font": "fas",
+  ),
+  "book-open": (
+    "symbol": "\f518",
+    "font": "fas",
+  ),
+  "university": (
+    "symbol": "\f19c",
+    "font": "fas",
+  ),
+  "rust": (
+    "symbol": "\e07a",
+    "font": "fab",
+  ),
+  "biohazard": (
+    "symbol": "\f780",
+    "font": "fas",
+  ),
 );
 
 @each $name, $data in $icons {
@@ -183,5 +203,31 @@ $icons: (
         @extend .#{map-get($data, "font")};
       }
     }
+  }
+}
+
+.img-icon-inaturalist {
+  &::before {
+    content: '';
+    background-image: url(/assets/img/2021-05/inat/favicon.png);
+    background-size: 100% 100%;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -7%;
+    margin-right: 0.3em;
+  }
+}
+
+.img-icon-gbif {
+  &::before {
+    content: '';
+    background-image: url(/assets/img/2021-05/inat/gbif.png);
+    background-size: 100% 100%;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -7%;
+    margin-right: 0.3em;
   }
 }

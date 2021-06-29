@@ -2,11 +2,6 @@
 {%- assign title = include.title | default: include.caption -%}
 {%- assign caption = include.caption -%}
 {%- assign place = include.place | default: 'center' -%}
-{%- if include.link == false -%}
-  {%- assign link = false -%}
-{%- else -%}
-  {%- assign link = include.link | default: include.src -%}
-{%- endif -%}
 {%- assign src = include.src -%}
 {%- assign slug = src | split: '/' | last | slugify -%}
 {%- assign id = include.id | default: slug -%}
@@ -23,19 +18,23 @@
 {%- if include.class -%}
   {%- assign class = class | append: ' ' | append: include.class -%}
 {%- endif -%}
-{%- if include.img_style -%}
-  {%- assign img_style = ' style="' | append: include.img_style | append: '"' -%}
+{%- if include.frm_style -%}
+  {%- assign frm_style = ' style="' | append: include.frm_style | append: '"' -%}
 {%- else -%}
-  {%- assign img_style = '' -%}
+  {%- assign frm_style = '' -%}
+{%- endif -%}
+{%- if include.frm_class -%}
+  {%- assign frm_class = ' class="' | append: include.frm_class | append: '"' -%}
+{%- else -%}
+  {%- assign frm_class = '' -%}
+{%- endif -%}
+{%- if include.youtube -%}
+  {%- assign youtube_attrs = ' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen' -%}
+{%- else -%}
+  {%- assign youtube_attrs = '' -%}
 {%- endif -%}
 <figure markdown="0" id="{{- id -}}" class="{{- class -}}" style="max-width: {{- width -}}px;">
-  {%- if link -%}
-    <a href="{{- link -}}" title="{{- title -}}">
-  {%- endif -%}
-  <img src="{{- src -}}" title="{{- title -}}" alt="{{- alt -}}"{{- img_style -}}>
-  {%- if link -%}
-    </a>
-  {%- endif -%}
+  <iframe src="{{- src -}}" title="{{- title -}}"{{- frm_class -}}{{- frm_style -}}{{- youtube_attrs -}}>{{- alt -}}</iframe>
   {%- if caption -%}
     <figcaption markdown="span">{{- caption -}}</figcaption>
   {%- endif -%}

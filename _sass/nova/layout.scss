@@ -29,18 +29,18 @@ body {
   }
 
   @media screen and (max-width: 1229px) and (min-width: 1150px) {
-    grid-template-columns: 1fr 500px 10px 300px;
+    grid-template-columns: 1px 1fr 500px 10px 300px;
     grid-template-areas:
-      "header navy   navy   navy"
-      "main   main   .      search"
-      "main   main   .      toc"
-      "main   main   .      donate"
-      "main   main   .      gads"
-      "main   main   .      feeds"
-      "main   main   .      contacts"
-      "main   main   .      extra"
-      "main   main   .      ."
-      "footer footer fr     fr";
+      "hl header navy   navy   navy"
+      ".  main   main   .      search"
+      ".  main   main   .      toc"
+      ".  main   main   .      donate"
+      ".  main   main   .      gads"
+      ".  main   main   .      feeds"
+      ".  main   main   .      contacts"
+      ".  main   main   .      extra"
+      ".  main   main   .      ."
+      "fl footer footer fr     fr";
   }
 
   @media screen and (max-width: 1149px) and (min-width: 920px) {
@@ -470,6 +470,10 @@ aside {
 
 #main {
   grid-area: main;
+
+  box-sizing: border-box;
+  max-width: 100%;
+
   padding-left: 5px;
   padding-right: 5px;
 
@@ -724,6 +728,10 @@ a.footnote::after {
       p {
         break-inside: avoid;
         page-break-inside: avoid;
+
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 0px;
       }
     }
   }
@@ -740,9 +748,14 @@ a.footnote::after {
 figure {
   display: block;
   padding: 0px;
-  margin: 5px 0px 5px;
+  margin: 5px 0px;
   border: solid $base-gray-color 1px;
   box-shadow: $base-shadow $base-gray-color;
+
+  &.logo {
+    border: none;
+    box-shadow: none;
+  }
 
   break-inside: avoid;
   page-break-inside: avoid;
@@ -764,40 +777,55 @@ figure {
     max-width: 100%;
   }
 
+  iframe {
+    display: block;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+  }
+
   figcaption {
     display: block;
-    font-family: $caption-font-family;
+    font-style: italic;
     font-size: $small-font-size;
     text-align: center;
-    margin-top: 3px;
-    margin-bottom: 2px;
+    margin: 3px 5px 2px;
   }
 }
 
-.strict_left {
+iframe.square {
+  aspect-ratio: 1/1;
+}
+
+iframe.hd {
+  aspect-ratio: 16/9;
+}
+
+.strict-left {
   float: left;
   margin-right: 10px;
 }
-.strict_right {
+.strict-right {
   float: right;
   margin-left: 10px;
 }
 .center {
   float: none;
-  margin: 5px auto 5px;
+  margin: 10px auto;
 }
 .left {
-  @extend .strict_left;
+  @extend .strict-left;
   @media screen and (max-width: 500px) {
     float: none;
     margin: 5px auto 5px;
   }
 }
 .right {
-  @extend .strict_right;
+  @extend .strict-right;
   @media screen and (max-width: 500px) {
     float: none;
-    margin: 5px auto 5px;
+    margin: 10px auto;
   }
 }
 
@@ -852,7 +880,7 @@ ul {
   gap: 10px;
   grid-template-areas: "first second third";
 
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
 
   @media screen and (max-width: 749px) and (min-width: 500px) {
@@ -1164,6 +1192,103 @@ ul {
   @media print {
     display: none;
   }
+}
+
+code {
+  font-family: $mono-font-family;
+  font-size: 85%;
+  font-style: normal;
+  border: 1px solid $light-gray-color;
+  padding: 1px 3px;
+  border-radius: 3px;
+}
+
+pre {
+  overflow-x: auto;
+
+  @media print {
+    overflow-x: visible;
+    white-space: pre-wrap;
+  }
+}
+
+figure.highlight {
+  margin: 10px 10px;
+  padding: 0px;
+  max-width: 100%;
+
+  pre {
+    margin: 0px;
+    padding: 8px 12px;
+    max-width: 100%;
+
+    font-family: $mono-font-family;
+    font-size: 85%;
+
+    code {
+      border: none;
+      font-size: inherit;
+    }
+  }
+}
+
+article > table {
+  border-collapse: collapse;
+  color: $dark-gray-color;
+
+  td,
+  th {
+    padding: 5px;
+    margin: 0px;
+  }
+
+  td {
+    border: 1px solid $light-gray-color;
+  }
+
+  th {
+    background-color: $light-gray-color;
+    border: 1px solid $base-gray-color;
+  }
+
+  tr:nth-child(even) {
+    background-color: $lightest-gray-color;
+  }
+
+  &.wide {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0px;
+  }
+}
+
+.coded {
+  margin: 10px 0px;
+  font-size: 90%;
+
+  td {
+    vertical-align: top;
+
+    code {
+      @media screen and (min-width: 920px) {
+        display: inline-block;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  @media print {
+    font-size: 80%;
+  }
+}
+
+div.image-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 10px;
+  margin: 10px 0px;
 }
 
 // FIXME:

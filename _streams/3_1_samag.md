@@ -6,6 +6,7 @@ title: «Системный администратор»
 description: Публикации в журнале «Системный администратор»
 permalink: /pub/samag/
 recommendations: false
+icon: university
 ---
 <div class="right-box">
 [![][logo]][samag]
