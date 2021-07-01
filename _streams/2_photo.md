@@ -1,5 +1,5 @@
 ---
-layout: category
+layout: nova/stream
 category_id: photo
 parent: home
 title: О фото

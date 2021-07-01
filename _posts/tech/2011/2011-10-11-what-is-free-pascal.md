@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Что такое Free Pascal?
 description: >-
   Free Pascal, точнее Free Pascal Compiler aka FPC — это свободный кроссплатформенный компилятор языка

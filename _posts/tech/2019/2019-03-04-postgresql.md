@@ -1,11 +1,11 @@
 ---
-layout: post
+
 title: Всё для людей!
 category: [ tech, programming, db ]
 tags:
   - PostgreSQL
   - SQL
-author: Иван Шихалев
+
 description: Простые обновляемые представления в PostgreSQL
 ---
 Ковыряюсь тут с **[PostgreSQL][pg]** и вот какую замечательную штуку обнаружил...

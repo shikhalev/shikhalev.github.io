@@ -1,5 +1,5 @@
 ---
-layout: category
+layout: nova/stream
 category_id: samag
 parent: pub
 title: «Системный администратор»

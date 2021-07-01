@@ -1,5 +1,5 @@
 ---
-layout: nova/post
+
 title: Отчет о рефакторинге
 category:
   - tech

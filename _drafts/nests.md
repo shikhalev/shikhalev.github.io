@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Гнездовые ниши некоторых птиц
 description: Где гнездятся птицы, наблюдаемые летом в Екатеринбурге
 category: [ life, nature ]

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Выделение «маркером» в LaTeX
 description: Выделение цветным фоном в тексте, аккуратный способ.
 category: [ tech, soft ]

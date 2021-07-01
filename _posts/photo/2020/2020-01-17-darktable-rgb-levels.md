@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Новый модуль Darktable — «Уровни RGB»
 category: [ photo, processing, tech, soft, graphics ]
 tags:
@@ -7,7 +7,7 @@ tags:
   - цвет
   - RAW
   - Linux
-author: Иван Шихалев
+
 description: Новый модуль в Darktable 3.0 — пример использования
 image: /assets/img/2020-01/rgb/RGB.png
 ---

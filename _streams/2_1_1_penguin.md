@@ -1,9 +1,8 @@
 ---
-layout: category
+layout: nova/stream
 category_id: penguin
 parent: processing
-title: «Пингвин-фотолюбитель»
-short: Пингвин-фотолюбитель
+title: Пингвин-фотолюбитель
 description: Цикл постов 2016 года об обработке фотографий под Linux
 permalink: /photo/processing/penguin/
 inaturalist: true
@@ -12,12 +11,8 @@ icon: linux
 ---
 ## Содержание
 
-<div class="center-box">
-[![][peng]][commons]
-
-{:.caption}
-[Картинка взята с WikiMedia Commons][commons]
-</div>
+{% include nova/image.html place="center" width=800 src="/assets/img/2016-06/p-00/peng.jpg" caption="Картинка взята с WikiMedia Commons"
+  link="https://commons.wikimedia.org/wiki/File:Penguin_in_Antarctica_jumping_out_of_the_water.jpg" %}
 
 Пожалуй, теперь, когда этот цикл постов немного устарел, его можно считать законченным. Он остается вполне полезным,
 но с учетом значительного обновления, как использованного софта, так и моих знаний о нем, дорабатывать я его не буду —
@@ -59,9 +54,6 @@ icon: linux
 А как послесловие к этому циклу порекомендую пост **[«Darktable — (не очень) быстрый старт»][quickstart]**.
 Он намного свежее и подробнее (но только про Darktable).
 
-
-[peng]: /assets/img/2016-06/p-00/peng.jpg
-[commons]: https://commons.wikimedia.org/wiki/File:Penguin_in_Antarctica_jumping_out_of_the_water.jpg
 
 [preamble]: {% link _posts/photo/2016/2016-06-11-preamble.md %}
 [raw]: {% link _posts/photo/2016/2016-06-13-raw.md %}

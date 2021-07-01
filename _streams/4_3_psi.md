@@ -1,5 +1,5 @@
 ---
-layout: category
+layout: nova/stream
 category_id: psi
 parent: life
 title: Психология

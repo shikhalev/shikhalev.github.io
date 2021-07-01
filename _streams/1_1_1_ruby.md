@@ -1,5 +1,5 @@
 ---
-layout: category
+layout: nova/stream
 category_id: ruby
 parent: programming
 title: Ruby

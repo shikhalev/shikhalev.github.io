@@ -22,7 +22,7 @@ lang: ru
 title: Иван Шихалев
 email: shikhalev@gmail.com
 author: Иван Шихалев
-description: Блог. Склад текстов. И прочее городу и миру.
+description: Блог. Склад текстов. И прочее городу и миру...
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://shikhalev.org" # the base hostname & protocol for your site, e.g. http://example.com
 show_excerpts: true
@@ -43,20 +43,25 @@ kramdown:
   auto_ids: true
 
 # Build settings
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
 
 defaults:
   - scope:
-      path: ""
+      path: "_posts"
     values:
+      layout: nova/post
       image: /assets/img/icon.jpg
       author: Иван Шихалев
+  - scope:
+      path: "_drafts"
+    values:
+      layout: nova/post
 
-minima:
-  date_format: "%Y.%m.%d"
+# minima:
+#  date_format: "%Y.%m.%d"
 
 header_pages:
   - _streams/1_tech.md

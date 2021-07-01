@@ -173,6 +173,30 @@ $icons: (
     "symbol": "\f780",
     "font": "fas",
   ),
+  "server": (
+    "symbol": "\f233",
+    "font": "fas",
+  ),
+  "feather-alt": (
+    "symbol": "\f56b",
+    "font": "fas",
+  ),
+  "star": (
+    "symbol": "\f005",
+    "font": "far",
+  ),
+  "comment-dots": (
+    "symbol": "\f4ad",
+    "font": "far",
+  ),
+  "comments": (
+    "symbol": "\f086",
+    "font": "far",
+  ),
+  "comment": (
+    "symbol": "\f075",
+    "font": "far",
+  ),
 );
 
 @each $name, $data in $icons {
@@ -208,7 +232,7 @@ $icons: (
 
 .img-icon-inaturalist {
   &::before {
-    content: '';
+    content: "";
     background-image: url(/assets/img/2021-05/inat/favicon.png);
     background-size: 100% 100%;
     display: inline-block;
@@ -221,7 +245,7 @@ $icons: (
 
 .img-icon-gbif {
   &::before {
-    content: '';
+    content: "";
     background-image: url(/assets/img/2021-05/inat/gbif.png);
     background-size: 100% 100%;
     display: inline-block;

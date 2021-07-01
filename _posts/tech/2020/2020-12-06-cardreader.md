@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Новая железяка
 category: [ tech, hard, dybr ]
 tags:
@@ -8,7 +8,7 @@ tags:
   - SD
   - SDXC
   - USB
-author: Иван Шихалев
+
 description: Встраиваемый кардридер с AliExpress
 image: /assets/img/2020-12/cardreader.jpg
 ---

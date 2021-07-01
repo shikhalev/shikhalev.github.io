@@ -1,5 +1,5 @@
 ---
-layout: category
+layout: nova/stream
 category_id: mind
 parent: psi
 title: Мышление

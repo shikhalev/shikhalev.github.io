@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Декораторы в Ruby
 description: Реализация паттерна «декоратор» на языке Ruby
 category: [ tech, programming, ruby, pub, samag ]

@@ -1,0 +1,62 @@
+{%- if page.category_id -%}
+  {%- if page.category_id == 'home' -%}
+    {%- assign source = site.posts -%}
+    {%- assign limit = page.limit | default: site.home_page_limit -%}
+    {%- assign maximum = page.maximum | default: site.home_page_maximum -%}
+  {%- else -%}
+    {%- assign source = site.categories[page.category_id] -%}
+    {%- assign limit = page.limit | default: site.category_page_limit -%}
+    {%- assign maximum = page.maximum | default: site.category_page_maximum -%}
+  {%- endif -%}
+{%- else -%}
+  {%- assign source = 'ERROR' -%}
+  {%- assign limit = 'ERROR' -%}
+  {%- assign maximum = 'ERROR' -%}
+{%- endif -%}
+
+{%- if source.size > maximum -%}
+  {%- assign flag = true -%}
+{%- else -%}
+  {%- assign flag = false -%}
+  {%- assign limit = source.size -%}
+{%- endif -%}
+
+{%- if source.size > 0 -%}
+  <h2 id="last_entries">Последние записи</h2>
+  {%- for item in source limit: limit -%}
+    <section class="stream-item">
+      {% include nova/share.html item=item %}
+
+      <p class="meta">{{ item.date | date: site.date_format }} • {{ item.author | default: site.author }}</p>
+      <p class="meta">{% include nova/categories-only.html item=item %}</p>
+
+      <h3 id="{{- item.url | relative_url | slugify -}}"><a href="{{- item.url | relative_url -}}" title="{{- item.description -}}">{{- item.title -}}</a></h3>
+
+      {{- item.excerpt -}}
+      {%- if item.content contains site.excerpt_separator -%}
+        <hr>
+        <p class="small"><a href="{{- item.url | relative_url -}}">Читать далее »</a></p>
+      {%- endif -%}
+
+      {%- if item.tags and item.tags.size > 0 -%}
+        <p class="meta">{%- include nova/tags.html item=item -%}</p>
+      {%- endif -%}
+
+      {%- if item.comments != false -%}
+        {%- assign slug = item.url | slugify -%}
+        <p class="meta">{%- include nova/stream-comments.html slug=slug url=item.url -%}</p>
+      {%- endif -%}
+
+    </section>
+  {%- endfor -%}
+{%- endif -%}
+
+{%- if flag -%}
+  {%- assign calendar = site.calendars | where: 'category_id', page.category_id | first -%}
+  {%- if calendar.url -%}
+    <div id="calendar-link-box">
+      <p><a href="{{ calendar.url | relative_url }}">Показаны {{limit}} записей из {{source.size}}</a></p>
+      <h2 id="calendar-link"><a href="{{ calendar.url | relative_url }}">Читать далее »</a></h2>
+    </div>
+  {%- endif -%}
+{%- endif -%}

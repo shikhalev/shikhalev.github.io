@@ -1,5 +1,5 @@
 ---
-layout: nova/post
+
 title: Планирую рефакторинг
 description: О будущих изменениях этого сайта
 category: [ about, tech, web ]

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Пингвин-фотолюбитель: 2. Командная строка и пакетная обработка"
 category: [ photo, processing, penguin, tech, soft, graphics ]
 tags:
@@ -9,7 +9,7 @@ tags:
   - ImageMagick
   - Linux
   - командная строка
-author: Иван Шихалев
+
 description: Работа с фотографиями из командной строки
 image: /assets/img/2016-06/p-02/kdpv.png
 ---

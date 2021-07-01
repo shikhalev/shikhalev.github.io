@@ -18,6 +18,7 @@ $base-gray-color: lighten($base-font-color, 50%) !default;
 $light-gray-color: lighten($base-font-color, 60%) !default;
 $lightest-gray-color: lighten($base-font-color, 70%) !default;
 $dark-gray-color: lighten($base-font-color, 10%) !default;
+$semidark-gray-color: lighten($base-font-color, 20%) !default;
 
 $frame-color-dark: #3e5662 !default;
 $frame-color-light: lighten($frame-color-dark, 50%) !default;

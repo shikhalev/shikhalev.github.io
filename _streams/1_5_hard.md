@@ -1,5 +1,5 @@
 ---
-layout: category
+layout: nova/stream
 category_id: hard
 parent: tech
 title: Железо

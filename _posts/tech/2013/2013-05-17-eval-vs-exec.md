@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Об оптимизациях скриптовых языков...
 description: Вычисление вместо исполнения
 category: [ tech, programming, abs]

@@ -3,7 +3,6 @@
 {%- else -%}
   {%- assign tags = page.tags | sort -%}
 {%- endif -%}
-
 {%- for tag in tags -%}
   ​<a class="tag" href="{%- link pages/tags.md -%}#{{- tag | slugify -}}">{{- tag -}}</a>
 {%- endfor -%}

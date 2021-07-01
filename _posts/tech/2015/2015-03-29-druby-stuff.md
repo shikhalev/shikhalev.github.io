@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Немного о dRuby
 description: Несколько нюансов, которые следует знать при сложной работе с dRuby.
 category: [ tech, programming, ruby ]
