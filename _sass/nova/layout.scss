@@ -1491,6 +1491,10 @@ $hh-color: darken($highlight-color, 20%);
 
   .calendar-year {
     columns: 2;
+
+    @media screen and (max-width: 599px) {
+      columns: 1;
+    }
   }
 
   .post-title {
