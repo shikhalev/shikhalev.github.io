@@ -1,19 +1,19 @@
 ---
 permalink: /404.html
 layout: nova/default
-title: 404 Not Found
-description: Страница не найдена
+title: Страница не найдена
+description: 404 Not Found
 ---
 <p style="font-style: italic;">Увы, такой страницы нет. Вы можете воспользоваться поиском или навигацией по разделам сайта, представленной ниже.</p>
 
 <h2 id="search-h">Поиск</h2>
 
-<div style="max-width: 500px;">
-{% include google/search.html %}
-</div>
+<aside style="max-width: 500px;">
+  {% include google/search.html %}
+</aside>
 
 <h2 id="subcategories-h">Рубрикатор</h2>
 
 <div class="subcategories" style="columns: 2;">
-{% include list/subcategories.html category_id='home' %}
+{% include nova/subcategories.html category_id='home' %}
 </div>

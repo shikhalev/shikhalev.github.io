@@ -382,8 +382,13 @@ aside {
 
   &.toc-calendar {
     ul {
-      li::marker {
-        @extend .fa-li-include-calendar-alt;
+      li {
+        &::marker {
+          @extend .fa-li-include-calendar-alt;
+        }
+        ul {
+          columns: 2;
+        }
       }
     }
   }
@@ -1377,6 +1382,10 @@ p.description {
     margin: 5px 30px;
   }
 
+  .share {
+    padding-top: 20px;
+  }
+
   .meta {
     color: $frame-color-dark;
     text-align: left;
@@ -1418,6 +1427,7 @@ $hh-color: darken($highlight-color, 20%);
   padding: 3px 7px 2px;
   border-radius: 5px;
   font-size: $base-font-size * 1.2;
+  font-family: $compact-font-family;
   border: 1px solid $frame-color-light;
   box-shadow: $base-shadow $frame-color-light;
 
@@ -1469,6 +1479,75 @@ $hh-color: darken($highlight-color, 20%);
 
     @media print {
       display: none;
+    }
+  }
+}
+
+.layout-calendar {
+  h2 {
+    padding: 10px 0px;
+    border-top: 1px dotted $frame-color-light;
+  }
+
+  .calendar-year {
+    columns: 2;
+  }
+
+  .post-title {
+    font-family: $caption-font-family;
+  }
+
+  .box {
+    display: table;
+    break-inside: avoid;
+    page-break-inside: avoid;
+
+    margin: 0px 0px 20px;
+
+    h3 {
+      margin: 0px 0px 10px;
+    }
+
+    p {
+      text-align: left;
+      hyphens: manual;
+      margin: 0px 0px 0px 66px;
+
+      &.meta {
+        margin-bottom: 10px;
+      }
+
+      &.link-title {
+        text-indent: -66px;
+      }
+    }
+  }
+
+  .meta {
+    font-family: $compact-font-family;
+    font-size: $notes-font-size;
+    color: $frame-color-dark;
+    text-align: left;
+    hyphens: manual;
+
+    a,
+    a:link,
+    a:visited {
+      color: $frame-color-dark;
+      text-decoration: none;
+    }
+
+    a:link:hover {
+      text-decoration: underline;
+    }
+    a {
+      padding: 1px 5px;
+      &:first-child {
+        padding-left: 0px;
+      }
+      &:last-child {
+        padding-right: 0px;
+      }
     }
   }
 }

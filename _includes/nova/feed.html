@@ -3,7 +3,7 @@
   {%- if page.category_id == 'home' -%}
     {%- assign url = "/feed.xml" -%}
   {%- elsif site.feed.categories contains page.category_id -%}
-    {%- assign url = "/feed/{{- page.category_id -}}.xml" -%}
+    {%- assign url = "/feed/" | append: page.category_id | append: ".xml" -%}
   {%- endif -%}
 {%- endif -%}
 {%- if url -%}

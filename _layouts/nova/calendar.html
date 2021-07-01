@@ -1,0 +1,75 @@
+---
+layout: nova/default
+toc: true
+description: true
+itemtype: https://schema.org/Collection
+---
+{{ content }}
+
+{%- if page.category_id and page.category_id != 'home' -%}
+  {%- assign source = site.categories[page.category_id] -%}
+{%- else -%}
+  {%- assign source = site.posts -%}
+{%- endif -%}
+
+{% assign year = "" %}
+{% assign month = "" %}
+{% assign year_open = false %}
+{% assign month_open = false %}
+
+{% for item in source %}
+  {% assign item_year = item.date | date: "%Y" %}
+  {% if year != item_year %}
+    {% if month_open %}
+      </div>
+      {% assign month_open = false %}
+    {% endif %}
+    {% if year_open %}
+      </section>
+      {% assign year_open = false %}
+    {% endif %}
+    <h2 id="year-{{item_year}}">{{item_year}}</h2>
+    <section class="calendar-year">
+    {% assign year_open = true %}
+    {% assign year = item_year %}
+    {% assign month = "" %}
+  {% endif %}
+  {% assign item_month = item.date | date: "%m" %}
+  {% if month != item_month %}
+    {% if month_open %}
+      </div>
+      {% assign month_open = false %}
+    {% endif %}
+    <div class="box">
+    <h3 id="month-{{item_year}}-{{item_month}}">
+      {% case item_month %}
+        {% when '01' %}Январь
+        {% when '02' %}Февраль
+        {% when '03' %}Март
+        {% when '04' %}Апрель
+        {% when '05' %}Май
+        {% when '06' %}Июнь
+        {% when '07' %}Июль
+        {% when '08' %}Август
+        {% when '09' %}Сентябрь
+        {% when '10' %}Октябрь
+        {% when '11' %}Ноябрь
+        {% when '12' %}Декабрь
+        {% else %}Неизвестный месяц
+      {% endcase %}
+    </h3>
+    {% assign month = item_month %}
+    {% assign month_open = true %}
+  {% endif %}
+  <p class="link-title">
+    <span class="meta">{{ item.date | date: "%Y.%m.%d" }} |</span>
+    <a href="{{ item.url | relative_url }}" title="{{ item.description }}" class="post-title">{{ item.title }}</a>
+  </p>
+  <p class="meta">{% include nova/categories-only.html item=item %}</p>
+{% endfor %}
+{% if month_open %}
+  </div>
+{% endif %}
+{% if year_open %}
+  </section>
+{% endif %}

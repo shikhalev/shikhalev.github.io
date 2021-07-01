@@ -55,7 +55,7 @@
   {%- assign calendar = site.calendars | where: 'category_id', page.category_id | first -%}
   {%- if calendar.url -%}
     <div id="calendar-link-box">
-      <p><a href="{{ calendar.url | relative_url }}">Показаны {{limit}} записей из {{source.size}}</a></p>
+      <p>Показаны {{limit}} записей из <a href="{{ calendar.url | relative_url }}">{{source.size}}</a></p>
       <h2 id="calendar-link"><a href="{{ calendar.url | relative_url }}">Читать далее »</a></h2>
     </div>
   {%- endif -%}

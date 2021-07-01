@@ -1,5 +1,5 @@
 ---
-layout: calendar
+layout: nova/calendar
 category_id: psi
 title: Психология — все записи
 description: Все записи рубрики «Психология»

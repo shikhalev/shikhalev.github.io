@@ -31,8 +31,8 @@
 
 {%- include nova/categories.html -%}
 
-{%- if layout.itemtype -%}
-<article class="layout-{{- page.layout | split: '/' | last -}}" itemscope itemtype="{{- layout.itemtype -}}">
+{%- if layout.itemtype or page.itemtype -%}
+<article class="layout-{{- page.layout | split: '/' | last -}}" itemscope itemtype="{{- page.itemtype | default: layout.itemtype -}}">
 {%- endif -%}
 
 <header class="page-header">
@@ -68,7 +68,7 @@
 
 {{- content -}}
 
-{%- if layout.itemtype -%}
+{%- if layout.itemtype or page.itemtype -%}
 </article>
 {%- endif -%}
 
