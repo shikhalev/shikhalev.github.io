@@ -1556,6 +1556,45 @@ $hh-color: darken($highlight-color, 20%);
   }
 }
 
+$shift: 56px;
+
+.layout-tags {
+
+  .tag-list {
+    columns: 3;
+    margin: 10px 0px;
+
+    @media screen and (max-width: 799px) and (min-width: 520px){
+      columns: 2;
+    }
+
+    @media screen and (max-width: 519px) {
+      columns: 1;
+    }
+  }
+
+  .tag-box {
+    display: table;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  p {
+    font-family: $compact-font-family;
+    text-align: left;
+    hyphens: manual;
+
+    padding-left: $shift;
+    text-indent: -$shift;
+
+    .meta {
+      color: $dark-gray-color;
+      font-size: $index-font-size;
+      vertical-align: top;
+    }
+  }
+}
+
 // FIXME:
 ul.categories {
   li::marker {
