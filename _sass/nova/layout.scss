@@ -679,6 +679,7 @@ aside.tags {
 .share {
   float: right;
   font-size: $share-font-size;
+  padding-bottom: 10px;
 
   max-width: 50%;
 
@@ -1637,21 +1638,6 @@ $shift: 56px;
     &.epigraph {
       text-align: right;
       font-style: italic;
-    }
-  }
-}
-
-// FIXME:
-ul.categories {
-  li::marker {
-    content: "\f07c ";
-    color: $frame-color-dark;
-    @extend .far;
-  }
-  // FIXME:
-  li.fas-icon {
-    &::marker {
-      @extend .fas;
     }
   }
 }

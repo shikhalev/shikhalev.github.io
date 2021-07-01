@@ -2,7 +2,7 @@
 layout: nova/stream
 category_id: about
 parent: home
-title: О себе
+title: О себе
 description: О себе, этом сайте и т.д.
 icon: id-card
 permalink: /about/
