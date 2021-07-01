@@ -38,7 +38,7 @@
 {%- endif -%}
 
 <header class="page-header">
-{%- if page.title -%}
+{%- if page.title and layout.title != false -%}
   <h1 class="title-{{- page.layout | split: '/' | last -}}" itemprop="name headline">{{- page.title | escape -}}</h1>
 {%- endif -%}
 {%- if layout.description and page.description -%}

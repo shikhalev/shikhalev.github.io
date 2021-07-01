@@ -1,5 +1,5 @@
 ---
-layout: verse
+layout: nova/verse
 title: Иногда
 category: [ text, verses ]
 ---

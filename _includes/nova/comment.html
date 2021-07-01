@@ -9,7 +9,7 @@
     </span>
     <span class="comment-meta">
       <a href="#{{- include.comment.comment_id -}}" itemprop="url" content="{{- page.url | absolute_url -}}#{{- include.comment.comment_id -}}">#{{- include.comment.comment_id -}}</a>
-      <span itemprop="datePublished" content="{{- include.comment.date | date: "%Y-%m-%d" -}}">{{- include.comment.date | date: "%Y.%m.%d %H:%M" -}}</span>
+      <span itemprop="datePublished" content="{{- include.comment.date | date_to_xmlschema -}}">{{- include.comment.date | date: "%Y.%m.%d %H:%M" -}}</span>
       {%- if include.comment.parent_id and include.comment.parent_id != '' %}
         ответ на <a href="#{{- include.comment.parent_id -}}">#{{- include.comment.parent_id -}}</a>
       {%- endif -%}

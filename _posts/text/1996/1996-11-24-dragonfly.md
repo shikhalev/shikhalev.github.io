@@ -1,5 +1,5 @@
 ---
-layout: verse
+layout: nova/verse
 title: Стрекоза-коромысло
 write_date: предположительно ноябрь 1996
 category: [ text, verses ]

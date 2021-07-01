@@ -1559,12 +1559,11 @@ $hh-color: darken($highlight-color, 20%);
 $shift: 56px;
 
 .layout-tags {
-
   .tag-list {
     columns: 3;
     margin: 10px 0px;
 
-    @media screen and (max-width: 799px) and (min-width: 520px){
+    @media screen and (max-width: 799px) and (min-width: 520px) {
       columns: 2;
     }
 
@@ -1591,6 +1590,53 @@ $shift: 56px;
       color: $dark-gray-color;
       font-size: $index-font-size;
       vertical-align: top;
+    }
+  }
+}
+
+.layout-verse {
+  h1 {
+    text-align: center;
+    clear: both;
+  }
+}
+
+.verse {
+  display: table;
+  margin: 0px auto;
+  clear: both;
+
+  p {
+    text-align: left;
+    hyphens: manual;
+    white-space: pre;
+    margin-bottom: 10px;
+
+    &.verse-date {
+      text-align: right;
+      font-style: italic;
+    }
+    &.epigraph {
+      text-align: right;
+      font-style: italic;
+    }
+  }
+}
+
+.stream-item-verse {
+  p {
+    text-align: left;
+    hyphens: manual;
+    white-space: pre;
+    margin-bottom: 10px;
+
+    &.verse-date {
+      text-align: right;
+      font-style: italic;
+    }
+    &.epigraph {
+      text-align: right;
+      font-style: italic;
     }
   }
 }

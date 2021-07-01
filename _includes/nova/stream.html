@@ -24,7 +24,7 @@
 {%- if source.size > 0 -%}
   <h2 id="last_entries">Последние записи</h2>
   {%- for item in source limit: limit -%}
-    <section class="stream-item">
+    <section class="stream-item stream-item-{{ item.layout | split: '/' | last }}">
       {% include nova/share.html item=item %}
 
       <p class="meta">{{ item.date | date: site.date_format }} • {{ item.author | default: site.author }}</p>
