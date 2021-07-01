@@ -17,7 +17,7 @@ description: true
   {% assign tag_name = tag[0] %}
   {% assign tag_posts = tag[1] %}
   <div class="tag-box">
-    <h5>{{ tag_name }}</h5>
+    <h5 id="{{ tag_name }}">{{ tag_name }}</h5>
     {% for post in tag_posts %}
       <p class="post-link">
         <span class="meta">{{ post.date | date: "%Y.%m.%d" }} |</span>
