@@ -6,6 +6,7 @@ tags:
   - интроспекция
   - метапрограммирование
 image: /assets/img/2016-03/samag146-147.jpg
+recommend: true
 ---
 <div class="right-box">
 [![][cover]][samag]

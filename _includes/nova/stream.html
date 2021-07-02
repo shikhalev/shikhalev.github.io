@@ -30,7 +30,13 @@
       <p class="meta">{{ item.date | date: site.date_format }} • {{ item.author | default: site.author }}</p>
       <p class="meta">{% include nova/categories-only.html item=item %}</p>
 
-      <h3 id="{{- item.url | relative_url | slugify -}}"><a href="{{- item.url | relative_url -}}" title="{{- item.description -}}">{{- item.title -}}</a></h3>
+      {%- if jekyll.environment != 'production' and item.recommend -%}
+        {%- assign h_cls = ' class="fa-icon-star"' -%}
+      {%- else -%}
+        {%- assign h_cls = '' -%}
+      {%- endif -%}
+
+      <h3 id="{{- item.url | relative_url | slugify -}}"><a href="{{- item.url | relative_url -}}" title="{{- item.description -}}"{{- h_cls -}}>{{- item.title -}}</a></h3>
 
       {{- item.excerpt -}}
       {%- if item.content contains site.excerpt_separator -%}

@@ -5,6 +5,7 @@ category: [ tech, programming, rust ]
 tags:
   - грабли
 image: /assets/img/2021-03/rust_logo.png
+recommend: true
 ---
 {% include nova/image.html place="right" width=256 src="/assets/img/ico/rust.png" alt="Логотип Rust" class="logo" %}
 

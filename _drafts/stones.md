@@ -29,3 +29,9 @@ category:
 1. display: block для ифрейма + разрешения для ютуба
 
 1. отсутствие name у элементов коллекций
+
+1. verse (white-space)
+
+2. topper
+
+3. wotermark и невозможность нумерации

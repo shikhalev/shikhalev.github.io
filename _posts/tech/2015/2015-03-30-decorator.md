@@ -5,6 +5,7 @@ category: [ tech, programming, ruby, pub, samag ]
 tags:
   - метапрограммирование
 image: /assets/img/2015-04/samag130.gif
+recommend: true
 ---
 <div class="right-box">
 [![][cover]][samag]

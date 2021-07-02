@@ -60,9 +60,14 @@ description: true
     {% assign month = item_month %}
     {% assign month_open = true %}
   {% endif %}
+  {%- if jekyll.environment != 'production' and item.recommend -%}
+    {%- assign h_cls = ' fa-icon-star' -%}
+  {%- else -%}
+    {%- assign h_cls = '' -%}
+  {%- endif -%}
   <p class="link-title">
     <span class="meta">{{ item.date | date: "%Y.%m.%d" }} |</span>
-    <a href="{{ item.url | relative_url }}" title="{{ item.description }}" class="post-title">{{ item.title }}</a>
+    <a href="{{ item.url | relative_url }}" title="{{ item.description }}" class="post-title{{- h_cls -}}">{{ item.title }}</a>
   </p>
   <p class="meta">{% include nova/categories-only.html item=item %}</p>
 {% endfor %}
