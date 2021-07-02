@@ -244,6 +244,8 @@ $img-icons: (
   "camera": url(/assets/img/ico/camera.svg),
   "gmail": url(/assets/img/ico/gmail.svg),
   "jekyll": url(/assets/img/ico/jekyll.svg),
+  "instagram": url(/assets/img/ico/instagram.svg),
+  "github": url(/assets/img/ico/github.svg),
 );
 
 @each $name, $url in $img-icons {
@@ -252,11 +254,18 @@ $img-icons: (
       content: "";
       background-image: $url;
       background-size: 100% 100%;
+      background-repeat: no-repeat;
       display: inline-block;
       width: 1em;
       height: 1em;
       vertical-align: -12%;
       margin-right: 0.2em;
+    }
+
+    white-space: nowrap;
+
+    span {
+      white-space: normal;
     }
   }
 }
