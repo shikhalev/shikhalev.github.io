@@ -26,11 +26,6 @@ description: Блог. Склад текстов. И прочее городу �
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://shikhalev.org" # the base hostname & protocol for your site, e.g. http://example.com
 show_excerpts: true
-facebook_username: shikhalev
-linkedin_username: shikhalev
-twitter_username: shikhalev
-github_username:  shikhalev
-instagram_username: ivanshikhalev
 rss: rss
 
 excerpt_separator: <!--more-->
@@ -42,8 +37,6 @@ kramdown:
   parse_block_html: true
   auto_ids: true
 
-# Build settings
-# theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -59,9 +52,12 @@ defaults:
       path: "_drafts"
     values:
       layout: nova/post
-
-# minima:
-#  date_format: "%Y.%m.%d"
+  - scope:
+      path: "_calendars"
+    values:
+      layout: nova/calendar
+      image: /assets/img/icon.jpg
+      author: Иван Шихалев
 
 header_pages:
   - _streams/1_tech.md

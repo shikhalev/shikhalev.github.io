@@ -1,5 +1,4 @@
 ---
-
 title: Ruby и многозадачность
 category: [ tech, programming, ruby, pub, samag ]
 description: В статье рассматриваются основные средства работы с потоками (threads) и процессами в языке и стандартной библиотеке Ruby.

@@ -1,5 +1,4 @@
 ---
-
 title: Возвращаясь к размышлизму...
 description: Или снова об оптимизации скриптовых языков.
 category: [ tech, programming, abs ]

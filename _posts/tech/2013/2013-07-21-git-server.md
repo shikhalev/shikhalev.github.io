@@ -1,5 +1,4 @@
 ---
-
 title: "Кратко: примитивный git-сервер"
 description: Настраиваем git-сервер для малых групп с минимальными затратами.
 category: [ tech , soft, programming ]

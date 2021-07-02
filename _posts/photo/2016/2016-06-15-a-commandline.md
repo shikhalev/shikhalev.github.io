@@ -1,5 +1,4 @@
 ---
-
 title: "Пингвин-фотолюбитель: 2. Командная строка и пакетная обработка"
 category: [ photo, processing, penguin, tech, soft, graphics ]
 tags:

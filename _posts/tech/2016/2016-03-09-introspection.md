@@ -1,5 +1,4 @@
 ---
-
 title: Средства самопознания в Ruby
 description: Что программа может знать о самой себе?
 category: [ tech, programming, ruby, pub, samag ]

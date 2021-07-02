@@ -1,5 +1,4 @@
 ---
-
 title: Darktable — (не очень) быстрый старт
 category: [ photo, processing, tech, soft, graphics ]
 tags:

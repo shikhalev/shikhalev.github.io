@@ -5,7 +5,6 @@ inaturalist: true
 recommendations: all
 category_id: home
 ---
-
 <!-- title: Блог. Склад текстов. И прочее городу и миру... -->
 
 {% comment %}

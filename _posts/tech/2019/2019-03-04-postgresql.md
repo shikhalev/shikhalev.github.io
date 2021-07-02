@@ -1,5 +1,4 @@
 ---
-
 title: Всё для людей!
 category: [ tech, programming, db ]
 tags:

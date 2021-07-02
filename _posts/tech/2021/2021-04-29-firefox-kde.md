@@ -1,5 +1,4 @@
 ---
-
 title: Проблема интеграции Firefox с Plasma Desktop
 description: Плагин Plasma Integration начал себя плохо вести...
 category: [ tech, soft, dybr ]

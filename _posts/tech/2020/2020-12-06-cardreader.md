@@ -1,5 +1,4 @@
 ---
-
 title: Новая железяка
 category: [ tech, hard, dybr ]
 tags:

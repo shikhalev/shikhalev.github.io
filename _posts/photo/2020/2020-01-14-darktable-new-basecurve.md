@@ -1,5 +1,4 @@
 ---
-
 title: Новая базовая кривая в Darktable
 category: [ photo, processing, tech, soft, graphics ]
 tags:
