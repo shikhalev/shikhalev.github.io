@@ -58,6 +58,12 @@ defaults:
       layout: nova/calendar
       image: /assets/img/icon.jpg
       author: Иван Шихалев
+  - scope:
+      path: "_streams"
+    values:
+      layout: nova/stream
+      image: /assets/img/icon.jpg
+      author: Иван Шихалев
 
 header_pages:
   - _streams/1_tech.md
@@ -79,8 +85,10 @@ feed:
 collections:
   streams:
     output: true
+    permalink: /:path/
   calendars:
     output: true
+    permalink: /:path/all
 
 staticman_url: https://shikhalev-comments.herokuapp.com/v3/entry/github/shikhalev/shikhalev.github.io/main/comments
 date_format: "%Y.%m.%d"

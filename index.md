@@ -1,7 +1,6 @@
 ---
 layout: nova/stream
 description: Блог. Склад текстов. И прочее городу и миру...
-inaturalist: true
 recommendations: all
 category_id: home
 ---
