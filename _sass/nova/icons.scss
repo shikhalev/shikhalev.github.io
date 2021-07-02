@@ -246,6 +246,7 @@ $img-icons: (
   "jekyll": url(/assets/img/ico/jekyll.svg),
   "instagram": url(/assets/img/ico/instagram.svg),
   "github": url(/assets/img/ico/github.svg),
+  "darktable": url(/assets/img/ico/darktable.png),
 );
 
 @each $name, $url in $img-icons {
