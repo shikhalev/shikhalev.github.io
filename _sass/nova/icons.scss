@@ -230,28 +230,39 @@ $icons: (
   }
 }
 
-.img-icon-inaturalist {
-  &::before {
-    content: "";
-    background-image: url(/assets/img/2021-05/inat/favicon.png);
-    background-size: 100% 100%;
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    vertical-align: -7%;
-    margin-right: 0.3em;
+// почему-то цветная векторная иконка не находится
+$img-icons: (
+  "inaturalist": url(/assets/img/2021-05/inat/favicon.png),
+  "gbif": url(/assets/img/2021-05/inat/gbif.png),
+  "rust": url(/assets/img/ico/rust.png),
+  "ruby": url(/assets/img/ico/ruby.svg),
+  "csharp": url(/assets/img/ico/csharp.svg),
+  "gentoo": url(/assets/img/ico/gentoo.svg),
+  "kde": url(/assets/img/ico/kde.svg),
+  "linux-mint": url(/assets/img/ico/linux-mint.svg),
+  "kde-neon": url(/assets/img/ico/kde-neon.svg),
+  "camera": url(/assets/img/ico/camera.svg),
+  "gmail": url(/assets/img/ico/gmail.svg),
+  "jekyll": url(/assets/img/ico/jekyll.svg),
+);
+
+@each $name, $url in $img-icons {
+  .img-icon-#{$name} {
+    &::before {
+      content: "";
+      background-image: $url;
+      background-size: 100% 100%;
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      vertical-align: -12%;
+      margin-right: 0.2em;
+    }
   }
 }
 
-.img-icon-gbif {
-  &::before {
-    content: "";
-    background-image: url(/assets/img/2021-05/inat/gbif.png);
-    background-size: 100% 100%;
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    vertical-align: -7%;
-    margin-right: 0.3em;
+  .img-icon-jekyll {
+    &::before {
+      width: 0.5em;
+    }
   }
-}

@@ -66,11 +66,11 @@ defaults:
       author: Иван Шихалев
 
 header_pages:
-  - _streams/1_tech.md
-  - _streams/2_photo.md
-  - _streams/4_life.md
-  - _streams/5_text.md
-  - _streams/6_about.md
+  - _streams/tech.md
+  - _streams/photo.md
+  - _streams/life.md
+  - _streams/text.md
+  - _streams/about.md
 
 feed:
   categories:
