@@ -6,8 +6,8 @@
       {% if page.categories.size > 0 %}
         {% assign src = page.categories %}
       {% elsif page.category_id and page.category_id != 'about' %}
-        {%- capture lst -%}{%- include catpath.html category_id=page.category_id current='' -%}{%- endcapture -%}
-        {% assign src = lst | split: '|' %}
+        {%- capture lst -%}{%- include nova/bread.html item=page -%}{%- endcapture -%}
+        {% assign src = lst | split: '///' %}
       {% else %}
         {% assign src = site.feed.categories %}
       {% endif %}
