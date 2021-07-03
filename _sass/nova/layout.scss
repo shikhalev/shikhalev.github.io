@@ -512,7 +512,9 @@ article {
   p {
     text-align: justify;
     hyphens: auto;
+  }
 
+  p, dt {
     a:link {
       color: $base-link-color;
       text-decoration: none;
