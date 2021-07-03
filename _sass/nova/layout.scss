@@ -1301,6 +1301,11 @@ article > table {
     box-sizing: border-box;
     margin: 10px 0px;
   }
+
+  caption {
+    font-size: $small-font-size;
+    font-style: italic;
+  }
 }
 
 .coded {
