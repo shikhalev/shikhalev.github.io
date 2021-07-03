@@ -843,6 +843,7 @@ iframe.hd {
 }
 .center {
   float: none;
+  clear: both;
   margin: 10px auto;
 }
 .left {
@@ -1686,4 +1687,9 @@ html {
   @media print {
     display: none;
   }
+}
+
+p img {
+  display: inline-block;
+  vertical-align: middle;
 }
