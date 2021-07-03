@@ -12,7 +12,8 @@ tags:
 description: Работа с фотографиями из командной строки
 image: /assets/img/2016-06/p-02/kdpv.png
 ---
-{% include nova/image.html place="right" width=320 src="/assets/img/2016-06/p-02/kdpv.png" link="/assets/img/2016-06/p-02/kdpv.jpg" class="logo" %}
+{% include nova/image.html place="right" width=320 src="/assets/img/2016-06/p-02/kdpv.png" link="/assets/img/2016-06/p-02/kdpv.jpg" class="logo"
+   title="Картинка стырена где-то в интернетах, найдена по ключевому слову „imagemagick“" %}
 
 Коротко о главном: главный обработчик изображений из командной строки, равно как и в пакетном режиме, у нас
 по прежнему пакет **[ImageMagick][imagemagick]**. КДПВ справа взята поиском по его названию в «картинках Google»,
