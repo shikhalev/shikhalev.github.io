@@ -1249,6 +1249,7 @@ pre {
 }
 
 figure.highlight {
+  display: block;
   margin: 10px 10px;
   padding: 0px;
   max-width: 100%;
@@ -1262,6 +1263,7 @@ figure.highlight {
     font-size: 85%;
 
     code {
+      padding: 0px;
       border: none;
       font-size: inherit;
     }
@@ -1321,6 +1323,7 @@ article > table {
 div.image-box {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: center;
   column-gap: 20px;
   row-gap: 10px;
@@ -1682,11 +1685,5 @@ html {
 
   @media print {
     display: none;
-  }
-}
-
-pre {
-  code {
-    padding:0px;
   }
 }
