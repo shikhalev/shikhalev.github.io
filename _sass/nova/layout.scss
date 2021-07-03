@@ -1693,3 +1693,33 @@ p img {
   display: inline-block;
   vertical-align: middle;
 }
+
+.list-box {
+  > ul > li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  columns: 3;
+  @media screen and (max-width: 779px) and (min-width: 525px) {
+    columns: 2;
+  }
+  @media screen and (max-width: 524px) {
+    columns: 1;
+  }
+}
+
+.links-box {
+  p {
+    white-space: pre;
+    text-align: left;
+  }
+
+  columns: 2;
+  @media screen and (max-width: 639px) {
+    columns: 1;
+  }
+}
