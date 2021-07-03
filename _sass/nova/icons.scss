@@ -248,6 +248,7 @@ $img-icons: (
   "github": url(/assets/img/ico/github.svg),
   "darktable": url(/assets/img/ico/darktable.png),
   "hugin": url(/assets/img/ico/hugin.svg),
+  "luminance-hdr": url(/assets/img/ico/luminance-hdr.png),
 );
 
 @each $name, $url in $img-icons {
@@ -272,8 +273,8 @@ $img-icons: (
   }
 }
 
-  .img-icon-jekyll {
-    &::before {
-      width: 0.5em;
-    }
+.img-icon-jekyll {
+  &::before {
+    width: 0.5em;
   }
+}

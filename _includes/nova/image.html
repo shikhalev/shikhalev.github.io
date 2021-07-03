@@ -1,6 +1,14 @@
-{%- assign alt = include.alt | default: include.title | default: include.caption -%}
-{%- assign title = include.title | default: include.caption -%}
-{%- assign caption = include.caption -%}
+{%- if include.caption -%}
+  {%- capture caption -%}
+    {{ include.caption | markdownify }}
+  {%- endcapture -%}
+  {%- assign alt = include.alt | default: include.title | default: caption | strip_html -%}
+  {%- assign title = include.title | default: caption | strip_html -%}
+{%- else -%}
+  {%- assign alt = include.alt | default: include.title | escape -%}
+  {%- assign title = include.title | escape -%}
+{%- endif -%}
+
 {%- assign place = include.place | default: 'center' -%}
 {%- if include.link == false -%}
   {%- assign link = false -%}
@@ -36,7 +44,7 @@
   {%- if link -%}
     </a>
   {%- endif -%}
-  {%- if caption -%}
-    <figcaption markdown="span">{{- caption -}}</figcaption>
+  {%- if include.caption -%}
+    <figcaption markdown="span">{{- include.caption -}}</figcaption>
   {%- endif -%}
 </figure>
