@@ -27,8 +27,8 @@
     <section class="stream-item stream-item-{{ item.layout | split: '/' | last }}">
       {% include nova/share.html item=item %}
 
-      <p class="meta">{{ item.date | date: site.date_format }} • {{ item.author | default: site.author }}</p>
       <p class="meta">{% include nova/categories-only.html item=item %}</p>
+      <p class="meta">{{ item.date | date: site.date_format }} • {{ item.author | default: site.author }}</p>
 
       {%- if jekyll.environment != 'production' and item.recommend -%}
         {%- assign h_cls = ' class="fa-icon-star"' -%}
