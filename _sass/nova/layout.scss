@@ -1273,7 +1273,7 @@ figure.highlight {
   }
 }
 
-article > table {
+article > table, article > div > table {
   border-collapse: collapse;
   color: $dark-gray-color;
 
