@@ -45,9 +45,9 @@
 
     {%- assign randoms = random_source | sample: 3 -%}
 
-    <aside id="randoms" class="recommendations">
-      <div id="random-first" class="random-item">
-        {%- assign random_post = randoms[0] -%}
+    <aside class="recommendations">
+      {%- for random_post in randoms -%}
+      <div class="random-item">
         <dl>
           <dt>
             <span class="meta">{{- random_post.date | date: '%Y.%m.%d' -}} |</span>
@@ -61,36 +61,7 @@
           </dd>
         </dl>
       </div>
-      <div id="random-second" class="random-item">
-        {%- assign random_post = randoms[1] -%}
-        <dl>
-          <dt>
-            <span class="meta">{{- random_post.date | date: '%Y.%m.%d' -}} |</span>
-            <a href="{{- random_post.url | relative_url -}}" title="{{- random_post.description -}}">{{- random_post.title -}}</a>
-          </dt>
-          <dd class="meta">
-            {%- for random_post_category in random_post.categories -%}
-              {%- assign category_page = site.streams | where: 'category_id', random_post_category | first -%}
-              ​<a class="fa-icon-{{- category_page.icon | default: 'folder-open' -}}" href="{{- category_page.url | relative_url -}}" title="{{- category_page.description -}}">{{- category_page.short | default: category_page.title -}}</a>
-            {%- endfor -%}
-          </dd>
-        </dl>
-      </div>
-      <div id="random-third" class="random-item">
-        {%- assign random_post = randoms[2] -%}
-        <dl>
-          <dt>
-            <span class="meta">{{- random_post.date | date: '%Y.%m.%d' -}} |</span>
-            <a href="{{- random_post.url | relative_url -}}" title="{{- random_post.description -}}">{{- random_post.title -}}</a>
-          </dt>
-          <dd class="meta">
-            {%- for random_post_category in random_post.categories -%}
-              {%- assign category_page = site.streams | where: 'category_id', random_post_category | first -%}
-              ​<a class="fa-icon-{{- category_page.icon | default: 'folder-open' -}}" href="{{- category_page.url | relative_url -}}" title="{{- category_page.description -}}">{{- category_page.short | default: category_page.title -}}</a>
-            {%- endfor -%}
-          </dd>
-        </dl>
-      </div>
+      {%- endfor -%}
     </aside>
   {%- endif -%}
 {%- endif -%}

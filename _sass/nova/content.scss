@@ -1,3 +1,7 @@
+.small {
+  font-size: $small-font-size;
+}
+
 p.description {
   font-size: $base-font-size * $header_scale;
   font-style: italic;
