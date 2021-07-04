@@ -22,7 +22,7 @@ category:
 
 8. max-width: 100% для main и box-sizing
 
-9. неинтерполяция в assign
+9. неинтерполяция в assign и параметрах include
 
 1. Печать пре (переносы)
 
