@@ -1,0 +1,25 @@
+.share {
+  float: right;
+  font-size: $share-font-size;
+  padding-bottom: 10px;
+
+  max-width: 50%;
+
+  a,
+  a:link,
+  a:visited {
+    padding: 2px 5px 2px;
+    color: $frame-color-dark;
+    text-decoration: none;
+
+    &:last-child {
+      padding-right: 0px;
+    }
+  }
+
+  a:hover {
+    color: $frame-color-light;
+    text-decoration: none;
+    text-shadow: $base-shadow $frame-color-dark;
+  }
+}

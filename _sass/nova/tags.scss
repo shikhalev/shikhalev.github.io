@@ -20,6 +20,15 @@
     page-break-inside: avoid;
   }
 
+  h5 {
+    @extend .fa-icon-tag;
+    color: $frame-color-dark;
+    &::before {
+      font-size: 80%;
+      color: $frame-color-light;
+    }
+  }
+
   p {
     font-family: $compact-font-family;
     text-align: left;
