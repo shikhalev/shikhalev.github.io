@@ -1,0 +1,68 @@
+.layout-calendar {
+  $shift: 66px;
+
+  h2 {
+    padding: 10px 0px;
+    border-top: 1px dotted $frame-color-light;
+  }
+
+  .calendar-year {
+    columns: 2;
+
+    @media screen and (max-width: 599px) {
+      columns: 1;
+    }
+  }
+
+  .post-title {
+    font-family: $caption-font-family;
+  }
+
+  .box {
+    display: table;
+    break-inside: avoid;
+    page-break-inside: avoid;
+
+    margin: 0px 0px 20px;
+
+    h3 {
+      margin: 0px 0px 10px;
+    }
+
+    p {
+      text-align: left;
+      hyphens: manual;
+      margin: 0px 0px 0px $shift;
+
+      &.meta {
+        margin-bottom: 10px;
+      }
+
+      &.link-title {
+        text-indent: -$shift;
+      }
+    }
+  }
+
+  .meta {
+    font-family: $compact-font-family;
+    font-size: $notes-font-size;
+    color: $frame-color-dark;
+    text-align: left;
+    hyphens: manual;
+
+    a,
+    a:link,
+    a:visited {
+      color: $frame-color-dark;
+      text-decoration: none;
+    }
+
+    a:link:hover {
+      text-decoration: underline;
+    }
+    a {
+      padding: 1px 10px 1px 0px;
+    }
+  }
+}

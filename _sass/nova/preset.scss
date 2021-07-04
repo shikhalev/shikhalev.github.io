@@ -11,7 +11,7 @@ $base-font-family: "PT Sans", gsans, Arial, sans-serif !default;
 $caption-font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif !default;
 $compact-font-family: "PT Sans Narrow", gnarrow, "Arial Narrow", sans-serif !default;
 $mono-font-family: "PT Mono", gmono, monospace !default;
-$far-font-family: "Font Awesome 5 Regular";
+$far-font-family: "Font Awesome 5 Free";
 
 $base-font-color: #444;
 $base-gray-color: lighten($base-font-color, 50%) !default;
@@ -29,7 +29,5 @@ $visited-link-color: #246 !default;
 
 $highlight-color: #ffdb4d !default;
 
-// https://colorscheme.ru/#3i21Tw0w0w0w0
-
-$base-shadow: 1px 1px 3px;
-$thin-shadow: 1px 1px 1px;
+$base-shadow: 1px 1px 3px !default;
+$thin-shadow: 1px 1px 1px !default;

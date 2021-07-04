@@ -1,5 +1,3 @@
-// @use "sass:map";
-
 $icons: (
   "laptop-code": (
     "symbol": "\f5fc",
@@ -230,7 +228,7 @@ $icons: (
   }
 }
 
-// почему-то цветная векторная иконка не находится
+// почему-то цветная векторная иконка не находится для Rust
 $img-icons: (
   "inaturalist": url(/assets/img/ico/inaturalist.svg),
   "gbif": url(/assets/img/ico/gbif.svg),
