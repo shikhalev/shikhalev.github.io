@@ -1299,7 +1299,7 @@ article > table, article > div > table {
   &.wide {
     width: 100%;
     box-sizing: border-box;
-    margin: 10px 0px;
+    margin: 10px auto;
   }
 
   caption {
@@ -1342,6 +1342,7 @@ p.description {
   font-size: $base-font-size * $h_k;
   font-style: italic;
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .subcategories {

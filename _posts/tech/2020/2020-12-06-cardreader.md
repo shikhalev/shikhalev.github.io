@@ -11,12 +11,7 @@ tags:
 description: Встраиваемый кардридер с AliExpress
 image: /assets/img/2020-12/cardreader.jpg
 ---
-<div class="right-box" style="width:320px;">
-[![Фото кардридера][cover]][cover]
-
-{:.caption}
-Иллюстрация честно потырена у продавца
-</div>
+{% include nova/image.html place="right" width=320 src="/assets/img/2020-12/cardreader.jpg" caption="Иллюстрация честно потырена у продавца" %}
 
 Приобрел на Али очередную железку, сегодня руки дошли проверить.
 
@@ -42,8 +37,7 @@ image: /assets/img/2020-12/cardreader.jpg
 адекватны для сравнения. Поскольку на проверяемом девайсе есть порт USB Type-C, его я тоже
 попробовал. Замеры показали (в *MB/s*):
 
-<div class="center-box">
-<table align="center">
+<table class="wide" style="max-width:640px;margin-left:auto;margin-right:auto;">
   <tr>
   <th></th>
     <th align="right">Запись</th>
@@ -64,7 +58,7 @@ image: /assets/img/2020-12/cardreader.jpg
     <td align="right">12</td>
     <td align="right">40</td>
   </tr>
-</table></div>
+</table>
 
 Последняя строка наводит на некоторые подозрения, не правда ли? Я залез в KDE Info Center,
 устройства USB — и правда, подключение по Type-C пошло через USB 2.0 Hub. Для полной ясности
@@ -90,9 +84,6 @@ image: /assets/img/2020-12/cardreader.jpg
 в остальном корпус весьма неплох, и размещение внутри продумано; ну, и в-третьих, было бы удобней, если б
 он питался от молекса — свободный конец питания SATA у меня нашелся, но предпоследний и неудобно
 расположенный, а вот молексов дополна, и они не используются.
-
-
-[cover]: /assets/img/2020-12/cardreader.jpg "Фото кардридера"
 
 [ref-device]: http://ali.pub/5cv86n "Ссылка на товар"
 [ref-analogs]: http://ali.pub/5cv8ud "Ссылка на аналогичный товар"
