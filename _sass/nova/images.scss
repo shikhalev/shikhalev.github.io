@@ -1,0 +1,9 @@
+div.image-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 10px;
+  margin: 10px 0px;
+}
