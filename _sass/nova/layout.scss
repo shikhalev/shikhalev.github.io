@@ -705,35 +705,6 @@ aside.tags {
   }
 }
 
-// FIXME: удалить, когда можно будет
-
-.right-box {
-  float: right;
-  padding: 0px;
-  margin-left: 10px;
-
-  img {
-    max-width: 100%;
-  }
-}
-.left-box {
-  float: left;
-  padding: 0px;
-  margin-right: 10px;
-
-  img {
-    max-width: 100%;
-  }
-}
-.center-box {
-  padding: 0px;
-  margin: 0px auto;
-
-  img {
-    max-width: 100%;
-  }
-}
-
 sup {
   font-size: $index-font-size;
 }
