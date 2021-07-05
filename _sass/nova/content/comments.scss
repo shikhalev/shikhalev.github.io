@@ -240,3 +240,11 @@
     display: none;
   }
 }
+
+$indents: 1, 2, 4, 8, 12;
+
+@each $i in $indents {
+  .i#{$i} {
+    margin-left: #{$i}em;
+  }
+}
