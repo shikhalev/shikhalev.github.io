@@ -5,5 +5,5 @@ title: Публикации
 description: Публикации в СМИ
 recommendations: false
 icon: university
-order_no: 3
+order_no: 5
 ---

@@ -6,4 +6,5 @@ description: Все персонажи вымышлены, все совпаде
 order_no: 1
 recommendations: best
 icon: feather
+small: true
 ---

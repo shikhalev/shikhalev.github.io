@@ -6,6 +6,7 @@ description: Цикл постов 2016 года об обработке фот�
 order_no: 1
 recommendations: false
 icon: linux
+small: true
 ---
 ## Содержание
 

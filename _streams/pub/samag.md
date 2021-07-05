@@ -6,6 +6,7 @@ description: Публикации в журнале «Системный адм�
 order_no: 1
 recommendations: false
 icon: university
+small: true
 ---
 {% include nova/image.html place="right" width=293 src="/assets/img/samag.jpg" link="http://samag.ru/" %}
 
