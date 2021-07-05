@@ -5,7 +5,7 @@
     <ul>
       {% if page.categories.size > 0 %}
         {% assign src = page.categories %}
-      {% elsif page.category_id and page.category_id != 'about' %}
+      {% elsif page.category_id and page.category_id != 'about' and page.category_id != 'home' %}
         {%- capture lst -%}{%- include nova/bread.html item=page -%}{%- endcapture -%}
         {% assign src = lst | split: '///' %}
       {% else %}
@@ -20,3 +20,6 @@
     </ul>
   </li>
 </ul>
+{% comment %}
+  TODO: добавить ссылку на «Избранное» для всех текстов
+{%  endcomment %}
