@@ -10,7 +10,7 @@ recommend: true
 ---
 [Оригинал этой статьи опубликован в журнале «Системный администратор» №1-2 (146-147) за февраль 2015][samag].
 
-{% include nova/image.html place="right" width=158 src="/assets/img/2016-03/samag146-147.jpg" link="http://samag.ru/archive/article/2874" style="margin-bottom:0px;" %}
+{% include image.liquid place="right" width=158 src="/assets/img/2016-03/samag146-147.jpg" link="http://samag.ru/archive/article/2874" style="margin-bottom:0px;" %}
 
 <div class="note">
 

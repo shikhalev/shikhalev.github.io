@@ -15,7 +15,7 @@ permalink: /admin/last-comments.json
   {%- assign comments = comments | sort: 'date' | reverse -%}
   {%- for comment in comments limit:site.comments_json_limit -%}
   {%- capture content -%}
-    {%- include nova/comment.html comment=comment expand=false -%}
+    {%- include nova/comments/item.liquid comment=comment expand=false -%}
   {%- endcapture -%}
   {"content": {{- content | jsonify -}}
    ,"slug": {{- comment.slug | jsonify -}}

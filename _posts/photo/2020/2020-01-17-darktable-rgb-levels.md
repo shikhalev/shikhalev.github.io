@@ -16,7 +16,7 @@ image: /assets/img/2020-01/rgb/RGB.png
 режима), но с возможностью работы по отдельным каналам красного, зеленого и синего. Что это
 дает на практике, сейчас и рассмотрим.
 
-{% include nova/image.html place="center" width=800 src="/assets/img/2020-01/rgb/RGB.png" title="Панели модуля «Уровни RGB»" %}
+{% include image.liquid place="center" width=800 src="/assets/img/2020-01/rgb/RGB.png" title="Панели модуля «Уровни RGB»" %}
 
 <!--more-->
 
@@ -24,7 +24,7 @@ image: /assets/img/2020-01/rgb/RGB.png
 сквозь которые просвечивает черте-что... Вот так она выглядит при проявке по умолчанию
 [с моими обычными предустановками][quickstart]:
 
-{% include nova/image.html place="center" width=800 src="/assets/img/2020-01/rgb/default.jpg" title="Фотография с обычными предустановками" %}
+{% include image.liquid place="center" width=800 src="/assets/img/2020-01/rgb/default.jpg" title="Фотография с обычными предустановками" %}
 
 Что характерно, [настройка сохранения цветов в модуле базовой кривой][basecurve] не влияет на картинку
 *совсем*, а полное отключение этого модуля не влияет *почти*. В любом случае мы получаем
@@ -35,12 +35,12 @@ image: /assets/img/2020-01/rgb/RGB.png
 посредством «Тональной кривой[^foot-tonecurve][^foot-tonecurve-ru]»,
 выбрав предустановку «Сжатие контраста»:
 
-{% include nova/image.html place="center" width=800 src="/assets/img/2020-01/rgb/contrast.jpg" title="Фотография со сжатием контраста" %}
+{% include image.liquid place="center" width=800 src="/assets/img/2020-01/rgb/contrast.jpg" title="Фотография со сжатием контраста" %}
 
 Затем в настройках баланса белого[^foot-bb][^foot-bb-ru]
 вместо профиля камеры выберем вариант «Пипетка» и область всей картинки (или большей части):
 
-{% include nova/image.html place="center" width=800 src="/assets/img/2020-01/rgb/bb.jpg" title="Фотография с исправленным балансом белого" %}
+{% include image.liquid place="center" width=800 src="/assets/img/2020-01/rgb/bb.jpg" title="Фотография с исправленным балансом белого" %}
 
 В целом, уже неплохо.
 
@@ -48,7 +48,7 @@ image: /assets/img/2020-01/rgb/RGB.png
 и «Тональную кривую», это важно*. Выберем сверху режим «RGB (независимые)» и в каждом канале
 потыкаем кнопку «Авто» (просто автоматического режима, как я уже сказал, тут не предусмотрено):
 
-{% include nova/image.html place="center" width=800 src="/assets/img/2020-01/rgb/levels.jpg" title="Фотография после применения модуля «Уровни RGB»" %}
+{% include image.liquid place="center" width=800 src="/assets/img/2020-01/rgb/levels.jpg" title="Фотография после применения модуля «Уровни RGB»" %}
 
 Удивительным образом мы получили более чистую и отчетливую картинку, чем в предыдущем
 случае (хотя и предыдущую, скорее всего, можно было бы довести до такого же,

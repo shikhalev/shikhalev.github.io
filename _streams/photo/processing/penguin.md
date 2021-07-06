@@ -10,7 +10,7 @@ small: true
 ---
 ## Содержание
 
-{% include nova/image.html place="center" width=800 src="/assets/img/2016-06/p-00/peng.jpg" caption="Картинка взята с WikiMedia Commons"
+{% include image.liquid place="center" width=800 src="/assets/img/2016-06/p-00/peng.jpg" caption="Картинка взята с WikiMedia Commons"
   link="https://commons.wikimedia.org/wiki/File:Penguin_in_Antarctica_jumping_out_of_the_water.jpg" %}
 
 Пожалуй, теперь, когда этот цикл постов немного устарел, его можно считать законченным. Он остается вполне полезным,

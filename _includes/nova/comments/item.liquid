@@ -24,7 +24,7 @@
     {%- for cc in include.source -%}
       {%- if cc[1].parent_id == include.comment.comment_id -%}
         {%- assign sub = cc[1] -%}
-        {%- include nova/comment.html comment=sub source=include.source -%}
+        {%- include nova/comments/item.liquid comment=sub source=include.source -%}
       {%- endif -%}
     {%- endfor -%}
   {%- endif -%}

@@ -9,7 +9,7 @@ recommend: true
 ---
 [Оригинал этой статьи опубликован в журнале «Системный администратор» №12 (145) за декабрь 2014][samag].
 
-{% include nova/image.html place="right" width=158 link="http://samag.ru/archive/article/2842" src="/assets/img/2016-01/samag-145.jpg" %}
+{% include image.liquid place="right" width=158 link="http://samag.ru/archive/article/2842" src="/assets/img/2016-01/samag-145.jpg" %}
 
 <div class="note">
 **Добавление собственных абстракций в объектную модель — это просто. И интересно.**

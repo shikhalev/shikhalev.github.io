@@ -10,7 +10,7 @@ tags:
 image: /assets/img/2021-03/resize/screen/source.png
 recommend: true
 ---
-{% include nova/image.html place="right" width=320 src="/assets/img/2021-03/resize/screen/source.png" title="Исходный скриншот диалога изменения размеров в GIMP" %}
+{% include image.liquid place="right" width=320 src="/assets/img/2021-03/resize/screen/source.png" title="Исходный скриншот диалога изменения размеров в GIMP" %}
 
 Недавно мне задали такой вопрос:
 
@@ -46,7 +46,7 @@ recommend: true
 
 Вот такой скриншот диалогового окна собственно GIMP и собственно изменения размеров. В оригинальном разрешении:
 
-{% include nova/image.html place="center" width=415 src="/assets/img/2021-03/resize/screen/source.png" title="Исходный скриншот диалога изменения размеров в GIMP" %}
+{% include image.liquid place="center" width=415 src="/assets/img/2021-03/resize/screen/source.png" title="Исходный скриншот диалога изменения размеров в GIMP" %}
 
 Ширина в оригинале — 415px. Ужимать будем до 320px, то есть, если очень грубо, на 20%. Точно такая же картинка вверху этого поста,
 но сделанная движком браузера автоматически, что там, какие алгоритмы использованы — то мне неведомо.
@@ -69,9 +69,9 @@ GIMP предлагает пять вариантов интерполяции:
 Пять вариантов достаточно мало, для того, чтобы все попробовать. Что же мы получим?
 
 <div class="image-box">
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/gimp-none.png" caption="«Нет»" %}
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/gimp-linear.png" caption="«Линейная»" %}
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/gimp-cubic.png" caption="«Кубическая»" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/gimp-none.png" caption="«Нет»" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/gimp-linear.png" caption="«Линейная»" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/gimp-cubic.png" caption="«Кубическая»" %}
 </div>
 
 Разницу между линейной и кубической уловить трудно, а последние два варианта — с гало и без — вообще от кубической на глаз не отличаются,
@@ -141,51 +141,51 @@ done;
 Итого у меня получилось 65(!) вариантов, все я, естественно, приводить не буду. Начнем с умолчательных:
 
 <div class="image-box">
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/0-resize-default.png" caption="-resize" %}
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/0-distort-default.png" caption="-distort Resize" %}
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/0-resize-adaptive.png" caption="-adaptive-resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/0-resize-default.png" caption="-resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/0-distort-default.png" caption="-distort Resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/0-resize-adaptive.png" caption="-adaptive-resize" %}
 </div>
 
 Далее проверим алгоритмы, которые должны соответствовать GIMP'овским (на самом деле не совсем).
 
 <div class="image-box">
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Point.png" caption="-filter Point -resize" %}
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Point.png" caption="-filter Point -distort Resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Point.png" caption="-filter Point -resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Point.png" caption="-filter Point -distort Resize" %}
 </div>
 
 `-filter Point` — это метод ближайшего соседа, как из него `-distort` получил нечто приемлемое — мне не очень понятно.
 
 <div class="image-box">
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Triangle.png" caption="-filter Triangle -resize" %}
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Triangle.png" caption="-filter Triangle -distort Resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Triangle.png" caption="-filter Triangle -resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Triangle.png" caption="-filter Triangle -distort Resize" %}
 
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Cubic.png" caption="-filter Cubic -resize" %}
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Cubic.png" caption="-filter Cubic -distort Resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Cubic.png" caption="-filter Cubic -resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Cubic.png" caption="-filter Cubic -distort Resize" %}
 
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Lanczos2.png" caption="-filter Lanczos2 -resize" %}
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Lanczos2.png" caption="-filter Lanczos2 -distort Resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Lanczos2.png" caption="-filter Lanczos2 -resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Lanczos2.png" caption="-filter Lanczos2 -distort Resize" %}
 
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Lanczos2Sharp.png" caption="-filter Lanczos2Sharp -resize" %}
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Lanczos2Sharp.png" caption="-filter Lanczos2Sharp -distort Resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Lanczos2Sharp.png" caption="-filter Lanczos2Sharp -resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Lanczos2Sharp.png" caption="-filter Lanczos2Sharp -distort Resize" %}
 </div>
 
 Курьеза ради, и чтобы не создалось впечатления, что `-distort` всегда лучше, чем `-resize`, приведу варианты
 с фильтром `Sinc`:
 
 <div class="image-box">
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Sinc.png" caption="-filter Sinc -resize" %}
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Sinc.png" caption="-filter Sinc -distort Resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Sinc.png" caption="-filter Sinc -resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Sinc.png" caption="-filter Sinc -distort Resize" %}
 </div>
 
 Завершу этот парад почти одинаковых картинок еще двумя фильтрами, которые показали приемлемые результаты
 по размеру выходного файла.
 
 <div class="image-box">
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Box.png" caption="-filter Box -resize" %}
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Box.png" caption="-filter Box -distort Resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Box.png" caption="-filter Box -resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Box.png" caption="-filter Box -distort Resize" %}
 
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Hermite.png" caption="-filter Hermite -resize" %}
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Hermite.png" caption="-filter Hermite -distort Resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/1-resize-Hermite.png" caption="-filter Hermite -resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/screen/2-distort-Hermite.png" caption="-filter Hermite -distort Resize" %}
 </div>
 
 Теперь о размерах выходных файлов подробно (напомню, что исходный файл был 34K/25K):
@@ -217,7 +217,7 @@ done;
 2. Но лучше вообще без этого обойтись, например, в вебе просто задав размеры у тега `IMG` и отдав масштабирование на откуп браузеру —
    трафик так можно сэкономить заметно.
 
-{% include nova/image.html place="center" width=320 src="/assets/img/2021-03/resize/screen/source.png" caption="Исходная картинка, отмасштабированная браузером" title="Исходная картинка" %}
+{% include image.liquid place="center" width=320 src="/assets/img/2021-03/resize/screen/source.png" caption="Исходная картинка, отмасштабированная браузером" title="Исходная картинка" %}
 
 Это все, конечно, оносится только к случаям, подобным рассмотренному — когда размеры картинки ужимаются процентов на 20, чтобы,
 скажем, вписаться в верстку. При сильном уменьшении про читаемость можно просто забыть и использовать простейшие методы, дающие
@@ -228,20 +228,20 @@ done;
 
 Здесь я решил поиздеваться над иконкой Darktable, в оригинале — 64x64px.
 
-{% include nova/image.html place="center" width=64 src="/assets/img/2021-03/resize/icon/darktable.png" alt="Иконка Darktable" %}
+{% include image.liquid place="center" width=64 src="/assets/img/2021-03/resize/icon/darktable.png" alt="Иконка Darktable" %}
 
 Будем увеличивать ее в 5 раз по линейным размерам, т.е. в 25 по площади — до 320x320px. Вот так это может сделать браузер:
 
-{% include nova/image.html place="center" width=320 src="/assets/img/2021-03/resize/icon/darktable.png" alt="Иконка Darktable" img_style="width:320px;height:320px;" %}
+{% include image.liquid place="center" width=320 src="/assets/img/2021-03/resize/icon/darktable.png" alt="Иконка Darktable" img_style="width:320px;height:320px;" %}
 
 ### GIMP
 
 А вот что нам предлагает GIMP:
 
 <div class="image-box">
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/icon/ico-gimp-none.png" caption="«Нет»" %}
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/icon/ico-gimp-linear.png" caption="«Линейная»" %}
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/icon/ico-gimp-wo-galo.png" caption="«Без гало»" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/icon/ico-gimp-none.png" caption="«Нет»" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/icon/ico-gimp-linear.png" caption="«Линейная»" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/icon/ico-gimp-wo-galo.png" caption="«Без гало»" %}
 </div>
 
 В режиме «Нет интерполяции» мы ожидаемо видим увеличение каждого пикселя, а в режиме «Линейная» — какое-то мыло. «Без гало»
@@ -270,9 +270,9 @@ done;
 Поэтому ограничусь только тремя примерами:
 
 <div class="image-box">
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/icon/0-resize-adaptive.png" caption="-adaptive-resize" %}
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/icon/2-distort-Parzen.png" caption="-filter Parzen -distort Resize" %}
-{% include nova/image.html place="inner" width=320 src="/assets/img/2021-03/resize/icon/2-distort-Sinc.png" caption="-filter Sinc -distort Resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/icon/0-resize-adaptive.png" caption="-adaptive-resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/icon/2-distort-Parzen.png" caption="-filter Parzen -distort Resize" %}
+{% include image.liquid place="inner" width=320 src="/assets/img/2021-03/resize/icon/2-distort-Sinc.png" caption="-filter Sinc -distort Resize" %}
 </div>
 
 Третий пример, если кто не догадался, вставлен забавы ради.

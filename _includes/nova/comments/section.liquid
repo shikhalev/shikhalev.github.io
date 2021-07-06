@@ -10,13 +10,13 @@
       {%- for comment in comments -%}
         {%- assign c = comment[1] -%}
         {%- if c.parent_id == '' and c.comment_id != '' -%}
-          {%- include nova/comment.html comment=c source=comments -%}
+          {%- include nova/comments/item.liquid comment=c source=comments -%}
         {%- endif -%}
       {%- endfor -%}
 
     {%- endif -%}
   </section>
 
-  {%- include nova/add-comment.html -%}
+  {%- include nova/comments/form.liquid -%}
 
 {%- endif -%}

@@ -8,7 +8,7 @@ tags:
   - верстка
 image: /assets/img/2021-06/refactoring.png
 ---
-{% include nova/image.html place="right" width=320 src="/assets/img/2021-06/refactoring.png" %}
+{% include image.liquid place="right" width=320 src="/assets/img/2021-06/refactoring.png" %}
 
 Ну, что ж. Общее представление, как должен выглядеть этот сайт у меня сложилось (внешне — примерно как и сейчас).
 Есть большое желание привести в порядок внутреннее устройство и исправить ряд недочетов, видимых снаружи.

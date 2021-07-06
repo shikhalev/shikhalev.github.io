@@ -8,7 +8,7 @@ recommendations: false
 icon: university
 small: true
 ---
-{% include nova/image.html place="right" width=293 src="/assets/img/samag.jpg" link="http://samag.ru/" %}
+{% include image.liquid place="right" width=293 src="/assets/img/samag.jpg" link="http://samag.ru/" %}
 
 > [по истечении одного года с момента первой публикации автор имеет право опубликовать свой материал в другом месте без предварительного письменного согласия редакции, с обязательной ссылкой на журнал][rules]
 

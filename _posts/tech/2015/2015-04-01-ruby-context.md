@@ -10,7 +10,7 @@ recommend: true
 ---
 [Оригинал этой статьи опубликован в журнале «Системный администратор» №1–2 (134–135) за январь–февраль 2014][samag].
 
-{% include nova/image.html place="right" width=158 src="/assets/img/2015-04/134-5.gif" link="http://samag.ru/archive/article/2622" %}
+{% include image.liquid place="right" width=158 src="/assets/img/2015-04/134-5.gif" link="http://samag.ru/archive/article/2622" %}
 
 <div class="note">
 **Что стоит за конкретным идентификатором в данном окружении**

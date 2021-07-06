@@ -11,7 +11,7 @@ recommend: true
 ---
 [Оригинал этой статьи опубликован в журнале «Системный администратор» №3 (136) за март 2014][samag].
 
-{% include nova/image.html place="right" width=158 src="/assets/img/2015-04/136.gif" link="http://samag.ru/archive/article/2645" style="padding-bottom:-5px;" %}
+{% include image.liquid place="right" width=158 src="/assets/img/2015-04/136.gif" link="http://samag.ru/archive/article/2645" style="padding-bottom:-5px;" %}
 
 <div class="note">
 **В статье рассматриваются основные средства работы с потоками (threads) и процессами в языке и стандартной библиотеке Ruby**

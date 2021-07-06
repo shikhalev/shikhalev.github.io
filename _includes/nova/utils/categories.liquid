@@ -8,7 +8,7 @@
   {%- assign cats = item.categories -%}
 {%- elsif item.category_id -%}
   {%- capture list -%}
-    {%- include nova/bread.html item=page -%}
+    {%- include nova/utils/chain.liquid item=page -%}
   {%- endcapture -%}
   {%- assign cats = list | strip | split: '///' -%}
 {%- endif -%}

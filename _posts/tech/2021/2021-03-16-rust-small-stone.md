@@ -7,7 +7,7 @@ tags:
 image: /assets/img/2021-03/rust_logo.png
 recommend: true
 ---
-{% include nova/image.html place="right" width=256 src="/assets/img/ico/rust.png" alt="Логотип Rust" class="logo" %}
+{% include image.liquid place="right" width=256 src="/assets/img/ico/rust.png" alt="Логотип Rust" class="logo" %}
 
 Обнаружил тут некоторый подводный камень в стандартной библиотеке Rust. Багом это назвать, конечно, нельзя,
 просто такой момент, где можно по собственной невнимательности наступить на грабли и не сразу это заметить, что

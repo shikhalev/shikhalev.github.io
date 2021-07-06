@@ -11,7 +11,7 @@
         {{- sub.title | escape -}}
         {%- if site.categories[sub.category_id] and site.categories[sub.category_id].size > 0 -%} ({{- site.categories[sub.category_id].size -}}){%- endif -%}
       </a>
-      {%- include nova/subcategories.html category_id=sub.category_id -%}
+      {%- include nova/stream/subcategories.liquid category_id=sub.category_id -%}
     </li>
   {%- if forloop.last -%}
     </ul>

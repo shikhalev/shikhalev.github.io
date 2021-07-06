@@ -11,7 +11,7 @@ tags:
 description: Встраиваемый кардридер с AliExpress
 image: /assets/img/2020-12/cardreader.jpg
 ---
-{% include nova/image.html place="right" width=320 src="/assets/img/2020-12/cardreader.jpg" caption="Иллюстрация честно потырена у продавца" %}
+{% include image.liquid place="right" width=320 src="/assets/img/2020-12/cardreader.jpg" caption="Иллюстрация честно потырена у продавца" %}
 
 Приобрел на Али очередную железку, сегодня руки дошли проверить.
 

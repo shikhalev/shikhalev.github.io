@@ -69,7 +69,7 @@ description: true
     <span class="meta">{{ item.date | date: "%Y.%m.%d" }} |</span>
     <a href="{{ item.url | relative_url }}" title="{{ item.description }}" class="post-title{{- h_cls -}}">{{ item.title }}</a>
   </p>
-  <p class="meta">{% include nova/categories-only.html item=item %}</p>
+  <p class="meta">{% include nova/utils/categories.liquid item=item %}</p>
 {% endfor %}
 {% if month_open %}
   </div>

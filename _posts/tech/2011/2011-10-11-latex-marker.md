@@ -28,7 +28,7 @@ recommend: true
 
 Результат выглядит примерно так (обратите внимание на знаки препинания):
 
-{% include nova/image.html place="center" width=384 src="/assets/img/2011-10/marker.png" link=false %}
+{% include image.liquid place="center" width=384 src="/assets/img/2011-10/marker.png" link=false %}
 
 Волшебное слово `\strut` создает бокс нулевой ширины и максимальной для текущего шрифта выноски вверх и вниз. Соответственно,
 действует как распорка и передает свою высоту окружающему боксу. Можно определить себе команду, например, такую:

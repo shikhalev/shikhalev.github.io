@@ -2,7 +2,7 @@
 
 <form method="POST" action="{{ site.staticman_url }}">
 
-  <input name="options[redirect]" type="hidden" value="{{page.url | absolute_url}}#comments">
+  <input name="options[redirect]" type="hidden" value="{{ page.url | absolute_url }}#comments">
   <input id="slug" name="options[slug]" type="hidden" value="{{ page_id }}">
   <input name="fields[slug]" type="hidden" value="{{ page_id}}">
   <input id="comment_id" name="fields[comment_id]" type="hidden" value="">

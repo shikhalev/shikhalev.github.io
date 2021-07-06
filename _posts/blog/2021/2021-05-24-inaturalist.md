@@ -16,7 +16,7 @@ image: /assets/img/2021-05/inat/1414.png
 recommend: true
 date: 2021-05-24 21:12 +0500
 ---
-{% include nova/image.html place="right" width=320 src="/assets/img/2021-05/inat/1414.png" alt="Логотип iNaturalist"
+{% include image.liquid place="right" width=320 src="/assets/img/2021-05/inat/1414.png" alt="Логотип iNaturalist"
   title="iNaturalist.org" link="https://www.inaturalist.org/" class="logo" %}
 
 Я уже неоднократно упоминал[^birds][^bshot][^city] о сайте
@@ -214,7 +214,7 @@ date: 2021-05-24 21:12 +0500
 {:#seek}
 ## Seek (приложение)
 
-{% include nova/image.html place="right" width=320 src="/assets/img/2021-05/inat/2559.png" alt="Логотип Seek" title="Seek by iNaturalist"
+{% include image.liquid place="right" width=320 src="/assets/img/2021-05/inat/2559.png" alt="Логотип Seek" title="Seek by iNaturalist"
   link="https://www.inaturalist.org/pages/seek_app" class="logo" %}
 
 Итак. Для анонимов и тех, кто не желает делиться своими драгоценными наблюдениями ни с кем (а также для детей до 13 лет[^child]), имеется

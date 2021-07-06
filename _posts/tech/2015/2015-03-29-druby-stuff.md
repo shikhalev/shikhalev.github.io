@@ -8,7 +8,7 @@ tags:
   - грабли
 image: /assets/img/2015-03/red_stones.jpg
 ---
-{% include nova/image.html place="right" width=320 src="/assets/img/2015-03/red_stones.jpg" %}
+{% include image.liquid place="right" width=320 src="/assets/img/2015-03/red_stones.jpg" %}
 
 #### DRbObject не является DRbUndumped
 

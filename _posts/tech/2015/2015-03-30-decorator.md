@@ -9,7 +9,7 @@ recommend: true
 ---
 [Оригинал этой статьи опубликован в журнале «Системный администратор» №9 (130) за сентябрь 2013][samag].
 
-{% include nova/image.html place="right" width=158 src="/assets/img/2015-04/samag130.gif" link="http://samag.ru/archive/article/2520" %}
+{% include image.liquid place="right" width=158 src="/assets/img/2015-04/samag130.gif" link="http://samag.ru/archive/article/2520" %}
 
 <div class="note">
 Как известно, в языке Python существует красивый механизм декораторов, расширяющих функционал объекта без изменения

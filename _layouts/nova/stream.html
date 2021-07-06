@@ -5,7 +5,7 @@ toc: true
 description: true
 ---
 {% capture subcategories %}
-  {%- include nova/subcategories.html category_id=page.category_id -%}
+  {%- include nova/stream/subcategories.liquid category_id=page.category_id -%}
 {% endcapture %}
 {% assign subcategories_flag = subcategories | strip %}
 {% if subcategories_flag != '' %}
@@ -15,6 +15,6 @@ description: true
 
 {{ content }}
 
-{% include nova/random.html %}
+{% include nova/utils/recommendations.liquid %}
 
-{% include nova/stream.html %}
+{% include nova/stream/timeline.liquid %}

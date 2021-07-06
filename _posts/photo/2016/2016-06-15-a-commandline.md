@@ -12,7 +12,7 @@ tags:
 description: Работа с фотографиями из командной строки
 image: /assets/img/2016-06/p-02/kdpv.png
 ---
-{% include nova/image.html place="right" width=320 src="/assets/img/2016-06/p-02/kdpv.png" link="/assets/img/2016-06/p-02/kdpv.jpg" class="logo"
+{% include image.liquid place="right" width=320 src="/assets/img/2016-06/p-02/kdpv.png" link="/assets/img/2016-06/p-02/kdpv.jpg" class="logo"
    title="Картинка стырена где-то в интернетах, найдена по ключевому слову „imagemagick“" %}
 
 Коротко о главном: главный обработчик изображений из командной строки, равно как и в пакетном режиме, у нас
@@ -123,7 +123,7 @@ convert \( -resize "$OUTPUT_SIZE" "$source" \) -gravity southeast "$stamp_png" -
 
 В итоге мы получаем возможность в пакетном режиме получать такое:
 
-{% include nova/image.html place="center" width=800 src="/assets/img/2016-06/p-02/IMG_8638.jpg" %}
+{% include image.liquid place="center" width=800 src="/assets/img/2016-06/p-02/IMG_8638.jpg" %}
 
 Тонирование и кадрирование я до того сделал в Darktable, см. [предыдущий пост][myraw]. Почему-то ImageMagick на моих TIFF, полученных
 из Darktable, выдает кучу предупреждений типа «Unknown field...», но на результат они не влияют.

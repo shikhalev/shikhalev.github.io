@@ -33,14 +33,14 @@
 <header id="site-header"><p class="logo"><a href="/">{{- site.title -}}</a></p></header>
 
 <nav id="navy">
-  {%- include nova/navy.html -%}
+  {%- include nova/aside/navy.liquid -%}
 </nav>
 
 <main id="main">
 
-{%- include nova/feed.html -%}
+{%- include nova/utils/feed_link.liquid -%}
 
-{%- include nova/categories.html -%}
+{%- include nova/utils/categories_pane.html -%}
 
 {%- if layout.itemtype or page.itemtype -%}
   <article class="layout-{{- page.layout | split: '/' | last -}}" itemscope itemtype="{{- page.itemtype | default: layout.itemtype -}}">
@@ -57,7 +57,7 @@
 {%- endif -%}
 
 {%- if layout.sharing -%}
-  {%- include nova/share.html -%}
+  {%- include nova/utils/share_buttons.liquid -%}
 {%- endif -%}
 
 {%- if layout.meta -%}
@@ -74,7 +74,7 @@
 
 {%- if page.tags and page.tags.size > 0 -%}
   <aside class="tags">
-    {%- include nova/tags.html -%}
+    {%- include nova/utils/tags.liquid -%}
   </aside>
 {%- endif -%}
 </header>
@@ -101,7 +101,7 @@
 {%- endif -%}
 {%- if allow_toc -%}
   {%- capture toc -%}
-  {%- include allejo/jekyll-toc.html html=content sanitize=true item_class="toc-entry" h_max=4 skip_no_ids=true -%}
+  {%- include allejo/jekyll-toc.liquid html=content sanitize=true item_class="toc-entry" h_max=4 skip_no_ids=true -%}
   {%- endcapture -%}
   {%- assign flag = toc | strip -%}
 {%- else -%}
@@ -128,23 +128,23 @@
 </aside>
 
 <aside id="feeds">
-  {%- include nova/feeds.html -%}
+  {%- include nova/aside/feeds.liquid -%}
 </aside>
 
 <aside id="contacts">
-  {%- include nova/contacts.html -%}
+  {%- include nova/aside/contacts.html -%}
 </aside>
 
 {%- if page.hide_last_comments -%}
 <aside id="sidebar" style="border:none;box-shadow:none;"></aside>
 {%- else -%}
 <aside id="sidebar">
-  {%- include nova/side-comments.html -%}
+  {%- include nova/aside/last_comments.liquid -%}
 </aside>
 {%- endif -%}
 
 <footer id="site-footer">
-  {%- include nova/footer.html -%}
+  {%- include nova/footer.liquid -%}
 </footer>
 
 <div id="hl"></div>

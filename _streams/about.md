@@ -7,7 +7,7 @@ icon: id-card
 order_no: 6
 recommendations: all
 ---
-{% include nova/image.html place="right" width=256 src="/assets/img/icon.jpg" title="Я" link=false %}
+{% include image.liquid place="right" width=256 src="/assets/img/icon.jpg" title="Я" link=false %}
 
 ## Био
 

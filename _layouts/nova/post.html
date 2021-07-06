@@ -7,10 +7,10 @@ toc: true
 ---
 {{ content }}
 
-{% include nova/random.html %}
+{% include nova/utils/recommendations.liquid %}
 
-{% include nova/comments.html %}
+{% include nova/comments/section.liquid %}
 
 {% if jekyll.environment == 'development' %}
-  {% include nova/embed.html %}
+  {% include nova/utils/announcement.liquid %}
 {% endif %}

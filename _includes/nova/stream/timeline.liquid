@@ -25,9 +25,9 @@
   <h2 id="last_entries">Последние записи</h2>
   {%- for item in source limit: limit -%}
     <section class="stream-item stream-item-{{ item.layout | split: '/' | last }}">
-      {% include nova/share.html item=item %}
+      {% include nova/utils/share_buttons.liquid item=item %}
 
-      <p class="meta">{% include nova/categories-only.html item=item %}</p>
+      <p class="meta">{% include nova/utils/categories.liquid item=item %}</p>
       <p class="meta">{{ item.date | date: site.date_format }} • {{ item.author | default: site.author }}</p>
 
       {%- if jekyll.environment == 'development' and item.recommend -%}
@@ -45,12 +45,12 @@
       {%- endif -%}
 
       {%- if item.tags and item.tags.size > 0 -%}
-        <p class="meta">{%- include nova/tags.html item=item -%}</p>
+        <p class="meta">{%- include nova/utils/tags.liquid item=item -%}</p>
       {%- endif -%}
 
       {%- if item.comments != false -%}
         {%- assign slug = item.url | slugify -%}
-        <p class="meta">{%- include nova/stream-comments.html slug=slug url=item.url -%}</p>
+        <p class="meta">{%- include nova/stream/comment_count.liquid slug=slug url=item.url -%}</p>
       {%- endif -%}
 
     </section>

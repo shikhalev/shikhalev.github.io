@@ -4,7 +4,7 @@
   {% capture embed %}
       <section style="display: table; margin-top: 10px; border: 1px solid #c5d3da; box-shadow: 1px 1px 3px #c5d3da; padding: 10px; color: #444; font-family: 'PT Sans', Arial, Helvetica, sans-serif;font-size:16px;">
         <header style="padding: 5px; border: 1px solid #c5d3da; background-color: #edf2f4; font-size: 90%; color: #3e5662;">
-          <p style="margin:0px;">Рубрики: {% include nova/categories-only.html item=page %}</p>
+          <p style="margin:0px;">Рубрики: {% include nova/utils/categories.liquid item=page %}</p>
           <p style="margin:0px;">{{ page.date | date: site.date_format }} • {{ page.author | default: site.author }}</p>
         </header>
 
@@ -32,7 +32,7 @@
         </p>
         {%- if page.tags and page.tags.size > 0 -%}
           <footer style="padding: 5px; border: 1px solid #c5d3da; background-color: #edf2f4; font-size: 90%; color: #3e5662;clear: both;">
-            <p style="margin:0px;">Теги: {% include nova/tags.html item=page %}</p>
+            <p style="margin:0px;">Теги: {% include nova/utils/tags.liquid item=page %}</p>
           </footer>
         {%- endif -%}
       </section>
