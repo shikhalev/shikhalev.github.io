@@ -247,6 +247,7 @@ $img-icons: (
   "darktable": url(/assets/img/ico/darktable.png),
   "hugin": url(/assets/img/ico/hugin.svg),
   "luminance-hdr": url(/assets/img/ico/luminance-hdr.png),
+  "imagemagick": url(/assets/img/ico/imagemagick.png),
 );
 
 @each $name, $url in $img-icons {
