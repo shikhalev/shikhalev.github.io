@@ -135,8 +135,13 @@
   {%- include nova/contacts.html -%}
 </aside>
 
-<!-- пока не использую, дальше видно будет -->
-<aside id="sidebar"></aside>
+{%- if page.hide_last_comments -%}
+<aside id="sidebar" style="border:none;box-shadow:none;"></aside>
+{%- else -%}
+<aside id="sidebar">
+  {%- include nova/side-comments.html -%}
+</aside>
+{%- endif -%}
 
 <footer id="site-footer">
   {%- include nova/footer.html -%}

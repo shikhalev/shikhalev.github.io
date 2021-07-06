@@ -64,6 +64,10 @@ defaults:
       layout: nova/stream
       image: /assets/img/icon.jpg
       author: Иван Шихалев
+  - scope:
+      path: "_posts/text"
+    values:
+      hide_last_comments: true
 
 header_pages:
   - _streams/tech.md
@@ -99,6 +103,7 @@ exclude:
 # Собственные настройки сайта
 
 comments_json_limit: 20
+comments_side_limit: 3
 category_page_limit: 10
 category_page_maximum: 12
 home_page_limit: 12

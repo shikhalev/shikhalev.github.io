@@ -50,9 +50,8 @@ body {
       "hl header hb     search   hr"
       ".  gads   gads   gads     ."
       ".  main   main   main     ."
-      ".  donate extra  feeds    ."
-      ".  donate extra  contacts ."
-      ".  .      extra  .        ."
+      ".  donate feeds  contacts ."
+      ".  extra  extra  extra    ."
       "fl footer footer footer   fr";
   }
 
@@ -63,9 +62,8 @@ body {
       "header hb     search"
       "gads   gads   gads"
       "main   main   main"
-      "donate extra  feeds"
-      "donate extra  contacts"
-      ".      extra  ."
+      "donate feeds  contacts"
+      "extra  extra  extra"
       "footer footer footer";
   }
 
@@ -78,7 +76,7 @@ body {
       "main   main   main"
       "donate .      feeds"
       "donate .      contacts"
-      ".      .      extra"
+      "extra  extra  extra"
       "footer footer footer";
   }
 
@@ -477,8 +475,47 @@ aside {
   }
 }
 
+#feeds,
+#contacts {
+  @media screen and (max-width: 1149px) and (min-width: 750px) {
+    margin-left: 10px;
+  }
+}
+
 #sidebar {
   grid-area: extra;
+  padding: 10px;
+  font-family: $compact-font-family;
+
+  h4 {
+    margin-bottom: 0px;
+  }
+
+  .comment {
+    border: none;
+    padding: 5px 0px 0px;
+    margin: 10px 0px 0px;
+    border-top: 1px dotted $frame-color-light;
+
+    display: inline-block;
+    break-inside: avoid;
+    page-break-inside: avoid;
+
+    .message {
+      color: $frame-color-semilight;
+      font-size: 90%;
+    }
+  }
+
+  .comments {
+    columns: 1;
+    @media screen and (max-width: 1149px) and (min-width: 750px) {
+      columns: 3;
+    }
+    @media screen and (max-width: 749px) and (min-width: 525px) {
+      columns: 2;
+    }
+  }
 }
 
 #main {
@@ -543,7 +580,8 @@ aside {
 
 #toc,
 #feeds,
-#contacts {
+#contacts,
+#sidebar {
   border: solid $frame-color-light 1px;
   box-shadow: $base-shadow $frame-color-light;
 }

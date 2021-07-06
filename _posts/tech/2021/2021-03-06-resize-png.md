@@ -315,43 +315,12 @@ done;
 * GIMP, честно говоря, удивил бедностью возможностей — уж с десяток алгоритмов могли бы и завезти...
 
 -----
-**PS.** Для удобства оригиналы ссылкой: [скрин][source] и [значок][dt-source]. Желающие могут попробовать поиграть с их размерами
-в разном другом софте, включая фотошоп.
+**PS.** Для удобства оригиналы ссылкой: [скрин][source]{: download="gimp-dialog-screenshot.png"} и [значок][dt-source]{: download="darktable-icon.png"}.
+Желающие могут попробовать поиграть с их размерами в разном другом софте, включая фотошоп.
 
 
 [source]: /assets/img/2021-03/resize/screen/source.png "Исходный скриншот диалога изменения размеров в GIMP"
-
-[sc-gimp-none]: /assets/img/2021-03/resize/screen/gimp-none.png
-[sc-gimp-linear]: /assets/img/2021-03/resize/screen/gimp-linear.png
-[sc-gimp-cubic]: /assets/img/2021-03/resize/screen/gimp-cubic.png
-
-[sc-im-resize-default]: /assets/img/2021-03/resize/screen/0-resize-default.png
-[sc-im-distort-default]: /assets/img/2021-03/resize/screen/0-distort-default.png
-[sc-im-resize-adaptive]: /assets/img/2021-03/resize/screen/0-resize-adaptive.png
-[sc-im-resize-Point]: /assets/img/2021-03/resize/screen/1-resize-Point.png
-[sc-im-distort-Point]: /assets/img/2021-03/resize/screen/2-distort-Triangle.png
-[sc-im-resize-Triangle]: /assets/img/2021-03/resize/screen/1-resize-Triangle.png
-[sc-im-distort-Triangle]: /assets/img/2021-03/resize/screen/2-distort-Point.png
-[sc-im-resize-Cubic]: /assets/img/2021-03/resize/screen/1-resize-Cubic.png
-[sc-im-distort-Cubic]: /assets/img/2021-03/resize/screen/2-distort-Cubic.png
-[sc-im-resize-Lanczos2]: /assets/img/2021-03/resize/screen/1-resize-Lanczos2.png
-[sc-im-distort-Lanczos2]: /assets/img/2021-03/resize/screen/2-distort-Lanczos2.png
-[sc-im-resize-Lanczos2Sharp]: /assets/img/2021-03/resize/screen/1-resize-Lanczos2Sharp.png
-[sc-im-distort-Lanczos2Sharp]: /assets/img/2021-03/resize/screen/2-distort-Lanczos2Sharp.png
-[sc-im-resize-Sinc]: /assets/img/2021-03/resize/screen/1-resize-Sinc.png
-[sc-im-distort-Sinc]: /assets/img/2021-03/resize/screen/2-distort-Sinc.png
-[sc-im-resize-Box]: /assets/img/2021-03/resize/screen/1-resize-Box.png
-[sc-im-distort-Box]: /assets/img/2021-03/resize/screen/2-distort-Box.png
-[sc-im-resize-Hermite]: /assets/img/2021-03/resize/screen/1-resize-Hermite.png
-[sc-im-distort-Hermite]: /assets/img/2021-03/resize/screen/2-distort-Hermite.png
-
 [dt-source]: /assets/img/2021-03/resize/icon/darktable.png
-[dt-gimp-none]: /assets/img/2021-03/resize/icon/ico-gimp-none.png
-[dt-gimp-linear]: /assets/img/2021-03/resize/icon/ico-gimp-linear.png
-[dt-gimp-wo-galo]: /assets/img/2021-03/resize/icon/ico-gimp-wo-galo.png
-[dt-im-resize-adaptive]: /assets/img/2021-03/resize/icon/0-resize-adaptive.png
-[dt-im-distort-Parzen]: /assets/img/2021-03/resize/icon/2-distort-Parzen.png
-[dt-im-distort-Sinc]: /assets/img/2021-03/resize/icon/2-distort-Sinc.png
 
 [habr]: https://habr.com/ru/post/243285/ "Ликбез: методы ресайза изображений"
 [resizing]: https://legacy.imagemagick.org/Usage/resize/
