@@ -250,6 +250,7 @@ $img-icons: (
   "imagemagick": url(/assets/img/ico/imagemagick.png),
   "staticman": url(/assets/img/ico/staticman.svg),
   "heroku": url(/assets/img/ico/heroku.svg),
+  "gitlab": url(/assets/img/ico/gitlab.svg),
 );
 
 @each $name, $url in $img-icons {
