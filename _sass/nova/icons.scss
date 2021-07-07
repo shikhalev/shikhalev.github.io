@@ -248,6 +248,8 @@ $img-icons: (
   "hugin": url(/assets/img/ico/hugin.svg),
   "luminance-hdr": url(/assets/img/ico/luminance-hdr.png),
   "imagemagick": url(/assets/img/ico/imagemagick.png),
+  "staticman": url(/assets/img/ico/staticman.svg),
+  "heroku": url(/assets/img/ico/heroku.svg),
 );
 
 @each $name, $url in $img-icons {
@@ -275,5 +277,11 @@ $img-icons: (
 .img-icon-jekyll {
   &::before {
     width: 0.5em;
+  }
+}
+
+.img-icon-staticman {
+  &::before {
+    width: 1.5em;
   }
 }
