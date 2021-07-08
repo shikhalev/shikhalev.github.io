@@ -396,6 +396,11 @@ aside {
   grid-area: donate;
   place-self: center;
   margin-bottom: -8px;
+
+  &:target {
+    border-color: $highlight-color;
+    box-shadow: $base-shadow $highlight-color;
+  }
 }
 
 #ga {
@@ -584,6 +589,11 @@ aside {
 #sidebar {
   border: solid $frame-color-light 1px;
   box-shadow: $base-shadow $frame-color-light;
+
+  &:target {
+    border-color: $highlight-color;
+    box-shadow: $base-shadow $highlight-color;
+  }
 }
 
 @media print {

@@ -3,6 +3,6 @@
   {%- include nova/utils/chain.liquid item=parent -%}
   ///
 {%- endif -%}
-{% if include.item.category_id and include.item.category_id != 'blank' and include.item.category_id != 'home' -%}
+{%- if include.item.category_id and include.item.category_id != 'blank' and include.item.category_id != 'home' -%}
   {{- include.item.category_id -}}
 {%- endif -%}

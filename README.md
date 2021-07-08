@@ -17,3 +17,7 @@ permalink: /README
 [cc-by-sa-shield]: https://img.shields.io/badge/license-CC%20BY--SA%204.0-yellow
 [mit]: https://opensource.org/licenses/MIT
 [mit-shield]: https://img.shields.io/badge/license-MIT-green
+
+## TODO
+
+[ ] Подумать над размещением оглавления на узких экранах.
