@@ -251,6 +251,18 @@ $img-icons: (
   "staticman": url(/assets/img/ico/staticman.svg),
   "heroku": url(/assets/img/ico/heroku.svg),
   "gitlab": url(/assets/img/ico/gitlab.svg),
+  "git": url(/assets/img/ico/git.svg),
+  "html5": url(/assets/img/ico/html5.svg),
+  "css3": url(/assets/img/ico/css3.svg),
+  "javascript": url(/assets/img/ico/javascript.svg),
+  "paratype": url(/assets/img/ico/paratype.png),
+  "fa": url(/assets/img/ico/fontawesome.svg),
+  "gf": url(/assets/img/ico/google-fonts.svg),
+  "yoomoney": url(/assets/img/ico/yoomoney.png),
+  "gce": url(/assets/img/ico/gce.png),
+  "analytics": url(/assets/img/ico/analytics.svg),
+  "metrica": url(/assets/img/ico/metrica.png),
+  "liquid": url(/assets/img/ico/liquid.png),
 );
 
 @each $name, $url in $img-icons {
@@ -284,5 +296,11 @@ $img-icons: (
 .img-icon-staticman {
   &::before {
     width: 1.5em;
+  }
+}
+
+.img-icon-javascript {
+  &::before {
+    vertical-align: -7%;
   }
 }

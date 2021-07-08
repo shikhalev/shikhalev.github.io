@@ -139,3 +139,41 @@ p img {
     text-decoration: underline;
   }
 }
+
+.announcement {
+  @media print {
+    display: none;
+  }
+}
+
+.light {
+  color: $frame-color-light;
+}
+
+.light-icon {
+  &::before {
+    color: $frame-color-light;
+  }
+}
+
+.light-li-icon {
+  &::marker {
+    color: $frame-color-light;
+  }
+}
+
+.dark {
+  color: $frame-color-dark;
+}
+
+.dark-icon {
+  &::before {
+    color: $frame-color-dark;
+  }
+}
+
+.dark-li-icon {
+  &::marker {
+    color: $frame-color-dark;
+  }
+}

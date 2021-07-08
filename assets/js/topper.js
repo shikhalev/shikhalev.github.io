@@ -20,6 +20,7 @@
 
   function init() {
     window.addEventListener("scroll", onScroll);
+    onScroll();
 
     const topper = document.getElementById("topper");
     topper.addEventListener("click", onClick);
