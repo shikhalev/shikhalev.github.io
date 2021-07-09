@@ -1,0 +1,22 @@
+{%- if page.comments != false and (layout.comments != false or page.comments == true) -%}
+  {%- assign page_id = page.url | slugify -%}
+  <section id="comments" itemprop="comment">
+    {%- if site.data.comments[page_id] -%}
+
+      <h2 id="comments-h">Комментарии</h2>
+      <p class="small italic">Комментарии не проходят премодерацию, автор сайта не может нести ответственность за их содержание.</p>
+
+      {%- assign comments = site.data.comments[page_id] | sort -%}
+      {%- for comment in comments -%}
+        {%- assign c = comment[1] -%}
+        {%- if c.parent_id == '' and c.comment_id != '' -%}
+          {%- include nova/comments/item.liquid comment=c source=comments -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+    {%- endif -%}
+  </section>
+
+  {%- include nova/comments/form.liquid -%}
+
+{%- endif -%}

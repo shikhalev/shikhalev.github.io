@@ -1,5 +1,5 @@
 ---
-layout: verse
+layout: nova/verse
 title: Ветер и мокрый снег
 caption: "* * *"
 category: [ text, verses, best ]

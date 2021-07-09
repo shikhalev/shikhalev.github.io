@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Пингвин-фотолюбитель: 2. Командная строка и пакетная обработка"
 category: [ photo, processing, penguin, tech, soft, graphics ]
 tags:
@@ -9,24 +8,23 @@ tags:
   - ImageMagick
   - Linux
   - командная строка
-author: Иван Шихалев
+
 description: Работа с фотографиями из командной строки
 image: /assets/img/2016-06/p-02/kdpv.png
 ---
-<div class="right-box" style="width: 320px;">
-[![][kdpvs]][kdpv]
-</div>
+{% include image.liquid place="right" width=320 src="/assets/img/2016-06/p-02/kdpv.png" link="/assets/img/2016-06/p-02/kdpv.jpg" class="logo"
+   title="Картинка стырена где-то в интернетах, найдена по ключевому слову „imagemagick“" %}
 
 Коротко о главном: главный обработчик изображений из командной строки, равно как и в пакетном режиме, у нас
-по прежнему пакет **[ImageMagick][imagemagick]**. КДПВ справа взята поиском по его названию в «картинках Google»,
+по прежнему пакет **[ImageMagick][imagemagick]{:.img-icon-imagemagick}**. КДПВ справа взята поиском по его названию в «картинках Google»,
 помимо демонстрации некоторых возможностей там и пингвин присутствует.
 
 Кроме того, нам понадобятся минимальные знания оболочки **[GNU Bash][bash]** и замечательная утилита для работы
 с данными EXIF (Exchangeable Image File For&shy;mat — стандарт, позволяющий добавлять к изображениям метаданные,
-в первую очередь, когда и чем снято) — **[exiftool][exiftool]**.
+в пер­вую очередь, когда и чем снято) — **[exiftool][exiftool]**.
 
 С одной стороны, расписывать все возможности ImageMagick и ExifTool в подробностях — никакого терпения не хватит.
-С другой — у меня есть парочка примеров, собственноручно наскриптованных, но не описанных... Поэтому в данном посте
+С другой — у меня есть парочка примеров, собственноручно наскриптованных, но не описанных... Поэтому в дан­ном посте
 я просто разберу эти примеры, а если нужно что-то дополнительно, прошу в комментарии.
 
 <!--more-->
@@ -56,16 +54,16 @@ image: /assets/img/2016-06/p-02/kdpv.png
 по шаблону данными EXIF:
 
 {% highlight bash %}
-  time=$(exiftool -d "$TIME_FORMAT" -p '${DateTimeOriginal}' "$source")
-  camera=$(exiftool -p '${Model}' "$source")
-  lens=$(exiftool -p '${LensID}' "$source")
-  info=$(exiftool -p '${FocalLength#}mm, ${ShutterSpeed}s, f/${Aperture}, ISO ${ISO}' "$source")
-  if [ ! -z "$lens" ]; then
-    info="$lens\n$info"
-  fi;
-  if [ ! -z "$camera" ]; then
-    info="$camera\n$info"
-  fi;
+time=$(exiftool -d "$TIME_FORMAT" -p '${DateTimeOriginal}' "$source")
+camera=$(exiftool -p '${Model}' "$source")
+lens=$(exiftool -p '${LensID}' "$source")
+info=$(exiftool -p '${FocalLength#}mm, ${ShutterSpeed}s, f/${Aperture}, ISO ${ISO}' "$source")
+if [ ! -z "$lens" ]; then
+  info="$lens\n$info"
+fi;
+if [ ! -z "$camera" ]; then
+  info="$camera\n$info"
+fi;
 {% endhighlight %}
 
 А еще нам становится известно, что информация об объективе и о камере имеется не всегда. Обычно это характерно для фото с мобильных.
@@ -80,8 +78,8 @@ image: /assets/img/2016-06/p-02/kdpv.png
 Они однотипны, рассмотрим одну пару:
 
 {% highlight bash %}
-  convert -background black -fill white $TIME_FONT -gravity east label:"$time" "$time_png"
-  mogrify -border 2 -bordercolor black "$time_png"
+convert -background black -fill white $TIME_FONT -gravity east label:"$time" "$time_png"
+mogrify -border 2 -bordercolor black "$time_png"
 {% endhighlight %}
 
 `convert` создает новый файл, а `mogrify` изменяет уже существующий (в данном случае всего лишь добавляет рамку).
@@ -98,13 +96,13 @@ image: /assets/img/2016-06/p-02/kdpv.png
 Строки [65–66][s65-66] формируют надпись окончательно:
 
 {% highlight bash %}
-  convert -background black -gravity east -append "$time_png" "$info_png" "$stamp_png"
-  mogrify -border 10 -bordercolor black -alpha set -channel A -evaluate set 30% "$stamp_png"
+convert -background black -gravity east -append "$time_png" "$info_png" "$stamp_png"
+mogrify -border 10 -bordercolor black -alpha set -channel A -evaluate set 30% "$stamp_png"
 {% endhighlight %}
 
 Ключ `-append` склеивает две картинки в одну с учетом выравнивания и заливает недостающие области цветом фона.
 
-Выражение «`-alpha set -channel A -evaluate set 30%`» не очень-то осмысленно разбивается по отдельным ключам, а в совокупности
+Выражение «`-alpha set -channel A -evaluate set 30%`» не очень-то осмысленно разбивается по отдельным ключам, а в со­во­куп­нос­ти
 означает: добавить альфа-канал и установить значения его пикселей в 30%.
 
 <div class="note">
@@ -115,7 +113,7 @@ image: /assets/img/2016-06/p-02/kdpv.png
 И венчает обработку строка [68][s68], которая сама по себе — целый скрипт:
 
 {% highlight bash %}
-  convert \( -resize "$OUTPUT_SIZE" "$source" \) -gravity southeast "$stamp_png" -geometry +20+20 -composite -strip -quality 80 "$OUTPUT_PREFIX$name.jpg"
+convert \( -resize "$OUTPUT_SIZE" "$source" \) -gravity southeast "$stamp_png" -geometry +20+20 -composite -strip -quality 80 "$OUTPUT_PREFIX$name.jpg"
 {% endhighlight %}
 
 Внутри скобок, как можно догадаться, мы банально изменяем размер исходного файла (`-resize`). Затем накладываем (`-composite`)
@@ -125,9 +123,7 @@ image: /assets/img/2016-06/p-02/kdpv.png
 
 В итоге мы получаем возможность в пакетном режиме получать такое:
 
-<div class="center-box">
-[![][pic]][pic]
-</div>
+{% include image.liquid place="center" width=800 src="/assets/img/2016-06/p-02/IMG_8638.jpg" %}
 
 Тонирование и кадрирование я до того сделал в Darktable, см. [предыдущий пост][myraw]. Почему-то ImageMagick на моих TIFF, полученных
 из Darktable, выдает кучу предупреждений типа «Unknown field...», но на результат они не влияют.
@@ -138,10 +134,6 @@ image: /assets/img/2016-06/p-02/kdpv.png
 
 Что касается аналогов, можно присмотреться к **[Exiv2][exiv2]** и **[jhead][jhead]** для работы с EXIF, хотя мне они как-то
 не глянулись. А для ImageMagick есть его клон и форк — **[GraphicsMagick][gm]**, который во многом превосходит оригинал.
-
-[kdpvs]: /assets/img/2016-06/p-02/kdpv.png
-[kdpv]: /assets/img/2016-06/p-02/kdpv.jpg
-[pic]: /assets/img/2016-06/p-02/IMG_8638.jpg
 
 [imagemagick]: http://www.imagemagick.org/
 [bash]: http://www.gnu.org/software/bash/

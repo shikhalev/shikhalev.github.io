@@ -1,0 +1,19 @@
+{%- assign count = site.data.comments[include.slug].size -%}
+{%- if count == nil or count == 0 -%}
+  <span class="fa-icon-comment">Нет комментариев</span>
+{%- else -%}
+  <a href="{{- include.url -}}#comments" class="fa-icon-comments">
+  {%- assign check = count | modulo: 100 -%}
+  {%-if check < 10 or check > 20 -%}
+    {%- assign sign = count | modulo: 10 -%}
+    {%- if sign >= 1 and sign <= 4 -%}
+      {{- count -}} комментария
+    {%- else -%}
+      {{- count -}} комментариев
+    {%- endif -%}
+  {%- else -%}
+    {{- count -}} комментариев
+  {%- endif -%}
+  </a>
+{%- endif -%}
+   <a href="{{- include.url -}}#add-comment" class="fa-icon-comment-dots">Добавить комментарий</a>

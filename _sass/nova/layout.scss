@@ -1,0 +1,617 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+#grid {
+  padding: 0px;
+  margin: 0px;
+
+  display: grid;
+
+  @media print {
+    display: block;
+  }
+
+  @media screen and (min-width: 1230px) {
+    grid-template-columns: 1fr 400px 500px 10px 300px 1fr;
+    grid-template-areas:
+      "hl header navy   navy   navy     hr"
+      ".  main   main   .      search   ."
+      ".  main   main   .      toc      ."
+      ".  main   main   .      donate   ."
+      ".  main   main   .      gads     ."
+      ".  main   main   .      feeds    ."
+      ".  main   main   .      contacts ."
+      ".  main   main   .      extra    ."
+      ".  main   main   .      .        ."
+      "fl footer footer fr     fr       fr";
+  }
+
+  @media screen and (max-width: 1229px) and (min-width: 1150px) {
+    grid-template-columns: 1px 1fr 500px 10px 300px;
+    grid-template-areas:
+      "hl header navy   navy   navy"
+      ".  main   main   .      search"
+      ".  main   main   .      toc"
+      ".  main   main   .      donate"
+      ".  main   main   .      gads"
+      ".  main   main   .      feeds"
+      ".  main   main   .      contacts"
+      ".  main   main   .      extra"
+      ".  main   main   .      ."
+      "fl footer footer fr     fr";
+  }
+
+  @media screen and (max-width: 1149px) and (min-width: 920px) {
+    grid-template-columns: 1fr 300px 300px 300px 1fr;
+    grid-template-areas:
+      "hl header navy   navy     hr"
+      "hl header hb     search   hr"
+      ".  gads   gads   gads     ."
+      ".  main   main   main     ."
+      ".  donate feeds  contacts ."
+      ".  extra  extra  extra    ."
+      "fl footer footer footer   fr";
+  }
+
+  @media screen and (max-width: 919px) and (min-width: 750px) {
+    grid-template-columns: 300px 1fr 1fr;
+    grid-template-areas:
+      "header navy   navy"
+      "header hb     search"
+      "gads   gads   gads"
+      "main   main   main"
+      "donate feeds  contacts"
+      "extra  extra  extra"
+      "footer footer footer";
+  }
+
+  @media screen and (max-width: 749px) and (min-width: 550px) {
+    grid-template-columns: 300px 10px 1fr;
+    grid-template-areas:
+      "header navy   navy"
+      "search search search"
+      "gads   gads   gads"
+      "main   main   main"
+      "donate .      feeds"
+      "donate .      contacts"
+      "extra  extra  extra"
+      "footer footer footer";
+  }
+
+  @media screen and (max-width: 549px) {
+    grid-template-columns: 300px 1fr;
+    grid-template-areas:
+      "header   navy"
+      "search   search"
+      "gads     gads"
+      "main     main"
+      "donate   donate"
+      "feeds    feeds"
+      "contacts contacts"
+      "extra    extra"
+      "footer   footer";
+  }
+}
+
+@mixin header-top {
+  border-top: solid 5px $frame-color-dark;
+}
+
+@mixin header-bottom {
+  border-bottom: solid 2px $frame-color-light;
+}
+
+#site-header {
+  grid-area: header;
+  font-size: $header-font-size;
+  font-family: $caption-font-family;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 10px;
+
+  @include header-top;
+  @include header-bottom;
+
+  a,
+  a:link,
+  a:visited {
+    color: $frame-color-dark;
+    text-decoration: none;
+  }
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+
+  .logo {
+    margin: 0px;
+  }
+}
+
+#navy {
+  grid-area: navy;
+  text-align: right;
+
+  @include header-top;
+
+  @media screen and (min-width: 1150px), screen and (max-width: 749px) {
+    @include header-bottom;
+    margin-bottom: 10px;
+  }
+
+  .wrapper {
+    font-family: $caption-font-family;
+
+    #navy-check {
+      display: none;
+    }
+
+    #menu-icon {
+      display: none;
+    }
+
+    .navy-item {
+      &:not(:last-child) {
+        padding-right: 10px;
+      }
+      padding-left: 10px;
+      padding-top: 3px;
+      padding-bottom: 2px;
+    }
+
+    a,
+    a:link,
+    a:visited,
+    a:hover {
+      color: $frame-color-dark;
+      text-decoration: none;
+    }
+
+    a:hover {
+      background-color: $highlight-color;
+    }
+
+    @media screen and (min-width: 640px) {
+      padding-top: 5px;
+
+      .navy-item {
+        display: inline-block;
+      }
+    }
+
+    @media screen and (max-width: 639px) {
+      position: absolute;
+      top: 9px;
+      right: 5px;
+      background-color: $frame-color-light;
+      border: 1px solid $frame-color-dark;
+      box-shadow: $base-shadow $frame-color-light;
+      border-radius: 5px;
+      text-align: right;
+
+      label[for="nav-trigger"] {
+        display: block;
+        float: right;
+        width: 36px;
+        height: 36px;
+        z-index: 2;
+        cursor: pointer;
+      }
+
+      #menu-icon {
+        display: block;
+        float: right;
+        width: 36px;
+        height: 26px;
+        line-height: 0.5;
+        padding-top: 10px;
+        text-align: center;
+        font-size: 26px;
+        color: $frame-color-dark;
+      }
+
+      input ~ #navy-menu {
+        clear: both;
+        display: none;
+      }
+
+      input:checked ~ #navy-menu {
+        display: block;
+        padding-bottom: 5px;
+      }
+
+      .navy-item {
+        display: block;
+        padding: 5px 10px;
+
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+@mixin footer-top {
+  border-top: solid 2px $frame-color-light;
+}
+
+@mixin footer-bottom {
+  border-bottom: solid 3px $frame-color-dark;
+}
+
+#site-footer {
+  grid-area: footer;
+
+  padding: 5px;
+
+  font-family: $compact-font-family;
+  font-size: $small-font-size;
+  color: $frame-color-dark;
+
+  a,
+  a:link,
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+#search {
+  grid-area: search;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 1149px) and (min-width: 750px) {
+    @include header-bottom;
+  }
+
+  @media screen and (min-width: 1150px) {
+    border: solid $frame-color-light 1px;
+    box-shadow: $base-shadow $frame-color-light;
+    padding: 5px 5px 0px;
+  }
+
+  @media screen and (max-width: 749px) {
+    padding: 0px 5px;
+  }
+
+  .gsc-control-cse {
+    padding: 0px;
+  }
+
+  .gsc-input {
+    padding-right: 5px;
+    font-family: $base-font-family;
+    color: $frame-color-dark;
+  }
+
+  .gsc-search-button-v2 {
+    padding: 6px 18px;
+    background-color: $frame-color-dark;
+  }
+
+  .gsc-input-box {
+    border-color: $frame-color-light;
+  }
+
+  // TODO: кнопка очистки
+}
+
+aside {
+  color: $frame-color-dark;
+
+  h4 {
+    margin: 0px 0px 10px;
+  }
+  ul {
+    margin: 0px;
+  }
+  a,
+  a:link,
+  a:visited {
+    color: $frame-color-dark;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  @media print {
+    display: none;
+  }
+}
+
+#toc {
+  grid-area: toc;
+
+  padding: 10px;
+
+  ul {
+    font-family: $compact-font-family;
+    padding-left: 20px;
+
+    li::marker {
+      @extend .fa-li-include-hashtag;
+    }
+  }
+
+  &.toc-stream {
+    ul {
+      li {
+        ul {
+          li {
+            &::marker {
+              @extend .fa-li-include-file-alt;
+            }
+
+            ul {
+              li::marker {
+                @extend .fa-li-include-bookmark;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.toc-post {
+    ul {
+      li::marker {
+        @extend .fa-li-include-bookmark;
+      }
+    }
+  }
+
+  &.toc-calendar {
+    ul {
+      li {
+        &::marker {
+          @extend .fa-li-include-calendar-alt;
+        }
+        ul {
+          columns: 2;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1149px) {
+    display: none;
+  }
+}
+
+#donate {
+  grid-area: donate;
+  place-self: center;
+  margin-bottom: -8px;
+
+  &:target {
+    border-color: $highlight-color;
+    box-shadow: $base-shadow $highlight-color;
+  }
+}
+
+#ga {
+  grid-area: gads;
+  height: 300px;
+  @media screen and (max-width: 1149px) {
+    height: 120px;
+  }
+}
+
+/* ненужно
+.adsbygoogle {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+
+  @media screen and (max-width: 1149px) {
+    width: 100%;
+    height: 120px;
+  }
+}
+*/
+
+// TODO: сделать посимпатичнее на узких экранах, как feeds, так и contacts
+
+#feeds {
+  grid-area: feeds;
+
+  padding: 10px;
+
+  ul {
+    padding-left: 20px;
+
+    li::marker {
+      @extend .fa-li-include-rss-square;
+      color: $highlight-color;
+    }
+
+    ul {
+      columns: 2;
+
+      @media screen and (max-width: 639px) and (min-width: 550px) {
+        columns: 1;
+      }
+    }
+  }
+}
+
+#contacts {
+  grid-area: contacts;
+  padding: 10px;
+
+  .person {
+    font-family: $caption-font-family;
+    margin-bottom: 5px;
+  }
+
+  ul {
+    padding-left: 25px;
+  }
+
+  p.social {
+    @extend .fab;
+    margin-top: 10px;
+    font-size: $share-font-size;
+
+    a {
+      color: $frame-color-dark;
+      padding: 2px 5px 2px;
+
+      &:hover {
+        color: $frame-color-light;
+        text-shadow: $thin-shadow $frame-color-dark;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#feeds,
+#contacts {
+  @media screen and (max-width: 1149px) and (min-width: 750px) {
+    margin-left: 10px;
+  }
+}
+
+#sidebar {
+  grid-area: extra;
+  padding: 10px;
+  font-family: $compact-font-family;
+
+  h4 {
+    margin-bottom: 0px;
+  }
+
+  .comment {
+    border: none;
+    padding: 5px 0px 0px;
+    margin: 10px 0px 0px;
+    border-top: 1px dotted $frame-color-light;
+
+    display: inline-block;
+    break-inside: avoid;
+    page-break-inside: avoid;
+
+    .message {
+      color: $frame-color-semilight;
+      font-size: 90%;
+    }
+  }
+
+  .comments {
+    columns: 1;
+    @media screen and (max-width: 1149px) and (min-width: 750px) {
+      columns: 3;
+    }
+    @media screen and (max-width: 749px) and (min-width: 525px) {
+      columns: 2;
+    }
+  }
+}
+
+#main {
+  grid-area: main;
+
+  box-sizing: border-box;
+  max-width: 100%;
+
+  padding-left: 5px;
+  padding-right: 5px;
+
+  margin-bottom: 10px;
+}
+
+#hl {
+  grid-area: hl;
+}
+
+#hr {
+  grid-area: hr;
+}
+
+#hb {
+  grid-area: hb;
+  @media screen and (max-width: 1149px) and (min-width: 750px) {
+    @include header-bottom;
+    margin-bottom: 10px;
+  }
+  @media screen and (not((max-width: 1149px) and (min-width: 750px))) {
+    display: none;
+  }
+}
+
+#hl,
+#hr {
+  @include header-top;
+  @include header-bottom;
+  margin-bottom: 10px;
+}
+
+#fl {
+  grid-area: fl;
+}
+
+#fr {
+  grid-area: fr;
+}
+
+#site-footer,
+#fr,
+#fl {
+  @include footer-top();
+}
+
+#toc,
+#ga,
+#feeds,
+#contacts,
+#sidebar {
+  margin-bottom: 10px;
+}
+
+#toc,
+#feeds,
+#contacts,
+#sidebar {
+  border: solid $frame-color-light 1px;
+  box-shadow: $base-shadow $frame-color-light;
+
+  &:target {
+    border-color: $highlight-color;
+    box-shadow: $base-shadow $highlight-color;
+  }
+}
+
+@media print {
+  #site-header,
+  #site-footer,
+  #hl,
+  #hr,
+  #hb,
+  #fl,
+  #fr,
+  #search,
+  #navy,
+  #toc,
+  #ga,
+  #donate,
+  #feeds,
+  #contacts,
+  #sidebar {
+    display: none;
+  }
+}

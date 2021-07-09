@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 'FPC-Notes: «Hello, World!»'
 description: >-
   Начнем по традиции с простейшей программы, делающей хоть что-то... Кто сказал «что-то полезное»?
@@ -14,7 +13,7 @@ tags:
 image: /assets/img/2013-11/fpc.png
 last_modified_at: 2021-04-14 10:00 +0500
 ---
-<div class="right-box" style="width: 320px;margin:0px;">
+<div class="right" style="max-width:320px;margin:0px;">
 
 {% highlight pascal %}
 program Hello;
@@ -95,7 +94,7 @@ $
 машинный код, не содержащий служебной информации, необходимой для запуска программы, зато содержащий служебную информацию, нужную
 компоновщику, а именно — символьные имена функций, переменных и т.д., которые компоновщик уже потом преобразует в адреса.
 
-<div class="right-box" style="width:360px;margin:0px;">
+<div class="right" style="width:360px;margin:0px;margin-bottom:-5px;">
 
 {% highlight gas %}
 .section .text

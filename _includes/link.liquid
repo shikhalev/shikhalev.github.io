@@ -1,0 +1,21 @@
+{%- if include.stream -%}
+  {%- assign target = site.streams | where: 'category_id', include.stream | first -%}
+{%- elsif include.calendar -%}
+  {%- assign target = site.calendars | where: 'category_id', include.calendar | first -%}
+{%- elsif include.post -%}
+  {%- assign target = site.posts | where: 'path', include.post | first -%}
+{%- elsif include.page -%}
+  {%- assign target = site.pages | where: 'path', include.page | first -%}
+{%- endif -%}
+{%- if include.class -%}
+  {%- assign class_attr = 'class="' | append: include.class | append: '"' -%}
+{%- else -%}
+  {%- assign class_attr = '' -%}
+{%- endif -%}
+{%- if include.style -%}
+  {%- assign style_attr = 'style="' | append: include.style | append: '"' -%}
+{%- else -%}
+  {%-  assign style_attr = '' -%}
+{%- endif -%}
+<a href="{{- target.url | relative_url -}}" title="{{- target.description -}}"{{- class_attr -}}{{- style_attr -}}>{{- target.title -}}</a>
+{%- comment -%} съедаем финальный перенос строки {%- endcomment -%}

@@ -1,5 +1,5 @@
 ---
-layout: verse
+layout: nova/verse
 title: Памятник
 caption: "* * *"
 category: [ text, verses, best ]

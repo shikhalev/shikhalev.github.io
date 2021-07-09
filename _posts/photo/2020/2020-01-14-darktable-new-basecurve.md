@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Новая базовая кривая в Darktable
 category: [ photo, processing, tech, soft, graphics ]
 tags:
@@ -7,7 +6,7 @@ tags:
   - цвет
   - RAW
   - Linux
-author: Иван Шихалев
+
 description: Новые возможности и нюансы модуля «Базовая кривая» в Darktable 3.0
 image: /assets/img/2020-01/nbc/none-IMG_0875.jpg
 ---
@@ -20,18 +19,17 @@ image: /assets/img/2020-01/nbc/none-IMG_0875.jpg
 по разному, подробности далее... Во всех случаях я сделал три варианта:
 
 * базовая кривая отключена;
+
 * базовая кривая включена, сохранение цветов отключено;
+
 * базовая кривая включена, сохранение цветов включено в варианте по умолчанию (других вариантов я делать
   не стал, поскольку там уже отличия на грани различимого).
 
-<div class="note">
+{:.note}
 *Все снимки сделаны на **Canon EOS 77D**, базовая кривая — **Canon EOS** по умолчанию (не альтернативная). Как поведет
 себя новый механизм на других камерах с другими базовыми кривыми — не могу знать.*
-</div>
 
-<div class="center-box" style="width: 640px; border: 0px;">
-![][off-0700]  ![][none-0700]  ![][light-0700]
-</div>
+{% include local/basecurve-images.liquid file="0700" %}
 
 <!--more-->
 
@@ -42,13 +40,10 @@ image: /assets/img/2020-01/nbc/none-IMG_0875.jpg
 
 А что с невыбитым небом?
 
-<div class="center-box" style="width: 640px; border: 0px;">
-![][off-0875]  ![][none-0875]  ![][light-0875]
-<p style="font-size: 6px"> </p>
-![][off-1028]  ![][none-1028]  ![][light-1028]
-<p style="font-size: 6px"> </p>
-![][off-1081]  ![][none-1081]  ![][light-1081]
-</div>
+{% include local/basecurve-images.liquid file="0875" %}
+{% include local/basecurve-images.liquid file="1028" %}
+{% include local/basecurve-images.liquid file="1081" %}
+
 
 Общая суть осталась та же: цвета действительно ближе к тому, что и без базовой кривой вообще. Вот только цвета
 эти — неправильные: фиолетовый оттенок небу не нужен. Итак, связка Canon EOS 77D и Darktable плохо работает
@@ -57,23 +52,15 @@ image: /assets/img/2020-01/nbc/none-IMG_0875.jpg
 
 Хорошо, с небом разобрались, попробуем другие сюжеты.
 
-<div class="center-box" style="width: 640px; border: 0px;">
-![][off-0823]  ![][none-0823]  ![][light-0823]
-</div>
+{% include local/basecurve-images.liquid file="0823" %}
 
 Ну... Такое... Цвета, может быть, и более правильные, но менее веселые, что ли...
 
-<div class="center-box" style="width: 640px; border: 0px;">
-![][off-0901]  ![][none-0901]  ![][light-0901]
-<p style="font-size: 6px"> </p>
-![][off-0969]  ![][none-0969]  ![][light-0969]
-<p style="font-size: 6px"> </p>
-![][off-0985]  ![][none-0985]  ![][light-0985]
-<p style="font-size: 6px"> </p>
-![][off-0990]  ![][none-0990]  ![][light-0990]
-<p style="font-size: 6px"> </p>
-![][off-1013]  ![][none-1013]  ![][light-1013]
-</div>
+{% include local/basecurve-images.liquid file="0901" %}
+{% include local/basecurve-images.liquid file="0969" %}
+{% include local/basecurve-images.liquid file="0985" %}
+{% include local/basecurve-images.liquid file="0990" %}
+{% include local/basecurve-images.liquid file="1013" %}
 
 Хм, а для теневых снимков результат, пожалуй, неплох: нет ненужной теплоты, как с только базовой кривой,
 но и улучшение контраста налицо.
@@ -87,46 +74,15 @@ image: /assets/img/2020-01/nbc/none-IMG_0875.jpg
 
 * Новая функция действительно сохраняет (а не меняет) цвета там, где обычная базовая кривая их улучшает,
   или «улучшает». В целом цвета становятся более спокойными.
+
 * В каких-то случаях это хорошо.
+
 * А в каких-то — не очень. По крайней мере в кадрах с большим количеством неба, и там, где хочется получить
   «солнечную» картинку с соответствующим настроением.
+
 * В итоге, включать или не включать «Сохранение цветов» — сильно зависит от сюжета и задачи. Само по себе
   наличие такой возможности — это хорошо, а вот ее включение по умолчанию — под вопросом.
 
 [^basecurve]: Базовая кривая (en, v3.4): <https://www.darktable.org/usermanual/en/module-reference/processing-modules/base-curve/>
-
-
-[off-0700]: /assets/img/2020-01/nbc/off-IMG_0700.jpg
-[none-0700]: /assets/img/2020-01/nbc/none-IMG_0700.jpg
-[light-0700]: /assets/img/2020-01/nbc/light-IMG_0700.jpg
-[off-0875]: /assets/img/2020-01/nbc/off-IMG_0875.jpg
-[none-0875]: /assets/img/2020-01/nbc/none-IMG_0875.jpg
-[light-0875]: /assets/img/2020-01/nbc/light-IMG_0875.jpg
-[off-1028]: /assets/img/2020-01/nbc/off-IMG_1028.jpg
-[none-1028]: /assets/img/2020-01/nbc/none-IMG_1028.jpg
-[light-1028]: /assets/img/2020-01/nbc/light-IMG_1028.jpg
-[off-1081]: /assets/img/2020-01/nbc/off-IMG_1081.jpg
-[none-1081]: /assets/img/2020-01/nbc/none-IMG_1081.jpg
-[light-1081]: /assets/img/2020-01/nbc/light-IMG_1081.jpg
-[off-0823]: /assets/img/2020-01/nbc/off-IMG_0823.jpg
-[none-0823]: /assets/img/2020-01/nbc/none-IMG_0823.jpg
-[light-0823]: /assets/img/2020-01/nbc/light-IMG_0823.jpg
-
-[off-0901]: /assets/img/2020-01/nbc/off-IMG_0901.jpg
-[none-0901]: /assets/img/2020-01/nbc/none-IMG_0901.jpg
-[light-0901]: /assets/img/2020-01/nbc/light-IMG_0901.jpg
-[off-0969]: /assets/img/2020-01/nbc/off-IMG_0969.jpg
-[none-0969]: /assets/img/2020-01/nbc/none-IMG_0969.jpg
-[light-0969]: /assets/img/2020-01/nbc/light-IMG_0969.jpg
-[off-0985]: /assets/img/2020-01/nbc/off-IMG_0985.jpg
-[none-0985]: /assets/img/2020-01/nbc/none-IMG_0985.jpg
-[light-0985]: /assets/img/2020-01/nbc/light-IMG_0985.jpg
-[off-0990]: /assets/img/2020-01/nbc/off-IMG_0990.jpg
-[none-0990]: /assets/img/2020-01/nbc/none-IMG_0990.jpg
-[light-0990]: /assets/img/2020-01/nbc/light-IMG_0990.jpg
-[off-1013]: /assets/img/2020-01/nbc/off-IMG_1013.jpg
-[none-1013]: /assets/img/2020-01/nbc/none-IMG_1013.jpg
-[light-1013]: /assets/img/2020-01/nbc/light-IMG_1013.jpg
-
 
 [quickstart]: {% link _posts/photo/2019/2019-09-21-darktable-quickstart.md %} "Darktable — (не очень) быстрый старт"

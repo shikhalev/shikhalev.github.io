@@ -22,15 +22,10 @@ lang: ru
 title: Иван Шихалев
 email: shikhalev@gmail.com
 author: Иван Шихалев
-description: Блог. Склад текстов. И прочее городу и миру.
+description: Блог. Склад текстов. И прочее городу и миру...
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://shikhalev.org" # the base hostname & protocol for your site, e.g. http://example.com
 show_excerpts: true
-facebook_username: shikhalev
-linkedin_username: shikhalev
-twitter_username: shikhalev
-github_username:  shikhalev
-instagram_username: ivanshikhalev
 rss: rss
 
 excerpt_separator: <!--more-->
@@ -42,29 +37,44 @@ kramdown:
   parse_block_html: true
   auto_ids: true
 
-# Build settings
-theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
 
 defaults:
   - scope:
-      path: ""
+      path: "_posts"
     values:
-      toc: true
+      layout: nova/post
       image: /assets/img/icon.jpg
       author: Иван Шихалев
-
-minima:
-  date_format: "%Y.%m.%d"
+  - scope:
+      path: "_drafts"
+    values:
+      layout: nova/post
+  - scope:
+      path: "_calendars"
+    values:
+      layout: nova/calendar
+      image: /assets/img/icon.jpg
+      author: Иван Шихалев
+  - scope:
+      path: "_streams"
+    values:
+      layout: nova/stream
+      image: /assets/img/icon.jpg
+      author: Иван Шихалев
+  - scope:
+      path: "_posts/text"
+    values:
+      hide_last_comments: true
 
 header_pages:
-  - _streams/1_tech.md
-  - _streams/2_photo.md
-  - _streams/4_life.md
-  - _streams/5_text.md
-  - _streams/6_about.md
+  - _streams/tech.md
+  - _streams/photo.md
+  - _streams/life.md
+  - _streams/text.md
+  - _streams/about.md
 
 feed:
   categories:
@@ -79,10 +89,13 @@ feed:
 collections:
   streams:
     output: true
+    permalink: /:path/
   calendars:
     output: true
+    permalink: /:path/all
 
 staticman_url: https://shikhalev-comments.herokuapp.com/v3/entry/github/shikhalev/shikhalev.github.io/main/comments
+date_format: "%Y.%m.%d"
 
 exclude:
   - .vscode/
@@ -90,6 +103,7 @@ exclude:
 # Собственные настройки сайта
 
 comments_json_limit: 20
+comments_side_limit: 3
 category_page_limit: 10
 category_page_maximum: 12
 home_page_limit: 12

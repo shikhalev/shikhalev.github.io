@@ -1,0 +1,38 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#topper {
+  z-index: 2;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: -webkit-sticky; // safari
+  position: sticky;
+  bottom: 10px;
+  float: left;
+  margin-left: 10px;
+  margin-top: -106px;
+  color: $frame-color-dark;
+  background-color: $frame-color-back;
+  border-color: $frame-color-light;
+  border-radius: 10px;
+  box-shadow: $base-shadow $frame-color-light;
+  opacity: 50%;
+  width: 96px;
+  height: 96px;
+
+  span {
+    display: block;
+    font-size: 64px;
+  }
+
+  &:hover {
+    opacity: 70%;
+  }
+
+  @media print {
+    opacity: 0%;
+  }
+}

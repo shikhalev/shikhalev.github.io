@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Немного о dRuby
 description: Несколько нюансов, которые следует знать при сложной работе с dRuby.
 category: [ tech, programming, ruby ]
@@ -9,9 +8,7 @@ tags:
   - грабли
 image: /assets/img/2015-03/red_stones.jpg
 ---
-<div class="right-box" style="width: 320px">
-[![][img]][img]
-</div>
+{% include image.liquid place="right" width=320 src="/assets/img/2015-03/red_stones.jpg" %}
 
 #### DRbObject не является DRbUndumped
 
@@ -51,8 +48,5 @@ end
 Так вот: объект этот будет привязан не к тому протоколу, по которому идет обращение, а к последнему запущенному сервису.
 
 Чтобы это исправить, нужно вручную выставить свойство `DRb::primary_server`... Впрочем, в своем геме я сегодня это учел и исправил.
-
-
-[img]: /assets/img/2015-03/red_stones.jpg
 
 [drctrl]: {% link _posts/tech/2015/2015-02-07-four-gems.md %}#drctrl

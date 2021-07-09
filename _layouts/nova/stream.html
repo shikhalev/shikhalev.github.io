@@ -1,0 +1,20 @@
+---
+layout: nova/default
+itemtype: https://schema.org/Blog
+toc: true
+description: true
+---
+{% capture subcategories %}
+  {%- include nova/stream/subcategories.liquid category_id=page.category_id -%}
+{% endcapture %}
+{% assign subcategories_flag = subcategories | strip %}
+{% if subcategories_flag != '' %}
+  <h2 id="rubricator">Рубрикатор</h2>
+  <div class="subcategories">{{ subcategories }}</div>
+{% endif %}
+
+{{ content }}
+
+{% include nova/utils/recommendations.liquid %}
+
+{% include nova/stream/timeline.liquid %}

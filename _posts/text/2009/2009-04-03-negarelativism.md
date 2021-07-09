@@ -1,5 +1,5 @@
 ---
-layout: verse
+layout: nova/verse
 title: Время всё ускоряется — такой вот негарелятивизм...
 caption: "* * *"
 category: [ text, verses ]

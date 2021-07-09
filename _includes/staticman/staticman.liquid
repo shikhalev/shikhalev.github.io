@@ -1,5 +1,0 @@
-{% if page.comments != false %}
-  {% assign page_id = page.url | slugify %}
-  {% include staticman/comments.liquid %}
-  {% include staticman/form.html %}
-{% endif %}

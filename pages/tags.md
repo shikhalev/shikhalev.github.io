@@ -1,6 +1,7 @@
 ---
-layout: tags
+layout: nova/tags
 title: (Бес-)предметный указатель
-description: Список тегов с указателем страниц
+description: Навигация по тегам
 permalink: /tags
+toc: false
 ---

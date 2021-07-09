@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Откуда ждать подлянки...
 description: О неочевидных проблемах, связанных с передачей прав на свободный софт
 category: [ life, tech, soft ]

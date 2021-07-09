@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+$base-font-size: 16px !default;
+$small-font-size: 15px !default;
+$notes-font-size: 14px !default;
+$index-font-size: 12px !default;
+$header-font-size: 24px !default;
+$share-font-size: 18px !default;
+
+$base-font-family: "PT Sans", gsans, Arial, sans-serif !default;
+$caption-font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif !default;
+$compact-font-family: "PT Sans Narrow", gnarrow, "Arial Narrow", sans-serif !default;
+$mono-font-family: "PT Mono", gmono, monospace !default;
+$far-font-family: "Font Awesome 5 Free";
+
+$base-font-color: #444;
+$base-gray-color: lighten($base-font-color, 50%) !default;
+$light-gray-color: lighten($base-font-color, 60%) !default;
+$lightest-gray-color: lighten($base-font-color, 70%) !default;
+$dark-gray-color: lighten($base-font-color, 10%) !default;
+$semidark-gray-color: lighten($base-font-color, 20%) !default;
+
+$frame-color-dark: #3e5662 !default;
+$frame-color-semilight: lighten($frame-color-dark, 25%) !default;
+$frame-color-light: lighten($frame-color-dark, 50%) !default;
+$frame-color-back: lighten($frame-color-dark, 63%) !default;
+
+$base-link-color: #129 !default;
+$visited-link-color: #246 !default;
+
+$highlight-color: #ffdb4d !default;
+
+$base-shadow: 1px 1px 3px !default;
+$thin-shadow: 1px 1px 1px !default;

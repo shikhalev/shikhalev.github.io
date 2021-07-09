@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Кратко: примитивный git-сервер"
 description: Настраиваем git-сервер для малых групп с минимальными затратами.
 category: [ tech , soft, programming ]
@@ -10,9 +9,7 @@ tags:
 image: /assets/img/2013-07/gitweb.png
 recommend: true
 ---
-<div class="right-box" style="width: 320px;">
-[![][gitweb]][gitweb]
-</div>
+{% include image.liquid place="right" width=320 src="/assets/img/2013-07/gitweb.png" style="margin-bottom:-5px;" %}
 
 Сначала немного об окружении. Во-первых, предполагается наличие доступа на сервер по SSH, причем управление
 доступом стандартное: через `~/.ssh/authorized_keys`. Во-вторых, в моем случае на сервере уже стоит nginx;
@@ -155,8 +152,6 @@ $feature{'highlight'}{'default'} = [1];
 
 
 
-
-[gitweb]: /assets/img/2013-07/gitweb.png "Скриншот"
 
 [gitlab]: https://gitlab.org/
 [docs]: git-scm.com/book/ru/v2/Git-на-сервере-GitWeb

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Сохраняем выделение
 description: Как сохранить текущее выделение в contenteditable элементе при клике вне его.
 category: [ tech, programming, web ]

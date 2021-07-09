@@ -1,5 +1,5 @@
 ---
-layout: verse
+layout: nova/verse
 title: Поле с перелесками
 caption: "* * *"
 write_date: октябрь 1996

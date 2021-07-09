@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="ru-RU">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="{{ '/favicon.svg' | absolute_url }}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+
+  {% seo %}
+
+  {%- if jekyll.environment == 'production' -%}
+    {% include google/analytics.html %}
+    {% include yandex/metrica.html %}
+  {%- endif -%}
+</head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">{{- site.title -}}</a></p></header>
+
+<nav id="navy">
+  {%- include nova/aside/navy.liquid -%}
+</nav>
+
+<main id="main">
+
+{%- include nova/utils/feed_link.liquid -%}
+
+{%- include nova/utils/categories_pane.html -%}
+
+{%- if layout.itemtype or page.itemtype -%}
+  <article class="layout-{{- page.layout | split: '/' | last -}}" itemscope itemtype="{{- page.itemtype | default: layout.itemtype -}}">
+{%- else -%}
+  <article class="layout-{{- page.layout | split: '/' | last -}}">
+{%- endif -%}
+
+<header class="page-header">
+{%- if page.title and layout.title != false -%}
+  <h1 class="title-{{- page.layout | split: '/' | last -}}" itemprop="name headline">{{- page.title | escape -}}</h1>
+{%- endif -%}
+{%- if layout.description and page.description -%}
+  <p class="description">{{ page.description }}</p>
+{%- endif -%}
+
+{%- if layout.sharing -%}
+  {%- include nova/utils/share_buttons.liquid -%}
+{%- endif -%}
+
+{%- if layout.meta -%}
+<p class="meta">
+  <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+    {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+    {{ page.date | date: date_format }}
+  </time>
+  {%- if page.author or site.author -%}
+    • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | default: site.author }}</span></span>
+  {%- endif -%}
+</p>
+{%- endif -%}
+
+{%- if page.tags and page.tags.size > 0 -%}
+  <aside class="tags">
+    {%- include nova/utils/tags.liquid -%}
+  </aside>
+{%- endif -%}
+</header>
+
+{{- content -}}
+
+</article>
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</main>
+
+<aside id="search">
+  {%- include google/search.html -%}
+</aside>
+
+{%- if page.toc -%}
+  {% assign allow_toc = true %}
+{%- elsif page.toc == false -%}
+  {%- assign allow_toc = false -%}
+{%- else -%}
+  {%- assign allow_toc = layout.toc -%}
+{%- endif -%}
+{%- if allow_toc -%}
+  {%- capture toc -%}
+  {%- include allejo/jekyll-toc.liquid html=content sanitize=true item_class="toc-entry" h_max=4 skip_no_ids=true -%}
+  {%- endcapture -%}
+  {%- assign flag = toc | strip -%}
+{%- else -%}
+  {%- assign flag = "" -%}
+{%- endif -%}
+{%- if flag != "" -%}
+<aside id="toc" class="toc toc-{{- page.layout | split: '/' | last -}}">
+  <h4>Содержание</h4>
+  {{ toc }}
+</aside>
+{%- else -%}
+<aside id="toc" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside>
+{%- endif -%}
+
+<aside id="donate">
+  {%- include yoomoney/form.html -%}
+</aside>
+
+<!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;">
+  {%- comment -%}
+  {%- include google/ads.html -%}
+  {%- endcomment -%}
+</aside>
+
+<aside id="feeds">
+  {%- include nova/aside/feeds.liquid -%}
+</aside>
+
+<aside id="contacts">
+  {%- include nova/aside/contacts.html -%}
+</aside>
+
+{%- if page.hide_last_comments -%}
+<aside id="sidebar" style="border:none;box-shadow:none;"></aside>
+{%- else -%}
+<aside id="sidebar">
+  {%- include nova/aside/last_comments.liquid -%}
+</aside>
+{%- endif -%}
+
+<footer id="site-footer">
+  {%- include nova/footer.liquid -%}
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

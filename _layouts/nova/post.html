@@ -1,0 +1,16 @@
+---
+layout: nova/default
+itemtype: http://schema.org/BlogPosting
+sharing: true
+meta: true
+toc: true
+---
+{{ content }}
+
+{% include nova/utils/recommendations.liquid %}
+
+{% include nova/comments/section.liquid %}
+
+{% if jekyll.environment == 'development' %}
+  {% include nova/utils/announcement.liquid %}
+{% endif %}
