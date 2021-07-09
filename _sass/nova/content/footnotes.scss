@@ -27,6 +27,10 @@ a.footnote::after {
         vertical-align: top;
         margin-top: 0px;
       }
+
+      &:target {
+        background-color: $frame-color-back;
+      }
     }
   }
 
