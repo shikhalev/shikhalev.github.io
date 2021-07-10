@@ -53,7 +53,7 @@
   <h1 class="title-{{- page.layout | split: '/' | last -}}" itemprop="name headline">{{- page.title | escape -}}</h1>
 {%- endif -%}
 {%- if layout.description and page.description -%}
-  <p class="description">{{ page.description }}</p>
+  <p class="description" itemprop="description">{{ page.description }}</p>
 {%- endif -%}
 
 {%- if layout.sharing -%}
