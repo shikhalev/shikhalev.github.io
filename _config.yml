@@ -57,12 +57,14 @@ defaults:
     values:
       layout: nova/calendar
       image: /assets/img/icon.jpg
+      type: website
       author: Иван Шихалев
   - scope:
       path: "_streams"
     values:
       layout: nova/stream
       image: /assets/img/icon.jpg
+      type: website
       author: Иван Шихалев
   - scope:
       path: "_posts/text"
