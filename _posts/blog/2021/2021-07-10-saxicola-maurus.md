@@ -13,6 +13,7 @@ tags:
   - Арти
   - наблюдения
   - iNaturalist
+image: /assets/img/2021-07/saxicola/IMG_7016.jpg
 ---
 {% include image.liquid place="right" width=240 src="/assets/img/2021-07/saxicola/IMG_7016.jpg" title="Сибирский черноголовый чекан (Saxicola maurus)" %}
 
