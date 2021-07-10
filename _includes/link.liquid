@@ -15,7 +15,16 @@
 {%- if include.style -%}
   {%- assign style_attr = 'style="' | append: include.style | append: '"' -%}
 {%- else -%}
-  {%-  assign style_attr = '' -%}
+  {%- assign style_attr = '' -%}
 {%- endif -%}
-<a href="{{- target.url | relative_url -}}" title="{{- target.description -}}"{{- class_attr -}}{{- style_attr -}}>{{- target.title -}}</a>
+{%- if include.sub -%}
+  {%- assign hash = '#'' | append: include.sub -%}
+{%- else -%}
+  {%- assign hash = '' -%}
+{%- endif -%}
+{%- if include.md_ref -%}
+  {{- target.url | relative_url -}}{{- hash }} "{{- target.title }} ({{- target.description -}})"
+{%- else -%}
+  <a href="{{- target.url | relative_url -}}{{- hash -}}" title="{{- target.description -}}"{{- class_attr -}}{{- style_attr -}}>{{- target.title -}}</a>
+{%- endif -%}
 {%- comment -%} съедаем финальный перенос строки {%- endcomment -%}

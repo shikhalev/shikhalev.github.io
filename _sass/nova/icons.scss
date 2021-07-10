@@ -263,6 +263,7 @@ $img-icons: (
   "analytics": url(/assets/img/ico/analytics.svg),
   "metrica": url(/assets/img/ico/metrica.png),
   "liquid": url(/assets/img/ico/liquid.png),
+  "wikipedia": url(/assets/img/ico/wikipedia.svg),
 );
 
 @each $name, $url in $img-icons {
