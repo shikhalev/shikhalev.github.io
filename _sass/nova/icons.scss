@@ -195,6 +195,10 @@ $icons: (
     "symbol": "\f075",
     "font": "far",
   ),
+  "share-alt": (
+    "symbol": "\f1e0",
+    "font": "fas",
+  ),
 );
 
 @each $name, $data in $icons {
@@ -264,6 +268,8 @@ $img-icons: (
   "metrica": url(/assets/img/ico/metrica.png),
   "liquid": url(/assets/img/ico/liquid.png),
   "wikipedia": url(/assets/img/ico/wikipedia.svg),
+  "locus-map": url(/assets/img/ico/locus-map.png),
+  "kdeconnect": url(/assets/img/ico/kdeconnect.svg),
 );
 
 @each $name, $url in $img-icons {
