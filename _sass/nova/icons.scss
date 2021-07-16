@@ -270,6 +270,8 @@ $img-icons: (
   "wikipedia": url(/assets/img/ico/wikipedia.svg),
   "locus-map": url(/assets/img/ico/locus-map.png),
   "kdeconnect": url(/assets/img/ico/kdeconnect.svg),
+  "gpxlab": url(/assets/img/ico/gpxlab.png),
+  "gpsbabel": url(/assets/img/ico/gpsbabel.png),
 );
 
 @each $name, $url in $img-icons {
