@@ -101,7 +101,11 @@
 {%- endif -%}
 {%- if allow_toc -%}
   {%- capture toc -%}
-  {%- include allejo/jekyll-toc.liquid html=content sanitize=true item_class="toc-entry" h_max=4 skip_no_ids=true -%}
+    {%- assign toc_depth = 4 -%}
+    {%- if layout.toc_depth -%}
+      {%- assign toc_depth = layout.toc_depth -%}
+    {%- endif -%}
+    {%- include allejo/jekyll-toc.liquid html=content sanitize=true item_class="toc-entry" h_max=toc_depth skip_no_ids=true -%}
   {%- endcapture -%}
   {%- assign flag = toc | strip -%}
 {%- else -%}
