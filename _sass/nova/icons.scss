@@ -272,6 +272,7 @@ $img-icons: (
   "kdeconnect": url(/assets/img/ico/kdeconnect.svg),
   "gpxlab": url(/assets/img/ico/gpxlab.png),
   "gpsbabel": url(/assets/img/ico/gpsbabel.png),
+  "phil-harvey": url(/assets/img/ico/phil-harvey.svg),
 );
 
 @each $name, $url in $img-icons {
