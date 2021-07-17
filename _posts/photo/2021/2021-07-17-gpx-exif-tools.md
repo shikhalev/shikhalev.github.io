@@ -6,6 +6,7 @@ category:
   - processing
   - tech
   - soft
+  - birdwatching
 tags:
   - GPX
   - EXIF
