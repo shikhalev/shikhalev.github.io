@@ -17,6 +17,7 @@ tags:
   - культура отмены
   - этика
 image: /assets/img/2021-07/fs/franklin.jpg
+recommend: true
 ---
 {% include image.liquid place="right" width=240 src="/assets/img/2021-07/fs/franklin.jpg"
    link="https://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Benjamin_Franklin_1767.jpg"
