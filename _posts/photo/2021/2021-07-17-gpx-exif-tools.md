@@ -19,6 +19,9 @@ tags:
   - GPSBabel
   - Locus Map
   - KDE Connect
+  - GPS
+image: /assets/img/2021-07/gpx/gpxlab.png
+recommend: true
 ---
 ## Получение трека
 
