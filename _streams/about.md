@@ -49,7 +49,7 @@ recommendations: all
 Исходя из последнего и выбирал технологию — сайт на **[Jekyll][jekyll]{:.img-icon-jekyll}** с локальной копии я всегда смогу поднять в считанные
 часы, если с текущим хостингом что-то случится (сейчас это **[GitHub Pages][pages]{:.img-icon-github}**, ибо бесплатно).
 
-Исходники сайта можно посмотреть по адресу **<https://github.com/shikhalev/shikhalev.github.io>{:.img-icon-github}**.
+Исходники сайта можно посмотреть по адресу **[https://github.com/​<span>shi­kha­lev/​shi­kha­lev.​git­hub​.io</span>][source]{:.img-icon-github}**.
 
 [icon]: /assets/img/icon.jpg
 
@@ -63,3 +63,4 @@ recommendations: all
 [77d]: https://www.canon.ru/cameras/eos-77d/
 [jekyll]: https://jekyllrb.com/
 [pages]: https://pages.github.com/
+[source]: https://github.com/shikhalev/shikhalev.github.io
