@@ -25,9 +25,9 @@
         <hr style="width:90%;border:1px dotted #c5d3da;" />
         <p class="small">
         {%- if page.content contains site.excerpt_separator -%}
-          <a href="{{- site.url -}}{{- page.url | relative_url -}}">Читать далее на <b>shikhalev.org</b> »</a>
+          <a href="{{- page.url | relative_url -}}">Читать далее на <b>shikhalev.org</b> »</a>
         {%- else -%}
-          <a href="{{- site.url -}}{{- page.url | relative_url -}}">Перейти на <b>shikhalev.org</b> »</a>
+          <a href="{{- page.url | relative_url -}}">Перейти на <b>shikhalev.org</b> »</a>
         {%- endif -%}
         </p>
         {%- if page.tags and page.tags.size > 0 -%}
