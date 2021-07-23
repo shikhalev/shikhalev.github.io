@@ -15,9 +15,14 @@
   }
 
   .tag-box {
-    display: table;
     break-inside: avoid;
     page-break-inside: avoid;
+
+    margin-bottom: 10px;
+
+    h5 {
+      margin: 0px;
+    }
   }
 
   h5 {
