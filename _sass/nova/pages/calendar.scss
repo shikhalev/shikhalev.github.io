@@ -7,11 +7,10 @@
   }
 
   .calendar-year {
-    columns: 2;
-
-    @media screen and (max-width: 599px) {
-      columns: 1;
-    }
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   .post-title {
@@ -19,6 +18,8 @@
   }
 
   .box {
+    flex: 1 300px;
+
     break-inside: avoid;
     page-break-inside: avoid;
 
@@ -26,12 +27,18 @@
 
     h3 {
       margin: 0px 0px 10px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+      break-after: avoid;
+      page-break-after: avoid;
     }
 
     p {
       text-align: left;
       hyphens: manual;
       margin: 0px 0px 0px $shift;
+      break-inside: avoid;
+      page-break-inside: avoid;
 
       &.meta {
         margin-bottom: 10px;
