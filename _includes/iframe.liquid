@@ -34,7 +34,7 @@
   {%- assign youtube_attrs = '' -%}
 {%- endif -%}
 <figure markdown="0" id="{{- id -}}" class="{{- class -}}" style="max-width: {{- width -}}px;">
-  <iframe src="{{- src -}}" title="{{- title -}}"{{- frm_class -}}{{- frm_style -}}{{- youtube_attrs -}}>{{- alt -}}</iframe>
+  <iframe loading="lazy" src="{{- src -}}" title="{{- title -}}"{{- frm_class -}}{{- frm_style -}}{{- youtube_attrs -}}>{{- alt -}}</iframe>
   {%- if caption -%}
     <figcaption markdown="span">{{- caption -}}</figcaption>
   {%- endif -%}
