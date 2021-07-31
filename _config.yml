@@ -41,6 +41,8 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+theme: minima
+
 defaults:
   - scope:
       path: "_posts"
