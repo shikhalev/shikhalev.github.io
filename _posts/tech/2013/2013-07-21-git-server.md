@@ -154,4 +154,4 @@ $feature{'highlight'}{'default'} = [1];
 
 
 [gitlab]: https://gitlab.org/
-[docs]: git-scm.com/book/ru/v2/Git-на-сервере-GitWeb
+[docs]: https://git-scm.com/book/ru/v2/Git-на-сервере-GitWeb
