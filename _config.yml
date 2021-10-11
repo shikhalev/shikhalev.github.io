@@ -51,6 +51,11 @@ google:
   analytics: G-QCHKX2MX1B
   search: 757997bbb3ada06b9
 
+license:
+  content:
+    name: CC BY-SA 4.0
+    url: https://creativecommons.org/licenses/by-sa/4.0/
+
 defaults:
   - scope:
       path: "_posts"
