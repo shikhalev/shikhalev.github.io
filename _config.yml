@@ -40,8 +40,9 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
 
-theme: minima
+remote_theme: shikhalev/jekyll-theme
 
 defaults:
   - scope:
