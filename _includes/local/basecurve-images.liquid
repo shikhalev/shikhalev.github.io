@@ -1,0 +1,8 @@
+{%- capture off_file -%}/assets/img/2020-01/nbc/off-IMG_{{- include.file -}}.jpg{%- endcapture -%}
+{%- capture none_file -%}/assets/img/2020-01/nbc/none-IMG_{{- include.file -}}.jpg{%- endcapture -%}
+{%- capture light_file -%}/assets/img/2020-01/nbc/light-IMG_{{- include.file -}}.jpg{%- endcapture -%}
+<div class="image-box">
+{% include image.liquid place="inner" width=200 src=off_file title="Базовая кривая отключена" link=false %}
+{% include image.liquid place="inner" width=200 src=none_file title="Базовая кривая включена, сохранение цветов отключено" link=false %}
+{% include image.liquid place="inner" width=200 src=light_file title="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию" link=false %}
+</div>

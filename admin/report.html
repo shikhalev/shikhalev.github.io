@@ -12,6 +12,13 @@ comments: false
   <tr><td><code>jekyll.environment</code></td><td><code>{{ jekyll.environment | inspect }}</code></td></tr>
 </table>
 
+<pre>
+{{ site.google | inspect }}
+{{ site.google.ads | inspect }}
+{{ site.google.ads.client | inspect }}
+{{ site.google.ads.slot | inspect }}
+</pre>
+
 <h2 id="oneorzero">Посты без категорий или с одной</h2>
 
 {% for post in site.posts %}

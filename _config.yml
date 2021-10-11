@@ -44,6 +44,13 @@ plugins:
 
 remote_theme: shikhalev/jekyll-theme
 
+google:
+  ads:
+    client: ca-pub-0375312458116348
+    slot: 3344942310
+  analytics: G-QCHKX2MX1B
+  search: 757997bbb3ada06b9
+
 defaults:
   - scope:
       path: "_posts"
