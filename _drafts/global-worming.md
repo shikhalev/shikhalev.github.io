@@ -9,6 +9,7 @@ tags:
   - новая этика
 image: /assets/img/2021-09/worm/sunrise.jpg
 recommend: true
+published: false
 ---
 {% include image.liquid place="center" width=600 src="/assets/img/2021-09/worm/sunrise.jpg" title="Рассвет 19 июля 2020 в Екатеринбурге" %}
 
