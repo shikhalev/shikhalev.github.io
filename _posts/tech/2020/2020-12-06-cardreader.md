@@ -85,8 +85,8 @@ image: /assets/img/2020-12/cardreader.jpg
 он питался от молекса — свободный конец питания SATA у меня нашелся, но предпоследний и неудобно
 расположенный, а вот молексов дополна, и они не используются.
 
-[ref-device]: http://ali.pub/5cv86n "Ссылка на товар"
-[ref-analogs]: http://ali.pub/5cv8ud "Ссылка на аналогичный товар"
-[ref-search]: http://ali.pub/5cv90l "Ссылка на поиск аналогов"
+[ref-device]: https://aliclick.shop/s/56y2bl "Ссылка на товар"
+[ref-analogs]: https://aliclick.shop/s/oi9atg "Ссылка на аналогичный товар"
+[ref-search]: https://aliclick.shop/s/kfvkef "Ссылка на поиск аналогов"
 
 [storages]: {% link _posts/tech/2019/2019-07-17-storages.md %} "Поиздевался над железками"

@@ -120,14 +120,14 @@ Wi-Fi, и управлять камерой с те­ле­фо­на полу�
 [gaich]: https://www.inaturalist.org/observations/102275748
 [insta]: https://www.instagram.com/p/CW7GnZcqfLR/
 [ps]: {% link _posts/photo/2021/2021-04-13-feeder-ps.md %}
-[yongnuo]: http://alii.pub/65aiqy
-[batmax]: http://alii.pub/65ak4j
-[f970box]: http://alii.pub/65all1
-[e18]: http://alii.pub/65am5n
-[mini-ups]: http://alii.pub/65ap3m
-[alloet]: http://alii.pub/65atn5
-[vesa]: http://alii.pub/65au3v
-[flat]: http://alii.pub/65aur7
-[sr-s]: http://alii.pub/65av2a
-[sr-l]: http://alii.pub/65av66
-[l-plate]: http://alii.pub/65axr4
+[yongnuo]: https://aliclick.shop/s/qjg5yc
+[batmax]: https://aliclick.shop/s/jfa4rb
+[f970box]: https://aliclick.shop/s/dbpj4q
+[e18]: https://aliclick.shop/s/zot2fx
+[mini-ups]: https://aliclick.shop/s/ieop5s
+[alloet]: https://aliclick.shop/s/ultwf7
+[vesa]: https://aliclick.shop/s/784xie
+[flat]: https://aliclick.shop/s/14kbvt
+[sr-s]: https://aliclick.shop/s/fcwecs
+[sr-l]: https://aliclick.shop/s/dbpj5b
+[l-plate]: https://aliclick.shop/s/yo7muq
