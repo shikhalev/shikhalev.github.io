@@ -13,6 +13,7 @@ tags:
     - программирование
     - Lua
 image: /assets/img/2022-10/conky-logobig.png
+recommend: true
 ---
 {% include image.liquid place="right" width=320 src="/assets/img/2022-10/conky-logobig.png" class="logo" link="https://github.com/brndnmtthws/conky" %}
 
