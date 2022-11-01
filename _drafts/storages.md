@@ -8,103 +8,228 @@ tags:
     - SATA
     - M.2
     - NVMe
+    - SD
+    - хранение иформации
+    - скорость передачи данных
+image: /assets/img/2022-11/storages.png
 ---
 
+{:.note.italic}
+**Disclaimer:** Автор в курсе, что нормальным тестом нижеизложенное не является и не может служить доказательством чего-либо или основанием
+для далекоидущих выводов. Опыты произведены для собственного удовольствия и удовлетворения любопытства в плохо контролируемых, уникальных и
+неповторимых условиях (даже не выключая всякие ютубчики).
+
+Немного погонял железяки. В целом тем же способом, что и в [посте «Поиздевался над железками»][old] чуть более трех лет назад, с той лишь
+разницей, что тестовый файл был размером 4 GiB и прогонял я `dd` на блоках разного размера: 1 GiB, 32 MiB, 1 MiB, 4 KiB и 1KiB (последний
+размер блока только на чтение, должен же быть хоть какой-то предел безумию). Кроме того, проверил скорость чтения посредством `hdparm -t /dev/xxx`,
+что по идее должно было дать максимальную скорость линейного чтения с блочного устройства... Но, см. далее.
+
+Тестовый стенд — мой новый компьютер, конфигурация которого описана в [предыдущем посте][prev]. Протестированные устройства:
+
+* **[SSD Netac NV7000 2TB][netac]** в двух экземплярах — в слоте PCIe 4.0 и PCIe 3.0 соответственно. Учитывая, что один из них системный, а второй 
+  под `/home`, понятно, что они были все это время заняты (кроме вызовов `hdparm`, ради которых я вышел из KDE, остановил большинство сервисов 
+  и даже размонтировал собственно `/home`). С другой стороны, никакой серьезной нагрузки в это время все-таки не было, только нормальная фоновая.
+
+* **HDD Samsung Archive 8TB** — диск старый и в старом тесте так же присутствовал.
+
+* SD-карты: старая **Transcend SDXC 64GB UHS-I U1**, которая также была в прошлом тесте, и более новая 
+  **[Kingston Canvas Se&shy;lect™ Plus 256GB UHS-I U3][sdk]**. При этом обе карты я проверил как через внутренний кардридер 
+  (см. [пост «Новая железяка»][reader]), так и внешний noname-ридер для USB 3.0, который опять же был мной проверен три года назад.
+  В таблице разные ридеры помечены как «(внутр.)» и «(внешн.)».
+
+* Карта micro-SD — **[Micro-SD Microdrive U1 32GB][micro]** — китайская, взята для китайской же фотоловушки.
+
+<!--more-->
+
+Собственно результаты в таблице.
+
 <table class="center">
-<thead>
 <tr>
- <th rowspan=3 align="left">Носитель</th><th colspan=10>Размер блока</th><th rowspan=3>hdparm</th>
+<th rowspan="2">Устройство</th><td rowspan="11"> </td><th rowspan="2"><code>hdparm</code></th>
+                               <td rowspan="11"> </td><th colspan="5"><code>dd</code>-чтение</th>
+                               <td rowspan="11"> </td><th colspan="4"><code>dd</code>-запись</th>
 </tr>
 <tr>
- <th colspan=2>1 KiB</th><th colspan=2>4 KiB</th><th colspan=2>1 MiB</th><th colspan=2>32 MiB</th><th colspan=2>1 GiB</th>
+<th><code>1KiB</code></th>
+<th><code>4KiB</code></th>
+<th><code>1MiB</code></th>
+<th><code>32MiB</code></th>
+<th><code>1GiB</code></th>
+
+<th><code>4KiB</code></th>
+<th><code>1MiB</code></th>
+<th><code>32MiB</code></th>
+<th><code>1GiB</code></th>
 </tr>
-<tr>
-<th>R</th><th>W</th>
-<th>R</th><th>W</th>
-<th>R</th><th>W</th>
-<th>R</th><th>W</th>
-<th>R</th><th>W</th>
-</tr>
-</thead>
-<tr>
+
+<tr style="font-style: italic;">
 <td>Оперативная память (tmpfs)</td>
-<td colspan=2 align="right">2100</td>
-<td colspan=2 align="right">4400</td>
-<td colspan=2 align="right">6000</td>
-<td colspan=2 align="right">5500</td>
-<td colspan=2 align="right">3900</td>
+<td> </td>
+<td align="right">2100</td>
+<td align="right">4400</td>
+<td align="right">6000</td>
+<td align="right">5500</td>
+<td align="right">3900</td>
+
+<td align="right">4400</td>
+<td align="right">6000</td>
+<td align="right">5500</td>
+<td align="right">3900</td>
 </tr>
+
 <tr>
 <td>SSD Netac NV7000 PCIe 4.0</td>
-<td align="right">1300</td><td align="right">    </td>
-<td align="right">1700</td><td align="right">  10</td>
-<td align="right">1400</td><td align="right">1000</td>
-<td align="right">2300</td><td align="right">1900</td>
-<td align="right">2200</td><td align="right">1900</td>
 <td align="right">4500</td>
+
+<td align="right">1300</td>
+<td align="right">1700</td>
+<td align="right">1400</td>
+<td align="right">2300</td>
+<td align="right">2200</td>
+
+<td align="right">  10</td>
+<td align="right">1000</td>
+<td align="right">1900</td>
+<td align="right">1900</td>
 </tr>
+
 <tr>
 <td>SSD Netac NV7000 PCIe 3.0</td>
-<td align="right">1400</td><td align="right">    </td>
-<td align="right">1700</td><td align="right">  10</td>
-<td align="right">1400</td><td align="right"> 860</td>
-<td align="right">2000</td><td align="right">1300</td>
-<td align="right">2000</td><td align="right">1400</td>
 <td align="right">3100</td>
+
+<td align="right">1400</td>
+<td align="right">1700</td>
+<td align="right">1400</td>
+<td align="right">2000</td>
+<td align="right">2000</td>
+
+<td align="right">  10</td>
+<td align="right"> 860</td>
+<td align="right">1300</td>
+<td align="right">1400</td>
 </tr>
+
 <tr>
 <td>HDD Seagate Archive SATA III</td>
-<td align="right"> 162</td><td align="right">    </td>
-<td align="right"> 163</td><td align="right" bgcolor="#FFB"> &lt;&lt;1</td>
-<td align="right"> 163</td><td align="right">  20</td>
-<td align="right"> 162</td><td align="right">  96</td>
-<td align="right"> 158</td><td align="right"> 132</td>
 <td align="right"> 178</td>
+
+<td align="right"> 162</td>
+<td align="right"> 163</td>
+<td align="right" class="cold-marker"> <abbr title="Было 146">163</abbr></td>
+<td align="right"> 162</td>
+<td align="right"> 158</td>
+
+<td align="right" class="marker"> &lt;&lt;1</td>
+<td align="right" class="cold-marker">  <abbr title="Было 16">20</abbr></td>
+<td align="right">  96</td>
+<td align="right"> 132</td>
 </tr>
+
 <tr>
 <td>SD Kingston U3 256GB (внутр.)</td>
-<td align="right">  94</td><td align="right">    </td>
-<td align="right">  94</td><td align="right" bgcolor="#FFB">  &lt;2</td>
-<td align="right">  98</td><td align="right">  56</td>
-<td align="right">  97</td><td align="right">  86</td>
-<td align="right">  97</td><td align="right">  88</td>
-<td align="right">  93</td>
+<td align="right" class="marker">  93</td>
+
+<td align="right">  94</td>
+<td align="right">  94</td>
+<td align="right">  98</td>
+<td align="right">  97</td>
+<td align="right">  97</td>
+
+<td align="right" class="marker">  &lt;2</td>
+<td align="right">  56</td>
+<td align="right">  86</td>
+<td align="right">  88</td>
 </tr>
+
 <tr>
 <td>SD Kingston U3 256GB (внешн.)</td>
-<td align="right">  95</td><td align="right">    </td>
-<td align="right">  95</td><td align="right" bgcolor="#FFB">   2</td>
-<td align="right">  98</td><td align="right">  60</td>
-<td align="right">  97</td><td align="right">  87</td>
-<td align="right">  97</td><td align="right">  88</td>
-<td align="right">  93</td>
+<td align="right" class="marker">  93</td>
+
+<td align="right">  95</td>
+<td align="right">  95</td>
+<td align="right">  98</td>
+<td align="right">  97</td>
+<td align="right">  97</td>
+
+<td align="right" class="marker">   2</td>
+<td align="right">  60</td>
+<td align="right">  87</td>
+<td align="right">  88</td>
 </tr>
+
 <tr>
 <td>SD Transcend U1 64GB (внутр.)</td>
-<td align="right">  93</td><td align="right">    </td>
-<td align="right">  93</td><td align="right" bgcolor="#FFB">  &lt;1</td>
-<td align="right">  96</td><td align="right">  22</td>
-<td align="right">  96</td><td align="right">  27</td>
-<td align="right">  96</td><td align="right">  27</td>
-<td align="right">  90</td>
+<td align="right" class="marker">  90</td>
+
+<td align="right">  93</td>
+<td align="right">  93</td>
+<td align="right">  96</td>
+<td align="right">  96</td>
+<td align="right">  96</td>
+
+<td align="right" class="marker">  &lt;1</td>
+<td align="right">  22</td>
+<td align="right">  27</td>
+<td align="right">  27</td>
 </tr>
+
 <tr>
 <td>SD Transcend U1 64GB (внешн.)</td>
-<td align="right">  94</td><td align="right">    </td>
-<td align="right">  94</td><td align="right" bgcolor="#FFB">  &lt;1</td>
-<td align="right">  97</td><td align="right">  23</td>
-<td align="right">  96</td><td align="right">  28</td>
-<td align="right">  96</td><td align="right">  28</td>
-<td align="right">  90</td>
+<td align="right" class="marker">  90</td>
+
+<td align="right">  94</td>
+<td align="right">  94</td>
+<td align="right" class="cold-marker">  <abbr title="Было 80">97</abbr></td>
+<td align="right">  96</td>
+<td align="right">  96</td>
+
+<td align="right" class="marker">  &lt;1</td>
+<td align="right" class="cold-marker">  <abbr title="Было 20">23</abbr></td>
+<td align="right">  28</td>
+<td align="right">  28</td>
 </tr>
+
 <tr>
 <td>Micro-SD Microdrive U1 32GB (внутр.)</td>
-<td align="right">  94</td><td align="right">    </td>
-<td align="right">  94</td><td align="right" bgcolor="#FFB">   1</td>
-<td align="right">  97</td><td align="right">  15</td>
-<td align="right">  97</td><td align="right">  16</td>
-<td align="right">  97</td><td align="right">  16</td>
-<td align="right">  93</td>
+<td align="right" class="marker">  93</td>
+
+<td align="right">  94</td>
+<td align="right">  94</td>
+<td align="right">  97</td>
+<td align="right">  97</td>
+<td align="right">  97</td>
+
+<td align="right" class="marker">   1</td>
+<td align="right">  15</td>
+<td align="right">  16</td>
+<td align="right">  16</td>
 </tr>
+
 </table>
 
+Голубым «<span class="cold-marker">маркером</span>» выделены результаты, которые можно напрямую сопоставить с [прошлым разом][old] — изменился только
+общий объем файла и платформа. Виден рост, не принципиальный, но в целом ощутимый.
+
+<span class="marker">Желтым</span> выделены две разные группы результатов:
+
+* Во-первых, запись с размером блока 4 KiB в выделенных ячейках вместо нескольких запусков команды был один и тот не законченный. Просто ждать 
+  результатов не было никакого смысла. По той же причине запись с блоками 1 KiB вообще не тестировалась.
+
+* Во-вторых, странноватые результаты по `hdparm` на всех карточках — скорость чтения *устройства* напрямую *меньше*, чем при чтении *файла* 
+  посредством `dd`...
+
+Не очень понятно, почему выросли скорости на старых носителях, т.е. новая платформа — это, конечно, хорошо, но ведь они и на старой были далеки 
+от возможных пределов. Ну, да ладно, лучше не хуже.
+
+Прикольно, насколько новая карточка быстрее старой (на запись), а ведь я ее ради объема (см. [пост «Начало кормушечного сезона»][feeder]) 
+и по случаю скидки покупал.
+
+Как-то так, так как-то.
+
+[old]: {% link _posts/tech/2019/2019-07-17-storages.md %}
+[prev]: {% link _posts/tech/2022/2022-10-31-harddybr.md %}
+[netac]: https://aliclick.shop/s/46dtx8 "SSD Netac NV7000 2TB"
+[sdk]: https://www.kingston.com/ru/memory-cards/canvas-select-plus-sd-card?capacity=256gb
+[reader]: {% link _posts/tech/2020/2020-12-06-cardreader.md %}
+[micro]: https://aliclick.shop/s/vmh75b "Micro-SD Microdrive U1 32GB"
+[feeder]: {% link _posts/photo/2021/2021-12-04-feeder-start-season.md %}
