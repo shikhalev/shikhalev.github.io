@@ -1,13 +1,14 @@
 ---
 title: Conky и OpenWeather
 description: Подключил прогноз погоды от OpenWeather к Conky
-category: 
+category:
     - tech
     - soft
     - web
 tags:
     - Conky
     - OpenWeather
+    - Lua
     - погода
     - мониторинг
 image: /assets/img/2022-11/weather.png
@@ -36,7 +37,7 @@ image: /assets/img/2022-11/weather.png
 
 1. Подключить так или иначе модуль [`openweather.lua`][module].
 
-2. Создать файл `~/.config/conky/openweather_config.lua` (`api_key` выдается на [OpenWeatherMap.org][ow] при регистрации, можно определить 
+2. Создать файл `~/.config/conky/openweather_config.lua` (`api_key` выдается на [OpenWeatherMap.org][ow] при регистрации, можно определить
    несколько мест (`places`)):
 
 {% highlight lua %}
