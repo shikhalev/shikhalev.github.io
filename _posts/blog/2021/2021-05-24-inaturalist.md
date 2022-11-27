@@ -16,7 +16,7 @@ image: /assets/img/2021-05/inat/1414.png
 recommend: true
 date: 2021-05-24 21:12 +0500
 ---
-{% include image.liquid place="right" width=320 src="/assets/img/2021-05/inat/1414.png" alt="Логотип iNaturalist"
+{% include image.liquid place="right" width=320 src="/assets/img/2021-05/inat/1414.png" shape=true alt="Логотип iNaturalist"
   title="iNaturalist.org" link="https://www.inaturalist.org/" class="logo" %}
 
 Я уже неоднократно упоминал[^birds][^bshot][^city] о сайте
