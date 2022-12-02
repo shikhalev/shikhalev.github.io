@@ -1,3 +1,6 @@
+.shift10 {
+  margin-top: -10px;
+}
 
 .shift20 {
   margin-top: -20px;
@@ -11,7 +14,7 @@
   margin-top: -50px;
 }
 
-.shift20, .shift30, .shift50 {
+.shift10, .shift20, .shift30, .shift50 {
   @media screen and (max-width: 500px) {
     margin-top: 0px;
   }
