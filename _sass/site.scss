@@ -1,0 +1,18 @@
+
+.shift20 {
+  margin-top: -20px;
+}
+
+.shift30 {
+  margin-top: -30px;
+}
+
+.shift50 {
+  margin-top: -50px;
+}
+
+.shift20, .shift30, .shift50 {
+  @media screen and (max-width: 500px) {
+    margin-top: 0px;
+  }
+}
