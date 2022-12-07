@@ -66,6 +66,7 @@ defaults:
       layout: nova/post
       image: /assets/img/icon.jpg
       author: Иван Шихалев
+      comments: false
   - scope:
       path: "_drafts"
     values:
@@ -85,7 +86,7 @@ defaults:
       type: website
       author: Иван Шихалев
   - scope:
-      path: "_posts/text"
+      path: "*"
     values:
       hide_last_comments: true
 
