@@ -5,8 +5,3 @@ recommendations: all
 category_id: home
 image: /assets/img/icon.jpg
 ---
-{% comment %}
-  * Рубрикация текстов по сериям (отдельное дерево категорий).
-  * Просмотр картинок через всплывалку с закрытием?
-    * Карусели картинок?
-{% endcomment %}
