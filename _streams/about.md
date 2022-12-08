@@ -7,9 +7,9 @@ icon: id-card
 order_no: 6
 recommendations: all
 ---
-{% include image.liquid place="right" width=256 src="/assets/img/icon.jpg" title="Я" link=false %}
-
 ## Био
+
+{% include image.liquid place="right" width=256 src="/assets/img/icon.jpg" title="Я" link=false class="face" %}
 
 Родился **25 мая 1979 года**.
 
@@ -18,7 +18,7 @@ recommendations: all
 предпочитаю **[C#][csharp]{:.img-icon-csharp}**, **[Ruby][ruby]{:.img-icon-ruby}** и **[Rust][rust]{:.img-icon-rust}**.
 
 В качестве основной системы для себя использую **[Gen­too Li­nux][gentoo]{:.img-icon-gentoo}** со средой рабочего стола **[KDE][kde]{:.img-icon-kde}**, хотя знакомым,
-не специализирующимся в IT, рекомендую **[Li­nux Mint][mint]{:.img-icon-linux-mint}** (от среды Cinnamon у меня очень хорошие впечатления, но все привычки
+не специализирующимся в IT, рекомендую **[Li­nux Mint][mint]{:.img-icon-linux-mint}** (от сре­ды Cinnamon у меня очень хорошие впечатления, но все привычки
 уже заточены под KDE) или **[KDE Neon][neon]{:.img-icon-kde-neon}**. Вообще в целом предпочитаю Linux и свободное ПО везде, где это возможно.
 
 Мой профиль на GitHub: <a href="https://github.com/shikhalev" class="img-icon-github"><span style="font-weight:bold;">https://github.com/shi­kha­lev</span></a>
