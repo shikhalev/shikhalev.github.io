@@ -67,6 +67,7 @@ defaults:
       image: /assets/img/icon.jpg
       author: Иван Шихалев
       comments: false
+      icon: file-alt
   - scope:
       path: "_drafts"
     values:
