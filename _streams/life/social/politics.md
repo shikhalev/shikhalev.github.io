@@ -5,4 +5,5 @@ title: Политика
 description: Посты о политике
 order_no: 1
 icon: bullhorn
+small: true
 ---

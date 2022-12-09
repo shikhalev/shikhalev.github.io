@@ -7,4 +7,5 @@ order_no: 3
 recommendations: best
 icon: feather
 hide_last_comments: true
+small: true
 ---
