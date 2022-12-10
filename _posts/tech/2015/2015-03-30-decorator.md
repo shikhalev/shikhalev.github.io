@@ -28,7 +28,7 @@ recommend: true
 
 <!--more-->
 
-<hr>
+<hr style="clear: both;">
 
 <div class="sticker right" style="max-width:300px;">
 <u>Декоратор в общем смысле</u> — шаблон проектирования, предусматривающий динамическое подключение дополнительной
