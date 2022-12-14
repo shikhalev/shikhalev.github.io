@@ -1,5 +1,6 @@
 ---
 title: Паломники
 category: [ text, prose ]
-published: false
+published: true
 ---
+Красный отживший лист медленно опустился на заиндевевшее обожженное пятно кострища.
