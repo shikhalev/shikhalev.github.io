@@ -13,7 +13,7 @@ tags:
   - AliExpress
 image: /assets/img/2021-12/feed/1638502613132.jpg
 ---
-{% include image.liquid place="right" width=240 src="/assets/img/2021-12/feed/IMG_3554.jpg" title="Синица на кормушке" %}
+{% include image.liquid place="right" width=240 src="/assets/img/2021-12/feed/IMG_3554.jpg" title="Синица на кормушке" class="face" %}
 
 В последний день осени начал очередной фотокормушечный сезон (просто кормушечный стартовал раньше). [Первый блин][nat-day]
 получился немножко комом — и птиц пока маловато, и я не «пристрелялся» по новой кормушке на новом месте.
