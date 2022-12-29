@@ -41,8 +41,14 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-toc
 
 remote_theme: shikhalev/jekyll-theme
+
+toc:
+  min_level: 2
+  max_level: 4
+  list_id: toc_list
 
 google:
   ads:
@@ -64,6 +70,7 @@ defaults:
       path: "_posts"
     values:
       layout: nova/post
+      toc: true
       image: /assets/img/icon.jpg
       author: Иван Шихалев
       comments: false
@@ -90,6 +97,7 @@ defaults:
       path: "*"
     values:
       hide_last_comments: true
+      toc: true
 
 header_pages:
   - _streams/tech.md
