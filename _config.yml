@@ -43,7 +43,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-toc
 
-remote_theme: shikhalev/jekyll-theme
+theme: jekyll-theme-shikhalev
 
 toc:
   min_level: 2

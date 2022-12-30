@@ -26,3 +26,5 @@ group :jekyll_plugins do
   gem "jekyll-toc"
   gem "jekyll-remote-theme"
 end
+
+gem 'jekyll-theme-shikhalev', '0.1.0'
