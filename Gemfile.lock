@@ -44,7 +44,7 @@ GEM
       jekyll (>= 3.8, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-theme-shikhalev (0.1.0.2)
+    jekyll-theme-shikhalev (0.1.0.3)
       jekyll (>= 4.0, < 5.0)
       liquid (~> 4.0)
     jekyll-toc (0.17.1)
@@ -81,7 +81,7 @@ GEM
       jekyll (>= 4.0, < 5.0)
       liquid (~> 4.0)
       shi-tools (~> 0.2.0)
-    shi-jekyll-images (0.1.0.3)
+    shi-jekyll-images (0.1.0.4)
       jekyll (>= 4.0, < 5.0)
       liquid (~> 4.0)
       shi-args (~> 0.3.4.2)
@@ -101,10 +101,10 @@ DEPENDENCIES
   jekyll-remote-theme
   jekyll-seo-tag
   jekyll-sitemap
-  jekyll-theme-shikhalev (>= 0.1.0.2)
+  jekyll-theme-shikhalev (>= 0.1.0.3)
   jekyll-toc
   json
-  shi-jekyll-images (~> 0.1.0.3)
+  shi-jekyll-images (~> 0.1.0.4)
 
 BUNDLED WITH
    2.4.3
