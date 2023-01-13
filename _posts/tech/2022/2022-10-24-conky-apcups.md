@@ -16,9 +16,10 @@ tags:
     - apcupsd
     - OpenRC
     - Gentoo
-image: /assets/img/2022-10/conky-logobig.png
+image: _src/2022/10/2022-10-24/conky-seo.svg
 ---
-{% include image.liquid place="right" width=320 src="/assets/img/2022-10/conky-logobig.png" class="logo" link="https://github.com/brndnmtthws/conky" %}
+{% image @_src/2022/10/2022-10-24/conky.svg figure right width=240px
+                             shape=true fig_class="logo" fig_style="shape-margin:20px;" link="https://github.com/brndnmtthws/conky" %}
 
 Продолжая [тему][prev] **[Conky][conky]** и мониторинга вообще, разберемся с выводом данных по двум бесперебойникам, подключенным к одному компьютеру.
 В моем случае они оба фирмы APC, что упрощает задачу, но не до конца.

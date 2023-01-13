@@ -17,7 +17,7 @@ gem "jekyll", "~> 4.3.1"
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
 
-gem 'shi-jekyll-images', "~> 0.1.0.4"
+gem 'shi-jekyll-images', "~> 0.1.0.5"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
@@ -29,4 +29,4 @@ group :jekyll_plugins do
   gem "jekyll-remote-theme"
 end
 
-gem 'jekyll-theme-shikhalev', '>= 0.1.0.3'
+gem 'jekyll-theme-shikhalev', '>= 0.1.0.4'
