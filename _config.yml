@@ -42,8 +42,12 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-toc
+  - shi-jekyll-images
 
 theme: jekyll-theme-shikhalev
+
+shi_images:
+  image_bounds: FullHD
 
 toc:
   min_level: 2
@@ -123,6 +127,8 @@ collections:
   calendars:
     output: true
     permalink: /:path/all
+  src:
+    output: false
 
 staticman_url: https://api.staticman.net/v3/entry/github/shikhalev/shikhalev.github.io/main/comments
 date_format: "%Y.%m.%d"
