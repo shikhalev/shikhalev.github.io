@@ -77,14 +77,14 @@ GEM
     safe_yaml (1.0.5)
     sass-embedded (1.57.1-x86_64-linux-gnu)
       google-protobuf (~> 3.21)
-    shi-args (0.3.4.1)
+    shi-args (0.3.4.2)
       jekyll (>= 4.0, < 5.0)
       liquid (~> 4.0)
       shi-tools (~> 0.2.0)
-    shi-jekyll-images (0.1.0.1)
+    shi-jekyll-images (0.1.0.3)
       jekyll (>= 4.0, < 5.0)
       liquid (~> 4.0)
-      shi-args (~> 0.3.4.1)
+      shi-args (~> 0.3.4.2)
       shi-tools (~> 0.2.0)
     shi-tools (0.2.0)
     terminal-table (3.0.2)
@@ -104,7 +104,7 @@ DEPENDENCIES
   jekyll-theme-shikhalev (>= 0.1.0.2)
   jekyll-toc
   json
-  shi-jekyll-images (~> 0.1.0.1)
+  shi-jekyll-images (~> 0.1.0.3)
 
 BUNDLED WITH
    2.4.3
