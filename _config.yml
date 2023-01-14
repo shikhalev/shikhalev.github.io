@@ -47,7 +47,7 @@ plugins:
 theme: jekyll-theme-shikhalev
 
 shi_images:
-  image_bounds: FullHD
+  image_bounds: fhd
 
 toc:
   min_level: 2
