@@ -6,9 +6,9 @@ tags:
   - shikhalev.org
   - сайты
   - верстка
-image: /assets/img/2021-06/refactoring.png
+image: _src/2021/06/2021-06-03/refactoring.png
 ---
-{% include image.liquid place="right" width=320 src="/assets/img/2021-06/refactoring.png" %}
+{% image @_src/2021/06/2021-06-03/refactoring.png figure right width=320px %}
 
 Ну, что ж. Общее представление, как должен выглядеть этот сайт у меня сложилось (внешне — примерно как и сейчас).
 Есть большое желание привести в порядок внутреннее устройство и исправить ряд недочетов, видимых снаружи.
