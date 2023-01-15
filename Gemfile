@@ -29,4 +29,4 @@ group :jekyll_plugins do
   gem "jekyll-remote-theme"
 end
 
-gem 'jekyll-theme-shikhalev', '>= 0.1.0.4'
+gem 'jekyll-theme-shikhalev', '>= 0.1.0.5'
