@@ -11,9 +11,9 @@ tags:
     - Lua
     - погода
     - мониторинг
-image: /assets/img/2022-11/weather.png
+image: _src/2022/11/2022-11-04/weather.png
 ---
-{% include image.liquid place="right" width=489 src="/assets/img/2022-11/weather.png" title="Погода в Conky" link=false %}
+{% image @_src/2022/11/2022-11-04/weather.png figure right width=489px link=false title="Погода в Conky" %}
 
 Подключил прогноз погоды от **[OpenWeather][ow]** к Conky. Пока оно сыровато, надо продумать получше архитектуру, чтобы было удобно
 пользоваться. Поэтому я не стал пока документировать этот модуль в [README][readme] **[репозитория][repo]{:.img-icon-github}**,

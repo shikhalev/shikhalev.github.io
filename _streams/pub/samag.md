@@ -7,8 +7,9 @@ order_no: 1
 recommendations: false
 icon: university
 small: true
+date: 2021-01-01
 ---
-{% include image.liquid place="right" width=293 src="/assets/img/samag.jpg" link="http://samag.ru/" %}
+{% image @_src/samag.jpg right figure width=293px link="http://samag.ru/" fig_class="logo" fig_style="margin-left:20px;" %}
 
 > [по истечении одного года с момента первой публикации автор имеет право опубликовать свой материал в другом месте без предварительного письменного согласия редакции, с обязательной ссылкой на журнал][rules]
 

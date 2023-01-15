@@ -6,10 +6,13 @@ description: О себе, этом сайте и т.д.
 icon: id-card
 order_no: 6
 recommendations: all
+image: _src/IMG_2399.jpg
+seo_image_crop: "500:261+0+600"
+date: 2021-01-01
 ---
 ## Био
 
-{% include image.liquid place="right" width=256 src="/assets/img/icon.jpg" title="Я" link=false class="face" %}
+{% image @_src/IMG_2399.jpg figure right width=256px crop="2626x2626+467+259" bounds="1280x1280" title="Я" fig_class="face" %}
 
 Родился **25 мая 1979 года**.
 

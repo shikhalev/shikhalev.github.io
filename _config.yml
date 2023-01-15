@@ -42,8 +42,12 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-toc
+  - shi-jekyll-images
 
 theme: jekyll-theme-shikhalev
+
+shi_images:
+  image_bounds: fhd
 
 toc:
   min_level: 2
@@ -71,7 +75,6 @@ defaults:
     values:
       layout: nova/post
       toc: true
-      image: /assets/img/icon.jpg
       author: Иван Шихалев
       comments: false
       icon: file-alt
@@ -83,19 +86,18 @@ defaults:
       path: "_calendars"
     values:
       layout: nova/calendar
-      image: /assets/img/icon.jpg
       type: website
       author: Иван Шихалев
   - scope:
       path: "_streams"
     values:
       layout: nova/stream
-      image: /assets/img/icon.jpg
       type: website
       author: Иван Шихалев
   - scope:
       path: "*"
     values:
+      image: _src/IMG_2774.jpg
       hide_last_comments: true
       toc: true
 
@@ -123,6 +125,8 @@ collections:
   calendars:
     output: true
     permalink: /:path/all
+  src:
+    output: false
 
 staticman_url: https://api.staticman.net/v3/entry/github/shikhalev/shikhalev.github.io/main/comments
 date_format: "%Y.%m.%d"
