@@ -6,7 +6,8 @@ category:
   - web
   - programming
   - about
-image: /assets/img/2021-07/report/jekyll-screen.png
+image: _src/2021/07/2021-07-09/jekyll-screen.png
+seo_image_crop: "500:261+0+20"
 tags:
   - shikhalev.org
   - сайты
@@ -41,8 +42,7 @@ tags:
   - пробелы
   - медиа-селекторы
 ---
-{% include image.liquid place="right" width=320 src="/assets/img/2021-07/report/jekyll-screen.png"
-   caption="Скриншот с [официального сайта Jekyll](https://jekyllrb.com/)" %}
+{% image @_src/2021/07/2021-07-09/jekyll-screen.png figure right width=320px caption="Скриншот с [официального сайта Jekyll](https://jekyllrb.com/)" %}
 
 Итак, я таки отрефакторил и обновил данный сайт. Почему нельзя было сразу делать правильно? Ну, в основном потому,
 что я впервые имел дело с Jekyll, изрядно подзабыл (а что-то и не знал) базовые приемы верстки... И так далее,
