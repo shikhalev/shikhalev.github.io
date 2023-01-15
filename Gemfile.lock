@@ -81,7 +81,7 @@ GEM
       jekyll (>= 4.0, < 5.0)
       liquid (~> 4.0)
       shi-tools (~> 0.2.0)
-    shi-jekyll-images (0.1.0.5)
+    shi-jekyll-images (0.1.0.7)
       jekyll (>= 4.0, < 5.0)
       liquid (~> 4.0)
       shi-args (~> 0.3.4.2)
@@ -104,7 +104,7 @@ DEPENDENCIES
   jekyll-theme-shikhalev (>= 0.1.0.5)
   jekyll-toc
   json
-  shi-jekyll-images (~> 0.1.0.5)
+  shi-jekyll-images (~> 0.1.0.7)
 
 BUNDLED WITH
    2.4.3
