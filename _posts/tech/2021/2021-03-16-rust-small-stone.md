@@ -4,10 +4,11 @@ description: Нечастый случай, когда Rust (его станда
 category: [ tech, programming, rust ]
 tags:
   - грабли
-image: /assets/img/2021-03/rust_logo.png
+image: _src/2021/03/2021-03-16/rust-logo-512x512.png
+seo_image_crop: "500:261+0+107"
 recommend: true
 ---
-{% include image.liquid place="right" width=256 src="/assets/img/ico/rust.png" alt="Логотип Rust" class="logo" shape=true %}
+{% image @_src/2021/03/2021-03-16/rust-logo.png figure right width=256px shape fig_class="logo" link=false alt="Логотип Rust" %}
 
 Обнаружил тут некоторый подводный камень в стандартной библиотеке Rust. Багом это назвать, конечно, нельзя,
 просто такой момент, где можно по собственной невнимательности наступить на грабли и не сразу это заметить, что

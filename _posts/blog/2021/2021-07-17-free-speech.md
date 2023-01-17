@@ -16,12 +16,13 @@ tags:
   - свобода
   - культура отмены
   - этика
-image: /assets/img/2021-07/fs/franklin.jpg
+image: _src/2021/07/2021-07-17/benjfrank.jpg
+seo_image_crop: "500:261+0+472"
 recommend: true
 ---
-{% include image.liquid place="right" width=240 src="/assets/img/2021-07/fs/franklin.jpg"
-   link="https://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Benjamin_Franklin_1767.jpg"
-   title="Портрет Бенджамина Франклина 1767 года кисти английского художника Дэвида Мартина (взят с Википедии)" %}
+{% image @_src/2021/07/2021-07-17/benjfrank.jpg figure right width=240px crop="2070x2450+0+163"
+         title="Портрет Бенджамина Франклина 1767 года кисти английского художника Дэвида Мартина (взят с Википедии)"
+         link=https://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Benjamin_Franklin_1767.jpg %}
 
 {:.epigraph}
 > They that can give up essential liberty to purchase a little temporary safety, deserve neither liberty nor safety.

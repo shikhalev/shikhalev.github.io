@@ -21,12 +21,12 @@ tags:
   - Locus Map
   - KDE Connect
   - GPS
-image: /assets/img/2021-07/gpx/gpxlab.png
+image: _src/2021/07/2021-07-17/gpxlab.png
 recommend: true
 ---
 ## Получение трека
 
-{% include image.liquid place="right" width=200 src="/assets/img/2021-07/gpx/locus-map.jpg" title="Скриншот Locus Map" %}
+{% image @_src/2021/07/2021-07-17/locus-map.jpg figure right width=200px title="Скриншот Locus Map" %}
 
 Фотокамера у меня недорогая, и GPS в ней, конечно, нет. Зато есть в телефоне. Поэтому треки я записываю приложением
 **[Locus<span> Map Free</span>][locus]{:.img-icon-locus-map}** (не Pro) — большую часть его возможностей (даже бесплатной
@@ -54,7 +54,7 @@ Locus Map проверяет эти разрешения и выдает под
 Итак, у нас есть GPX-файл со все­ми перемещениями. Необязательно полученный именно с телефона, и имен­но так, как я изложил
 выше — подойдет любой источник, глав­ное — часы синхронизировать.
 
-{% include image.liquid place="center" width=800 src="/assets/img/2021-07/gpx/gpxlab.png" title="Главное окно GPXLab" %}
+{% image @_src/2021/07/2021-07-17/gpxlab.png figure center width=800px title="Главное окно GPXLab" %}
 
 Теперь нужно почистить трек: GPS — штука тонкая, и слу­ча­ют­ся вылеты типа показанного на скрин­шо­те — там аж несколько точек,
 образующих «треугольную» петлю, явно лажовые. Вообще, существуют программы, ищущие и вы­чи­ща­ю­щие такие точки автоматически
