@@ -9,9 +9,10 @@ tags:
   - USB
 
 description: Встраиваемый кардридер с AliExpress
-image: /assets/img/2020-12/cardreader.jpg
+image: _src/2020/12/2020-12-06/en.png
+seo_image_crop: "500:261+194+0"
 ---
-{% include image.liquid place="right" width=320 src="/assets/img/2020-12/cardreader.jpg" caption="Иллюстрация честно потырена у продавца" %}
+{% image @_src/2020/12/2020-12-06/en.png figure right width=320px shape fig_class="logo" title="Иллюстрация честно потырена у продавца" %}
 
 Приобрел на Али очередную железку, сегодня руки дошли проверить.
 
