@@ -21,6 +21,7 @@ tags:
   - Locus Map
   - KDE Connect
   - GPS
+  - мобильные приложения
 image: _src/2021/07/2021-07-17/gpxlab.png
 recommend: true
 ---
