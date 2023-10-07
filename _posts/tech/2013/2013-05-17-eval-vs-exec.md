@@ -7,9 +7,8 @@ tags:
   - языки программирования
   - размышлизмы
   - скриптовые языки
-image: /assets/img/2013-05/form.png
 ---
-{% include image.liquid place="right" width=319 src="/assets/img/2013-05/form.png" class="logo" link=false %}
+{% image @_src/2013/05/scr/form.png figure right width=319px fig_class="logo" link=false %}
 
 Подумалось: а ведь скриптовые интерпретируемые языки вполне способны на не&shy;ко&shy;то&shy;рых задачах обгонять компилируемые
 и сильно, если программу не *исполнять*, а *вычислять* как формулу — это же совершенно не обязательно делать
