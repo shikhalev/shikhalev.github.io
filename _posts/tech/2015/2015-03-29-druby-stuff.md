@@ -6,9 +6,9 @@ tags:
   - dRuby
   - RPC
   - грабли
-image: /assets/img/2015-03/red_stones.jpg
+image: _src/2015/03/druby/red_stones.jpg
 ---
-{% include image.liquid place="right" width=320 src="/assets/img/2015-03/red_stones.jpg" %}
+{% image @_src/2015/03/druby/red_stones.jpg figure right width=320px link=false %}
 
 ## DRbObject не является DRbUndumped
 
