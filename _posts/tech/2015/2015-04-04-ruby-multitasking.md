@@ -6,12 +6,14 @@ tags:
   - многопоточность
   - оптимизация
   - многозадачность
-image: /assets/img/2015-04/136.gif
+image: _src/2015/04/samag/screen-multitask.png
 recommend: true
 ---
 [Оригинал этой статьи опубликован в журнале «Системный администратор» №3 (136) за март 2014][samag].
 
-{% include image.liquid place="right" width=158 src="/assets/img/2015-04/136.gif" link="http://samag.ru/archive/article/2645" style="padding-bottom:-5px;" %}
+-----
+
+{% image @_src/samag/136.gif figure right width=158px fig_style="padding: 5px;" link="http://samag.ru/archive/article/2645" %}
 
 <div class="note">
 **В статье рассматриваются основные средства работы с потоками (threads) и процессами в языке и стандартной библиотеке Ruby**

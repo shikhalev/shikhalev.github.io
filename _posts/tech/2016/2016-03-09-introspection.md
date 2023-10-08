@@ -5,12 +5,14 @@ category: [ tech, programming, ruby, pub, samag ]
 tags:
   - интроспекция
   - метапрограммирование
-image: /assets/img/2016-03/samag146-147.jpg
+image: _src/2016/03/samag/screen-introspection.png
 recommend: true
 ---
 [Оригинал этой статьи опубликован в журнале «Системный администратор» №1-2 (146-147) за февраль 2015][samag].
 
-{% include image.liquid place="right" width=158 src="/assets/img/2016-03/samag146-147.jpg" link="http://samag.ru/archive/article/2874" style="margin-bottom:0px;" %}
+-----
+
+{% image @_src/samag/146-7.jpg figure right width=158px fig_style="padding: 5px;" link="http://samag.ru/archive/article/2874" %}
 
 <div class="note">
 

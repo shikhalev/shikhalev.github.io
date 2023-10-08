@@ -9,7 +9,7 @@ icon: university
 small: true
 date: 2021-01-01
 ---
-{% image @_src/samag.jpg right figure width=293px link="http://samag.ru/" fig_class="logo" fig_style="margin-left:20px;" %}
+{% image @_src/samag/samag.jpg right figure width=293px link="http://samag.ru/" fig_class="logo" fig_style="margin-left:20px;" %}
 
 > [по истечении одного года с момента первой публикации автор имеет право опубликовать свой материал в другом месте без предварительного письменного согласия редакции, с обязательной ссылкой на журнал][rules]
 

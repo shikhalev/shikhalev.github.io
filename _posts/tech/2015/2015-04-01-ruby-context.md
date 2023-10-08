@@ -5,12 +5,14 @@ category: [ tech, programming, ruby, pub, samag ]
 tags:
   - контекст
   - замыкания
-image: /assets/img/2015-04/134-5.gif
+image: _src/2015/04/samag/screen-context.png
 recommend: true
 ---
 [Оригинал этой статьи опубликован в журнале «Системный администратор» №1–2 (134–135) за январь–февраль 2014][samag].
 
-{% include image.liquid place="right" width=158 src="/assets/img/2015-04/134-5.gif" link="http://samag.ru/archive/article/2622" %}
+-----
+
+{% image @_src/samag/134-5.gif figure right width=158px fig_style="padding: 5px;" link="http://samag.ru/archive/article/2622" %}
 
 <div class="note">
 **Что стоит за конкретным идентификатором в данном окружении**

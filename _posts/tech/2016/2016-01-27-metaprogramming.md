@@ -4,12 +4,14 @@ description: Добавление собственных абстракций в
 category: [ tech, programming, ruby, pub, samag ]
 tags:
   - метапрограммирование
-image: /assets/img/2016-01/samag-145.jpg
+image: _src/2016/01/samag/screen-meta.png
 recommend: true
 ---
 [Оригинал этой статьи опубликован в журнале «Системный администратор» №12 (145) за декабрь 2014][samag].
 
-{% include image.liquid place="right" width=158 link="http://samag.ru/archive/article/2842" src="/assets/img/2016-01/samag-145.jpg" %}
+-----
+
+{% image @_src/samag/145.jpg figure right width=158px fig_style="padding: 5px;" link="http://samag.ru/archive/article/2842" %}
 
 <div class="note">
 **Добавление собственных абстракций в объектную модель — это просто. И интересно.**
@@ -328,7 +330,7 @@ demo03.rb:24:in `‹main›': Invalid property (beta) value: -1! (StandardError)
 
 [samag]: http://samag.ru/archive/article/2842
 
-[^deco]: Статья [«Декораторы в Ruby»][deco]. «Системный администратор» № 9 (130), сентябрь 2013. Стр. 68–71.
+[^deco]: Статья [«Декораторы в Ruby»]({% link _posts/tech/2015/2015-03-30-decorator.md %}). «Системный администратор» № 9 (130), сентябрь 2013. Стр. 68–71.
 [^context]: Подробнее о контекстах см. мою статью [«Блоки и контекст в Ruby»][ctx]. «Системный администратор» № 1–2 (134–135), январь-февраль 2014. Стр. 111–115.
 [^gist]: Полные тексты примеров размещены на GitHub — <https://gist.github.com/shikhalev/5f19659a7ed82ce83c58>.
 [^orm]: Object-Relational Mapping — отображение реляционных баз данных в объектную модель.
