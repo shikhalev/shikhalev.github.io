@@ -37,3 +37,5 @@ recommend: true
 {% highlight latex %}{% raw %}
 \newcommand\marker[2]{{\fboxsep=0pt\colorbox{#1}{\strut #2}}}
 {% endraw %}{% endhighlight %}
+
+{% include local/asking.html %}

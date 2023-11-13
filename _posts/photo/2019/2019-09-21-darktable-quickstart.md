@@ -447,6 +447,8 @@ a-la «эффект драмы». Например, всё тот же дяте�
 
 {% image @_src/2019/09/darktable/fin.png figure center width=334px link=false %}
 
+{% include local/asking.html %}
+
 ## Итого
 
 
