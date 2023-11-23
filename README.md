@@ -1,7 +1,7 @@
 ---
 published: false
 ---
-# Репозиторий https://shikhalev.org/
+# Репозиторий https://shikhalev.github.io/
 
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 [![MIT][mit-shield]][mit]
