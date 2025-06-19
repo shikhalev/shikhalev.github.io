@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>О ресайзе PNG на примерах | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="О ресайзе PNG на примерах" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Способы ресайза картинок формата PNG — какие возможности у нас есть под Linux…" />
+<meta property="og:description" content="Способы ресайза картинок формата PNG — какие возможности у нас есть под Linux…" />
+<link rel="canonical" href="https://shikhalev.github.io/2021/03/resize-png.html" />
+<meta property="og:url" content="https://shikhalev.github.io/2021/03/resize-png.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/assets/img/2021-03/resize/screen/source.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-06T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/assets/img/2021-03/resize/screen/source.png" />
+<meta property="twitter:title" content="О ресайзе PNG на примерах" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2021-03-06T00:00:00+00:00","datePublished":"2021-03-06T00:00:00+00:00","description":"Способы ресайза картинок формата PNG — какие возможности у нас есть под Linux…","headline":"О ресайзе PNG на примерах","image":"https://shikhalev.github.io/assets/img/2021-03/resize/screen/source.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/2021/03/resize-png.html"},"url":"https://shikhalev.github.io/2021/03/resize-png.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">О ресайзе PNG на примерах</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2021%2F03%2Fresize-png.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2021%2F03%2Fresize-png.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2021%2F03%2Fresize-png.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2021%2F03%2Fresize-png.html&text=%D0%9E+%D1%80%D0%B5%D1%81%D0%B0%D0%B9%D0%B7%D0%B5+PNG+%D0%BD%D0%B0+%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D0%B0%D1%85">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%9E+%D1%80%D0%B5%D1%81%D0%B0%D0%B9%D0%B7%D0%B5+PNG+%D0%BD%D0%B0+%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D0%B0%D1%85&url=https%3A%2F%2Fshikhalev.github.io%2F2021%2F03%2Fresize-png.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2021-03-06T00:00:00+00:00" itemprop="datePublished">2021.03.06
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#GIMP">GIMP</a>​<a class="tag" href="/tags#ImageMagick">ImageMagick</a>​<a class="tag" href="/tags#Linux">Linux</a>​<a class="tag" href="/tags#PNG">PNG</a></aside></header><div itemprop="articleBody">
+  <figure id="source-png" class="right" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/source.png" title="Исходный скриншот диалога изменения размеров в GIMP"><img src="/assets/img/2021-03/resize/screen/source.png" title="Исходный скриншот диалога изменения размеров в GIMP" alt="Исходный скриншот диалога изменения размеров в GIMP"></a></figure>
+
+<p>Недавно мне задали такой вопрос:</p>
+
+<blockquote>
+  <p>Иван, как-то довелось делать resize png-картинки в Gimp. По сравнению с Photoshop качество хуже. Можешь тут подсказать?</p>
+</blockquote>
+
+<p>Фотошопа у меня нет, сравнить не могу, поэтому попробую рассмотреть вопрос несколько по другому — какие способы ресайза
+мы имеем в Linux, пусть не «из коробки», но с минимальными трудозатратами. И что нам со всем этим богатством делать…</p>
+
+<p>Сразу замечу, что выбор методов ресайза зависит не столько от формата, сколько от характера исходного изображения, так что все,
+написанное ниже следует читать не как прямое руководство к действию, а как подсказку, в каком направлении копать.</p>
+
+<p>Для начала, чтобы много не писать о сути проблемы вообще, сошлюсь на хабрастатью <strong><a href="https://habr.com/ru/post/243285/" title="Ликбез: методы ресайза изображений">«Ликбез: методы ресайза изображений»</a></strong>.
+Она старая, но в плане основ и теории достаточно хорошо всё описывает. Более подробно, но на английском, можно почитать
+на сайте ImageMagick: <a href="https://legacy.imagemagick.org/Usage/resize/">«Resizing or Scaling»</a>, <a href="https://legacy.imagemagick.org/Usage/filter/">«Resampling Filters»</a> и <a href="https://legacy.imagemagick.org/Usage/filter/nicolas/">«Re­sam­p­ling by Nicolas Robidoux»</a>.
+Если Photoshop не использует новейшие достижения искусственного интеллекта (это не шутка, различные AI-методы сейчас активно
+применяются в обработке изображений), то правильный выбор фильтров и параметров,  будем надеяться, позволит получить результат
+не хуже.</p>
+
+<p>Что же касается формата PNG, то тут есть два соображения: во-первых, область применения — как правило, в PNG сохраняют
+не фотографии, а изображения с чистыми цветами и четкими границами, а во-вторых, применимость его к финальному результату —
+запросто можно при уменьшении картинки получить файл большего объема…</p>
+
+<p>В общем, я взял два типичных, как мне кажется, случая, когда применяется именно этот формат: уменьшение скриншота (небольшое,
+чтобы можно было говорить о читаемости) и увеличение иконки (тут — в разы). Экспериментировать я буду с при­ме­не­ни­ем <strong><a href="https://www.gimp.org/">GIMP</a></strong>
+и <strong><a href="https://imagemagick.org/">ImageMagick</a></strong>.</p>
+
+<p><strong>Disclaimer:</strong> я не специалист в данной теме и все, что могу — потыкаться с точки зрения продвинутого юзера. Вы­ше­при­ве­ден­ные ссылки
+могут стать отправной точкой для желающих разобраться по настоящему.</p>
+
+<!--more-->
+
+<h2 id="уменьшение-скриншота">
+<a class="anchor" href="#%D1%83%D0%BC%D0%B5%D0%BD%D1%8C%D1%88%D0%B5%D0%BD%D0%B8%D0%B5-%D1%81%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Уменьшение скриншота</h2>
+
+<p>Вот такой скриншот диалогового окна собственно GIMP и собственно изменения размеров. В оригинальном разрешении:</p>
+
+<figure id="source-png" class="center" style="max-width:415px;"><a href="/assets/img/2021-03/resize/screen/source.png" title="Исходный скриншот диалога изменения размеров в GIMP"><img src="/assets/img/2021-03/resize/screen/source.png" title="Исходный скриншот диалога изменения размеров в GIMP" alt="Исходный скриншот диалога изменения размеров в GIMP"></a></figure>
+
+<p>Ширина в оригинале — 415px. Ужимать будем до 320px, то есть, если очень грубо, на 20%. Точно такая же картинка вверху этого поста,
+но сделанная движком браузера автоматически, что там, какие алгоритмы использованы — то мне неведомо.</p>
+
+<h3 id="gimp">
+<a class="anchor" href="#gimp" aria-hidden="true"><span class="octicon octicon-link"></span></a>GIMP</h3>
+
+<p>GIMP предлагает пять вариантов интерполяции:</p>
+
+<ul>
+  <li>Нет</li>
+  <li>Линейная</li>
+  <li>Кубическая</li>
+  <li>Без гало</li>
+  <li>Мало гало</li>
+</ul>
+
+<p>Обратившись к <a href="https://docs.gimp.org/2.10/ru/gimp-tools-transform.html#gimp-tool-interpolation-methods">документации</a>, мы узнаем, что «Нет» — означает то, что обычно в источниках называется «метод ближайшего
+соседа», а «линейная» и «кубическая» чаще называются «билинейной» и «бикубической» соответственно. Какой алгоритм используется
+в двух последних вариантах — непонятно, судя по всему, подавление гало работает уже поверх собственно интерполяции… Так же возможно,
+это какие-то модификации метода Lanczos, который был на их месте в старых версиях GIMP.</p>
+
+<p>Пять вариантов достаточно мало, для того, чтобы все попробовать. Что же мы получим?</p>
+
+<div class="image-box">
+  <figure id="gimp-none-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/gimp-none.png" title="«Нет»
+"><img src="/assets/img/2021-03/resize/screen/gimp-none.png" title="«Нет»
+" alt="«Нет»
+"></a><figcaption>«Нет»</figcaption></figure>
+
+  <figure id="gimp-linear-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/gimp-linear.png" title="«Линейная»
+"><img src="/assets/img/2021-03/resize/screen/gimp-linear.png" title="«Линейная»
+" alt="«Линейная»
+"></a><figcaption>«Линейная»</figcaption></figure>
+
+  <figure id="gimp-cubic-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/gimp-cubic.png" title="«Кубическая»
+"><img src="/assets/img/2021-03/resize/screen/gimp-cubic.png" title="«Кубическая»
+" alt="«Кубическая»
+"></a><figcaption>«Кубическая»</figcaption></figure>
+
+</div>
+
+<p>Разницу между линейной и кубической уловить трудно, а последние два варианта — с гало и без — вообще от кубической на глаз не отличаются,
+поэтому я их приводить не стал. Однако есть еще момент — размеры файлов. Для полноты картины я сравнил размеры не только файлов, которые
+мне сохранил GIMP, но и их же после оптимизации программой <strong><a href="http://optipng.sourceforge.net/">optipng</a></strong>, которая не меняет пиксели, только перепаковывает.</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>optipng <span class="nt">-dir</span> ./opt1/ <span class="nt">-o7</span> source.png gimp-<span class="k">*</span>.png</code></pre>
+</figure>
+
+<p>Получилось:</p>
+
+<table class="wide">
+
+  <tbody>
+<tr>
+<th align="left">Файл</th>
+<th align="center">Пиксели</th>
+<th align="right">Байты</th>
+<th align="right">Опт.</th>
+</tr>
+
+  <tr>
+<td>source.png (исходный файл)</td>
+<td align="center">415x361</td>
+<td align="right">34K</td>
+<td align="right">25K</td>
+</tr>
+  <tr>
+<td>gimp-none.png (интерполяции нет)</td>
+<td align="center">320x278</td>
+<td align="right">25K</td>
+<td align="right">16K</td>
+</tr>
+  <tr>
+<td>gimp-linear.png</td>
+<td align="center">320x278</td>
+<td align="right">37K</td>
+<td align="right">24K</td>
+</tr>
+  <tr>
+<td>gimp-cubic.png</td>
+<td align="center">320x278</td>
+<td align="right">43K</td>
+<td align="right">28K</td>
+</tr>
+  <tr>
+<td>gimp-wo-galo.png (без гало)</td>
+<td align="center">320x278</td>
+<td align="right">40K</td>
+<td align="right">27K</td>
+</tr>
+  <tr>
+<td>gimp-s-galo.png (мало гало)</td>
+<td align="center">320x278</td>
+<td align="right">43K</td>
+<td align="right">28K</td>
+</tr>
+
+</tbody>
+</table>
+
+<p>Итак, мы отчетливо видим, что <em>уменьшение</em> скриншота в большинстве случаев <em>увеличивает</em> его размер. Что, впрочем, для формата PNG ожидаемо.
+В целом, выводы можно сделать такие:</p>
+
+<ul>
+  <li>
+    <p>Метод ближайшего соседа для уменьшения скриншотов не годится совсем — надписи не читаемы.</p>
+  </li>
+  <li>
+    <p>Если качество линейной интерполяции нас устраивает, берем ее — она не только выполняется быстрее, но и дает результат меньшего объема.</p>
+  </li>
+  <li>
+    <p>Если нам нужно максимальное качество, в GIMP выбираем вариант «Без гало» — за счет более резкой картинки (а именно это и делает подавление
+гало) файл лучше сжимается.</p>
+  </li>
+</ul>
+
+<p>И помним, что <em>на другой исходной картинке результаты могут отличаться существенно</em>, так что стоит экспериментировать.</p>
+
+<h3 id="imagemagick">
+<a class="anchor" href="#imagemagick" aria-hidden="true"><span class="octicon octicon-link"></span></a>ImageMagick</h3>
+
+<p>Хорошая новость заключается в том, что ImageMagick предоставляет больше вариантов ресайза. Плохая — в том, что их <em>намного</em> больше.
+Команда <code class="language-plaintext highlighter-rouge">convert -list filter</code> на моей системе выдает список из 31 пункта. Но это еще не все — помимо оператора <code class="language-plaintext highlighter-rouge">-resize</code> есть еще
+<code class="language-plaintext highlighter-rouge">-distort Resize</code>… Так что количество вариантов нужно умножать на два. А еще у многих фильтров есть настраиваемые параметры, а еще…
+В общем, при углублении в тему документация ImageMagick подбрасывает все новые и новые уровни. В рамках этого поста я пройдусь
+по верхам и параметры по умолчанию менять не буду.</p>
+
+<p>Чтобы посмотреть все варианты, я воспользовался таким скриптом:</p>
+
+<figure class="highlight">
+  <pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
+
+<span class="nv">filters</span><span class="o">=</span><span class="si">$(</span>convert <span class="nt">-list</span> filter<span class="si">)</span><span class="p">;</span>
+
+convert source.png <span class="nt">-resize</span> 320x ./im/0-resize-default.png
+convert source.png <span class="nt">-adaptive-resize</span> 320x ./im/0-resize-adaptive.png
+convert source.png <span class="nt">-distort</span> Resize 320x ./im/0-distort-default.png
+
+<span class="k">for </span>f <span class="k">in</span> <span class="nv">$filters</span><span class="p">;</span> <span class="k">do
+    </span>convert source.png <span class="nt">-filter</span> <span class="nv">$f</span> <span class="nt">-resize</span> 320x ./im/1-resize-<span class="nv">$f</span>.png<span class="p">;</span>
+    convert source.png <span class="nt">-filter</span> <span class="nv">$f</span> <span class="nt">-distort</span> Resize 320x ./im/2-distort-<span class="nv">$f</span>.png
+<span class="k">done</span><span class="p">;</span></code></pre>
+</figure>
+
+<p>На самом деле <code class="language-plaintext highlighter-rouge">-resize</code> без указания фильтра — это то же самое, что <code class="language-plaintext highlighter-rouge">-filter Mitchell -resize</code>, а <code class="language-plaintext highlighter-rouge">-distort Resize</code> —
+<code class="language-plaintext highlighter-rouge">-filter Robidoux -distort Resize</code>. А вот <code class="language-plaintext highlighter-rouge">-adaptive-resize</code> — это отдельный режим, где обработка должна базироваться
+на данных самой картинки (в документации тут не все ясно).</p>
+
+<p>Итого у меня получилось 65(!) вариантов, все я, естественно, приводить не буду. Начнем с умолчательных:</p>
+
+<div class="image-box">
+  <figure id="0-resize-default-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/0-resize-default.png" title="-resize
+"><img src="/assets/img/2021-03/resize/screen/0-resize-default.png" title="-resize
+" alt="-resize
+"></a><figcaption>-resize</figcaption></figure>
+
+  <figure id="0-distort-default-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/0-distort-default.png" title="-distort Resize
+"><img src="/assets/img/2021-03/resize/screen/0-distort-default.png" title="-distort Resize
+" alt="-distort Resize
+"></a><figcaption>-distort Resize</figcaption></figure>
+
+  <figure id="0-resize-adaptive-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/0-resize-adaptive.png" title="-adaptive-resize
+"><img src="/assets/img/2021-03/resize/screen/0-resize-adaptive.png" title="-adaptive-resize
+" alt="-adaptive-resize
+"></a><figcaption>-adaptive-resize</figcaption></figure>
+
+</div>
+
+<p>Далее проверим алгоритмы, которые должны соответствовать GIMP’овским (на самом деле не совсем).</p>
+
+<div class="image-box">
+  <figure id="1-resize-point-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/1-resize-Point.png" title="-filter Point -resize
+"><img src="/assets/img/2021-03/resize/screen/1-resize-Point.png" title="-filter Point -resize
+" alt="-filter Point -resize
+"></a><figcaption>-filter Point -resize</figcaption></figure>
+
+  <figure id="2-distort-point-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/2-distort-Point.png" title="-filter Point -distort Resize
+"><img src="/assets/img/2021-03/resize/screen/2-distort-Point.png" title="-filter Point -distort Resize
+" alt="-filter Point -distort Resize
+"></a><figcaption>-filter Point -distort Resize</figcaption></figure>
+
+</div>
+
+<p><code class="language-plaintext highlighter-rouge">-filter Point</code> — это метод ближайшего соседа, как из него <code class="language-plaintext highlighter-rouge">-distort</code> получил нечто приемлемое — мне не очень понятно.</p>
+
+<div class="image-box">
+  <figure id="1-resize-triangle-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/1-resize-Triangle.png" title="-filter Triangle -resize
+"><img src="/assets/img/2021-03/resize/screen/1-resize-Triangle.png" title="-filter Triangle -resize
+" alt="-filter Triangle -resize
+"></a><figcaption>-filter Triangle -resize</figcaption></figure>
+
+  <figure id="2-distort-triangle-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/2-distort-Triangle.png" title="-filter Triangle -distort Resize
+"><img src="/assets/img/2021-03/resize/screen/2-distort-Triangle.png" title="-filter Triangle -distort Resize
+" alt="-filter Triangle -distort Resize
+"></a><figcaption>-filter Triangle -distort Resize</figcaption></figure>
+
+  <figure id="1-resize-cubic-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/1-resize-Cubic.png" title="-filter Cubic -resize
+"><img src="/assets/img/2021-03/resize/screen/1-resize-Cubic.png" title="-filter Cubic -resize
+" alt="-filter Cubic -resize
+"></a><figcaption>-filter Cubic -resize</figcaption></figure>
+
+  <figure id="2-distort-cubic-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/2-distort-Cubic.png" title="-filter Cubic -distort Resize
+"><img src="/assets/img/2021-03/resize/screen/2-distort-Cubic.png" title="-filter Cubic -distort Resize
+" alt="-filter Cubic -distort Resize
+"></a><figcaption>-filter Cubic -distort Resize</figcaption></figure>
+
+  <figure id="1-resize-lanczos2-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/1-resize-Lanczos2.png" title="-filter Lanczos2 -resize
+"><img src="/assets/img/2021-03/resize/screen/1-resize-Lanczos2.png" title="-filter Lanczos2 -resize
+" alt="-filter Lanczos2 -resize
+"></a><figcaption>-filter Lanczos2 -resize</figcaption></figure>
+
+  <figure id="2-distort-lanczos2-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/2-distort-Lanczos2.png" title="-filter Lanczos2 -distort Resize
+"><img src="/assets/img/2021-03/resize/screen/2-distort-Lanczos2.png" title="-filter Lanczos2 -distort Resize
+" alt="-filter Lanczos2 -distort Resize
+"></a><figcaption>-filter Lanczos2 -distort Resize</figcaption></figure>
+
+  <figure id="1-resize-lanczos2sharp-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/1-resize-Lanczos2Sharp.png" title="-filter Lanczos2Sharp -resize
+"><img src="/assets/img/2021-03/resize/screen/1-resize-Lanczos2Sharp.png" title="-filter Lanczos2Sharp -resize
+" alt="-filter Lanczos2Sharp -resize
+"></a><figcaption>-filter Lanczos2Sharp -resize</figcaption></figure>
+
+  <figure id="2-distort-lanczos2sharp-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/2-distort-Lanczos2Sharp.png" title="-filter Lanczos2Sharp -distort Resize
+"><img src="/assets/img/2021-03/resize/screen/2-distort-Lanczos2Sharp.png" title="-filter Lanczos2Sharp -distort Resize
+" alt="-filter Lanczos2Sharp -distort Resize
+"></a><figcaption>-filter Lanczos2Sharp -distort Resize</figcaption></figure>
+
+</div>
+
+<p>Курьеза ради, и чтобы не создалось впечатления, что <code class="language-plaintext highlighter-rouge">-distort</code> всегда лучше, чем <code class="language-plaintext highlighter-rouge">-resize</code>, приведу варианты
+с фильтром <code class="language-plaintext highlighter-rouge">Sinc</code>:</p>
+
+<div class="image-box">
+  <figure id="1-resize-sinc-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/1-resize-Sinc.png" title="-filter Sinc -resize
+"><img src="/assets/img/2021-03/resize/screen/1-resize-Sinc.png" title="-filter Sinc -resize
+" alt="-filter Sinc -resize
+"></a><figcaption>-filter Sinc -resize</figcaption></figure>
+
+  <figure id="2-distort-sinc-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/2-distort-Sinc.png" title="-filter Sinc -distort Resize
+"><img src="/assets/img/2021-03/resize/screen/2-distort-Sinc.png" title="-filter Sinc -distort Resize
+" alt="-filter Sinc -distort Resize
+"></a><figcaption>-filter Sinc -distort Resize</figcaption></figure>
+
+</div>
+
+<p>Завершу этот парад почти одинаковых картинок еще двумя фильтрами, которые показали приемлемые результаты
+по размеру выходного файла.</p>
+
+<div class="image-box">
+  <figure id="1-resize-box-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/1-resize-Box.png" title="-filter Box -resize
+"><img src="/assets/img/2021-03/resize/screen/1-resize-Box.png" title="-filter Box -resize
+" alt="-filter Box -resize
+"></a><figcaption>-filter Box -resize</figcaption></figure>
+
+  <figure id="2-distort-box-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/2-distort-Box.png" title="-filter Box -distort Resize
+"><img src="/assets/img/2021-03/resize/screen/2-distort-Box.png" title="-filter Box -distort Resize
+" alt="-filter Box -distort Resize
+"></a><figcaption>-filter Box -distort Resize</figcaption></figure>
+
+  <figure id="1-resize-hermite-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/1-resize-Hermite.png" title="-filter Hermite -resize
+"><img src="/assets/img/2021-03/resize/screen/1-resize-Hermite.png" title="-filter Hermite -resize
+" alt="-filter Hermite -resize
+"></a><figcaption>-filter Hermite -resize</figcaption></figure>
+
+  <figure id="2-distort-hermite-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/2-distort-Hermite.png" title="-filter Hermite -distort Resize
+"><img src="/assets/img/2021-03/resize/screen/2-distort-Hermite.png" title="-filter Hermite -distort Resize
+" alt="-filter Hermite -distort Resize
+"></a><figcaption>-filter Hermite -distort Resize</figcaption></figure>
+
+</div>
+
+<p>Теперь о размерах выходных файлов подробно (напомню, что исходный файл был 34K/25K):</p>
+
+<table class="wide">
+
+<tbody>
+<tr>
+<th rowspan="2" align="left">Фильтр</th>
+<th colspan="2" align="center">-resize</th>
+<th colspan="2" align="center">-distort</th>
+</tr>
+<tr>
+<th align="right">Байты</th>
+<th align="right">Опт.</th>
+<th align="right">Байты</th>
+<th align="right">Опт.</th>
+</tr>
+
+<tr>
+<td>-resize по умолчанию (Mitchell)</td>
+<td align="right">43K</td>
+<td align="right">29K</td>
+<td colspan="2"></td>
+</tr>
+<tr>
+<td>-distort по умолчанию (Robidoux)</td>
+<td colspan="2"></td>
+<td align="right">46K</td>
+<td align="right">31K</td>
+</tr>
+<tr>
+<td>-adaptive-resize</td>
+<td align="right">36K</td>
+<td align="right">23K</td>
+<td colspan="2"></td>
+</tr>
+
+<tr>
+<td>Point (ближайший сосед)</td>
+<td align="right">25K</td>
+<td align="right">17K</td>
+<td align="right">37K</td>
+<td align="right">24K</td>
+</tr>
+<tr>
+<td>Triangle (линейная)</td>
+<td align="right">39K</td>
+<td align="right">26K</td>
+<td align="right">42K</td>
+<td align="right">28K</td>
+</tr>
+<tr>
+<td>Cubic</td>
+<td align="right">41K</td>
+<td align="right">30K</td>
+<td align="right">41K</td>
+<td align="right">30K</td>
+</tr>
+<tr>
+<td>Lanczos2</td>
+<td align="right">47K</td>
+<td align="right">31K</td>
+<td align="right">47K</td>
+<td align="right">32K</td>
+</tr>
+<tr>
+<td>Lanczos2Sharp</td>
+<td align="right">46K</td>
+<td align="right">31K</td>
+<td align="right">47K</td>
+<td align="right">32K</td>
+</tr>
+
+<tr>
+<td>Sinc</td>
+<td align="right">67K</td>
+<td align="right">46K</td>
+<td align="right">67K</td>
+<td align="right">39K</td>
+</tr>
+<tr>
+<td>Box</td>
+<td align="right">30K</td>
+<td align="right">19K</td>
+<td align="right">38K</td>
+<td align="right">24K</td>
+</tr>
+<tr>
+<td>Hermite</td>
+<td align="right">39K</td>
+<td align="right">25K</td>
+<td align="right">40K</td>
+<td align="right">26K</td>
+</tr>
+
+</tbody>
+</table>
+
+<p>Выводы:</p>
+
+<ol>
+  <li>Если очень нужно уменьшать разрешение скриншота в PNG, то <code class="language-plaintext highlighter-rouge">-adaptive-resize</code>;</li>
+  <li>Но лучше вообще без этого обойтись, например, в вебе просто задав размеры у тега <code class="language-plaintext highlighter-rouge">IMG</code> и отдав масштабирование на откуп браузеру —
+трафик так можно сэкономить заметно.</li>
+</ol>
+
+<figure id="source-png" class="center" style="max-width:320px;"><a href="/assets/img/2021-03/resize/screen/source.png" title="Исходная картинка"><img src="/assets/img/2021-03/resize/screen/source.png" title="Исходная картинка" alt="Исходная картинка"></a><figcaption>Исходная картинка, отмасштабированная браузером</figcaption></figure>
+
+<p>Это все, конечно, оносится только к случаям, подобным рассмотренному — когда размеры картинки ужимаются процентов на 20, чтобы,
+скажем, вписаться в верстку. При сильном уменьшении про читаемость можно просто забыть и использовать простейшие методы, дающие
+минимальный выходной файл. Кстати, на этот случай в ImageMagick есть еще и оператор <code class="language-plaintext highlighter-rouge">-thumbnail</code>, который работает еще быстрее
+и грубее, чем <code class="language-plaintext highlighter-rouge">-resize</code>, а заодно выбрасывает всю метаинформацию.</p>
+
+<h2 id="увеличение-иконки">
+<a class="anchor" href="#%D1%83%D0%B2%D0%B5%D0%BB%D0%B8%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Увеличение иконки</h2>
+
+<p>Здесь я решил поиздеваться над иконкой Darktable, в оригинале — 64x64px.</p>
+
+<figure id="darktable-png" class="center" style="max-width:64px;"><a href="/assets/img/2021-03/resize/icon/darktable.png" title=""><img src="/assets/img/2021-03/resize/icon/darktable.png" title="" alt="Иконка Darktable"></a></figure>
+
+<p>Будем увеличивать ее в 5 раз по линейным размерам, т.е. в 25 по площади — до 320x320px. Вот так это может сделать браузер:</p>
+
+<figure id="darktable-png" class="center" style="max-width:320px;"><a href="/assets/img/2021-03/resize/icon/darktable.png" title=""><img src="/assets/img/2021-03/resize/icon/darktable.png" title="" alt="Иконка Darktable" style="width:320px;height:320px;"></a></figure>
+
+<h3 id="gimp-1">
+<a class="anchor" href="#gimp-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>GIMP</h3>
+
+<p>А вот что нам предлагает GIMP:</p>
+
+<div class="image-box">
+  <figure id="ico-gimp-none-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/icon/ico-gimp-none.png" title="«Нет»
+"><img src="/assets/img/2021-03/resize/icon/ico-gimp-none.png" title="«Нет»
+" alt="«Нет»
+"></a><figcaption>«Нет»</figcaption></figure>
+
+  <figure id="ico-gimp-linear-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/icon/ico-gimp-linear.png" title="«Линейная»
+"><img src="/assets/img/2021-03/resize/icon/ico-gimp-linear.png" title="«Линейная»
+" alt="«Линейная»
+"></a><figcaption>«Линейная»</figcaption></figure>
+
+  <figure id="ico-gimp-wo-galo-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/icon/ico-gimp-wo-galo.png" title="«Без гало»
+"><img src="/assets/img/2021-03/resize/icon/ico-gimp-wo-galo.png" title="«Без гало»
+" alt="«Без гало»
+"></a><figcaption>«Без гало»</figcaption></figure>
+
+</div>
+
+<p>В режиме «Нет интерполяции» мы ожидаемо видим увеличение каждого пикселя, а в режиме «Линейная» — какое-то мыло. «Без гало»
+дает нам мыло немножко по краям подшарпленое, что, кстати, наиболее похоже на вариант от браузера. Что же до оставшихся «Кубической»
+и «Мало гало» — я не смог их отличить от «Линейной», даже быстро переключаясь с одной на другую.</p>
+
+<table class="wide">
+
+  <tbody>
+<tr>
+<th align="left">Файл</th>
+<th align="center">Пиксели</th>
+<th align="right">Байты</th>
+<th align="right">Опт.</th>
+</tr>
+
+  <tr>
+<td>darktable.png (исходный файл)</td>
+<td align="center">64x64</td>
+<td align="right">6.2K</td>
+<td align="right">6.2K</td>
+</tr>
+  <tr>
+<td>gimp-none.png (интерполяции нет)</td>
+<td align="center">320x320</td>
+<td align="right">9.7K</td>
+<td align="right">9.4K</td>
+</tr>
+  <tr>
+<td>gimp-linear.png</td>
+<td align="center">320x320</td>
+<td align="right">68K</td>
+<td align="right">68K</td>
+</tr>
+  <tr>
+<td>gimp-cubic.png</td>
+<td align="center">320x320</td>
+<td align="right">75K</td>
+<td align="right">75K</td>
+</tr>
+  <tr>
+<td>gimp-wo-galo.png (без гало)</td>
+<td align="center">320x320</td>
+<td align="right">72K</td>
+<td align="right">72K</td>
+</tr>
+  <tr>
+<td>gimp-s-galo.png (мало гало)</td>
+<td align="center">320x320</td>
+<td align="right">76K</td>
+<td align="right">75K</td>
+</tr>
+
+</tbody>
+</table>
+
+<p>Выводы? Ну, для демонстрации пиксель-арта первый вариант может быть полезен. В остальных случаях браузер справляется не хуже, а объем меньше на порядок.</p>
+
+<h3 id="imagemagick-1">
+<a class="anchor" href="#imagemagick-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>ImageMagick</h3>
+
+<p>Скриптом, аналогичным предыдущему, удалось получить множество вариантов. Но ничего прямо так принципиально отличающегося в лучшую сторону.
+Вероятно, без применения каких-нибудь AI-методов (т.е. распознавания и перерисовывания по сути) ничего принципиально улучшить и не получится.
+Поэтому ограничусь только тремя примерами:</p>
+
+<div class="image-box">
+  <figure id="0-resize-adaptive-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/icon/0-resize-adaptive.png" title="-adaptive-resize
+"><img src="/assets/img/2021-03/resize/icon/0-resize-adaptive.png" title="-adaptive-resize
+" alt="-adaptive-resize
+"></a><figcaption>-adaptive-resize</figcaption></figure>
+
+  <figure id="2-distort-parzen-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/icon/2-distort-Parzen.png" title="-filter Parzen -distort Resize
+"><img src="/assets/img/2021-03/resize/icon/2-distort-Parzen.png" title="-filter Parzen -distort Resize
+" alt="-filter Parzen -distort Resize
+"></a><figcaption>-filter Parzen -distort Resize</figcaption></figure>
+
+  <figure id="2-distort-sinc-png" class="inner" style="max-width:320px;"><a href="/assets/img/2021-03/resize/icon/2-distort-Sinc.png" title="-filter Sinc -distort Resize
+"><img src="/assets/img/2021-03/resize/icon/2-distort-Sinc.png" title="-filter Sinc -distort Resize
+" alt="-filter Sinc -distort Resize
+"></a><figcaption>-filter Sinc -distort Resize</figcaption></figure>
+
+</div>
+
+<p>Третий пример, если кто не догадался, вставлен забавы ради.</p>
+
+<p>Как можно видеть, <code class="language-plaintext highlighter-rouge">-adaptive-resize</code> справляется, как минимум, не хуже GIMP’а… Что же по размерам файлов?</p>
+
+<table class="wide">
+
+<tbody>
+<tr>
+<th rowspan="2" align="left">Фильтр</th>
+<th colspan="2" align="center">-resize</th>
+<th colspan="2" align="center">-distort</th>
+</tr>
+<tr>
+<th align="right">Байты</th>
+<th align="right">Опт.</th>
+<th align="right">Байты</th>
+<th align="right">Опт.</th>
+</tr>
+
+<tr>
+<td>-resize по умолчанию (Mitchell)</td>
+<td align="right">74K</td>
+<td align="right">70K</td>
+<td colspan="2"></td>
+</tr>
+<tr>
+<td>-distort по умолчанию (Robidoux)</td>
+<td colspan="2"></td>
+<td align="right">77K</td>
+<td align="right">73K</td>
+</tr>
+<tr>
+<td>-adaptive-resize</td>
+<td align="right">67K</td>
+<td align="right">61K</td>
+<td colspan="2"></td>
+</tr>
+
+<tr>
+<td>Point (ближайший сосед)</td>
+<td align="right">11K</td>
+<td align="right">9.6K</td>
+<td align="right">69K</td>
+<td align="right">66K</td>
+</tr>
+
+<tr>
+<td>Parzen</td>
+<td align="right">88K</td>
+<td align="right">84K</td>
+<td align="right">78K</td>
+<td align="right">74K</td>
+</tr>
+<tr>
+<td>Sinc</td>
+<td align="right">111K</td>
+<td align="right">107K</td>
+<td align="right">131K</td>
+<td align="right">130K</td>
+</tr>
+
+</tbody>
+</table>
+
+<p>Я не стал вставлять картинку с <code class="language-plaintext highlighter-rouge">-filter Point -resize</code>, поскольку она ожидаемо неотличима от того, что делает GIMP без интерполяции.
+А еще такой же результат позволяют получить операторы <code class="language-plaintext highlighter-rouge">-sample</code> и <code class="language-plaintext highlighter-rouge">-scale</code>, только быстрее. Так же, как и <code class="language-plaintext highlighter-rouge">-thumbnail</code> — это максимально
+упрощенные и тупые варианты ресайза.</p>
+
+<h2 id="итого">
+<a class="anchor" href="#%D0%B8%D1%82%D0%BE%D0%B3%D0%BE" aria-hidden="true"><span class="octicon octicon-link"></span></a>Итого</h2>
+
+<ul>
+  <li>
+    <p>Во-первых, формат PNG применяется для тех случаев, когда нам важно сохранить каждый пиксель как он есть. Т.е. любое масштабирование
+для таких картинок противопоказано. Именно для картинок как таковых, а не для формата. Если мы храним в PNG что-то хорошо масштабируемое,
+возможно, мы что-то делаем не так.</p>
+  </li>
+  <li>
+    <p>Как только мы вместо резких переходов получаем сглаживание или размытие, файлы раздуваются непотребно. И это уже особенность формата, да,
+сжатие которого рассчитано на одноцветные области.</p>
+  </li>
+  <li>
+    <p><em>Если</em> всё же необходимо ресайзить PNG и именно в PNG, я бы, пожалуй, первым делом попробовал оператор <code class="language-plaintext highlighter-rouge">-adaptive-resize</code> пакета ImageMagick.
+А если результат не устраивает — прогнал бы скриптом прочие варианты фильтров. Можно, конечно, заморочиться и на подгонку их параметров,
+но боюсь, мои глаза не справятся с отловом тончайших отличий в огромном количестве файлов.</p>
+  </li>
+  <li>
+    <p>GIMP, честно говоря, удивил бедностью возможностей — уж с десяток алгоритмов могли бы и завезти…</p>
+  </li>
+</ul>
+
+<hr>
+<p><strong>PS.</strong> Для удобства оригиналы ссылкой: <a href="/assets/img/2021-03/resize/screen/source.png" title="Исходный скриншот диалога изменения размеров в GIMP" download="gimp-dialog-screenshot.png">скрин</a> и <a href="/assets/img/2021-03/resize/icon/darktable.png" download="darktable-icon.png">значок</a>.
+Желающие могут попробовать поиграть с их размерами в разном другом софте, включая фотошоп.</p>
+
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2013.06.19 |</span>
+            <a href="/2013/06/copyright-assignments.html" title="О неочевидных проблемах, связанных с передачей прав на свободный софт">Откуда ждать подлянки...</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2013.07.02 |</span>
+            <a href="/2013/07/fonts.html" title="Внезапно понял, почему кириллические шрифты все, как бы это помягче... в лучшем случае — никакие.">О шриф­тах, или Без­бла­го­дат­ность кар­го-куль­та</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2023.10.03 |</span>
+            <a href="/2023/10/merlin.html" title="Приложение для рас­поз­на­ва­ния птиц по го­ло­су">Merlin Bird ID</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#уменьшение-скриншота">Уменьшение скриншота</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#gimp">GIMP</a></li>
+<li class="toc-entry toc-h3"><a href="#imagemagick">ImageMagick</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#увеличение-иконки">Увеличение иконки</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#gimp-1">GIMP</a></li>
+<li class="toc-entry toc-h3"><a href="#imagemagick-1">ImageMagick</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#итого">Итого</a></li>
+</ul>
+</aside><aside id="backs" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

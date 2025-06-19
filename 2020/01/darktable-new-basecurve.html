@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Новая базовая кривая в Darktable | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Новая базовая кривая в Darktable" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Новые возможности и нюансы модуля «Базовая кривая» в Darktable 3.0" />
+<meta property="og:description" content="Новые возможности и нюансы модуля «Базовая кривая» в Darktable 3.0" />
+<link rel="canonical" href="https://shikhalev.github.io/2020/01/darktable-new-basecurve.html" />
+<meta property="og:url" content="https://shikhalev.github.io/2020/01/darktable-new-basecurve.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/assets/img/2020-01/nbc/none-IMG_0875.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-01-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/assets/img/2020-01/nbc/none-IMG_0875.jpg" />
+<meta property="twitter:title" content="Новая базовая кривая в Darktable" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2020-01-14T00:00:00+00:00","datePublished":"2020-01-14T00:00:00+00:00","description":"Новые возможности и нюансы модуля «Базовая кривая» в Darktable 3.0","headline":"Новая базовая кривая в Darktable","image":"https://shikhalev.github.io/assets/img/2020-01/nbc/none-IMG_0875.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/2020/01/darktable-new-basecurve.html"},"url":"https://shikhalev.github.io/2020/01/darktable-new-basecurve.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">Новая базовая кривая в Darktable</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2020%2F01%2Fdarktable-new-basecurve.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2020%2F01%2Fdarktable-new-basecurve.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2020%2F01%2Fdarktable-new-basecurve.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2020%2F01%2Fdarktable-new-basecurve.html&text=%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F+%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%8F+%D0%BA%D1%80%D0%B8%D0%B2%D0%B0%D1%8F+%D0%B2+Darktable">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F+%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%8F+%D0%BA%D1%80%D0%B8%D0%B2%D0%B0%D1%8F+%D0%B2+Darktable&url=https%3A%2F%2Fshikhalev.github.io%2F2020%2F01%2Fdarktable-new-basecurve.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2020-01-14T00:00:00+00:00" itemprop="datePublished">2020.01.14
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#Darktable">Darktable</a>​<a class="tag" href="/tags#Linux">Linux</a>​<a class="tag" href="/tags#RAW">RAW</a>​<a class="tag" href="/tags#цвет">цвет</a></aside></header><div itemprop="articleBody">
+  <p>Начинаю потихоньку изучать новые возможности в Darktable 3.0… Сегодня — довольно спорное (судя по форумам,
+как минимум) нововведение в настройках базовой кривой<sup id="fnref:basecurve"><a href="#fn:basecurve" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> — «Сохранение цветов».</p>
+
+<p>Чтобы составить собственное мнение, я взял несколько своих фотографий с настройками, отличающимися только
+базовой кривой (прочие настройки — это авто-уровни и локальный контраст по умолчанию, см. пост <a href="/2019/09/darktable-quickstart.html" title="Darktable — (не очень) быстрый старт">«Darktable —
+(не очень) быстрый старт»</a>). Сюжетно фотографии разные, и новая настройка проявилась на них тоже
+по разному, подробности далее… Во всех случаях я сделал три варианта:</p>
+
+<ul>
+  <li>
+    <p>базовая кривая отключена;</p>
+  </li>
+  <li>
+    <p>базовая кривая включена, сохранение цветов отключено;</p>
+  </li>
+  <li>
+    <p>базовая кривая включена, сохранение цветов включено в варианте по умолчанию (других вариантов я делать
+не стал, поскольку там уже отличия на грани различимого).</p>
+  </li>
+</ul>
+
+<p class="note"><em>Все снимки сделаны на <strong>Canon EOS 77D</strong>, базовая кривая — <strong>Canon EOS</strong> по умолчанию (не альтернативная). Как поведет
+себя новый механизм на других камерах с другими базовыми кривыми — не могу знать.</em></p>
+
+<div class="image-box">
+  <figure id="off-img-0700-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/off-IMG_0700.jpg" title="Базовая кривая отключена" alt="Базовая кривая отключена"></figure>
+
+  <figure id="none-img-0700-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/none-IMG_0700.jpg" title="Базовая кривая включена, сохранение цветов отключено" alt="Базовая кривая включена, сохранение цветов отключено"></figure>
+
+  <figure id="light-img-0700-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/light-IMG_0700.jpg" title="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию" alt="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию"></figure>
+
+</div>
+
+<!--more-->
+
+<p>Что мы видим на примерах выше? В целом, картинка с сохранением цветов выглядит как нечто среднее между отсутствием
+базовой кривой и кривой без сохранения. Это, в принципе, будет справедливо и для других примеров. Сама картинка
+проблемная — выбито небо, причем неравномерно по цветам, отчего скатывается в циан, и сохранение цветов бережно
+этот циан сохраняет (прошу прощения за тавтологичность).</p>
+
+<p>А что с невыбитым небом?</p>
+
+<div class="image-box">
+  <figure id="off-img-0875-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/off-IMG_0875.jpg" title="Базовая кривая отключена" alt="Базовая кривая отключена"></figure>
+
+  <figure id="none-img-0875-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/none-IMG_0875.jpg" title="Базовая кривая включена, сохранение цветов отключено" alt="Базовая кривая включена, сохранение цветов отключено"></figure>
+
+  <figure id="light-img-0875-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/light-IMG_0875.jpg" title="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию" alt="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию"></figure>
+
+</div>
+
+<div class="image-box">
+  <figure id="off-img-1028-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/off-IMG_1028.jpg" title="Базовая кривая отключена" alt="Базовая кривая отключена"></figure>
+
+  <figure id="none-img-1028-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/none-IMG_1028.jpg" title="Базовая кривая включена, сохранение цветов отключено" alt="Базовая кривая включена, сохранение цветов отключено"></figure>
+
+  <figure id="light-img-1028-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/light-IMG_1028.jpg" title="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию" alt="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию"></figure>
+
+</div>
+
+<div class="image-box">
+  <figure id="off-img-1081-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/off-IMG_1081.jpg" title="Базовая кривая отключена" alt="Базовая кривая отключена"></figure>
+
+  <figure id="none-img-1081-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/none-IMG_1081.jpg" title="Базовая кривая включена, сохранение цветов отключено" alt="Базовая кривая включена, сохранение цветов отключено"></figure>
+
+  <figure id="light-img-1081-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/light-IMG_1081.jpg" title="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию" alt="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию"></figure>
+
+</div>
+
+<p>Общая суть осталась та же: цвета действительно ближе к тому, что и без базовой кривой вообще. Вот только цвета
+эти — неправильные: фиолетовый оттенок небу не нужен. Итак, связка Canon EOS 77D и Darktable плохо работает
+с оттенками неба (на самом деле с 600D ситуация еще хуже), базовая кривая для Canon EOS это исправляет,
+а «Сохранение цветов» возвращает (сохраняет) неправильные оттенки.</p>
+
+<p>Хорошо, с небом разобрались, попробуем другие сюжеты.</p>
+
+<div class="image-box">
+  <figure id="off-img-0823-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/off-IMG_0823.jpg" title="Базовая кривая отключена" alt="Базовая кривая отключена"></figure>
+
+  <figure id="none-img-0823-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/none-IMG_0823.jpg" title="Базовая кривая включена, сохранение цветов отключено" alt="Базовая кривая включена, сохранение цветов отключено"></figure>
+
+  <figure id="light-img-0823-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/light-IMG_0823.jpg" title="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию" alt="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию"></figure>
+
+</div>
+
+<p>Ну… Такое… Цвета, может быть, и более правильные, но менее веселые, что ли…</p>
+
+<div class="image-box">
+  <figure id="off-img-0901-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/off-IMG_0901.jpg" title="Базовая кривая отключена" alt="Базовая кривая отключена"></figure>
+
+  <figure id="none-img-0901-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/none-IMG_0901.jpg" title="Базовая кривая включена, сохранение цветов отключено" alt="Базовая кривая включена, сохранение цветов отключено"></figure>
+
+  <figure id="light-img-0901-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/light-IMG_0901.jpg" title="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию" alt="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию"></figure>
+
+</div>
+
+<div class="image-box">
+  <figure id="off-img-0969-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/off-IMG_0969.jpg" title="Базовая кривая отключена" alt="Базовая кривая отключена"></figure>
+
+  <figure id="none-img-0969-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/none-IMG_0969.jpg" title="Базовая кривая включена, сохранение цветов отключено" alt="Базовая кривая включена, сохранение цветов отключено"></figure>
+
+  <figure id="light-img-0969-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/light-IMG_0969.jpg" title="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию" alt="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию"></figure>
+
+</div>
+
+<div class="image-box">
+  <figure id="off-img-0985-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/off-IMG_0985.jpg" title="Базовая кривая отключена" alt="Базовая кривая отключена"></figure>
+
+  <figure id="none-img-0985-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/none-IMG_0985.jpg" title="Базовая кривая включена, сохранение цветов отключено" alt="Базовая кривая включена, сохранение цветов отключено"></figure>
+
+  <figure id="light-img-0985-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/light-IMG_0985.jpg" title="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию" alt="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию"></figure>
+
+</div>
+
+<div class="image-box">
+  <figure id="off-img-0990-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/off-IMG_0990.jpg" title="Базовая кривая отключена" alt="Базовая кривая отключена"></figure>
+
+  <figure id="none-img-0990-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/none-IMG_0990.jpg" title="Базовая кривая включена, сохранение цветов отключено" alt="Базовая кривая включена, сохранение цветов отключено"></figure>
+
+  <figure id="light-img-0990-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/light-IMG_0990.jpg" title="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию" alt="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию"></figure>
+
+</div>
+
+<div class="image-box">
+  <figure id="off-img-1013-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/off-IMG_1013.jpg" title="Базовая кривая отключена" alt="Базовая кривая отключена"></figure>
+
+  <figure id="none-img-1013-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/none-IMG_1013.jpg" title="Базовая кривая включена, сохранение цветов отключено" alt="Базовая кривая включена, сохранение цветов отключено"></figure>
+
+  <figure id="light-img-1013-jpg" class="strict-inner" style="max-width:200px;"><img src="/assets/img/2020-01/nbc/light-IMG_1013.jpg" title="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию" alt="Базовая кривая включена, сохранение цветов включено в варианте по умолчанию"></figure>
+
+</div>
+
+<p>Хм, а для теневых снимков результат, пожалуй, неплох: нет ненужной теплоты, как с только базовой кривой,
+но и улучшение контраста налицо.</p>
+
+<p>На самом деле я проверил еще и портретные фото, которые не выкладываю, поскольку лень собирать согласие
+с моделей. Там картина такая: с одной стороны, ни улучшения, ни ухудшения скинтона я не заметил;
+с другой — теряется, или ослабляется «эффект солнечного дня», там где он есть, примерно как и на картинке
+с листьями, так что общее впечатление от фото может испортиться.</p>
+
+<h3 id="выводы">
+<a class="anchor" href="#%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Выводы</h3>
+
+<ul>
+  <li>
+    <p>Новая функция действительно сохраняет (а не меняет) цвета там, где обычная базовая кривая их улучшает,
+или «улучшает». В целом цвета становятся более спокойными.</p>
+  </li>
+  <li>
+    <p>В каких-то случаях это хорошо.</p>
+  </li>
+  <li>
+    <p>А в каких-то — не очень. По крайней мере в кадрах с большим количеством неба, и там, где хочется получить
+«солнечную» картинку с соответствующим настроением.</p>
+  </li>
+  <li>
+    <p>В итоге, включать или не включать «Сохранение цветов» — сильно зависит от сюжета и задачи. Само по себе
+наличие такой возможности — это хорошо, а вот ее включение по умолчанию — под вопросом.</p>
+  </li>
+</ul>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:basecurve">
+      <p>Базовая кривая (en, v3.4): <a href="https://www.darktable.org/usermanual/en/module-reference/processing-modules/base-curve/">https://www.darktable.org/usermanual/en/module-reference/processing-modules/base-curve/</a> <a href="#fnref:basecurve" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.02.06 |</span>
+            <a href="/2021/02/bird-eyes.html" title="Минутка оптимизма: почему рынок любительских фотокамер не умрет.">Нетехническое, зато про фото</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2023.07.28 |</span>
+            <a href="/2023/07/nature-photo.html" title="Как стоит и как не стоит обрабатывать фотографии наблюдений живой природы">Обработка фото наблюдений</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.05.24 |</span>
+            <a href="/2021/05/inaturalist.html" title="Проект iNaturalist: краткое введение и личный опыт">iNaturalist — рекомендую</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h3"><a href="#выводы">Выводы</a></li>
+</ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/2022/12/darktable-4.2.html" title="Очередная версия Darktable, текущее состояние">Darktable 4.2.0</a></li><li class="fa-icon-li-file-alt"><a href="/2020/01/darktable-rgb-levels.html" title="Новый модуль в Darktable 3.0 — пример использования">Новый модуль Darktable — «Уровни RGB»</a></li></ul>
+    </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/photo.xml" title="Тексты о фотографии">О фото</a></li><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

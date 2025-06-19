@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Отставить панику… | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Отставить панику…" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Об очередных страданиях на тему искусственного интеллекта" />
+<meta property="og:description" content="Об очередных страданиях на тему искусственного интеллекта" />
+<link rel="canonical" href="https://shikhalev.github.io/2023/01/chatgpt.html" />
+<meta property="og:url" content="https://shikhalev.github.io/2023/01/chatgpt.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/2023/01/04/chatgpt/violet-girl-640x640-500-261-0-200.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-01-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/img/2023/01/04/chatgpt/violet-girl-640x640-500-261-0-200.webp" />
+<meta property="twitter:title" content="Отставить панику…" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2023-01-04T00:00:00+00:00","datePublished":"2023-01-04T00:00:00+00:00","description":"Об очередных страданиях на тему искусственного интеллекта","headline":"Отставить панику…","image":"https://shikhalev.github.io/img/2023/01/04/chatgpt/violet-girl-640x640-500-261-0-200.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/2023/01/chatgpt.html"},"url":"https://shikhalev.github.io/2023/01/chatgpt.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-brain" href="/life/psi/mind/" title="Заметки о том, как мы думаем">Мышление</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">Отставить панику...</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2023%2F01%2Fchatgpt.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2023%2F01%2Fchatgpt.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2023%2F01%2Fchatgpt.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2023%2F01%2Fchatgpt.html&text=%D0%9E%D1%82%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%BF%D0%B0%D0%BD%D0%B8%D0%BA%D1%83...">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%9E%D1%82%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D1%8C+%D0%BF%D0%B0%D0%BD%D0%B8%D0%BA%D1%83...&url=https%3A%2F%2Fshikhalev.github.io%2F2023%2F01%2Fchatgpt.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2023-01-04T00:00:00+00:00" itemprop="datePublished">2023.01.04
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#ChatGPT">ChatGPT</a>​<a class="tag" href="/tags#ИИ">ИИ</a>​<a class="tag" href="/tags#будущее">будущее</a>​<a class="tag" href="/tags#искусственный интеллект">искусственный интеллект</a>​<a class="tag" href="/tags#нейросети">нейросети</a></aside></header><div itemprop="articleBody">
+  <figure class="__figure __implicit_figure __right face" style="max-width:240px;"><a href="/img/2023/01/04/chatgpt/violet-girl-fhd.webp" class="__image_link"><img src="/img/2023/01/04/chatgpt/violet-girl-240.webp" class="__image" alt="Автоматически сгенерированная картинка" title="Автоматически сгенерированная картинка"></a></figure>
+
+<p>С вы­хо­дом <strong><a href="https://ru.wikipedia.org/wiki/ChatGPT">ChatGPT</a></strong> как-то внезапно обострились апокалиптические настроения в ду­хе: заменит программистов, оставит нас всех
+без ра­бо­ты, и прочее «мы все умрем». По­след­нее, конечно, верно, но не ново.</p>
+
+<p>Сразу скажу, что самолично я с Chat­GPT не экспериментировал, так что размышлять буду в це­лом от­вле­чен­но-те­о­ре­ти­че­с­ки, опираясь, впрочем,
+на мно­жест­во «свидетельских показаний» в ин­тер­не­те, касающихся как этой нейросети, так и разных прочих.</p>
+
+<p>Попробую сделать некоторые предположения, как именно <em>в дей­с­т­ви­тель­нос­ти</em> нейросети нового поколения повлияют на раз­лич­ные виды деятельности
+(те, о ко­то­рых я имею хоть ка­кое-то представление). Если коротко, то убийства интеллектуальных и творческих профессий я не ожи­даю, при этом
+изменения таки будут, и будут существенны, причем наиболее существенные проявятся в дол­го­сроч­ной перспективе.</p>
+
+<p>И да, <abbr title="Картинка для привлечения внимания">КДПВ</abbr> сгенерирована <a href="https://www.mage.space/">нейросетью</a> по запросу «deep learned girl in fantasy style».</p>
+
+<!--more-->
+
+<h2 id="о-смерти-профессий">
+<a class="anchor" href="#%D0%BE-%D1%81%D0%BC%D0%B5%D1%80%D1%82%D0%B8-%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D1%81%D1%81%D0%B8%D0%B9" aria-hidden="true"><span class="octicon octicon-link"></span></a>О смерти профессий</h2>
+
+<p>Здесь хочу проговорить следующие моменты:</p>
+
+<ul>
+  <li>
+    <p>Нейросеть не ре­ша­ет по-нас­то­я­ще­му <em>творческих задач</em>. Хотя зачастую решает задачи, которые до сих пор было принято считать творческими,
+но это означает лишь то, что наши представления о твор­чес­ком и нетворческом, новом и скомпилированном придется пересматривать. Хотя
+некоторые и считают, что на са­мом деле разницы тут нет, и вопрос скорее количественный, однако это не так, ниже еще постараюсь раскрыть
+поподробнее.</p>
+
+    <p>При том в пла­не компиляции, сборки чего-то из име­ю­щих­ся в раз­роз­нен­ном виде (если на при­ме­ре программирования: алгоритм из од­но­го
+источника, API из дру­го­го, язык можно взять ни там, ни там не при­ме­няв­ший­ся…) нейросети уже очень хороши и, в об­щем-то,
+превосходят человека.</p>
+  </li>
+  <li>
+    <p><em>Вопросы целеполагания и принятия решений</em> железяченькам неподвластны.</p>
+
+    <p>Тут надо разделять принятие решений как выбор путей действия с оп­ти­ми­за­ци­ей по ка­ким-то па­ра­мет­рам — в этом компьютеры хороши, правда,
+могут не учесть какой-то критически важный, но на­столь­ко очевидный для че­ло­ве­ка, что никогда не про­го­ва­ри­ва­ет­ся, параметр, но это как раз
+технический вопрос; и решения, связанные собственно с це­ле­по­ла­га­ни­ем — субъектность… Не то, чтобы субъектность была полностью недоступна
+творениям рук человеческих, но оно нам надо?</p>
+
+    <p>Но име­ет ли это отношение к про­фес­си­о­наль­ной деятельности? Да, имеет. Как только речь заходит о дол­го­сроч­ном планировании, даже если
+мы планируем развитие программного продукта на па­ру лет вперед, без це­ле­по­ла­га­ния, личного, общественного и так далее вплоть до гло­баль­ных
+этических установок, не обой­тись. Да, это все проходит на бес­соз­на­тель­ном уровне, но по­то­му-то и не по­лу­чит­ся передать же­ле­зя­чень­ке
+эти установки в ви­де четких критериев.</p>
+  </li>
+  <li>
+    <p>Чем собственно нейросети отличаются от клас­си­чес­ких алгоритмов? Тем, что работают с не­фор­ма­ли­зо­ван­ны­ми и потенциально неполными массивами
+информации, выдавая непредсказуемый, в том числе в пла­не правильности и полезности, результат. Да, это неизбежная цена работы с не­фор­ма­ли­зо­ван­ны­ми
+данными, что человеком, что машиной.</p>
+
+    <p>И в пол­ный рост встает вопрос <em>контроля и, главное, ответственности</em>. За ре­зуль­тат, если он вообще имеет ка­кое-то значение, должен кто-то
+отвечать. А что­бы отвечать, этот кто-то должен иметь возможность результат контролировать. Сейчас в экс­пе­ри­мен­тах с Chat­GPT раз за разом
+повторяется паттерн, когда человек ставит (довольно простую) задачку, смотрит, что не так, уточняет требования и, на ка­кой-то итерации,
+получает подобающий ответ. На­до ли говорить, что экспериментатор во всех этих случаях обладает достаточной квалификацией? Да, процесс
+очень похож на ра­бо­ту с ма­ло­ква­ли­фи­ци­ро­ван­ны­ми исполнителями, обычно называемыми джунами, что по инер­ции создает впечатление, как буд­то
+надо еще немного обучения и машина будет работать уже на уров­не мидла или сеньора… Но см. два предыдущих пун­к­та — этого не про­и­зо­й­дет,
+то есть обучать и улучшать можно бесконечно, но принятие решений и контроль делегировать не по­лу­чит­ся. Зато на боль­ших объемах проведение
+код-ре­вью выйдет за пре­де­лы возможностей даже очень квалифицированного и специально тренированного человека. Об ав­то­ма­ти­чес­ких вариантах
+контроля кода будет далее, пока замечу, что того, что сейчас широко пра­к­ти­ку­ет­ся — недостаточно.</p>
+  </li>
+</ul>
+
+<p>Думаю, мой вывод уже понятен. Профессии никуда не де­нут­ся, хотя и сократится постепенно количество <em>псевдоинтеллектуальных</em> работ, а учиться
+придется больше и немного не то­му, что предлагают многочисленные он­лайн-кур­сы. Просто пора понять, что code-monkey — это не про­фес­сия, а ругательство.</p>
+
+<p>И да, ко­пи­рай­тер — это тоже не про­фес­сия. А пи­са­тель — это тот, кому есть что сказать. Аналогично и с ху­дож­ни­ка­ми, включая даже иллюстраторов,
+хотя им и придется потесниться, во мно­гих случаях ней­ро­се­те­вых иллюстраций будет достаточно (и запросы для них будет делать автор текста,
+а не от­дель­ный человек), но если речь идет не об <em>иллюстрировании</em>, а о вло­же­нии дополнительного смысла или создании стиля, то это
+останется прерогативой человека (возможно, активно пользующегося техническими возможностями, концентрируясь на об­ра­зах и мес­сед­же, а не на штри­хах
+и пикселях).</p>
+
+<p>При этом некоторые навыки, которые были обязательным признаком того или иного профессионала, станут невостребованными. Можно, конечно,
+печалиться, что художником можно называться (и быть), не умея пользоваться ни ка­ран­да­шом, ни кистью, однако ничего такого ужасного
+в этом нет. В кон­це концов, мно­го ли современных художников самостоятельно изготавливают краски из минерального сырья? А ко­гда-то это был
+важный базовый навык.</p>
+
+<h2 id="меняться-придется">
+<a class="anchor" href="#%D0%BC%D0%B5%D0%BD%D1%8F%D1%82%D1%8C%D1%81%D1%8F-%D0%BF%D1%80%D0%B8%D0%B4%D0%B5%D1%82%D1%81%D1%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>Меняться придется</h2>
+
+<p>Первейшее и очевидное изменение понятно: значительную часть рутинных задач можно будет снять с жи­вых людей и передать нейросетям. С дру­гой стороны
+придется учиться формулировать запросы максимально эффективным образом… Причем, какой образ будет максимально эффективным, вообще говоря
+пока неизвестно. Важнейшим (если говорить о про­грам­ми­ро­ва­нии) навыком станет <em>чтение</em> кода.</p>
+
+<p>Впрочем, надо признать: нас ждет вал бесконтрольных порождений сна искусственного разума. Очень уж просто будет вывалить в про­дакшн
+что-то маломальски годное без код-ре­вью. И это касается всех сфер. Особенно обидно, конечно, что поискового спама в ин­тер­не­те станет еще
+больше, и чтобы получить информацию, придется потрудиться. Или при­бег­нуть к ус­лу­гам очередной нейросети, чтобы она каким-то не впол­не
+постижимым образом выискала среди плодов творчества электронных копирайтеров что-то значащее. А по­том дожидаться, когда это что-то посмотрит
+и заверит живой эксперт…</p>
+
+<p>На са­мом деле, вот это как раз касается каждого. Навык верификации информации скоро станет необходим всем. Будем прокачивать.</p>
+
+<p>Я бы, пожалуй, заострил внимание на сле­ду­ю­щих аспектах:</p>
+
+<ul>
+  <li>
+    <p><em>Навык систематизации и формализации</em>. Причем как для фор­му­ли­ро­ва­ния задач, так и для по­ни­ма­ния, че­го же нам железяченька в ка­чес­т­ве
+результата выдала, поскольку, вообще говоря, результат этот может быть произвольным.</p>
+  </li>
+  <li>
+    <p><em>Навыки планирования и декомпозиции</em>. Как я выше сказал, если выдать ней­ро­сет­ке большое задание, проконтролировать, пра­виль­но ли она
+его выполнила, человеку будет не под си­лу, так что придется учиться разбивать задачу на мень­шие и использовать итерации.</p>
+  </li>
+  <li>
+    <p><em>Умение читать результаты чужой работы</em>.</p>
+
+    <p>Что интересно, как раз <em>программистам</em>, которые не co­de-mon­key, это все уже знакомо и потребно.</p>
+  </li>
+  <li>
+    <p><em>Умение верифицировать произвольную информацию</em>. Это, вероятно, самое сложное, но с дру­гой стороны, необходимое уже давно, с мо­мен­та
+появления интернета, умение.</p>
+  </li>
+</ul>
+
+<p>Кстати, не на­до думать, что навыки ручного написания кода или профилирования запросов разом станут неактуальны. Набросать прототип,
+просто чтобы посмотреть что получится, во мно­гих случаях будет быстрее и проще, чем формулировать полноценную задачу и привлекать нейросеть.
+Да и вообще: хочешь чтобы было сделано хорошо — сделай это сам. Не го­во­ря уж о том, что хорошо читать код, не умея его пи­сать — в прин­ци­пе,
+наверное, возможно, но практически как-то слабо представимо.</p>
+
+<p>Учиться, учиться и еще раз учить­ся — это, конечно, хорошо… Но хотелось бы отметить и другое направление, а имен­но — развитие инструментов.</p>
+
+<p>В пер­вую очередь, надо полагать, начнут развиваться инструменты <em>автоматического тестирования</em>, просто потому,
+что они уже есть, популярны и, в об­щем, понятны большинству. И это большая опас­ность — <abbr title="Test Driven Development">TDD</abbr> довольно эффективная методология, пока
+мы продолжаем иметь в ви­ду конечный результат и неявные ограничения. Тогда как машина ничего в ви­ду не име­ет, или имеет что-то, чего
+мы не зна­ем и не по­ни­ма­ем. В лю­бом случае будет большой соблазн положиться на сис­те­мы явных ограничений, проверяемых тестами, и отправлять
+в про­дакшн отлично оттестированные большие программные модули. В по­дав­ля­ю­щем большинстве случаев они даже будут работать правильно…
+Но нет-нет да бум­к­нет. После того, как бум­к­нет особенно громко и не пер­вый раз, придется задуматься.</p>
+
+<p>И вернуться на этом этапе к пол­но­му код-ре­вью и ответственности на че­ло­ве­ке.</p>
+
+<p>А сле­ду­ю­щим этапом должен стать переход к <em>до­ка­за­тель­но­му программированию</em> и автоматической <em><a href="https://ru.wikipedia.org/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D0%B2%D0%B5%D1%80%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F">формальной верификации</a></em> со всем их теоретическим
+аппаратом, по срав­не­нию с ко­то­рым ма­тан — детская игрушка. На са­мом деле ничего принципиально более сложного, чем привычное нам программирование
+там нет, да и, я уверен, языки с фор­маль­ной верификацией можно еще доработать в сто­ро­ну большей человечности, но весь процесс обучения придется
+перевернуть.</p>
+
+<p>Само собой, это все не па­на­цея. Для ка­ких-то задач нам не удас­т­ся полностью формализовать требования, а на ка­ких-то мы столкнемся с <a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0_%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B8">про­б­ле­мой останова</a>
+и прочим содержимым кроличей норы… Но да­же в об­лас­ти возможного работы непочатый край (и отделение возможного от не­воз­мож­но­го — часть этой работы).</p>
+
+<h2 id="новые-горизонты">
+<a class="anchor" href="#%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5-%D0%B3%D0%BE%D1%80%D0%B8%D0%B7%D0%BE%D0%BD%D1%82%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Новые горизонты</h2>
+
+<p>Просматривается и следующий шаг после ней­ро­се­тей. Он, собственно, уже есть, но пока столь широкого распространения не по­лу­чил. Именно широкого,
+поскольку в <em>спе­ци­аль­ных</em> задачах <strong><a href="https://ru.wikipedia.org/wiki/%D0%93%D0%B5%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC">генетические алгоритмы</a></strong> вполне себе используются. Для за­дач составления текстов или рисования
+картинок им не хва­та­ет хороших моделей, которые смогут отличать «хорошие» решения от «пло­хих». Сей­час же именно эту роль на себя могут взять
+нейросети.</p>
+
+<p>И это будет очень существенный сдвиг, поскольку позволит преодолеть первое ограничение, о ко­то­ром я говорил вначале, т.е. — <em>решение творческих
+задач</em>. Да, с ло­вуш­ка­ми локальных оптимумов и прочими проблемами, но все-таки.</p>
+
+<hr>
+
+<p class="note italic">А самое интересное, что тем же путем можно преодолеть и проблему же­ле­зя­чень­ки­но­го целеполагания… Но я, пожалуй, пока воздержусь
+от рас­суж­де­ний на эту тему, поскольку это напрямую противоречит заголовку поста.</p>
+
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2013.04.26 |</span>
+            <a href="/2013/04/tdd.html" title="TDD — выдаем нужду за добродетель. Убедительно.">Слоган</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-biohazard" href="/tech/programming/abs/" title="Абстрактные размышления о программировании в целом">Абстракции</a>​<a class="fa-icon-brain" href="/life/psi/mind/" title="Заметки о том, как мы думаем">Мышление</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.03.24 |</span>
+            <a href="/2021/03/typo-keyboard.html" title="Настройка клавиатуры в Linux для ввода различных символов, таких как, например, длинное тире, кавычки-ёлочки, знак копирайта и так далее. В редакции 2021 года.">Ввод «типографских» символов с клавиатуры (ed. 2021)</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2022.10.31 |</span>
+            <a href="/2022/10/harddybr.html" title="Некоторые заметки после обновления компьютера">Большой дыбр по железу</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a>​<a class="fa-icon-calendar-alt" href="/life/dybr/" title="Просто кусочки повседневности">Дыбр</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#о-смерти-профессий">О смерти профессий</a></li>
+<li class="toc-entry toc-h2"><a href="#меняться-придется">Меняться придется</a></li>
+<li class="toc-entry toc-h2"><a href="#новые-горизонты">Новые горизонты</a></li>
+</ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/2023/01/evil-ai.html" title="Искусственный интеллект в руках естественного идиота">Паникуем иначе</a></li></ul>
+    </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li><li><a href="/feed/life.xml" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

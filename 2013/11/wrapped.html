@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>«Обернутые» функции в Free Pascal | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="«Обернутые» функции в Free Pascal" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Бывает, требуется множество подпрограмм единообразно обернуть — добавить им всем одинаковое начало и завершение или, что более интересно, выполнить их в блоке „try … except“ с каким-нибудь фильтром на исключения…" />
+<meta property="og:description" content="Бывает, требуется множество подпрограмм единообразно обернуть — добавить им всем одинаковое начало и завершение или, что более интересно, выполнить их в блоке „try … except“ с каким-нибудь фильтром на исключения…" />
+<link rel="canonical" href="https://shikhalev.github.io/2013/11/wrapped.html" />
+<meta property="og:url" content="https://shikhalev.github.io/2013/11/wrapped.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/2013/11/14/wrapped/screen-640x640-500-261-0-0.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-11-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/img/2013/11/14/wrapped/screen-640x640-500-261-0-0.webp" />
+<meta property="twitter:title" content="«Обернутые» функции в Free Pascal" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2013-11-14T00:00:00+00:00","datePublished":"2013-11-14T00:00:00+00:00","description":"Бывает, требуется множество подпрограмм единообразно обернуть — добавить им всем одинаковое начало и завершение или, что более интересно, выполнить их в блоке „try … except“ с каким-нибудь фильтром на исключения…","headline":"«Обернутые» функции в Free Pascal","image":"https://shikhalev.github.io/img/2013/11/14/wrapped/screen-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/2013/11/wrapped.html"},"url":"https://shikhalev.github.io/2013/11/wrapped.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-keyboard" href="/tech/programming/fpc/" title="Free Pascal Compiler, Lazarus и все, что с ними связано">FPC</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">«Обернутые» функции в Free Pascal</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2013%2F11%2Fwrapped.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2013%2F11%2Fwrapped.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2013%2F11%2Fwrapped.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2013%2F11%2Fwrapped.html&text=%C2%AB%D0%9E%D0%B1%D0%B5%D1%80%D0%BD%D1%83%D1%82%D1%8B%D0%B5%C2%BB+%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8+%D0%B2+Free+Pascal">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%C2%AB%D0%9E%D0%B1%D0%B5%D1%80%D0%BD%D1%83%D1%82%D1%8B%D0%B5%C2%BB+%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8+%D0%B2+Free+Pascal&url=https%3A%2F%2Fshikhalev.github.io%2F2013%2F11%2Fwrapped.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2013-11-14T00:00:00+00:00" itemprop="datePublished">2013.11.14
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#замыкания">замыкания</a>​<a class="tag" href="/tags#метапрограммирование">метапрограммирование</a></aside></header><div itemprop="articleBody">
+  <figure class="__figure __implicit_figure __right logo" style="max-width:256px;shape-outside:url(/img/2013/11/14/wrapped/fpc-256.webp);"><img src="/img/2013/11/14/wrapped/fpc-256.webp" class="__image" style="shape-outside:url(/img/2013/11/14/wrapped/fpc-256.webp);"></figure>
+
+<p>Бывает, требуется множество подпрограмм единообразно обернуть — добавить им всем одинаковое начало и завершение или,
+что более интересно, выполнить их в блоке „<code class="language-plaintext highlighter-rouge">try ... except</code>“ с каким-нибудь фильтром на исключения… Вообще, понятно,
+что FPC поддерживает процедурные типы, но как раз типы тут могут быть самые разные, а нетипизированный вызов с руч­ной
+установкой стека — это потенциальный неиссякаемый источник трудноуловимых ошибок.</p>
+
+<p>Тут самое время вспомнить, что FPC с некоторых пор поддерживает еще и вложенные процедурные типы, а вложенная процедура
+имеет доступ ко всей области видимости внешней, включая, естественно, аргументы и псевдопеременную <code class="language-plaintext highlighter-rouge">result</code>.</p>
+
+<p>Соответственно, можно вынести все действия подпрограммы во вложенную процедуру без па­ра­мет­ров, а в ос­нов­ной блок
+вставить вызов «оборачивателя» с этой вложенной процедурой. Далее пример.</p>
+
+<!--more-->
+
+<h2 id="определение-обертки">
+<a class="anchor" href="#%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BE%D0%B1%D0%B5%D1%80%D1%82%D0%BA%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Определение обертки</h2>
+
+<p>Выводим на консоль исключение, если оно произошло, с пометкой времени.</p>
+
+<figure class="highlight">
+  <pre><code class="language-pascal" data-lang="pascal"><span class="cm">{$mode objfpc}</span>
+<span class="cm">{$modeswitch nestedprocvars}</span>
+<span class="cm">{$longstrings on}</span>
+
+<span class="k">unit</span> <span class="n">Logger</span><span class="p">;</span>
+
+<span class="k">interface</span>
+
+<span class="k">uses</span>
+  <span class="n">SysUtils</span><span class="p">;</span>
+
+<span class="k">type</span>
+  <span class="n">TCode</span> <span class="p">=</span> <span class="k">procedure</span> <span class="k">is</span> <span class="n">nested</span><span class="p">;</span>
+
+<span class="k">procedure</span> <span class="n">wrapper</span> <span class="p">(</span><span class="k">const</span> <span class="n">code</span> <span class="p">:</span> <span class="n">TCode</span><span class="p">);</span>
+
+<span class="k">implementation</span>
+
+<span class="k">procedure</span> <span class="n">wrapper</span> <span class="p">(</span><span class="k">const</span> <span class="n">code</span> <span class="p">:</span> <span class="n">TCode</span><span class="p">);</span>
+ <span class="k">begin</span>
+  <span class="k">try</span>
+   <span class="n">code</span><span class="p">();</span>
+  <span class="k">except</span>
+    <span class="k">on</span> <span class="n">e</span> <span class="p">:</span> <span class="n">Exception</span> <span class="k">do</span>
+       <span class="k">begin</span>
+        <span class="k">WriteLn</span><span class="p">(</span><span class="s">'['</span> <span class="p">+</span> <span class="n">e</span><span class="p">.</span><span class="n">ClassName</span> <span class="p">+</span> <span class="s">' at '</span> <span class="p">+</span> <span class="n">DateTimeToStr</span><span class="p">(</span><span class="n">Now</span><span class="p">)</span> <span class="p">+</span> <span class="s">']: '</span> <span class="p">+</span>
+                <span class="n">e</span><span class="p">.</span><span class="k">Message</span><span class="p">);</span>
+        <span class="k">raise</span><span class="p">;</span>
+       <span class="k">end</span><span class="p">;</span>
+  <span class="k">end</span><span class="p">;</span>
+ <span class="k">end</span><span class="p">;</span>
+
+<span class="k">end</span><span class="p">.</span></code></pre>
+</figure>
+
+<p>Замечу, что полученное исключение мы отправляем далее по стеку, не подавляем.</p>
+
+<h2 id="использование">
+<a class="anchor" href="#%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Использование</h2>
+
+<figure class="highlight">
+  <pre><code class="language-pascal" data-lang="pascal"><span class="cm">{$mode objfpc}</span>
+<span class="cm">{$modeswitch nestedprocvars}</span>
+<span class="cm">{$longstrings on}</span>
+
+<span class="k">program</span> <span class="n">Test</span><span class="p">;</span>
+
+<span class="k">uses</span>
+  <span class="n">Logger</span><span class="p">;</span>
+
+<span class="k">function</span> <span class="n">divide</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="p">:</span> <span class="kt">Double</span><span class="p">;</span>
+
+ <span class="k">procedure</span> <span class="n">_</span><span class="p">;</span>
+  <span class="k">begin</span>
+   <span class="n">result</span> <span class="p">:=</span> <span class="n">x</span> <span class="p">/</span> <span class="n">y</span><span class="p">;</span>
+  <span class="k">end</span><span class="p">;</span>
+
+ <span class="k">begin</span>
+  <span class="n">wrapper</span><span class="p">(@</span><span class="n">_</span><span class="p">);</span>
+ <span class="k">end</span><span class="p">;</span>
+
+<span class="k">var</span>
+  <span class="n">x</span> <span class="p">:</span> <span class="kt">Double</span><span class="p">;</span>
+
+<span class="k">begin</span>
+ <span class="k">try</span>
+  <span class="n">x</span> <span class="p">:=</span> <span class="n">divide</span><span class="p">(</span><span class="m">1.1</span><span class="p">,</span> <span class="m">2.0</span><span class="p">);</span>
+  <span class="k">WriteLn</span><span class="p">(</span><span class="n">x</span><span class="p">:</span><span class="m">5</span><span class="p">:</span><span class="m">3</span><span class="p">);</span>
+  <span class="n">x</span> <span class="p">:=</span> <span class="n">divide</span><span class="p">(</span><span class="m">1.1</span><span class="p">,</span> <span class="m">0.0</span><span class="p">);</span>
+  <span class="k">WriteLn</span><span class="p">(</span><span class="n">x</span><span class="p">:</span><span class="m">5</span><span class="p">:</span><span class="m">3</span><span class="p">);</span>
+ <span class="k">except</span>
+ <span class="k">end</span><span class="p">;</span>
+<span class="k">end</span><span class="p">.</span></code></pre>
+</figure>
+
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2009.01.23 |</span>
+            <a href="/2009/01/manifest.html" title="">МанифестЪ</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2013.10.09 |</span>
+            <a href="/2013/10/eval-vs-exec-2.html" title="Или снова об оптимизации скриптовых языков.">Возвращаясь к размышлизму...</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-biohazard" href="/tech/programming/abs/" title="Абстрактные размышления о программировании в целом">Абстракции</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2023.01.07 |</span>
+            <a href="/2023/01/evil-ai.html" title="Искусственный интеллект в руках естественного идиота">Паникуем иначе</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#определение-обертки">Определение обертки</a></li>
+<li class="toc-entry toc-h2"><a href="#использование">Использование</a></li>
+</ul>
+</aside><aside id="backs" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Декораторы в Ruby | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Декораторы в Ruby" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Реализация паттерна «декоратор» на языке Ruby" />
+<meta property="og:description" content="Реализация паттерна «декоратор» на языке Ruby" />
+<link rel="canonical" href="https://shikhalev.github.io/2015/03/decorator.html" />
+<meta property="og:url" content="https://shikhalev.github.io/2015/03/decorator.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/2015/03/30/decorator/screen-decos-640x640-500-261-0-0.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-03-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/img/2015/03/30/decorator/screen-decos-640x640-500-261-0-0.webp" />
+<meta property="twitter:title" content="Декораторы в Ruby" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2015-03-30T00:00:00+00:00","datePublished":"2015-03-30T00:00:00+00:00","description":"Реализация паттерна «декоратор» на языке Ruby","headline":"Декораторы в Ruby","image":"https://shikhalev.github.io/img/2015/03/30/decorator/screen-decos-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/2015/03/decorator.html"},"url":"https://shikhalev.github.io/2015/03/decorator.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">Декораторы в Ruby</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2015%2F03%2Fdecorator.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2015%2F03%2Fdecorator.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2015%2F03%2Fdecorator.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2015%2F03%2Fdecorator.html&text=%D0%94%D0%B5%D0%BA%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B+%D0%B2+Ruby">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%94%D0%B5%D0%BA%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B+%D0%B2+Ruby&url=https%3A%2F%2Fshikhalev.github.io%2F2015%2F03%2Fdecorator.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2015-03-30T00:00:00+00:00" itemprop="datePublished">2015.03.30
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#метапрограммирование">метапрограммирование</a></aside></header><div itemprop="articleBody">
+  <p><a href="http://samag.ru/archive/article/2520">Оригинал этой статьи опубликован в журнале «Системный администратор» №9 (130) за сентябрь 2013</a>.</p>
+
+<hr>
+
+<figure class="__figure __implicit_figure __right" style="max-width:158px;padding: 5px;"><a href="http://samag.ru/archive/article/2520"><img src="/img/2015/03/30/decorator/130-158.webp" class="__image"></a></figure>
+
+<div class="note">
+  <p>Как известно, в языке Python существует красивый механизм декораторов, расширяющих функционал объекта без изменения
+интерфейса. Это довольно мощное средство, попользоваться им удобно и приятно. Но вот проблема: наш язык
+программирования — Ruby!</p>
+
+  <p>На самом деле никакой проблемы нет, и в Ruby достаточно возможностей, чтобы решать подобные задачи не менее эффективно,
+чем в конкурирующих технологиях.</p>
+
+  <p>… … …</p>
+
+  <p>Универсальность всегда увеличивает сложность и накладные расходы. Так что мое мнение: жили мы без декораторов в Ruby
+и еще поживем. Тем не менее сама методика декорирования кода, безусловно, заслуживает внимания и может с успехом применяться
+в самых разных задачах.</p>
+</div>
+
+<!--more-->
+
+<hr style="clear: both;">
+
+<div class="sticker right" style="max-width:300px;">
+  <p><u>Декоратор в общем смысле</u> — шаблон проектирования, предусматривающий динамическое подключение дополнительной
+функциональности к некоторому уже имеющемуся объекту без изменения его интерфейса. Старая функциональность оказывается
+как бы обернута в новую.</p>
+
+  <p><u>Декоратор в языке программирования Python</u> — специальная синтаксическая конструкция, «оборачивающая» заданную
+функцию с использованием ранее определенной функции-обертки. Обо­ра­чи­ва­ю­щая функция принимает в качестве аргументов
+заданную и, возможно, какие-то дополнительные параметры, которые в дальнейшем указываются при ис­пользовании декоратора,
+и возвращает замещающую функцию.</p>
+
+  <p>Простой пример:</p>
+
+  <figure class="highlight">
+    <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">log</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+
+  <span class="k">def</span> <span class="nf">wrapped</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">wrapped</span>
+
+<span class="vi">@log</span>
+<span class="k">def</span> <span class="nf">test</span><span class="p">():</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">"Test"</span><span class="p">)</span>
+
+<span class="nb">test</span><span class="p">()</span></code></pre>
+  </figure>
+
+</div>
+
+<p>Идея этой статьи навеяна постом на Хабре о декораторах в языке Python<sup id="fnref:habr"><a href="#fn:habr" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>, а также некоторыми другими материалами в сети
+на ту же тему. Авторы данных материалов явно гордятся такой возможностью языка, что прямо таки заставляет правоверного рубиста
+выяснить, а как обстоят дела с аналогами в любимом языке. Конечно, надо понимать, что при всей близости по времени появления,
+объектно-ориентированности и области применения, Python и Ruby все же разные языки, соответственно, аналоги получаются не один
+к одному. Но можно говорить о схожих решениях схожих задач. Если мы откроем вышеупомянутый хабрапост, то увидим, в частности:</p>
+
+<blockquote>
+  <p>«Для того, чтобы понять, как работают декораторы, в первую очередь следует осознать, что в Python’е функции — это тоже объекты»</p>
+</blockquote>
+
+<p>И тут уже приходится остановиться: в Ruby, во-первых, нет функций, есть только методы, а во-вторых, методы объектами не являются.
+Все плохо? Ничего подобного. Возможностей метапрограммирования в Ruby более чем достаточно для того, чтобы реализовать аналогичную
+функциональность. Это и будет предметом настоящей статьи.</p>
+
+<p>Пара слов о том, зачем это надо: способы применения могут быть самые разные — от ведения логов и замеров производительности
+до проверки прав пользователя или каких-то еще сложных условий перед выполнением каждого действия. Причем, обрамлять своими
+проверками мы можем любые методы, в том числе принадлежащие классам стандартной библиотеки языка, или библиотек, разрабатываемых
+третьими лицами. Поскольку исходный код имеющихся библиотек не модифицируется, мы не создаем себе никаких препятствий к установке
+обновлений и исправлений, что важно для проектов с длительным жизненным циклом.</p>
+
+<h2 id="блоки-методы-и-объекты-proc">
+<a class="anchor" href="#%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D1%8B-%D0%B8-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B-proc" aria-hidden="true"><span class="octicon octicon-link"></span></a>Блоки, методы и объекты Proc</h2>
+
+<p class="note"><em>Здесь и далее я описываю сложные, но хорошо документированные, особенности языка применительно к основной теме статьи, кратко,
+не всегда формально точно и, по возможности, просто. Для изучения языка лучше всего обратиться к более-менее официальным<sup id="fnref:ppg"><a href="#fn:ppg" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>
+и неофициальным<sup id="fnref:wiki"><a href="#fn:wiki" class="footnote" rel="footnote" role="doc-noteref">3</a></sup> руководствам.</em></p>
+
+<p>Итак, что мы имеем на уровне языка? Во-первых, это, конечно, <em>методы</em>. В принципе — те же функции, но определенные для класса
+и исполняющиеся в контексте объекта. Замечу, что метод всегда определен для какого-то класса, даже если формально он задан
+непосредственно объекту: так называемые синглтон-методы это методы так называемых синглтон-классов. Методы, определенные
+в глобальном контексте принадлежат классу <code class="language-plaintext highlighter-rouge">Object</code>. С помощью метода <code class="language-plaintext highlighter-rouge">method</code> можно получить для данного метода объект класса
+<code class="language-plaintext highlighter-rouge">Method</code> («Шишков, прости…»), который уже есть полноценный ruby-объект.</p>
+
+<p>Во-вторых, это <em>блоки</em> — их можно рассматривать как анонимные функции, образующие замыкание с тем контекстом, в котором они
+определены. При этом язык так устроен, что определяем блок мы всегда, передавая его в некий метод, где он доступен, помимо особых
+средств языка, и как объект класса <code class="language-plaintext highlighter-rouge">Proc</code>.</p>
+
+<p>Одним из таких методов, принимающих блоки, является метод класса <code class="language-plaintext highlighter-rouge">Module</code> <code class="language-plaintext highlighter-rouge">define_method</code>, который волшебным образом превращает
+блок в метод. С другой стороны, объект класса <code class="language-plaintext highlighter-rouge">Proc</code>, а также любой объект, для которого определен метод <code class="language-plaintext highlighter-rouge">to_proc</code>, в том числе
+и класса <code class="language-plaintext highlighter-rouge">Method</code>, может быть передан в качестве блока посредством префикса <code class="language-plaintext highlighter-rouge">&amp;</code>.</p>
+
+<p>Демонстрация:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">show</span> <span class="n">x</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span>
+  <span class="nb">puts</span> <span class="n">block</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="k">def</span> <span class="nf">alpha</span> <span class="n">x</span>
+  <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">end</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">method</span><span class="p">(</span><span class="ss">:alpha</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">a</span><span class="p">.</span><span class="nf">inspect</span>
+<span class="nb">puts</span> <span class="n">a</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="nb">proc</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span> <span class="p">}</span>
+<span class="nb">puts</span> <span class="n">b</span><span class="p">.</span><span class="nf">inspect</span>
+<span class="no">Object</span><span class="p">.</span><span class="nf">send</span> <span class="ss">:define_method</span><span class="p">,</span> <span class="ss">:beta</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span>
+<span class="nb">puts</span> <span class="n">beta</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">show</span> <span class="mi">10</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span>
+<span class="n">show</span> <span class="mi">10</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span>
+<span class="n">show</span> <span class="mi">10</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span>
+  <span class="n">x</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>На выходе должны получить что-то вроде этого:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby deco2.rb
+<span class="go">♯‹Method: Object♯alpha›
+1
+♯‹Proc:0x00000000af1298@deco1.rb:14›
+2
+11
+12
+13</span></code></pre>
+</figure>
+
+<p>Здесь мы из метода <code class="language-plaintext highlighter-rouge">alpha</code> получили объект, а метод <code class="language-plaintext highlighter-rouge">beta</code> наоборот, создали из объекта. «<code class="language-plaintext highlighter-rouge">Object.send :define_method</code>»
+вместо «<code class="language-plaintext highlighter-rouge">Object.define_method</code>» пришлось использовать потому, что <code class="language-plaintext highlighter-rouge">define_method</code> — приватный.</p>
+
+<p>Теперь, определившись, что у нас есть, можно перейти к рассмотрению того, что можно из этого сделать…</p>
+
+<h2 id="шаг-первый--функция-обертка">
+<a class="anchor" href="#%D1%88%D0%B0%D0%B3-%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B9--%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8F-%D0%BE%D0%B1%D0%B5%D1%80%D1%82%D0%BA%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Шаг первый — функция-обертка</h2>
+
+<p>Очевидно, что там, где в Python функция, принимающая и возвращающая функцию, у нас будет метод, принимающий объект класса
+<code class="language-plaintext highlighter-rouge">Proc</code>, а лучше — для универсальности — блок, и возвращающий объект класса <code class="language-plaintext highlighter-rouge">Proc</code>.</p>
+
+<p>Давайте напишем обертку-логгер:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">wrap</span> <span class="o">&amp;</span><span class="n">block</span>
+  <span class="nb">proc</span> <span class="k">do</span> <span class="o">|*</span><span class="n">args</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">blk</span><span class="o">|</span>
+    <span class="k">begin</span>
+      <span class="n">result</span> <span class="o">=</span> <span class="n">block</span><span class="p">.</span><span class="nf">call</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">blk</span>
+      <span class="vg">$stderr</span><span class="p">.</span><span class="nf">puts</span> <span class="s2">"OK: </span><span class="si">#{</span><span class="n">args</span><span class="p">.</span><span class="nf">inspect</span><span class="si">}</span><span class="s2">"</span> <span class="o">+</span>
+          <span class="s2">" =&gt; </span><span class="si">#{</span><span class="n">result</span><span class="p">.</span><span class="nf">inspect</span><span class="si">}</span><span class="s2">"</span>
+      <span class="n">result</span>
+    <span class="k">rescue</span> <span class="no">Exception</span> <span class="o">=&gt;</span> <span class="n">e</span>
+      <span class="vg">$stderr</span><span class="p">.</span><span class="nf">puts</span> <span class="s2">"ERROR! </span><span class="si">#{</span><span class="n">args</span><span class="p">.</span><span class="nf">inspect</span><span class="si">}</span><span class="s2"> =&gt; </span><span class="si">#{</span><span class="n">e</span><span class="p">.</span><span class="nf">inspect</span><span class="si">}</span><span class="s2">"</span>
+      <span class="k">raise</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>И протестируем ее:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="n">alpha</span> <span class="o">=</span> <span class="nb">proc</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">|</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span> <span class="p">}</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">wrap</span> <span class="o">&amp;</span><span class="n">alpha</span>
+
+<span class="n">z1</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="nf">call</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span>
+<span class="n">z2</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="nf">call</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span></code></pre>
+</figure>
+
+<p>Получаем (в предположении, что определение обертки и тестирующий код находятся в файле <code class="language-plaintext highlighter-rouge">deco2.rb</code>, как у меня<sup id="fnref:gist"><a href="#fn:gist" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>):</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby deco2.rb
+<span class="go">OK: [4, 2] =› 2
+ERROR! [4, 0] =› ♯‹ZeroDivisionError: divided by 0›
+deco2.rb:16:in `/': divided by 0 (ZeroDivisionError)
+        from deco2.rb:16:in `block in ‹main›'
+        from deco2.rb:6:in `call'
+        from deco2.rb:6:in `block in wrap'
+        from deco2.rb:21:in `call'
+        from deco2.rb:21:in `‹main›'</span></code></pre>
+</figure>
+
+<p>Здесь хорошо видно, что мы получили исключение, вывели информацию о нем и отправили его дальше по стеку вызовов.
+Это сделано затем, чтобы и в плане исключений обертка вела себя так же, как исходная функция.</p>
+
+<p>Чтобы в начале и конце у нас был метод, требуется добавить в общем-то немного:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">wrap_method</span> <span class="nb">name</span>
+  <span class="no">Object</span><span class="p">.</span><span class="nf">send</span> <span class="ss">:define_method</span><span class="p">,</span> <span class="nb">name</span><span class="p">,</span> <span class="o">&amp;</span><span class="p">(</span><span class="n">wrap</span> <span class="o">&amp;</span><span class="p">(</span><span class="nb">method</span> <span class="nb">name</span><span class="p">))</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>Получаем метод, создаем обертку и на ее основе переопределяем метод с тем же именем. Проверяем как-то так:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">alpha</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+  <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
+<span class="k">end</span>
+
+<span class="n">wrap_method</span> <span class="ss">:alpha</span>
+
+<span class="n">alpha</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span>
+<span class="n">alpha</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span></code></pre>
+</figure>
+
+<h2 id="шаг-второй--в-правильном-контексте">
+<a class="anchor" href="#%D1%88%D0%B0%D0%B3-%D0%B2%D1%82%D0%BE%D1%80%D0%BE%D0%B9--%D0%B2-%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C%D0%BD%D0%BE%D0%BC-%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Шаг второй — в правильном контексте</h2>
+
+<p>Примеры выше даны для глобального контекста, в котором, однако, на практике методы определяют редко. Нормальное
+расположение методов — в контексте класса или модуля. Или попросту модуля, поскольку класс в данном случае есть
+его разновидность (очень специфическая, но все же).</p>
+
+<p>Поместим метод <code class="language-plaintext highlighter-rouge">wrap</code> в явном виде в класс <code class="language-plaintext highlighter-rouge">Object</code> (на самом деле, он и так там, просто сделаем определение более
+ясным) и заставим его принимать не только блоки, но и непосредственно объекты класса <code class="language-plaintext highlighter-rouge">Method</code>, чтобы иметь доступ
+к имени метода, а также класса <code class="language-plaintext highlighter-rouge">UnboundMethod</code>, чтобы оперировать методами, не привязанными к конкретному объекту.</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Object</span>
+
+  <span class="kp">private</span>
+
+  <span class="k">def</span> <span class="nf">wrap</span> <span class="n">meth</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span>
+    <span class="n">func</span> <span class="o">=</span> <span class="n">meth</span> <span class="o">||</span> <span class="n">block</span>
+    <span class="nb">name</span> <span class="o">=</span> <span class="p">(</span><span class="n">meth</span> <span class="o">&amp;&amp;</span> <span class="n">meth</span><span class="p">.</span><span class="nf">name</span><span class="p">)</span> <span class="o">||</span> <span class="s1">''</span>
+    <span class="nb">proc</span> <span class="k">do</span> <span class="o">|*</span><span class="n">args</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">blk</span><span class="o">|</span>
+      <span class="k">if</span> <span class="no">UnboundMethod</span> <span class="o">===</span> <span class="n">func</span>
+        <span class="n">func</span> <span class="o">=</span> <span class="n">func</span><span class="p">.</span><span class="nf">bind</span> <span class="nb">self</span>
+      <span class="k">end</span>
+      <span class="k">begin</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">.</span><span class="nf">call</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">blk</span>
+        <span class="vg">$stderr</span><span class="p">.</span><span class="nf">puts</span> <span class="s2">"OK: </span><span class="si">#{</span><span class="nb">self</span><span class="p">.</span><span class="nf">inspect</span><span class="si">}</span><span class="s2">.</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span> <span class="o">+</span>
+            <span class="s2">" </span><span class="si">#{</span><span class="n">args</span><span class="p">.</span><span class="nf">inspect</span><span class="si">}</span><span class="s2"> =&gt; </span><span class="si">#{</span><span class="n">result</span><span class="p">.</span><span class="nf">inspect</span><span class="si">}</span><span class="s2">"</span>
+        <span class="n">result</span>
+      <span class="k">rescue</span> <span class="no">Exception</span> <span class="o">=&gt;</span> <span class="n">e</span>
+        <span class="vg">$stderr</span><span class="p">.</span><span class="nf">puts</span> <span class="s2">"ERROR! </span><span class="si">#{</span><span class="nb">self</span><span class="p">.</span><span class="nf">inspect</span><span class="si">}</span><span class="s2">.</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span> <span class="o">+</span>
+            <span class="s2">" </span><span class="si">#{</span><span class="n">args</span><span class="p">.</span><span class="nf">inspect</span><span class="si">}</span><span class="s2"> =&gt; </span><span class="si">#{</span><span class="n">e</span><span class="p">.</span><span class="nf">inspect</span><span class="si">}</span><span class="s2">"</span>
+        <span class="k">raise</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">wrap_singleton_method</span> <span class="o">*</span><span class="n">names</span>
+    <span class="n">names</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
+      <span class="n">define_singleton_method</span> <span class="nb">name</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">wrap</span><span class="p">(</span><span class="nb">method</span> <span class="nb">name</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">Module</span>
+
+  <span class="k">def</span> <span class="nf">wrap_method</span> <span class="o">*</span><span class="n">names</span>
+    <span class="n">names</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
+      <span class="n">define_method</span> <span class="nb">name</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">wrap</span><span class="p">(</span><span class="nb">instance_method</span> <span class="nb">name</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>И попробуем:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Fixnum</span>
+
+  <span class="n">wrap_method</span> <span class="p">:</span><span class="o">+</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span>
+
+<span class="k">end</span>
+
+<span class="n">z0</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="n">z1</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">-</span> <span class="mi">2</span>
+
+<span class="k">def</span> <span class="nf">mul</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+  <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+<span class="k">end</span>
+
+<span class="n">wrap_singleton_method</span> <span class="ss">:mul</span>
+
+<span class="n">z2</span> <span class="o">=</span> <span class="n">mul</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span></code></pre>
+</figure>
+
+<p>Получим:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby deco4.rb
+<span class="go">OK: 4.+ [2] =› 6
+OK: 4.- [2] =› 2
+OK: main.mul [4, 2] =› 8</span></code></pre>
+</figure>
+
+<p>Нетрудно заметить, что использование <code class="language-plaintext highlighter-rouge">wrap_method</code> выглядит весьма похоже на стандартные модификаторы <code class="language-plaintext highlighter-rouge">private</code>, <code class="language-plaintext highlighter-rouge">protected</code>
+и <code class="language-plaintext highlighter-rouge">public</code>. Давайте еще усилим эту похожесть (а заодно и похожесть на python-декораторы) — при вызове без параметров, метод
+будет действовать на все последующие определения. Модифицируем <code class="language-plaintext highlighter-rouge">wrap_method</code>:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">wrap_method</span> <span class="o">*</span><span class="n">names</span>
+  <span class="k">if</span> <span class="n">names</span><span class="p">.</span><span class="nf">length</span> <span class="o">!=</span> <span class="mi">0</span>
+    <span class="vi">@ignore_wrap</span> <span class="o">=</span> <span class="kp">true</span>
+    <span class="n">names</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
+      <span class="n">define_method</span> <span class="nb">name</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">wrap</span><span class="p">(</span><span class="nb">instance_method</span> <span class="nb">name</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="vi">@ignore_wrap</span> <span class="o">=</span> <span class="kp">false</span>
+  <span class="k">else</span>
+    <span class="n">ma</span> <span class="o">=</span> <span class="nb">method</span> <span class="ss">:method_added</span>
+    <span class="n">define_singleton_method</span> <span class="ss">:method_added</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
+      <span class="n">wrap_method</span> <span class="nb">name</span> <span class="k">unless</span> <span class="vi">@ignore_wrap</span>
+      <span class="n">ma</span><span class="p">.</span><span class="nf">call</span> <span class="nb">name</span> <span class="k">if</span> <span class="n">ma</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>Метод класса <code class="language-plaintext highlighter-rouge">Module</code> <code class="language-plaintext highlighter-rouge">method_added</code> вызывается при любом определении метода. Чтобы не уйти в бесконечный цикл, нам приходится
+дополнительно ввести флаг, говорящий о том, что текущее определение — это наша обертка, которую заново оборачивать не нужно.</p>
+
+<p>Кстати, здесь мы вместо того, чтобы перекрыть метод <code class="language-plaintext highlighter-rouge">method_added</code> создаем (опять же) над ним обертку. Сделано это затем, чтобы
+нам не помешали его возможные переобъявления. Проверим на следующем коде:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Alpha</span>
+
+  <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span>
+
+    <span class="k">def</span> <span class="nf">method_added</span> <span class="nb">name</span>
+      <span class="nb">puts</span> <span class="s2">"method_added: </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">end</span>
+
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">alpha</span>
+    <span class="nb">p</span> <span class="ss">:alpha</span>
+  <span class="k">end</span>
+
+  <span class="n">wrap_method</span>
+
+  <span class="k">def</span> <span class="nf">beta</span>
+    <span class="nb">p</span> <span class="ss">:beta</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">gamma</span>
+    <span class="nb">p</span> <span class="ss">:gamma</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="no">Alpha</span><span class="p">.</span><span class="nf">new</span>
+
+<span class="n">a</span><span class="p">.</span><span class="nf">alpha</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">beta</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">gamma</span></code></pre>
+</figure>
+
+<p>Должно получиться на выходе:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby deco5.rb
+<span class="go">method_added: alpha
+method_added: beta
+method_added: beta
+method_added: gamma
+method_added: gamma
+:alpha
+:beta
+OK: ♯‹Alpha:0x00000001e7c510›.beta [] =› :beta
+:gamma
+OK: ♯‹Alpha:0x00000001e7c510›.gamma [] =› :gamma</span></code></pre>
+</figure>
+
+<p>Аналогично можно модифицировать и <code class="language-plaintext highlighter-rouge">wrap_singleton_method</code>, если очень хочется.</p>
+
+<h2 id="шаг-третий--фабрика-генераторов">
+<a class="anchor" href="#%D1%88%D0%B0%D0%B3-%D1%82%D1%80%D0%B5%D1%82%D0%B8%D0%B9--%D1%84%D0%B0%D0%B1%D1%80%D0%B8%D0%BA%D0%B0-%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BE%D0%B2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Шаг третий — фабрика генераторов</h2>
+
+<p>Ну и наконец, давайте решим задачу в более-менее общем виде. Пусть у нас будет способ генерировать различные «декораторы»,
+задав имя и блок, возвращающий <code class="language-plaintext highlighter-rouge">proc</code>-обертку. Блок будет принимать <code class="language-plaintext highlighter-rouge">UnboundMethod</code> и произвольные именованные параметры.
+Только именованные, поскольку неименованный список мы будем вместе с ними передавать при вызове декоратора — это имена
+декорируемых методов, как и в примерах выше. В python-декораторах так делать не принято, зато в Ruby подобное сплошь и рядом.</p>
+
+<p class="note"><em>Для упрощения и сокращения кода далее я использую синтаксическую конструкцию для задания именованных параметров,
+которая появилась только в Ruby версии 2.0 (предыдущие примеры полностью работоспособны и в 1.9). Сделать тоже самое
+в предыдущих версиях вполне реально, но несколько длиннее.</em></p>
+
+<p>Вот такое короткое определение:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Module</span>
+
+  <span class="k">def</span> <span class="nf">decorator</span> <span class="nb">name</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">wrapper</span>
+    <span class="n">define_singleton_method</span> <span class="nb">name</span> <span class="k">do</span> <span class="o">|*</span><span class="n">names</span><span class="p">,</span> <span class="o">**</span><span class="n">opts</span><span class="o">|</span>
+      <span class="k">if</span> <span class="n">names</span><span class="p">.</span><span class="nf">length</span> <span class="o">!=</span> <span class="mi">0</span>
+        <span class="vi">@ignore_wrap</span> <span class="o">=</span> <span class="kp">true</span>
+        <span class="n">names</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">nm</span><span class="o">|</span>
+          <span class="n">define_method</span> <span class="n">nm</span><span class="p">,</span>
+              <span class="o">&amp;</span><span class="n">wrapper</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="nb">instance_method</span><span class="p">(</span><span class="n">nm</span><span class="p">),</span> <span class="o">**</span><span class="n">opts</span><span class="p">)</span>
+        <span class="k">end</span>
+        <span class="vi">@ignore_wrap</span> <span class="o">=</span> <span class="kp">false</span>
+      <span class="k">else</span>
+        <span class="n">ma</span> <span class="o">=</span> <span class="nb">method</span> <span class="ss">:method_added</span>
+        <span class="n">define_singleton_method</span> <span class="ss">:method_added</span> <span class="k">do</span> <span class="o">|</span><span class="n">nm</span><span class="o">|</span>
+          <span class="nb">send</span> <span class="nb">name</span><span class="p">,</span> <span class="n">nm</span><span class="p">,</span> <span class="o">**</span><span class="n">opts</span> <span class="k">unless</span> <span class="vi">@ignore_wrap</span>
+          <span class="n">ma</span><span class="p">.</span><span class="nf">call</span> <span class="n">nm</span> <span class="k">if</span> <span class="n">ma</span>
+        <span class="k">end</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>Прогоним тестовый пример:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="vg">$:</span> <span class="o">&lt;&lt;</span> <span class="s1">'.'</span>
+
+<span class="nb">require</span> <span class="s1">'deco'</span>
+
+<span class="k">class</span> <span class="nc">Alpha</span>
+
+  <span class="n">decorator</span> <span class="ss">:echo</span> <span class="k">do</span> <span class="o">|</span><span class="n">unbound</span><span class="p">,</span> <span class="ss">prefix: </span><span class="s1">'echo: '</span><span class="p">,</span> <span class="o">**</span><span class="n">opts</span><span class="o">|</span>
+    <span class="nb">proc</span> <span class="k">do</span> <span class="o">|*</span><span class="n">args</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">blk</span><span class="o">|</span>
+      <span class="nb">puts</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s1">'name = '</span> <span class="o">+</span>
+          <span class="n">unbound</span><span class="p">.</span><span class="nf">name</span><span class="p">.</span><span class="nf">inspect</span> <span class="k">if</span> <span class="n">opts</span><span class="p">[</span><span class="ss">:name</span><span class="p">]</span>
+      <span class="nb">puts</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s1">'args = '</span> <span class="o">+</span> <span class="n">args</span><span class="p">.</span><span class="nf">inspect</span> <span class="k">if</span> <span class="n">opts</span><span class="p">[</span><span class="ss">:args</span><span class="p">]</span>
+      <span class="n">result</span> <span class="o">=</span> <span class="n">unbound</span><span class="p">.</span><span class="nf">bind</span><span class="p">(</span><span class="nb">self</span><span class="p">).</span><span class="nf">call</span> <span class="o">*</span><span class="n">args</span>
+      <span class="nb">puts</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s1">'result = '</span> <span class="o">+</span>
+          <span class="n">result</span><span class="p">.</span><span class="nf">inspect</span> <span class="k">if</span> <span class="n">opts</span><span class="p">[</span><span class="ss">:result</span><span class="p">]</span>
+      <span class="n">result</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">alpha</span>
+    <span class="ss">:alpha</span>
+  <span class="k">end</span>
+
+  <span class="n">echo</span> <span class="ss">:alpha</span><span class="p">,</span> <span class="ss">prefix: </span><span class="s1">''</span><span class="p">,</span> <span class="ss">result: </span><span class="kp">true</span>
+
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">Beta</span> <span class="o">&lt;</span> <span class="no">Alpha</span>
+
+  <span class="k">def</span> <span class="nf">beta</span> <span class="n">x</span>
+    <span class="s2">"BETA: "</span> <span class="o">+</span> <span class="n">x</span><span class="p">.</span><span class="nf">to_s</span>
+  <span class="k">end</span>
+
+  <span class="n">echo</span> <span class="ss">:beta</span><span class="p">,</span> <span class="ss">args: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">result: </span><span class="kp">true</span>
+
+  <span class="n">echo</span> <span class="ss">args: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">name: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">result: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">prefix: </span><span class="s1">'[*] '</span>
+
+  <span class="k">def</span> <span class="nf">gamma</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span>
+    <span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">*</span> <span class="n">c</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="no">Beta</span><span class="p">.</span><span class="nf">new</span>
+
+<span class="n">b</span><span class="p">.</span><span class="nf">alpha</span>
+<span class="n">b</span><span class="p">.</span><span class="nf">beta</span> <span class="mi">1</span>
+<span class="n">b</span><span class="p">.</span><span class="nf">gamma</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span></code></pre>
+</figure>
+
+<p>И получим:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby demo.rb
+<span class="go">result = :alpha
+echo: args = [1]
+echo: result = "BETA: 1"
+[*] name = :gamma
+[*] args = [1, 2, 3]
+[*] result = 6</span></code></pre>
+</figure>
+
+<h2 id="идем-дальше">
+<a class="anchor" href="#%D0%B8%D0%B4%D0%B5%D0%BC-%D0%B4%D0%B0%D0%BB%D1%8C%D1%88%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Идем дальше?</h2>
+
+<p>Как видим, все работает. Кроме того, определения декораторов прекрасно наследуются. Для дальнейшего развития можно
+поработать над тем, чтобы они еще и «включались» при добавлении mixin-модуля, предусмотреть отмену и/или переключение
+и так далее. Но… так уж ли все это нужно? Тем более, что есть не столь универсальный, зато очень простой и достаточный
+в большинстве случаев способ сделать обертку:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Fixnum</span>
+
+  <span class="k">alias</span> <span class="ss">:mul</span> <span class="p">:</span><span class="o">*</span>
+
+  <span class="k">def</span> <span class="nf">*</span> <span class="n">x</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">mul</span> <span class="n">x</span>
+    <span class="vg">$stderr</span><span class="p">.</span><span class="nf">puts</span> <span class="s2">"</span><span class="si">#{</span><span class="nb">self</span><span class="si">}</span><span class="s2"> * </span><span class="si">#{</span><span class="n">x</span><span class="si">}</span><span class="s2"> = </span><span class="si">#{</span><span class="n">result</span><span class="si">}</span><span class="s2">"</span>
+    <span class="n">result</span>
+  <span class="k">end</span>
+
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>Универсальность всегда увеличивает сложность и накладные расходы. Так что лично мое мнение: жили мы без декораторов в Ru­by,
+и еще поживем. Тем не менее сама методика декорирования кода, безусловно, заслуживает внимания и может с успехом применяться
+в самых разных задачах.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:habr">
+      <p>«Понимаем декораторы в Python’e, шаг за шагом», <a href="http://habrahabr.ru/post/141411/">http://habrahabr.ru/post/141411/</a> и <a href="http://habrahabr.ru/post/141501/">141501/</a>,
+     перевод с английского — Владислав Степанов; оригинал: “What are Python decorators?”, Renaud Gaudin, <a href="http://yeleman.com/what-are-python-decorators/">http://yeleman.com/what-are-python-decorators/</a>. <a href="#fnref:habr" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:ppg">
+      <p>Dave Thomas, with Chad Fowler and Andy Hunt, «Programming Ruby: The Pragmatic Programmers’ Guide», бесплатная версия первого
+    издания — <a href="http://www.ruby-doc.org/docs/ProgrammingRuby/">http://www.ruby-doc.org/docs/ProgrammingRuby/</a> [en]. <a href="#fnref:ppg" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:wiki">
+      <p>Викиучебник по Ruby, <a href="http://ru.wikibooks.org/wiki/Ruby">http://ru.wikibooks.org/wiki/Ruby</a>. <a href="#fnref:wiki" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:gist">
+      <p>Полные тексты всех примеров можно взять на GitHub Gist: <a href="https://gist.github.com/shikhalev/6259566">https://gist.github.com/shikhalev/6259566</a>. <a href="#fnref:gist" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2013.07.21 |</span>
+            <a href="/2013/07/git-server.html" title="Настраиваем git-сервер для малых групп с минимальными затратами.">Кратко: примитивный git-сервер</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2009.01.23 |</span>
+            <a href="/2009/01/manifest.html" title="">МанифестЪ</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2011.10.11 |</span>
+            <a href="/2011/10/latex-marker.html" title="Выделение цветным фоном в тексте, аккуратный способ.">Выделение «маркером» в LaTeX</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#блоки-методы-и-объекты-proc">Блоки, методы и объекты Proc</a></li>
+<li class="toc-entry toc-h2"><a href="#шаг-первый--функция-обертка">Шаг первый — функция-обертка</a></li>
+<li class="toc-entry toc-h2"><a href="#шаг-второй--в-правильном-контексте">Шаг второй — в правильном контексте</a></li>
+<li class="toc-entry toc-h2"><a href="#шаг-третий--фабрика-генераторов">Шаг третий — фабрика генераторов</a></li>
+<li class="toc-entry toc-h2"><a href="#идем-дальше">Идем дальше?</a></li>
+</ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/2016/01/metaprogramming.html" title="Добавление собственных абстракций в объектную модель — это просто. И интересно.">Мета­программи­ро­вание в Ruby: разбор примера</a></li></ul>
+    </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li><li><a href="/feed/pub.xml" title="Публикации в СМИ">Публикации</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

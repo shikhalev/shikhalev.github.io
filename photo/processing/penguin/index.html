@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Пингвин-фотолюбитель | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Пингвин-фотолюбитель" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Цикл постов 2016 года об обработке фотографий под Linux" />
+<meta property="og:description" content="Цикл постов 2016 года об обработке фотографий под Linux" />
+<link rel="canonical" href="https://shikhalev.github.io/photo/processing/penguin/" />
+<meta property="og:url" content="https://shikhalev.github.io/photo/processing/penguin/" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/2016/06/11/preamble/penguin-640x640-3989x2082-0-296.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-06-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/img/2016/06/11/preamble/penguin-640x640-3989x2082-0-296.webp" />
+<meta property="twitter:title" content="Пингвин-фотолюбитель" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2016-06-11T00:00:00+00:00","datePublished":"2016-06-11T00:00:00+00:00","description":"Цикл постов 2016 года об обработке фотографий под Linux","headline":"Пингвин-фотолюбитель","image":"https://shikhalev.github.io/img/2016/06/11/preamble/penguin-640x640-3989x2082-0-296.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/photo/processing/penguin/"},"url":"https://shikhalev.github.io/photo/processing/penguin/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-linux" href="/photo/processing/penguin/" title="Цикл постов 2016 года об обработке фотографий под Linux">Пингвин-фотолюбитель</a></aside>
+<article class="layout-stream" itemscope itemtype="https://schema.org/Blog"><header class="page-header"><h1 class="title-stream" itemprop="name headline">Пингвин-фотолюбитель</h1><p class="description" itemprop="description">Цикл постов 2016 года об обработке фотографий под Linux</p></header>
+
+
+
+<h2 id="содержание">
+<a class="anchor" href="#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Содержание</h2>
+
+<figure class="__figure __implicit_figure __center" style="max-width:800px;"><a href="https://commons.wikimedia.org/wiki/File:Penguin_in_Antarctica_jumping_out_of_the_water.jpg"><img src="/img/2016/06/11/penguin/penguin-800-3989x1616-0-312.webp" class="__image" alt="Картинка взята с WikiMedia Commons" title="Картинка взята с WikiMedia Commons"></a><figcaption>Картинка взята с WikiMedia Commons</figcaption></figure>
+
+<p>Пожалуй, теперь, когда этот цикл постов немного устарел, его можно считать законченным. Он остается вполне полезным,
+но с учетом значительного обновления, как использованного софта, так и моих знаний о нем, дорабатывать я его не буду —
+надо переписывать целиком.</p>
+
+<ul>
+  <li>
+    <p><strong><a href="/2016/06/preamble.html">Предисловие</a></strong></p>
+
+    <p>О чем пойдет речь, и о чем не пойдет…</p>
+  </li>
+  <li>
+    <p><strong><a href="/2016/06/raw.html">1. «Проявка» RAW-файлов</a></strong></p>
+
+    <p>Как использовать <strong><a href="https://www.darktable.org/">Darktable</a></strong>, и (очень кратко) какие еще есть варианты…</p>
+  </li>
+  <li>
+    <p><strong><a href="/2016/06/a-commandline.html">2. Командная строка и пакетная обработка</a></strong></p>
+
+    <p>Получение данных EXIF и обработка в командной строке посредством <strong><a href="https://www.imagemagick.org/">ImageMagick</a></strong>…</p>
+
+    <ul>
+      <li>
+        <p><strong><a href="/2016/06/b-2a.html">2а. Краткое замечание к предыдущим сериям</a></strong></p>
+
+        <p>Демонстрация странностей работы <strong><a href="http://ufraw.sourceforge.net/">UFRaw</a></strong>…</p>
+      </li>
+      <li>
+        <p><strong><a href="/2016/06/2b.html">2б. Краткое примечание к краткому замечанию</a></strong></p>
+
+        <p>Исправление дисторсии: в чем все-таки UFRaw прав, и как это сделать в Darktable…</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong><a href="/2016/06/hugin.html">3. Панорамы</a></strong></p>
+
+    <p>Склейка панорам посредством программы <strong><a href="http://hugin.sourceforge.net/">Hugin</a></strong>…</p>
+  </li>
+  <li>
+    <p><strong><a href="/2016/06/hdr.html">4. HDR</a></strong></p>
+
+    <p>Работа с расширенным динамическим диапазоном с помощью <strong><a href="http://qtpfsgui.sourceforge.net/">Luminance HDR</a></strong>…</p>
+  </li>
+  <li>
+    <p><strong><a href="/2016/06/stacking.html">5. Стекинг</a></strong></p>
+
+    <p>Стекинг (посредством <strong><a href="http://enblend.sourceforge.net/">enblend/enfuse</a></strong>) по экспозиции и по фокусу,
+а также уменьшение шумов без потери детализации…</p>
+  </li>
+</ul>
+
+<p>А как послесловие к этому циклу порекомендую пост <strong><a href="/2019/09/darktable-quickstart.html">«Darktable — (не очень) быстрый старт»</a></strong>.
+Он намного свежее и подробнее (но только про Darktable).</p>
+
+
+
+
+
+<h2 id="last_entries">
+<a class="anchor" href="#last_entries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Последние записи</h2><section class="stream-item stream-item-post">
+      <aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fstacking.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fstacking.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fstacking.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fstacking.html&amp;text=%D0%9F%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D0%BD-%D1%84%D0%BE%D1%82%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%3A+5.%C2%A0%D0%A1%D1%82%D0%B5%D0%BA%D0%B8%D0%BD%D0%B3"></a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%9F%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D0%BD-%D1%84%D0%BE%D1%82%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%3A+5.%C2%A0%D0%A1%D1%82%D0%B5%D0%BA%D0%B8%D0%BD%D0%B3&amp;url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fstacking.html"></a>
+</aside>
+
+
+      
+      
+        <p class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-linux" href="/photo/processing/penguin/" title="Цикл постов 2016 года об обработке фотографий под Linux">Пингвин-фотолюбитель</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a></p>
+      
+      <p class="meta">2016.06.23 • Иван Шихалев</p>
+<h3 id="2016-06-stacking-html">
+<a class="anchor" href="#2016-06-stacking-html" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="/2016/06/stacking.html" title="Приемы стекинга фотографий под Linux с использованием пакета enfuse">Пингвин-фотолюбитель: 5. Стекинг</a>
+</h3>
+
+      <div class="no_toc_section">
+
+      <figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="https://commons.wikimedia.org/wiki/File:%D0%A7%D0%B5%D1%88%D1%83%D0%B9%D0%BA%D0%B8_%D0%BA%D1%80%D1%8B%D0%BB%D0%B0_%D0%B1%D0%B0%D0%B1%D0%BE%D1%87%D0%BA%D0%B8.jpg"><img src="/img/2016/06/23/stacking/stacking-320.webp" class="__image" alt="Чешуйки крыла бабочки" title="Чешуйки крыла бабочки"></a><figcaption>Картинка взята с <a href="https://commons.wikimedia.org/wiki/File:%D0%A7%D0%B5%D1%88%D1%83%D0%B9%D0%BA%D0%B8_%D0%BA%D1%80%D1%8B%D0%BB%D0%B0_%D0%B1%D0%B0%D0%B1%D0%BE%D1%87%D0%BA%D0%B8.jpg">WikiMedia Commons</a></figcaption></figure>
+
+<p>Первым делом, пожалуй, сошлюсь на источники: ключевым по теме данного поста стал англоязычный пост
+<a href="http://www.barrygrussling.com/?p=127">Barry Gruss­ling — <strong>«Focus Stacking in Linux»</strong></a>; прочая информация получена из официального
+руководства <strong><a href="http://enblend.sourceforge.net/">enblend/enfuse</a></strong>. Соб­с­т­вен­но enfuse и будет нашим главным
+инструментом для стекинга.</p>
+
+<p>Что такое стекинг? Это когда мы делаем несколько кадров одного и того же, в общем случае — с разными
+параметрами, а затем хитрый алгоритм собирает нам результирующую картинку. Например, если мы сделаем
+несколько снимков с разной экспозицией, то можем получить в результате что-то очень похожее на результат
+сведения <a href="/2016/06/hdr.html">HDR, о котором я говорил в предыдущем посте</a>. С той лишь разницей, что собственно
+HDR-изображения (т.е. с динамическим диапазоном более 8 бит на канал) мы не получим, сразу приведение
+к 8-бит­но­му виду.</p>
+
+<p>Кроме стекинга по экспозиции рассмотрим еще уменьшение шумов и стекинг по фокусу.</p>
+
+
+
+      </div>
+<hr>
+        <p class="small"><a href="/2016/06/stacking.html">Читать далее »</a></p>
+<p class="meta">​<a class="tag" href="/tags#HDR">HDR</a>​<a class="tag" href="/tags#Hugin">Hugin</a>​<a class="tag" href="/tags#ISO">ISO</a>​<a class="tag" href="/tags#Linux">Linux</a>​<a class="tag" href="/tags#align_image_stack">align_image_stack</a>​<a class="tag" href="/tags#enfuse">enfuse</a>​<a class="tag" href="/tags#%D1%81%D1%82%D0%B5%D0%BA%D0%B8%D0%BD%D0%B3">стекинг</a></p></section><section class="stream-item stream-item-post">
+      <aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fhdr.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fhdr.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fhdr.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fhdr.html&amp;text=%D0%9F%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D0%BD-%D1%84%D0%BE%D1%82%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%3A+4.%C2%A0HDR"></a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%9F%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D0%BD-%D1%84%D0%BE%D1%82%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%3A+4.%C2%A0HDR&amp;url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fhdr.html"></a>
+</aside>
+
+
+      
+      
+        <p class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-linux" href="/photo/processing/penguin/" title="Цикл постов 2016 года об обработке фотографий под Linux">Пингвин-фотолюбитель</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a></p>
+      
+      <p class="meta">2016.06.18 • Иван Шихалев</p>
+<h3 id="2016-06-hdr-html">
+<a class="anchor" href="#2016-06-hdr-html" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="/2016/06/hdr.html" title="Создание HDR в программе Luminance HDR под Linux">Пингвин-фотолюбитель: 4. HDR</a>
+</h3>
+
+      <div class="no_toc_section">
+
+      <figure class="__figure __implicit_figure __center" style="max-width:800px;"><a href="https://commons.wikimedia.org/wiki/File:Goldstream_Provincial_Park_HDR_rainbow_panorama.jpg"><img src="/img/2016/06/18/hdr/kdpv-800.webp" class="__image" alt="Картинка взята с [WikiMedia Commons](https://commons.wikimedia.org/wiki/File:Goldstream_Provincial_Park_HDR_rainbow_panorama.jpg)" title="Картинка взята с [WikiMedia Commons](https://commons.wikimedia.org/wiki/File:Goldstream_Provincial_Park_HDR_rainbow_panorama.jpg)"></a><figcaption>Картинка взята с <a href="https://commons.wikimedia.org/wiki/File:Goldstream_Provincial_Park_HDR_rainbow_panorama.jpg">WikiMedia Commons</a></figcaption></figure>
+
+<p><a href="https://ru.wikipedia.org/wiki/High_Dynamic_Range_Imaging"><strong>HDR</strong> — High Dynamic Range</a> — термин для обозначения технологий работы с диапазоном яркости,
+который превышает стандартный. Относительно любительской фотографии этим термином обычно обозначают создание
+HDR-изображений из нескольких снимков обычного диапазона, а также их сведение к стандартному RGB разными
+специфическими методами. Картинка сверху поста демонстрирует удачный пример применения таких технологий.</p>
+
+<p>Строго говоря, RAW-файлы и 16-битные TIFF сами по себе являются HDR-изображениями, поскольку их глубина цвета
+превосходит стандартную однобайтную. Однако и ее как правило недостаточно, чтобы на одном снимке запечатлеть
+и яркое небо (не допустив пересветов) и какие-нибудь ближние затемненные участки. Кроме того, обычные мониторы
+все равно этот диапазон полностью отобразить не способны. В отличие от человеческого глаза, который очень хорошо
+адаптируется, рассматривая разные участки общей картины… К счастью, мозг при восприятии зрительной информации
+тоже хорошо адаптируется, и мы можем специальными программными методами построить картинку, которая будет
+выглядеть более естественно, чем просто взятая с камеры фотография. Ну, или совсем неестественно и сюрреалистично,
+что тоже можно использовать в качестве выразительного средства.</p>
+
+<p>Итак, нас сегодня интересует программа <strong><a href="http://qtpfsgui.sourceforge.net/" class="img-icon-luminance-hdr">Luminance HDR</a></strong>.</p>
+
+
+
+      </div>
+<hr>
+        <p class="small"><a href="/2016/06/hdr.html">Читать далее »</a></p>
+<p class="meta">​<a class="tag" href="/tags#HDR">HDR</a>​<a class="tag" href="/tags#Linux">Linux</a>​<a class="tag" href="/tags#Luminance%20HDR">Luminance HDR</a>​<a class="tag" href="/tags#%D0%B4%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B4%D0%B8%D0%B0%D0%BF%D0%B0%D0%B7%D0%BE%D0%BD">динамический диапазон</a>​<a class="tag" href="/tags#%D1%86%D0%B2%D0%B5%D1%82">цвет</a></p></section><section class="stream-item stream-item-post">
+      <aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fhugin.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fhugin.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fhugin.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fhugin.html&amp;text=%D0%9F%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D0%BD-%D1%84%D0%BE%D1%82%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%3A+3.%C2%A0%D0%9F%D0%B0%D0%BD%D0%BE%D1%80%D0%B0%D0%BC%D1%8B"></a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%9F%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D0%BD-%D1%84%D0%BE%D1%82%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%3A+3.%C2%A0%D0%9F%D0%B0%D0%BD%D0%BE%D1%80%D0%B0%D0%BC%D1%8B&amp;url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fhugin.html"></a>
+</aside>
+
+
+      
+      
+        <p class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-linux" href="/photo/processing/penguin/" title="Цикл постов 2016 года об обработке фотографий под Linux">Пингвин-фотолюбитель</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a></p>
+      
+      <p class="meta">2016.06.17 • Иван Шихалев</p>
+<h3 id="2016-06-hugin-html">
+<a class="anchor" href="#2016-06-hugin-html" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="/2016/06/hugin.html" title="Склейка панорам под Linux — программа Hugin">Пингвин-фотолюбитель: 3. Панорамы</a>
+</h3>
+
+      <div class="no_toc_section">
+
+      <figure class="__figure __implicit_figure __right" style="max-width:240px;"><img src="/img/2016/06/17/hugin/IMG_1868-240.webp" class="__image"></figure>
+
+<p>Для склеивания панорам нам понадобится программа с гордым именем <strong><a href="http://hugin.sourceforge.net/" class="img-icon-hugin">Hugin</a></strong>. Имя действительно гордое,
+ибо дано в честь Хугина — одного из воронов Одина.</p>
+
+<p>На КДПВ, конечно, не сам Хугин, а некий современный его сородич. Будем считать, потомок.</p>
+
+<p>Устанавливать программу я рекомендую опять же свежую версию из PPA — «<code class="language-plaintext highlighter-rouge">ppa:​hugin/​hugin-builds</code>». На момент написания
+поста актуальна версия 2016.0.0.</p>
+
+<div class="note">
+  <p><em>Вообще-то, тут у меня накладочка — Hugin отказался заводиться на виртуалке, как свежий, так и из основного
+репозитория. Судя по всему, ему не хватило драйверов видеокарты. Так что гарантировать, что свежая версия
+работает под Linux Mint лучше старой, я не могу. Скрины будут с моей основной системы, т.е. Gentoo.</em></p>
+</div>
+
+<p>Raw-файлы Hugin, к сожалению, читать не умеет, поэтому склеивать будем из 16-битного TIFF, <a href="/2016/06/raw.html">предварительно
+полученного посредством Darktable</a>.</p>
+
+
+
+      </div>
+<hr>
+        <p class="small"><a href="/2016/06/hugin.html">Читать далее »</a></p>
+<p class="meta">​<a class="tag" href="/tags#Hugin">Hugin</a>​<a class="tag" href="/tags#Linux">Linux</a>​<a class="tag" href="/tags#%D0%BF%D0%B0%D0%BD%D0%BE%D1%80%D0%B0%D0%BC%D1%8B">панорамы</a></p></section><section class="stream-item stream-item-post">
+      <aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2F2b.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2F2b.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2F2b.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2F2b.html&amp;text=%D0%9F%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D0%BD-%D1%84%D0%BE%D1%82%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%3A+2%D0%B1.%C2%A0%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%B5+%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D0%B5+%D0%BA+%D0%BA%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%BC%D1%83+%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8E"></a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%9F%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D0%BD-%D1%84%D0%BE%D1%82%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%3A+2%D0%B1.%C2%A0%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%B5+%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D0%B5+%D0%BA+%D0%BA%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%BC%D1%83+%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8E&amp;url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2F2b.html"></a>
+</aside>
+
+
+      
+      
+        <p class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-linux" href="/photo/processing/penguin/" title="Цикл постов 2016 года об обработке фотографий под Linux">Пингвин-фотолюбитель</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a></p>
+      
+      <p class="meta">2016.06.16 • Иван Шихалев</p>
+<h3 id="2016-06-2b-html">
+<a class="anchor" href="#2016-06-2b-html" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="/2016/06/2b.html" title="Уточнение о геометрических искажениях в разных программах">Пингвин-фотолюбитель: 2б. Краткое примечание к краткому замечанию</a>
+</h3>
+
+      <div class="no_toc_section">
+
+      <figure class="__figure __implicit_figure __center" style="max-width:800px;"><a href="/img/2016/06/16/2b/optics-fhd.webp" class="__image_link"><img src="/img/2016/06/16/2b/optics-800.webp" class="__image"></a></figure>
+
+<p>Если внимательно приглядеться к фотографиям в <a href="/2016/06/b-2a.html">прошлом посте</a>, становится видно, что магия <strong><a href="http://ufraw.sourceforge.net/">UFRaw</a></strong> —
+это ни в коем случае не внесение искажений, а напротив — исправление бочкообразной дисторсии — прямые в его варианте
+прямее. Тогда как <strong><a href="https://www.darktable.org/">Darktable</a></strong> по умолчанию сконвертировал нам картинку «как есть» — со всеми оптическими
+искажениями. Если мы хотим эти искажения исправить, нам в нем надо задействовать модуль «Оптические искажения»
+(см. скрин выше). При этом черные поля добавляться не будут (а вот выступающие уголки обрежутся).</p>
+
+
+
+      </div>
+<hr>
+        <p class="small"><a href="/2016/06/2b.html">Читать далее »</a></p>
+<p class="meta">​<a class="tag" href="/tags#Darktable">Darktable</a>​<a class="tag" href="/tags#ImageMagick">ImageMagick</a>​<a class="tag" href="/tags#Linux">Linux</a>​<a class="tag" href="/tags#RAW">RAW</a>​<a class="tag" href="/tags#UFRaw">UFRaw</a>​<a class="tag" href="/tags#%D0%BE%D0%BF%D1%82%D0%B8%D0%BA%D0%B0">оптика</a></p></section><section class="stream-item stream-item-post">
+      <aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fb-2a.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fb-2a.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fb-2a.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fb-2a.html&amp;text=%D0%9F%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D0%BD-%D1%84%D0%BE%D1%82%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%3A+2%D0%B0.%C2%A0%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%B5+%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D0%B5+%D0%BA+%D0%BF%D1%80%D0%B5%D0%B4%D1%8B%D0%B4%D1%83%D1%89%D0%B8%D0%BC+%D1%81%D0%B5%D1%80%D0%B8%D1%8F%D0%BC"></a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%9F%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D0%BD-%D1%84%D0%BE%D1%82%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%3A+2%D0%B0.%C2%A0%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%B5+%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D0%B5+%D0%BA+%D0%BF%D1%80%D0%B5%D0%B4%D1%8B%D0%B4%D1%83%D1%89%D0%B8%D0%BC+%D1%81%D0%B5%D1%80%D0%B8%D1%8F%D0%BC&amp;url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fb-2a.html"></a>
+</aside>
+
+
+      
+      
+        <p class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-linux" href="/photo/processing/penguin/" title="Цикл постов 2016 года об обработке фотографий под Linux">Пингвин-фотолюбитель</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a></p>
+      
+      <p class="meta">2016.06.15 • Иван Шихалев</p>
+<h3 id="2016-06-b-2a-html">
+<a class="anchor" href="#2016-06-b-2a-html" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="/2016/06/b-2a.html" title="Разница проявки RAW разными способами">Пингвин-фотолюбитель: 2а. Краткое замечание к предыдущим сериям</a>
+</h3>
+
+      <div class="no_toc_section">
+
+      <figure class="__figure __implicit_figure __right logo" style="max-width:400px;"><a href="/img/2016/06/15/b-2a/Geometrical_Aberration_de.svg" class="__image_link"><img src="/img/2016/06/15/b-2a/Geometrical_Aberration_de.svg" class="__image"></a></figure>
+
+<p><a href="/2016/06/raw.html">Как я уже говорил</a>, «проявку» RAW можно делать и в пакетном режиме — из командной строки, например,
+посредством <strong><a href="http://ufraw.sourceforge.net/">UFRaw</a></strong>. Более того, можно натравить на raw-файл и <strong><a href="http://www.imagemagick.org/">ImageMagick</a></strong>, а следовательно —
+мой скрипт, описанный в предыдущем посте. Впрочем, ImageMagick препоручит конвертацию консольной версии UFRaw.</p>
+
+<p>А теперь я хочу продемонстрировать, почему так делать не надо.</p>
+
+
+
+      </div>
+<hr>
+        <p class="small"><a href="/2016/06/b-2a.html">Читать далее »</a></p>
+<p class="meta">​<a class="tag" href="/tags#Darktable">Darktable</a>​<a class="tag" href="/tags#ImageMagick">ImageMagick</a>​<a class="tag" href="/tags#Linux">Linux</a>​<a class="tag" href="/tags#RAW">RAW</a>​<a class="tag" href="/tags#UFRaw">UFRaw</a>​<a class="tag" href="/tags#%D0%BE%D0%BF%D1%82%D0%B8%D0%BA%D0%B0">оптика</a></p></section><section class="stream-item stream-item-post">
+      <aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fa-commandline.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fa-commandline.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fa-commandline.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fa-commandline.html&amp;text=%D0%9F%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D0%BD-%D1%84%D0%BE%D1%82%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%3A+2.%C2%A0%D0%9A%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%BD%D0%B0%D1%8F+%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0+%D0%B8+%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%BD%D0%B0%D1%8F+%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0"></a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%9F%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D0%BD-%D1%84%D0%BE%D1%82%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%3A+2.%C2%A0%D0%9A%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%BD%D0%B0%D1%8F+%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0+%D0%B8+%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%BD%D0%B0%D1%8F+%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0&amp;url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fa-commandline.html"></a>
+</aside>
+
+
+      
+      
+        <p class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-linux" href="/photo/processing/penguin/" title="Цикл постов 2016 года об обработке фотографий под Linux">Пингвин-фотолюбитель</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a></p>
+      
+      <p class="meta">2016.06.15 • Иван Шихалев</p>
+<h3 id="2016-06-a-commandline-html">
+<a class="anchor" href="#2016-06-a-commandline-html" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="/2016/06/a-commandline.html" title="Работа с фотографиями из командной строки">Пингвин-фотолюбитель: 2. Командная строка и пакетная обработка</a>
+</h3>
+
+      <div class="no_toc_section">
+
+      <figure class="__figure __implicit_figure __right logo" style="max-width:320px;shape-outside:url(/img/2016/06/15/a-commandline/kdpv-320.webp);"><a href="/img/2016/06/15/a-commandline/kdpv-fhd.webp" class="__image_link"><img src="/img/2016/06/15/a-commandline/kdpv-320.webp" class="__image" style="shape-outside:url(/img/2016/06/15/a-commandline/kdpv-320.webp);" alt="Картинка стырена где-то в интернетах, найдена по ключевому слову „imagemagick“" title="Картинка стырена где-то в интернетах, найдена по ключевому слову „imagemagick“"></a></figure>
+
+<p>Коротко о главном: главный обработчик изображений из командной строки, равно как и в пакетном режиме, у нас
+по прежнему пакет <strong><a href="http://www.imagemagick.org/" class="img-icon-imagemagick">ImageMagick</a></strong>. КДПВ справа взята поиском по его названию в «картинках Google»,
+помимо демонстрации некоторых возможностей там и пингвин присутствует.</p>
+
+<p>Кроме того, нам понадобятся минимальные знания оболочки <strong><a href="http://www.gnu.org/software/bash/">GNU Bash</a></strong> и замечательная утилита для работы
+с данными EXIF (Exchangeable Image File For­mat — стандарт, позволяющий добавлять к изображениям метаданные,
+в пер­вую очередь, когда и чем снято) — <strong><a href="http://exiftool.sourceforge.net/">exiftool</a></strong>.</p>
+
+<p>С одной стороны, расписывать все возможности ImageMagick и ExifTool в подробностях — никакого терпения не хватит.
+С другой — у меня есть парочка примеров, собственноручно наскриптованных, но не описанных… Поэтому в дан­ном посте
+я просто разберу эти примеры, а если нужно что-то дополнительно, прошу в комментарии.</p>
+
+
+
+      </div>
+<hr>
+        <p class="small"><a href="/2016/06/a-commandline.html">Читать далее »</a></p>
+<p class="meta">​<a class="tag" href="/tags#EXIF">EXIF</a>​<a class="tag" href="/tags#ImageMagick">ImageMagick</a>​<a class="tag" href="/tags#Linux">Linux</a>​<a class="tag" href="/tags#bash">bash</a>​<a class="tag" href="/tags#exiftool">exiftool</a>​<a class="tag" href="/tags#%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%BD%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0">командная строка</a></p></section><section class="stream-item stream-item-post">
+      <aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fraw.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fraw.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fraw.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fraw.html&amp;text=%D0%9F%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D0%BD-%D1%84%D0%BE%D1%82%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%3A+1.%C2%A0%C2%AB%D0%9F%D1%80%D0%BE%D1%8F%D0%B2%D0%BA%D0%B0%C2%BB+raw-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2"></a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%9F%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D0%BD-%D1%84%D0%BE%D1%82%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%3A+1.%C2%A0%C2%AB%D0%9F%D1%80%D0%BE%D1%8F%D0%B2%D0%BA%D0%B0%C2%BB+raw-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2&amp;url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fraw.html"></a>
+</aside>
+
+
+      
+      
+        <p class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-linux" href="/photo/processing/penguin/" title="Цикл постов 2016 года об обработке фотографий под Linux">Пингвин-фотолюбитель</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a></p>
+      
+      <p class="meta">2016.06.13 • Иван Шихалев</p>
+<h3 id="2016-06-raw-html">
+<a class="anchor" href="#2016-06-raw-html" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="/2016/06/raw.html" title="Как проявлять и обрабатывать RAW-файлы фотографий под Linux">Пингвин-фотолюбитель: 1. «Проявка» raw-файлов</a>
+</h3>
+
+      <div class="no_toc_section">
+
+      <figure class="__figure __implicit_figure __right" style="max-width:320px;padding: 5px; background-color: #333;"><img src="/img/2016/06/13/raw/kdpv-320.webp" class="__image"></figure>
+
+<p>Первая программа, которая нам понадобится — это <strong><a href="https://darktable.org" title="Официальный сайт Darktable" class="img-icon-darktable">Darktable</a></strong>. И это тот редкий случай,
+когда можно говорить об аналогах: по своим задачам и базовым функциям Darktable соответствует любимому многими
+фотографами софту от Ado­be — Lightroom. Насколько хорошо соответствует, я обсуждать не готов, поскольку лайтрума
+под рукой нет.</p>
+
+<p>К сожалению, в репозиториях Linux Mint находится довольно древняя версия Darktable — 1.4, поэтому я рекомендую
+добавить PPA «<code class="language-plaintext highlighter-rouge">ppa:​pmjdebruijn/​darktable-​release</code>» с последними стабильными версиями и устанавливать оттуда
+(информация взята <a href="http://www.darktable.org/install/#ubuntu">с официального сайта</a>). Старой версией тоже можно пользоваться, но новая лучше.
+Актуальная версия, о ко­то­рой и пойдет речь — 2.0.4.</p>
+
+
+
+      </div>
+<hr>
+        <p class="small"><a href="/2016/06/raw.html">Читать далее »</a></p>
+<p class="meta">​<a class="tag" href="/tags#Darktable">Darktable</a>​<a class="tag" href="/tags#Linux">Linux</a>​<a class="tag" href="/tags#RAW">RAW</a></p></section><section class="stream-item stream-item-post">
+      <aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fpreamble.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fpreamble.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fpreamble.html"></a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fpreamble.html&amp;text=%D0%9F%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D0%BD-%D1%84%D0%BE%D1%82%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%3A+%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5"></a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%9F%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D0%BD-%D1%84%D0%BE%D1%82%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%3A+%D0%9F%D1%80%D0%B5%D0%B4%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5&amp;url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fpreamble.html"></a>
+</aside>
+
+
+      
+      
+        <p class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-linux" href="/photo/processing/penguin/" title="Цикл постов 2016 года об обработке фотографий под Linux">Пингвин-фотолюбитель</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a></p>
+      
+      <p class="meta">2016.06.11 • Иван Шихалев</p>
+<h3 id="2016-06-preamble-html">
+<a class="anchor" href="#2016-06-preamble-html" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="/2016/06/preamble.html" title="О чем пойдет речь в серии постов «Пингвин-фотолюбитель»">Пингвин-фотолюбитель: Предисловие</a>
+</h3>
+
+      <div class="no_toc_section">
+
+      <figure class="__figure __implicit_figure __right logo" style="max-width:248px;shape-outside:url(/img/2016/06/11/preamble/camera-magick-248.webp);"><img src="/img/2016/06/11/preamble/camera-magick-248.webp" class="__image" style="shape-outside:url(/img/2016/06/11/preamble/camera-magick-248.webp);"></figure>
+
+<p>Кажется, у меня появилось немного времени, чтобы сделать то, что давно собирался — описать возможности,
+доступные в Linux, для <em>любительской</em> обработки фотографии. И нет, это не будет очередной список «аналогов
+Фотошопа».</p>
+
+<p>Во-первых, слово «любительской» выше — тут ключевое. Профессионалам все-таки стоит работать с профессиональными
+инструментами, которые запускаются отнюдь не под Linux. Человеку же, снимающему для собственного удовольствия,
+ради хобби (одного из) менять родную систему на платную и неудобную — не резон.</p>
+
+<p>Во-вторых, поиск аналогов — дело в принципе неблагодарное. Поэтому я буду использовать другой подход:
+вот задача (осмысленная и более-менее часто встречающаяся) — а вот решение. Без особых заморочек на сравнение
+с аналогами. Кто захочет — может углубиться в тему самостоятельно, остальные получат в руки соответствующие
+задаче инструменты с минимально достаточными пояснениями.</p>
+
+<p>В-третьих, как раз тем, для чего предназначен Фотошоп — то есть глубокой ретушью — я не занимаюсь,
+не интересуюсь и, как результат, совершенно в ней некомпетентен.</p>
+
+<p>Итак, а что же я подразумеваю под любительской обработкой и что собираюсь описывать? Это такие задачи:</p>
+
+<ul>
+  <li>«Проявка» «цифровых негативов» — файлов RAW, включая корректировку яркости, контраста, баланса белого и всего такого.</li>
+  <li>Работа с данными EXIF, каталогизация, пакетная обработка.</li>
+  <li>Сложные, но хорошо автоматизированные задачи: склейка панорам и HDR.</li>
+  <li>Возможно, что-то еще.</li>
+</ul>
+
+<p>В комментариях можно задавать вопросы и подкидывать темы. Ответить на всё, правда, не обещаю. Просто фотография
+для меня всего лишь хобби, одно из, да и относительно недавнее, так что каких-то особо глубоких знаний я в этом
+деле не постиг. Тем не менее решился написать серию постов, поскольку даже имеющиеся у меня неглубокие в рунете
+толком не представлены, да и на английском языке систематизированного введения для начинающих я не нашел — полезной
+информации много, но ее приходится собирать по кусочкам, как панораму.</p>
+
+<p>Постараюсь ориентироваться на «простого пользователя», минимизируя обращения к командной строке и всяческое
+скриптование. Компиляции чего-либо из исходников и хитрого конфигурирования точно не будет.</p>
+
+<p>Примеры я буду делать на свежеустановленной и свежеобновленной виртуалке с <strong>Linux Mint 17.3 (KDE4)</strong>, поскольку это
+представляется более соответствующим «простому пользователю», чем моя основная система — Gentoo. А «свежесть» системы
+позволяет отследить, что именно будет устанавливаться.</p>
+
+
+      </div>
+<p class="meta">​<a class="tag" href="/tags#Linux">Linux</a>​<a class="tag" href="/tags#%D0%B0%D0%BD%D0%BE%D0%BD%D1%81">анонс</a>​<a class="tag" href="/tags#%D1%81%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%BE%D0%B5">служебное</a></p></section>
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-stream">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#содержание">Содержание</a></li>
+<li class="toc-entry toc-h2"><a href="#last_entries">Последние записи</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#2016-06-stacking-html">Пингвин-фотолюбитель: 5. Стекинг</a></li>
+<li class="toc-entry toc-h3"><a href="#2016-06-hdr-html">Пингвин-фотолюбитель: 4. HDR</a></li>
+<li class="toc-entry toc-h3"><a href="#2016-06-hugin-html">Пингвин-фотолюбитель: 3. Панорамы</a></li>
+<li class="toc-entry toc-h3"><a href="#2016-06-2b-html">Пингвин-фотолюбитель: 2б. Краткое примечание к краткому замечанию</a></li>
+<li class="toc-entry toc-h3"><a href="#2016-06-b-2a-html">Пингвин-фотолюбитель: 2а. Краткое замечание к предыдущим сериям</a></li>
+<li class="toc-entry toc-h3"><a href="#2016-06-a-commandline-html">Пингвин-фотолюбитель: 2. Командная строка и пакетная обработка</a></li>
+<li class="toc-entry toc-h3"><a href="#2016-06-raw-html">Пингвин-фотолюбитель: 1. «Проявка» raw-файлов</a></li>
+<li class="toc-entry toc-h3"><a href="#2016-06-preamble-html">Пингвин-фотолюбитель: Предисловие</a></li>
+</ul>
+</li>
+</ul>
+</aside><aside id="backs" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/photo.xml" title="Тексты о фотографии">О фото</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

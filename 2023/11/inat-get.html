@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>INat::Get — ранняя альфа | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="INat::Get — ранняя альфа" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Набор инструментов для получения и обработки данных с iNaturalist" />
+<meta property="og:description" content="Набор инструментов для получения и обработки данных с iNaturalist" />
+<link rel="canonical" href="https://shikhalev.github.io/2023/11/inat-get.html" />
+<meta property="og:url" content="https://shikhalev.github.io/2023/11/inat-get.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/2023/11/13/inat-get/screen-640x640-931x481-0-52.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-11-13T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/img/2023/11/13/inat-get/screen-640x640-931x481-0-52.webp" />
+<meta property="twitter:title" content="INat::Get — ранняя альфа" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2023-11-13T00:00:00+00:00","datePublished":"2023-11-13T00:00:00+00:00","description":"Набор инструментов для получения и обработки данных с iNaturalist","headline":"INat::Get — ранняя альфа","image":"https://shikhalev.github.io/img/2023/11/13/inat-get/screen-640x640-931x481-0-52.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/2023/11/inat-get.html"},"url":"https://shikhalev.github.io/2023/11/inat-get.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">INat::Get — ранняя альфа</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2023%2F11%2Finat-get.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2023%2F11%2Finat-get.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2023%2F11%2Finat-get.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2023%2F11%2Finat-get.html&text=INat%3A%3AGet+%E2%80%94+%D1%80%D0%B0%D0%BD%D0%BD%D1%8F%D1%8F+%D0%B0%D0%BB%D1%8C%D1%84%D0%B0">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=INat%3A%3AGet+%E2%80%94+%D1%80%D0%B0%D0%BD%D0%BD%D1%8F%D1%8F+%D0%B0%D0%BB%D1%8C%D1%84%D0%B0&url=https%3A%2F%2Fshikhalev.github.io%2F2023%2F11%2Finat-get.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2023-11-13T00:00:00+00:00" itemprop="datePublished">2023.11.13
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#iNaturalist">iNaturalist</a></aside></header><div itemprop="articleBody">
+  <figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2023/11/13/inat-get/github-screen-fhd.webp" class="__image_link"><img src="/img/2023/11/13/inat-get/github-screen-320.webp" class="__image" alt="Скриншот репозитория" title="Скриншот репозитория"></a></figure>
+
+<blockquote class="epigraph">
+  <p>— Я зделяль. ©</p>
+</blockquote>
+
+<p>Итак, прошу любить и жаловать — <strong><a href="https://github.com/shikhalev/inat-get" class="img-icon-github">INat::Get</a></strong> — софтина для по­лу­че­ния и обработки данных
+с <strong><a href="https://www.inaturalist.org/" class="img-icon-inaturalist">iNaturalist</a></strong>. Основное изначальное пред­наз­на­че­ние — подбивать всякую статистику
+для про­ек­тов на том же iNaturalist’е, но варианты использования гораздо шире.</p>
+
+<p>Первым делом хочу отметить, что текущее со­сто­я­ние — это ранняя альфа. Я <em>не ре­ко­мен­дую</em> никому этим пользоваться иначе
+как из любопытства и желания поучаствовать. Тем не ме­нее делаю пост уже сейчас в на­деж­де, что любопытные желающие найдутся.
+Со сво­ей стороны готов подробно отвечать на во­про­сы и учитывать пожелания.</p>
+
+<h2 id="зачем">
+<a class="anchor" href="#%D0%B7%D0%B0%D1%87%D0%B5%D0%BC" aria-hidden="true"><span class="octicon octicon-link"></span></a>Зачем?</h2>
+
+<p><strong><a href="https://www.inaturalist.org/" class="img-icon-inaturalist">iNaturalist</a></strong> предоставляет открытый доступ к ог­ром­но­му массиву наблюдений, а также
+по су­ти к по­сто­ян­но ак­ту­али­зи­ру­ему таксономическому справочнику (тут можно обсуждать нюансы, но для лю­би­тель­с­ких целей
+это очень хорошие данные). Интерфейс самого сайта не по­кры­ва­ет и, конечно, не мо­жет покрывать все возможные варианты
+запросов и выборок, но мы можем получить сами данные через <a href="https://www.inaturalist.org/observations/export">механизм выгрузок</a> или посредством <a href="https://api.inaturalist.org/v1/docs/">открытого API</a>,
+и второй вариант богаче, гибче и вообще интересней.</p>
+
+<!--more-->
+
+<p>В ка­чес­т­ве примера таких отчетов, которые нельзя получить просто из ин­тер­фей­са, приведу свои посты в про­ек­те
+<a href="https://www.inaturalist.org/projects/bioraznoobrazie-artinskogo-rayona">«Био­раз­но­об­ра­зие Артинского района»</a>. Не по­то­му, что они представляют собой что-то особо ценное,
+а именно как демонстрацию:</p>
+
+<ul>
+  <li>
+    <p><a href="https://www.inaturalist.org/projects/bioraznoobrazie-artinskogo-rayona/journal/83533">«Неитоги 2023»</a> (как бы итоги сезона, только подведенные в его середине). Здесь интересны «Новинки» и «Потеряшки».</p>
+  </li>
+  <li>
+    <p><a href="https://www.inaturalist.org/projects/bioraznoobrazie-artinskogo-rayona/journal/83535">«Сравнение с соседями»</a>. Не прос­то количественное сравнение, а сравнение видового состава.</p>
+  </li>
+  <li>
+    <p><a href="https://www.inaturalist.org/projects/bioraznoobrazie-artinskogo-rayona/journal/83536">«Виды, по которым недостаточно наблюдений»</a>.</p>
+  </li>
+</ul>
+
+<p>Эти посты были сформированы по дан­ным выгрузок, а не API, посредством мною же написанного <strong><a href="https://github.com/shikhalev/inat-script" class="img-icon-github">inat-script</a></strong>,
+в про­цес­се работы с ко­то­рым (и над ко­то­рым) я осознал все недостатки механизма выгрузок:</p>
+<ul>
+  <li>ограниченность данных;</li>
+  <li>необходимость ручного создания процесса выгрузки и, потом, загрузки файла;</li>
+  <li>и глав­ное — неизвестный заранее срок го­тов­нос­ти — некоторые выгрузки делались вовсе несколько дней.</li>
+</ul>
+
+<p>Кроме того, сам скрипт, как всякий первый блин, требовал существенной переработки для то­го, чтобы удобно внедрять в не­го новые
+варианты выборок и отчетов, и я решил написать с ну­ля новый инструмент, работающий непосредственно с API.</p>
+
+<h2 id="принцип-действия">
+<a class="anchor" href="#%D0%BF%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF-%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D1%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>Принцип действия</h2>
+
+<p>На са­мом деле я сначала пытался сделать как-то так, чтобы отчеты формировались через конфигурационные файлы. Однако гибкости
+в та­ком подходе никакой (ну или потребуется senior-yaml-de­ve­lo­per для ис­поль­зо­ва­ния, ЕВПОЧЯ). В ито­ге пришел к вы­во­ду, что
+проще предположить в про­д­ви­ну­том пользователе базовые знания Ruby…</p>
+
+<p>В об­щем, программа запускает ruby-скрипты, называемые задачами, которые работают на уров­не абстрактных выборок и списков,
+оставляя все обращения к API и кэширование ответов под ка­по­том. По боль­шо­му счету пользователь имеет дело (помимо объектов,
+представляющих собственно данные) с дву­мя классами: <code class="language-plaintext highlighter-rouge">DataSet</code>, который представляет собой набор наблюдений, уже отфильтрованный
+тем или иным образом; и <code class="language-plaintext highlighter-rouge">List</code> — по су­ти датасет, сгруппированный по неким объектам, как пра­ви­ло — таксонам.</p>
+
+<p>Для фор­ми­ро­ва­ния вывода имеется специальный объект <code class="language-plaintext highlighter-rouge">Table</code>, который сначала определяется, т.е. задаются колонки с за­го­лов­ка­ми,
+шириной и выравниванием, а затем наполняется данными, которые должны представлять собой массив хэш-таб­лиц… Звучит страшно,
+но в дей­с­т­ви­тель­нос­ти скрипты могут быть совсем простые. Например, давайте получим список видов в Ар­тин­с­ком районе, которых
+я никогда не наблюдал.</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="n">user</span> <span class="o">=</span> <span class="no">User</span><span class="o">::</span><span class="n">by_login</span> <span class="s1">'shikhalev'</span>
+<span class="n">place</span> <span class="o">=</span> <span class="no">Place</span><span class="o">::</span><span class="n">by_slug</span> <span class="s1">'artinskiy-gorodskoy-okrug-osm-2023-sv-ru'</span>
+
+<span class="n">user_dataset</span> <span class="o">=</span> <span class="nb">select</span> <span class="ss">user_id: </span><span class="n">user</span><span class="p">.</span><span class="nf">id</span>
+<span class="n">place_dataset</span> <span class="o">=</span> <span class="nb">select</span> <span class="ss">place_id: </span><span class="n">place</span><span class="p">.</span><span class="nf">id</span>
+
+<span class="n">user_list</span> <span class="o">=</span> <span class="n">user_dataset</span><span class="p">.</span><span class="nf">to_list</span>
+<span class="n">place_list</span> <span class="o">=</span> <span class="n">place_dataset</span><span class="p">.</span><span class="nf">to_list</span>
+
+<span class="n">result_list</span> <span class="o">=</span> <span class="n">place_list</span> <span class="o">-</span> <span class="n">user_list</span>
+
+<span class="n">result_table</span> <span class="o">=</span> <span class="n">table</span> <span class="k">do</span>
+  <span class="n">column</span> <span class="s1">'#'</span><span class="p">,</span> <span class="ss">width: </span><span class="mi">3</span><span class="p">,</span> <span class="ss">align: :right</span><span class="p">,</span> <span class="ss">data: :line_no</span>
+  <span class="n">column</span> <span class="s1">'Таксон'</span><span class="p">,</span> <span class="ss">data: :taxon</span>
+  <span class="n">column</span> <span class="s1">'К-во набл.'</span><span class="p">,</span> <span class="ss">width: </span><span class="mi">6</span><span class="p">,</span> <span class="ss">align: :right</span><span class="p">,</span> <span class="ss">data: :count</span>
+<span class="k">end</span>
+
+<span class="n">result_rows</span> <span class="o">=</span> <span class="n">result_list</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">ds</span><span class="o">|</span> <span class="p">{</span> <span class="ss">taxon: </span><span class="n">ds</span><span class="p">.</span><span class="nf">object</span><span class="p">,</span> <span class="ss">count: </span><span class="n">ds</span><span class="p">.</span><span class="nf">count</span> <span class="p">}</span> <span class="p">}</span>
+
+<span class="n">result_table</span> <span class="o">&lt;&lt;</span> <span class="n">result_rows</span>
+
+<span class="no">File</span><span class="p">.</span><span class="nf">write</span> <span class="s1">'notmy.htm'</span><span class="p">,</span> <span class="n">result_table</span><span class="p">.</span><span class="nf">to_html</span></code></pre>
+</figure>
+
+<p>Файл я поместил в <a href="https://github.com/shikhalev/inat-get/tree/main/samples">каталог примеров</a> под именем <a href="https://github.com/shikhalev/inat-get/blob/main/samples/notmy.inat"><code class="language-plaintext highlighter-rouge">notmy.inat</code></a>, теперь мы можем его запустить командой:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>inat-get notmy.inat</code></pre>
+</figure>
+
+<p>И через некоторое время получим результат.</p>
+
+<p>Результат можно увидеть <a href="https://www.inaturalist.org/posts/86663-kogo-ya-esche-ne-videl-u-nas-zdes">в мо­ем посте на iNa­tu­ra­list</a>. Да, на дан­ный момент, все форматирование рассчитано именно и только
+на пос­ты в iNat, активно используя тамошние стили. Есть планы расширить данный момент, но об этом позже.</p>
+
+<p>Что важно, если мы тут же запустим ту же команду, то результат получим практически мгновенно, причем идентичный. А ес­ли выждем сутки,
+то некоторое  дополнительное время понадобится, но существенно меньшее, чем при пер­вом запуске. Это первый ключевой мо­мент — <strong>данные кэшируются</strong>.</p>
+
+<p>Кроме того, следует обратить внимание на то, что на са­мом-то деле API отдает не бо­лее 200 наб­лю­де­ний за один запрос. Здесь же
+этого ограничения мы не ви­дим и работаем с пол­ны­ми да­та­се­та­ми (объемом 3k+ и 4k+) — <strong>организация последовательной постраничной загрузки</strong>
+так же находится под капотом.</p>
+
+<h3 id="некоторые-детали">
+<a class="anchor" href="#%D0%BD%D0%B5%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Некоторые детали</h3>
+
+<ul>
+  <li>
+    <p>Метод <code class="language-plaintext highlighter-rouge">select</code> выполняет запрос и возвращает объект класса <code class="language-plaintext highlighter-rouge">DataSet</code>. Именованные параметры данного метода примерно соответствуют
+параметрам API, правда, реализованы не все.</p>
+  </li>
+  <li>
+    <p>Класс <code class="language-plaintext highlighter-rouge">DataSet</code> инкапсулирует <em>набор наблюдений</em>, плюс опционально ассоциирует его с не­ко­то­рым объектом. В ос­нов­ном его поведение
+определяется включенным модулем <code class="language-plaintext highlighter-rouge">Enumerable</code>, и бинарными операциями:</p>
+
+    <ul>
+      <li>
+<code class="language-plaintext highlighter-rouge">|</code> — объединение;</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">&amp;</code> — пересечение;</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">-</code> — разность.</li>
+    </ul>
+
+    <p>Также у класса <code class="language-plaintext highlighter-rouge">DataSet</code> имеется важный метод <code class="language-plaintext highlighter-rouge">to_list</code>, который создает объект класса <code class="language-plaintext highlighter-rouge">List</code>, группируя наблюдения по то­му или иному
+параметру. Для груп­пи­ров­ки используется <code class="language-plaintext highlighter-rouge">proc</code>-объ­ект, который должен выдавать по на­блю­де­нию собственно ключ группировки. Наиболее
+полезные (на мой взгляд) группировки уже определены как константы модуля <code class="language-plaintext highlighter-rouge">Listers</code>:</p>
+
+    <ul>
+      <li>
+<code class="language-plaintext highlighter-rouge">Listers::SPECIES</code> возвращает таксон, «приведенный к ви­ду». В ка­выч­ках потому, что результатом может быть как вид, так и гибрид
+или комплекс.</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">Listers::YEAR</code> возвращает год.</li>
+      <li>И так далее.</li>
+    </ul>
+
+    <p>Если вызвать <code class="language-plaintext highlighter-rouge">to_list</code> без параметров, то по умол­ча­нию будет использован <code class="language-plaintext highlighter-rouge">Listers::SPECIES</code>.</p>
+  </li>
+  <li>
+    <p>Класс <code class="language-plaintext highlighter-rouge">List</code> представляет собой список датасетов с ас­со­ци­и­ро­ван­ны­ми значениями. Также реализует модуль <code class="language-plaintext highlighter-rouge">Enumerable</code>, только итерируемыми
+элементами будут объекты класса <code class="language-plaintext highlighter-rouge">DataSet</code>, а не <code class="language-plaintext highlighter-rouge">Observation</code>. Для спис­ков также определены некоторые бинарные операции:</p>
+
+    <ul>
+      <li>
+<code class="language-plaintext highlighter-rouge">+</code> — объединение;</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">*</code> — пересечение;</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">-</code> — разность (что и использовано в примере).</li>
+    </ul>
+
+    <p>Объединенный датасет из списка можно получить посредством метода <code class="language-plaintext highlighter-rouge">to_dataset</code>.</p>
+  </li>
+  <li>
+    <p>Классы данных: <code class="language-plaintext highlighter-rouge">Observation</code>, <code class="language-plaintext highlighter-rouge">Taxon</code>, <code class="language-plaintext highlighter-rouge">Place</code>, <code class="language-plaintext highlighter-rouge">User</code> и так далее предоставляют собственно данные. Свойств там много, их следует
+от­до­ку­мен­ти­ро­вать, но пока руки не до­шли. Впрочем, это тот случай, когда код действительно является документацией, так что см. <a href="https://github.com/shikhalev/inat-get/tree/main/lib/inat/data/entity">ка­та­лог
+<code class="language-plaintext highlighter-rouge">entity</code></a>.</p>
+
+    <p>Отмечу, что все они имеют метод класса <code class="language-plaintext highlighter-rouge">by_id</code> для по­лу­че­ния соответствующего объекта, и в до­пол­не­ние классы <code class="language-plaintext highlighter-rouge">Place</code> и <code class="language-plaintext highlighter-rouge">Project</code> имеют
+метод <code class="language-plaintext highlighter-rouge">by_slug</code>, а класс <code class="language-plaintext highlighter-rouge">User</code> — метод <code class="language-plaintext highlighter-rouge">by_login</code>.</p>
+  </li>
+</ul>
+
+<h2 id="установка">
+<a class="anchor" href="#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Установка</h2>
+
+<p>Установка максимально проста:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">#</span><span class="w"> </span>gem <span class="nb">install </span>inat-get</code></pre>
+</figure>
+
+<p>Правда, <em>на дан­ный момент все это гарантированно работает только под Li­nux</em>. Тестирование под Win­dows в пла­нах есть, но скорее ближе
+к весне.</p>
+
+<h2 id="планы">
+<a class="anchor" href="#%D0%BF%D0%BB%D0%B0%D0%BD%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Планы</h2>
+
+<p>Вообще, на гит­ха­бе есть такой замечательный раздел <strong><a href="https://github.com/shikhalev/inat-get/issues" class="img-icon-github">«Issues»</a></strong>, где можно посмотреть процесс планирования в ре­аль­ном времени.
+Здесь постараюсь дать сводную картину.</p>
+
+<h3 id="к-версии-10">
+<a class="anchor" href="#%D0%BA-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8-10" aria-hidden="true"><span class="octicon octicon-link"></span></a>К версии 1.0</h3>
+
+<dl>
+  <dt>Документация</dt>
+  <dd>
+    <p>На первом этапе — полноценное руководство пользователя на рус­с­ком языке. Затем расширенное руководство как на рус­с­ком, так и на ан­г­лий­с­ком.</p>
+  </dd>
+  <dt>Данные</dt>
+  <dd>
+    <p>Сейчас многие поля, в том числе такие важные, как охранный статус, просто игнорируются. Это категорически неправильно и, естественно,
+будет исправлено уже в бе­та-вер­сии.</p>
+
+    <p>Сю­да же отнесу поддержку всех ключей запроса доступных в API. Тут есть некоторые нюансы, которые следует продумать, почему собственно
+на дан­ном этапе их и нет, но все решаемо.</p>
+  </dd>
+  <dt>Доделки и исправления</dt>
+  <dd>
+    <p>Уже замеченные баги есть, и их, само собой, исправлять нужно, причем в первую очередь. К счас­тью, критичный, т.е. приводящий к вы­ле­ту,
+только один и возникает он редко.</p>
+
+    <p>Есть запланированная, но пока нереализованная базовая функциональность, такая как чистка устаревших данных.</p>
+  </dd>
+  <dt>Оптимизация запросов</dt>
+  <dd>
+    <p>Есть мысли, как можно уменьшить количество запросов к API, что существенно ускорит работу в целом.</p>
+  </dd>
+</dl>
+
+<h3 id="дальнейшее-развитие">
+<a class="anchor" href="#%D0%B4%D0%B0%D0%BB%D1%8C%D0%BD%D0%B5%D0%B9%D1%88%D0%B5%D0%B5-%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Дальнейшее развитие</h3>
+
+<dl>
+  <dt>Разнообразные возможности вывода</dt>
+  <dd>
+    <p>Тут с од­ной стороны, явно нужно сделать поддержку не толь­ко упрощенной разметки, используемой в жур­на­лах iNa­tu­ra­list, но и форматов,
+которые можно использовать в раз­лич­ных местах независимо.</p>
+
+    <p>С другой стороны, на­до бы добавить что-то типа вывода иерархических списков, а возможно и каких-то еще вариантов оформления.</p>
+
+    <p>Все это пока на уров­не исследования и формулирования задачи.</p>
+  </dd>
+  <dt>Оптимизация кэширования</dt>
+  <dd>
+    <p>Подробно расписывать не бу­ду, но там есть над чем работать. В пер­вую очередь это касается разбора и трансляции условий проектов.</p>
+  </dd>
+</dl>
+
+<h2 id="обратная-связь">
+<a class="anchor" href="#%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Обратная связь</h2>
+
+<p>Буду рад вопросам, замечаниям и предложениям, как в ком­мен­та­ри­ях к это­му посту, так и в <a href="https://github.com/shikhalev/inat-get/discussions">со­от­вет­с­т­ву­ю­щем разделе на <strong class="img-icon-github">Git­Hub</strong></a>.
+Можно так же писать в лич­ные сообщения на iNa­tu­ra­list, хотя предпочтительно все же общаться в от­кры­тых комментариях, чтобы не воз­ни­ка­ло
+дублирования.</p>
+
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.04.08 |</span>
+            <a href="/2021/04/rms.html" title="Почему происходящее с FSF и сообществом свободного ПО в целом важно для всех.">Ричард Столлман как отражатель мировой революции</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a>​<a class="fa-icon-bullhorn" href="/life/social/politics/" title="Посты о политике">Политика</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.03.24 |</span>
+            <a href="/2021/03/typo-keyboard.html" title="Настройка клавиатуры в Linux для ввода различных символов, таких как, например, длинное тире, кавычки-ёлочки, знак копирайта и так далее. В редакции 2021 года.">Ввод «типографских» символов с клавиатуры (ed. 2021)</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2013.07.21 |</span>
+            <a href="/2013/07/git-server.html" title="Настраиваем git-сервер для малых групп с минимальными затратами.">Кратко: примитивный git-сервер</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#зачем">Зачем?</a></li>
+<li class="toc-entry toc-h2"><a href="#принцип-действия">Принцип действия</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#некоторые-детали">Некоторые детали</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#установка">Установка</a></li>
+<li class="toc-entry toc-h2"><a href="#планы">Планы</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#к-версии-10">К версии 1.0</a></li>
+<li class="toc-entry toc-h3"><a href="#дальнейшее-развитие">Дальнейшее развитие</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#обратная-связь">Обратная связь</a></li>
+</ul>
+</aside><aside id="backs" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

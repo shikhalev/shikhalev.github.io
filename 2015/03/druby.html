@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Распределенный Ruby | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Распределенный Ruby" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Введение в технологию dRuby. Прозрачный RPC для взаимодействия Ruby-программ." />
+<meta property="og:description" content="Введение в технологию dRuby. Прозрачный RPC для взаимодействия Ruby-программ." />
+<link rel="canonical" href="https://shikhalev.github.io/2015/03/druby.html" />
+<meta property="og:url" content="https://shikhalev.github.io/2015/03/druby.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/2015/03/31/druby/screen-druby-640x640-500-261-0-0.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-03-31T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/img/2015/03/31/druby/screen-druby-640x640-500-261-0-0.webp" />
+<meta property="twitter:title" content="Распределенный Ruby" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2015-03-31T00:00:00+00:00","datePublished":"2015-03-31T00:00:00+00:00","description":"Введение в технологию dRuby. Прозрачный RPC для взаимодействия Ruby-программ.","headline":"Распределенный Ruby","image":"https://shikhalev.github.io/img/2015/03/31/druby/screen-druby-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/2015/03/druby.html"},"url":"https://shikhalev.github.io/2015/03/druby.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">Распределенный Ruby</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2015%2F03%2Fdruby.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2015%2F03%2Fdruby.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2015%2F03%2Fdruby.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2015%2F03%2Fdruby.html&text=%D0%A0%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9+Ruby">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%A0%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9+Ruby&url=https%3A%2F%2Fshikhalev.github.io%2F2015%2F03%2Fdruby.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2015-03-31T00:00:00+00:00" itemprop="datePublished">2015.03.31
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#RPC">RPC</a>​<a class="tag" href="/tags#dRuby">dRuby</a>​<a class="tag" href="/tags#сериализация">сериализация</a>​<a class="tag" href="/tags#сети">сети</a></aside></header><div itemprop="articleBody">
+  <p><a href="http://samag.ru/archive/article/2592">Оригинал этой статьи опубликован в журнале «Системный администратор» №12 (133) за декабрь 2013</a>.</p>
+
+<hr>
+
+<figure class="__figure __implicit_figure __right" style="max-width:158px;padding: 5px;"><a href="http://samag.ru/archive/article/2592"><img src="/img/2015/03/31/druby/133-158.webp" class="__image"></a></figure>
+
+<div class="note">
+  <p>Технология распределенного Ruby, или <strong>dRuby</strong> (Dis­­t­­ri­­bu­­ted Ruby), позволяет вызывать методы объектов, находящихся
+в другом процессе и/или на другом компьютере. При этом установка соединения, передача необходимых данных и тому
+подобное — скрыты от программиста, и использование удаленных объектов мало чем отличается от работы с объектами,
+заданными внутри программы.</p>
+
+  <p>Это не единственная технология RPC, доступная при про­­г­­рам­­ми­­ро­­ва­­нии на Ruby, однако более универсальные средства,
+такие как CORBA или XML-RPC, более сложны в использовании и требуют бо́льших накладных расходов (кроме того, поддержка
+CORBA не входит в стандартную библиотеку Ruby, соответственно, в сопровождении требует дополнительного внимания
+к совместимости версий и т.д.). В общем, если не требуется взаимодействие с программами, написанными на других языках,
+dRuby — очень хороший выбор, а с чем его едят и как правильно готовить, мы и рассмотрим в данной статье.</p>
+</div>
+
+<!--more-->
+
+<hr style="clear: both;">
+
+<div class="sticker right" style="max-width:300px;">
+  <p><u>RPC</u> — Remote Procedure Call — общее название для технологий, позволяющих программам вызывать процедуры/функции
+в чужом адресном пространстве, в том числе — на другом компьютере. По особенностям использования и реализации
+эти технологии между собой очень сильно различаются.</p>
+
+  <p>Из наиболее популярных можно отметить архитектуру <em>CORBA</em>, разрабатываемую рабочей группой OMG, и протокол <em>DCOM</em>,
+принадлежащий Microsoft (и работающий де-факто только в Windows), а также текстовые протоколы, работающие поверх
+HTTP — <em>JSON-RPC</em> и <em>XML-RPC</em>.</p>
+
+  <p>Ruby «из коробки», т.е. в рамках стандартной библиотеки, поддерживает, помимо собственной технологии dRuby,
+только XML-RPC. Тем не менее, можно найти и установить гемы для CORBA и JSON-RPC — r2corba и json-rpc-objects
+соответственно.</p>
+</div>
+
+<p>Технология распределенного Ruby, или <strong>dRuby</strong> (Dis­­t­­ri­­bu­­ted Ruby), позволяет вызывать методы объектов, находящихся
+в другом процессе и/или на другом компьютере. При этом установка соединения, передача необходимых данных и тому
+подобное — скрыты от программиста, и использование удаленных объектов мало чем отличается от работы с объектами,
+заданными внутри программы.</p>
+
+<p>Это не единственная технология RPC, доступная при про­­г­­рам­­ми­­ро­­ва­­нии на Ru­by, однако более универсальные средства,
+такие как CORBA или XML-RPC, более сложны в использовании и требуют бо́льших накладных расходов (кроме того, поддержка
+CORBA не входит в стандартную библиотеку Ruby, соответственно, в сопровождении требует дополнительного внимания
+к совместимости версий и т.д.). В общем, если не требуется взаимодействие с программами, написанными на других языках,
+dRuby — очень хороший выбор, а с чем его едят и как правильно готовить, мы и рассмотрим в данной статье.</p>
+
+<h2 id="минимальный-пример">
+<a class="anchor" href="#%D0%BC%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>Минимальный пример</h2>
+
+<p>Рассмотрим код<sup id="fnref:gist"><a href="#fn:gist" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> простейшего сервера:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'drb'</span>
+
+<span class="k">class</span> <span class="nc">Server</span>
+
+  <span class="k">def</span> <span class="nf">alpha</span> <span class="n">arg</span>
+    <span class="nb">puts</span> <span class="s2">"Alpha called with </span><span class="si">#{</span><span class="n">arg</span><span class="p">.</span><span class="nf">inspect</span><span class="si">}</span><span class="s2">"</span>
+    <span class="p">[</span><span class="ss">:alpha</span><span class="p">,</span> <span class="n">arg</span><span class="p">]</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+
+<span class="no">DRb</span><span class="p">.</span><span class="nf">start_service</span> <span class="s1">'druby://localhost:9000'</span><span class="p">,</span> <span class="no">Server</span><span class="p">.</span><span class="nf">new</span>
+
+<span class="no">DRb</span><span class="p">.</span><span class="nf">thread</span><span class="p">.</span><span class="nf">join</span></code></pre>
+</figure>
+
+<p>Как видим, ничего особенного делать не приходится — берем самый обыкновенный объект и запускаем сервис, выставляющий
+его на определенный адрес и порт. Последняя строка заставляет программу дожидаться завершения нити-обработчика запросов;
+в реальном проекте нам потребуется определить какой-то способ корректного завершения — с сохранением данных, еще какими-то
+действиями… Но это имеет лишь опосредованное отношение к теме статьи, поэтому перегружать пример не будем. Поскольку
+запускать сервер мы будем из консоли, для завершения достаточно использовать сочетание клавиш <code class="language-plaintext highlighter-rouge">Ctrl-C</code>.</p>
+
+<p>И клиента:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'drb'</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="no">DRbObject</span><span class="p">.</span><span class="nf">new</span> <span class="kp">nil</span><span class="p">,</span> <span class="s1">'druby://localhost:9000'</span>
+
+<span class="nb">p</span> <span class="n">a</span><span class="p">.</span><span class="nf">alpha</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">p</span> <span class="n">a</span><span class="p">.</span><span class="nf">alpha</span><span class="p">(</span><span class="kp">nil</span><span class="p">)</span>
+<span class="nb">p</span> <span class="n">a</span><span class="p">.</span><span class="nf">alpha</span><span class="p">(</span><span class="s2">"beta"</span><span class="p">)</span></code></pre>
+</figure>
+
+<p>Здесь тоже ничего особенного — создаем специальный объект-посредник и обращаемся с ним, как с тем объектом,
+который мы создали на сервере.</p>
+
+<p>Запустим в одной консоли сервер, в другой клиент, получим:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby 01_c.rb
+<span class="go">[:alpha, 1]
+[:alpha, nil]
+[:alpha, "beta"]</span></code></pre>
+</figure>
+
+<p>Кроме того, вернувшись в консоль сервера, видим:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="go">Alpha called with 1
+Alpha called with nil
+Alpha called with "beta"</span></code></pre>
+</figure>
+
+<p>Что свидетельствует о выполнении метода именно на той стороне.</p>
+
+<h2 id="передача-данных">
+<a class="anchor" href="#%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B0%D1%87%D0%B0-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85" aria-hidden="true"><span class="octicon octicon-link"></span></a>Передача данных</h2>
+
+<p>Уже из вышеприведенного можно видеть, что обмен данными простых стандартных классов происходит полностью прозрачно —
+мы использовали число, строку, <code class="language-plaintext highlighter-rouge">nil</code> и массив — все они выглядят на стороне клиента и сервера совершенно одинаково.
+А что произойдет, если мы будем передавать нестандартные, определенные нами же объекты? Попробуем — определим класс
+на сервере:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Alpha</span>
+
+  <span class="k">def</span> <span class="nf">dummy</span>
+    <span class="ss">:dummy</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">Server</span>
+
+  <span class="k">def</span> <span class="nf">alpha</span>
+    <span class="no">Alpha</span><span class="p">.</span><span class="nf">new</span>
+  <span class="k">end</span>
+
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>И попытаемся обратиться к нему на клиенте:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="n">s</span> <span class="o">=</span> <span class="no">DRbObject</span><span class="p">.</span><span class="nf">new</span> <span class="kp">nil</span><span class="p">,</span> <span class="s1">'druby://localhost:9000'</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="nf">alpha</span>
+<span class="nb">p</span> <span class="n">a</span>
+<span class="nb">p</span> <span class="n">a</span><span class="p">.</span><span class="nf">dummy</span></code></pre>
+</figure>
+
+<p>Результат нас немного огорчит:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby 02_c.rb
+<span class="go">♯‹DRb::DRbUnknown:0x000000007ff788 @name="Alpha", @buf="\x04\bo:\nAlpha\x00"›
+cln1.rb:11:in `‹main›': undefined method `dummy' for ♯‹DRb::DRbUnknown:0x000000007ff788› (NoMethodError)</span></code></pre>
+</figure>
+
+<p>Т.е. мы получили некий неизвестный объект, с которым клиентская сторона не знает, что делать. С другой стороны,
+это логично — откуда же ей знать?.. Однако, никаких проблем не возникнет, если мы определим класс объекта и там и там.
+Лучше всего сделать это в отдельном файле, который подключается через <code class="language-plaintext highlighter-rouge">require</code>.</p>
+
+<p>Но, вообще говоря, откуда Ruby знать, что некий класс на сервере и одноименный класс на клиенте — это одно и то же?
+А никто этого и не обещает. В действительности это могут быть совершенно разные классы, нужно лишь соблюдать совместимость
+по маршалингу — это встроенный механизм Ruby для сохранения/восстановления произвольных значений. В простых случаях
+о его работе задумываться не приходится — по умолчанию при маршализации объекта просто маршализуются и сохраняются его
+внутренние переменные, но могут быть и случаи сложные:</p>
+
+<ul>
+  <li>
+    <p>Объект наследует/использует немаршализуемые объекты, плотно связанные с текущим окружением — <code class="language-plaintext highlighter-rouge">Proc</code>, <code class="language-plaintext highlighter-rouge">IO</code> и так далее.</p>
+  </li>
+  <li>
+    <p>Класс объекта определен во внешней бинарной библиотеке, и Ruby ничего не знает о его состоянии.</p>
+  </li>
+  <li>
+    <p>По каким-то причинам классы на клиенте и сервере существенно разные…</p>
+  </li>
+</ul>
+
+<p>В такой ситуации мы можем определить методы <code class="language-plaintext highlighter-rouge">marshal_dump</code>/<code class="language-plaintext highlighter-rouge">marshal_load</code>, которые будут приводить данные объекта
+к какому-нибудь общему знаменателю (например, в виде хэша, содержащего только маршализуемые значения) и, соответственно,
+восстанавливать объект по этому значению.</p>
+
+<p>Другой же вариант — наоборот, объявить объект немаршализуемым, в этом случае мы сможем к нему обращаться так же, как
+и к объекту-серверу — через объект-посредник класса <code class="language-plaintext highlighter-rouge">DRbObject</code>. Используя библиотеку <code class="language-plaintext highlighter-rouge">drb</code>, проще всего это сделать
+включением миксин-модуля <code class="language-plaintext highlighter-rouge">DRbUndumped</code>. Т.е. определив на сервере:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Gamma</span>
+  <span class="kp">include</span> <span class="no">DRbUndumped</span>
+
+  <span class="k">def</span> <span class="nf">dummy</span>
+    <span class="nb">puts</span> <span class="s1">'Dummy called'</span>
+    <span class="ss">:dummy</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">Server</span>
+
+  <span class="k">def</span> <span class="nf">gamma</span>
+    <span class="no">Gamma</span><span class="p">.</span><span class="nf">new</span>
+  <span class="k">end</span>
+
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>И вызвав на клиенте <code class="language-plaintext highlighter-rouge">s.gamma.dummy</code>, мы увидим вывод строки «Dummy called» в серверной, а не клиентской консоли.</p>
+
+<h2 id="клиентская-часть">
+<a class="anchor" href="#%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B0%D1%8F-%D1%87%D0%B0%D1%81%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Клиентская часть</h2>
+
+<p>Несмотря на то, что работа в целом идет по асимметричной схеме клиент-сервер, обмен данными вполне симметричен,
+и мы вполне можем передать серверу объект, методы которого будут выполняться на клиенте. Самый простой способ
+это продемонстрировать — передать блок (который сам по себе является объектом класса <code class="language-plaintext highlighter-rouge">Proc</code>). Пусть у нас будет
+следующий сервер:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Server</span>
+
+  <span class="kp">include</span> <span class="no">DRbUndumped</span>
+
+  <span class="k">def</span> <span class="nf">doSmth</span> <span class="o">&amp;</span><span class="n">block</span>
+    <span class="nb">puts</span> <span class="s1">'--- server'</span>
+    <span class="n">block</span><span class="p">.</span><span class="nf">call</span> <span class="nb">self</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+
+<span class="no">DRb</span><span class="p">.</span><span class="nf">start_service</span> <span class="s1">'druby://localhost:9000'</span><span class="p">,</span> <span class="no">Server</span><span class="p">.</span><span class="nf">new</span>
+
+<span class="no">DRb</span><span class="p">.</span><span class="nf">thread</span><span class="p">.</span><span class="nf">join</span></code></pre>
+</figure>
+
+<p>И соответствующий клиент:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'drb'</span>
+
+<span class="no">DRb</span><span class="p">.</span><span class="nf">start_service</span>
+<span class="n">s</span> <span class="o">=</span> <span class="no">DRbObject</span><span class="p">.</span><span class="nf">new</span> <span class="kp">nil</span><span class="p">,</span> <span class="s1">'druby://localhost:9000'</span>
+
+<span class="n">s</span><span class="p">.</span><span class="nf">doSmth</span> <span class="k">do</span> <span class="o">|</span><span class="n">srv</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="s1">'--- client'</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>Запустив всё это, мы убедимся, что строка «— server» выводится в серверной консоли, тогда как «— client» — в клиентской,
+как и следовало ожидать.</p>
+
+<p>Тут возник один нюанс — в клиентской части мы использовали, в отличие от предыдущих примеров, вызов <code class="language-plaintext highlighter-rouge">DRb.start_service</code> без параметров.
+Это важно, именно эта строчка обеспечивает возможность вызова клиентских методов с сервера.</p>
+
+<p>Здесь возникает вопрос — а можем ли мы как-то передать блок кода серверу, чтобы он выполнил его у себя, в своем контексте?
+Вообще говоря, нет — объекты, представляющие код, не маршализуются — ни <code class="language-plaintext highlighter-rouge">Proc</code>, ни <code class="language-plaintext highlighter-rouge">Method</code>. Однако, мы можем заставить сервер
+выполнить произвольную строку, для этого нам понадобится следующий хак (на стороне клиента):</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="n">s</span><span class="p">.</span><span class="nf">instance_eval</span> <span class="s1">'undef :instance_eval'</span>
+<span class="n">s</span><span class="p">.</span><span class="nf">instance_eval</span> <span class="s1">'p "client str"'</span></code></pre>
+</figure>
+
+<p>Первой строчкой мы удаляем метод <code class="language-plaintext highlighter-rouge">instance_eval</code> объекта-посредника, что заставляет его в дальнейшем передавать вызов серверу,
+ну а дальше выполняем произвольную строку… Что плавно подводит нас к следующей теме.</p>
+
+<h2 id="безопасность">
+<a class="anchor" href="#%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Безопасность</h2>
+
+<p>Очевидно, что сервер, работающий по приципу: «ходи, кто хочет, бери, что хочет» — это плохой сервер, и надо бы как-то
+это дело ограничить. Начнем со второй части — запретим выполнять произвольный код. Можно, например, поудалять у серверного
+объекта все потенциально опасные методы, такие как <code class="language-plaintext highlighter-rouge">instance_eval</code>, но в случае большой и сложной программы отследить их
+все будет не так-то просто. Лучше воспользоваться уровнями безопасности Ruby и тем фактом, что метод <code class="language-plaintext highlighter-rouge">start_service</code> имеет
+необязательный третий параметр — хэш различных опций, в частности — <code class="language-plaintext highlighter-rouge">:safe_level</code>. Чтобы запретить выполнение произвольной
+строки, достаточно выставить его в единицу, и злонамеренный клиент свалится с исключением:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="no">DRb</span><span class="p">.</span><span class="nf">start_service</span> <span class="s1">'druby://localhost:9000'</span><span class="p">,</span> <span class="no">Server</span><span class="p">.</span><span class="nf">new</span><span class="p">,</span>
+    <span class="ss">:safe_level</span> <span class="o">=&gt;</span> <span class="mi">1</span></code></pre>
+</figure>
+
+<p>Более высокие уровни добавят еще больше ограничений, подробнее см. документацию<sup id="fnref:safe"><a href="#fn:safe" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>. Уровень безопасности можно выставить
+и глобально для всей программы через переменную <code class="language-plaintext highlighter-rouge">$SAFE</code>, однако задание его для конкретного сервиса более гибко и, на мой взгляд,
+удобно.</p>
+
+<p>Теперь вернемся к «ходи, кто хочет» и ограничим доступ. Здесь подход будет зависеть от того, с кем собственно сервер должен
+взаимодействовать. Варианты следующие:</p>
+
+<ul>
+  <li>
+    <p>Отдельные пользователи на локальной системе (вариант «управление службой», см. далее раздел «Сценарии использования»).</p>
+  </li>
+  <li>
+    <p>Клиенты в локальной сети, параметры которой нам известны.</p>
+  </li>
+  <li>
+    <p>Клиенты в глобальной сети, могут обращаться из заранее неизвестного места.</p>
+  </li>
+</ul>
+
+<p>В первом случае нам, возможно, имеет смысл использовать не TCP/IP, как во всех примерах выше, а протокол сокетов UNIX (правда,
+под Windows этот способ не пройдет). Управление доступом в этом случае производится посредством обычных прав на доступ к файлам.
+Запуск сервиса будет выглядеть примерно так:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'drb/unix'</span>
+
+<span class="no">DRb</span><span class="p">.</span><span class="nf">start_service</span> <span class="s1">'drbunix:/tmp/mydrb'</span><span class="p">,</span> <span class="no">Server</span><span class="p">.</span><span class="nf">new</span><span class="p">,</span>
+    <span class="ss">:UNIXFileMode</span> <span class="o">=&gt;</span> <span class="mo">0660</span></code></pre>
+</figure>
+
+<p>Соответственно, смогут подключиться только те клиенты, которые запущены от имени пользователя, входящего в группу сервера.
+Кроме <code class="language-plaintext highlighter-rouge">:UNIXFileMode</code> доступны также параметры <code class="language-plaintext highlighter-rouge">:UNIXFileOwner</code> и <code class="language-plaintext highlighter-rouge">:UNIXFileGroup</code>.</p>
+
+<p>В локальной сети (и вообще, если IP-адреса клиентов заранее известны и фиксированы), мы можем воспользоваться расширением ACL,
+примерно так:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'drb/acl'</span>
+
+<span class="n">acl</span> <span class="o">=</span> <span class="no">ACL</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="sx">%w(
+             deny all
+             allow localhost
+             allow ::1
+             allow 192.168.1.*
+             )</span><span class="p">)</span>
+
+<span class="no">DRb</span><span class="p">.</span><span class="nf">start_service</span> <span class="s1">'druby://localhost:9000'</span><span class="p">,</span> <span class="no">Server</span><span class="p">.</span><span class="nf">new</span><span class="p">,</span>
+     <span class="ss">:tcp_acl</span> <span class="o">=&gt;</span> <span class="n">acl</span></code></pre>
+</figure>
+
+<p>В более же общем случае нам придется прибегнуть к шифрованным безопасным соединениям. Здесь есть два пути: ssh-туннель
+и соединение через SSL.</p>
+
+<p>Для ssh-туннелирования нам потребуется пробросить пару портов — в прямом и обратном направлениях, а так же установить явно
+адрес клиентского сервиса. Серверный код не изменится.</p>
+
+<p>На клиенте в отдельной консоли выполняем:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ssh <span class="nt">-N</span> <span class="nt">-L</span> 9000:127.0.0.1:9000 <span class="se">\</span>
+<span class="go">         -R 9001:127.0.0.1:9001 server</span></code></pre>
+</figure>
+
+<p>Где «server» — имя или адрес сервера, а в коде клиента пишем:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="no">DRb</span><span class="p">.</span><span class="nf">start_service</span> <span class="s1">'druby://127.0.0.1:9001'</span>
+<span class="n">s</span> <span class="o">=</span> <span class="no">DRbObject</span><span class="p">.</span><span class="nf">new</span> <span class="kp">nil</span><span class="p">,</span> <span class="s1">'druby://127.0.0.1:9000'</span></code></pre>
+</figure>
+
+<p>Команда <code class="language-plaintext highlighter-rouge">ssh</code> (и, на серверной стороне, служба <code class="language-plaintext highlighter-rouge">sshd</code>) берется из пакета OpenSSH<sup id="fnref:openssh"><a href="#fn:openssh" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>, который стандартен для unix-систем,
+но вполне доступен и для Windows. Управление доступом в этом варианте обеспечивается совместно с доступом по протоколу SSH вообще,
+что можно считать как преимуществом — используется стандартный инструмент администратора, так и недостатком — отдельный доступ
+только для dRuby настроить не получится.</p>
+
+<p>Наиболее гибкая, но и трудоемкая, настройка безопасности возможна при работе через SSL (Secure Socket Layer). Вкратце: соединение
+производится по адресу вида «<code class="language-plaintext highlighter-rouge">drbssl://server:port</code>», кроме того, в опциях <code class="language-plaintext highlighter-rouge">start_service</code>, как на сервере, так и на клиенте нужно
+передать ключи шифрования и сертификаты, которыми эти ключи подписаны… А еще сами сертификаты должны быть подписаны удостоверяющим
+центром и т.д. — по большому счету, эта тема заслуживает отдельного рассмотрения<sup id="fnref:ssl"><a href="#fn:ssl" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>.</p>
+
+<h2 id="сценарии-использования">
+<a class="anchor" href="#%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B8-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>Сценарии использования</h2>
+
+<p>Итак, с чем же его едят? Что полезного мы можем сделать, используя технологию dRuby?</p>
+
+<p>Во-первых, мы можем создать <em>фоновую службу</em> и, отдельно, управляющую утилиту, убрав таким образом из постоянно загруженной
+программы все интерфейсные элементы, при этом обладая максимальной свободой в управлении ею «на ходу».</p>
+
+<p>Во-вторых, через dRuby легко реализуется <em>классическая трехзвенная архитектура</em>, где вся бизнес-логика работает в отдельном
+процессе, а приложения, обеспечивающие интерфейс, хоть настольные, хоть формирующие веб-сайт, существуют и разрабатываются
+независимо. Причем для разных категорий клиентов мы можем выдавать разные объекты-серверы. Собственно даже само разделение
+бизнес-логики и отображения на разные процессы, разные репозитории исходного кода — это уже весьма полезно в плане надежности
+и легкости сопровождения.</p>
+
+<p>Ну и, наконец, возможность разрабатывать полностью <em>гетерогенные и многоуровневые системы</em>, элементы которых разнесены
+не только в пространстве, но и организационно, и обмениваются не всеми имеющимися данными, а только нужными. Условно говоря,
+если у нас сеть магазинов, то необязательно отправлять в базу данных центрального офиса информацию по каждому пробитому чеку,
+достаточно общей сводки. А еще можно к этому добавить подразделения, нуждающиеся в какой-то специфической информации (например,
+сервисный центр), приложения для взаимодействия с постоянными партнерами и так далее — гибкость лишней не будет. Причем все
+программы у нас независимы и, при правильном проектировании, сбой в одной из них не затронет все остальные.</p>
+
+<p>Кроме того, таким образом можно связывать уже имеющиеся информационные системы, если, конечно, они работают с Ruby. Особо
+интересен тут факт, что версии Ruby могут быть разными — требуется только совпадение версий формата маршалинга, который
+на данный момент во всех активно используемых версиях — от 1.8.7 до 2.1 — один и тот же. Конечно, можно обойтись и другими
+средствами — веб-сервисами, например, обменивающимися данными в формате JSON или XML, но это дополнительные расходы,
+как машинной нагрузки, так и времени разработки, на которые, вероятно, стоит идти только если у нас уже имеются какие-то
+элементы системы, работающие по данным протоколам. Хотя и в этом случае можно рассмотреть вариант ruby-обертки или расширения,
+особенно если в долгосрочных планах всё равно стоит их переработка или замена — тут уже по обстоятельствам.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:gist">
+      <p>Полные исходные тексты примеров размещены по адресу <a href="https://gist.github.com/shikhalev/6945234">https://gist.github.com/shikhalev/6945234</a>. <a href="#fnref:gist" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:safe">
+      <p>Dave Thomas, with Chad Fowler and Andy Hunt, «Programming Ruby: The Pragmatic Programmers’ Guide»,
+     бесплатная версия первого издания — <a href="http://www.ruby-doc.org/docs/ProgrammingRuby/">http://www.ruby-doc.org/docs/ProgrammingRuby/</a> [en]. Глава «Locking Ruby in the Safe». <a href="#fnref:safe" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:openssh">
+      <p>Официальный сайт OpenSSH — <a href="http://www.openssh.org/">http://www.openssh.org/</a>. <a href="#fnref:openssh" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:ssl">
+      <p>Много полезной информации можно почерпнуть из документации к OpenSSL — <a href="http://www.openssl.org/">http://www.openssl.org/</a>, неплохое введение на русском языке
+    находится по адресу <a href="http://xgu.ru/wiki/OpenSSL">http://xgu.ru/wiki/OpenSSL</a>. <a href="#fnref:ssl" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.03.06 |</span>
+            <a href="/2021/03/resize-png.html" title="Способы ресайза картинок формата PNG — какие возможности у нас есть под Linux...">О ресайзе PNG на примерах</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2011.10.11 |</span>
+            <a href="/2011/10/latex-marker.html" title="Выделение цветным фоном в тексте, аккуратный способ.">Выделение «маркером» в LaTeX</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2022.11.01 |</span>
+            <a href="/2022/11/storages.html" title="Тест носителей информации на новой платформе">Очередной тест носителей</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a>​<a class="fa-icon-calendar-alt" href="/life/dybr/" title="Просто кусочки повседневности">Дыбр</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#минимальный-пример">Минимальный пример</a></li>
+<li class="toc-entry toc-h2"><a href="#передача-данных">Передача данных</a></li>
+<li class="toc-entry toc-h2"><a href="#клиентская-часть">Клиентская часть</a></li>
+<li class="toc-entry toc-h2"><a href="#безопасность">Безопасность</a></li>
+<li class="toc-entry toc-h2"><a href="#сценарии-использования">Сценарии использования</a></li>
+</ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/2015/04/ruby-multitasking.html" title="В статье рассматриваются основные средства работы с потоками (threads) и процессами в языке и стандартной библиотеке Ruby.">Ruby и многозадачность</a></li><li class="fa-icon-li-file-alt"><a href="/2015/04/ruby-context.html" title="Статья рассказывает о программном контексте в Ruby: какие переменные и другие объекты доступны в конкретном месте программы, и как интерпретатор их ищет.">Блоки и контекст в Ruby</a></li></ul>
+    </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li><li><a href="/feed/pub.xml" title="Публикации в СМИ">Публикации</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

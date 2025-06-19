@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Поиздевался над железками | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Поиздевался над железками" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Небольшой тест имеющихся у меня носителей данных" />
+<meta property="og:description" content="Небольшой тест имеющихся у меня носителей данных" />
+<link rel="canonical" href="https://shikhalev.github.io/2019/07/storages.html" />
+<meta property="og:url" content="https://shikhalev.github.io/2019/07/storages.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/2019/07/17/storages/screen-640x640-500-261-0-0.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-07-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/img/2019/07/17/storages/screen-640x640-500-261-0-0.webp" />
+<meta property="twitter:title" content="Поиздевался над железками" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2021-04-10T17:00:00+00:00","datePublished":"2019-07-17T00:00:00+00:00","description":"Небольшой тест имеющихся у меня носителей данных","headline":"Поиздевался над железками","image":"https://shikhalev.github.io/img/2019/07/17/storages/screen-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/2019/07/storages.html"},"url":"https://shikhalev.github.io/2019/07/storages.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a>​<a class="fa-icon-calendar-alt" href="/life/dybr/" title="Просто кусочки повседневности">Дыбр</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">Поиздевался над железками</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2019%2F07%2Fstorages.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2019%2F07%2Fstorages.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2019%2F07%2Fstorages.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2019%2F07%2Fstorages.html&text=%D0%9F%D0%BE%D0%B8%D0%B7%D0%B4%D0%B5%D0%B2%D0%B0%D0%BB%D1%81%D1%8F+%D0%BD%D0%B0%D0%B4+%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%BA%D0%B0%D0%BC%D0%B8">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%9F%D0%BE%D0%B8%D0%B7%D0%B4%D0%B5%D0%B2%D0%B0%D0%BB%D1%81%D1%8F+%D0%BD%D0%B0%D0%B4+%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%BA%D0%B0%D0%BC%D0%B8&url=https%3A%2F%2Fshikhalev.github.io%2F2019%2F07%2Fstorages.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2019-07-17T00:00:00+00:00" itemprop="datePublished">2019.07.17
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#AliExpress">AliExpress</a>​<a class="tag" href="/tags#Crucial">Crucial</a>​<a class="tag" href="/tags#Ext4">Ext4</a>​<a class="tag" href="/tags#HDD">HDD</a>​<a class="tag" href="/tags#Kingston">Kingston</a>​<a class="tag" href="/tags#ORICO">ORICO</a>​<a class="tag" href="/tags#SATA">SATA</a>​<a class="tag" href="/tags#SD">SD</a>​<a class="tag" href="/tags#SDXC">SDXC</a>​<a class="tag" href="/tags#SSD">SSD</a>​<a class="tag" href="/tags#Seagate">Seagate</a>​<a class="tag" href="/tags#Transcend">Transcend</a>​<a class="tag" href="/tags#USB">USB</a>​<a class="tag" href="/tags#exFAT">exFAT</a>​<a class="tag" href="/tags#кардридер">кардридер</a>​<a class="tag" href="/tags#размышлизмы">размышлизмы</a></aside></header><div itemprop="articleBody">
+  <figure class="__figure __implicit_figure __right" style="max-width:320px;"><img src="/img/2019/07/17/storages/kdpv-320.webp" class="__image"></figure>
+
+<div class="note">
+  <p><em>У меня было два HDD, два SSD, два внешних USB-диска (HDD) и сколько-то SD-карт. Не то, чтобы все это было нужно протестировать,
+но раз начал коллекционировать цифры MB/s, нужно идти в этом своем увлечении до конца. Единственное, что меня беспокоило — это
+флэшка-брелок. В мире нет ничего более бессмысленного и редко используемого, чем флэшка-брелок.</em></p>
+</div>
+
+<p>В общем, руководствуясь скорее бессонницей, чем необходимостью, замерил скорости чтения/записи для нескольких девайсов, которые
+оказались под рукой (ну и тех, что и так в корпусе компьютера). В первую очередь меня интересовали скорости имеющихся SD-карт,
+а также влияние на эти скорости USB-хаба и кард-ридера (у меня их два разных).</p>
+
+<!--more-->
+
+<h2 id="способ-тестирования">
+<a class="anchor" href="#%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1-%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>Способ тестирования</h2>
+
+<p>Замеры делались следующими командами (первая для записи, вторая для чтения):</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">#</span><span class="w"> </span><span class="nb">dd </span><span class="k">if</span><span class="o">=</span>⟨файл на tmpfs⟩ <span class="nv">of</span><span class="o">=</span>⟨файл на целевом устройстве⟩ <span class="nv">bs</span><span class="o">=</span>1M <span class="nv">count</span><span class="o">=</span>1K <span class="nv">oflag</span><span class="o">=</span><span class="nb">sync</span>
+<span class="gp">#</span><span class="w"> </span><span class="nb">sync</span><span class="p">;</span> <span class="nb">echo </span>3 <span class="o">&gt;</span> /proc/sys/vm/drop_caches <span class="p">;</span> <span class="nb">dd </span><span class="nv">of</span><span class="o">=</span>⟨файл на tmpfs⟩ <span class="k">if</span><span class="o">=</span>⟨файл на целевом устройстве⟩ <span class="nv">bs</span><span class="o">=</span>1M <span class="nv">count</span><span class="o">=</span>1K <span class="nv">oflag</span><span class="o">=</span><span class="nb">sync</span></code></pre>
+</figure>
+
+<p>Сам этот гигабайтный файл предварительно был сгенерирован из <code class="language-plaintext highlighter-rouge">/dev/urandom</code> посредством все того же <code class="language-plaintext highlighter-rouge">dd</code>. Не­по­с­ред­ст­вен­но брать
+из <code class="language-plaintext highlighter-rouge">/dev/urandom</code> теоретически было бы лучше, но увы, он оказался медленнее, чем SSD. Использовать <code class="language-plaintext highlighter-rouge">/dev/zero</code> и <code class="language-plaintext highlighter-rouge">/dev/null</code>
+я не стал во избежание каких-нибудь оптимизаций со стороны системы.</p>
+
+<p>Указанные команды выполнялись по несколько раз для каждого устройства, пока не начинали давать более-менее стабильный результат
+(стабильность определялась на глаз), после чего последние пять таких стабильных результатов усреднялись и округлялись до целых
+мегабайт. О некоторых интересных нестабильностях я напишу ниже. Отмечу, что в результатах десятичные, а не двоичные мегабайты,
+т.е. 1 MB = 1 000 000 B, впрочем, в стандартах и характеристиках от производителя обычно указываются они же.</p>
+
+<p><strong>Disclaimer:</strong> описанное в этом посте не является корректным тестированием и сравнением чего бы то ни было — очень многое
+делалось на глаз, а тестируемые девайсы находились в совершенно разных стадиях износа и заполненности. Да и нагрузка 1GiB
+кусками по 1MiB не соответствует ни реальным кейсам, ни любимым тестам производителей и обзорщиков. Зато удобна. В общем,
+автор в курсе, автор не претендуэ. Автора интересовало исследование скопившихся у него девайсов в текущем состоянии, способом,
+худо-бедно соответствующим текущим задачам (не всем).</p>
+
+<p><strong>tl;dr:</strong> в целом, результаты соответствуют ожиданиям, а китайские бренды (ORICO и noname) проявили себя вполне неплохо.</p>
+
+<h2 id="список-устройств">
+<a class="anchor" href="#%D1%81%D0%BF%D0%B8%D1%81%D0%BE%D0%BA-%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Список устройств</h2>
+
+<figure class="__figure __implicit_figure __right" style="max-width:260px;"><img src="/img/2019/07/17/storages/comp-260.webp" class="__image"></figure>
+
+<h3 id="системный-блок">
+<a class="anchor" href="#%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%BD%D1%8B%D0%B9-%D0%B1%D0%BB%D0%BE%D0%BA" aria-hidden="true"><span class="octicon octicon-link"></span></a>Системный блок</h3>
+
+<p>Собственно, системный блок не особо изменился со времени публикации <a href="/2015/03/harddybr.html">«О железе, дыбровое…»</a> — добавились только еще один HDD
+и еще один SSD, о которых ниже подробнее. И видеокарту сменил, но это вряд ли имеет значение. Существенно здесь, пожалуй,
+будет то, что внутренние девайсы подключены по <strong>SATA III</strong> (6Gb/s, примерно 750MB/s), а внешние — по <strong>USB 3.0</strong> (оно же
+<strong>USB 3.1 Gen1</strong> — до 5Gb/s, что примерно 625MB/s).</p>
+
+<h3 id="периферия">
+<a class="anchor" href="#%D0%BF%D0%B5%D1%80%D0%B8%D1%84%D0%B5%D1%80%D0%B8%D1%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>Периферия</h3>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:240px;shape-outside:url(/img/2019/07/17/storages/sh4c2-240.webp);"><img src="/img/2019/07/17/storages/sh4c2-240.webp" class="__image" style="shape-outside:url(/img/2019/07/17/storages/sh4c2-240.webp);"></figure>
+
+<ul>
+  <li>
+    <p>USB-хаб с зарядными портами <strong><a href="https://aliclick.shop/s/piuqew">ORICO SH4C2</a></strong>.</p>
+
+    <p>Куплен был как универсальная настольная фигня, совмещающая в себе функции собственно хаба, зарядника (один из боковых
+портов выдает 2.4A, второй 1.0A) и подставки под телефон.</p>
+
+    <p>Приобретен на AliExpress <em>в апреле 2018 года</em>, и пока с ним проблем не было.</p>
+
+    <p><em>Заявленная скорость</em> — в соответствии со стандартом USB 3.0 — до <em>5Gb/s</em>.</p>
+  </li>
+</ul>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:180px;margin-bottom: -10px;shape-outside:url(/img/2019/07/17/storages/ts-rdf8k-180.webp);"><img src="/img/2019/07/17/storages/ts-rdf8k-180.webp" class="__image" style="shape-outside:url(/img/2019/07/17/storages/ts-rdf8k-180.webp);"></figure>
+
+<ul>
+  <li>
+    <p>Кард-ридер <strong><a href="https://technopoint.ru/product/c18d47f3243430b1/kard-rider-transcend-ts-rdf8k-sale/">Transcend TS-RDF8K</a></strong>.</p>
+
+    <p>Куплен <em>в июне 2015 года</em>.</p>
+
+    <p>В настоящий момент снят с производства, его заменяют модели RDF8K2 и RDF9K2 (последняя поддерживает скорости UHS-II,
+тогда как мой — только UHS-I).</p>
+
+    <p><em>Заявленная скорость чтения/записи — до 130/95 MB/s</em>.</p>
+  </li>
+</ul>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:140px;shape-outside:url(/img/2019/07/17/storages/noname-140.webp);"><img src="/img/2019/07/17/storages/noname-140.webp" class="__image" style="shape-outside:url(/img/2019/07/17/storages/noname-140.webp);"></figure>
+
+<ul>
+  <li>
+    <p>Китайский кард-ридер <strong><a href="https://aliclick.shop/s/kfvke3">NoName</a></strong>. Ни модель, ни производитель не известны, не удивлюсь, если внутри Китая
+они продаются на вес.</p>
+
+    <p>Поддерживает только форматы SD и microSD, включая SDXC.</p>
+
+    <p>Куплен на AliExpress (что неудивительно), <em>в августе 2018 года</em>. На самом деле я их прикупил пять штук сразу в качестве
+доноров электроники для экспериментов, но пока руки не дошли.</p>
+
+    <p><em>Заявленная скорость</em> указана для интерфейса USB 3.0, т.е. 5Gb/s, о стандартах карт и их скоростях не сказано ничего.</p>
+  </li>
+</ul>
+
+<h3 id="внутренние-накопители">
+<a class="anchor" href="#%D0%B2%D0%BD%D1%83%D1%82%D1%80%D0%B5%D0%BD%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B0%D0%BA%D0%BE%D0%BF%D0%B8%D1%82%D0%B5%D0%BB%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Внутренние накопители</h3>
+
+<p>Все, как уже говорилось выше, с интерфейсом SATA III. Файловая система везде — Ext4.</p>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:200px;shape-outside:url(/img/2015/03/27/harddybr/crucial-ct256mx100-200.webp);"><img src="/img/2015/03/27/harddybr/crucial-ct256mx100-200.webp" class="__image" style="shape-outside:url(/img/2015/03/27/harddybr/crucial-ct256mx100-200.webp);"></figure>
+
+<ul>
+  <li>
+    <p>SSD <strong><a href="http://e-burg.nix.ru/autocatalog/ssd_crucial/SSD_SATA_6Gb_Crucial_MX100_CT256MX100SSD1_MLC_190722.html">Crucial MX100 256GB CT256MX100SSD1</a></strong>.</p>
+
+    <p>Куплен <em>в октябре 2014 года</em>. В настоящее время не производится, актуальная серия у Cru­ci­al — MX500.</p>
+
+    <p>У меня используется в качестве системного диска. Соответственно, какая-то нагрузка на него приходится постоянно.
+Из-за этого замеры неровные, и результат ниже, чем мог бы быть, неизвестно насколько. Заполнен на 93%.</p>
+
+    <p><em>Заявленная скорость чтения/записи — до 550/330 MB/s</em>.</p>
+  </li>
+</ul>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:200px;shape-outside:url(/img/2015/03/27/harddybr/seagate-st2000-200.webp);"><img src="/img/2015/03/27/harddybr/seagate-st2000-200.webp" class="__image" style="shape-outside:url(/img/2015/03/27/harddybr/seagate-st2000-200.webp);"></figure>
+
+<ul>
+  <li>
+    <p>HDD <strong><a href="http://e-burg.nix.ru/autocatalog/hdd_seagate/HDD_Tb_SATA_6Gb_Seagate_Barracuda_ST2000DM001_3.5_126690.html">Seagate Desktop 2TB ST2000DM001</a></strong>.</p>
+
+    <p>Также куплен <em>в октябре 2014 года</em> и в настоящее время не производится. Впрочем, на се­го­д­няш­ний день выбор двухтерабайтных
+моделей HDD огромен.</p>
+
+    <p>У меня используется для всяких актуальных файлов, скорость работы с которыми не кри­тич­на. Еще на нем же лежит раздел
+подкачки. Та часть диска, что не подкачка, заполнена на 31%.</p>
+
+    <p><em>Заявленные скорости</em> найти не удалось. Из характеристик стоят упоминания, пожалуй, скорость вращения — 7200rpm, и кэш — 64MB.</p>
+  </li>
+</ul>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:180px;shape-outside:url(/img/2019/07/17/storages/sea-hdd8tb-180.webp);"><img src="/img/2019/07/17/storages/sea-hdd8tb-180.webp" class="__image" style="shape-outside:url(/img/2019/07/17/storages/sea-hdd8tb-180.webp);"></figure>
+
+<ul>
+  <li>
+    <p>HDD <strong><a href="https://e-burg.nix.ru/autocatalog/hdd_seagate/HDD-8-Tb-SATA-6Gb-s-Seagate-Archive-ST8000AS0002-35-128Mb_200178.html">Seagate Archive 8TB ST8000AS0002</a></strong>. Один из первых дисков такого объема, во всяком случае — доступных
+для домашнего использования. В продаже можно найти и сейчас.</p>
+
+    <p>Куплен <em>в октябре 2015 года</em>. Несмотря на многочисленные плохие отзывы в интернетах, работает без сбоев. Впрочем, плохие
+отзывы в основном от тех, кто пытался его использовать не по назначению: особенность этого диска — агрессивное
+энергосбережение, т.е. он очень быстро паркует головки и отрубается, из-за чего несовместим с любыми RAID практически.
+Для работы 24/7 он также не предназначен.</p>
+
+    <p>У меня используется как архив и медленная файлопомойка. Заполнен на 96% всякой фигней.</p>
+
+    <p><em>Заявленные скорости — до 150/150 MB/s</em>. Скорость вращения — 5400rmp (ЕМНИП, почему-то этой характеристики не нашел), кэш — 128MB.</p>
+  </li>
+</ul>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:180px;shape-outside:url(/img/2019/07/17/storages/ssd-kingston-180.webp);"><img src="/img/2019/07/17/storages/ssd-kingston-180.webp" class="__image" style="shape-outside:url(/img/2019/07/17/storages/ssd-kingston-180.webp);"></figure>
+
+<ul>
+  <li>
+    <p>SSD <strong><a href="https://www.onlinetrade.ru/catalogue/ssd_diski-c294/kingston/ssd_disk_kingston_2.5_ssdnow_v300_480_gb_sata_iii_mlc_sv300s3n7a_480g-153859.html">Kingston SSDNow V300 480GB MLC SV300S3N7A/480G</a></strong>.</p>
+
+    <p>Куплен <em>в августе 2017 года</em>. В настоящее время в продаже его не видно, вероятно, снят с производства.</p>
+
+    <p>Покупался специально для обработки фотографий — на системный диск большое количество 25-мегабайтных равок уже не помещается,
+а на HDD их ворочать весьма уныло. Со своими задачами справляется. На данный момент заполнен на 11%, что мало о чем говорит,
+поскольку после обработки на нем фотографии отправляются на архивный диск, т.е. прошло данных через него минимум на порядок
+больше, чем хранится в моменте.</p>
+
+    <p><em>Заявленные скорости — до 450/450 MB/s</em>.</p>
+  </li>
+</ul>
+
+<h3 id="карты-sdxc">
+<a class="anchor" href="#%D0%BA%D0%B0%D1%80%D1%82%D1%8B-sdxc" aria-hidden="true"><span class="octicon octicon-link"></span></a>Карты SDXC</h3>
+
+<p>Все карты отформатированы в камере (но в разное время), файловая система — exFAT. Так же все относятся к скоростному классу
+Class 10 UHS-I, т.е. <em>минимальная скорость записи — 10MB/s</em>.</p>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:180px;shape-outside:url(/img/2019/07/17/storages/sd-kingston-180.webp);"><img src="/img/2019/07/17/storages/sd-kingston-180.webp" class="__image" style="shape-outside:url(/img/2019/07/17/storages/sd-kingston-180.webp);"></figure>
+
+<ul>
+  <li>
+    <p>Карта <strong><a href="https://technopoint.ru/product/95d28078077e30b1/karta-pamati-kingston-sdxc-64-gb-sdx10v64gb-sale/">Kingston SDXC 64GB [SDX10V/64GB]</a></strong>.</p>
+
+    <p>Куплена <em>в октябре 2015 года</em>. Сейчас, насколько я понимаю, эта модель снята с производства, новые побыстрее будут.</p>
+
+    <p>Покупал вместе с первым фотоаппаратом, некоторое время пользовался, потом перешел на менее емкие и более быстрые
+(но с ними сравнивать не буду, поскольку, как и старый фотоаппарат, они сейчас не под рукой). В целом, она не сильно
+использовалась. Каких-либо проблем с ней не наблюдал, за исключением того, что более новые карты заметно на глаз быстрее
+(причем в старой камере она вела себя еще тормозней, чем в новой, подозреваю, там просто прошивка хуже оптимизирована
+для exFAT, которая на момент производства Canon EOS 600D была еще внове), поэтому «на скамейке запасных» она у меня остается.</p>
+
+    <p>Отформатировал непосредственно перед тестированием.</p>
+
+    <p><em>Заявленная скорость чтения/записи — 30/20 MB/s</em>.</p>
+  </li>
+</ul>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:120px;shape-outside:url(/img/2019/07/17/storages/sd-transcend-120.webp);"><img src="/img/2019/07/17/storages/sd-transcend-120.webp" class="__image" style="shape-outside:url(/img/2019/07/17/storages/sd-transcend-120.webp);"></figure>
+
+<ul>
+  <li>
+    <p>Две карты <strong><a href="https://market.yandex.ru/product--karta-pamiati-transcend-ts64gsdu1/10493753">Transcend SDXC 64GB Class 10 UHS-I, TS64GSDU1 300x</a></strong>.</p>
+
+    <p>Куплены одновременно <em>в июле 2017 года</em>. Могут быть вообще из одной партии.</p>
+
+    <p>Одна используется постоянно, вынимается из камеры только, чтоб скинуть фотографии на компьютер. Ее я специально форматировать
+не стал. Вторая используется редко, только когда заполнится первая (а это примерно 2000 кадров), отформатирована непосредственно
+перед тестированием. Таким образом я хотел сравнить скорости хорошо поюзанной и чистой карточек.</p>
+
+    <p><em>Заявленная скорость чтения/записи — 45/25 MB/s</em>.</p>
+  </li>
+</ul>
+
+<h3 id="внешние-накопители">
+<a class="anchor" href="#%D0%B2%D0%BD%D0%B5%D1%88%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B0%D0%BA%D0%BE%D0%BF%D0%B8%D1%82%D0%B5%D0%BB%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Внешние накопители</h3>
+
+<p>Во-первых, это два внешних диска, схожих по функционалу. Оба имеют объем 2TB, при подключении по USB файловая система определяется
+как exFAT, что необязательно соответствует истине, поскольку это не просто внешние диски, а по сути NAS со своей операционкой внутри.
+Могут работать как сетевые ресурсы по WiFi без непосредственного подключения кабелем, работают как повербанк, а главное — имеют
+на борту слот для SD-карт и позволяют копировать содержимое карты полностью автономно — без подключения к компьютеру или телефону.
+Для такого «бэкапа в полях» собственно и приобретались.</p>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:240px;shape-outside:url(/img/2019/07/17/storages/wd-passport-240.webp);"><img src="/img/2019/07/17/storages/wd-passport-240.webp" class="__image" style="shape-outside:url(/img/2019/07/17/storages/wd-passport-240.webp);"></figure>
+
+<ul>
+  <li>
+    <p><strong><a href="https://www.onlinetrade.ru/catalogue/vneshnie_zhestkie_diski_hdd_usb-c749/western_digital/vneshniy_zhestkiy_disk_western_digital_my_passport_wireless_pro_2.5_2tb_5400rpm_usb_3.0_wifi_sd_wdbp2p0020bbk_resn-731691.html">Western Digital My Passport Wireless Pro WDBP2P0020BBK-RESN</a></strong>.</p>
+
+    <p>Интерфейс USB 3.0, на стороне диска разъем micro-B.</p>
+
+    <p>На борту находится какой-то кастомный Linux, к которому можно получить доступ по SSH, что, впрочем, особых плюсов не дает.
+Заявлен аккумулятор на 6400mAh и десять часов непрерывной работы, что крайне далеко от истины — реально за пару часов разряжается
+полностью. При подключении по USB может работать полностью разряженным, но и не заряжается практически, для этого есть
+зарядник на 2.4A. WiFi двухдиапазонный, причем может одновременно находиться в локальной сети домашнего и держать свою собственную
+сеть WiFi (для начальной настройки нужно, конечно, входить в его собственную). Вообще, управление неплохо продумано и функционально.</p>
+
+    <p>Внутри, если верить интернетам, находится <strong><a href="https://market.yandex.ru/product--zhestkii-disk-western-digital-wd-blue-mobile-2-tb-wd20spzx/40657949">Western Digital WD Blue Mobile (WD20SPZX)</a></strong>: скорость вращения — 5400rpm, кэш — 128MB.</p>
+
+    <p>Куплен <em>в июне 2018 года</em>. Использовался по назначению, но мало, практически не заполнен.</p>
+
+    <p><em>Заявленные скорости не указаны</em>.</p>
+  </li>
+</ul>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:240px;shape-outside:url(/img/2019/07/17/storages/orico-hdd-240.webp);"><img src="/img/2019/07/17/storages/orico-hdd-240.webp" class="__image" style="shape-outside:url(/img/2019/07/17/storages/orico-hdd-240.webp);"></figure>
+
+<ul>
+  <li>
+    <p><strong><a href="https://aliclick.shop/s/56y2bi">ORICO MagiBox Multi-function Private Cloud Storage (2567W)</a></strong>.</p>
+
+    <p>Интерфейс, как заявляется, USB 3.1 Gen2. Со стороны диска разъем Type-C, в комплекте есть как кабель C-C, так и A-C.</p>
+
+    <p>Что за прошивка на борту выяснить не удалось. Вообще, софт в лучших китайских традициях какой-то мутный и сырой. Заявлен аккумулятор
+на 8000mAh и это похоже на правду — время автономной работы я специально не замерял, но оно большое, да и телефон от него заряжается
+довольно бодро. Полностью разряженный <em>от USB не работает</em> — пытается, но сбоит и отключается. Завести его в домашнюю сеть WiFi
+не получилось, приходится пользоваться его собственной.</p>
+
+    <p>Внутри находится <strong><a href="https://market.yandex.ru/product--zhestkii-disk-seagate-st2000lm015/1712221549">Seagate Barracuda Compute ST2000LM015</a></strong>, и это совершенно точно, поскольку в отличие от предыдущего
+внешнего диска, этот позволяет заменять HDD самостоятельно, и крышка легко снимается. Можно купить и без диска вообще, подойдут
+любые с интерфейсом SATA III, форм-фактором 2.5’’ и толщиной 7mm. Соответственно, скорость вращения — 5400rpm, кэш — 128MB.</p>
+
+    <p>Куплен <em>в июне 2018 года</em>. Использовался как по основному назначению, так и в качестве повербанка, но и то и другое — мало.
+Практически не заполнен.</p>
+
+    <p><em>Заявленные скорости не указаны</em>.</p>
+  </li>
+</ul>
+
+<p>Вообще, эти два девайса заставляют вспомнить классика: «Если бы софт Никанора Ивановича да приставить к аккумулятору Ивана Кузьмича…»</p>
+
+<p>Ну и наконец…</p>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:160px;shape-outside:url(/img/2019/07/17/storages/usb64-160.webp);"><img src="/img/2019/07/17/storages/usb64-160.webp" class="__image" style="shape-outside:url(/img/2019/07/17/storages/usb64-160.webp);"></figure>
+
+<ul>
+  <li>
+    <p>USB-флешка <strong><a href="https://www.onlinetrade.ru/catalogue/flesh_diski_usb-c158/transcend/usb_fleshka_transcend_jetflash_710s_64gb_usb_3.1_90_24_mb_s_ts64gjf710s-171183.html">Transcend JetFlash 710S 64GB</a></strong>.</p>
+
+    <p>Интерфейс USB 3.1 Gen1, т.е. тот же 3.0.</p>
+
+    <p>Размер очень маленький, висит на связке с ключами. Даже не в качестве брелка, а чтоб ее саму не потерять. Корпус алюминиевый,
+поэтому не страшно. Используется редко, практически не заполнена.</p>
+
+    <p>Куплена <em>в октябре 2017 года</em>.</p>
+
+    <p><em>Заявленная скорость чтения/записи — 90/24 MB/s</em>.</p>
+  </li>
+</ul>
+
+<h2 id="испытания">
+<a class="anchor" href="#%D0%B8%D1%81%D0%BF%D1%8B%D1%82%D0%B0%D0%BD%D0%B8%D1%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>Испытания</h2>
+
+<h3 id="предел-чувствительности">
+<a class="anchor" href="#%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB-%D1%87%D1%83%D0%B2%D1%81%D1%82%D0%B2%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Предел чувствительности</h3>
+
+<p>Переброска того же файла с tmpfs на tmpfs, т.е. из памяти в память, показала стабильные <em>1.5GB/s</em>. Если бы какие-то другие замеры показали
+близкие цифры, их пришлось бы отбросить без сожаления. Однако таких не было (неудивительно).</p>
+
+<h3 id="внутренние-накопители-1">
+<a class="anchor" href="#%D0%B2%D0%BD%D1%83%D1%82%D1%80%D0%B5%D0%BD%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B0%D0%BA%D0%BE%D0%BF%D0%B8%D1%82%D0%B5%D0%BB%D0%B8-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Внутренние накопители</h3>
+
+<p>По HDD и SSD получилась следующая картина (напомню, что везде указаны MB/s):</p>
+
+<table class="wide" style="max-width:640px;">
+<tr>
+<th></th>
+<th align="right">Запись</th>
+<th align="right">Чтение</th>
+</tr>
+<tr>
+<td>SSD Crucial MX100 256GB</td>
+<td align="right">75</td>
+<td align="right">491</td>
+</tr>
+<tr>
+<td>Seagate Desktop 2TB</td>
+<td align="right">20</td>
+<td align="right">204</td>
+</tr>
+<tr>
+<td>Seagate Archive 8TB</td>
+<td align="right">16</td>
+<td align="right">146</td>
+</tr>
+<tr>
+<td>Kingston SSDNow V300 480GB</td>
+<td align="right">166</td>
+<td align="right">503</td>
+</tr>
+</table>
+
+<p>Что любопытно: HDD отличаются друг от друга по чтению заметно сильнее, чем по записи, тогда как SSD — наоборот — по чтению довольно
+близки, а вот по записи разница более чем в два раза.</p>
+
+<p>Относительно заявленных скоростей (где таковые были): чтение плюс-минус соответствует, а вот запись везде существенно ниже. Впрочем, не будем
+забывать, что я писал не напрямую на блочное устройство, а в файловую систему, с обновлением метаданных и вот это все. К тому же,
+на рабочие, т.е. заполненные и фрагментированные, диски.</p>
+
+<p>На архивном диске я впервые столкнулся с существенной нестабильностью, причем на чтении: первые три запуска он демонстрировал результат
+между 25 и 30 MB/s и характерный звук пробуждения, на четвертом — 70 MB/s, и начиная с пятого — стабильные 146<s>%</s> MB/s. Причина — то самое
+агрессивное засыпание, буквально сразу.</p>
+
+<p>По итогам понял, что предел скорости SSD на чтение для меня практически достигнут: 500MB/s — это уже близко к пределу пропускной
+способности SATA III, во-первых, а во-вторых, это треть от скорости записи память-память. Таким образом, более быстрые диски имеет
+смысл покупать только при полном апгрейде системы — материнка/процессор/память — и уже с другими интерфейсами (если не выдумают
+какое-нибудь SATA IV). На текущей базе можно только наращивать их объем.</p>
+
+<h3 id="sd-карты">
+<a class="anchor" href="#sd-%D0%BA%D0%B0%D1%80%D1%82%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>SD-карты</h3>
+
+<p>Здесь я, пожалуй, разобью данные на несколько этапов, поскольку сравнения многомерные, к тому же некоторых замеров я не делал за ненадобностью.</p>
+
+<p>Первая табличка: карты vs кард-ридеры, все замеры сделаны через USB-хаб:</p>
+
+<table class="wide" style="max-width:640px;">
+<tr>
+<th rowspan="2"></th>
+<th colspan="2" align="center">Transcend TS-RDF8K</th>
+<th colspan="2" align="center">NoName с AliExpress</th>
+</tr>
+<tr>
+<th align="right">Запись</th>
+<th align="right">Чтение</th>
+<th align="right">Запись</th>
+<th align="right">Чтение</th>
+</tr>
+<tr>
+<td>Transcend (рабочая)</td>
+<td align="right">20</td>
+<td align="right">77</td>
+<td align="right">20</td>
+<td align="right">80</td>
+</tr>
+<tr>
+<td>Transcend (запасная)</td>
+<td align="right">20</td>
+<td align="right">76</td>
+<td align="right">20</td>
+<td align="right">79</td>
+</tr>
+<tr>
+<td>Kingston (запасная)</td>
+<td align="right">14</td>
+<td align="right">44</td>
+<td align="right">14</td>
+<td align="right">46</td>
+</tr>
+</table>
+
+<p>Что мы тут видим? Показатели чтения превышают заявленные, и существенно. А показатели записи недотягивают до заявленных и тоже существенно.
+Впрочем, установленные стандартом UHS-I показатели записи они вполне перекрывают, более новая — в два, более старая — почти в полтора раза.
+Рискну предположить, что на стандарт сертифицируются по <em>стандартным</em> же тестам, а маркетинговые цифры пишут по тестам производителя —
+сферическим и в вакууме (или в жидком азоте). А скорость чтения сама такая получается, с ней вообще проще.</p>
+
+<p>Гораздо интересней тут то, что NoName стабильно демонстрирует чуть более высокую скорость, чем бренд. Правда, где-то в районе погрешности
+(на запись там, кстати, тоже есть превышение, но его округление съело).</p>
+
+<p>Еще есть некоторая разница между свежеотфоматированной карточкой и изрядно поюзанной, причем не в пользу первой. Более того, если рабочая
+выдала эти результаты сразу и стабильно, то обе свежеформатнутые несколько первых замеров на запись выдавали скорости намного ниже
+и с большим разбросом. Проблема в файловой системе exFAT? В алгоритме форматирования в камере? В том, что вообще форматирование плохо
+учитывает распределение секторов на флэш-памяти? Я не знаю.</p>
+
+<p>Тем не менее, карточка запаса стабилизировалась на значениях очень близких к рабочей, и я ее исключил из дальнейших опытов.</p>
+
+<p>Вторая табличка покажет, как ведут себя ридеры, если их подключить не через хаб, а напрямую к порту USB 3.0 компьютера:</p>
+
+<table class="wide" style="max-width:640px;">
+<tr>
+<th rowspan="2"></th>
+<th colspan="2" align="center">Transcend TS-RDF8K</th>
+<th colspan="2" align="center">NoName с AliExpress</th>
+</tr>
+<tr>
+<th align="right">Запись</th>
+<th align="right">Чтение</th>
+<th align="right">Запись</th>
+<th align="right">Чтение</th>
+</tr>
+<tr>
+<td>Transcend (рабочая)</td>
+<td align="right">20</td>
+<td align="right">77</td>
+<td align="right">20</td>
+<td align="right">79</td>
+</tr>
+</table>
+
+<p>Да, я не стал заморачиваться и с карточкой Kingston тоже в этом случае. Непосредственно с портом взаимодействует кард-ридер,
+и мне крайне сомнительно, что на разных карточках он это делает по-разному.</p>
+
+<p>Итого, мой хаб не влияет на скорость работы кард-ридеров. Это радует, поскольку он находится на столе, а системный блок под столом.</p>
+
+<p>И последний опыт с SD-картами (но не вообще) — это втыкание кард-ридера в порт USB 2.0 (порт на корпусе, выведен с материнской платы,
+хаб у меня порты 2.0 не содержит):</p>
+
+<table class="wide" style="max-width:640px;">
+<tr>
+<th rowspan="2"></th>
+<th colspan="2" align="center">Transcend TS-RDF8K</th>
+<th colspan="2" align="center">NoName с AliExpress</th>
+</tr>
+<tr>
+<th align="right">Запись</th>
+<th align="right">Чтение</th>
+<th align="right">Запись</th>
+<th align="right">Чтение</th>
+</tr>
+<tr>
+<td>Transcend (рабочая)</td>
+<td align="right">19</td>
+<td align="right">33</td>
+<td align="right">19</td>
+<td align="right">33</td>
+</tr>
+<tr>
+<td>Kingston (запасная)</td>
+<td align="right">12</td>
+<td align="right">33</td>
+<td align="right">12</td>
+<td align="right">33</td>
+</tr>
+</table>
+
+<p>Здесь мы отчетливо видим, что скорость чтения ограничена именно портом. Причем не стандартом, который для USB 2.0 High-Speed довольно
+размыт, а конкретным портом на конкретной материнской плате (вписавшимся примерно в середину стандарта). Интересно другое: при том,
+что по записи в скорость порта вписываются обе карты, более медленная замедлилась сильнее. Возможно, дело в том, что любая запись
+подразумевает обратную связь, и для более медленной карты она почему-то (при одинаковых-то объемах данных) дает больший вклад… Странно.</p>
+
+<p>Но в целом вывод такой: для SD-карт стандарта UHS-I попадание в порт USB 2.0 неприятно, но не критично. Это, конечно, не повод покупать
+устаревшие кард-ридеры, но если вдруг придется воспользоваться, можно не паниковать.</p>
+
+<p>Разницу между NoName и брендом отразить не удалось.</p>
+
+<h3 id="внешние-носители">
+<a class="anchor" href="#%D0%B2%D0%BD%D0%B5%D1%88%D0%BD%D0%B8%D0%B5-%D0%BD%D0%BE%D1%81%D0%B8%D1%82%D0%B5%D0%BB%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Внешние носители</h3>
+
+<p>Оба внешних диска я проверял исключительно в работе через USB. Скорость через WiFi зависит от слишком многих факторов, которые
+я теоретически могу, но практически не хочу, проконтролировать. Начнем с того, что у меня ловится несколько десятков (больше двух)
+соседских сетей, и некоторые показывают уровень сигнала сильно больше, чем мой домашний роутер и оба диска… Поэтому табличка будет одна:</p>
+
+<table class="wide" style="max-width:640px;">
+<tr>
+<th></th>
+<th align="right">Запись</th>
+<th align="right">Чтение</th>
+</tr>
+<tr>
+<td>Western Digital WD Blue Mobile</td>
+<td align="right">36</td>
+<td align="right">111</td>
+</tr>
+<tr>
+<td>ORICO MagiBox Multi-function Private Cloud Storage</td>
+<td align="right">16</td>
+<td align="right">137</td>
+</tr>
+</table>
+
+<p>И вот тут я был несколько удивлен несоответствием. И по всем вариантам прогнал тест еще несколько раз. Нет, результаты быстро стабилизируются
+с малым разбросом именно к этим величинам. Судя по всему, загадочная прошивка ORICO просто отдает по USB доступ к винчестеру, который,
+в свою очередь, сделан по технологиям близким к моему архивному (того же производителя), небольшая потеря скорости объясняется большим
+количеством промежуточных инстанций. Но вот очень хорошая скорость записи и ужасная, для винчестера, скорость чтения у диска WD как-то
+не очень объясняются. Возможно, дело в том, что он и при подключении по USB продолжает работать как самостоятельный компьютер и все прогоняет
+софтверно… Это лишь мое предположение, не знаю.</p>
+
+<p>К сожалению, аналогов этих двух девайсов в продаже нет. Когда-то что-то подобное пытался выпускать Seagate, но сейчас нет. И это очень грустно.</p>
+
+<p style="text-align: left"><strong>ФЛЭШКА!!!111<br>… или та фигня, которая болтается вместе с ключами<br>… или Transcend JetFlash 710S 64Gb USB 3.1 (90/24 Mb/s), на минуточку</strong></p>
+
+<p>Я ее потестил в родном гнезде USB 3.0 и в USB 2.0:</p>
+
+<table class="wide" style="max-width:640px;">
+<tr>
+<th></th>
+<th align="right">Запись</th>
+<th align="right">Чтение</th>
+</tr>
+<tr>
+<td>USB 3.0</td>
+<td align="right">13</td>
+<td align="right">105</td>
+</tr>
+<tr>
+<td>USB 2.0</td>
+<td align="right">14</td>
+<td align="right">25</td>
+</tr>
+</table>
+
+<p>Причем, если убрать округление, то видно, что она стабильно на 2.0 пишет лучше, чем на 3.0. При этом читает на 2.0 она сильно хуже,
+чем карты в кард-ридерах, а на 3.0 лучше… Сие мне настолько странно, что я даже не буду пытаться строить предположения. Ну и, конечно, она,
+как и все прочие, на записи недотягивает до заявленного, а на чтении перекрывает.</p>
+
+<h2 id="выводы">
+<a class="anchor" href="#%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Выводы</h2>
+
+<ul>
+  <li>
+    <p>По дискам: теоретически я еще могу выиграть по скорости записи. Реально для следующих скоростей надо апгрейдить всю систему.
+Впрочем, меня и нынешнее состояние устраивает.</p>
+  </li>
+  <li>
+    <p>По периферии: хаб не влияет на скорость USB (для большого набора мелких запросов это может быть и не так), а китайский noname
+кард-ридер работает не медленней брендового (это ничего не говорит о надежности, гарантии и т.д.).</p>
+  </li>
+  <li>
+    <p>По картам: на соответствие стандарту можно ориентироваться, на маркетинговые заявления — нет.</p>
+  </li>
+  <li>
+    <p>По внешним HDD… Ну, если бы было из чего выбирать… А пока см. выше.</p>
+  </li>
+  <li>
+    <p>Флэшки не нужны. Но совсем маленькая пусть висит.</p>
+  </li>
+</ul>
+
+<p><strong>upd:</strong> <a href="/2020/12/cardreader.html" title="Встраиваемый кардридер с AliExpress">Еще одна железка</a>.</p>
+
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2013.10.09 |</span>
+            <a href="/2013/10/eval-vs-exec-2.html" title="Или снова об оптимизации скриптовых языков.">Возвращаясь к размышлизму...</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-biohazard" href="/tech/programming/abs/" title="Абстрактные размышления о программировании в целом">Абстракции</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.07.17 |</span>
+            <a href="/2021/07/gpx-exif-tools.html" title="Запись GPX и корректная его обработка">Как я ставлю геометки к фотографиям</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2015.03.31 |</span>
+            <a href="/2015/03/druby.html" title="Введение в технологию dRuby. Прозрачный RPC для взаимодействия Ruby-программ.">Распределенный Ruby</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#способ-тестирования">Способ тестирования</a></li>
+<li class="toc-entry toc-h2"><a href="#список-устройств">Список устройств</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#системный-блок">Системный блок</a></li>
+<li class="toc-entry toc-h3"><a href="#периферия">Периферия</a></li>
+<li class="toc-entry toc-h3"><a href="#внутренние-накопители">Внутренние накопители</a></li>
+<li class="toc-entry toc-h3"><a href="#карты-sdxc">Карты SDXC</a></li>
+<li class="toc-entry toc-h3"><a href="#внешние-накопители">Внешние накопители</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#испытания">Испытания</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#предел-чувствительности">Предел чувствительности</a></li>
+<li class="toc-entry toc-h3"><a href="#внутренние-накопители-1">Внутренние накопители</a></li>
+<li class="toc-entry toc-h3"><a href="#sd-карты">SD-карты</a></li>
+<li class="toc-entry toc-h3"><a href="#внешние-носители">Внешние носители</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#выводы">Выводы</a></li>
+</ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/2022/11/storages.html" title="Тест носителей информации на новой платформе">Очередной тест носителей</a></li><li class="fa-icon-li-file-alt"><a href="/2022/10/harddybr.html" title="Некоторые заметки после обновления компьютера">Большой дыбр по железу</a></li><li class="fa-icon-li-file-alt"><a href="/2020/12/cardreader.html" title="Встраиваемый кардридер с AliExpress">Новая железяка</a></li></ul>
+    </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Пингвин-фотолюбитель: 2. Командная строка и пакетная обработка | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Пингвин-фотолюбитель: 2. Командная строка и пакетная обработка" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Работа с фотографиями из командной строки" />
+<meta property="og:description" content="Работа с фотографиями из командной строки" />
+<link rel="canonical" href="https://shikhalev.github.io/2016/06/a-commandline.html" />
+<meta property="og:url" content="https://shikhalev.github.io/2016/06/a-commandline.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/2016/06/11/preamble/penguin-640x640-3989x2082-0-296.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-06-15T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/img/2016/06/11/preamble/penguin-640x640-3989x2082-0-296.webp" />
+<meta property="twitter:title" content="Пингвин-фотолюбитель: 2. Командная строка и пакетная обработка" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2016-06-15T00:00:00+00:00","datePublished":"2016-06-15T00:00:00+00:00","description":"Работа с фотографиями из командной строки","headline":"Пингвин-фотолюбитель: 2. Командная строка и пакетная обработка","image":"https://shikhalev.github.io/img/2016/06/11/preamble/penguin-640x640-3989x2082-0-296.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/2016/06/a-commandline.html"},"url":"https://shikhalev.github.io/2016/06/a-commandline.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-linux" href="/photo/processing/penguin/" title="Цикл постов 2016 года об обработке фотографий под Linux">Пингвин-фотолюбитель</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">Пингвин-фотолюбитель: 2. Командная строка и пакетная обработка</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fa-commandline.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fa-commandline.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fa-commandline.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fa-commandline.html&text=%D0%9F%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D0%BD-%D1%84%D0%BE%D1%82%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%3A+2.%C2%A0%D0%9A%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%BD%D0%B0%D1%8F+%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0+%D0%B8+%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%BD%D0%B0%D1%8F+%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%9F%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D0%BD-%D1%84%D0%BE%D1%82%D0%BE%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%3A+2.%C2%A0%D0%9A%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%BD%D0%B0%D1%8F+%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0+%D0%B8+%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%BD%D0%B0%D1%8F+%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0&url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F06%2Fa-commandline.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2016-06-15T00:00:00+00:00" itemprop="datePublished">2016.06.15
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#EXIF">EXIF</a>​<a class="tag" href="/tags#ImageMagick">ImageMagick</a>​<a class="tag" href="/tags#Linux">Linux</a>​<a class="tag" href="/tags#bash">bash</a>​<a class="tag" href="/tags#exiftool">exiftool</a>​<a class="tag" href="/tags#командная строка">командная строка</a></aside></header><div itemprop="articleBody">
+  <figure class="__figure __implicit_figure __right logo" style="max-width:320px;shape-outside:url(/img/2016/06/15/a-commandline/kdpv-320.webp);"><a href="/img/2016/06/15/a-commandline/kdpv-fhd.webp" class="__image_link"><img src="/img/2016/06/15/a-commandline/kdpv-320.webp" class="__image" style="shape-outside:url(/img/2016/06/15/a-commandline/kdpv-320.webp);" alt="Картинка стырена где-то в интернетах, найдена по ключевому слову „imagemagick“" title="Картинка стырена где-то в интернетах, найдена по ключевому слову „imagemagick“"></a></figure>
+
+<p>Коротко о главном: главный обработчик изображений из командной строки, равно как и в пакетном режиме, у нас
+по прежнему пакет <strong><a href="http://www.imagemagick.org/" class="img-icon-imagemagick">ImageMagick</a></strong>. КДПВ справа взята поиском по его названию в «картинках Google»,
+помимо демонстрации некоторых возможностей там и пингвин присутствует.</p>
+
+<p>Кроме того, нам понадобятся минимальные знания оболочки <strong><a href="http://www.gnu.org/software/bash/">GNU Bash</a></strong> и замечательная утилита для работы
+с данными EXIF (Exchangeable Image File For­mat — стандарт, позволяющий добавлять к изображениям метаданные,
+в пер­вую очередь, когда и чем снято) — <strong><a href="http://exiftool.sourceforge.net/">exiftool</a></strong>.</p>
+
+<p>С одной стороны, расписывать все возможности ImageMagick и ExifTool в подробностях — никакого терпения не хватит.
+С другой — у меня есть парочка примеров, собственноручно наскриптованных, но не описанных… Поэтому в дан­ном посте
+я просто разберу эти примеры, а если нужно что-то дополнительно, прошу в комментарии.</p>
+
+<!--more-->
+
+<p>На свежем Linux Mint потребуется установить пакеты «libimage-exiftool-perl» и «imagemagick». Версии, наличествующие
+в репозитории, не самые последние, но лично меня вполне устраивают.</p>
+
+<p>Первый пример можно видеть в посте <strong><a href="/2016/01/exiftool.html">«exiftool — раскидываем raw-файлы по дате»</a></strong>. Там два однострочника,
+которые особого комментария и не требуют. Для порядка поясню, что:</p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">-r</code>, как и во многих других утилитах, указывает реверсивно обрабатывать вложенные каталоги;</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">-FileName&lt;</code> (да, вот такой <em>оригинальный</em> синтаксис) определяет шаблон имени файла;</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">-d</code> — задает формат даты;</li>
+  <li>а <code class="language-plaintext highlighter-rouge">-ext CR2 .</code> велит собирать все файлы с таким расширением, начиная с текущего каталога.</li>
+</ul>
+
+<p>Также стоит заметить, что указанный пример именно <em>перемещает</em> файлы. Чтобы их <em>скопировать</em>, требуется некоторое
+<a href="http://exiftool.sourceforge.net/filename.html">шаманство с ключиком <code class="language-plaintext highlighter-rouge">-o</code></a>. Вообще, exiftool написан на Perl, и это чувствуется…</p>
+
+<p>Второй пример поинтересней. Я его до сих пор не описывал, а вот на GitHub выложил: <strong><a href="https://github.com/shikhalev/vkify/blob/master/vkify">vkify — утилита для подгонки фото
+под заданный размер и наложения надписи о метаданных</a></strong>. Как можно догадаться, в первую очередь предполагается
+выкладывание фоточек в <s>б-го­мерз­кий</s> всеми любимый ВКонтактик, но это совершенно необязательно.</p>
+
+<p>На строках до <a href="https://github.com/shikhalev/vkify/blob/master/vkify#L40">40-й</a> останавливаться не буду, поскольку это Bash и только Bash, не имеющий прямого отношения к фото,
+равно как и на строках, начиная с <a href="https://github.com/shikhalev/vkify/blob/master/vkify#L74">74-й</a>. А вот между ними расположен интересующий нас скрипт.</p>
+
+<p>Из строк <a href="https://github.com/shikhalev/vkify/blob/master/vkify#L46-L55">46–55</a> мы узнаём, что exiftool имеет ключик <code class="language-plaintext highlighter-rouge">-p</code>, позволяющий просто вывести (print) строку, заполненную
+по шаблону данными EXIF:</p>
+
+<figure class="highlight">
+  <pre><code class="language-bash" data-lang="bash"><span class="nb">time</span><span class="o">=</span><span class="si">$(</span>exiftool <span class="nt">-d</span> <span class="s2">"</span><span class="nv">$TIME_FORMAT</span><span class="s2">"</span> <span class="nt">-p</span> <span class="s1">'${DateTimeOriginal}'</span> <span class="s2">"</span><span class="nv">$source</span><span class="s2">"</span><span class="si">)</span>
+<span class="nv">camera</span><span class="o">=</span><span class="si">$(</span>exiftool <span class="nt">-p</span> <span class="s1">'${Model}'</span> <span class="s2">"</span><span class="nv">$source</span><span class="s2">"</span><span class="si">)</span>
+<span class="nv">lens</span><span class="o">=</span><span class="si">$(</span>exiftool <span class="nt">-p</span> <span class="s1">'${LensID}'</span> <span class="s2">"</span><span class="nv">$source</span><span class="s2">"</span><span class="si">)</span>
+<span class="nv">info</span><span class="o">=</span><span class="si">$(</span>exiftool <span class="nt">-p</span> <span class="s1">'${FocalLength#}mm, ${ShutterSpeed}s, f/${Aperture}, ISO ${ISO}'</span> <span class="s2">"</span><span class="nv">$source</span><span class="s2">"</span><span class="si">)</span>
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-z</span> <span class="s2">"</span><span class="nv">$lens</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+  </span><span class="nv">info</span><span class="o">=</span><span class="s2">"</span><span class="nv">$lens</span><span class="se">\n</span><span class="nv">$info</span><span class="s2">"</span>
+<span class="k">fi</span><span class="p">;</span>
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-z</span> <span class="s2">"</span><span class="nv">$camera</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+  </span><span class="nv">info</span><span class="o">=</span><span class="s2">"</span><span class="nv">$camera</span><span class="se">\n</span><span class="nv">$info</span><span class="s2">"</span>
+<span class="k">fi</span><span class="p">;</span></code></pre>
+</figure>
+
+<p>А еще нам становится известно, что информация об объективе и о камере имеется не всегда. Обычно это характерно для фото с мобильных.</p>
+
+<p><code class="language-plaintext highlighter-rouge">${FocalLength#}</code> вместо <code class="language-plaintext highlighter-rouge">${FocalLength}</code>, используется, чтобы получить «<code class="language-plaintext highlighter-rouge">50</code>» вместо «<code class="language-plaintext highlighter-rouge">50.0 mm</code>» — в общем случае суффикс «<code class="language-plaintext highlighter-rouge">#</code>»
+нужен, чтобы получить числовое значение заданного тега вместо его описания.</p>
+
+<p>Таким образом мы получили две строки: одна — с датой/временем, а другая — с техническими характеристиками съемки. Я их разделил,
+чтобы выводить разным шрифтом — дата/время крупнее.</p>
+
+<p>Далее. Строки <a href="https://github.com/shikhalev/vkify/blob/master/vkify#L61-L62">61–62</a> формируют черный прямоугольник с датой и временем, а <a href="https://github.com/shikhalev/vkify/blob/master/vkify#L63-L64">63–64</a> — с прочей инфой соответственно.
+Они однотипны, рассмотрим одну пару:</p>
+
+<figure class="highlight">
+  <pre><code class="language-bash" data-lang="bash">convert <span class="nt">-background</span> black <span class="nt">-fill</span> white <span class="nv">$TIME_FONT</span> <span class="nt">-gravity</span> east label:<span class="s2">"</span><span class="nv">$time</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$time_png</span><span class="s2">"</span>
+mogrify <span class="nt">-border</span> 2 <span class="nt">-bordercolor</span> black <span class="s2">"</span><span class="nv">$time_png</span><span class="s2">"</span></code></pre>
+</figure>
+
+<p><code class="language-plaintext highlighter-rouge">convert</code> создает новый файл, а <code class="language-plaintext highlighter-rouge">mogrify</code> изменяет уже существующий (в данном случае всего лишь добавляет рамку).</p>
+
+<p>Переменная <code class="language-plaintext highlighter-rouge">$TIME_FONT</code> должна развернуться в параметры шрифта — по умолчанию там будет <code class="language-plaintext highlighter-rouge">'-pointsize 16'</code>, в настройках, которые
+я сам использую — <code class="language-plaintext highlighter-rouge">'-pointsize 16 -font ConsolaMono'</code>. Думаю, способ задания шрифта понятен.</p>
+
+<p>Ключи <code class="language-plaintext highlighter-rouge">-background</code>, <code class="language-plaintext highlighter-rouge">-fill</code> и <code class="language-plaintext highlighter-rouge">-bordercolor</code> задают цвета фона, текста и рамки соотвественно; <code class="language-plaintext highlighter-rouge">-border</code> — толщина рамки; <code class="language-plaintext highlighter-rouge">-gravity</code> —
+выравнивание (<code class="language-plaintext highlighter-rouge">east</code> означает «вправо», для текста — по правому краю, для даты/времени это неважно, а вот другая информация
+у нас многострочная).</p>
+
+<p>Выражение <code class="language-plaintext highlighter-rouge">label:"$time"</code> стоит на месте имени входного файла. Ну, собственно, это входные данные для преобразования и есть.</p>
+
+<p>Строки <a href="https://github.com/shikhalev/vkify/blob/master/vkify#L65-L66">65–66</a> формируют надпись окончательно:</p>
+
+<figure class="highlight">
+  <pre><code class="language-bash" data-lang="bash">convert <span class="nt">-background</span> black <span class="nt">-gravity</span> east <span class="nt">-append</span> <span class="s2">"</span><span class="nv">$time_png</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$info_png</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$stamp_png</span><span class="s2">"</span>
+mogrify <span class="nt">-border</span> 10 <span class="nt">-bordercolor</span> black <span class="nt">-alpha</span> <span class="nb">set</span> <span class="nt">-channel</span> A <span class="nt">-evaluate</span> <span class="nb">set </span>30% <span class="s2">"</span><span class="nv">$stamp_png</span><span class="s2">"</span></code></pre>
+</figure>
+
+<p>Ключ <code class="language-plaintext highlighter-rouge">-append</code> склеивает две картинки в одну с учетом выравнивания и заливает недостающие области цветом фона.</p>
+
+<p>Выражение «<code class="language-plaintext highlighter-rouge">-alpha set -channel A -evaluate set 30%</code>» не очень-то осмысленно разбивается по отдельным ключам, а в со­во­куп­нос­ти
+означает: добавить альфа-канал и установить значения его пикселей в 30%.</p>
+
+<div class="note">
+  <p><em>Может сложиться впечатление, что ImageMagick тоже написан на Perl’е, или еще на какой разновидности BrainFuck’а. Но это не так,
+просто он очень универсален и потому сложен.</em></p>
+</div>
+
+<p>И венчает обработку строка <a href="https://github.com/shikhalev/vkify/blob/master/vkify#L68">68</a>, которая сама по себе — целый скрипт:</p>
+
+<figure class="highlight">
+  <pre><code class="language-bash" data-lang="bash">convert <span class="se">\(</span> <span class="nt">-resize</span> <span class="s2">"</span><span class="nv">$OUTPUT_SIZE</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$source</span><span class="s2">"</span> <span class="se">\)</span> <span class="nt">-gravity</span> southeast <span class="s2">"</span><span class="nv">$stamp_png</span><span class="s2">"</span> <span class="nt">-geometry</span> +20+20 <span class="nt">-composite</span> <span class="nt">-strip</span> <span class="nt">-quality</span> 80 <span class="s2">"</span><span class="nv">$OUTPUT_PREFIX$name</span><span class="s2">.jpg"</span></code></pre>
+</figure>
+
+<p>Внутри скобок, как можно догадаться, мы банально изменяем размер исходного файла (<code class="language-plaintext highlighter-rouge">-resize</code>). Затем накладываем (<code class="language-plaintext highlighter-rouge">-composite</code>)
+подготовленный штамп в «юго-восточный» угол (<code class="language-plaintext highlighter-rouge">-gravity</code>) с отступами 20px от обеих сторон (<code class="language-plaintext highlighter-rouge">-geometry</code>). Далее вырезаем из получившегося
+данные EXIF (<code class="language-plaintext highlighter-rouge">-strip</code>) и задаем качество (<code class="language-plaintext highlighter-rouge">-quality</code>) конечного файла в 80 условных единиц (читай — процентов, поскольку задается
+оно в диапазоне 1–100).</p>
+
+<p>В итоге мы получаем возможность в пакетном режиме получать такое:</p>
+
+<figure class="__figure __implicit_figure __center" style="max-width:800px;"><a href="/img/2016/06/15/a-commandline/IMG_8638-fhd.webp" class="__image_link"><img src="/img/2016/06/15/a-commandline/IMG_8638-800.webp" class="__image"></a></figure>
+
+<p>Тонирование и кадрирование я до того сделал в Darktable, см. <a href="/2016/06/raw.html">предыдущий пост</a>. Почему-то ImageMagick на моих TIFF, полученных
+из Darktable, выдает кучу предупреждений типа «Unknown field…», но на результат они не влияют.</p>
+
+<p>Как ImageMagick, так и ExifTool — инструменты довольно навороченные. В их параметрах можно комбинировать множество
+различных ключей и выражений. Вышеиспользованные получены вдумчивым курением официальной документации
+и многочисленными <s>бесчеловечными</s> экспериментами. Пытайтесь повторить это дома.</p>
+
+<p>Что касается аналогов, можно присмотреться к <strong><a href="http://www.exiv2.org/">Exiv2</a></strong> и <strong><a href="http://www.sentex.net/~mwandel/jhead/">jhead</a></strong> для работы с EXIF, хотя мне они как-то
+не глянулись. А для ImageMagick есть его клон и форк — <strong><a href="http://www.graphicsmagick.org/">GraphicsMagick</a></strong>, который во многом превосходит оригинал.</p>
+
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.04.13 |</span>
+            <a href="/2021/04/feeder-ps.html" title="Что не получилось в прошедшем кормушечном сезоне, но есть шанс сделать в следующем">Кормушка, постскриптум</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2023.07.28 |</span>
+            <a href="/2023/07/nature-photo.html" title="Как стоит и как не стоит обрабатывать фотографии наблюдений живой природы">Обработка фото наблюдений</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.07.31 |</span>
+            <a href="/2021/07/walks.html" title="Пара (тройка) очередных выходов в лес с камерой">Еще прогулки</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-calendar-alt" href="/life/dybr/" title="Просто кусочки повседневности">Дыбр</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-linux"><a href="/photo/processing/penguin/" title="Цикл постов 2016 года об обработке фотографий под Linux">Пингвин-фотолюбитель</a></li></ul>
+    </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/photo.xml" title="Тексты о фотографии">О фото</a></li><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

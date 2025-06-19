@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>О железе, дыбровое… | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="О железе, дыбровое…" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Дыбр про хард. Какова конфигурация моего компьютера и почему." />
+<meta property="og:description" content="Дыбр про хард. Какова конфигурация моего компьютера и почему." />
+<link rel="canonical" href="https://shikhalev.github.io/2015/03/harddybr.html" />
+<meta property="og:url" content="https://shikhalev.github.io/2015/03/harddybr.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/2015/03/27/harddybr/comp-640x640-600x313-0-68.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-03-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/img/2015/03/27/harddybr/comp-640x640-600x313-0-68.webp" />
+<meta property="twitter:title" content="О железе, дыбровое…" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2015-03-27T00:00:00+00:00","datePublished":"2015-03-27T00:00:00+00:00","description":"Дыбр про хард. Какова конфигурация моего компьютера и почему.","headline":"О железе, дыбровое…","image":"https://shikhalev.github.io/img/2015/03/27/harddybr/comp-640x640-600x313-0-68.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/2015/03/harddybr.html"},"url":"https://shikhalev.github.io/2015/03/harddybr.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a>​<a class="fa-icon-calendar-alt" href="/life/dybr/" title="Просто кусочки повседневности">Дыбр</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">О железе, дыбровое...</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2015%2F03%2Fharddybr.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2015%2F03%2Fharddybr.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2015%2F03%2Fharddybr.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2015%2F03%2Fharddybr.html&text=%D0%9E+%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%B5%2C+%D0%B4%D1%8B%D0%B1%D1%80%D0%BE%D0%B2%D0%BE%D0%B5...">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%9E+%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%B5%2C+%D0%B4%D1%8B%D0%B1%D1%80%D0%BE%D0%B2%D0%BE%D0%B5...&url=https%3A%2F%2Fshikhalev.github.io%2F2015%2F03%2Fharddybr.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2015-03-27T00:00:00+00:00" itemprop="datePublished">2015.03.27
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#Linux">Linux</a>​<a class="tag" href="/tags#грабли">грабли</a>​<a class="tag" href="/tags#многопоточность">многопоточность</a>​<a class="tag" href="/tags#размышлизмы">размышлизмы</a>​<a class="tag" href="/tags#совместимость">совместимость</a></aside></header><div itemprop="articleBody">
+  <figure class="__figure __implicit_figure __right" style="max-width:320px;margin-bottom:-5px;"><a href="/img/2015/03/27/harddybr/comp-fhd.webp" class="__image_link"><img src="/img/2015/03/27/harddybr/comp-320.webp" class="__image" alt="Фото компьютера в сборе" title="Фото компьютера в сборе"></a></figure>
+
+<p>Моему новому компьютеру скоро полгода, можно, пожалуй, уже и похвастаться, не опасаясь, что сразу после этого что-то
+сломается… Чтобы этот пост имел хоть какую-то информационную ценность, я постараюсь пояснить выбор комплектующих.
+Сразу замечу, что речь не идет о том, что какая-то модель или какой-то производитель лучше аналогов — речь идет сугубо
+о <em>моем</em> мнении касательно <em>моих</em> потребностей. Для других задач и/или в других условиях я бы мог выбрать и что-то другое.</p>
+
+<p>В общем, если кому интересен мой хардодыбр — добро пожаловать под кат. Пришедшим за объективной информацией будет не интересно.</p>
+
+<!--more-->
+
+<p>Предыдущий мой компьютер проработал 8 лет и по прежнему находится в рабочем состоянии, память в процессе эксплуатации
+была добавлена, а изначальный винчестер начал вести себя подозрительно и был отправлен на вторые роли, тем более, что
+дискового пространства докупить тоже не мешало… На вторых же ролях он никаких признаков сбоев не проявил. Я это все
+написал, чтоб было понятно — рабочий компьютер я предпочитаю покупать всерьез и надолго, так что главные требования:
+надежность и некоторый «запас» по мощности. Впрочем, «запас» относится только к основным компонентам, тогда как то, что
+можно в дальнейшем докупить, можно и докупить…</p>
+
+<p>Итак, поехали. Ссылки я буду давать на сайт продавца, так мне удобнее. Рекламу они мне не заказывали, но в данном случае
+мне не жалко — цены, качество и сервис меня устраивают.</p>
+
+<h2 id="cpu">
+<a class="anchor" href="#cpu" aria-hidden="true"><span class="octicon octicon-link"></span></a>CPU</h2>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:240px;margin-top: -5px;shape-outside:url(/img/2015/03/27/harddybr/amd-fx-8350-240.webp);"><a href="http://e-burg.nix.ru/autocatalog/amd/CPU_AMD_FX8350_BOX_Black_Edition_FD8350F_4.0_GHz_8core_125W_5200_MHz_Socket_AM3_146976.html"><img src="/img/2015/03/27/harddybr/amd-fx-8350-240.webp" class="__image" style="shape-outside:url(/img/2015/03/27/harddybr/amd-fx-8350-240.webp);" alt="AMD FX-8350 BOX" title="AMD FX-8350 BOX"></a></figure>
+
+<p>Начал выбор я с процессора… Быстрое сравнение цен показало, что мне подходит исключительно AMD. Несмотря на то, что
+на многих задачах он заметно отстает от Intel со сравнимыми частотами и работает вровень с соответствующими по цене, это
+оказались те задачи, которые меня мало интересуют — графика, игры и прочая мультимедия. Я же в основном загружаю процессор
+разнообразной компиляцией, парсингом и, главное, пачкой виртуалок в дополнение к безобразно объевшемуся браузеру.
+Скорострельность на базовых операциях у AMD и Intel примерно соответствует частоте, и в результате даже без учета
+«ядерности» моему <strong><a href="http://e-burg.nix.ru/autocatalog/amd/CPU_AMD_FX8350_BOX_Black_Edition_FD8350F_4.0_GHz_8core_125W_5200_MHz_Socket_AM3_146976.html">AMD FX-8350</a></strong> соответствует Intel Core i7-3770, который в пол­то­ра-два раза дороже, а при активном
+использовании виртуалок и прочей многозадачности нужно смотреть уже более дорогие модели.</p>
+
+<p class="note italic">Если вдруг меня читают геймеры: сам не тестировал, но почитав множество обзоров и сравнений, могу сделать вывод,
+что для серьезных игр процессоры Intel таки предпочтительней.</p>
+
+<p>Почему именно FX-8350? Тут я руководствуюсь общим принципом — брать «предпоследний писк». Впрочем, если бы я покупал сейчас,
+то, возможно, взял бы серию 9xxx, но на тот момент разница в цене была заметней и себя не оправдывала. Да, впрочем, и сейчас,
+если учесть необходимое охлаждение…</p>
+
+<p>Кстати, об охлаждении. Я предпочитаю (и готов рекомендовать всем, кто не занимается разгоном) боксовые решения. Боксовый кулер
+намного дешевле, чем отдельно приобретаемый, который будет <em>гарантированно</em> достаточен. В этот раз, правда, я чуть было не изменил
+свое мнение, но быстро выяснилось, что проблема не в кулере процессора, а в движении воздуха внутри корпуса, о чем будет ниже.
+На данный момент с температурой процессора все в порядке: от примерно комнатной температуры при простое, через ~30°C при обычной
+работе (браузер, тексты, уведомления всякие скачут), до 65°C при полной нагрузке (под 100% на каждом ядре).</p>
+
+<p class="note italic">Впрочем, должен заметить, что при нагрузке кулер довольно заметно шумит. Дорогой отдельный будет потише, если этим озаботиться.
+Однако я сомневаюсь, что тот, кто заботится именно о бесшумном компьютере, вообще будет покупать столь горячий «камень».</p>
+
+<h2 id="motherboard">
+<a class="anchor" href="#motherboard" aria-hidden="true"><span class="octicon octicon-link"></span></a>Motherboard</h2>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:240px;margin-top: -5px;shape-outside:url(/img/2015/03/27/harddybr/gigabyte-ga-990fxa-ud5-240.webp);"><a href="http://e-burg.nix.ru/autocatalog/motherboards_gigabyte/GigaByte_GA990FXAUD5_rev3.0_SocketAM3_AMD_990FX_5xPCIE_1394_SATA_RAID_4DDRIII_155099.html"><img src="/img/2015/03/27/harddybr/gigabyte-ga-990fxa-ud5-240.webp" class="__image" style="shape-outside:url(/img/2015/03/27/harddybr/gigabyte-ga-990fxa-ud5-240.webp);" alt="GigaByte GA-990FXA-UD5 rev3.0" title="GigaByte GA-990FXA-UD5 rev3.0"></a></figure>
+
+<p>С материнской платой, когда процессор уже выбран, попроще: берем список совместимых (в т.ч. поддерживающих все фичи процессора,
+в данном случае это важно) и выбираем что покруче. Покруче — это на чипсете AMD 990FX, что уже заметно ограничивает выбор. Далее
+количество SATA III, USB 3.0 и слотов PCI-e уже двигают к правильному выбору, а окончательно в нем убедиться позволяют отзывы
+в интернете… Дело в том, что 990FX — чипсет весьма горячий, и на многие материнки с ним народ жалуется: перегреваются, встают,
+выходят из строя… В общем, мой выбор — <strong><a href="http://e-burg.nix.ru/autocatalog/motherboards_gigabyte/GigaByte_GA990FXAUD5_rev3.0_SocketAM3_AMD_990FX_5xPCIE_1394_SATA_RAID_4DDRIII_155099.html">GigaByte GA-990FXA-UD5 rev3.0</a></strong>.</p>
+
+<p class="note italic">Чипсет реально горячий. Штатных гигабайтовских радиаторов вполне хватает, однако хорошим движением воздуха внутри корпуса пренебречь
+никак не получится.</p>
+
+<p>Отдельный бонус данной материнки — так называемый Dual BIOS: режим UEFI опционален, более того, имеется возможность гибридного режима.
+Не то, чтобы это было критично, но для линуксоидов установку системы несколько упрощает.</p>
+
+<h2 id="память">
+<a class="anchor" href="#%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Память</h2>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:240px;margin-top: -5px;shape-outside:url(/img/2015/03/27/harddybr/kingston-hyperx-fury-240.webp);"><a href="http://e-burg.nix.ru/autocatalog/memory_modules_kingston/Kingston_HyperX_Fury_HX318C10FRK2_16_DDRIII_16Gb_8Gb_PC315000_CL10_185141.html"><img src="/img/2015/03/27/harddybr/kingston-hyperx-fury-240.webp" class="__image" style="shape-outside:url(/img/2015/03/27/harddybr/kingston-hyperx-fury-240.webp);" alt="Kingston HyperX Fury &lt;HX318C10FRK2/16&gt;" title="Kingston HyperX Fury &lt;HX318C10FRK2/16&gt;"></a></figure>
+
+<p>Память должна опять же поддерживать максимум того, что предлагает ей процессор. А вот более — необязательно: апгрейд процессора
+вряд ли состоится раньше апгрейда памяти. Количество же определяется материнкой, как в штуках, так и в гигабайтах. Ну, еще репутация
+производителя имеет значение.</p>
+
+<p>Таким образом я взял две пары <strong><a href="http://e-burg.nix.ru/autocatalog/memory_modules_kingston/Kingston_HyperX_Fury_HX318C10FRK2_16_DDRIII_16Gb_8Gb_PC315000_CL10_185141.html">Kingston HyperX Fury &lt;HX318C10FRK2/16&gt; (красненьких)</a></strong> — всего 32Gb в четырех планках.</p>
+
+<p class="note italic">Честно говоря, в памяти я не особо разбираюсь — не исключено, что можно было взять чего и подешевле и не хуже… А может, и нет.</p>
+
+<h2 id="диски">
+<a class="anchor" href="#%D0%B4%D0%B8%D1%81%D0%BA%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Диски</h2>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:200px;margin-top: -5px;shape-outside:url(/img/2015/03/27/harddybr/seagate-st2000-200.webp);"><a href="http://e-burg.nix.ru/autocatalog/hdd_seagate/HDD_Tb_SATA_6Gb_Seagate_Barracuda_ST2000DM001_3.5_126690.html"><img src="/img/2015/03/27/harddybr/seagate-st2000-200.webp" class="__image" style="shape-outside:url(/img/2015/03/27/harddybr/seagate-st2000-200.webp);" alt="Seagate Barracuda ‹ST2000DM001&amp;›" title="Seagate Barracuda ‹ST2000DM001&amp;›"></a></figure>
+
+<p>Именно так, во множественном числе. Под файлопомойку нужен винчестер, под систему и текущие проекты — SSD, ну и резак
+для оптических носителей не помешает, благо дешев.</p>
+
+<p>Итак, HDD. Тут понятно: SATA III, 7200 rpm… Что касается объема, то имеет смысл посмотреть удельную цену этого объема.
+На тот момент оптимум был на 2Tb, хотя 3Tb от него не особо отличались. Однако, есть данные, что трехгиговые Seagate Barracuda
+намного менее надежны, чем двухгиговые (к сожалению, сейчас не могу найти ссылку, вспомню — вставлю). Итог с учетом цены и моей
+слабости к Seagate — <strong><a href="http://e-burg.nix.ru/autocatalog/hdd_seagate/HDD_Tb_SATA_6Gb_Seagate_Barracuda_ST2000DM001_3.5_126690.html">Seagate Barracuda ‹ST2000DM001&amp;›</a></strong>.</p>
+
+<p class="note italic">Я в курсе, что у сигейтов вообще в последнее время репутация не очень. Но вот лично у меня получалось так, что на массово
+дохнущие серии WD я попадал, а на сигейты — ни разу.</p>
+
+<figure class="__figure __implicit_figure __left logo" style="max-width:200px;margin-top: -5px; margin-bottom: -5px;shape-outside:url(/img/2015/03/27/harddybr/crucial-ct256mx100-200.webp);"><a href="http://e-burg.nix.ru/autocatalog/ssd_crucial/SSD_SATA_6Gb_Crucial_MX100_CT256MX100SSD1_MLC_190722.html"><img src="/img/2015/03/27/harddybr/crucial-ct256mx100-200.webp" class="__image" style="shape-outside:url(/img/2015/03/27/harddybr/crucial-ct256mx100-200.webp);" alt="Crucial MX100 256Gb" title="Crucial MX100 256Gb"></a></figure>
+
+<p>О SSD много написать не получится — я в этом деле новичок. По некоторому размышлению решил, что <strong><a href="http://e-burg.nix.ru/autocatalog/ssd_crucial/SSD_SATA_6Gb_Crucial_MX100_CT256MX100SSD1_MLC_190722.html">Crucial MX100 256Gb</a></strong> —
+это дешево и сердито. И купил.</p>
+
+<p>Как показала практика, 256Gb вполне достаточно под систему, <code class="language-plaintext highlighter-rouge">$HOME</code> и текущие документы/проекты. Архивы, музыку/фильмы,
+а так же каталоги <code class="language-plaintext highlighter-rouge">/var</code> и <code class="language-plaintext highlighter-rouge">/usr/portage</code> я вынес на отдельные разделы HDD. <code class="language-plaintext highlighter-rouge">/tmp</code> и <code class="language-plaintext highlighter-rouge">/var/tmp</code> разместил в tmpfs —
+см. выше про количество оперативной памяти.</p>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:200px;margin-top: -5px;shape-outside:url(/img/2015/03/27/harddybr/teac-bd-w512gsa-200.webp);"><a href="http://e-burg.nix.ru/autocatalog/blu_ray/BDR_RE_DVD_RAM_DVD_TEAC_BDW512GSA_Black_SATA_178887.html"><img src="/img/2015/03/27/harddybr/teac-bd-w512gsa-200.webp" class="__image" style="shape-outside:url(/img/2015/03/27/harddybr/teac-bd-w512gsa-200.webp);" alt="TEAC BD-W512GSA" title="TEAC BD-W512GSA"></a></figure>
+
+<p>Вообще говоря, в наше время огромных винчестеров, быстрых интернетов и прочих всяких флешек, надобность в оптическом приводе
+сомнительна. С другой стороны — а почему бы и нет? К тому же с загрузочными флэшками регулярно случаются какие-то непонятки,
+тогда как загрузочные CD/DVD у меня еще ни разу проблем не вызывали. Взял один из самых дешевых с воз­мож­нос­тью записи Blu-ray —
+<strong><a href="http://e-burg.nix.ru/autocatalog/blu_ray/BDR_RE_DVD_RAM_DVD_TEAC_BDW512GSA_Black_SATA_178887.html">TEAC BD-W512GSA</a></strong>. Честно говоря, попользоваться успел только при установке системы. С System Rescue CD загрузиться
+позволяет вполне, остальные качества пока остаются неопробованными.</p>
+
+<h2 id="видеокарта">
+<a class="anchor" href="#%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE%D0%BA%D0%B0%D1%80%D1%82%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Видеокарта</h2>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:240px;margin-top: -5px;shape-outside:url(/img/2015/03/27/harddybr/gigabyte-gv-r545-240.webp);"><a href="http://e-burg.nix.ru/autocatalog/gigabyte/video/PCIE_DDR3_Gigabyte_GVR5451GI_DSub_DVI_HDMI_RADEON_HD5450_142401.html"><img src="/img/2015/03/27/harddybr/gigabyte-gv-r545-240.webp" class="__image" style="shape-outside:url(/img/2015/03/27/harddybr/gigabyte-gv-r545-240.webp);" alt="Gigabyte GV-R545-1GI" title="Gigabyte GV-R545-1GI"></a></figure>
+
+<p>По расположению этого раздела в посте уже можно догадаться, насколько она для меня важна. В общем, должна обслуживать FullHD
+монитор, в том числе показывать фильмы. Остальное вторично. На са­мом деле я вполне бы удовлетворился встроенной, но на материнках
+с чипсетом 990FX такого не водится (по крайней мере в пределах доступности не было). Раз уж в целом система у меня AMD-шная,
+и материнка от GigaByte, то и карточку я взял тех же производителей. Самую дешевую — <strong><a href="http://e-burg.nix.ru/autocatalog/gigabyte/video/PCIE_DDR3_Gigabyte_GVR5451GI_DSub_DVI_HDMI_RADEON_HD5450_142401.html">Gigabyte GV-R545-1GI на базе Radeon HD5450</a></strong>.</p>
+
+<p>Civilization V на ней идет, а большего мне и не требуется.</p>
+
+<p class="note italic">В обсуждениях раз от раза встречается вопрос: кому нужна такая дискретная видеокарта, слабее некоторых встроенных? Так вот —
+она нужна мне, поскольку материнок, которые я хочу, со встроенным видео не выпускают.</p>
+
+<h2 id="сеть">
+<a class="anchor" href="#%D1%81%D0%B5%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Сеть</h2>
+
+<figure class="__figure __implicit_figure __left logo" style="max-width:200px;shape-outside:url(/img/2015/03/27/harddybr/asus-pce-n15-200.webp);"><a href="http://e-burg.nix.ru/autocatalog/wireless_asus/ASUS_PCEN15_Wireless_PCIE_Adapter_802.11n_PCIEx1_300Mbps_124371.html"><img src="/img/2015/03/27/harddybr/asus-pce-n15-200.webp" class="__image" style="shape-outside:url(/img/2015/03/27/harddybr/asus-pce-n15-200.webp);" alt="ASUS PCE-N15" title="ASUS PCE-N15"></a></figure>
+
+<p><strong><a href="http://e-burg.nix.ru/autocatalog/wireless_asus/ASUS_PCEN15_Wireless_PCIE_Adapter_802.11n_PCIEx1_300Mbps_124371.html">ASUS PCE-N15</a></strong> — моя ошибка. Нет, к карте претензий нет, а вот к себе, за то, что не поинтересовался <em>всеми</em> характеристиками —
+очень даже. В общем, вайфай на чипах Realtek — он как бы есть под Linux, но на самом деле нет. Драйвера работают очень плохо и слетают
+на каждый чих. Теперь думаю, как бы ее сбыть виндузятникам.</p>
+
+<p>Поначалу пользовался старой USB-картой от D-Link, недавно только приобрел замену в тот же слот PCI-e 1x, о которой еще будет ниже.
+Старую карту я все-таки хочу оставить со старым компом, который, напоминаю, вполне рабочий, да и место уже выломанной заглушки
+в корпусе надо было чем-то занять.</p>
+
+<p class="note italic">В общем, мораль — на сегодняшний день для Linux WiFi-карты только на чипах Atheros! С их драйверами проблем нет.</p>
+
+<h2 id="корпус">
+<a class="anchor" href="#%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81" aria-hidden="true"><span class="octicon octicon-link"></span></a>Корпус</h2>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:160px;margin-top: -5px;shape-outside:url(/img/2015/03/27/harddybr/cooler-master-k380-160.webp);"><a href="http://e-burg.nix.ru/autocatalog/cases_coolermaster/Miditower_Cooler_Master_RCK380KWP500_K380_Black_500W_2x4_149913.html"><img src="/img/2015/03/27/harddybr/cooler-master-k380-160.webp" class="__image" style="shape-outside:url(/img/2015/03/27/harddybr/cooler-master-k380-160.webp);" alt="Cooler Master K380 ‹RC-K380-KWP500›" title="Cooler Master K380 ‹RC-K380-KWP500›"></a></figure>
+
+<p>Особых требований к корпусу я не предъявляю: соответствие форм-фактору материнки, достаточный блок питания, выходы на передней панели…
+А дальше эстетическое впечатление и мелкие «вкусности» начинают бороть жабу, которая смотрит на цену. В итоге —
+<strong><a href="http://e-burg.nix.ru/autocatalog/cases_coolermaster/Miditower_Cooler_Master_RCK380KWP500_K380_Black_500W_2x4_149913.html">Cooler Master K380 ‹RC-K380-KWP500›</a></strong>.</p>
+
+<p>Корпус в целом симпатичный и удобный, на блок питания нареканий тоже нет. Но есть нюанс. Как я уже говорил, система у меня весьма горячая,
+а в этом корпусе расположенный на передней панели снизу вентилятор гонит воздух прямо на расположенный снизу же блок питания, который
+отправляет его наружу. Без установки дополнительных вентиляторов вверху корпуса, как раз там, где греющиеся процессор и северный мост,
+движения воздуха практически нет. В итоге при открытой боковой крышке процессор грелся до 70–80°C, а при закрытой — доходил до 90°C и вырубался.
+Немного попаниковав, я снял крышку, остыл вместе с железом и отправился докупать корпусные вентиляторы.</p>
+
+<figure class="__figure __implicit_figure __left logo" style="max-width:160px;shape-outside:url(/img/2015/03/27/harddybr/cm-jetflo-120-160.webp);"><a href="http://e-burg.nix.ru/autocatalog/coolermaster/Cooler_Master_R4JFDP20PRR1_JetFlo_LED_120x120x25mm_1236_8002000_185410.html"><img src="/img/2015/03/27/harddybr/cm-jetflo-120-160.webp" class="__image" style="shape-outside:url(/img/2015/03/27/harddybr/cm-jetflo-120-160.webp);" alt="JetFlo 120 ‹R4-JFDP-20PR-R1›" title="JetFlo 120 ‹R4-JFDP-20PR-R1›"></a></figure>
+
+<figure class="__figure __implicit_figure __left logo" style="max-width:160px;shape-outside:url(/img/2015/03/27/harddybr/cm-superfan-120mm-su1-160.webp);"><a href="http://e-burg.nix.ru/autocatalog/coolermaster/Cooler_Master_R4S2B12AKGP_SuperFan_120mm_SU1_120x120x25mm_19.8_66795.html"><img src="/img/2015/03/27/harddybr/cm-superfan-120mm-su1-160.webp" class="__image" style="shape-outside:url(/img/2015/03/27/harddybr/cm-superfan-120mm-su1-160.webp);" alt="SuperFan 120mm SU1 ‹R4-S2B-12AK-GP›" title="SuperFan 120mm SU1 ‹R4-S2B-12AK-GP›"></a></figure>
+
+<p>Приобрел две штуки, оба Cooler Master: один с подсветкой в тон передней панели, на боковую прозрачную стенку (на вдув) —
+<strong><a href="http://e-burg.nix.ru/autocatalog/coolermaster/Cooler_Master_R4JFDP20PRR1_JetFlo_LED_120x120x25mm_1236_8002000_185410.html">JetFlo 120 ‹R4-JFDP-20PR-R1›</a></strong>; второй простой, без наворотов, на заднюю стенку (на выдув) —
+<strong><a href="http://e-burg.nix.ru/autocatalog/coolermaster/Cooler_Master_R4S2B12AKGP_SuperFan_120mm_SU1_120x120x25mm_19.8_66795.html">SuperFan 120mm SU1 ‹R4-S2B-12AK-GP›</a></strong>. Оба оказались дюже шумными. К счастью, с первым в комплекте шли
+два понижающих резистора, запитал через них, и шум пришел в норму.</p>
+
+<p class="note italic">Если честно, мысли модернизировать систему охлаждения в сторону меньшего шума мне в голову приходят регулярно. Но жаба утверждает,
+что и так сойдет.</p>
+
+<h2 id="ввод">
+<a class="anchor" href="#%D0%B2%D0%B2%D0%BE%D0%B4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ввод</h2>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:240px;shape-outside:url(/img/2015/03/27/harddybr/dialog-kk-05u-240.webp);"><a href="http://e-burg.nix.ru/autocatalog/keyboards_dialog/Dialog_Katana_KK05U_Black_USB_107_119297.html"><img src="/img/2015/03/27/harddybr/dialog-kk-05u-240.webp" class="__image" style="shape-outside:url(/img/2015/03/27/harddybr/dialog-kk-05u-240.webp);" alt="Dialog Katana KK-05U" title="Dialog Katana KK-05U"></a></figure>
+
+<p>Клавиатура <strong><a href="http://e-burg.nix.ru/autocatalog/keyboards_dialog/Dialog_Katana_KK05U_Black_USB_107_119297.html">Dialog Katana KK-05U</a></strong>. Ну-у-у… В общем, на безрыбье сойдет. С клавиатурами сейчас все очень
+и очень плохо. Вот как сняли с производства Mitsumi Classic, так дальше все хуже и хуже. Эта еще ничего, раскладка
+нормальная, шифты широкие… Но ход клавиш уже уменьшенный — не ноутбучный, но и не полноразмерный. С удовольствием бы сменил,
+но реально не на что. Есть, конечно, механические клавиатуры, и не только игровые… Но при взгляде на их цены моя жаба достает
+гарроту.</p>
+
+<figure class="__figure __implicit_figure __left logo" style="max-width:160px;shape-outside:url(/img/2015/03/27/harddybr/logitech-m570-160.webp);"><a href="http://e-burg.nix.ru/autocatalog/mouse_logitech/Logitech_Wireless_Trackball_M570_USB_5btn_910002090_130085.html"><img src="/img/2015/03/27/harddybr/logitech-m570-160.webp" class="__image" style="shape-outside:url(/img/2015/03/27/harddybr/logitech-m570-160.webp);" alt="Logitech M570" title="Logitech M570"></a></figure>
+
+<p>А вот с мышью все хорошо. Трекбол <strong><a href="http://e-burg.nix.ru/autocatalog/mouse_logitech/Logitech_Wireless_Trackball_M570_USB_5btn_910002090_130085.html">Logitech M570</a></strong> я купил еще год с лишним назад и вполне им доволен. Можно бы,
+конечно, и покрупнее немного, но выбирать опять же не из чего.</p>
+
+<div class="note italic" style="margin-right: 4em; font-size: 80%;">
+  <p>Вообще, с клавиатурами и мышками творится что-то странное: такое впечатление, что для себя их покупают только геймеры, а все ос­таль­ные —
+для нелюбимой тещи, настолько оно все неудобное. С геймерами же у нас разные задачи и, соответственно, разное удобство, так что тоже
+не по пути. Приходится выискивать лучшее из худшего.</p>
+
+  <p>А ведь помимо Mitsumi Classic были аналогичные модели, немного подороже, у Logitech и Microsoft… Тоже канули в лету. Мышек под свою
+руку, далеко не самую большую, я найти не могу — сплошь что-то дамских габаритов… Впрочем, стоп. Я, вроде бы, этим постом хвастаться
+собирался, а не плакаться.</p>
+</div>
+
+<h2 id="акустика">
+<a class="anchor" href="#%D0%B0%D0%BA%D1%83%D1%81%D1%82%D0%B8%D0%BA%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Акустика</h2>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:240px;margin-top: -5px;shape-outside:url(/img/2015/03/27/harddybr/sven-sps-609-240.webp);"><a href="http://e-burg.nix.ru/autocatalog/speakers_sven/SVEN_SPS609_Cherry_2x5W_87623.html"><img src="/img/2015/03/27/harddybr/sven-sps-609-240.webp" class="__image" style="shape-outside:url(/img/2015/03/27/harddybr/sven-sps-609-240.webp);" alt="SVEN SPS-609 Cherry" title="SVEN SPS-609 Cherry"></a></figure>
+
+<p>Аудиофилом я не являюсь, но музыку все-таки люблю. Кроме того, питаю слабость к деревянным колонкам. В итоге выбирал из эконом-вариантов
+производства SVEN, ибо с их колонками дело иметь уже доводилось, и они мне понравились. Конкретно в этот раз остановился
+на <strong><a href="http://e-burg.nix.ru/autocatalog/speakers_sven/SVEN_SPS609_Cherry_2x5W_87623.html">SVEN SPS-609 Cherry</a></strong>. Мощность у них, конечно, маленькая — 2x5W — но для <em>квартирных</em> колонок этого <em>более, чем достаточно</em>,
+ЕВПОЧЯ.</p>
+
+<p>В интернетах встречал отзывы, что они якобы слегка шумят, когда звук не играет… У меня основное положение регулятора громкости —
+близкое к минимуму, на нем не шумят (и не шипят, и не шепчут). Если громкость увеличивать, не подавая музыку, начинают шуметь,
+действительно. Но это уже при таком положении регулятора, при котором на трезвую голову слушать музыку невозможно. Так что не надо
+в этом положении их держать — можно распугать домашних, а то и соседей.</p>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:220px;margin-top: -5px;shape-outside:url(/img/2015/03/27/harddybr/sven-hm60gt-220.webp);"><a href="http://e-burg.nix.ru/autocatalog/headphones_sven/SVEN_HM_GT_88520.html"><img src="/img/2015/03/27/harddybr/sven-hm60gt-220.webp" class="__image" style="shape-outside:url(/img/2015/03/27/harddybr/sven-hm60gt-220.webp);" alt="SVEN HM-60GT" title="SVEN HM-60GT"></a></figure>
+
+<p>Что касается наушников <strong><a href="http://e-burg.nix.ru/autocatalog/headphones_sven/SVEN_HM_GT_88520.html">SVEN HM-60GT</a></strong>, то они мне тоже понравились, как звучанием, так и удобством сидения на го­ло­ве. Но у них вскрылся
+и стал фатальным один не­до­ста­ток — отсутствие ко­то­ус­той­чи­во­с­ти. Пос­ле не­с­коль­ких ударов разбежавшимся котом в бол­та­ю­щий­ся провод и последующих
+полетов девайса на пол правое ухо отказало.</p>
+
+<p>Я попытался надломившиеся и отошедшие проводки спаять, но у меня ничего не получилось. Может, недостаточно хорошо зачистил лаковую
+изоляцию (ненавижу), а может, не заметил какие-то еще повреждения (а может, просто руки кривые). В следующий раз снова попробую починить,
+когда соберусь и куплю мультиметр. Пока купил другие, но о заменах напишу отдельно ниже.</p>
+
+<h2 id="монитор">
+<a class="anchor" href="#%D0%BC%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>Монитор</h2>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:200px;margin-top: -10px;shape-outside:url(/img/2015/03/27/harddybr/benq-gw2265hm-200.webp);"><a href="https://www.dns-shop.ru/product/1adcefe32a6030b1/monitor-benq-215-gw2265hm/"><img src="/img/2015/03/27/harddybr/benq-gw2265hm-200.webp" class="__image" style="shape-outside:url(/img/2015/03/27/harddybr/benq-gw2265hm-200.webp);" alt="BenQ GW2265HM" title="BenQ GW2265HM"></a></figure>
+
+<p>А вот это такая вещь, которую я могу выбрать только посмотрев непосредственно глазами в магазине. Из того, что было в наличии
+и бюджетно год назад (да, его, как и трекбол я покупал отдельно и раньше), с разрешением FullHD мне поглянулась ровно одна модель —
+<strong><a href="https://www.dns-shop.ru/product/1adcefe32a6030b1/monitor-benq-215-gw2265hm/">BenQ GW2265HM</a></strong>.</p>
+
+<p>Собственно, только разрешение (да еще наличие старинного VGA-входа, ведь брал-то я его еще для старого компа) меня тогда из характеристик
+и интересовало. То, что он, например, имеет встроенные динамики, я узнал только сейчас, при написании данного поста, заглянув в Ян­декс.Маркет.</p>
+
+<div class="no_toc_section" style="margin-left: 2em; margin-right: 2em; margin-top: 20px; font-size: 80%; background-color: #fcfcfc; padding-bottom: 5px; padding-top: 0px; padding-right: 10px; padding-left: 10px; border: 1px solid #eee; border-radius: 5px; clear: right;">
+
+  <h3 id="section">Политико-экономическое отступление</h3>
+
+  <p>Мы живем в такое «интересное» время, что даже на такой короткой дистанции, как полгода-год, интересно посмотреть разницу в ценах. И даже поучительно. Я не буду делать таблицу по каждой позиции, вместо этого ограничусь «покупками» — тремя «разами», когда я что-то единовременно покупал. Сегодняшние цены по возможности возьму из того же магазина, а если товара там нет — минимум по Я.Маркету.</p>
+
+  <table class="wide">
+    <thead>
+      <tr>
+        <th style="text-align: left">Что?</th>
+        <th style="text-align: center">Когда?</th>
+        <th style="text-align: right">Тогда</th>
+        <th style="text-align: right">Сейчас</th>
+        <th style="text-align: right">%</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">Трекбол</td>
+        <td style="text-align: center">больше года назад (21 декабря 2013)</td>
+        <td style="text-align: right">1 869</td>
+        <td style="text-align: right">3 844</td>
+        <td style="text-align: right">+106%</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">Монитор</td>
+        <td style="text-align: center">меньше года назад (21 апреля 2014)</td>
+        <td style="text-align: right">5 190</td>
+        <td style="text-align: right">7 204</td>
+        <td style="text-align: right">+39%</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">Все прочее</td>
+        <td style="text-align: center">полгода назад (11 и 18 октября 2014)</td>
+        <td style="text-align: right">47 613</td>
+        <td style="text-align: right">69 851</td>
+        <td style="text-align: right">+47%</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Пятиминутка ненависти закончена, вернемся к нашим баранам.</p>
+
+</div>
+
+<h2 id="замены">
+<a class="anchor" href="#%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Замены</h2>
+
+<figure class="__figure __implicit_figure __right logo" style="max-width:160px;margin-top: -5px;shape-outside:url(/img/2015/03/27/harddybr/tp-link-tl-wdn4800-160.webp);"><a href="http://technopoint.ru/catalog/i158332/tp-link-tl-wdn4800"><img src="/img/2015/03/27/harddybr/tp-link-tl-wdn4800-160.webp" class="__image" style="shape-outside:url(/img/2015/03/27/harddybr/tp-link-tl-wdn4800-160.webp);" alt="TP-Link TL-WDN4800" title="TP-Link TL-WDN4800"></a></figure>
+
+<p>Итак, как можно понять из вышеизложенного, заменить мне пришлось два девайса: WiFi-карту из-за драйверов и наушники из-за кота.</p>
+
+<p>Карточку взял <strong><a href="http://technopoint.ru/catalog/i158332/tp-link-tl-wdn4800">TP-Link TL-WDN4800</a></strong>. Именно эту, потому что в пару к роутеру TP-Link TL-WDR4300. Чип Atheros, драйвера
+встали, как родные. Полностью устраивает. По скорости — огроменный запас относительно имеющегося интернета. Если не сдохнет,
+менять не придется.</p>
+
+<figure class="__figure __implicit_figure __left logo" style="max-width:200px;shape-outside:url(/img/2015/03/27/harddybr/sven-ap-670mv-200.webp);"><a href="https://www.dns-shop.ru/product/21ce1194fb403120/provodnaa-garnitura-sven-ap-670mv-cernyj/"><img src="/img/2015/03/27/harddybr/sven-ap-670mv-200.webp" class="__image" style="shape-outside:url(/img/2015/03/27/harddybr/sven-ap-670mv-200.webp);" alt="SVEN AP-670MV" title="SVEN AP-670MV"></a></figure>
+
+<p>Что касается наушников <strong><a href="https://www.dns-shop.ru/product/21ce1194fb403120/provodnaa-garnitura-sven-ap-670mv-cernyj/">SVEN AP-670MV</a></strong>, то это такой сугубый эконом-вариант. Звук на твердую тройку с плюсом, удобство —
+без плюса. Но и цена нестрашная.</p>
+
+<p>А что оставляют желать лучшего, так это и хорошо — остается стимул таки починить предыдущие.</p>
+
+<hr style="clear: left; color: #eee; border-color: #eee;">
+
+<h2 id="итого">
+<a class="anchor" href="#%D0%B8%D1%82%D0%BE%D0%B3%D0%BE" aria-hidden="true"><span class="octicon octicon-link"></span></a>Итого</h2>
+
+<p><del>Не пытайтесь повторить это дома!</del> Напомню, что я выбирал комплектующие под себя и свои задачи. Исключительно.
+Такая конфигурация однозначно не пойдет геймерам, дизайнерам и тем, кто всерьез работает с видео; акустика и, особенно,
+встроенная звуковуха не удовлетворят аудиофилов и музыкантов… А для офисно-домашнего применения тут явный перебор по це­не,
+энергопотреблению, шуму и тепловыделению. Мне норм.</p>
+
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.03.24 |</span>
+            <a href="/2021/03/typo-keyboard.html" title="Настройка клавиатуры в Linux для ввода различных символов, таких как, например, длинное тире, кавычки-ёлочки, знак копирайта и так далее. В редакции 2021 года.">Ввод «типографских» символов с клавиатуры (ed. 2021)</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2023.11.13 |</span>
+            <a href="/2023/11/inat-get.html" title="Набор инструментов для получения и обработки данных с iNaturalist">INat::Get — ранняя альфа</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2015.04.04 |</span>
+            <a href="/2015/04/ruby-multitasking.html" title="В статье рассматриваются основные средства работы с потоками (threads) и процессами в языке и стандартной библиотеке Ruby.">Ruby и многозадачность</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#cpu">CPU</a></li>
+<li class="toc-entry toc-h2"><a href="#motherboard">Motherboard</a></li>
+<li class="toc-entry toc-h2"><a href="#память">Память</a></li>
+<li class="toc-entry toc-h2"><a href="#диски">Диски</a></li>
+<li class="toc-entry toc-h2"><a href="#видеокарта">Видеокарта</a></li>
+<li class="toc-entry toc-h2"><a href="#сеть">Сеть</a></li>
+<li class="toc-entry toc-h2"><a href="#корпус">Корпус</a></li>
+<li class="toc-entry toc-h2"><a href="#ввод">Ввод</a></li>
+<li class="toc-entry toc-h2"><a href="#акустика">Акустика</a></li>
+<li class="toc-entry toc-h2"><a href="#монитор">Монитор</a></li>
+<li class="toc-entry toc-h2"><a href="#замены">Замены</a></li>
+<li class="toc-entry toc-h2"><a href="#итого">Итого</a></li>
+</ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/2022/10/harddybr.html" title="Некоторые заметки после обновления компьютера">Большой дыбр по железу</a></li><li class="fa-icon-li-file-alt"><a href="/2019/07/storages.html" title="Небольшой тест имеющихся у меня носителей данных">Поиздевался над железками</a></li></ul>
+    </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

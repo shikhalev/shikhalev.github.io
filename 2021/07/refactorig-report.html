@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Отчет о рефакторинге | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Отчет о рефакторинге" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Как я рефакторил сайт, с чем столкнулся и о чем узнал" />
+<meta property="og:description" content="Как я рефакторил сайт, с чем столкнулся и о чем узнал" />
+<link rel="canonical" href="https://shikhalev.github.io/2021/07/refactorig-report.html" />
+<meta property="og:url" content="https://shikhalev.github.io/2021/07/refactorig-report.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/2021/07/09/refactorig-report/jekyll-screen-640x640-500-261-0-20.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-07-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/img/2021/07/09/refactorig-report/jekyll-screen-640x640-500-261-0-20.webp" />
+<meta property="twitter:title" content="Отчет о рефакторинге" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2021-07-09T00:00:00+00:00","datePublished":"2021-07-09T00:00:00+00:00","description":"Как я рефакторил сайт, с чем столкнулся и о чем узнал","headline":"Отчет о рефакторинге","image":"https://shikhalev.github.io/img/2021/07/09/refactorig-report/jekyll-screen-640x640-500-261-0-20.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/2021/07/refactorig-report.html"},"url":"https://shikhalev.github.io/2021/07/refactorig-report.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-globe" href="/tech/web/" title="HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.">Web</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-id-card" href="/about/" title="О себе, этом сайте и т.д.">О себе</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">Отчет о рефакторинге</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2021%2F07%2Frefactorig-report.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2021%2F07%2Frefactorig-report.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2021%2F07%2Frefactorig-report.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2021%2F07%2Frefactorig-report.html&text=%D0%9E%D1%82%D1%87%D0%B5%D1%82+%D0%BE%C2%A0%D1%80%D0%B5%D1%84%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B3%D0%B5">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%9E%D1%82%D1%87%D0%B5%D1%82+%D0%BE%C2%A0%D1%80%D0%B5%D1%84%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B3%D0%B5&url=https%3A%2F%2Fshikhalev.github.io%2F2021%2F07%2Frefactorig-report.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2021-07-09T00:00:00+00:00" itemprop="datePublished">2021.07.09
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#CSS">CSS</a>​<a class="tag" href="/tags#Font Awesome">Font Awesome</a>​<a class="tag" href="/tags#GitHub">GitHub</a>​<a class="tag" href="/tags#Google Fonts">Google Fonts</a>​<a class="tag" href="/tags#Google Maps">Google Maps</a>​<a class="tag" href="/tags#HTML">HTML</a>​<a class="tag" href="/tags#JavaScript">JavaScript</a>​<a class="tag" href="/tags#Jekyll">Jekyll</a>​<a class="tag" href="/tags#Liquid">Liquid</a>​<a class="tag" href="/tags#PNG">PNG</a>​<a class="tag" href="/tags#SASS">SASS</a>​<a class="tag" href="/tags#SCSS">SCSS</a>​<a class="tag" href="/tags#SVG">SVG</a>​<a class="tag" href="/tags#aspect-ratio">aspect-ratio</a>​<a class="tag" href="/tags#display">display</a>​<a class="tag" href="/tags#flex">flex</a>​<a class="tag" href="/tags#grid">grid</a>​<a class="tag" href="/tags#kramdown">kramdown</a>​<a class="tag" href="/tags#markdown">markdown</a>​<a class="tag" href="/tags#shikhalev.org">shikhalev.org</a>​<a class="tag" href="/tags#sticky">sticky</a>​<a class="tag" href="/tags#блоги">блоги</a>​<a class="tag" href="/tags#веб-шрифты">веб-шрифты</a>​<a class="tag" href="/tags#верстка">верстка</a>​<a class="tag" href="/tags#грабли">грабли</a>​<a class="tag" href="/tags#иконки">иконки</a>​<a class="tag" href="/tags#медиа-селекторы">медиа-селекторы</a>​<a class="tag" href="/tags#пробелы">пробелы</a>​<a class="tag" href="/tags#рефакторинг">рефакторинг</a>​<a class="tag" href="/tags#сайты">сайты</a>​<a class="tag" href="/tags#статическая генерация">статическая генерация</a>​<a class="tag" href="/tags#шрифты">шрифты</a></aside></header><div itemprop="articleBody">
+  <figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2021/07/09/refactorig-report/jekyll-screen-fhd.webp" class="__image_link"><img src="/img/2021/07/09/refactorig-report/jekyll-screen-320.webp" class="__image" alt="Скриншот с [официального сайта Jekyll](https://jekyllrb.com/)" title="Скриншот с [официального сайта Jekyll](https://jekyllrb.com/)"></a><figcaption>Скриншот с <a href="https://jekyllrb.com/">официального сайта Jekyll</a></figcaption></figure>
+
+<p>Итак, я таки отрефакторил и обновил данный сайт. Почему нельзя было сразу делать правильно? Ну, в основном потому,
+что я впервые имел дело с Jekyll, изрядно подзабыл (а что-то и не знал) базовые приемы верстки… И так далее,
+и тому подобное.</p>
+
+<p>Вторая (в моем случае) причина — это то, что, как это часто бывает, представление о желаемом результате уточнялось
+и формировалось в процессе достижения результата просто работающего. Соответственно, решение «исторически сложилось»,
+если вы понимаете, о чем я. Любой проект ставит разработчика перед выбором: или бесконечное (и потому бесплодное)
+делание «как надо», или движение к идеалу через неидеальные, зато рабочие, варианты, которые, впрочем, без регулярного
+рефакторинга быстро становятся неулучшаемым и иногда не совсем рабочим болотом.</p>
+
+<p>Но на самом деле этот пост не только, и не столько о рефакторинге как таковом, сколько о технической стороне этого
+сайта в целом. Благо, сразу после выкатки первого варианта я так технический пост и не написал, желая сначала получше
+разобраться. Вот, сейчас и пишу о том, с чем разобрался, и о процессе этого разбирательства.</p>
+
+<!--more-->
+
+<h2 id="выбор-технологий">
+<a class="anchor" href="#%D0%B2%D1%8B%D0%B1%D0%BE%D1%80-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9" aria-hidden="true"><span class="octicon octicon-link"></span></a>Выбор технологий</h2>
+
+<h3 id="бэкенд">
+<a class="anchor" href="#%D0%B1%D1%8D%D0%BA%D0%B5%D0%BD%D0%B4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Бэкенд</h3>
+
+<p>Сайт сделан на статическом генераторе <strong><a href="https://jekyllrb.com/" title="Официальный сайт Jekyll" class="img-icon-jekyll">Jekyll</a></strong> и размещен на <strong><a href="https://pages.github.com/" title="GitHub Pages" class="img-icon-github">GitHub Pages</a></strong>,
+чтобы не платить за хостинг. Комментарии — <strong><a href="https://staticman.net/" title="Официальный сайт Staticman" class="img-icon-staticman">Staticman</a></strong>, размещенный на <strong><a href="https://www.heroku.com/" title="Heroku" class="img-icon-heroku">Heroku</a></strong>
+также бесплатно. Собственно, бесплатность была для меня необходимым критерием при выборе технологии, поскольку блогом я не зарабатываю.</p>
+
+<p class="note italic">За все время существования <a href="https://bs.shikhalev.org/" title="Мой старый технобложик">технобложика</a>, гуглореклама, крутящаяся там, не докрутилась до минимально выводимой суммы, даже
+не приблизилась. Поэтому сейчас при рефакторинге я ее и убрал совсем (хотя в скрытых элементах верстки и оставил — место под нее,
+но не ее саму — и если вдруг посещаемость взлетит на несколько порядков, могу вернуть). <a href="#donate">Блок-по­про­шай­ка</a> сработал пока
+1 (один) раз за все время. Что приятно, но тоже не позволяет говорить о профите или окупаемости.</p>
+
+<dl>
+  <dt>Почему не <a href="https://www.livejournal.com/" title="Живой Журнал — LiveJournal">ЖЖ</a>, <a href="https://www.blogger.com/" title="Блог-платформа от Google">Blogger</a>, <a href="https://www.wordpress.com/" title="WordPress">Wordpress</a> и так далее?</dt>
+  <dd>
+    <p>Несколько факторов:</p>
+
+    <p><em>Возможности контроля верстки</em> — я хочу, чтоб мои посты выглядели так, как я хочу. В ЖЖ (и <a href="https://www.dreamwidth.org/" title="DreamWidth — форк LiveJournal">DW</a>) эти возможности
+вообще крайне скудны. В Blogger и Wordpress они достаточно богаты, но требуют серьезных усилий, чтобы навесить свое оформление
+поверх сложных механизмов движка.</p>
+
+    <p>Более того, мне нужно одновременно иметь контроль над версткой и возможность о ней не задумываться при написании текстов,
+то есть разметку типа <a href="https://ru.wikipedia.org/wiki/Markdown" title="Markdown — облегчённый язык разметки">Markdown</a> и автоматическую систему раскраски исходного кода. И еще что-нибудь вроде макросов
+для тех случаев, когда маркдауна не достаточно.</p>
+
+    <p><em>Возможность легкого и быстрого «перезда»</em> на случай, если мои тексты вступят в конфликт с политикой хостера, или его самого
+заблокируют. Увы, в последнее время угроза бана на любом сервисе вполне реальна, для этого не требуется нарушать законы,
+достаточно стука со стороны «прогрессивной общественности». Ну, а российские блокировки и вовсе лупят по площадям, как в копеечку…</p>
+
+    <p>И хотя упомянутые сервисы и позволяют делать какие-то архивы и бэкапы, развернуть их где-то еще не получится. Исключение — Wordpress,
+который можно поднять и на своем сервере, но учитывая его сложность и системные требования, быстрым и легким такой переезд
+точно не назовешь.</p>
+
+    <p>Еще важное пожелание — <em>контроль версий</em>. <strong><a href="https://git-scm.com/" title="Git — распределенная система контроля версий" class="img-icon-git">Git</a></strong>, развертывание сайта из репозитория, человекочитаемая история
+изменений, и так далее, и тому подобное.</p>
+
+    <p>В общем, <em>вендор-лок</em> и сложность/невозможность <em>существенной</em> кастомизации делают готовые блог-платформы для меня не лучшим выбором.</p>
+  </dd>
+  <dt>Почему не свой сервер с самописным бэкендом на рельсах или другом фреймворке?</dt>
+  <dd>
+    <p>Тут просто — <em>цена</em>. Причем, кроме затрат на хостинг нуж­но еще учитывать время на разработку и администрирование. Хотя, конечно,
+сейчас все это не так уж и дорого и, как вариант «в случае чего», я вполне рассматриваю переезд на ненавороченный VPS/VDS, причем
+именно в текущем виде, со статической генерацией, мне достаточно будет са­мо­го-пре­са­мо­го дешевого.</p>
+  </dd>
+</dl>
+
+<p>При всем при этом мне <em>не</em> нужна логика на бэкенде, динамически формируемые страницы, вот это всё. Даже комментарии, в об­щем-то,
+вторичны. Таким образом, все пути ведут к <em>генераторам статических страниц</em>.</p>
+
+<dl>
+  <dt>Почему именно Jekyll?</dt>
+  <dd>
+    <p>Ключевое его преимущество — интеграция с GitHub Pages. То есть схема работы не «сгенерировал страницы из рабочей копии репозитория
+и отправил на сервер», а «написал, закоммитил, запушил» — публикация происходит автоматически при фиксации изменений, исходники
+в репозитории и сайт всегда синхронизированы, то есть не возникает ситуация, когда в репозиторий закоммитил, а опубликовать забыл,
+или, что еще хуже — опубликовал, не закоммитил, и в историю изменений реально работающая версия не попала. Аналогичным образом можно
+организовать публикацию и через <strong><a href="https://gitlab.com/" title="GitLab" class="img-icon-gitlab">GitLab</a></strong> (там, впрочем, вариантов побольше, но первичный расчет все же
+на GitHub, поскольку я им давно активно пользуюсь). На собственном хостинге эти фазы будут разделены, но во-пер­вых, см. выше про первичный
+расчет, а во-вто­рых, можно и там такое организовать через <a href="https://git-scm.com/book/ru/v2/%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-Git-%D0%A5%D1%83%D0%BA%D0%B8-%D0%B2-Git" title="Настройка Git - Хуки в Git">хуки Git</a>.</p>
+
+    <p>Второй важный аспект — это то, что Jekyll является <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B5_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5" title="Свободное программное обеспечение">свободным ПО</a>, <a href="https://github.com/jekyll/jekyll" title="Исходники Jekyll на GitHub">его код открыт</a> и опубликован
+под <a href="https://github.com/jekyll/jekyll/blob/master/LICENSE" title="Лицензия Jekyll">ли­цен­зи­ей MIT</a>. Что, впрочем, характерно и для многих его аналогов с точностью до конкретной лицензии…</p>
+
+    <p>Менее существенно, но субъективно тоже приятно, что Jekyll написан на <strong><a href="https://www.ruby-lang.org/ru/" title="Язык программирования Ruby" class="img-icon-ruby">Ruby</a></strong> — одном из моих любимых языков.
+Что означает реальную, а не гипотетическую возможность воспользоваться преимуществами open source с моей стороны. Реализую ли я ее —
+это отдельный  вопрос, однако мое знакомство с пакетной инфраструктурой Ruby — плагины Jekyll распространяются именно как гемы — явно мне
+помогло в его установке и настройке.</p>
+
+    <p>Что же касается недостатков и подводных камней, далее будет еще много подробностей…</p>
+  </dd>
+  <dt>Почему именно Staticman?</dt>
+  <dd>
+    <p>Для начала отмечу, что требования к системе комментариев у меня самые минимальные. И не могу сказать, чтобы я уделил этому вопросу
+много времени. Собственно, <em>ключевым</em> преимуществом Staticman стало простое развертывание на бесплатном аккаунте Heroku вкупе
+с возможностью также быстро и просто «в случае чего» развернуть его и на своем сервере (в наличии docker-образ).</p>
+
+    <p>Кроме того:</p>
+
+    <ul>
+      <li>
+        <p>Комментарии хранятся в том же репозитории, что и сайт. Можно и в другом, факт в том, что это будет а) git-ре­по­зи­то­рий, б) под моим управлением.</p>
+      </li>
+      <li>
+        <p>Прикручивается защита от спама. Есть два варианта: re­CAPT­CHA и A­kis­met, и со вторым я пока не разбирался, надеюсь, руки еще дойдут.
+О недостатках и проблемах рекапчи мне известно.</p>
+      </li>
+      <li>
+        <p>Визуальное отображение не просто кастомизируется, а вообще полностью находится в зоне ответственности владельца сайта.</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/eduardoboucas/staticman" title="Исходники Staticman на GitHub">Исходники открыты</a>, под лицензией MIT.</p>
+      </li>
+    </ul>
+
+    <p>Из недостатков стоит отметить:</p>
+
+    <ul>
+      <li>
+        <p>Привязка к GitHub/GitLab. Это касается, конечно, не хостинга (Pages), а репозитория — Staticman для добавления комментариев использует
+API этих сервисов, а не пуши Git. Если и там, и там забанят, придется искать другой сервис комментариев. Впрочем, для своего хостинга
+их полно, да и собственный пишется на коленке легко и просто. А уже имеющиеся комментарии никуда не денутся — они в репозитории.</p>
+      </li>
+      <li>
+        <p>Нет авторизации. Кто угодно может писать под каким угодно именем.</p>
+      </li>
+      <li>
+        <p>Уведомления сделаны через Mailgun, который бесплатных тарифных планов не имеет (есть триальный, но это ж временно). Я не стал подключать.
+Вместо этого я в новой версии сайта добавил отображение последних (глобально) трех комментариев в <a href="#sidebar">отдельной панели</a>
+на всех<sup id="fnref:last-comments"><a href="#fn:last-comments" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> страницах.</p>
+      </li>
+    </ul>
+
+    <p>В целом, вопрос идеальной системы комментариев остается открытым… Но все более-менее интересные варианты, с авторизацией через
+соцсети и т.д. — платные. Опять же, нельзя сказать, чтоб они были дороги, но сайт-то полностью непрофитный. В случае же переезда
+на платный хостинг, имеет смысл вернуться к этому вопросу именно в плане свободного софта, неподходящего для бесплатных хостингов,
+но подходящего для VPS/VDS.</p>
+  </dd>
+</dl>
+
+<h3 id="фронтенд">
+<a class="anchor" href="#%D1%84%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D0%B4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Фронтенд</h3>
+
+<p>Тут все просто: никаких фреймворков, никаких динамически формирующихся страниц. Зато и никакой заботы об устаревших браузерах (учитывая
+отсутствие динамики, можно быть увереным, что информация будет доступна и на старинных браузерах, а вот верстка может и поехать, если
+поддержка CSS недостаточна). При этом важно адекватное отображение на мобильных — как само по себе, так и как фактор поисковой оптимизации.</p>
+
+<p>Статическая генерация приводит к тому, что любой клиент получает одни и те же данные, таким образом потенциально имеется три подхода:</p>
+
+<ul>
+  <li>
+    <p>Верстать по старинным стандартам, что му́ка само по себе и, кроме того, получается крайне несемантично, то есть недружественно к современным
+поисковикам.</p>
+  </li>
+  <li>
+    <p>Использовать фронтенд-фреймворки и переложить верстку на JavaScript, густо обмазавшись слоями совместимости. Ма­ло­ос­мыс­лен­но по трудозатратам
+и непредсказуемо по реакции поисковиков (они, конечно, сейчас умеют выполнять скрипты, но неизвестно, где их переклинит).</p>
+  </li>
+  <li>
+    <p>Использовать простую современную семантическую верстку и позволить старым браузерам спокойно деградировать. В результате 1–2% посетителей
+получат не совсем то визуальное представление, что задумывалось, но спокойно смогут прочитать тексты и посмотреть картинки. А большинство
+увидит именно то, что и нужно, сразу адекватное их устройству, без скачивания (и исполнения) тонн ненужных скриптов совместимости.</p>
+  </li>
+</ul>
+
+<p>Мы пойдем третьим путем и будем использовать: <strong><a href="https://ru.wikipedia.org/wiki/HTML5" title="HyperText Markup Language версия 5" class="img-icon-html5">HTML5</a></strong> ради семантических тегов, <strong><a href="https://ru.wikipedia.org/wiki/CSS#%D0%A3%D1%80%D0%BE%D0%B2%D0%B5%D0%BD%D1%8C_3_(CSS3)" title="Cascading Style Sheets уровень 3" class="img-icon-css3">CSS3</a></strong>
+ради удобной верстки посредством <code class="language-plaintext highlighter-rouge">flex</code> и <code class="language-plaintext highlighter-rouge">grid</code>, а так­же <strong><a href="https://ru.wikipedia.org/wiki/JavaScript" title="Язык программирования JavaScript" class="img-icon-javascript">JavaScript</a></strong> по ми­ни­муму<sup id="fnref:js"><a href="#fn:js" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>.</p>
+
+<h4 id="внешние-ресурсы">
+<a class="anchor" href="#%D0%B2%D0%BD%D0%B5%D1%88%D0%BD%D0%B8%D0%B5-%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Внешние ресурсы</h4>
+
+<p>Из таковых у меня подгружаются шрифты с <strong><a href="https://fonts.google.com/" title="Google Fonts" class="img-icon-gf">Google Fonts</a></strong> — это
+<a href="https://rus.paratype.ru/pt-sans-pt-serif" title="Шрифтовая система PT Sans, PT Serif и PT Mono">свободно распространяемые шрифты <strong class="img-icon-paratype">Paratype</strong></a> —
+семейство PT Sans и PT Mo­no. На то есть две причины: во-пер­вых, на разных устройствах под разными операционными системами имеющиеся шрифты сильно разные,
+а во-вто­рых зачастую ужасные и не согласованные между собой. Мне же хочется, чтобы, скажем, примеры кода (моноширинным шрифтом) не выбивались по общему виду —
+метрикам, насыщенности и т.д. из основного текста. Аналогично согласованность желательна и для шрифтов заголовков с одной стороны, и сносок —
+с другой.</p>
+
+<p>Еще что касается шрифтов: также как веб-шрифт я подгружаю <strong><a href="https://fontawesome.com/" title="Font Awesome" class="img-icon-fa">Font Awesome Free</a></strong> — уже не снаружи, а копию на сайте.
+Этим шрифтом сделаны монохромные иконки в оформлении сайта. Цветные в основном тексте — это уже картинки (по возможности <a href="https://ru.wikipedia.org/wiki/SVG" title="Scalable Vector Graphics — масштабируемая векторная графика">SVG</a>), набранные
+из разных источников<sup id="fnref:devicon"><a href="#fn:devicon" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>.</p>
+
+<p>Кроме того, из внешних источников подгружаются следующие, условно говоря, модули:</p>
+
+<ul>
+  <li>
+    <p>Счетчики — <strong><a href="https://analytics.google.com/" title="Google Аналитика" class="img-icon-analytics">Goog­le Ana­ly­tics</a></strong> и <strong><a href="https://metrika.yandex.ru/" title="Яндекс.Метрика" class="img-icon-metrica">Ян<span>­декс.​Мет­ри­ка</span></a></strong>.</p>
+  </li>
+  <li>
+    <p>Поиск по сайту от <strong><a href="https://cse.google.com/" title="Программируемая поисковая система" class="img-icon-gce">Goog­le</a></strong>.</p>
+  </li>
+  <li>
+    <p>Форма-попрошайка от <strong><a href="https://yoomoney.ru/" title="ЮMoney" class="img-icon-yoomoney">Yoo­mo­ney</a></strong><sup id="fnref:yoomoney"><a href="#fn:yoomoney" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>.</p>
+  </li>
+</ul>
+
+<p>Они, конечно, тянут за собой много всякого, но все-таки полезные.</p>
+
+<h2 id="разработка">
+<a class="anchor" href="#%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Разработка</h2>
+
+<p>Совсем пошагово описывать процесс я не буду. Дело это достаточно скучное, пройдусь по тем моментам, которые чем-то интересны,
+или вызвали у меня затруднения.</p>
+
+<h3 id="jekyll">
+<a class="anchor" href="#jekyll" aria-hidden="true"><span class="octicon octicon-link"></span></a>Jekyll</h3>
+
+<p><em>Во-первых</em>, я при этом рефакторинге отказался от готовой темы. Изначально я использовал дефолтную для Jekyll тему minima, обвешивая ее
+уже ка­ки­ми-то своими дополнениями. Это, в принципе, правильный путь — взять готовое, причем максимально простое, и дорабатывать,
+но итоговая верстка достигалась грязными хаками и для адаптации под мобильные годилась мало (хотя сама тема вполне адаптирована).</p>
+
+<p>Могу заметить, что никаких проблем с неиспользованием темы не обнаружилось. Собственно, движку без разницы, что обрабатывать.</p>
+
+<p><em>Во-вторых</em>, язык шаблонов <strong><a href="https://shopify.github.io/liquid/" title="Liquid template language" class="img-icon-liquid">Liquid</a></strong> — это что-то с чем-то. И мне, честно говоря, не понятно,
+почему в Jekyll используется именно он, а не, например, <a href="https://docs.ruby-lang.org/en/2.7.0/ERB.html" title="ERB — Ruby Templating">ERB</a>, идущий в комплекте с Ruby, на котором сам Jekyll написан… Возможно,
+дело в том, что ERB <em>слишком</em> богат — по сути это полноценный Ruby, встраиваемый в шаблоны. А у Ruby с точки зрения встраивания
+куда-либо есть один недостаток: невозможность сделать полностью изолированную песочницу. Хотя, на мой взгляд, имеющихся уровней
+изоляции должно быть достаточно… Так вот, Liquid — система очень ограниченная.</p>
+
+<p>В языке есть, в принципе, объекты или структуры, но создать их нельзя. Есть массивы, но чтобы создать массив, нужно пропустить
+пустую строку, через фильтр <code class="language-plaintext highlighter-rouge">split</code><sup id="fnref:ea"><a href="#fn:ea" class="footnote" rel="footnote" role="doc-noteref">5</a></sup>. Вообще всё делается через фильтры и выглядит это несколько странно. Точнее, в выражении
+подстановки <code class="language-plaintext highlighter-rouge">{{ ... }}</code> это выглядит хорошо, а вот если мы хотим присвоить значение переменной —
+несколько избыточно, особенно в инструкции <code class="language-plaintext highlighter-rouge">{% assign ... %}</code>.</p>
+
+<p>Например, мы можем сделать так:</p>
+
+<figure class="highlight">
+  <pre><code class="language-liquid" data-lang="liquid">&lt;span class="<span class="cp">{{</span><span class="w"> </span><span class="nv">include</span><span class="p">.</span><span class="nv">class</span><span class="w"> </span><span class="cp">}}</span>"&gt;<span class="cp">{{</span><span class="w"> </span><span class="nv">include</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="cp">}}</span>&lt;/span&gt;</code></pre>
+</figure>
+
+<p>Но если мы захотим передать такую составную строку как параметр в какой-то другой <code class="language-plaintext highlighter-rouge">{% include ... %}</code>,
+то вынуждены сначала присвоить ее переменной. И выглядеть это будет так:</p>
+
+<figure class="highlight">
+  <pre><code class="language-liquid" data-lang="liquid"><span class="cp">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'&lt;span class="'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="nv">include</span><span class="p">.</span><span class="nv">class</span><span class="w">
+                                </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="s1">'"&gt;'</span><span class="w">
+                                </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="nv">include</span><span class="p">.</span><span class="nv">title</span><span class="w">
+                                </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="s1">'&lt;/span&gt;'</span><span class="w"> </span><span class="cp">%}</span></code></pre>
+</figure>
+
+<p>Впрочем, не все так страшно — можно сделать так:</p>
+
+<figure class="highlight">
+  <pre><code class="language-liquid" data-lang="liquid"><span class="cp">{%</span><span class="w"> </span><span class="nt">capture</span><span class="w"> </span><span class="nv">var</span><span class="w"> </span><span class="cp">%}</span>
+&lt;span class="<span class="cp">{{</span><span class="w"> </span><span class="nv">include</span><span class="p">.</span><span class="nv">class</span><span class="w"> </span><span class="cp">}}</span>"&gt;<span class="cp">{{</span><span class="w"> </span><span class="nv">include</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="cp">}}</span>&lt;/span&gt;
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endcapture</span><span class="w"> </span><span class="cp">%}</span></code></pre>
+</figure>
+
+<p>Но выглядит довольно непривычно.</p>
+
+<p>Еще один момент — и это уже хорошо прикрытые грабли — то, что нет областей видимости и, соответственно, локальных переменных.
+Единственный способ организовать нечто подобное — это те самые параметры <code class="language-plaintext highlighter-rouge">{% include ... %}</code>, с ними
+можно даже использовать рекурсию<sup id="fnref:rec"><a href="#fn:rec" class="footnote" rel="footnote" role="doc-noteref">6</a></sup>, других-то подпрограмм у нас нет. Тот факт, что при общей глобальности всех переменных,
+параметры <code class="language-plaintext highlighter-rouge">include</code> не перезатирают друг друга при вложенных вызовах, оказался для меня приятным сюрпризом и большим удобством.</p>
+
+<p><em>В-третьих</em>, непонятки случаются и с объектами, предоставляемыми Jekyll. Например, объект <code class="language-plaintext highlighter-rouge">page</code> почему-то не предоставляет
+свойство <code class="language-plaintext highlighter-rouge">name</code>, хотя оно <a href="https://jekyllrb.com/docs/variables/#page-variables" title="Variables | Jekyll">есть в документации</a> (а еще лучше было бы <code class="language-plaintext highlighter-rouge">basename</code>), поэтому для страниц рубрик, то есть «категорий»
+в терминологии Jekyll, приходится задавать вручную свойство <code class="language-plaintext highlighter-rouge">category_id</code>, хотя поначалу хотелось обойтись просто именованием
+файлов.</p>
+
+<p><em>И, last but not least</em>, принцип Jekyll: один входной файл дает один выходной, сгенерировать несколько представлений для одной
+страницы мы не можем. Есть, правда, объект <code class="language-plaintext highlighter-rouge">paginator</code>, но он работает только со всеми постами сразу, без категорий, или какой-то
+еще фильтрации. Отсюда и такое мое решение, когда последние посты показываются, как принято в блогах, до ката, а дальше одна
+страница с хронологией и только заголовками.</p>
+
+<p>Вообще, конечно, <em>Jekyll отлично расширяется</em>, даже в части тегов Liquid, посредством плагинов, написанных на Ruby. И всё бы было
+хорошо, если б не ограничения GitHub Pages — там допустимы только плагины из заранее определенного списка (и еще версия Jekyll
+не самая распоследняя<sup id="fnref:pages-vers"><a href="#fn:pages-vers" class="footnote" rel="footnote" role="doc-noteref">7</a></sup>). Приходится довольствоваться малым. Или, как вариант, переходить на ло­каль­ную генерацию, отправляя
+на Pa­ges только финальный результат.</p>
+
+<h4 id="markdown">
+<a class="anchor" href="#markdown" aria-hidden="true"><span class="octicon octicon-link"></span></a>Markdown</h4>
+
+<p>Нетрудно догадаться, что маркдаун у меня активно перемежается с разной более сложной версткой. И в первую очередь, это картинки,
+обтекаемые текстом. На этой итерации я вынес их формирование в отдельный <code class="language-plaintext highlighter-rouge">include</code> и обернул в тег <code class="language-plaintext highlighter-rouge">&lt;figure&gt;</code> для семантичности.
+При этом столкнулся с таким моментом: маркдаун упорно пытается обернуть теги <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> внутрь тегов <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code>, да еще и лажает
+с последовательностью закрывающих тегов (получается что-то типа <code class="language-plaintext highlighter-rouge">&lt;figure&gt;&lt;p&gt;...&lt;/figure&gt;&lt;/p&gt;</code>) и вся верстка рушится. Вообще,
+по умолчанию такого бы не происходило, но у меня вручную в <code class="language-plaintext highlighter-rouge">_config.yml</code><sup id="fnref:cfg"><a href="#fn:cfg" class="footnote" rel="footnote" role="doc-noteref">8</a></sup> выставлен параметр <code class="language-plaintext highlighter-rouge">kram­down.​parse_​block_​html</code> в <code class="language-plaintext highlighter-rouge">true</code>,
+поскольку как правило парсинг внутри блочных тегов мне нужен. Однако, его можно запретить и локально, указав в самом теге
+«атрибут» <code class="language-plaintext highlighter-rouge">markdown="0"</code>. При этом, как выяснилось, внутри во вложенных тегах, это поведение можно и скорректировать, так что
+в <code class="language-plaintext highlighter-rouge">&lt;figcaption&gt;</code> я выставил <code class="language-plaintext highlighter-rouge">markdown="span"</code> (то есть обрабатывать только inline-разметку, не добавляя никаких <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code>) и доволен,
+как слон<sup id="fnref:img"><a href="#fn:img" class="footnote" rel="footnote" role="doc-noteref">9</a></sup>.</p>
+
+<h4 id="оглавление">
+<a class="anchor" href="#%D0%BE%D0%B3%D0%BB%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Оглавление</h4>
+
+<p>Очень полезный модуль <strong><a href="https://github.com/allejo/jekyll-toc" class="fa-icon-github">allejo/jekyll-toc</a></strong>, я даже в футере на него решил ссылку сделать, если
+вы читаете эту страницу на достаточно большом экране, обратите внимание на <a href="#toc">соответствующий блок</a> в правом верхнем углу
+(куда его вписать на узких экранах, я пока не решил). Также рекомендую обратить внимание на его параметры, в частности <code class="language-plaintext highlighter-rouge">h_max</code>
+и <code class="language-plaintext highlighter-rouge">skip_no_ids</code>. Последний позволяет игнорировать заголовки без атрибута <code class="language-plaintext highlighter-rouge">id</code> (или с пустым), чего можно добиться в mark­down
+указав <code class="language-plaintext highlighter-rouge">{: id=""}</code> непосредственно перед строкой заголовка.</p>
+
+<h3 id="верстка">
+<a class="anchor" href="#%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Верстка</h3>
+
+<h4 id="grid--flex">
+<a class="anchor" href="#grid--flex" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grid &amp; Flex</h4>
+
+<p>Это настолько удобные и <em>правильные</em> способы верстки, что совершенно не понятно, почему до сих пор не все ими пользуются.
+Особенно сейчас, когда реально требуется поддержка разных устройств. Выбор между ними прост: <code class="language-plaintext highlighter-rouge">flex</code> для однородных элементов,
+<code class="language-plaintext highlighter-rouge">grid</code> — для разнородных.</p>
+
+<p>Единственная закавыка, которую я могу упомянуть — это невозможность рисовать границы сквозь <code class="language-plaintext highlighter-rouge">gap</code>, в результате чего у меня
+в основном макете вместо простого указания этого свойства между основным текстом и правой панелью введена дополнительная
+пустая фиксированная колонка. Если бы я не изгалялся с забрасыванием на средней ширине блока поиска в заголовок, можно было б
+так не заморачиваться, наверное… А может быть, я че­го-то просто не знаю.</p>
+
+<h4 id="картинки-и-фреймы">
+<a class="anchor" href="#%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8-%D0%B8-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Картинки и фреймы</h4>
+
+<p>Когда мы заворачиваем <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> или <code class="language-plaintext highlighter-rouge">&lt;iframe&gt;</code> в <code class="language-plaintext highlighter-rouge">&lt;figure&gt;</code>, важно поставить им <code class="language-plaintext highlighter-rouge">dis­play:​block;​width:​100%;</code>, а фрейму еще и подходящее
+значение <code class="language-plaintext highlighter-rouge">as­pect-ra­tio</code>.</p>
+
+<p>Причем проблема с тоненькой полосой между нижней границей фрейма или картинки и нижней границей оборачивающего блока, судя
+по результатам гугленья, возникает у многих, но отвечают им в основном банальности про отступы (которые, конечно, контролировать
+нужно, но это первое, что человек проверяет), а про <code class="language-plaintext highlighter-rouge">display:block;</code> не пишут. Тогда как реально эта тонкая полоска — расстояние
+от baseline до предела выносных элементов шрифта, и можно, конечно, вылечить ее выставлением правильного <code class="language-plaintext highlighter-rouge">vertical-align</code>, но не нужно,
+изменение <code class="language-plaintext highlighter-rouge">display</code> тут более адекватно.</p>
+
+<p>Что касается <code class="language-plaintext highlighter-rouge">width:100%;</code> (или <code class="language-plaintext highlighter-rouge">max-width</code>) тут все достаточно очевидно — это свойство нужно, чтобы можно было указывать конкретную
+ширину только один раз — для окружающего блока. Альтернативой могло бы быть использование изображений с уже подогнанными размерами…
+Но, как можно видеть, например, в посте «<a href="/2021/03/resize-png.html" title="Способы ресайза картинок формата PNG — какие возможности у нас есть под Linux...">О ресайзе PNG на примерах</a>», в некоторых случаях
+(и не редких — скриншоты в формате PNG) уменьшенное изображение весит <em>больше</em>, и существенно, чем исходное, при этом уменьшение
+средствами браузера не сказать, чтоб уступает предварительной подготовке.</p>
+
+<p>Ну, а уж для фреймов, скажем, гуглокарт<sup id="fnref:gm"><a href="#fn:gm" class="footnote" rel="footnote" role="doc-noteref">10</a></sup> выставление <code class="language-plaintext highlighter-rouge">dis­play:​block;​width:​100%;​as­pect-ra­tio:​1/1;</code> просто единственный способ получить
+адекватную адаптивную верстку.</p>
+
+<h4 id="иконки">
+<a class="anchor" href="#%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Иконки</h4>
+
+<p>Они у меня имеются в двух видах:</p>
+
+<dl>
+  <dt>Шрифтовые</dt>
+  <dd>
+    <p>посредством Font Awesome — для маркировки категорий и прочей служебности. Главный
+плюс — легко стилизуются, в частности по цвету. Главный минус — ограниченный набор.</p>
+  </dd>
+  <dt>Картинками</dt>
+  <dd>
+    <p>в основном тексте маркируют всяческие важные ссылки. Отсутствие стилизации тут не очень мешает —
+да, они несколько выбиваются, но ведь и обозначают <em>внешние</em> ресурсы. Однако с ними обнаружились подводные камни.</p>
+
+    <p>Если шрифтовые прекрасно работают как через псевдоэлемент <code class="language-plaintext highlighter-rouge">::before</code> для тегов <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> и <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code>, так и <code class="language-plaintext highlighter-rouge">::marker</code>
+для элементов списков, то картинки в качестве <em>маркера списка</em> отображаться у меня отказались. Вероятно, я чего-то
+недопонимаю.</p>
+
+    <p>Единственный способ сделать так, чтобы иконки <em>не отрывались</em> от собственно элемента, которому они предшествуют —
+задать этому элементу, всему, <code class="language-plaintext highlighter-rouge">white-space:nowrap;</code>. А если он длинный и его нужно переносить внутри? Приходится
+делать дополнительный внутренний <code class="language-plaintext highlighter-rouge">&lt;span&gt;</code>, совершенно не семантичный. Это, вероятно, как-то связано с тем, что
+свойство <code class="language-plaintext highlighter-rouge">content</code> у них пустое, а картинка грузится через <code class="language-plaintext highlighter-rouge">background-image</code>, т.е. <em>в качестве фона</em>, а иначе
+не хочет корректно масштабироваться. Отсюда и еще один косяк — по умолчанию их не видно на печати, нужно ставить
+галочку в диалоге «Печатать фон» (а кто это будет делать?).</p>
+
+    <p>Еще один момент: некоторые SVG-иконки некорректно отображаются браузерами (как Firefox, так и Chrome) — например,
+найденные мной на Википедии иконки <a href="/assets/img/ico/darktable.svg" title="SVG-иконка Darktable">Dark­tab­le</a> и <a href="/assets/img/ico/luminance-hdr.svg" title="SVG-иконка Luminance HDR">Lu­mi­nan­ce HDR</a> (сама Википедия традиционно использует
+рендеринг SVG в PNG нескольких размеров, ей не мешает).</p>
+  </dd>
+</dl>
+
+<p>Чтобы упростить создание стилей для иконок я воспользовался структурами <code class="language-plaintext highlighter-rouge">map</code> и циклами SASS/SCSS, что можно посмотреть
+в исходниках в файле
+<strong><a href="https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_sass/nova/icons.scss" class="fa-icon-github">icons.scss</a></strong>.
+Вообще, я был раньше знаком с SASS/SCSS, но как-то недооценивал, насколько это удобно и экономит усилия, <em>особенно при рефакторинге</em>.</p>
+
+<h4 id="стихи">
+<a class="anchor" href="#%D1%81%D1%82%D0%B8%D1%85%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Стихи</h4>
+
+<p>Собственно, все, что относится к верстке стихов, расположено в одном файле
+<strong><a href="https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_sass/nova/content/verse.scss" class="fa-icon-github">verse.scss</a></strong>,
+и он небольшой. А ключевая часть выглядит так:</p>
+
+<figure class="highlight">
+  <pre><code class="language-scss" data-lang="scss"><span class="nc">.verse</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">table</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0px</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">clear</span><span class="p">:</span> <span class="nb">both</span><span class="p">;</span>
+
+  <span class="nt">p</span> <span class="p">{</span>
+    <span class="nl">text-align</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
+    <span class="nl">hyphens</span><span class="p">:</span> <span class="n">manual</span><span class="p">;</span>
+    <span class="nl">white-space</span><span class="p">:</span> <span class="nb">pre</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</figure>
+
+<h4 id="печать">
+<a class="anchor" href="#%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Печать</h4>
+
+<p>Тут понадобилось обратное действие — разрешить переносы в фрагментах кода, тогда как на экране слишком широкий <code class="language-plaintext highlighter-rouge">&lt;pre&gt;</code> имеет
+горизонтальную прокрутку<sup id="fnref:pp"><a href="#fn:pp" class="footnote" rel="footnote" role="doc-noteref">11</a></sup>.</p>
+
+<figure class="highlight">
+  <pre><code class="language-scss" data-lang="scss"><span class="nt">pre</span> <span class="p">{</span>
+  <span class="nl">overflow-x</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+
+  <span class="k">@media</span> <span class="n">print</span> <span class="p">{</span>
+    <span class="nl">overflow-x</span><span class="p">:</span> <span class="nb">visible</span><span class="p">;</span>
+    <span class="nl">white-space</span><span class="p">:</span> <span class="nb">pre-wrap</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre>
+</figure>
+
+<p>Еще для печати получилось по рецепту из интернетов<sup id="fnref:water"><a href="#fn:water" class="footnote" rel="footnote" role="doc-noteref">12</a></sup> сделать watermark, хотя это, конечно, чистые понты. И не получилось
+найти рабочий рецепт для нумерации страниц. Вообще, такое ощущение, что стилизация печати настолько никому не нужна, что никто
+ей и не занимается… Так что, если печатными версиями статей заморачиваться всерьез, стоит генерировать из них PDF не через HTML,
+а через LaTeX посредством какого-нибудь <strong><a href="https://pandoc.org/" title="Pandoc — a universal document converter">pandoc</a></strong>.</p>
+
+<h3 id="разное">
+<a class="anchor" href="#%D1%80%D0%B0%D0%B7%D0%BD%D0%BE%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Разное</h3>
+
+<p>Для адекватного отображения на устройствах с разной плотностью пикселей нужно не забывать про метатег <code class="language-plaintext highlighter-rouge">viewport</code>.</p>
+
+<figure class="highlight">
+  <pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span></code></pre>
+</figure>
+
+<hr>
+
+<p>Для переноса длинных URL (или других длинных последовательностей букв, где нежелательно использовать символ мягкого перноса <code class="language-plaintext highlighter-rouge">&amp;shy;</code>), можно
+использовать пробел нулевой ширины — <code class="language-plaintext highlighter-rouge">&amp;#x200B;</code> (HTML-мнемоники он, к сожалению, не имеет). Что до меня, то я его настроил на клавиатуре как
+<code class="language-plaintext highlighter-rouge">[L3]+[B]</code>, см. пост «<a href="/2021/03/typo-keyboard.html" title="Настройка клавиатуры в Linux для ввода различных символов, таких как, например, длинное тире, кавычки-ёлочки, знак копирайта и так далее. В редакции 2021 года.">Ввод «типографских» символов с клавиатуры (ed. 2021)</a>», а мягкий перенос — как <code class="language-plaintext highlighter-rouge">[L3]+[N]</code>. Буквы
+выбраны просто из со­об­ра­же­ний удобства, без ка­ко­го-ли­бо смысла или мне­мо­ни­чес­ко­го правила.</p>
+
+<hr>
+
+<p>В CSS есть интересный псевдокласс <code class="language-plaintext highlighter-rouge">:target</code>, который позволяет выделить элемент, на который ведет ссылка (<code class="language-plaintext highlighter-rouge">#id</code>). Для примера посмотрите
+на <a href="#feeds">блок подписок</a>. Выше по тексту есть еще ссылки на другие блоки.</p>
+
+<hr>
+
+<p>Сделал нынче таки кнопку возврата к началу страницы,
+см. <strong><a href="https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/assets/js/topper.js" class="fa-icon-github">topper.js</a></strong>,
+<strong><a href="https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_sass/nova/dyn/topper.scss" class="fa-icon-github">topper.scss</a></strong>
+и <strong><a href="https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_layouts/nova/default.html#L86-L87" class="fa-icon-github">default.html:86-87</a></strong>.
+Очень уж не хватает на мобильном кнопки <code class="language-plaintext highlighter-rouge">[Home]</code>, да и на компьютере бывает удобнее мышкой ткнуть, когда просто читаешь что-то и колесиком скроллишь.</p>
+
+<p>В связи с этим познакомился с <code class="language-plaintext highlighter-rouge">position:sticky;</code>.</p>
+
+<hr>
+
+<p>На этом, наверное, все. Напомню, что <em>исходный код сайта открыт и доступен для изучения на <strong><a href="https://github.com/shikhalev/shikhalev.github.io" title="Исходники данного сайта" class="fa-icon-github">GitHub</a></strong></em>. Если что-то в коде непонятно,
+комментарии к этому посту — подходящее место для вопросов.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:last-comments">
+      <p>На самом деле — не на всех… В разделе «<a href="/text/" title="Попытки литературного творчества">Тексты</a>» я этот блок отключил как отвлекающий. Но это такой очень специальный раздел. <a href="#fnref:last-comments" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:js">
+      <p>Сейчас у меня JS используется в двух местах: это обслуживание комментариев (там без него не получится, или получится крайне неадекватно,
+   организовать ответы друг другу, и плюс попытка подтягивать обновленные комментарии в фоне) и кнопка «<span class="fas dark"></span>»,
+   то есть «Вернуться в начало страницы». См. <a href="https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/assets/js/comments.js" class="fa-icon-github">comments.js</a> и <a href="https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/assets/js/topper.js" class="fa-icon-github">topper.js</a> соответственно. <a href="#fnref:js" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:devicon">
+      <p>Впрочем, один из источников стоит особой благодарности — <a href="https://devicon.dev/">https://devicon.dev/</a>. <a href="#fnref:devicon" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:yoomoney">
+      <p>Бывшие Ян­декс.День­ги. <a href="#fnref:yoomoney" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:ea">
+      <p>Пример такого создания пустого массива см. в <a href="https://github.com/shikhalev/shikhalev.github.io/blob/4581f645b090fa767625dbd3da690e47d3bfcb69/_includes/nova/aside/last_comments.liquid#L3" class="fa-icon-github">last_comments.liquid:3</a> — дело в том, что комментарии хранятся сгруппированные по постам, тогда как в данном месте мне нужно получить их общий список. Возможно, имеет смысл переделать саму схему хранения, но пока так. <a href="#fnref:ea" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:rec">
+      <p>Пример рекурсии см. в <a href="https://github.com/shikhalev/shikhalev.github.io/blob/4581f645b090fa767625dbd3da690e47d3bfcb69/_includes/nova/utils/chain.liquid#L3" class="fa-icon-github">chain.liquid:3</a> — там я рекурсивно получаю цепочку родительских категорий от текущей к корню. <a href="#fnref:rec" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:pages-vers">
+      <p>Очень желательно эту самую версию зафиксировать и для локальной разработки через <code class="language-plaintext highlighter-rouge">Gemfile</code>, и/или добавить там зависимость от гема
+           <code class="language-plaintext highlighter-rouge">github-pages</code>, который зафиксирует и версию Jekyll, и версии используемых плагинов. Иначе может получиться так, что прекрасно
+           работающий локально сайт свалится на деплое. <a href="#fnref:pages-vers" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:cfg">
+      <p>См. <a href="https://github.com/shikhalev/shikhalev.github.io/blob/main/_config.yml" class="fa-icon-github">файл в репозитории</a>. <a href="#fnref:cfg" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:img">
+      <p>См. исходники <a href="https://github.com/shikhalev/shikhalev.github.io/blob/4581f645b090fa767625dbd3da690e47d3bfcb69/_includes/image.liquid#L39-L50" class="fa-icon-github">image.liquid:39-50</a>. <a href="#fnref:img" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:gm">
+      <p>Пример внедрения гуглокарты см. в посте «<a href="/2021/06/walk.html" title="Немного о том, как я снимаю птиц и не только, на примере одного дня.">Мини-экспедиция</a>». <a href="#fnref:gm" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:pp">
+      <p>См. исходники <a href="https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_sass/nova/content/code.scss#L10-L17" class="fa-icon-github">code.scss:10-17</a>. <a href="#fnref:pp" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:water">
+      <p>Сейчас не могу найти, откуда срисовывал, но практически то же самое тут: <a href="https://csslayout.io/patterns/watermark/">https://csslayout.io/patterns/watermark/</a>. Как это выглядит у меня можно посмотреть в файлах: <a href="https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_sass/nova/dyn/watermark.scss" class="fa-icon-github">watermark.scss</a> — стили, и, великом и ужасном <a href="https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_layouts/nova/default.html#L25-L31" class="fa-icon-github">default.html:25-31</a> — разметку. <a href="#fnref:water" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2022.10.31 |</span>
+            <a href="/2022/10/harddybr.html" title="Некоторые заметки после обновления компьютера">Большой дыбр по железу</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a>​<a class="fa-icon-calendar-alt" href="/life/dybr/" title="Просто кусочки повседневности">Дыбр</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2019.09.21 |</span>
+            <a href="/2019/09/darktable-quickstart.html" title="Настоящим постом я хочу рассказать, какие я использую настройки для уменьшения телодвижений в процессе обработки фотографий, и какие же движения никто не отменял. Сразу скажу, что это а) мой личный опыт, б) только базовая обработка. Повторять страницы мануала нет никакого желания, а если говорить об осмысленном применении всех возможностей, то и компетентности.">Darktable — (не очень) быстрый старт</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.03.16 |</span>
+            <a href="/2021/03/rust-small-stone.html" title="Нечастый случай, когда Rust (его стандартная библиотека) прямо-таки подталкивает сделать ошибку по невнимательности при чтении из файла в вектор.">Небольшой подводный камень в Rust</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-rust" href="/tech/programming/rust/" title="Язык программирования Rust">Rust</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#выбор-технологий">Выбор технологий</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#бэкенд">Бэкенд</a></li>
+<li class="toc-entry toc-h3"><a href="#фронтенд">Фронтенд</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#внешние-ресурсы">Внешние ресурсы</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#разработка">Разработка</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#jekyll">Jekyll</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#markdown">Markdown</a></li>
+<li class="toc-entry toc-h4"><a href="#оглавление">Оглавление</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#верстка">Верстка</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#grid--flex">Grid &amp; Flex</a></li>
+<li class="toc-entry toc-h4"><a href="#картинки-и-фреймы">Картинки и фреймы</a></li>
+<li class="toc-entry toc-h4"><a href="#иконки">Иконки</a></li>
+<li class="toc-entry toc-h4"><a href="#стихи">Стихи</a></li>
+<li class="toc-entry toc-h4"><a href="#печать">Печать</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#разное">Разное</a></li>
+</ul>
+</li>
+</ul>
+</aside><aside id="backs" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

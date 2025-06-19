@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>FPC-Notes: Начало работы | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="FPC-Notes: Начало работы" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Очевидно, чтобы использовать Free Pascal, первым делом нам надо откуда-то его взять и установить на свой компьютер." />
+<meta property="og:description" content="Очевидно, чтобы использовать Free Pascal, первым делом нам надо откуда-то его взять и установить на свой компьютер." />
+<link rel="canonical" href="https://shikhalev.github.io/2011/11/fpc-start.html" />
+<meta property="og:url" content="https://shikhalev.github.io/2011/11/fpc-start.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/2011/11/01/fpc-start/fpc-win32-setup-640x640-500-261-0-0.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-11-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/img/2011/11/01/fpc-start/fpc-win32-setup-640x640-500-261-0-0.webp" />
+<meta property="twitter:title" content="FPC-Notes: Начало работы" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2011-11-01T00:00:00+00:00","datePublished":"2011-11-01T00:00:00+00:00","description":"Очевидно, чтобы использовать Free Pascal, первым делом нам надо откуда-то его взять и установить на свой компьютер.","headline":"FPC-Notes: Начало работы","image":"https://shikhalev.github.io/img/2011/11/01/fpc-start/fpc-win32-setup-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/2011/11/fpc-start.html"},"url":"https://shikhalev.github.io/2011/11/fpc-start.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-keyboard" href="/tech/programming/fpc/" title="Free Pascal Compiler, Lazarus и все, что с ними связано">FPC</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">FPC-Notes: Начало работы</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2011%2F11%2Ffpc-start.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2011%2F11%2Ffpc-start.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2011%2F11%2Ffpc-start.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2011%2F11%2Ffpc-start.html&text=FPC-Notes%3A+%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE+%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=FPC-Notes%3A+%D0%9D%D0%B0%D1%87%D0%B0%D0%BB%D0%BE+%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B&url=https%3A%2F%2Fshikhalev.github.io%2F2011%2F11%2Ffpc-start.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2011-11-01T00:00:00+00:00" itemprop="datePublished">2011.11.01
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#Pascal">Pascal</a>​<a class="tag" href="/tags#компиляторы">компиляторы</a>​<a class="tag" href="/tags#свободное ПО">свободное ПО</a>​<a class="tag" href="/tags#установка">установка</a>​<a class="tag" href="/tags#языки программирования">языки программирования</a></aside></header><div itemprop="articleBody">
+  <figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2011/11/01/fpc-start/fpc-win32-setup-fhd.webp" class="__image_link"><img src="/img/2011/11/01/fpc-start/fpc-win32-setup-320.webp" class="__image" alt="Окно установщика FPC для Win32" title="Окно установщика FPC для Win32"></a></figure>
+
+<p class="note italic">Предварительно хочу сказать, что данная заметка является непосредственным продолжением <strong><a href="/2011/10/what-is-free-pascal.html">«Что такое Free Pascal?»</a></strong>,
+а не <strong><a href="/2011/10/fpc-hello-world.html">«Hello, World!»</a></strong></p>
+
+<p>Очевидно, чтобы использовать Free Pascal, первым делом нам надо откуда-то его взять и установить на свой компьютер.
+Для этого нужно зайти на официальный сайт в раздел «Download» <a href="/2011/11/fpc-start.html#cite-download">[1]</a> и выбрать дистрибутив для своей системы.
+Далее следовать инструкциям на сайте. Для разных систем предусмотрены различные адекватные системы установки (на врезке
+показан установщик для Win32), в том числе deb- и rpm-пакеты для распространенных дистрибутивов Linux, dmg-образ
+для Mac OS X и т.д.</p>
+
+<p>Таким образом вы получите последний стабильный релиз. Пользователям Linux имеет смысл предварительно выяснить, нет ли пакета
+<code class="language-plaintext highlighter-rouge">fpc</code> в репозиториях родного дистрибутива… Скорее всего он там найдется, но далеко не факт, что свежей версии<sup id="fnref:packages"><a href="#fn:packages" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>.</p>
+
+<!--more-->
+
+<h2 id="версии">
+<a class="anchor" href="#%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Версии</h2>
+
+<table id="vvs" class="right" style="max-width:400px;">
+<tr>
+<th align="center">Ветвь</th>
+<th align="center">Версия</th>
+<th align="center">SVN</th>
+</tr>
+<tr>
+<td align="center" rowspan="2">стабильная</td>
+<td align="center"><b>2.4.4</b></td>
+<td align="center"><i>нет</i></td>
+</tr>
+<tr>
+<td align="center">2.4.5 → 2.4.6</td>
+<td align="center"><code>[fixes_2_4]</code></td>
+</tr>
+<tr>
+<td align="center">бета</td>
+<td align="center">2.5.1 → 2.6.0</td>
+<td align="center"><code>[fixes_2_6]</code></td>
+</tr>
+<tr>
+<td align="center">нестабильная</td>
+<td align="center">2.7.1 → <i>2.8.0 (?)</i>
+</td>
+<td align="center"><code>[trunk]</code></td>
+</tr>
+<caption>Табл. 1: Ветви и версии Free Pascal</caption>
+</table>
+
+<p>Чтобы не возникало недопонимания и путаницы, давайте сразу определимся с версиями. Во-первых, разработка Free Pascal
+делится на две ветви — стабильную и нестабильную. Внешнее отличие между ними — вторая цифра версии — четная для стабильной
+ветви и нечетная для нестабильной соответственно. Нестабильная предназначена для тех, кто хочет поучаствовать в разработке,
+нуждается в наиновейших возможностях, или просто любит эксперименты. Во-вторых, третья цифра версии четная для официальных
+релизов, и нечетная для всего остального. Все остальное здесь — это и нестабильная ветка, и текущие, еще не вошедшие в релиз,
+исправления в стабильной. Постепенно исправления накапливаются, тестируются и попадают в сле­ду­ю­щий стабильный
+релиз, вторая цифра номера которого увеличивается на два. Это общепринятая, хоть и не обязательная практика для свободных
+проектов, так что у пользователей, например, Linux такая схема нумерации не должна вызвать затруднений.</p>
+
+<p>В некоторые периоды времени (например, сейчас, когда я все это пишу) существует не две, а три ветви разработки: третья —
+это бета следующего мажорного релиза, т.е. релиза, который отличается от предыдущего не только исправлениями, но и новым
+функционалом (и, как минимум, второй цифрой в номере). На врезке (<a href="#vvs">табл. 1</a>) показана сегодняшняя<sup id="fnref:now"><a href="#fn:now" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> ситуация.
+Понимать ее следует так — если вы сейчас тем или иным образом, о которых мы поговорим чуть ниже, получите с официального
+сайта дистрибутив Free Pascal, он может быть одной из следующих версий:</p>
+
+<dl>
+  <dt>2.4.4</dt>
+  <dd>
+    <p>— стабильный релиз, берется с основной страницы скачивания, рекомендуется для реальной работы, а так же для начального
+знакомства с компилятором.</p>
+  </dd>
+  <dt>2.4.5</dt>
+  <dd>
+    <p>— исправления к стабильному релизу. В дальнейшем эта версия должна превратиться в релиз 2.4.6 (если не получится так,
+что 2.6.0 выйдет раньше). Рекомендуется в том случае, если вам важны именно эти исправления. Шансов, что в данной версии
+что-то поломано относительно релиза, немного, поскольку никакая новая функциональность сюда не вносится — только исправление
+ошибок, но тем не менее, полностью исключить такую возможность нельзя. Можно сказать, что эта версия для тех, кто активно
+пользуется багтрекером <a href="#cite-bugs">[2]</a>.</p>
+  </dd>
+  <dt>2.5.1</dt>
+  <dd>
+    <p>— то же самое, что 2.6.0-rc1, если вы понимаете, о чем я. То есть — это готовящийся к выходу релиз 2.6.0. Внесение новой
+функциональности сюда также заморожено, идет доводка и тестирование. Однако от 2.4.x он отличается именно новыми возможностями.
+Рекомендуется… дождаться релиза, судя по всему. Взять эту версию можно только с SVN, в отличие от всех остальных.</p>
+  </dd>
+  <dt>2.7.1</dt>
+  <dd>
+    <p>— нестабильная ветка, разработка будущих версий. Я не могу с уверенностью сказать, что это — готовящийся релиз 2.8.0,
+поскольку а) разработчики могут решить выпустить после 2.6 сразу 3.0, если количественно и качественно он покажется
+слишком новым (или просто так захотят), и б) некоторые функции, уже работающие, но недостаточно стабильные, могут
+не войти в следующий релиз, а остаться в дальнейшей разработке надолго. Рекомендуется тем, кто хочет сам принять участие
+в разработке, кто любит эксперименты и не боится трудностей. Поскольку сюда постоянно добавляется новый функционал,
+ни о какой стабильности речи и быть не может.</p>
+  </dd>
+</dl>
+
+<p>Что еще можно сказать о версиях? Во-первых, когда вы это будете читать, номера версий могут быть уже другими, тогда как общий
+принцип нумерации, скорее всего, сохранится. Во-вторых, бо́льшую часть времени предрелизной ветви не существует, есть только
+стабильная и нестабильная (2.4.x и 2.7.1 на данный момент).</p>
+
+<h3 id="lazarus">
+<a class="anchor" href="#lazarus" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lazarus</h3>
+
+<p>Что касается проекта Lazarus, он еще не дошел до стадии первого релиза… Впрочем, общие принципы нумерации те же, только
+стабильность (относительная) определяется по третьей цифре номера, а не по второй. Сейчас последний релиз — <strong>0.9.30</strong><sup id="fnref:laz"><a href="#fn:laz" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>,
+ветка исправлений к нему имеет номер версии <strong>0.9.30.1</strong>, а ветка разработки — <strong>0.9.31</strong>.</p>
+
+<p>Поскольку разработка ведется очень активно и, в то же время, постоянно оказывается, что чего-то не хватает, я бы, пожалуй,
+все-таки советовал использовать во всех случаях самую свежую версию из ветки разработки. Но ни в коем случае не настаиваю.</p>
+
+<h2 id="где-взять">
+<a class="anchor" href="#%D0%B3%D0%B4%D0%B5-%D0%B2%D0%B7%D1%8F%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Где взять?</h2>
+
+<h3 id="из-репозитория-своего-родного-дистрибутива-linux">
+<a class="anchor" href="#%D0%B8%D0%B7-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D1%81%D0%B2%D0%BE%D0%B5%D0%B3%D0%BE-%D1%80%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE-%D0%B4%D0%B8%D1%81%D1%82%D1%80%D0%B8%D0%B1%D1%83%D1%82%D0%B8%D0%B2%D0%B0-linux" aria-hidden="true"><span class="octicon octicon-link"></span></a>Из репозитория своего родного дистрибутива Linux</h3>
+
+<p>Для этого нужно пользоваться именно этой операционной системой, кроме того, в дистрибутиве должен присутствовать пакет
+<code class="language-plaintext highlighter-rouge">fpc</code>. Устанавливается штатными средствами дистрибутива.</p>
+
+<p>Плюсы — версия протестирована не только разработчиками, но и мейнтейнерами дистрибутива, будет автоматически обновляться
+при обновлении системы, не должно возникнуть никаких проблем с зависимостями. Минусы — версия, скорее всего, будет несколько
+отставать от последнего релиза с сайта.</p>
+
+<h3 id="последний-релиз-с-официального-сайта">
+<a class="anchor" href="#%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BD%D0%B8%D0%B9-%D1%80%D0%B5%D0%BB%D0%B8%D0%B7-%D1%81-%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE-%D1%81%D0%B0%D0%B9%D1%82%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Последний релиз с официального сайта</h3>
+
+<p>Идем на страницу загрузки Free Pascal <a href="#cite-download">[1]</a> или Lazarus <a href="#cite-lazarus">[3]</a>, выбираем свою платформу,
+далее действуем по инструкциям.</p>
+
+<p>Плюсы — последняя стабильная версия, предусмотрены наиболее популярные форматы пакетов под основные платформы (т.е.,
+скорее всего проблем с зависимостями тоже не будет). Минус — по сравнению с предыдущим вариантом — за обновлениями придется
+следить самостоятельно.</p>
+
+<h3 id="снапшот-ночная-сборка-с-официального-сайта">
+<a class="anchor" href="#%D1%81%D0%BD%D0%B0%D0%BF%D1%88%D0%BE%D1%82-%D0%BD%D0%BE%D1%87%D0%BD%D0%B0%D1%8F-%D1%81%D0%B1%D0%BE%D1%80%D0%BA%D0%B0-%D1%81-%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE-%D1%81%D0%B0%D0%B9%D1%82%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Снапшот (ночная сборка) с официального сайта</h3>
+
+<p>Пусть проклянут меня пуристы, но адекватного русского термина для перевода английского «snapshot» лично я не знаю.
+Это сборка, сделанная в какой-то момент времени (как правило, ночью в автоматическом режиме, впрочем, что считать
+ночью для про­ек­та, разработчики которого располагаются в самых разных часовых поясах — тот еще вопрос) из текущих
+исходников. Вообще говоря, работоспособность такой сборки никто не обещает, хотя случаи, когда что-то не работает,
+довольно редки.</p>
+
+<p>Чтобы загрузить снапшот версии исправлений или текущей нестабильной версии (см. выше о версиях), следует отправиться
+на стра­ни­цу разработки <a href="#cite-dev">[4]</a> на официальном сайте — там даются ссылки на соответствующие архивы с исходниками,
+или же на ftp-сервер <a href="#cite-ftp">[5]</a>, в подкаталоги <code class="language-plaintext highlighter-rouge">snapshot/fixes</code> и <code class="language-plaintext highlighter-rouge">snapshot/trunk</code> соответственно — за бинарными
+сборками под свою платформу. Снапшоты Lazarus брать на соответствующей странице его сайта <a href="#site-lazsnap">[6]</a>. Архив
+с бинарниками следует распаковать в со­от­вет­с­т­вии с правилами своей операционной системы, прописать нужные переменные среды
+и т.д. Архив же с исходниками — распаковать и скомпилировать… Впрочем, чуть ниже мы еще поговорим, что делать с исходниками.</p>
+
+<p>Плюсы — самая свежая версия. Минусы — не факт, что работает, устанавливать нужно вручную, понимая, как и что там делается.</p>
+
+<h3 id="текущие-исходники-с-svn">
+<a class="anchor" href="#%D1%82%D0%B5%D0%BA%D1%83%D1%89%D0%B8%D0%B5-%D0%B8%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8-%D1%81-svn" aria-hidden="true"><span class="octicon octicon-link"></span></a>Текущие исходники с SVN</h3>
+
+<p>SVN — Subversion — централизованная система контроля версий. В настоящее время управление исходниками Free Pascal производится
+именно в ней. Это одна из наиболее популярных систем контроля версий вообще и самая популярная среди централизованных.
+Программа-клиент SVN существует практически для всех более-менее распространенных платформ.</p>
+
+<p>Инструкция по получению с SVN исходников Free Pascal находится на уже упоминавшейся странице разработки <a href="#cite-dev">[4]</a>.
+Собственно, даже не знакомый с SVN человек может воспользоваться одной из команд, показанных ниже. Впрочем, документацию
+по Subversion <a href="#cite-svn">[7]</a> почитать все равно не помешает.</p>
+
+<figure class="highlight">
+  <pre><code class="language-bash" data-lang="bash">          <span class="c"># нестабильная версия</span>
+<span class="nv">$ </span>svn checkout http://svn.freepascal.org/svn/fpc/trunk fpc
+          <span class="c"># или — исправления к релизу</span>
+<span class="nv">$ </span>svn checkout http://svn.freepascal.org/svn/fpc/branches/fixes_2_4 fpc
+          <span class="c"># или — готовящийся релиз</span>
+<span class="nv">$ </span>svn checkout http://svn.freepascal.org/svn/fpc/branches/fixes_2_6 fpc
+          <span class="c"># и/или — Lazarus</span>
+<span class="nv">$ </span>svn checkout http://svn.freepascal.org/svn/lazarus/trunk lazarus</code></pre>
+</figure>
+
+<p>Преимущество этого способа в максимальной оперативности, даже по сравнению с предыдущим. Кроме того, можно переключаться
+между ревизиями кода, например, для поиска ошибки. Еще один плюс — в дальнейшем при обновлении не нужно будет качать все
+исходники, достаточно командой <code class="language-plaintext highlighter-rouge">svn update</code> вытянуть только то, что реально изменилось.</p>
+
+<div class="note">
+  <p>В настоящее время все более популярны становятся не централизованные, а распределенные системы контроля версий… Для тех,
+кто, как и я, предпочитает Git <a href="#cite-git">[8]</a>, могу порекомендовать использовать дополнение git-svn <a href="#cite-gitsvn">[9]</a>,
+предназначенное для работы через локальный git-репозиторий с удаленным svn-репозиторием. Очень удобно.</p>
+
+  <p>В этом случае нужно использовать команду <code class="language-plaintext highlighter-rouge">git svn clone</code> вместо <code class="language-plaintext highlighter-rouge">svn checkout</code> и <code class="language-plaintext highlighter-rouge">git svn rebase</code> вместо <code class="language-plaintext highlighter-rouge">svn update</code>.</p>
+</div>
+
+<h2 id="установка">
+<a class="anchor" href="#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Установка</h2>
+
+<p>Как я уже говорил, в случае релиза установка не составит каких-либо сложностей — дистрибутив уже упакован под соответствующие
+системы вместе с рабочими настройками по-умолчанию. Другой случай — бинарный снапшот. Взятый с ftp архив нужно распаковать
+куда-то и отследить некоторые моменты:</p>
+
+<ul>
+  <li>
+    <p>Переменная среды <code class="language-plaintext highlighter-rouge">PATH</code> должна содержать путь к исполняемым файлам Free Pascal — подкаталог <code class="language-plaintext highlighter-rouge">./bin</code> или <code class="language-plaintext highlighter-rouge">./bin/&lt;arch&gt;-&lt;os&gt;</code>
+в каталоге установки.</p>
+
+    <ul>
+      <li>Кроме того, под Linux следует также убедиться, что <code class="language-plaintext highlighter-rouge">PATH</code> содержит путь к исполняемому файлу <code class="language-plaintext highlighter-rouge">ppc386</code> (<code class="language-plaintext highlighter-rouge">ppcx64</code> etc.),
+который располагается в <code class="language-plaintext highlighter-rouge">./lib/fpc/&lt;версия&gt;</code>. А лучше всего сделать на него симлинк в <code class="language-plaintext highlighter-rouge">./bin</code>.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Должен быть установлен (и находиться через <code class="language-plaintext highlighter-rouge">PATH</code>) пакет BinUtils <a href="#cite-binutils">[10]</a>.</p>
+  </li>
+  <li>
+    <p>Следует правильно указать пути к модулям (они находятся в подкаталогах каталога установки <code class="language-plaintext highlighter-rouge">./lib/fpc/&lt;версия&gt;/units/&lt;arch&gt;-&lt;os&gt;/*</code>
+или <code class="language-plaintext highlighter-rouge">./units/&lt;arch&gt;-&lt;os&gt;/*</code>) в конфигурационном файле <code class="language-plaintext highlighter-rouge">fpc.cfg</code>, который компилятор будет искать в ни­же­сле­ду­ю­щем порядке.</p>
+
+    <ul>
+      <li>
+        <p>Под Linux и другими unix-подобными ОС:</p>
+
+        <ol>
+          <li>Домашний каталог (в этом случае ищется скрытый файл с точкой — <code class="language-plaintext highlighter-rouge">.fpc.cfg</code>);</li>
+          <li>Каталог, указанный в переменной окружения <code class="language-plaintext highlighter-rouge">PPC_CONFIG_PATH</code>;</li>
+          <li>В каталоге <code class="language-plaintext highlighter-rouge">etc</code> рядом с каталогом компилятора — если, например, компилятор размещен в <code class="language-plaintext highlighter-rouge">/usr/local/bin</code>, то <code class="language-plaintext highlighter-rouge">fpc.cfg</code>
+будет искаться в <code class="language-plaintext highlighter-rouge">/usr/local/etc</code>;</li>
+          <li>В каталоге <code class="language-plaintext highlighter-rouge">/etc</code>.</li>
+        </ol>
+      </li>
+      <li>
+        <p>Под всеми прочими ОС:</p>
+
+        <ol>
+          <li>Каталог, указанный в переменной окружения <code class="language-plaintext highlighter-rouge">PPC_CONFIG_PATH</code>;</li>
+          <li>Каталог компилятора.</li>
+        </ol>
+      </li>
+    </ul>
+
+    <p>Сами пути к модулям в файле выглядят примерно так (мой рабочий вариант):</p>
+  </li>
+</ul>
+
+<div style="margin-left: 2em;">
+
+  <figure class="highlight">
+    <pre><code class="language-bash" data-lang="bash"><span class="c"># searchpath for units and other system dependent things</span>
+<span class="nt">-Fu</span>/home/iws/opt/fpc/lib/fpc/<span class="nv">$fpcversion</span>/units/<span class="nv">$fpctarget</span>
+<span class="nt">-Fu</span>/home/iws/opt/fpc/lib/fpc/<span class="nv">$fpcversion</span>/units/<span class="nv">$fpctarget</span>/<span class="k">*</span>
+<span class="nt">-Fu</span>/home/iws/opt/fpc/lib/fpc/<span class="nv">$fpcversion</span>/units/<span class="nv">$fpctarget</span>/rtl</code></pre>
+  </figure>
+
+  <p>где <code class="language-plaintext highlighter-rouge">/home/iws/opt/fpc</code> — собственно каталог, куда установлен Free Pascal, а загадочные выражения <code class="language-plaintext highlighter-rouge">$fpcversion</code> и <code class="language-plaintext highlighter-rouge">$fpctarget</code> —
+специальные макросы, которые разворачиваются в соответствующие значения (у меня это получается <code class="language-plaintext highlighter-rouge">2.7.1</code> и <code class="language-plaintext highlighter-rouge">x86_64-linux</code> соответственно).</p>
+</div>
+
+<p>Ну, и нам осталось понять, что же делать с исходниками, если мы решили скачать именно их, или воспользоваться SVN…
+И первое, что нам придется сделать — это установить бинарную версию, поскольку Free Pascal написан на Free Pascal.
+<em>Важно:</em> это должна быть последняя стабильная версия, или снапшот того же времени, что и исходники — снапшот даже
+суточной давности может не подойти (а может и подойти, это уж как повезет). Понятно, что со стабильной будет проще.
+Впрочем, зато для некоторых систем (а именно — для DOS и Windows) можно скачать с ftp-сервера <a href="#cite-ftp">[5]</a> только
+базовый набор — файл <code class="language-plaintext highlighter-rouge">base_w32_vXY.zip</code> или <code class="language-plaintext highlighter-rouge">base_go32_vXY.zip</code>, находящийся рядом с соответствующим бинарным снапшотом.</p>
+
+<p>Если бинарный компилятор корректно установлен, то достаточно в каталоге исходников выполнить две команды: <code class="language-plaintext highlighter-rouge">make build</code> и
+затем <code class="language-plaintext highlighter-rouge">make install</code>. Впрочем, должен отметить существенный недостаток данного способа — факт инсталляции нигде
+не фиксируется и выполнить обратное действие, т.е. — корректную отмену установки — не получится. Поэтому лучше выбрать
+для установки какое-то отдельное место, которое легко очистить и указать его, скомандовав <code class="language-plaintext highlighter-rouge">make install PREFIX=‹путь›</code>.
+Собственно, как можно догадаться из вышеизложенного, я использую <code class="language-plaintext highlighter-rouge">make install PREFIX=$HOME/opt/fpc</code>.</p>
+
+<p>Замечу, что для беспроблемной сборки из исходников необходимо иметь установленный GNU Make <a href="#cite-make">[11]</a>, которого
+на не-unix системах может и не оказаться. Более того, если под Windows у вас установлены какие-то системы разработки,
+такие как Delphi или Visual Studio, то может быть вызван <code class="language-plaintext highlighter-rouge">make.exe</code> из их поставки, а он не совсем совместим. Соответственно,
+нужно установить GNU Make и вызывать именно его (например, указав полный путь к исполняемому файлу <code class="language-plaintext highlighter-rouge">make.exe</code>).</p>
+
+<p>Что касается <strong>Lazarus</strong>, то во-первых, не стоит его инсталлировать куда-либо в системные каталоги — поскольку
+в процессе обычной работы с ним его весьма вероятно придется пересобирать, имеет смысл оставить его там, где
+у пользователя есть полный доступ на запись файлов. Во-вторых, компилировать его лучше командой <code class="language-plaintext highlighter-rouge">make bigide</code>,
+которая сразу соберет и установит в IDE компоненты основных пакетов. В-третьих, для его полноценной работы требуются
+исходники компилятора (точнее RTL), путь к ним вероятнее всего придется указать при первом запуске. При установке Lazarus
+через релизный установщик, или из снапшота, скорее всего, обо всем этом думать не придется — он попросту устанавливает
+с собой все необходимые части Free Pascal, а вот при сборке из исходников — нужно учитывать.</p>
+
+<div class="note" style="margin-top:15px;">
+  <p>В завершение этой заметки опишу свою собственную конфигурацию.</p>
+
+  <ol>
+    <li>
+      <p>У меня установлен пакет fpc из дерева портежей (основного репозитория) Gentoo. Это, соответственно, стабильный релиз
+(не самый последний, но близко к нему).</p>
+    </li>
+    <li>
+      <p>По адресу <code class="language-plaintext highlighter-rouge">$HOME/opt/src/freepascal</code> находится git-репозиторий с текущими исходниками, получаемыми посредством <code class="language-plaintext highlighter-rouge">git-svn</code>.</p>
+    </li>
+    <li>
+      <p>В каталог <code class="language-plaintext highlighter-rouge">$HOME/opt/fpc</code> установлен Free Pascal, собранный из этих исходников. Каталог с исполняемыми файлами
+<code class="language-plaintext highlighter-rouge">$HOME/opt/fpc/bin</code> добавлен в переменную среды <code class="language-plaintext highlighter-rouge">PATH</code>, причем в начало, чтобы <code class="language-plaintext highlighter-rouge">fpc</code> оттуда находился до того, который
+установлен средствами Gentoo. В этом каталоге создан симлинк на исполняемый файл <code class="language-plaintext highlighter-rouge">$HOME/opt/fpc/lib/fpc/2.7.1/ppcx64</code>.</p>
+    </li>
+    <li>
+      <p>Файл конфигурации <code class="language-plaintext highlighter-rouge">fpc.cfg</code> расположен в каталоге <code class="language-plaintext highlighter-rouge">$HOME/opt/fpc/etc</code>. Этот каталог прописан в переменной среды <code class="language-plaintext highlighter-rouge">PPC_CONFIG_PATH</code>.</p>
+    </li>
+    <li>
+      <p>И, наконец, Lazarus расположен в каталоге <code class="language-plaintext highlighter-rouge">$HOME/opt/src/lazarus</code>, опять же — в виде git-репозитория с привязкой через <code class="language-plaintext highlighter-rouge">git-svn</code>.</p>
+    </li>
+  </ol>
+
+  <p>Есть еще некоторые нюансы, но они уже не относятся к установке и начальной настройке.</p>
+</div>
+
+<h2 id="ссылки">
+<a class="anchor" href="#%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ссылки</h2>
+
+<div class="links-box">
+
+  <p id="cite-download">[1] Страница дистрибутивов
+<a href="http://freepascal.org/download.var">http://freepascal.org/download.var</a> [en]</p>
+
+  <p id="cite-bugs">[2] Free Pascal / Lazarus bugtracker
+<a href="http://mantis.freepascal.org/">http://mantis.freepascal.org/</a> [en]</p>
+
+  <p id="cite-lazarus">[3] Дистрибутивы Lazarus
+<a href="http://sf.net/projects/lazarus/files/">http://sf.net/projects/lazarus/files/</a> [en]</p>
+
+  <p id="cite-dev">[4] Страница разработки
+<a href="http://freepascal.org/develop.var">http://freepascal.org/develop.var</a> [en]</p>
+
+  <p id="cite-ftp">[5] Официальный ftp-сервер
+<a href="ftp://ftp.freepascal.org/pub/">ftp://ftp.freepascal.org/pub/</a></p>
+
+  <p id="cite-lazsnap">[6] Снапшоты Lazarus
+<a href="http://www.hu.freepascal.org/lazarus/">http://www.hu.freepascal.org/lazarus/</a> [en]</p>
+
+  <p id="cite-svn">[7] Apache Subversion Documentation
+<a href="http://subversion.apache.org/docs/">http://subversion.apache.org/docs/</a> [en]</p>
+
+  <p id="cite-git">[8] Git — Fast Version Control System
+<a href="http://git-scm.com/">http://git-scm.com/</a> [en]</p>
+
+  <p id="cite-gitsvn">[9] git-svn(1) Manual Page
+<a href="http://schacon.github.com/git/git-svn.html">http://schacon.github.com/git/git-svn.html</a> [en]</p>
+
+  <p id="cite-binutils">[10] GNU Binutils
+<a href="http://www.gnu.org/software/binutils/">http://www.gnu.org/software/binutils/</a> [en]</p>
+
+  <p id="cite-make">[11] GNU Make
+<a href="http://www.gnu.org/s/make/">http://www.gnu.org/s/make/</a> [en]</p>
+
+</div>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:packages">
+      <p>Так, например, на момент написания этих строк в основном дереве портежей Gentoo самая новая версия — 2.4.0,
+         тогда как на сайте — 2.4.4. <a href="#fnref:packages" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:now">
+      <p>На дату написания, т.е. — 30 октября 2011 г. <a href="#fnref:now" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:laz">
+      <p>А вот в дереве портежей Gentoo лежит старинная версия 0.9.28.2-r1… <a href="#fnref:laz" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2020.01.11 |</span>
+            <a href="/2020/01/rack.html" title="Библиотека Rack — простой объектный интерфейс для написания веб-приложений (статья в журнале «Системный администратор»)">Rack — основа веб-фреймворков в Ruby</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a>​<a class="fa-icon-globe" href="/tech/web/" title="HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.">Web</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2022.10.23 |</span>
+            <a href="/2022/10/conky-hwmon.html" title="Скрипт автоопределения номера устройства hwmon по имени">Conky: исправление проблемы с hwmon</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2019.07.17 |</span>
+            <a href="/2019/07/storages.html" title="Небольшой тест имеющихся у меня носителей данных">Поиздевался над железками</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a>​<a class="fa-icon-calendar-alt" href="/life/dybr/" title="Просто кусочки повседневности">Дыбр</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#версии">Версии</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#lazarus">Lazarus</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#где-взять">Где взять?</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#из-репозитория-своего-родного-дистрибутива-linux">Из репозитория своего родного дистрибутива Linux</a></li>
+<li class="toc-entry toc-h3"><a href="#последний-релиз-с-официального-сайта">Последний релиз с официального сайта</a></li>
+<li class="toc-entry toc-h3"><a href="#снапшот-ночная-сборка-с-официального-сайта">Снапшот (ночная сборка) с официального сайта</a></li>
+<li class="toc-entry toc-h3"><a href="#текущие-исходники-с-svn">Текущие исходники с SVN</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#установка">Установка</a></li>
+<li class="toc-entry toc-h2"><a href="#ссылки">Ссылки</a></li>
+</ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/2011/11/fpc-start.html" title="Очевидно, чтобы использовать Free Pascal, первым делом нам надо откуда-то его взять и установить на свой компьютер.">FPC-Notes: Начало работы</a></li></ul>
+    </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

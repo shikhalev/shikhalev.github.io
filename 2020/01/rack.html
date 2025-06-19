@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Rack — основа веб-фреймворков в Ruby | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Rack — основа веб-фреймворков в Ruby" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Библиотека Rack — простой объектный интерфейс для написания веб-приложений (статья в журнале «Системный администратор»)" />
+<meta property="og:description" content="Библиотека Rack — простой объектный интерфейс для написания веб-приложений (статья в журнале «Системный администратор»)" />
+<link rel="canonical" href="https://shikhalev.github.io/2020/01/rack.html" />
+<meta property="og:url" content="https://shikhalev.github.io/2020/01/rack.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/2020/01/11/rack/screen-rack-640x640-500-261-0-0.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-01-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/img/2020/01/11/rack/screen-rack-640x640-500-261-0-0.webp" />
+<meta property="twitter:title" content="Rack — основа веб-фреймворков в Ruby" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2020-01-11T00:00:00+00:00","datePublished":"2020-01-11T00:00:00+00:00","description":"Библиотека Rack — простой объектный интерфейс для написания веб-приложений (статья в журнале «Системный администратор»)","headline":"Rack — основа веб-фреймворков в Ruby","image":"https://shikhalev.github.io/img/2020/01/11/rack/screen-rack-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/2020/01/rack.html"},"url":"https://shikhalev.github.io/2020/01/rack.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a>​<a class="fa-icon-globe" href="/tech/web/" title="HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.">Web</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">Rack — основа веб-фреймворков в Ruby</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2020%2F01%2Frack.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2020%2F01%2Frack.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2020%2F01%2Frack.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2020%2F01%2Frack.html&text=Rack+%E2%80%94+%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%B0+%D0%B2%D0%B5%D0%B1-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2+%D0%B2%C2%A0Ruby">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=Rack+%E2%80%94+%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%B0+%D0%B2%D0%B5%D0%B1-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2+%D0%B2%C2%A0Ruby&url=https%3A%2F%2Fshikhalev.github.io%2F2020%2F01%2Frack.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2020-01-11T00:00:00+00:00" itemprop="datePublished">2020.01.11
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#Rack">Rack</a></aside></header><div itemprop="articleBody">
+  <p><a href="http://samag.ru/archive/article/2952" title="«Системный администратор» №5 (150) за май 2015">Оригинал этой статьи опубликован в журнале «Системный администратор» №5 (150) за май 2015</a>.
+Прошу обратить внимание на год — какие-то моменты могут расходиться с современными версиями языка
+и библиотек…</p>
+
+<hr>
+
+<figure class="__figure __implicit_figure __right" style="max-width:158px;padding: 5px;"><a href="http://samag.ru/archive/article/2952"><img src="/img/2020/01/11/rack/150-158.webp" class="__image"></a></figure>
+
+<div class="note">
+  <p><strong>Библиотека Rack — простой объектный интерфейс для написания веб-приложений.</strong></p>
+
+  <p>Слово «rack» в английском языке имеет множество значений, включая такие, как «пытка» и «разрушение»…
+Однако, надо полагать, название рассматриваемой библиотеки произошло от другой группы смыслов: «стойка»,
+«штатив», «каркас» и т.д. Rack обеспечивает простой и в то же время удобный интерфейс, обеспечивающий
+взаимодействие между веб-сервером и приложением, позволяя программисту сосредоточиться исключительно
+на логике последнего.</p>
+
+  <p>Этот интерфейс достаточно низкоуровневый и не ограничивает разработчика каким-либо заранее заданным
+способом организации приложения и высокоуровневыми абстракциями. Соответственно, он и не предоставляет
+таких абстракций — это уже дело фреймворков, которые работают поверх него: Rails, Sinatra и других.</p>
+</div>
+
+<!--more-->
+
+<h2 id="зачем-знать-rack">
+<a class="anchor" href="#%D0%B7%D0%B0%D1%87%D0%B5%D0%BC-%D0%B7%D0%BD%D0%B0%D1%82%D1%8C-rack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Зачем знать Rack?</h2>
+
+<p>Практически вся веб-разработка на Ruby использует Rack, как правило — посредством того или иного более
+высокоуровневого фреймворка. Но это не обязательно, задачи бывают разные: для каких-то те же Rails
+слишком тяжеловесны, для каких-то — слишком «заточены» под определенное использование и структуру программы.</p>
+
+<p>Можно выделить три цели изучения именно Rack как такового:</p>
+
+<ul>
+  <li>Понимание того, что находится у популярных фреймворков «под капотом», чтобы ориентироваться в более-менее
+сложных случаях, не предусмотренных их создателями.</li>
+  <li>Написание небольших веб-приложений для простых задач, когда использование чего-то более тяжелого будет
+напрасной тратой ресурсов.</li>
+  <li>Разработка сложных и необычных веб-приложений, которые не вписываются в идеологию и структуру существующих
+фреймворков. MVC<sup id="fnref:mvc"><a href="#fn:mvc" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> — хорошая и проверенная временем концепция, но все же не панацея и не «серебряная пуля».</li>
+</ul>
+
+<h2 id="как-это-работает">
+<a class="anchor" href="#%D0%BA%D0%B0%D0%BA-%D1%8D%D1%82%D0%BE-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82" aria-hidden="true"><span class="octicon octicon-link"></span></a>Как это работает</h2>
+
+<p>Для начала установим соответствующий гем:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>gem <span class="nb">install </span>rack
+<span class="go">Fetching: rack-1.6.0.gem (100%)
+Successfully installed rack-1.6.0
+1 gem installed</span></code></pre>
+</figure>
+
+<p>Установить можно было бы и без <code class="language-plaintext highlighter-rouge">sudo</code>, т.е. только для локального пользователя. Но в этом случае мы не сможем
+использовать предоставляемые гемом исполняемые файлы, без которых обойтись можно, но не хочется.</p>
+
+<p>Простейшее веб-приложение может выглядеть, например, так<sup id="fnref:gist"><a href="#fn:gist" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'pp'</span>
+<span class="nb">require</span> <span class="s1">'rack'</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="nb">proc</span> <span class="k">do</span> <span class="o">|</span><span class="n">env</span><span class="o">|</span>
+  <span class="p">[</span>
+    <span class="mi">200</span><span class="p">,</span>
+    <span class="p">{</span> <span class="s1">'Content-Type'</span> <span class="o">=&gt;</span> <span class="s1">'text/plain'</span> <span class="p">},</span>
+    <span class="p">[</span> <span class="n">env</span><span class="p">.</span><span class="nf">pretty_inspect</span> <span class="p">]</span>
+  <span class="p">]</span>
+<span class="k">end</span>
+
+<span class="no">Rack</span><span class="o">::</span><span class="no">Handler</span><span class="o">::</span><span class="no">WEBrick</span><span class="p">.</span><span class="nf">run</span> <span class="n">app</span></code></pre>
+</figure>
+
+<p>Запускаем:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby demo01.rb
+<span class="go">[2015-03-24 14:07:11] INFO  WEBrick 1.3.1
+[2015-03-24 14:07:11] INFO  ruby 2.1.5 (2014-11-13) [x86_64-linux]
+[2015-03-24 14:07:11] INFO  WEBrick::HTTPServer♯start: pid=6883 port=8080</span></code></pre>
+</figure>
+
+<p>И теперь мы можем, зайдя браузером по адресу <a href="http://localhost:8080/">http://localhost:8080/</a>, видеть список HTTP-заголовков и переменных
+сервера в виде объекта класса <code class="language-plaintext highlighter-rouge">Hash</code>. 8080 здесь — порт по умолчанию, он используется если при вызове <code class="language-plaintext highlighter-rouge">run</code> не указан
+какой-либо другой.</p>
+
+<p>Как можно видеть из кода выше, основная рабочая часть у нас — это <code class="language-plaintext highlighter-rouge">Proc</code>-объект, который получает на вход хэш
+с переменными, и возвращает специальным образом определенный массив. Поскольку в Ruby принято использовать
+«утиную» типизацию, класс объекта на самом деле не важен, важен метод <code class="language-plaintext highlighter-rouge">call</code>, принимающий хэш и возвращающий
+соответствующий массив.</p>
+
+<p>Массив должен содержать три элемента: код ответа (в нашем случае — «200 OK»<sup id="fnref:httpcodes"><a href="#fn:httpcodes" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>), HTTP-заголовки ответа
+в виде хэша и тело ответа в виде массива (точнее опять же произвольного объекта, позволяющего последовательный
+перебор элементов), содержащего строки.</p>
+
+<p>Итак, наше приложение, т.е. объект с методом <code class="language-plaintext highlighter-rouge">call</code>, запускается неким обработчиком, в данном случае — <code class="language-plaintext highlighter-rouge">WEBrick</code>,
+который определяет используемый сервер. Серверы могут быть разными, каждый имеет свои преимущества и недостатки,
+причем для серьезной работы под реальной нагрузкой <code class="language-plaintext highlighter-rouge">WEBrick</code>, вероятно, хуже всех, однако только он входит
+в стандартную библиотеку Ruby, соответственно его не придется отдельно устанавливать в большинстве случаев.</p>
+
+<p>Останавливается сервер нажатием <code class="language-plaintext highlighter-rouge">Ctrl+C</code> в консоли, где он запущен (в некоторых случаях, в зависимости от версий ПО
+и системного окружения, может потребоваться <code class="language-plaintext highlighter-rouge">Ctrl+Alt+C</code>). Это корректный способ прерывания работы, высвобождающий
+системные ресурсы (такие, например, как занятый порт), хотя, конечно, в реальных проектах следует предусмотреть
+альтернативный способ останова/перезапуска, чтобы выполнить какие-то дополнительные действия — сохранить данные, например.</p>
+
+<p>Разобравшись с простым примером, рассмотрим его же, но немного иначе запущенный. Нам понадобится файл с расширением
+<code class="language-plaintext highlighter-rouge">.ru</code> следующего содержания:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'pp'</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="nb">proc</span> <span class="k">do</span> <span class="o">|</span><span class="n">env</span><span class="o">|</span>
+  <span class="p">[</span>
+    <span class="mi">200</span><span class="p">,</span>
+    <span class="p">{</span> <span class="s1">'Content-Type'</span> <span class="o">=&gt;</span> <span class="s1">'text/plain'</span> <span class="p">},</span>
+    <span class="p">[</span> <span class="n">env</span><span class="p">.</span><span class="nf">pretty_inspect</span> <span class="p">]</span>
+  <span class="p">]</span>
+<span class="k">end</span>
+
+<span class="n">run</span> <span class="n">app</span></code></pre>
+</figure>
+
+<p>Воспользуемся утилитой <code class="language-plaintext highlighter-rouge">rackup</code>:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>rackup demo01.ru
+<span class="go">[2015-03-24 15:04:08] INFO  WEBrick 1.3.1
+[2015-03-24 15:04:08] INFO  ruby 2.1.5 (2014-11-13) [x86_64-linux]
+[2015-03-24 15:04:08] INFO  WEBrick::HTTPServer♯start: pid=12753 port=9292</span></code></pre>
+</figure>
+
+<p>Изменился порт по умолчанию, не требуется явное указание «<code class="language-plaintext highlighter-rouge">require 'rack'</code>», и, что гораздо интереснее, наш исходный
+код абстрагировался от выбора сервера. Его при использовании <code class="language-plaintext highlighter-rouge">rackup</code> тоже можно указать в явном виде, но уже
+в параметрах командной строки (как и номер порта).</p>
+
+<p>В целом, <code class="language-plaintext highlighter-rouge">rackup</code> продолжает доброе дело абстрагирования разработчика от каких-то вещей, которые должны быть скорее
+в ведении администратора.</p>
+
+<h2 id="rackrequest-и-разбор-параметров">
+<a class="anchor" href="#rackrequest-%D0%B8-%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D0%BE%D0%B2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rack::Request и разбор параметров</h2>
+
+<p>Данные запроса приходят в параметре <code class="language-plaintext highlighter-rouge">env</code> в виде текстовых строк, как они собственно и определены протоколом HTTP.
+Однако некоторые из них на самом деле имеют свою внутреннюю структуру и для нормальной работы их еще предстоит
+распарсить. Можно, конечно, это каждый раз делать вручную, но Rack предоставляет более удобный вариант — класс <code class="language-plaintext highlighter-rouge">Rack::Request</code>.
+Так, мы можем получить параметры в виде хэша — заменим нашу процедуру (в новом <code class="language-plaintext highlighter-rouge">.ru</code>-файле) на такую:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="n">app</span> <span class="o">=</span> <span class="nb">proc</span> <span class="k">do</span> <span class="o">|</span><span class="n">env</span><span class="o">|</span>
+  <span class="n">req</span> <span class="o">=</span> <span class="no">Rack</span><span class="o">::</span><span class="no">Request</span><span class="p">.</span><span class="nf">new</span> <span class="n">env</span>
+  <span class="p">[</span>
+    <span class="mi">200</span><span class="p">,</span>
+    <span class="p">{</span> <span class="s1">'Content-Type'</span> <span class="o">=&gt;</span> <span class="s1">'text/plain'</span> <span class="p">},</span>
+    <span class="p">[</span> <span class="n">req</span><span class="p">.</span><span class="nf">params</span><span class="p">.</span><span class="nf">pretty_inspect</span> <span class="p">]</span>
+  <span class="p">]</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>Запустим приложение:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>rackup demo02.ru</code></pre>
+</figure>
+
+<p>И обратимся, например, по адресу <a href="http://localhost:9292/?alpha=beta&amp;gamma=delta">http://localhost:9292/?alpha=beta&amp;gamma=delta</a>. В браузере мы увидим:</p>
+
+<figure class="highlight">
+  <pre><code class="language-text" data-lang="text">{"alpha"=&gt;"beta", "gamma"=&gt;"delta"}</code></pre>
+</figure>
+
+<p>Вместо строковой переменной из <code class="language-plaintext highlighter-rouge">demo01.ru</code>:</p>
+
+<figure class="highlight">
+  <pre><code class="language-text" data-lang="text">{. . .,
+ "QUERY_STRING"=&gt;"alpha=beta&amp;gamma=delta",
+ . . .}</code></pre>
+</figure>
+
+<p>Аналогично в удобном структурированном виде представлены и куки.</p>
+
+<p>Кроме того, состав переменных в хэше <code class="language-plaintext highlighter-rouge">env</code> зависит от выбранного сервера, отличия небольшие, но учитывать
+их придется, и лучше пусть это сделает за нас <code class="language-plaintext highlighter-rouge">Rack::Request</code>, методы которого всегда выдают одну и ту же
+информацию<sup id="fnref:request"><a href="#fn:request" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>.</p>
+
+<p>Для формирования ответа тоже есть специальный класс — <code class="language-plaintext highlighter-rouge">Rack::Response</code><sup id="fnref:response"><a href="#fn:response" class="footnote" rel="footnote" role="doc-noteref">5</a></sup>.</p>
+
+<p>С его помощью пример можно переписать так:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="n">app</span> <span class="o">=</span> <span class="nb">proc</span> <span class="k">do</span> <span class="o">|</span><span class="n">env</span><span class="o">|</span>
+  <span class="n">req</span> <span class="o">=</span> <span class="no">Rack</span><span class="o">::</span><span class="no">Request</span><span class="p">.</span><span class="nf">new</span> <span class="n">env</span>
+  <span class="n">res</span> <span class="o">=</span> <span class="no">Rack</span><span class="o">::</span><span class="no">Response</span><span class="p">.</span><span class="nf">new</span>
+  <span class="n">res</span><span class="p">[</span><span class="s1">'Content-Type'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'text/plain'</span>
+  <span class="n">res</span><span class="p">.</span><span class="nf">write</span> <span class="n">req</span><span class="p">.</span><span class="nf">params</span><span class="p">.</span><span class="nf">pretty_inspect</span>
+  <span class="n">res</span><span class="p">.</span><span class="nf">finish</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>Важно не забыть про метод <code class="language-plaintext highlighter-rouge">finish</code>, который собственно и формирует необходимый ответ.</p>
+
+<h2 id="декомпозиция">
+<a class="anchor" href="#%D0%B4%D0%B5%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D1%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>Декомпозиция</h2>
+
+<p>Очевидно, более-менее сложное приложение в одной процедуре или методе не поместится. Поэтому, как правило,
+приложение все-таки представляет собой отдельный объект (модуль/класс), в котором метод <code class="language-plaintext highlighter-rouge">call</code> обращается
+к более специфическим методам. Но это — процедурная декомпозиция, подходящая для разных действий одного объекта.
+Если наше приложение содержит логически различные части, имеет смысл вынести эту логику в разные объекты.
+И здесь Rack предоставляет два механизма декомпозиции — в разных, если можно так выразиться, измерениях.</p>
+
+<p>Во-первых, мы можем назначить разные объекты на разные пути внутри нашего сайта. Например, адреса, начинающиеся
+с <code class="language-plaintext highlighter-rouge">/img/</code> будут читать из какого-то каталога на диске файлы изображений и просто отдавать их. А все прочие адреса
+уже обрабатываться более сложным образом.</p>
+
+<p>Во-вторых, некоторые действия, такие как, например, проверка пользовательской сессии, нужно производить
+при каждом вызове, до основной логики.</p>
+
+<p>Для этих целей используются механизмы роутинга и «прослоек» (middleware в терминологии Rack), предоставляемые
+классом <code class="language-plaintext highlighter-rouge">Rack::Builder</code>. Как это выглядит? Примерно так (создадим очередной <code class="language-plaintext highlighter-rouge">.ru</code>-файл):</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Log</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span> <span class="n">app</span><span class="p">,</span> <span class="n">output</span> <span class="o">=</span> <span class="vg">$stderr</span>
+    <span class="vi">@app</span> <span class="o">=</span> <span class="n">app</span>
+    <span class="vi">@output</span> <span class="o">=</span> <span class="n">output</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">call</span> <span class="n">env</span>
+    <span class="vi">@output</span><span class="p">.</span><span class="nf">puts</span> <span class="n">env</span><span class="p">.</span><span class="nf">pretty_inspect</span>
+    <span class="vi">@app</span><span class="p">.</span><span class="nf">call</span> <span class="n">env</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+
+<span class="n">json</span> <span class="o">=</span> <span class="nb">proc</span> <span class="k">do</span> <span class="o">|</span><span class="n">env</span><span class="o">|</span>
+  <span class="p">[</span>
+    <span class="mi">200</span><span class="p">,</span>
+    <span class="p">{</span> <span class="s1">'Content-Type'</span> <span class="o">=&gt;</span> <span class="s1">'application/json'</span> <span class="p">},</span>
+    <span class="p">[</span> <span class="no">JSON</span><span class="p">.</span><span class="nf">generate</span><span class="p">(</span><span class="n">env</span><span class="p">)</span> <span class="p">]</span>
+  <span class="p">]</span>
+<span class="k">end</span>
+
+<span class="n">txt</span> <span class="o">=</span> <span class="nb">proc</span> <span class="k">do</span> <span class="o">|</span><span class="n">env</span><span class="o">|</span>
+  <span class="p">[</span>
+    <span class="mi">200</span><span class="p">,</span>
+    <span class="p">{</span> <span class="s1">'Content-Type'</span> <span class="o">=&gt;</span> <span class="s1">'text/plain'</span> <span class="p">},</span>
+    <span class="p">[</span> <span class="n">env</span><span class="p">.</span><span class="nf">pretty_inspect</span> <span class="p">]</span>
+  <span class="p">]</span>
+<span class="k">end</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="no">Rack</span><span class="o">::</span><span class="no">Builder</span><span class="p">.</span><span class="nf">app</span> <span class="k">do</span>
+
+  <span class="n">use</span> <span class="no">Log</span>
+
+  <span class="n">map</span> <span class="s1">'/js/'</span> <span class="k">do</span>
+    <span class="n">run</span> <span class="n">json</span>
+  <span class="k">end</span>
+
+  <span class="n">run</span> <span class="n">txt</span>
+
+<span class="k">end</span>
+
+<span class="n">run</span> <span class="n">app</span></code></pre>
+</figure>
+
+<p>Здесь класс <code class="language-plaintext highlighter-rouge">Log</code> — та самая прослойка, которая будет вызываться при любом запросе страницы. А приложений — два:
+одно генерирует JSON-представление, а другое, как и раньше простой текст. Как видим, прослойка подключается методом
+<code class="language-plaintext highlighter-rouge">use</code>, а приложение для определенного пути — в блоке метода <code class="language-plaintext highlighter-rouge">map</code>. Кстати, внутри этого блока можно добавлять
+и отдельные прослойки, если они нужны только там, а не глобально.</p>
+
+<p>В результате вызова <code class="language-plaintext highlighter-rouge">Rack::Builder.app</code> мы получаем комбинированное rack-приложение, которое и запускаем последней строчкой.</p>
+
+<p>На самом деле, в <code class="language-plaintext highlighter-rouge">.ru</code>-файле такое описание избыточно, поскольку его содержимое запускается утилитой <code class="language-plaintext highlighter-rouge">rackup</code> уже внутри блока
+<code class="language-plaintext highlighter-rouge">Rack::Bilder</code>, т.е. мы могли бы написать и просто:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="n">use</span> <span class="no">Log</span>
+
+<span class="n">map</span> <span class="s1">'/js/'</span> <span class="k">do</span>
+  <span class="n">run</span> <span class="n">json</span>
+<span class="k">end</span>
+
+<span class="n">run</span> <span class="n">txt</span></code></pre>
+</figure>
+
+<h2 id="штатные-дополнения">
+<a class="anchor" href="#%D1%88%D1%82%D0%B0%D1%82%D0%BD%D1%8B%D0%B5-%D0%B4%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>Штатные дополнения</h2>
+
+<p>Некоторые задачи при создании веб-приложений встречаются регулярно — практически всегда требуется вести какое-то логирование,
+отдавать статические файлы и так далее. Гем <code class="language-plaintext highlighter-rouge">rack</code> содержит ряд классов для решения таких типовых задач, я не буду на них
+подробно останавливаться<sup id="fnref:gem"><a href="#fn:gem" class="footnote" rel="footnote" role="doc-noteref">6</a></sup>, лишь перечислю основные.</p>
+
+<p>Приложения:</p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">Rack::File</code> отдает статические файлы по заранее заданному пути.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">Rack::Directory</code> выводит содержимое каталогов и отдает файлы посредством <code class="language-plaintext highlighter-rouge">Rack::File</code>.</li>
+</ul>
+
+<p>Прослойки:</p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">Rack::Auth::Basic</code> и <code class="language-plaintext highlighter-rouge">Rack::Auth::Digest</code> предоставляют простую стандартную HTTP-аутентификацию.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">Rack::Logger</code> и <code class="language-plaintext highlighter-rouge">Rack::CommonLogger</code> обеспечивают логирование.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">Rack::ConditionalGet</code> и <code class="language-plaintext highlighter-rouge">Rack::ETag</code> позволяют уменьшить отдаваемый трафик, управляя заголовками кэширования. К сожалению,
+они работают с уже сформированным ответом, поэтому экономии вычислительных ресурсов сервера не получится.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">Rack::ContentLength</code> устанавливает автоматически соответствующий заголовок.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">Rack::Deflate</code> — сжимает передаваемые данные, автоматически определяя, когда это можно и нужно делать.</li>
+  <li>Модуль <code class="language-plaintext highlighter-rouge">Rack::Session</code> и определенные внутри него классы <code class="language-plaintext highlighter-rouge">Cookie</code>, <code class="language-plaintext highlighter-rouge">Memcache</code> и <code class="language-plaintext highlighter-rouge">Pool</code> обеспечивают управление сессиями.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">Rack::Static</code> отдает статические файлы по заранее определенным правилам.</li>
+</ul>
+
+<p>Эти классы и модули решают типовые задачи типовыми и довольно таки прямолинейными методами, каких-то чудес от них ждать не стоит.
+Зато работают, что называется, «из коробки».</p>
+
+<p>Дополнительно стоит упомянуть о модулях <code class="language-plaintext highlighter-rouge">Rack::Mime</code> и <code class="language-plaintext highlighter-rouge">Rack::Utils</code>, которые предоставляют различные вспомогательные средства
+для веб-разработки.</p>
+
+<h2 id="итого">
+<a class="anchor" href="#%D0%B8%D1%82%D0%BE%D0%B3%D0%BE" aria-hidden="true"><span class="octicon octicon-link"></span></a>Итого</h2>
+
+<p>Rack представляет собой очень простой объектный интерфейс для взаимодействия с веб-сервером, с одной стороны — абстрагируя
+разработчика от мелких деталей, с другой — не навязывая какой-то определенной архитектуры приложения. Стоит ли его использовать
+<em>вместо фрейморков</em> — зависит от задачи и личной склонности программиста. Не надо только забывать, что это «голый каркас»,
+и большинство даже типовых задач придется решать «с нуля», тогда как в Ruby on Rails, например, они уже решены.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:mvc">
+      <p>Model-View-Controller — широко распространенный шаблон проектирования приложений. <a href="#fnref:mvc" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:gist">
+      <p>Полные тексты примеров размещены на GitHub — <a href="https://gist.github.com/shikhalev/8409eef4a4e66a003670">https://gist.github.com/shikhalev/8409eef4a4e66a003670</a>. <a href="#fnref:gist" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:httpcodes">
+      <p>См. коды ответов, например, в Википедии — <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%B4%D0%BE%D0%B2_%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D1%8F_HTTP">https://ru.wikipedia.org/wiki/Список_кодов_состояния_HTTP</a>. <a href="#fnref:httpcodes" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:request">
+      <p>Список методов см. в документации — <a href="https://www.rubydoc.info/gems/rack/Rack/Request">https://www.rubydoc.info/gems/rack/Rack/Request</a>. <a href="#fnref:request" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:response">
+      <p><a href="https://www.rubydoc.info/gems/rack/Rack/Response">https://www.rubydoc.info/gems/rack/Rack/Response</a>. <a href="#fnref:response" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:gem">
+      <p>За подробностями стоит обратиться к документации — <a href="http://www.rubydoc.info/gems/rack/">http://www.rubydoc.info/gems/rack/</a>. <a href="#fnref:gem" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2015.03.31 |</span>
+            <a href="/2015/03/druby.html" title="Введение в технологию dRuby. Прозрачный RPC для взаимодействия Ruby-программ.">Распределенный Ruby</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2023.01.07 |</span>
+            <a href="/2023/01/evil-ai.html" title="Искусственный интеллект в руках естественного идиота">Паникуем иначе</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.07.17 |</span>
+            <a href="/2021/07/gpx-exif-tools.html" title="Запись GPX и корректная его обработка">Как я ставлю геометки к фотографиям</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#зачем-знать-rack">Зачем знать Rack?</a></li>
+<li class="toc-entry toc-h2"><a href="#как-это-работает">Как это работает</a></li>
+<li class="toc-entry toc-h2"><a href="#rackrequest-и-разбор-параметров">Rack::Request и разбор параметров</a></li>
+<li class="toc-entry toc-h2"><a href="#декомпозиция">Декомпозиция</a></li>
+<li class="toc-entry toc-h2"><a href="#штатные-дополнения">Штатные дополнения</a></li>
+<li class="toc-entry toc-h2"><a href="#итого">Итого</a></li>
+</ul>
+</aside><aside id="backs" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li><li><a href="/feed/pub.xml" title="Публикации в СМИ">Публикации</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

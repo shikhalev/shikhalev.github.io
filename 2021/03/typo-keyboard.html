@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Ввод «типографских» символов с клавиатуры (ed. 2021) | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Ввод «типографских» символов с клавиатуры (ed. 2021)" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Настройка клавиатуры в Linux для ввода различных символов, таких как, например, длинное тире, кавычки-ёлочки, знак копирайта и так далее. В редакции 2021 года." />
+<meta property="og:description" content="Настройка клавиатуры в Linux для ввода различных символов, таких как, например, длинное тире, кавычки-ёлочки, знак копирайта и так далее. В редакции 2021 года." />
+<link rel="canonical" href="https://shikhalev.github.io/2021/03/typo-keyboard.html" />
+<meta property="og:url" content="https://shikhalev.github.io/2021/03/typo-keyboard.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/2021/03/24/typo-keyboard/keyboard-layout-640x640-500-261-183-0.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/img/2021/03/24/typo-keyboard/keyboard-layout-640x640-500-261-183-0.webp" />
+<meta property="twitter:title" content="Ввод «типографских» символов с клавиатуры (ed. 2021)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2021-03-24T00:00:00+00:00","datePublished":"2021-03-24T00:00:00+00:00","description":"Настройка клавиатуры в Linux для ввода различных символов, таких как, например, длинное тире, кавычки-ёлочки, знак копирайта и так далее. В редакции 2021 года.","headline":"Ввод «типографских» символов с клавиатуры (ed. 2021)","image":"https://shikhalev.github.io/img/2021/03/24/typo-keyboard/keyboard-layout-640x640-500-261-183-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/2021/03/typo-keyboard.html"},"url":"https://shikhalev.github.io/2021/03/typo-keyboard.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">Ввод «типографских» символов с клавиатуры (ed. 2021)</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2021%2F03%2Ftypo-keyboard.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2021%2F03%2Ftypo-keyboard.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2021%2F03%2Ftypo-keyboard.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2021%2F03%2Ftypo-keyboard.html&text=%D0%92%D0%B2%D0%BE%D0%B4+%C2%AB%D1%82%D0%B8%D0%BF%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D1%81%D0%BA%D0%B8%D1%85%C2%BB+%D1%81%D0%B8%D0%BC%D0%B2%D0%BE%D0%BB%D0%BE%D0%B2+%D1%81%C2%A0%D0%BA%D0%BB%D0%B0%D0%B2%D0%B8%D0%B0%D1%82%D1%83%D1%80%D1%8B+%28ed.%C2%A02021%29">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%92%D0%B2%D0%BE%D0%B4+%C2%AB%D1%82%D0%B8%D0%BF%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D1%81%D0%BA%D0%B8%D1%85%C2%BB+%D1%81%D0%B8%D0%BC%D0%B2%D0%BE%D0%BB%D0%BE%D0%B2+%D1%81%C2%A0%D0%BA%D0%BB%D0%B0%D0%B2%D0%B8%D0%B0%D1%82%D1%83%D1%80%D1%8B+%28ed.%C2%A02021%29&url=https%3A%2F%2Fshikhalev.github.io%2F2021%2F03%2Ftypo-keyboard.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2021-03-24T00:00:00+00:00" itemprop="datePublished">2021.03.24
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#GNOME">GNOME</a>​<a class="tag" href="/tags#KDE">KDE</a>​<a class="tag" href="/tags#Linux">Linux</a>​<a class="tag" href="/tags#Xfce">Xfce</a>​<a class="tag" href="/tags#клавиатура">клавиатура</a>​<a class="tag" href="/tags#символы">символы</a></aside></header><div itemprop="articleBody">
+  <figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2021/03/24/typo-keyboard/keyboard-layout-fhd.webp" class="__image_link"><img src="/img/2021/03/24/typo-keyboard/keyboard-layout-320.webp" class="__image" alt="Раскладка клавиатуры с третьим и четвертым уровнями" title="Раскладка клавиатуры с третьим и четвертым уровнями"></a></figure>
+
+<p class="note italic">Оригинал этого поста в «Технобложике» оказался самым популярным ма­те­ри­а­лом — на него заходят и заходят
+из поисковиков, ссылаются на фо­ру­мах и так далее. Поэтому к его переносу я подошел максимально ответственно,
+пере­про­ве­рив все рекомендации в современных дистрибутивах и внеся до­пол­не­ния. Та­ким образом, этот пост
+получил некоторую добавочную ценность к ори­ги­на­лу. Осо­бен­но совершенно новый раздел о том, как можно добавить
+свои соб­с­т­вен­ные символы в раскладку.</p>
+
+<p>На эту тему в интернетах написано немало. Я лишь хочу в этом посте собрать и обобщить некоторую часть информации,
+чтобы рекомендовать друзьям – новичкам в Linux. Итак, этот пост для тех, кто работает с текстом в Linux, дабы они
+поняли свое счастье.</p>
+
+<p>Вообще говоря, ввод каких бы то ни было символов с клавиатуры можно организовать разными путями, некоторые
+из ко­то­рых (например, определение собственной раскладки) доступны и в оффтопичной системе от MS. Однако, <em>удобных</em>
+спо­со­бов существенно меньше. Собственно, я буду говорить о двух, простых как в использовании, так и в настройке:
+«третий уровень» и Compose Key.</p>
+
+<!--more-->
+
+<h2 id="общие-принципы">
+<a class="anchor" href="#%D0%BE%D0%B1%D1%89%D0%B8%D0%B5-%D0%BF%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Общие принципы</h2>
+
+<dl>
+  <dt>«Третий уровень»</dt>
+  <dd>
+    <p>Это как бы дополнительный <code class="language-plaintext highlighter-rouge">[Shift]</code> — добавочный ряд символов на клавишах: нажимаете назначенную для этого клавишу
+вместе с какой-то алфавитно-цифровой и получаете специальный символ. Руки очень быстро «запоминают» такое сочетание.
+Использовать не сложнее, чем <code class="language-plaintext highlighter-rouge">[Shift]</code> оригинальный, разве что у того клавиши широкие на боль­шин­с­т­ве клавиатур…
+Причем можно зажать и назначенную нами клавишу третьего уровня (в дальнейшем — <code class="language-plaintext highlighter-rouge">[L3]</code>) и <code class="language-plaintext highlighter-rouge">[Shift]</code>, получив тем
+самым «четвертый уровень»… Но вряд ли это особо понадобится.</p>
+
+    <p>Пример: длинное тире («—») вводится как <code class="language-plaintext highlighter-rouge">[L3]+[-]</code>.</p>
+  </dd>
+  <dt>Compose Key</dt>
+  <dd>
+    <p>Тут принцип другой — нажимаете (и отпускаете) назначенную для этого клавишу, затем нажимаете последовательно не­с­коль­ко
+(две–три обычно) алфавитно-цифровых клавиш, чтобы получить их «сочетание». Например, значок ко­пи­рай­та («©») можно ввести
+так: <code class="language-plaintext highlighter-rouge">[Compose]→[o]→[c]</code> (а можно — <code class="language-plaintext highlighter-rouge">[Compose]→[c]→[o]</code>). Здесь я стрелочками подчеркиваю, что клавиши нажимаются
+последовательно, а не одновременно. Кстати, сами стрелочки я ввожу посредством <code class="language-plaintext highlighter-rouge">[Com­po­se]→[-]→[&gt;]</code>.</p>
+
+    <p class="small italic">Уточнение от 2021 года. Умолчательные сочетания клавиш могут различаться от дистрибутива к дистрибутиву и от версии
+к версии. Сейчас у меня сочетание <code class="language-plaintext highlighter-rouge">[Compose]→[o]→[c]</code> действительно выдает значок копирайта, но вот
+<code class="language-plaintext highlighter-rouge">[Com­po­se]→​[c]→[o]</code> — уже другой символ — «ǒ». Кроме того, стрелочку вправо я сейчас предпочитаю вводить через
+третий уровень — <code class="language-plaintext highlighter-rouge">[L3]+[0]</code>, хотя вариант через Compose также рабочий.</p>
+  </dd>
+</dl>
+
+<p>Эти два способа совершенно друг другу не мешают. Лично я их использую оба, применяя Compose Key для тех символов, ко­то­рые
+отсутствуют в наборе «третьего уровня».</p>
+
+<h2 id="базовая-настройка">
+<a class="anchor" href="#%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%8F-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Базовая настройка</h2>
+
+<h3 id="kde-4-и-5">
+<a class="anchor" href="#kde-4-%D0%B8-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>KDE 4 и 5</h3>
+
+<figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2021/03/24/typo-keyboard/kde-fhd.webp" class="__image_link"><img src="/img/2021/03/24/typo-keyboard/kde-320.webp" class="__image" alt="Модуль настройки клавиатуры в KDE" title="Модуль настройки клавиатуры в KDE" id="kde"></a></figure>
+
+<p>У меня стоит версия KDE 4.5.4, в других версиях названия каких-то пунктов могут отличаться, но вряд ли существенно.</p>
+
+<p class="note italic">Год 2021. Использую KDE 5, версия Plasma — 5.21.3, KDE Applications — 20.12.3. В от­но­ше­нии настройки клавиатуры по сути ничего
+не поменялось — см. <a href="#kde">ил­люс­т­ра­цию</a>.</p>
+
+<p>Итак, открываем «Параметры системы» и находим там раздел «Об­о­ру­до­ва­ние» → «Устройства ввода» → «Кла­ви­а­ту­ра». Открываем вкладку
+«До­пол­ни­тель­но». Если попалась непереведенная версия, по-английски это будет «Sys­tem Set­tings» → «Hardware» → «Input Devices» →
+«Keyboard» → «Ad­van­ced». Там следует отметить (если еще не отмечена) галочку «Настроить па­ра­мет­ры кла­ви­а­ту­ры» («Configure
+keyboard options»), после чего станут доступны соб­с­т­вен­но настройки. Нам понадобятся следующие:</p>
+
+<ul>
+  <li>
+    <p>«Клавиша для выбора 3-го ряда» («Key to choose 3rd level») — нужно отметить один из вариантов. Лично я использую кла­ви­ши <code class="language-plaintext highlighter-rouge">[Win]</code>
+(те, на которых нарисован флажок MS), поскольку: а) их две, а мы помним, что настраиваем как бы до­пол­ни­тель­ный <code class="language-plaintext highlighter-rouge">[Shift]</code> — тоже парный;
+б) по-умолчанию никакой полезной нагрузки в Linux они не несут, со­от­вет­с­т­вен­но, ничего нужного мы таким образом не испортим. В общем,
+мой выбор — «Любая клавиша Win» («Any Win key»).</p>
+
+    <p class="small italic">Сейчас у меня клавиатура с закосом под игровую, и справа вместо <code class="language-plaintext highlighter-rouge">[Win]</code> — ненужная мне <code class="language-plaintext highlighter-rouge">[Fn]</code>, на которую, увы, ничего не на­с­т­ро­ить.
+Поэтому в дополнение к вышесказанному отметил еще и правый <code class="language-plaintext highlighter-rouge">[Alt]</code> — все-таки очень привык к <code class="language-plaintext highlighter-rouge">L3</code> с обеих сто­рон.</p>
+  </li>
+  <li>
+    <p>«Разные параметры совместимости» → «Включить дополнительные типографские символы» («Mis­cel­la­ne­ous com­pa­ti­bi­li­ty options» → «Enable extra
+ty­po­gra­phic characters»). Этим мы собственно «заполняем» подключенный предыдущим пун­к­том «третий уровень».</p>
+  </li>
+  <li>
+    <p>«Клавиша пробела используется для ввода символа неразрывного пробела» → «Символ неразрывного пробела в треть­ем ряду,
+символ тонкого неразрывного пробела в четвёртом ряду» («Using space key to input non-breakable space cha­rac­ter» →
+«Non-breakable space character at third level, thin non-breakable space character at fourth level»). Пробел, на ко­то­ром
+запрещен разрыв строки принято использовать, например, после инициалов, а также перед тире. Установка дан­ной опции позволит
+вводить его быстро и логично. Что же до тонкого неразрывного пробела… Использовать его не обя­за­тель­но, однако по-хорошему
+для инициалов должен использоваться именно он. Сравним: «Ф. М. Достоевский» и «Ф. М. До­сто­ев­с­кий» (не говоря уж об кошмарном,
+но часто используемом, варианте «Ф.М. Достоевский»). Еще его можно использовать между запятой/точкой и тире. Правда, эффект
+сильно зависит от шрифта, причем в шрифте может вообще не оказаться такого символа и мы получим на его месте знак вопроса
+или квадратик… Хотя в последнее время все шриф­ты (с которыми мне доводилось иметь дело) содержат подобные символы.</p>
+  </li>
+  <li>
+    <p>«Положение клавиши Compose» («Compose key position»). Лично я в качестве <code class="language-plaintext highlighter-rouge">[Compose]</code> использую <code class="language-plaintext highlighter-rouge">[Caps Lock]</code>, по­с­коль­ку
+ее штатное действие приносит исключительно вред. Если же вы не можете от нее отказаться, можно выбрать столь же бесполезную
+(однако, безвредную) <code class="language-plaintext highlighter-rouge">[Scroll Lock]</code>, хотя на мой взгляд, ее расположение не столь удобно.</p>
+  </li>
+</ul>
+
+<p>Итого — нам понадобилось поставить четыре галочки.</p>
+
+<h3 id="gnome-и-cinnamon">
+<a class="anchor" href="#gnome-%D0%B8-cinnamon" aria-hidden="true"><span class="octicon octicon-link"></span></a>GNOME и Cinnamon</h3>
+
+<figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2021/03/24/typo-keyboard/ubuntu-fhd.webp" class="__image_link"><img src="/img/2021/03/24/typo-keyboard/ubuntu-320.webp" class="__image" alt="Настройка клавиатуры в Ubuntu" title="Настройка клавиатуры в Ubuntu"></a></figure>
+
+<p>В GNOME есть (должен быть) подобный модуль центра управления для на­с­т­рой­ки клавиатуры. Ввиду эстетического неприятия, сейчас GNOME
+на мо­ем ком­пью­те­ре отсутствует, а ставить его только ради того, чтобы посмотреть, как там настраивается раскладка клавиатуры — это уж
+слишком. Ищите по клю­че­вым словам «третий уровень», «типографские символы» и «Compose Key»…</p>
+
+<div class="note italic">
+  <p>На этот раз я не поленился и посмотрел разные дистрибутивы и DE в вир­ту­ал­ках.</p>
+</div>
+
+<figure class="__figure __implicit_figure __left" style="max-width:320px;"><a href="/img/2021/03/24/typo-keyboard/cinnamon-fhd.webp" class="__image_link"><img src="/img/2021/03/24/typo-keyboard/cinnamon-320.webp" class="__image" alt="Настройка клавиатуры в среде Cinnamon (Linux Mint)" title="Настройка клавиатуры в среде Cinnamon (Linux Mint)"></a></figure>
+
+<div class="note italic">
+  <p>GNOME не подвел — «из коробки» там ничего нет, чтобы получить третий уровень и Compose, нужно ставить GNO­ME Tweak Tool. Впрочем,
+как я понимаю, это нужно практически для все­го. Еще интересный момент, что настройка Compose Key («ком­по­зи­ци­он­ной кла­ви­ши») вынесена
+на первый экран настроек клавиатуры (см. скриншот спра­ва), тогда как третий уровень нужно задавать в диалоговом окне, от­кры­ва­ю­щем­ся
+по кноп­ке «Дополнительные параметры раскладки».</p>
+
+  <p>А вот Cinnamon держит настройки вместе. И место это «Параметры сис­те­мы» → «Клавиатура» → «Раскладки» → кнопка «Параметры…» — см. скрин­шот слева.</p>
+
+  <p>В общем-то, не проблема найти, все логично.
+Галочки в списках в обеих системах те же самые, что и вышеописанные KDE-шные, так что см. предыдущий пункт.</p>
+</div>
+
+<h3 id="xfce-и-все-все-все">
+<a class="anchor" href="#xfce-%D0%B8-%D0%B2%D1%81%D0%B5-%D0%B2%D1%81%D0%B5-%D0%B2%D1%81%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Xfce и все-все-все…</h3>
+
+<figure class="__figure __implicit_figure __right" style="max-width:240px;"><a href="/img/2021/03/24/typo-keyboard/xfce-fhd.webp" class="__image_link"><img src="/img/2021/03/24/typo-keyboard/xfce-240.webp" class="__image" alt="Настройки клавиатуры в среде Xfce" title="Настройки клавиатуры в среде Xfce"></a></figure>
+
+<p>Почему «и все-все-все…»? Потому что Xfce не умеет настраивать подобные средства — его возможности настройки клавиатуры
+сильно ограничены… Поэтому сейчас мы рассмотрим универсальный для всех иксов способ настройки — через конфиги. Способ
+именно что уни­вер­саль­ный — у меня и KDE работает с заданными таким образом сис­тем­ны­ми настройками, однако для его использования
+нужно иметь доступ от root’а, да и кон­фи­ги править — это вам не галочки мышкой щелкать — это гораздо проще.</p>
+
+<p class="note italic">Что ж, вот и хорошие новости: за прошедшие 10 лет Xfce таки расширил возможности настройки клавиатуры. Частично. Теперь можно
+штатным средствами включить Compose Key, см. скриншот. А вот доступа к третьему уровню не прибавилось, таким образом на­с­то­я­щий
+раздел актуальности не утратил.</p>
+
+<p>Тут есть только одна загвоздка — расположение нужных настроек зависит от версии сер­ве­ра иксов…</p>
+
+<p>Как это выглядит у меня: отдельный файл <code class="language-plaintext highlighter-rouge">/etc/X11/xorg.conf.d/20-keyboard.conf</code> со­дер­жит следующее:</p>
+
+<figure class="highlight">
+  <pre><code class="language-conf" data-lang="conf"><span class="n">Section</span> <span class="s2">"InputClass"</span>
+  <span class="n">Identifier</span> <span class="s2">"Keyboard Defaults"</span>
+  <span class="n">MatchIsKeyboard</span> <span class="s2">"yes"</span>
+  <span class="n">Option</span> <span class="s2">"XkbLayout"</span> <span class="s2">"us,ru"</span>
+  <span class="n">Option</span> <span class="s2">"XkbOptions"</span> <span class="s2">"grp:alt_shift_toggle,grp_led:scroll,compose:caps,lv3:win_switch,nbsp:level3n,misc:typo"</span>
+<span class="n">EndSection</span></code></pre>
+</figure>
+
+<p>Эту секцию можно и просто вписать в файл <code class="language-plaintext highlighter-rouge">/etc/X11/xorg.conf</code>. Однако есть вероятность того, что это не сработает —
+на ста­рых версиях Xorg, насколько я помню, устройства по классам не фильтровались… В общем, если не получилось так,
+то нуж­но отыскать в <code class="language-plaintext highlighter-rouge">/etc/X11/xorg.conf</code> строку <code class="language-plaintext highlighter-rouge">Option "XkbOptions"</code> и изменить ее значение на вышеуказанное.
+Если же xorg-server работает с клавиатурой через HAL, то ему следует скормить файл <code class="language-plaintext highlighter-rouge">/etc/hal/fdi/policy/10-x11-input.fdi</code>,
+о ко­то­ром я уже писал когда-то, добавив туда «<code class="language-plaintext highlighter-rouge">lv3:win_switch,nbsp:level3n,misc:typo</code>» в опции.</p>
+
+<!-- TODO: ссылка на пост про HAL и .fdi -->
+
+<p>Кроме указания всех этих опций так или иначе в параметрах X-сервера, придется их еще и активировать программой <code class="language-plaintext highlighter-rouge">setxkbmap</code>
+(без каких-либо ключей или параметров). В Xfce ее просто нужно задать в автозапуск.</p>
+
+<div class="note italic">
+  <p>И снова хорошие новости: ни в Xfce (по крайней мере в Xubuntu), ни в LXQt (Lubuntu соответственно), больше не надо ничего
+прописывать в автозапуск — в Xfce следует отметить флажок «Использовать системные параметры», ну а LXQt и вовсе ничего такого
+настраивать не умеет, и использует настройки Xorg без каких-либо флажков (точнее, не мешает их использовать).</p>
+
+  <p>Еще в Lubuntu обнаружился один момент — там окружение перехватывает клавишу <code class="language-plaintext highlighter-rouge">[Win]</code> и обрабатывает ее в духе Win­dows.
+На третий уровень, получается, эти клавиши назначить нельзя. Но сам третий уровень работает, например, если назначить
+правый <code class="language-plaintext highlighter-rouge">[Alt]</code>, или еще какую-нибудь клавишу, которую не жалко.</p>
+</div>
+
+<h2 id="использование">
+<a class="anchor" href="#%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Использование</h2>
+
+<p>Собственно, как этим пользоваться, я написал в самом начале. Ниже подробности — как ввести наиболее часто нужные сим­во­лы.</p>
+
+<h3 id="третий-уровень">
+<a class="anchor" href="#%D1%82%D1%80%D0%B5%D1%82%D0%B8%D0%B9-%D1%83%D1%80%D0%BE%D0%B2%D0%B5%D0%BD%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Третий уровень</h3>
+
+<div class="note italic">
+  <p>Вместо старой таблицы я наконец-то сделал красивую схему клавиатуры с третьим и четвертым уровнями. Самому такую па­мят­ку
+давно хотелось, да все как-то руки не доходили. На <u>небуквенных</u> клавишах в верхней части слева — простое нажатие,
+спра­ва — с <code class="language-plaintext highlighter-rouge">[Shift]</code>, на <u>буквенных</u> — собственно буква в верхнем регистре, как обычно на самой клавиатуре изображается.
+Ниж­ний ряд везде (где оно есть): слева — третий уровень, т.е. при зажатой клавише <code class="language-plaintext highlighter-rouge">[L3]</code>, справа — четвертый, т.е.
+<code class="language-plaintext highlighter-rouge">[Shift]+​[L3]</code>. Желающие распечатать в максимальном качестве могут скачать <a href="/files/2021/03/2021-03-24/keyboard-layout.svg.zip" title="Архив с SVG-файлом раскладки">архив с SVG</a>.</p>
+
+  <p>Как я уже говорил, что-то может меняться от дистрибутива к дистрибутиву и от версии к версии. Сейчас у меня схема имен­но такая,
+от текущей раскладки (rus/eng) она не зависит.</p>
+</div>
+
+<figure class="__figure __implicit_figure __center" style="max-width:850px;"><a href="/img/2021/03/24/typo-keyboard/keyboard-layout-fhd.webp" class="__image_link"><img src="/img/2021/03/24/typo-keyboard/keyboard-layout-850.webp" class="__image" alt="Раскладка клавиатуры с третьим и четвертым уровнями" title="Раскладка клавиатуры с третьим и четвертым уровнями"></a></figure>
+
+<p class="note">Некоторые символы, пожалуй, требуют пояснений, их-то я и вынесу в таблицу:</p>
+
+<table class="coded">
+  <thead>
+    <tr>
+      <th style="text-align: left">Сочетание</th>
+      <th style="text-align: center">Сим.</th>
+      <th style="text-align: left">Unicode</th>
+      <th style="text-align: left">Комментарий</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[L3]+[-]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">—</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+2014 EM DASH</code></td>
+      <td style="text-align: left">Длинное тире — собственно тире в русской пунктуации.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[L3]+[Shift]+[-]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">–</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+2013 EN DASH</code></td>
+      <td style="text-align: left">Короткое тире — в классической русской пунктуации не использовалось. Сейчас начинает применяться для диапазонов.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[L3]+[P]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">´</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+00B4 ACUTE ACCENT</code></td>
+      <td style="text-align: left">Это просто символ, не путать с <code class="language-plaintext highlighter-rouge">U-0301</code>, он же <code class="language-plaintext highlighter-rouge">[L3]+[A]</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[L3]+[Shift]+[P]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">˝</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+02DD DOUBLE ACUTE ACCENT</code></td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[L3]+[A]</code></td>
+      <td style="text-align: center">_́</td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+0301 COMBINING ACUTE ACCENT</code></td>
+      <td style="text-align: left">Знак ударе́ния. Ставится <em>над предыдущим символом</em>, а не на отдельное знакоместо. Для иллюстрации я поместил на картинке светло-серую букву «a», но вообще это может быть любой нормальный символ.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[L3]+[D]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">°</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+00B0 DEGREE SIGN</code></td>
+      <td style="text-align: left">Знак градуса — на картинке это может быть не очень заметно, но размещается в верхней части строки. «Сегодня -5°C», например.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-plaintext highlighter-rouge">[L3]+[J]</code><br><code class="language-plaintext highlighter-rouge">[L3]+[Shift]+[J]</code><br><code class="language-plaintext highlighter-rouge">[L3]+[K]</code><br><code class="language-plaintext highlighter-rouge">[L3]+[Shift]+[K]</code><br><code class="language-plaintext highlighter-rouge">[L3]+[L]</code><br><code class="language-plaintext highlighter-rouge">[L3]+[Shift]+[L]</code>
+</td>
+      <td style="text-align: center">
+<code class="language-plaintext highlighter-rouge">„</code><br><code class="language-plaintext highlighter-rouge">‚</code><br><code class="language-plaintext highlighter-rouge">“</code><br><code class="language-plaintext highlighter-rouge">‘</code><br><code class="language-plaintext highlighter-rouge">”</code><br><code class="language-plaintext highlighter-rouge">’</code>
+</td>
+      <td style="text-align: left">
+<code class="language-plaintext highlighter-rouge">U+201E DOUBLE LOW-9 QUOTATION MARK</code><br><code class="language-plaintext highlighter-rouge">U+201A SINGLE LOW-9 QUOTATION MARK</code><br><code class="language-plaintext highlighter-rouge">U+201C LEFT DOUBLE QUOTATION MARK</code><br><code class="language-plaintext highlighter-rouge">U+2018 LEFT SINGLE QUOTATION MARK</code><br><code class="language-plaintext highlighter-rouge">U+201D RIGHT DOUBLE QUOTATION MARK</code><br><code class="language-plaintext highlighter-rouge">U+2019 RIGHT SINGLE QUOTATION MARK</code>
+</td>
+      <td style="text-align: left">Это <em>правильные</em> символы кавычек-лапок, двойных и ординарных. Причем сочетание, соответствующее J-K, принято в русской пунктуации, а K-L — в английской (то есть русская закрывающая кавычка является английской открывающей).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-plaintext highlighter-rouge">[L3]+[;]</code><br><code class="language-plaintext highlighter-rouge">[L3]+[']</code>
+</td>
+      <td style="text-align: center">
+<code class="language-plaintext highlighter-rouge">‘</code><br><code class="language-plaintext highlighter-rouge">’</code>
+</td>
+      <td style="text-align: left">
+<code class="language-plaintext highlighter-rouge">U+2018 LEFT SINGLE QUOTATION MARK</code><br><code class="language-plaintext highlighter-rouge">U+2019 RIGHT SINGLE QUOTATION MARK</code>
+</td>
+      <td style="text-align: left">Да-да, дублируют символы из предыдущего блока, только на третьем уровне, а не на четвертом<sup id="fnref:check"><a href="#fn:check" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[L3]+[Shift]+[;]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">′</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+2032 PRIME</code></td>
+      <td style="text-align: left">Используется для обозначения угловых минут и футов<sup id="fnref:feet"><a href="#fn:feet" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[L3]+[Shift]+[']</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">″</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+2033 DOUBLE PRIME</code></td>
+      <td style="text-align: left">Используется для обозначения угловых секунд и дюймов.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[L3]+[Shift]+[X]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">⋅</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+22C5 DOT OPERATOR</code></td>
+      <td style="text-align: left">Это математический символ. Для умножения в формулах предпочтительно с позиций типографики использовать именно его, а не обычную звездочку или какую-то из множества центральных точек.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[L3]+[M]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">−</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+2212 MINUS SIGN</code></td>
+      <td style="text-align: left">Знак минуса. Математический опять же. В отличие от обычного дефиса, к которому все привыкли, этот знак в шрифтах <em>должен</em> по высоте, ширине и толщине соответствовать знаку плюса.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[L3]+[Shift]+[M]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">•</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+2022 BULLET</code></td>
+      <td style="text-align: left">А этот символ в противоположность <code class="language-plaintext highlighter-rouge">U+22C5</code> не нужно использовать в математических формулах, а предназначен он для списков и прочего как маркер.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[L3]+[ ]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge"> </code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+00A0 NO-BREAK SPACE</code></td>
+      <td style="text-align: left">Неразрывный пробел.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[L3]+[Shift]+[ ]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge"> </code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+202F NARROW NO-BREAK SPACE</code></td>
+      <td style="text-align: left">Тонкий неразрывный пробел.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="note italic" id="bug">Проверяя последний пункт, обнаружил баг в своей системе, но об этом <a href="#fix">позже</a>.</p>
+
+<h3 id="compose-key">
+<a class="anchor" href="#compose-key" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compose Key</h3>
+
+<p>Тут вообще уйма разных сочетаний, я приведу только наиболее (на мой взгляд) полезные и не встречающиеся в предыдущей таблице.</p>
+
+<table class="coded">
+  <thead>
+    <tr>
+      <th style="text-align: left">Сочетание</th>
+      <th style="text-align: center">Сим.</th>
+      <th style="text-align: left">Unicode</th>
+      <th style="text-align: left">Комментарий</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[Compose]→[^]→[1]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">¹</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+00B9 SUPERSCRIPT ONE</code></td>
+      <td style="text-align: left">Верхний индекс — так же работает для всех цифр, скобок, плюса, минуса и равно.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[Compose]→[_]→[1]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">₁</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+2081 SUBSCRIPT ONE</code></td>
+      <td style="text-align: left">Нижний индекс — аналогично предыдущему.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[Compose]→[(]→[1]→[)]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">①</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+2460 CIRCLED DIGIT ONE</code></td>
+      <td style="text-align: left">Цифра в кружочке — для всех цифр работает.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[Compose]→["]→[a]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">ä</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+00E4 LATIN SMALL LETTER A WITH DIAERESIS</code></td>
+      <td style="text-align: left">Для всех гласных латиницы.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[Compose]→[']→[a]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">á</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+00E1 LATIN SMALL LETTER A WITH ACUTE</code></td>
+      <td style="text-align: left">Аналогично предыдущему.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[Compose]→[s]→[s]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">ß</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+00DF LATIN SMALL LETTER SHARP S</code></td>
+      <td style="text-align: left">Заглавный эсцет тоже есть — из заглавных S соответственно.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[Compose]→[#]→[b]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">♭</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+266D MUSIC FLAT SIGN</code></td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[Compose]→[#]→[f]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">♮</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+266E MUSIC NATURAL SIGN</code></td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[Compose]→[#]→[#]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">♯</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+266F MUSIC SHARP SIGN</code></td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[Compose]→[P]→[P]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">¶</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+00B6 PILCROW SIGN</code></td>
+      <td style="text-align: left">Он же «paragraph sign».</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[Compose]→[a]→[e]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">æ</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+00E6 LATIN SMALL LETTER AE</code></td>
+      <td style="text-align: left">Аналогично для заглавных. Так же работает для некоторых рас­прост­ра­нен­ных лигатур, например <code class="language-plaintext highlighter-rouge">ﬁ</code>, но не для всех.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[Compose]→[:]→[)]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">☺</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+263A WHITE SMILING FACE</code></td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[Compose]→[:]→[(]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">☹</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+2639 WHITE FROWNING FACE</code></td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[Compose]→[&lt;]→[3]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">♥</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+2665 BLACK HEART SUIT</code></td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[Compose]→[N]→[o]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">№</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+2116 NUMERO SIGN</code></td>
+      <td style="text-align: left">Если вдруг нет русской раскладки, а знак номера очень хочется…</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[Compose]→[o]→[x]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">¤</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+00A4 CURRENCY SIGN</code></td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">[Compose]→[s]→[m]</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">℠</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">U+2120 SERVICE MARK</code></td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-plaintext highlighter-rouge">[Compose]→[&lt;]→[=]</code><br><code class="language-plaintext highlighter-rouge">[Compose]→[&gt;]→[=]</code>
+</td>
+      <td style="text-align: center">
+<code class="language-plaintext highlighter-rouge">≤</code><br><code class="language-plaintext highlighter-rouge">≥</code>
+</td>
+      <td style="text-align: left">
+<code class="language-plaintext highlighter-rouge">U+2264 LESS-THAN OR EQUAL TO</code><br><code class="language-plaintext highlighter-rouge">U+2265 GREATER-THAN OR EQUAL TO</code>
+</td>
+      <td style="text-align: left">Вид нижней черты — горизонтальная или наклонная — зависит от шрифта.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="кроличья-нора">
+<a class="anchor" href="#%D0%BA%D1%80%D0%BE%D0%BB%D0%B8%D1%87%D1%8C%D1%8F-%D0%BD%D0%BE%D1%80%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Кроличья нора</h2>
+
+<p class="note italic">Этот раздел новый. В 2011 году я так глубоко не закапывался. Тем не менее, конечно, хотелось бы уметь добавлять
+про­из­воль­ные символы для клавиатурного ввода. Это ж Linux, здесь кастомизируется, если не все, то очень многое…
+По­про­бу­ем.</p>
+
+<h3 id="xcompose">
+<a class="anchor" href="#xcompose" aria-hidden="true"><span class="octicon octicon-link"></span></a>~/.XCompose</h3>
+
+<p>Самое простое — это добавить свои сочетания для Compose Key. Для начала идем в файл, расположенный (скорее всего) по пути
+<code class="language-plaintext highlighter-rouge">/usr/share/X11/locale/en_US.UTF-8/Compose</code> и смотрим, чего уже есть, ну и формат описания. Не от­вле­ка­ясь на раз­но­об­раз­ные
+<code class="language-plaintext highlighter-rouge">&lt;dead_tilde&gt;</code> можно увидеть множество строк, начинающихся с <code class="language-plaintext highlighter-rouge">&lt;Multi_key&gt;</code> — последовательность имен сим­во­лов в уголках,
+двоеточие, нужный символ в кавычках, его название или номер в юникоде и комментарий. На­з­ва­ние или юни­код необязательны,
+как и комментарий.</p>
+
+<p>А затем создаем в своем домашнем каталоге файл <code class="language-plaintext highlighter-rouge">.XCompose</code> следующего, например, содержания:</p>
+
+<figure class="highlight">
+  <pre><code class="language-xcompose" data-lang="xcompose">include "/usr/share/X11/locale/en_US.UTF-8/Compose"
+
+&lt;Multi_key&gt; &lt;h&gt; &lt;o&gt; &lt;m&gt; &lt;e&gt; : "🏠" U1F3E0 # HOUSE BUILDING</code></pre>
+</figure>
+
+<p>Выходим и заходим (нужно переинициализировать сеанс иксов), и вуаля — последовательность <code class="language-plaintext highlighter-rouge">[Compose]→​[h]→​[o]→​[m]→[e]</code>
+выдает символ домика <code class="language-plaintext highlighter-rouge">🏠</code><sup id="fnref:ff-symbols"><a href="#fn:ff-symbols" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>. Главное тут следить, чтобы одни последовательности не перекрывали другие —
+иначе более короткая не позволит использовать более длинную.</p>
+
+<p>Ввод через Compose Key легко настраивается, но, на мой взгляд, для условно обычных, идущих в потоке, символов не очень
+удо­бен. То есть (лично у меня, по крайней мере) такой способ ввода из потока выбивается. Поэтому символы «дополнительной
+пун­к­ту­а­ции» или что-то из базовой математики стоит вывести на третий/четвертый уровень, который (опять же лично у меня)
+нажимается автоматически и из потока текста не выделяется. Что же до Compose, то тут можно оставить символы-пик­то­грам­мы
+(как собственно и сделано в примере), эмодзи, или что-то уж совсем редко используемое.</p>
+
+<p>Еще один момент, касающийся потока — это раскладки. Compose работает на уровне символов, а не нажатий клавиш, поэтому
+чтобы ввести заданную нами последовательность, придется переключаться из русской (например) раскладки в английскую.
+Это, впрочем, можно поправить, задав аналогичную последовательность с соответствующими русскими буквами, правда, вы­гля­деть
+такая строка будет страшновато и немнемонично сама по себе:</p>
+
+<figure class="highlight">
+  <pre><code class="language-xcompose" data-lang="xcompose">&lt;Multi_key&gt; &lt;Cyrillic_er&gt; &lt;Cyrillic_shcha&gt; &lt;Cyrillic_softsign&gt; &lt;Cyrillic_u&gt; : "🏠" U1F3E0 # HOUSE BUILDING</code></pre>
+</figure>
+
+<p class="note italic">В обсуждениях в интернете видел, что файл <code class="language-plaintext highlighter-rouge">~/.XCompose</code> обрабатывается не у всех. Я честно не знаю, в каких случаях
+бы­ва­ют проблемы, и что с этим делать, поскольку сам не сталкивался — у меня работает прекрасно.</p>
+
+<h3 id="кастомизируем-раскладку">
+<a class="anchor" href="#%D0%BA%D0%B0%D1%81%D1%82%D0%BE%D0%BC%D0%B8%D0%B7%D0%B8%D1%80%D1%83%D0%B5%D0%BC-%D1%80%D0%B0%D1%81%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D1%83" aria-hidden="true"><span class="octicon octicon-link"></span></a>Кастомизируем раскладку</h3>
+
+<p>Можно было назвать этот подраздел настройкой третьего уровня, но на самом деле изменения в нем и изменения в основной
+раскладке клавиатуры ничем не отличаются. Хотя я основную часть менять и не буду (чтобы не вырабатывать вредных при­вы­чек,
+мешающих затем работе с произвольно взятым посторонним компьютером — частая проблема у любителей кас­том­ных раскладок).</p>
+
+<p>Второй момент: все изменения будем делать на уровне пользователя (так же, как и выше <code class="language-plaintext highlighter-rouge">~/.XCompose</code>). Это позволит, в слу­чае
+неудачного эксперимента, не остаться хотя бы без экрана логина… Да и вообще.</p>
+
+<p>Итак. За раскладки, дополнительные символы и вообще за ввод с клавиатуры в рамках <strong><a href="https://www.x.org/">X.org</a></strong> отвечает проект
+<strong><a href="https://www.x.org/wiki/XKB/">XKB</a></strong>, по ссылке мож­но почитать документацию, которая лично мне помогла примерно никак… К счастью, за прошедшие
+10 лет материалов в се­ти на эту тему существенно прибавилось, и кое-что найти можно. Больше всего мне помогли:</p>
+
+<ul>
+  <li>
+    <p>Пост на Хабре <strong><a href="https://habr.com/ru/post/222285/">«XKB: перенастроим клавиши под себя любимого»</a></strong> автора <strong><a href="https://habr.com/ru/users/philpirj/">philpirj</a></strong> и <a href="https://habr.com/ru/post/222285/#comment_7586289">комментарий</a>
+к нему от <strong><a href="https://habr.com/ru/users/kodx/">kodx</a></strong>.</p>
+  </li>
+  <li>
+    <p>Блог (англоязычный) <strong><a href="https://who-t.blogspot.com/">Who-T</a></strong>, в первую очередь серия постов <strong>«User-specific XKB configuration»</strong>: <a href="https://who-t.blogspot.com/2020/02/user-specific-xkb-configuration-part-1.html">первая часть</a>,
+<a href="https://who-t.blogspot.com/2020/07/user-specific-xkb-configuration-part-2.html">вторая</a>, <a href="https://who-t.blogspot.com/2020/08/user-specific-xkb-configuration-part-3.html">третья</a>, <a href="https://who-t.blogspot.com/2020/09/user-specific-xkb-configuration-putting.html">итог</a>.</p>
+  </li>
+</ul>
+
+<p>Чтобы добавить символы на третий/четвертый уровень, можно:</p>
+
+<ol>
+  <li>
+    <p>Создать полностью собственную раскладку, унаследовав от существующей.</p>
+  </li>
+  <li>
+    <p>Создать расширение раскладки, которое будет независимо подключаться к основной, так же, как штатные «До­пол­ни­тель­ные
+типографские символы».</p>
+  </li>
+</ol>
+
+<p>Второй вариант, конечно, предпочтительней. Сразу скажу, что совсем <em>так же</em> не получилось — мой блок дополнительных сим­во­лов не виден
+в настройках DE и, что более печально, не получилось оформить его как опцию… Кроме того, включение рас­клад­ки делается через явный
+вызов <strong><a href="https://gitlab.freedesktop.org/xorg/app/setxkbmap">setxkbmap</a></strong> и <strong><a href="https://gitlab.freedesktop.org/xorg/app/xkbcomp">xkbcomp</a></strong> скриптом-однострочником (который, впрочем, прекрасно по­ме­ща­ет­ся в автозагрузку DE).
+Почему не все получилось? Ну, возможно, я что-то упускаю, а возможно, все дело в том, что под­дер­ж­ка на­с­т­рой­ки XKB в X.org неполная,
+и для того, чтобы все сделать красиво и по мануалу, нужно переходить на Wayland (который у ме­ня пока что-то не приживается) — см. пост
+того же Who-T <strong><a href="https://who-t.blogspot.com/2020/09/no-user-specific-xkb-configuration-in-x.html">«No user-specific XKB configuration in X»</a></strong>.</p>
+
+<p>Тем не менее, файл с нашими добавочными символами имеет смысл расположить в соответствии с инструкциями — в ка­та­ло­ге
+<code class="language-plaintext highlighter-rouge">$XDG_CONFIG_HOME/xkb/symbols/</code>, вдруг вскорости проблема исправится… (Если переменная <code class="language-plaintext highlighter-rouge">$XDG_CONFIG_HOME</code> не за­да­на, следует считать ее
+равной <code class="language-plaintext highlighter-rouge">$HOME/.config</code>) Имя файла может быть любое, хотя лучше не использовать уже имеющиеся в сис­тем­ном <code class="language-plaintext highlighter-rouge">/usr/share/X11/xkb/symbols/</code>,
+чтоб не перекрыть чего нужного. Для данного примера я решил не умничать и на­звать его <code class="language-plaintext highlighter-rouge">custom</code>. Содержимое файла у меня такое:</p>
+
+<figure class="highlight">
+  <pre><code class="language-xkb" data-lang="xkb">default partial alphanumeric_keys
+xkb_symbols "typo" {
+    include "typo(base)"
+    include "nbsp(level3n)"
+
+    key &lt;AB08&gt; { [ NoSymbol, NoSymbol, NoSymbol,    U2039 ] };  // "‹"
+    key &lt;AB09&gt; { [ NoSymbol, NoSymbol, NoSymbol,    U203A ] };  // "›"
+    key &lt;BKSL&gt; { [ NoSymbol, NoSymbol,      bar, NoSymbol ] };  // "|"
+};</code></pre>
+</figure>
+
+<p>Случай простой — один блок определений символов. <code class="language-plaintext highlighter-rouge">default</code> означает, что он должен использоваться, если указан только файл,
+т.е. <code class="language-plaintext highlighter-rouge">+custom(typo)</code> и <code class="language-plaintext highlighter-rouge">+custom</code> — одно и то же. <code class="language-plaintext highlighter-rouge">partial</code> — что это частичное определение, добавляемое к основе, а не са­мо­сто­я­тель­ная
+раскладка. <code class="language-plaintext highlighter-rouge">alphanumeric_keys</code> показывает, какую область клавиш мы определяем (я, честно говоря, не уве­рен, что это влияет на результат).
+Ну, а <code class="language-plaintext highlighter-rouge">xkb_symbols "typo"</code> собственно говорит нам, что это за блок.</p>
+
+<p id="fix">Далее мы включаем два стандартных набора — типографские символы и неразрывный пробел <em>с тонким неразрывным про­бе­лом на четвертом уровне</em>.
+<a href="#bug">Выше я писал</a>, что обнаружил баг на своей системе, а сейчас его обхожу. Дело в том, что сам «ти­по­граф­с­кий» набор вводит неразрывный пробел
+как на третьем уровне, так и на четвертом, а опция <code class="language-plaintext highlighter-rouge">nbsp:level3n</code> по идее должна его перекрывать. Но порядок подключения этих модулей
+не определяется их порядком в списке опций (а чем опре­де­ля­ет­ся, неизвестно), и у меня <code class="language-plaintext highlighter-rouge">typo</code> перекрывает <code class="language-plaintext highlighter-rouge">nbsp</code>, а не наоборот. Импортируя
+их в своем файле, я убиваю двух зай­цев: мне не нужно будет указывать их отдельно (или прописывать их содержимое себе), и порядок импорта
+определен жестко по­ряд­ком строк в файле.</p>
+
+<p>Далее строки определения символов. Начинаются они с ключевого слова <code class="language-plaintext highlighter-rouge">key</code> и кода клавиши, а затем идет список символов.</p>
+
+<p>Коды клавиш определяются файлами в каталоге <code class="language-plaintext highlighter-rouge">/usr/share/X11/xkb/keycodes/</code> и зависят от системы. В моем случае, и в боль­шин­ст­ве современных
+Linux-систем, надо смотреть файл <code class="language-plaintext highlighter-rouge">evdev</code>. Вкратце, основные алфавитно цифровые клавиши ко­ди­ру­ют­ся как <code class="language-plaintext highlighter-rouge">A</code> (Alphanumeric), ряд буквой от <code class="language-plaintext highlighter-rouge">A</code> —
+пробел, до <code class="language-plaintext highlighter-rouge">E</code> — цифры (но при этом ряд пробела кодируется весь от­дель­ны­ми именами, и сам пробел — это <code class="language-plaintext highlighter-rouge">&lt;SPCE&gt;</code>), и номер клавиши в ряду
+двумя цифрами (при этом для нумерации иг­но­ри­ру­ют­ся мо­ди­фи­ка­то­ры и клавиша перед цифрами, где русская «Ё» — эта клавиша имеет отдельный код —
+<code class="language-plaintext highlighter-rouge">&lt;TLDE&gt;</code>); гуляющая по ря­дам в разных клавиатурах клавиша с обратным слэшем кодируется как <code class="language-plaintext highlighter-rouge">&lt;BKSL&gt;</code>. Таким образом у меня прописаны опре­де­ле­ния
+клавиш <code class="language-plaintext highlighter-rouge">&lt;</code> (<code class="language-plaintext highlighter-rouge">Б</code>), <code class="language-plaintext highlighter-rouge">&gt;</code> (<code class="language-plaintext highlighter-rouge">Ю</code>) и уже упомянутого обратного слэша.</p>
+
+<p>В списке очевидным образом идут символы по уровням — от первого (клавиша без модификаторов) и далее — вообще уровней может быть много,
+но я использую только до четвертого, чего и всем желаю. Напомню, что второй уровень — это клавиша с <code class="language-plaintext highlighter-rouge">[Shift]</code>, модификатор для третьего
+задается опциями XKB, а четвертый — это <code class="language-plaintext highlighter-rouge">[L3]+[Shift]</code>.</p>
+
+<p>Коды символов могут использоваться как зашитые в недрах системы (их список можно увидеть в файле <code class="language-plaintext highlighter-rouge">/usr/include/X11/keysymdef.h</code>), так
+и обыкновенный юникод. Но есть и два специальных значения: <code class="language-plaintext highlighter-rouge">NoSymbol</code> означает, что в данной позиции мы символ не перекрываем, т.е.
+должен использоваться определенный где-то ранее; а <code class="language-plaintext highlighter-rouge">VoidSymbol</code> означает отсутствие символа — при нажатии ничего не вводится. Как можно
+видеть, я использую <code class="language-plaintext highlighter-rouge">NoSymbol</code> в большинстве позиций, чтобы там остались старые значения. В первых двух случаях на третьем уровне находятся
+кавычки-елочки, они же двойные угловые кавычки, и на четвертый уровень я добавляю их одиночные вариации. В последней строке на третий
+уровень добавляется вертикальная черта, которая вообще-то на этой клавише уже есть на втором… но только в английской раскладке. А теперь,
+на третьем она будет и в русской раскладке тоже<sup id="fnref:double-symbols"><a href="#fn:double-symbols" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>.</p>
+
+<p>Теперь наше определение символов нужно подключить. Вот такой скрипт у меня вызывается из автозапуска KDE:</p>
+
+<figure class="highlight">
+  <pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/sh</span>
+
+setxkbmap <span class="nt">-layout</span> <span class="s2">"us+custom,ru:2+custom"</span> <span class="se">\</span>
+  <span class="nt">-option</span> <span class="s2">""</span> <span class="nt">-option</span> <span class="s2">"grp:alt_shift_toggle,lv3:win_switch,lv3:ralt_switch,compose:caps"</span> <span class="se">\</span>
+  <span class="nt">-print</span> | xkbcomp <span class="nt">-I</span><span class="nv">$HOME</span>/.config/xkb - <span class="s2">"</span><span class="k">${</span><span class="nv">DISPLAY</span><span class="p">%%.*</span><span class="k">}</span><span class="s2">"</span></code></pre>
+</figure>
+
+<p>Увы, мне не удалось заставить <code class="language-plaintext highlighter-rouge">setxkbmap</code> обрабатывать созданные мной правила (их я приводить здесь не буду, раз они все равно не рабочие),
+а без них эта программа отказывается устанавливать раскладку самостоятельно, почему и приходится использовать команду <code class="language-plaintext highlighter-rouge">-print</code> и передавать
+созданный <code class="language-plaintext highlighter-rouge">xkb_keymap</code> в <code class="language-plaintext highlighter-rouge">xkbcomp</code>. В принципе, его можно было б и сохранить, выглядит он так:</p>
+
+<figure class="highlight">
+  <pre><code class="language-xkb" data-lang="xkb">xkb_keymap {
+        xkb_keycodes  { include "evdev+aliases(qwerty)" };
+        xkb_types     { include "complete"      };
+        xkb_compat    { include "complete"      };
+        xkb_symbols   { include "pc+us+custom+ru:2+custom:2+inet(evdev)+group(alt_shift_toggle)+level3(ralt_switch)+level3(win_switch)+compose(caps)"   };
+        xkb_geometry  { include "pc(pc104)"     };
+};</code></pre>
+</figure>
+
+<p>И вызывать <code class="language-plaintext highlighter-rouge">xkbcomp</code> сразу с этим сохраненным файлом… Но здесь слишком много служебной информации, которая не задается мной, а берется
+из умолчаний и системы, кроме того, раскладки логически не разделены с переключателями… В об­щем, мой вариант скрипта мне кажется логичнее.</p>
+
+<p>Что касается вызова <code class="language-plaintext highlighter-rouge">xkbcomp</code>, хочу обратить внимание на параметр <code class="language-plaintext highlighter-rouge">-I$HOME/.config/xkb</code> — указывается не каталог, где непосредственно
+лежит файл с символами, а корень конфигурации XKB, где находится подкаталог <code class="language-plaintext highlighter-rouge">symbols</code> и уже в нем наш файл. Именно через подкаталог
+<code class="language-plaintext highlighter-rouge">xkbcomp</code> его будет искать.</p>
+
+<p>Данный способ расширения раскладки я проверил, помимо основной системы (KDE5, Gentoo) на виртуалках: Cinnamon (Linux Mint), GNOME (Ubuntu),
+Xfce (Xubuntu) и LXQt (Lubuntu). Везде все работает. По идее должно работать в любых системах, где используется XKB (и не используются
+различные экзотические способы ввода, вероятно).</p>
+
+<p>Относительно же систем, уже использующих Wayland, рекомендую почитать вышеупомянутую серию постов <strong>«User-specific XKB configuration»</strong>
+и сделать дословно, как там описано. Кстати, посты там недавние, актуальные — можно позадавать автору вопросы (если английский позволяет).</p>
+
+<div class="sticker center" style="max-width:600px;margin:50px auto;">
+  <p>Напоминаю, что если вам понравился и/или оказался полезным материал, вы можете
+<a href="#donate" style="text-decoration: underline;">поблагодарить автора и поддержать сайт
+любой суммой</a>, которую сочтете уместной.</p>
+</div>
+
+<h2 id="итог">
+<a class="anchor" href="#%D0%B8%D1%82%D0%BE%D0%B3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Итог</h2>
+
+<p>Ввод с клавиатуры в Linux очень гибко и мощно настраивается. Вводить можно любые символы юникода, ограничение тут скорее в том, чтобы их
+увидеть — это уже от шрифта зависит, но современные шрифты поддерживают много чего.</p>
+
+<p>При этом базовая настройка простая и делается буквально в несколько кликов. Расширение же возможностей, хоть и слож­нее, но тоже не рокет-сайнс,
+и оно того стоит.</p>
+
+<p>Список символов, покдлючаемый стандартной опцией <code class="language-plaintext highlighter-rouge">misc:typo</code> (или через настройки DE, где они есть), можно посмотреть в файле
+<code class="language-plaintext highlighter-rouge">/usr/share/X11/xkb/symbols/typo</code>, а можно пользоваться картинкой из этого поста — зря я что ли ее делал…
+Пред­ус­та­нов­лен­ные комбинации Compose, как выше уже упоминалось, располагаются в файле <code class="language-plaintext highlighter-rouge">/usr/​share/​X11/​locale/​en_US.UTF-8/​Compose</code>.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:check">
+      <p>Символы я определял, естественно не на глаз, а вводя в поле KCharSelect, так что в дублировании уверен. <a href="#fnref:check" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:feet">
+      <p>Информация про футы из KCharSelect, вживую я такого обозначения не встречал. <a href="#fnref:feet" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:ff-symbols">
+      <p>Пользователи Firefox могут увидеть здесь домик раскрашенный в разные цвета, а не просто символ шрифта.
+           Это делает именно браузер для многих «иконочных» символов. <a href="#fnref:ff-symbols" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:double-symbols">
+      <p>Стандартные «типографские символы» организуют такое же поведение для знаков
+               доллара и амперсэнда, помещая их на третий уровень тех же цифровых клавиш,
+               где они есть в английской и отсутствуют в русской раскладке. И то же самое
+               с квадратными и фигурными скобками. <a href="#fnref:double-symbols" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.04.08 |</span>
+            <a href="/2021/04/rms.html" title="Почему происходящее с FSF и сообществом свободного ПО в целом важно для всех.">Ричард Столлман как отражатель мировой революции</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a>​<a class="fa-icon-bullhorn" href="/life/social/politics/" title="Посты о политике">Политика</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2023.10.03 |</span>
+            <a href="/2023/10/merlin.html" title="Приложение для рас­поз­на­ва­ния птиц по го­ло­су">Merlin Bird ID</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2015.04.04 |</span>
+            <a href="/2015/04/ruby-multitasking.html" title="В статье рассматриваются основные средства работы с потоками (threads) и процессами в языке и стандартной библиотеке Ruby.">Ruby и многозадачность</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#общие-принципы">Общие принципы</a></li>
+<li class="toc-entry toc-h2"><a href="#базовая-настройка">Базовая настройка</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#kde-4-и-5">KDE 4 и 5</a></li>
+<li class="toc-entry toc-h3"><a href="#gnome-и-cinnamon">GNOME и Cinnamon</a></li>
+<li class="toc-entry toc-h3"><a href="#xfce-и-все-все-все">Xfce и все-все-все…</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#использование">Использование</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#третий-уровень">Третий уровень</a></li>
+<li class="toc-entry toc-h3"><a href="#compose-key">Compose Key</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#кроличья-нора">Кроличья нора</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#xcompose">~/.XCompose</a></li>
+<li class="toc-entry toc-h3"><a href="#кастомизируем-раскладку">Кастомизируем раскладку</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#итог">Итог</a></li>
+</ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/2023/01/searches.html" title="Странные поисковые запросы, по которым ко мне приходят">Кстати, о птичках</a></li></ul>
+    </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

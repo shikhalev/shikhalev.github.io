@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>FPC-Notes: «Hello, World!» | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="FPC-Notes: «Hello, World!»" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Начнем по традиции с простейшей программы, делающей хоть что-то… Кто сказал «что-то полезное»? До чего-то полезного нам еще пилить и пилить." />
+<meta property="og:description" content="Начнем по традиции с простейшей программы, делающей хоть что-то… Кто сказал «что-то полезное»? До чего-то полезного нам еще пилить и пилить." />
+<link rel="canonical" href="https://shikhalev.github.io/2011/10/fpc-hello-world.html" />
+<meta property="og:url" content="https://shikhalev.github.io/2011/10/fpc-hello-world.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/assets/img/2013-11/fpc.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-10-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/assets/img/2013-11/fpc.png" />
+<meta property="twitter:title" content="FPC-Notes: «Hello, World!»" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2021-04-14T05:00:00+00:00","datePublished":"2011-10-12T00:00:00+00:00","description":"Начнем по традиции с простейшей программы, делающей хоть что-то… Кто сказал «что-то полезное»? До чего-то полезного нам еще пилить и пилить.","headline":"FPC-Notes: «Hello, World!»","image":"https://shikhalev.github.io/assets/img/2013-11/fpc.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/2011/10/fpc-hello-world.html"},"url":"https://shikhalev.github.io/2011/10/fpc-hello-world.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-keyboard" href="/tech/programming/fpc/" title="Free Pascal Compiler, Lazarus и все, что с ними связано">FPC</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">FPC-Notes: «Hello, World!»</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2011%2F10%2Ffpc-hello-world.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2011%2F10%2Ffpc-hello-world.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2011%2F10%2Ffpc-hello-world.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2011%2F10%2Ffpc-hello-world.html&text=FPC-Notes%3A+%C2%ABHello%2C+World%21%C2%BB">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=FPC-Notes%3A+%C2%ABHello%2C+World%21%C2%BB&url=https%3A%2F%2Fshikhalev.github.io%2F2011%2F10%2Ffpc-hello-world.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2011-10-12T00:00:00+00:00" itemprop="datePublished">2011.10.12
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#Hello, World!">Hello, World!</a>​<a class="tag" href="/tags#Pascal">Pascal</a>​<a class="tag" href="/tags#компиляторы">компиляторы</a>​<a class="tag" href="/tags#свободное ПО">свободное ПО</a>​<a class="tag" href="/tags#языки программирования">языки программирования</a></aside></header><div itemprop="articleBody">
+  <div class="right" style="max-width:320px;margin:0px;">
+
+  <figure class="highlight">
+    <pre><code class="language-pascal" data-lang="pascal"><span class="k">program</span> <span class="n">Hello</span><span class="p">;</span>
+
+<span class="k">begin</span>
+ <span class="k">WriteLn</span><span class="p">(</span><span class="s">'Hello, World!'</span><span class="p">)</span>
+<span class="k">end</span><span class="p">.</span></code></pre>
+  </figure>
+
+  <figure class="highlight">
+    <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>fpc hello
+<span class="go">Target OS: Linux for x86-64
+Compiling hello.pp
+Linking hello
+5 lines compiled, 0.9 sec
+</span><span class="gp">$</span><span class="w"> </span>./hello
+<span class="go">Hello, World!
+</span><span class="gp">$</span></code></pre>
+  </figure>
+
+</div>
+
+<p>Начнем по традиции с простейшей программы, делающей хоть что-то… Кто сказал «что-то полезное»? До чего-то
+полезного нам еще пилить и пилить. Достаточно типовой «Hello, World!» можно увидеть во врезке. Теперь можно
+сохранить этот текст в файл (например, <code class="language-plaintext highlighter-rouge">hello.pp</code><sup id="fnref:pp"><a href="#fn:pp" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>), скомпилировать командой <code class="language-plaintext highlighter-rouge">fpc hello</code> и запустить.
+См. консольный фрагмент — если вы работаете в Linux или FreeBSD, результат должен быть похож. Да и в других
+системах отличия не особо существенны. Еще тут может выпасть предупреждение от компоновщика — на него внимания
+обращать не надо. Получилось? Теперь будем разбираться, что именно.</p>
+
+<p>В действительности, это не самый минимальный пример — я таки оставил одну <em>необязательную</em> строку, а именно — первую…
+Но давайте по порядку. Исходный код программы начинается с необязательного заголовка, состоящего из ключевого слова
+<code class="language-plaintext highlighter-rouge">program</code> и идентификатора. Заканчиваться <del>идентификатор</del> <ins>заголовок</ins><sup id="fnref:fix"><a href="#fn:fix" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> должен точкой с запятой,
+как и любое предложение языка. Впрочем, не совсем так.</p>
+
+<!--more-->
+
+<div class="note">
+
+  <p>В отличие от многих других языков программирования, в Pascal точка с запятой <em>не заканчивает</em> предложения языка,
+а <em>отделяет</em> предложения друг от друга. Но в процессе развития диалектов языка этот принцип соблюдался не всегда
+последовательно… С учетом еще и того, что существует понятие «пустого предложения», которое позволяет ставить
+точку с запятой во многих местах, где она не требуется, ситуация в целом довольно запутана.</p>
+
+  <p>Там, где есть разница между «окончанием» и «разделением», я буду отдельно пояснять необходимость (или допустимость)
+точки с запятой. В данном же случае несущественно, заканчивает ли она предложение заголовка, или отделяет его от следующего.</p>
+
+</div>
+
+<p>Вернемся к нашим баранам. Заголовок в исходном файле программы необязателен, но лично я настоятельно рекомендую его
+указывать — все-таки код должен быть хорошо читаем не только компилятором, но и людьми, которым, возможно, придется
+его развивать и поддерживать. К тому же так получится единообразно с другими вариантами исходников — кодом динамических
+библиотек и модулей.</p>
+
+<p>После заголовка идет <em>область описаний</em>, где мы должны расписать используемые модули, типы, переменные, константы,
+метки и т.д. Естественно, только в том случае, если мы их реально используем. В нашем примере ничего такого нет,
+поэтому область описаний осталась пустой.</p>
+
+<p>Затем, как мы можем видеть, идет <em>исполняемый блок</em>, начинающийся с ключевого слова <code class="language-plaintext highlighter-rouge">begin</code> и заканчивающийся ключевым
+словом <code class="language-plaintext highlighter-rouge">end</code> с точкой. Между ними расположены собственно исполняемые операторы. В нашем случае — один оператор вызова
+процедуры. Системная процедура <code class="language-plaintext highlighter-rouge">WriteLn()</code> записывает строку в стандартный вывод (или в произвольный текстовый файл,
+если он указан).</p>
+
+<div class="note">
+
+  <p>Глядя на вывод компилятора можно подумать, что формирование исполняемого файла происходит в два этапа — «Compiling» и «Linking».
+Так оно и есть. И мы сейчас немного о них поговорим.</p>
+
+  <p>Собственно, если кто не в курсе, компиляция — это формирование машинного (в т.ч. — для виртуальной машины) кода из исходного.
+Тогда как компоновка (линковка, linking) — формирование готового исполняемого файла для конкретной операционной системы,
+со служебной информацией, нужной для запуска и т.д. Это разные по своей сути процессы.</p>
+
+</div>
+
+<h2 id="пара-слов-о-компиляции">
+<a class="anchor" href="#%D0%BF%D0%B0%D1%80%D0%B0-%D1%81%D0%BB%D0%BE%D0%B2-%D0%BE-%D0%BA%D0%BE%D0%BC%D0%BF%D0%B8%D0%BB%D1%8F%D1%86%D0%B8%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Пара слов о компиляции</h2>
+
+<p>Если мы посмотрим в каталог, где только что скомпилировали нашу программу, то помимо исходного <code class="language-plaintext highlighter-rouge">hello.pp</code> и конечного исполняемого
+<code class="language-plaintext highlighter-rouge">hello</code> (<code class="language-plaintext highlighter-rouge">hello.exe</code> на некоторых ОС), увидим файл <code class="language-plaintext highlighter-rouge">hello.o</code>. Это так называемый <em>объектный файл</em>, содержащий результат компиляции —
+машинный код, не содержащий служебной информации, необходимой для запуска программы, зато содержащий служебную информацию, нужную
+компоновщику, а именно — символьные имена функций, переменных и т.д., которые компоновщик уже потом преобразует в адреса.</p>
+
+<div class="right" style="width:360px;margin:0px;margin-bottom:-5px;">
+
+  <figure class="highlight">
+    <pre><code class="language-gas" data-lang="gas">.section .text
+    .balign 8,0x90
+.globl  PASCALMAIN
+    .type   PASCALMAIN,@function
+PASCALMAIN:
+.globl main
+    .type   main,@function
+main:
+# [hello.pp]
+# [3] begin
+    subq    $8,%rsp
+    movq    %rbx,(%rsp)
+    call    FPC_INITIALIZEUNITS
+# [4] WriteLn('Hello, World!')
+    call    fpc_get_output
+    movq    %rax,%rbx
+    movq    %rbx,%rsi
+    movq    $_$HELLO$_Ld1,%rdx
+    movl    $0,%edi
+    call    fpc_write_text_shortstr
+    call    FPC_IOCHECK
+    movq    %rbx,%rdi
+    call    fpc_writeln_end
+    call    FPC_IOCHECK
+# [5] end.
+    call    FPC_DO_EXIT
+    movq    (%rsp),%rbx
+    addq    $8,%rsp
+    ret
+
+.section .rodata
+    .balign 8
+.globl      _$HELLO$_Ld1
+_$HELLO$_Ld1:
+    .ascii "\015Hello, World!\000"</code></pre>
+  </figure>
+
+</div>
+
+<p>Мы можем дизассемблировать этот файл посредством утилиты <code class="language-plaintext highlighter-rouge">objdump</code>, однако это не лучший способ. Гораздо удобнее
+воспользоваться тем, что FPC позволяет получить и сохранить ассемблерный результат компиляции<sup id="fnref:asm"><a href="#fn:asm" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>. Для этого нам
+нужно выполнить команду <code class="language-plaintext highlighter-rouge">fpc -al hello</code>. Рядом с прочими появился еще один файл — <code class="language-plaintext highlighter-rouge">hello.s</code>, который содержит
+ассемблерный код. Тем, кто раньше пользовался ассемблером вроде MASM или TASM этот код покажется странным и непривычным,
+поскольку составлен в так называемом AT&amp;T-синтаксисе, а не в синтаксисе Intel<sup id="fnref:asms"><a href="#fn:asms" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>. Файл довольно большой, поэтому
+я не буду приводить его полностью, а возьму только то, что имеет отношение к непосредственно коду. Всякая служебная
+и отладочная информация нам сейчас ни к чему.</p>
+
+<p>На врезке видно, что́ у меня получилось. Если у вас не 64-битная система, то соответствующий фрагмент может отличаться,
+скорее всего — именами регистров и суффиксами команд. Тем не менее, общий смысл должен сохраниться — исполняемый блок
+pascal-программы объявлен в виде функции с двумя именами <code class="language-plaintext highlighter-rouge">PASCALMAIN</code> и <code class="language-plaintext highlighter-rouge">main</code>, а строка, которую мы указали в явном виде
+при вызове <code class="language-plaintext highlighter-rouge">WriteLn()</code> помещена в секцию неизменяемых данных под автоматически сгенерированным именем <code class="language-plaintext highlighter-rouge">_$HELLO$_Ld1</code>.</p>
+
+<p>Из последовательности команд можно сделать вывод, что данный код не обращается напрямую к каким-либо системным вызовам,
+а использует подпрограммы из стандартной библиотеки Free Pascal. Об этом нам явственно сообщают префиксы <code class="language-plaintext highlighter-rouge">fpc_</code> и <code class="language-plaintext highlighter-rouge">FPC_</code>.
+Этих подпрограмм мы не писали, и в файле <code class="language-plaintext highlighter-rouge">hello.o</code> их нет. Но где-то же они есть… Это «где-то» — стандартный модуль
+<code class="language-plaintext highlighter-rouge">System</code> и, соответственно, объектный файл <code class="language-plaintext highlighter-rouge">system.o</code>, который расположен в каталоге модулей компилятора. Этот модуль
+используется всегда, а объектный файл так же всегда передается компоновщику, который сопоставляет символьные имена там
+и там и подставляет вместо них нужные адреса — <em>компонует</em> программу из множества отдельных объектных файлов.</p>
+
+<p>Однако мы нигде не видим собственно вызова <code class="language-plaintext highlighter-rouge">WriteLn()</code>. Вместо него вызываются целых три разных подпрограммы:
+<code class="language-plaintext highlighter-rouge">fpc_get_output</code>, <code class="language-plaintext highlighter-rouge">fpc_write_text_shortstr</code> и <code class="language-plaintext highlighter-rouge">fpc_writeln_end</code>… Вот так, неожиданно мы узнали «страшную тайну» —
+процедура <code class="language-plaintext highlighter-rouge">WriteLn()</code> на самом деле настоящей процедурой не является, а обрабатывается компилятором совершенно особым
+образом. Как должны компилироваться и вызываться настоящие процедуры и функции мы обязательно рассмотрим когда-нибудь
+потом. Пока можно отметить, что синтаксис языка вообще не позволяет объявить процедуру такого типа. Тем не менее,
+<code class="language-plaintext highlighter-rouge">WriteLn()</code> и еще несколько процедур ввода/вывода предусмотрены в определении языка и должны быть так или иначе реализованы.
+Просто отметим это как факт и не будем заморачиваться.</p>
+
+<p class="note">Может возникнуть закономерный вопрос: а зачем нам знать, что <code class="language-plaintext highlighter-rouge">WriteLn()</code> — ненормальная? Отвечаю: хотя бы для того,
+чтобы не терять в дальнейшем времени на попытки выяснить, как объявить свою процедуру с аналогичным синтаксисом, или
+почему не получается использовать с ней процедурные переменные…</p>
+
+<p>Что еще интересного мы можем узнать из нашего ассемблерного листинга? Обратим внимание на секцию данных — совершенно
+четко видно, что строка, заданная нами в программе непосредственно между одинарными кавычками — строковый литерал —
+а) трактуется как «короткая» (тип <code class="language-plaintext highlighter-rouge">ShortString</code>), но б) при этом завершается нулевым байтом, чтобы при необходимости
+приведения ее в дальнейшем к типу «длинной» строки или <code class="language-plaintext highlighter-rouge">PChar</code> не требовалось выполнять какие-либо преобразования.
+Как показали эксперименты, если строковый литерал содержит символы не из первой половины кодовой таблицы ASCII (например,
+русские буквы), и при этом явно определена кодировка исходника, посредством ключа <code class="language-plaintext highlighter-rouge">-FcXXX</code> или директивы <code class="language-plaintext highlighter-rouge">{$CODEPAGE XXX}</code>,
+такой литерал будет представлен уже в виде <code class="language-plaintext highlighter-rouge">UnicodeString</code>. Должен заметить, что внутреннее представление литералов
+зависит от версии компилятора и может поменяться в дальнейшем. Его стоит иметь в виду, но полагаться на него в серьезных
+проектах нельзя.</p>
+
+<p class="note">Теперь становится очевидным известное из документации ограничение для непосредственно указываемых строк в 255 байт.</p>
+
+<h2 id="пара-слов-о-компоновке">
+<a class="anchor" href="#%D0%BF%D0%B0%D1%80%D0%B0-%D1%81%D0%BB%D0%BE%D0%B2-%D0%BE-%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%BE%D0%B2%D0%BA%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Пара слов о компоновке</h2>
+
+<p>Компоновка может производиться на некоторых платформах самим FPC, а на других (и в частности, на моем Linux-amd64)
+посредством GNU-компоновщика <code class="language-plaintext highlighter-rouge">ld</code> <a href="#ld">[3]</a>. Принципиальных отличий между этими двумя способами нет — при нормальной
+работе компоновщик вызывается компилятором автоматически, без участия пользователя. Мы лучше рассмотрим другой момент.</p>
+
+<p>Скомпилировав исполняемый файл, как было описано в начале заметки, мы можем изрядно удивиться, посмотрев на его размер —
+более 100 KB (конкретно сейчас на моей системе получается 155 KB). Казалось бы, зачем для такой простой задачи так много
+кода? Впрочем, в предыдущем подразделе я написал, что помимо объектного кода собственно программы, компоновщику передается
+еще и объектный файл модуля <code class="language-plaintext highlighter-rouge">System</code>, а ведь там не только те несколько подпрограмм, вызов которых присутствует в листинге,
+но и множество других для разнообразных задач. Вот только эти задачи актуальны не для нашей программы, а для каких-то других.
+Таким образом получается, что мы тянем за собой кучу неиспользуемого кода, что не есть хорошо.</p>
+
+<p>Чтобы этого не происходило, следует использовать так называемое «умное связывание» (smartlinking). В этом случае,
+компоновщик использует не большой объектный файл, такой как <code class="language-plaintext highlighter-rouge">system.o</code>, а маленькие объектные фрагменты, собранные
+в объектную библиотеку (или объектный архив), т.е. в файл <code class="language-plaintext highlighter-rouge">libpsystem.a</code>, откуда он берет только нужные данной программе
+фрагменты (подпрограммы, переменные и т.п.). Включив «умное связывание» через параметр командной строки <code class="language-plaintext highlighter-rouge">-XX</code>, т.е. выполнив
+<code class="language-plaintext highlighter-rouge">fpc -XX hello</code>, мы увидим, что размер исполняемого файла резко сократился (у меня сейчас 27 KB).</p>
+
+<p>Однако, надо бы разобраться, откуда берутся <code class="language-plaintext highlighter-rouge">.a</code>-файлы. Хотя о модулях мы еще не говорили, замечу, что при умолчательной
+компиляции из модуля генерируется обычный объектный файл, а не библиотека. Чтобы получить библиотеку, модуль нужно компилировать
+с ключом <code class="language-plaintext highlighter-rouge">-CX</code>, или указать в самом модуле директиву компилятора <code class="language-plaintext highlighter-rouge">{$SMARTLINK ON}</code>. Для большинства стандартных модулей RTL
+(и в частности, <code class="language-plaintext highlighter-rouge">System</code>) это уже сделано, так что нам остается только не забыть <code class="language-plaintext highlighter-rouge">-XX</code>. Для модулей, компилируемых на месте,
+самописных или полученных откуда-то в исходном коде, генерацию <code class="language-plaintext highlighter-rouge">.a</code> надо контролировать.</p>
+
+<div class="note">
+  <p>Напоследок замечу, что использование «умного связывания» несколько замедляет компиляцию. Впрочем, обычно линковка проходит
+в целом достаточно быстро, чтобы такое замедление не стало критичным. Но на больших проектах может быть весьма заметно.</p>
+
+  <p>Еще один нюанс заключается в том, что «умное связывание» не может избавить нас от неиспользуемого кода в виртуальных методах объектов.</p>
+</div>
+
+<p>На этом я, пожалуй, закончу приветствовать мир…</p>
+
+<h2 id="ссылки">
+<a class="anchor" href="#%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ссылки</h2>
+
+<div class="links-box">
+
+  <p id="wiki-as">[1] Википедия: AT&amp;T-синтаксис
+<a href="http://ru.wikipedia.org/wiki/AT&amp;T-%D1%81%D0%B8%D0%BD%D1%82%D0%B0%D0%BA%D1%81%D0%B8%D1%81">http://ru.wikipedia.org/wiki/AT&amp;T-синтаксис</a> [ru]</p>
+
+  <p id="gas">[2] Documentation for binutils 2.21: Using as
+<a href="http://sourceware.org/binutils/docs-2.21/as/">http://sourceware.org/binutils/docs-2.21/as/</a> [en]</p>
+
+  <p id="ld">[3] Documentation for binutils 2.21: LD
+<a href="http://sourceware.org/binutils/docs-2.21/ld/">http://sourceware.org/binutils/docs-2.21/ld/</a> [en]</p>
+
+</div>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:pp">
+      <p>FPC ищет исходные тексты по имени, подставляя расширения <code class="language-plaintext highlighter-rouge">.pas</code>, <code class="language-plaintext highlighter-rouge">.pp</code> и <code class="language-plaintext highlighter-rouge">.p</code>. Второй вариант указывает, что исходник предназначен именно для FPC, а не для произвольного компилятора Pascal. Именно его мы и будем использовать. <a href="#fnref:pp" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:fix">
+      <p>Исправил грубую ошибку при переносе поста на shikhalev.org. Была бы не столь грубая, оставил бы. 2021.04.14. <a href="#fnref:fix" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:asm">
+      <p>В некоторых источниках можно прочитать, что FPC не генерирует сам машинный код, а работает через промежуточный
+    ассемблер. Для современных версий Free Pascal это не совсем верно. На самом деле на архитектурах x86 и x86-64
+    (наиболее распространенных) компилятор <em>может</em> использовать внешний ассемблер, но без особого указания генерирует
+    машинный код самостоятельно. Тогда как, например, для процессоров ARM внешний ассемблер действительно необходим. <a href="#fnref:asm" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:asms">
+      <p>Различия ассемблеров совершенно определенно не являются предметом этих заметок, так что могу лишь порекомендовать
+     ознакомиться с краткой характеристикой на Википедии <a href="#wiki-as">[1]</a> или обратиться к руководству
+     по GNU-ассемблеру <a href="#gas">[2]</a>. <a href="#fnref:asms" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2016.06.17 |</span>
+            <a href="/2016/06/hugin.html" title="Склейка панорам под Linux — программа Hugin">Пингвин-фотолюбитель: 3. Панорамы</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-linux" href="/photo/processing/penguin/" title="Цикл постов 2016 года об обработке фотографий под Linux">Пингвин-фотолюбитель</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.03.24 |</span>
+            <a href="/2021/03/typo-keyboard.html" title="Настройка клавиатуры в Linux для ввода различных символов, таких как, например, длинное тире, кавычки-ёлочки, знак копирайта и так далее. В редакции 2021 года.">Ввод «типографских» символов с клавиатуры (ed. 2021)</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.03.06 |</span>
+            <a href="/2021/03/resize-png.html" title="Способы ресайза картинок формата PNG — какие возможности у нас есть под Linux...">О ресайзе PNG на примерах</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#пара-слов-о-компиляции">Пара слов о компиляции</a></li>
+<li class="toc-entry toc-h2"><a href="#пара-слов-о-компоновке">Пара слов о компоновке</a></li>
+<li class="toc-entry toc-h2"><a href="#ссылки">Ссылки</a></li>
+</ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/2011/11/fpc-start.html" title="Очевидно, чтобы использовать Free Pascal, первым делом нам надо откуда-то его взять и установить на свой компьютер.">FPC-Notes: Начало работы</a></li></ul>
+    </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

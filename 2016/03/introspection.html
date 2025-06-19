@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Средства самопознания в Ruby | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Средства самопознания в Ruby" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Что программа может знать о самой себе?" />
+<meta property="og:description" content="Что программа может знать о самой себе?" />
+<link rel="canonical" href="https://shikhalev.github.io/2016/03/introspection.html" />
+<meta property="og:url" content="https://shikhalev.github.io/2016/03/introspection.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/2016/03/09/introspection/screen-introspection-640x640-500-261-0-0.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-03-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/img/2016/03/09/introspection/screen-introspection-640x640-500-261-0-0.webp" />
+<meta property="twitter:title" content="Средства самопознания в Ruby" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2016-03-09T00:00:00+00:00","datePublished":"2016-03-09T00:00:00+00:00","description":"Что программа может знать о самой себе?","headline":"Средства самопознания в Ruby","image":"https://shikhalev.github.io/img/2016/03/09/introspection/screen-introspection-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/2016/03/introspection.html"},"url":"https://shikhalev.github.io/2016/03/introspection.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">Средства самопознания в Ruby</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F03%2Fintrospection.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2016%2F03%2Fintrospection.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F03%2Fintrospection.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F03%2Fintrospection.html&text=%D0%A1%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B2%D0%B0+%D1%81%D0%B0%D0%BC%D0%BE%D0%BF%D0%BE%D0%B7%D0%BD%D0%B0%D0%BD%D0%B8%D1%8F+%D0%B2+Ruby">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%A1%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B2%D0%B0+%D1%81%D0%B0%D0%BC%D0%BE%D0%BF%D0%BE%D0%B7%D0%BD%D0%B0%D0%BD%D0%B8%D1%8F+%D0%B2+Ruby&url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F03%2Fintrospection.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2016-03-09T00:00:00+00:00" itemprop="datePublished">2016.03.09
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#интроспекция">интроспекция</a>​<a class="tag" href="/tags#метапрограммирование">метапрограммирование</a></aside></header><div itemprop="articleBody">
+  <p><a href="http://samag.ru/archive/article/2874">Оригинал этой статьи опубликован в журнале «Системный администратор» №1-2 (146-147) за февраль 2015</a>.</p>
+
+<hr>
+
+<figure class="__figure __implicit_figure __right" style="max-width:158px;padding: 5px;"><a href="http://samag.ru/archive/article/2874"><img src="/img/2016/03/09/introspection/146-7-158.webp" class="__image"></a></figure>
+
+<div class="note">
+
+  <p><strong>Что программа может знать о самой себе?</strong></p>
+
+  <p>Практически все современные языки программирования содержат средства, позволяющие во время выполнения программы
+получить какие-то данные о структуре самой этой программы. В компилируемых языках такие возможности, как правило,
+ограничены и отключаемы, в целях оптимизации, в интерпретируемых же более обширны, поскольку эти данные все равно
+необходимы самому интерпретатору, соответственно, содержатся в памяти, и вопрос только в том, предоставлять ли
+к ним доступ языковыми средствами.</p>
+
+  <p>В данной статье я планирую рассмотреть те средства «самопознания», которые доступны для программ на Ruby.</p>
+</div>
+
+<!--more-->
+
+<p>Возвращаясь к компилируемым языкам: в них существует четкое разделение — есть <em>отладочная информация</em>, которая самой
+программе недоступна, и есть <em>RTTI (Run-Time Type Information)</em> — первая включается только для отладки, вторая может
+использоваться в нормальной логике программы, если есть такая потребность (в первую очередь это полезно для написания
+гибко строящихся программ из «кирпичиков» — компонентов, которые могут добавляться/подгружаться и во время выполнения
+тоже). Такое функциональное деление удобно и для интерпретируемых языков, в которых, правда, к этим двум категориям
+можно добавить еще одну — состояние интерпретатора / виртуальной машины в целом.</p>
+
+<h2 id="отладочная-информация-доступная-программе">
+<a class="anchor" href="#%D0%BE%D1%82%D0%BB%D0%B0%D0%B4%D0%BE%D1%87%D0%BD%D0%B0%D1%8F-%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8F-%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BD%D0%B0%D1%8F-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Отладочная информация, доступная программе</h2>
+
+<p>Начнем с самого простого: специальные методы <code class="language-plaintext highlighter-rouge">__FILE__</code> и <code class="language-plaintext highlighter-rouge">__LINE__</code> позволят определить и, скажем, вывести текущую
+точку исполнения программы. Например, для логирования.</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">log</span> <span class="n">msg</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">line</span>
+  <span class="vg">$stderr</span><span class="p">.</span><span class="nf">puts</span> <span class="s2">"[</span><span class="si">#{</span><span class="n">file</span><span class="si">}</span><span class="s2">:</span><span class="si">#{</span><span class="n">line</span><span class="si">}</span><span class="s2">] </span><span class="si">#{</span><span class="n">msg</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+
+<span class="n">log</span> <span class="s1">'Сообщение'</span><span class="p">,</span> <span class="kp">__FILE__</span><span class="p">,</span> <span class="kp">__LINE__</span></code></pre>
+</figure>
+
+<p>Запустив пример, получим что-то вроде:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby intro01.rb
+<span class="go">[intro01.rb:7] Сообщение</span></code></pre>
+</figure>
+
+<p>Почему 7, а не 5? В файле примера<sup id="fnref:gist"><a href="#fn:gist" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> присутствует еще две строки: первая — специальный комментарий с указанием кодировки,
+вторая для отступа. Внутри статей я подобные повторяемые везде вещи опускаю.</p>
+
+<p>Конечно, в момент написания кода с <code class="language-plaintext highlighter-rouge">__FILE__</code> и <code class="language-plaintext highlighter-rouge">__LINE__</code> мы и так знаем, в каком файле и на какой строке находимся,
+но при дальнейшем редактировании эта строчка кода может оказаться где угодно.</p>
+
+<p>Однако было бы здорово, если б наш метод логирования как-то сам узнавал, откуда был вызван, без лишних параметров.
+И это вполне возможно — рассмотрим следующий пример.</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">log</span> <span class="n">msg</span>
+  <span class="vg">$stderr</span><span class="p">.</span><span class="nf">puts</span> <span class="s2">"[</span><span class="si">#{</span><span class="nb">caller</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">] </span><span class="si">#{</span><span class="n">msg</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+
+<span class="k">def</span> <span class="nf">log2</span> <span class="n">msg</span>
+  <span class="n">cl</span> <span class="o">=</span> <span class="n">caller_locations</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+  <span class="vg">$stderr</span><span class="p">.</span><span class="nf">puts</span> <span class="s2">"[</span><span class="si">#{</span><span class="n">cl</span><span class="p">.</span><span class="nf">path</span><span class="si">}</span><span class="s2">:</span><span class="si">#{</span><span class="n">cl</span><span class="p">.</span><span class="nf">lineno</span><span class="si">}</span><span class="s2">] </span><span class="si">#{</span><span class="n">msg</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+
+<span class="n">log</span> <span class="s1">'Сообщение'</span>
+
+<span class="n">log2</span> <span class="s1">'Сообщение'</span></code></pre>
+</figure>
+
+<p>Запустив его мы получим следующее:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby intro02.rb
+<span class="go">[intro02.rb:12:in `‹main›'] Сообщение
+[intro02.rb:14] Сообщение</span></code></pre>
+</figure>
+
+<p>Замечательные методы <code class="language-plaintext highlighter-rouge">caller</code> и <code class="language-plaintext highlighter-rouge">caller_locations</code> предоставляют нам весь стек вызовов в виде строк и специальных объектов
+класса <code class="language-plaintext highlighter-rouge">Thread::Backtrace::Location</code> соответственно. Второй вариант дает более гибкие возможности, но надо помнить, что он
+стал доступен только начиная с версии Ruby 2.0<sup id="fnref:vers"><a href="#fn:vers" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>.</p>
+
+<p>Еще одно традиционное использование <code class="language-plaintext highlighter-rouge">caller</code> — при генерации исключений: очень часто исключения генерируются сразу после
+входа в метод, при проверке переданных параметров. И нас в этом случае не особо-то интересует место в программе, где эта
+проверка производится — гораздо удобней сразу указать на то место, откуда был вызыван метод, и где, соответственно, были
+заданы неверные параметры.</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">divide</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span>
+  <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">b</span> <span class="o">==</span> <span class="mf">0.0</span>
+    <span class="k">raise</span> <span class="no">StandardError</span><span class="p">,</span> <span class="s1">'На ноль делить нельзя'</span><span class="p">,</span> <span class="nb">caller</span>
+  <span class="k">end</span>
+  <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+<span class="k">end</span>
+
+<span class="nb">puts</span> <span class="n">divide</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></code></pre>
+</figure>
+
+<p>Получаем:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby intro02a.rb
+<span class="go">intro02a.rb:10:in `‹main›': На ноль делить нельзя (StandardError)</span></code></pre>
+</figure>
+
+<p>Если мы закомментируем «<code class="language-plaintext highlighter-rouge">, caller</code>», то получим более длинный вывод:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby intro02a.rb
+<span class="go">intro02a.rb:5:in `divide': На ноль делить нельзя (StandardError)
+        from intro02a.rb:10:in `‹main›'</span></code></pre>
+</figure>
+
+<p>Но все полезное, что мы могли бы узнать изучив пятую строку и ее окружение, уже известно из сообщения…</p>
+
+<p>В общем, такая генерация ошибок принята, если исключение бросается непосредственно по итогам проверки параметров,
+и не принята в других случаях, когда внутренняя логика метода, где произошло исключение, важна для понимания его причин.</p>
+
+<h2 id="rtti">
+<a class="anchor" href="#rtti" aria-hidden="true"><span class="octicon octicon-link"></span></a>RTTI</h2>
+
+<p>Во-первых, для любого объекта Ruby мы можем получить его класс и список методов. Во-вторых, классы и модули также дают
+информацию о методах, определяемых в них, а кроме того, и о константах. И в-третьих, зная объект (класс) и имя метода,
+мы можем получить более подробную информацию, включая список параметров и место, где метод был определен.</p>
+
+<p>Итак, по порядку: чтобы узнать класс, мы можем воспользоваться методами <code class="language-plaintext highlighter-rouge">obj.class</code> или <code class="language-plaintext highlighter-rouge">singleton_class</code>. Я не случайно
+написал в первом случае <code class="language-plaintext highlighter-rouge">obj.class</code> через точку, поскольку даже находясь в контексте объекта<sup id="fnref:context"><a href="#fn:context" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>, без точки вызвать
+мы его не можем — это будет воспринято интерпретатором как ключевое слово <code class="language-plaintext highlighter-rouge">class</code>. <code class="language-plaintext highlighter-rouge">singleton_class</code>, т.е. уникальный
+класс данного единичного объекта, нам обычно не нужен, если только мы не определяли какие-то уникальные методы для него.</p>
+
+<p>Далее мы можем узнать всю цепочку наследования, в том числе включенные посредством <code class="language-plaintext highlighter-rouge">include</code> или <code class="language-plaintext highlighter-rouge">extend</code> модули.
+Для это­го нам понадобится вызов метода <code class="language-plaintext highlighter-rouge">ancestors</code> у <em>класса</em>.</p>
+
+<p>Чтобы получить список имен методов объекта, мы можем воспользоваться следующими методами класса <code class="language-plaintext highlighter-rouge">Object</code>:</p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">private_methods</code> — вернет массив имен приватных методов;</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">protected_methods</code> — «защищенных»;</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">public_methods</code> — публичных;</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">methods</code> — публичных и защищенных вместе.</li>
+</ul>
+
+<p>Разница приватных и «защищенных» методов в том, что первые могут быть вызваны только в контексте того объекта,
+для которого они вызываются, тогда как вторые — в контексте любого объекта того же класса.</p>
+
+<p>Дополнительно отмечу <code class="language-plaintext highlighter-rouge">singleton_methods</code>, возвращающий список методов, определенных только для конкретного объекта.</p>
+
+<p>Классы и модули предоставляют также списки <em>методов экземпляров</em>, т.е. тех методов, которые могут быть вызваны для всех
+объектов, принадлежащих классу или включающих модуль:</p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">private_instance_methods</code>,</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">protected_instance_methods</code>,</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">public_instance_methods</code>,</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">instance_methods</code>.</li>
+</ul>
+
+<p>Связь между этими методами и описанными выше можно выразить так:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="n">obj</span><span class="p">.</span><span class="nf">xxx_methods</span> <span class="o">==</span> <span class="n">obj</span><span class="p">.</span><span class="nf">singleton_class</span><span class="p">.</span><span class="nf">xxx_instance_methods</span></code></pre>
+</figure>
+
+<p>Классы и модули (в отличие от объектов) позволяют получит еще и список констант. Для этого служит метод <code class="language-plaintext highlighter-rouge">constants</code>.</p>
+
+<p>Все эти методы принимают один необязательный параметр, указывающий, нужно ли включать унаследованные методы (по умолчанию — <code class="language-plaintext highlighter-rouge">true</code>).</p>
+
+<p>Продемонстрирую вышесказанное на примере:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_module</span> <span class="n">mod</span><span class="p">,</span> <span class="nb">ancestors</span> <span class="o">=</span> <span class="kp">true</span>
+  <span class="k">if</span> <span class="nb">ancestors</span>
+    <span class="nb">puts</span> <span class="s2">"</span><span class="si">#{</span><span class="n">mod</span><span class="p">.</span><span class="nf">class</span><span class="p">.</span><span class="nf">name</span><span class="p">.</span><span class="nf">downcase</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">mod</span><span class="p">.</span><span class="nf">name</span><span class="si">}</span><span class="s2">"</span> <span class="o">+</span>
+      <span class="s2">" </span><span class="si">#{</span><span class="n">mod</span><span class="p">.</span><span class="nf">ancestors</span><span class="p">.</span><span class="nf">inspect</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">else</span>
+    <span class="nb">puts</span> <span class="s2">"  </span><span class="si">#{</span><span class="n">mod</span><span class="p">.</span><span class="nf">class</span><span class="p">.</span><span class="nf">name</span><span class="p">.</span><span class="nf">downcase</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">mod</span><span class="p">.</span><span class="nf">name</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+  <span class="n">mod</span><span class="p">.</span><span class="nf">constants</span><span class="p">(</span><span class="kp">false</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span>
+    <span class="nb">puts</span> <span class="s2">"    const </span><span class="si">#{</span><span class="n">c</span><span class="p">.</span><span class="nf">inspect</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+  <span class="n">mod</span><span class="p">.</span><span class="nf">public_instance_methods</span><span class="p">(</span><span class="kp">false</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">m</span><span class="o">|</span>
+    <span class="nb">puts</span> <span class="s2">"    </span><span class="si">#{</span><span class="n">m</span><span class="p">.</span><span class="nf">inspect</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+  <span class="k">if</span> <span class="nb">ancestors</span>
+    <span class="n">ancs</span> <span class="o">=</span> <span class="n">mod</span><span class="p">.</span><span class="nf">ancestors</span><span class="p">[</span><span class="mi">1</span><span class="o">..-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">ancs</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">anc</span><span class="o">|</span>
+      <span class="n">print_module</span> <span class="n">anc</span><span class="p">,</span> <span class="kp">false</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>Запустив пример, мы получим довольно длинный вывод, приведу лишь его начало:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby intro03.rb
+<span class="go">class Class [Class, Module, Object, Kernel, BasicObject]
+    :allocate
+    :new
+    :superclass
+  class Module
+    :freeze
+    :===</span></code></pre>
+</figure>
+
+<p>Константы в классах <code class="language-plaintext highlighter-rouge">Class</code> и <code class="language-plaintext highlighter-rouge">Module</code> не содержатся, но в далее в выводе они появятся в большом количестве — константы,
+которые принято считать глобальными, относятся к классу <code class="language-plaintext highlighter-rouge">Object</code>.</p>
+
+<p>Список имен — это, конечно, хорошо, но мало. Ruby позволяет получить и более подробную информацию о каждом методе. Для этого
+нам нужно получить соответствующий объект посредством <code class="language-plaintext highlighter-rouge">method</code> (для любого объекта), или <code class="language-plaintext highlighter-rouge">instance_method</code> (для классов и модулей).
+В первом случае мы получим объект класса <code class="language-plaintext highlighter-rouge">Method</code>, а во втором — <code class="language-plaintext highlighter-rouge">UnboudMethod</code>. Разница между ними в том, что первый привязан
+к объекту и может быть вызван непосредственно, тогда как второй существует как бы сам по себе и для вызова должен быть
+предварительно привязан посредством <code class="language-plaintext highlighter-rouge">bind</code>. Но сейчас для нас это не принципиально, нас итересует информация, которую они
+предоставляют, а она одинакова.</p>
+
+<p>Итак, что мы можем получить?</p>
+
+<p>Во-первых, <code class="language-plaintext highlighter-rouge">source_location</code>, т.е. расположение исходников метода. Возвращает массив из двух значений — имя файла и номер строки,
+или <code class="language-plaintext highlighter-rouge">nil</code>, если метод определен во внешней библиотеке (Ruby позволяет писать «расширения» — специальные разделяемые библиотеки
+на компилируемых языках, в первую очередь, конечно, на C).</p>
+
+<p>Во-вторых, <code class="language-plaintext highlighter-rouge">owner</code> — класс или модуль, в котором данный метод определен.</p>
+
+<p>И в-третьих, самое, пожалуй, интересное — это <code class="language-plaintext highlighter-rouge">parameters</code> — массив, описывающий все параметры метода, как они заданы в его определении.
+Возвращаемое значение — массив, в котором каждый параметр представлен массивом же из двух элементов: первый описывает вид параметра —
+обязательный, необязательный и т.д., а второй — его имя. Выглядит это примерно так:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">test</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">*</span><span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">:,</span> <span class="ss">e: </span><span class="mi">2</span><span class="p">,</span> <span class="o">**</span><span class="n">f</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">g</span>
+<span class="k">end</span>
+
+<span class="nb">p</span> <span class="nb">method</span><span class="p">(</span><span class="ss">:test</span><span class="p">).</span><span class="nf">parameters</span></code></pre>
+</figure>
+
+<p>Получим:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby intro04.rb
+<span class="go">[[:req, :a], [:opt, :b], [:rest, :c], [:keyreq, :d], [:key, :e], [:keyrest, :f], [:block, :g]]</span></code></pre>
+</figure>
+
+<p>Впрочем, если метод определен во внешней библиотеке-расширении, или в ядре языка, то есть опять же в скомпилированном коде,
+то Ruby знает о параметрах только их вид, и массивы в списке состоят из одного элемента. Таким образом, например,
+<code class="language-plaintext highlighter-rouge">method(:method).parameters</code> вернет <code class="language-plaintext highlighter-rouge">[[:req]]</code>.</p>
+
+<p>Исходя из этого, мы можем написать функцию, восстанавливающую примерный заголовок метода из соответствующего ему объекта.</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="no">ARG_TEMPLATE</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="ss">req: </span><span class="s1">'%s'</span><span class="p">,</span>
+  <span class="ss">opt: </span><span class="s1">'%s = &lt;..&gt;'</span><span class="p">,</span>
+  <span class="ss">rest: </span><span class="s1">'*%s'</span><span class="p">,</span>
+  <span class="ss">key: </span><span class="s1">'%s: &lt;..&gt;'</span><span class="p">,</span>
+  <span class="ss">keyreq: </span><span class="s1">'%s:'</span><span class="p">,</span>
+  <span class="ss">keyrest: </span><span class="s1">'**%s'</span><span class="p">,</span>
+  <span class="ss">block: </span><span class="s1">'&amp;%s'</span>
+<span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">header</span> <span class="n">mobj</span>
+  <span class="n">anprefix</span> <span class="o">=</span> <span class="s1">'arg'</span>
+  <span class="n">ancounter</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="n">params</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="n">mobj</span><span class="p">.</span><span class="nf">parameters</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">param</span><span class="o">|</span>
+    <span class="k">if</span> <span class="n">param</span><span class="p">.</span><span class="nf">size</span> <span class="o">==</span> <span class="mi">2</span>
+      <span class="nb">name</span> <span class="o">=</span> <span class="n">param</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">else</span>
+      <span class="nb">name</span> <span class="o">=</span> <span class="n">anprefix</span> <span class="o">+</span> <span class="n">ancounter</span><span class="p">.</span><span class="nf">to_s</span>
+      <span class="n">ancounter</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">end</span>
+    <span class="n">params</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="no">ARG_TEMPLATE</span><span class="p">[</span><span class="n">param</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">%</span> <span class="nb">name</span><span class="p">)</span>
+  <span class="k">end</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="s2">"</span><span class="si">#{</span><span class="n">mobj</span><span class="p">.</span><span class="nf">name</span><span class="si">}</span><span class="s2">(</span><span class="si">#{</span><span class="n">params</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s1">', '</span><span class="p">)</span><span class="si">}</span><span class="s2">)"</span>
+  <span class="k">if</span> <span class="n">mobj</span><span class="p">.</span><span class="nf">source_location</span>
+    <span class="n">result</span> <span class="o">+=</span> <span class="s2">" [</span><span class="si">#{</span><span class="n">mobj</span><span class="p">.</span><span class="nf">source_location</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s1">':'</span><span class="p">)</span><span class="si">}</span><span class="s2">]"</span>
+  <span class="k">else</span>
+    <span class="n">result</span> <span class="o">+=</span> <span class="s2">" [&lt;binary&gt;]"</span>
+  <span class="k">end</span>
+  <span class="n">result</span>
+<span class="k">end</span>
+
+<span class="k">def</span> <span class="nf">test</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">*</span><span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">:,</span> <span class="ss">e: </span><span class="mi">2</span><span class="p">,</span> <span class="o">**</span><span class="n">f</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">g</span>
+<span class="k">end</span>
+
+<span class="nb">puts</span> <span class="n">header</span><span class="p">(</span><span class="nb">method</span><span class="p">(</span><span class="ss">:test</span><span class="p">))</span>
+<span class="nb">puts</span> <span class="n">header</span><span class="p">(</span><span class="nb">method</span><span class="p">(</span><span class="ss">:header</span><span class="p">))</span>
+<span class="nb">puts</span> <span class="n">header</span><span class="p">(</span><span class="nb">method</span><span class="p">(</span><span class="ss">:puts</span><span class="p">))</span></code></pre>
+</figure>
+
+<p>Запустив этот код, получим:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby intro05.rb
+<span class="go">test(a, b = ‹..›, *c, d:, e: ‹..›, **f, &amp;g) [intro05.rb:35]
+header(mobj) [intro05.rb:13]
+puts(*arg0) [‹binary›]</span></code></pre>
+</figure>
+
+<p>К сожалению, конкретные значения, заданные для опциональных параметров по умолчанию, так просто выяснить не получится.
+Можно, правда, зная, где данный метод определен, распарсить текст программы, но это уже выходит за рамки нашей темы.</p>
+
+<h2 id="картина-в-целом">
+<a class="anchor" href="#%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%B0-%D0%B2-%D1%86%D0%B5%D0%BB%D0%BE%D0%BC" aria-hidden="true"><span class="octicon octicon-link"></span></a>Картина в целом</h2>
+
+<p>Итак, мы можем посмотреть методы и константы для любого класса, модуля, да и произвольного объекта (хотя это и редко
+может потребоваться). Однако, при этом нам надо откуда-то знать о его существовании вообще. Неплохо было бы иметь
+возможность получить список классов и модулей, существующих в программе, и такая возможность есть — метод
+<code class="language-plaintext highlighter-rouge">ObjectSpace.each_object</code> позволяет перебрать все «живые» объекты, при необходимости отобрав их по классу. Поскольку
+в Ruby всё — объекты, и при этом класс <code class="language-plaintext highlighter-rouge">Class</code> является наследником <code class="language-plaintext highlighter-rouge">Module</code>, мы можем спокойно использовать отбор
+по <code class="language-plaintext highlighter-rouge">Module</code>.</p>
+
+<p>Таким образом мы можем получить общую картину классов и модулей, использовав вышеприведенный метод <code class="language-plaintext highlighter-rouge">header</code> и немного
+переделав <code class="language-plaintext highlighter-rouge">print_module</code>:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_module</span> <span class="n">mod</span>
+  <span class="n">title</span> <span class="o">=</span> <span class="s2">"</span><span class="si">#{</span><span class="n">mod</span><span class="p">.</span><span class="nf">class</span><span class="p">.</span><span class="nf">name</span><span class="p">.</span><span class="nf">downcase</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">mod</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">if</span> <span class="no">Class</span> <span class="o">===</span> <span class="n">mod</span> <span class="o">&amp;&amp;</span> <span class="n">mod</span><span class="p">.</span><span class="nf">superclass</span> <span class="o">!=</span> <span class="kp">nil</span>
+    <span class="n">title</span> <span class="o">+=</span> <span class="s2">" &lt; </span><span class="si">#{</span><span class="n">mod</span><span class="p">.</span><span class="nf">superclass</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+  <span class="nb">puts</span> <span class="n">title</span>
+  <span class="nb">puts</span> <span class="s2">"  ancestors: </span><span class="si">#{</span><span class="n">mod</span><span class="p">.</span><span class="nf">ancestors</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s1">', '</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span>
+  <span class="nb">puts</span> <span class="s2">"  constants:"</span>
+  <span class="n">mod</span><span class="p">.</span><span class="nf">constants</span><span class="p">(</span><span class="kp">false</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span>
+    <span class="nb">puts</span> <span class="s2">"    </span><span class="si">#{</span><span class="n">c</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+  <span class="nb">puts</span> <span class="s2">"  class methods:"</span>
+  <span class="n">mod</span><span class="p">.</span><span class="nf">public_methods</span><span class="p">(</span><span class="kp">false</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">m</span><span class="o">|</span>
+    <span class="nb">puts</span> <span class="s2">"    </span><span class="si">#{</span><span class="n">header</span><span class="p">(</span><span class="n">mod</span><span class="p">.</span><span class="nf">method</span><span class="p">(</span><span class="n">m</span><span class="p">))</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+  <span class="nb">puts</span> <span class="s2">"  instance methods:"</span>
+  <span class="n">mod</span><span class="p">.</span><span class="nf">public_instance_methods</span><span class="p">(</span><span class="kp">false</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">m</span><span class="o">|</span>
+    <span class="nb">puts</span> <span class="s2">"    </span><span class="si">#{</span><span class="n">header</span><span class="p">(</span><span class="n">mod</span><span class="p">.</span><span class="nf">instance_method</span><span class="p">(</span><span class="n">m</span><span class="p">))</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+  <span class="nb">puts</span> <span class="s1">''</span>
+<span class="k">end</span>
+
+<span class="no">ObjectSpace</span><span class="p">.</span><span class="nf">each_object</span><span class="p">(</span><span class="no">Module</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">mod</span><span class="o">|</span>
+  <span class="n">print_module</span> <span class="n">mod</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>Полный вывод такой программы получится совсем гигантским<sup id="fnref:out"><a href="#fn:out" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>, поэтому приведу лишь малую часть, относящуюся к специально
+созданному для примера классу:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Alpha</span>
+
+  <span class="no">ALPHA</span> <span class="o">=</span> <span class="mi">1</span>
+
+  <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span>
+    <span class="nb">attr_accessor</span> <span class="ss">:beta</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">alpha</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="o">*</span><span class="n">c</span>
+    <span class="nb">p</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span>
+  <span class="k">end</span>
+
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>Вот, что мы для него получим:</p>
+
+<figure class="highlight">
+  <pre><code class="language-text" data-lang="text">class Alpha &lt; Object
+  ancestors: Alpha, Object, Kernel, BasicObject
+  constants:
+    ALPHA
+  class methods:
+    beta() [intro06.rb:40]
+    beta=(arg0) [intro06.rb:40]
+    allocate() [&lt;binary&gt;]
+    new(*arg0) [&lt;binary&gt;]
+    superclass() [&lt;binary&gt;]
+  instance methods:
+    alpha(a, b = &lt;..&gt;, *c) [intro06.rb:43]</code></pre>
+</figure>
+
+<h2 id="и-что-это-нам-дает">
+<a class="anchor" href="#%D0%B8-%D1%87%D1%82%D0%BE-%D1%8D%D1%82%D0%BE-%D0%BD%D0%B0%D0%BC-%D0%B4%D0%B0%D0%B5%D1%82" aria-hidden="true"><span class="octicon octicon-link"></span></a>И что это нам дает?</h2>
+
+<p>Механизм интроспекции достаточно универсальный и «неприкладной», поэтому его, с одной стороны, трудно применить
+к чему-нибудь практическому «в лоб», а с другой — есть масса случаев, когда он в той или иной мере полезен. Я, пожалуй,
+выделю только некоторые направления:</p>
+
+<ul>
+  <li>
+    <p>Мы можем создавать прокси-объекты, полностью (снаружи) эквивалентные некоторым заданным, при этом возможные изменения
+исходных объектов, которые могут разрабатываться где-то в другом месте другими людьми, нас не волнуют, поскольку все
+делается автоматически.</p>
+  </li>
+  <li>
+    <p>В сложных системах с подключением сторонних скриптов в качестве плагинов или компонентов интроспекция дает больший контроль
+за совместимостью, проверкой функциональности и так далее. Например, введя изменения в интерфейс плагинов в очередной версии,
+мы можем автоматически определять устаревшие плагины (то есть — с устаревшим интерфейсом) и как-то корректно их обрабатывать,
+например, создавая прокси-обертку (см. предыдущий пункт).</p>
+  </li>
+  <li>
+    <p>Развитые инструменты интроспекции можно (и нужно) использовать для отладки, логирования, автоматического тестирования
+и так далее. То есть в инструментах для создания и обслуживания кода — не нужно отдельно парсить исходные тексты, интерпретатор
+уже делает это за нас, причем таким же образом, как и при «боевом» выполнении. Так что, если кто задумывает написать IDE
+для Ruby, этими средствами пренебрегать никак нельзя.</p>
+
+    <ul>
+      <li>
+        <p>Кроме того, не стоит забывать, что в Ruby с его развитыми средствами метапрограммирования, изучая код, относящийся
+к какому-нибудь классу, мы никогда не можем быть уверены, что это весь код, относящийся к этому классу. Иными словами,
+получить полную информацию о том, как выглядит некий класс в определенный момент исполнения программы, мы можем только
+в этот момент исполнения.</p>
+      </li>
+      <li>
+        <p>Соответственно, данные инструменты могут стать очень хорошим подспорьем как при обучении Ruby, так и при изучении чужого кода,
+особенно если он плохо документирован, что, к сожалению, в современной программной индустрии скорее норма, чем исключение.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>В целом, информация о структуре программы во время выполнения, хоть и не уменьшает сложность, однако дает дополнительные возможности
+с ней как-то справляться.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:gist">
+      <p>Полные тексты примеров размещены на GitHub — <a href="https://gist.github.com/shikhalev/12090b4e64340d9d8c2e">https://gist.github.com/shikhalev/12090b4e64340d9d8c2e</a>. <a href="#fnref:gist" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:vers">
+      <p>На момент написания статьи версия 1.9.3 еще считается актуальной, впрочем, ее официальная поддержка заканчивается в феврале 2015…
+     Тем не менее, столкнуться с ее использованием в старом коде вполне вероятно. <a href="#fnref:vers" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:context">
+      <p>О контекстах см. статью <a href="/2015/04/ruby-context.html">«Блоки и контекст в Ruby»</a>, Системный администратор, январь-февраль 2014. <a href="#fnref:context" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:out">
+      <p>Данный вывод приведен вместе с исходниками на GitHub в файле list.txt. <a href="#fnref:out" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2022.11.01 |</span>
+            <a href="/2022/11/storages.html" title="Тест носителей информации на новой платформе">Очередной тест носителей</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a>​<a class="fa-icon-calendar-alt" href="/life/dybr/" title="Просто кусочки повседневности">Дыбр</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2013.07.02 |</span>
+            <a href="/2013/07/fonts.html" title="Внезапно понял, почему кириллические шрифты все, как бы это помягче... в лучшем случае — никакие.">О шриф­тах, или Без­бла­го­дат­ность кар­го-куль­та</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2013.06.19 |</span>
+            <a href="/2013/06/copyright-assignments.html" title="О неочевидных проблемах, связанных с передачей прав на свободный софт">Откуда ждать подлянки...</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#отладочная-информация-доступная-программе">Отладочная информация, доступная программе</a></li>
+<li class="toc-entry toc-h2"><a href="#rtti">RTTI</a></li>
+<li class="toc-entry toc-h2"><a href="#картина-в-целом">Картина в целом</a></li>
+<li class="toc-entry toc-h2"><a href="#и-что-это-нам-дает">И что это нам дает?</a></li>
+</ul>
+</aside><aside id="backs" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li><li><a href="/feed/pub.xml" title="Публикации в СМИ">Публикации</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

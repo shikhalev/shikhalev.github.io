@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Conky и два бесперебойника | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Conky и два бесперебойника" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Решение проблемы с отслеживанием нескольких UPS в Conky" />
+<meta property="og:description" content="Решение проблемы с отслеживанием нескольких UPS в Conky" />
+<link rel="canonical" href="https://shikhalev.github.io/2022/10/conky-apcups.html" />
+<meta property="og:url" content="https://shikhalev.github.io/2022/10/conky-apcups.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/2022/10/23/conky-hwmon/conky-seo-640x640-500-261-0-0.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-10-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/img/2022/10/23/conky-hwmon/conky-seo-640x640-500-261-0-0.webp" />
+<meta property="twitter:title" content="Conky и два бесперебойника" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2022-10-24T00:00:00+00:00","datePublished":"2022-10-24T00:00:00+00:00","description":"Решение проблемы с отслеживанием нескольких UPS в Conky","headline":"Conky и два бесперебойника","image":"https://shikhalev.github.io/img/2022/10/23/conky-hwmon/conky-seo-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/2022/10/conky-apcups.html"},"url":"https://shikhalev.github.io/2022/10/conky-apcups.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">Conky и два бесперебойника</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2022%2F10%2Fconky-apcups.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2022%2F10%2Fconky-apcups.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2022%2F10%2Fconky-apcups.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2022%2F10%2Fconky-apcups.html&text=Conky+%D0%B8+%D0%B4%D0%B2%D0%B0+%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%80%D0%B5%D0%B1%D0%BE%D0%B9%D0%BD%D0%B8%D0%BA%D0%B0">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=Conky+%D0%B8+%D0%B4%D0%B2%D0%B0+%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%80%D0%B5%D0%B1%D0%BE%D0%B9%D0%BD%D0%B8%D0%BA%D0%B0&url=https%3A%2F%2Fshikhalev.github.io%2F2022%2F10%2Fconky-apcups.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2022-10-24T00:00:00+00:00" itemprop="datePublished">2022.10.24
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#Conky">Conky</a>​<a class="tag" href="/tags#Gentoo">Gentoo</a>​<a class="tag" href="/tags#Linux">Linux</a>​<a class="tag" href="/tags#Lua">Lua</a>​<a class="tag" href="/tags#OpenRC">OpenRC</a>​<a class="tag" href="/tags#UPS">UPS</a>​<a class="tag" href="/tags#apcupsd">apcupsd</a>​<a class="tag" href="/tags#администрирование">администрирование</a>​<a class="tag" href="/tags#мониторинг">мониторинг</a>​<a class="tag" href="/tags#программирование">программирование</a></aside></header><div itemprop="articleBody">
+  <figure class="__figure __implicit_figure __right logo" style="max-width:240px;shape-margin:20px;shape-outside:url(/img/2022/10/23/conky-hwmon/conky.svg);"><a href="https://github.com/brndnmtthws/conky"><img src="/img/2022/10/23/conky-hwmon/conky.svg" class="__image" style="shape-outside:url(/img/2022/10/23/conky-hwmon/conky.svg);"></a></figure>
+
+<p>Продолжая <a href="/2022/10/conky-hwmon.html">тему</a> <strong><a href="https://github.com/brndnmtthws/conky">Conky</a></strong> и мониторинга вообще, разберемся с выводом данных по двум бесперебойникам, подключенным к одному компьютеру.
+В моем случае они оба фирмы APC, что упрощает задачу, но не до конца.</p>
+
+<p>Закавыка тут именно в том, что их два. Соответственно нужно:</p>
+
+<ol>
+  <li>
+    <p>Настроить сервисы <code class="language-plaintext highlighter-rouge">apcupsd</code>.</p>
+  </li>
+  <li>
+    <p>Побороть страсть устройств в Linux к переименованию после каждой<sup id="fnref:ever"><a href="#fn:ever" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> перезагрузки.</p>
+  </li>
+  <li>
+    <p>Заставить Conky отображать информацию по обоим.</p>
+  </li>
+</ol>
+
+<!--more-->
+
+<p>Вообще, по идее, п. 2 должен идти до п. 1, но… Впрочем, по порядку.</p>
+
+<h2 id="настройка-сервисов">
+<a class="anchor" href="#%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D0%BE%D0%B2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Настройка сервисов</h2>
+
+<p>Я как гентушник и ретроград использую OpenRC и понятия не имею, как это все делается при использовании systemd. Впрочем, это должно легко гуглиться.</p>
+
+<p>Во-первых, нужно создать собственно сервисы.</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">#</span><span class="w"> </span><span class="nb">cd</span> /etc/init.d
+<span class="gp">#</span><span class="w"> </span><span class="nb">ln</span> <span class="nt">-s</span> apcupsd apcupsd.es550g
+<span class="gp">#</span><span class="w"> </span><span class="nb">ln</span> <span class="nt">-s</span> apcupsd apcupsd.xs1400u</code></pre>
+</figure>
+
+<p>Во-вторых, конфиги для них.</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">#</span><span class="w"> </span><span class="nb">cd</span> /etc/apcupsd
+<span class="gp">#</span><span class="w"> </span><span class="nb">cp </span>apcupsd.conf es550g.conf
+<span class="gp">#</span><span class="w"> </span><span class="nb">cp </span>apcupsd.conf xs1400u.conf</code></pre>
+</figure>
+
+<p>В конфигах следует прописать разные входы и выходы. Входы, в моем случае, порты USB, точнее HID-устройства, а выходы — номера портов, с которыми
+в дальнейшем будем взаимодействовать.</p>
+
+<p>С портами просто — в одном из конфигов меняем значение в строке с переменной <code class="language-plaintext highlighter-rouge">NISPORT</code>, например, на <code class="language-plaintext highlighter-rouge">3553</code>. А вот соответствующие HID-устройства еще
+предстоит определить. Для этого я использовал команду <code class="language-plaintext highlighter-rouge">upower -d</code>, в выхлопе которого мы можем видеть номера устройств <code class="language-plaintext highlighter-rouge">hiddevN</code>, которые можно
+прописать в конфиги в переменную <code class="language-plaintext highlighter-rouge">DEVICE</code> в виде <code class="language-plaintext highlighter-rouge">DEVICE /dev/usb/hiddev0</code>, например. Это будет работать, но номер <code class="language-plaintext highlighter-rouge">hiddev</code> может смениться. Поэтому
+переходим к следующему пункту.</p>
+
+<h2 id="постоянные-симлинки-на-hid-устройства">
+<a class="anchor" href="#%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%BD%D1%8B%D0%B5-%D1%81%D0%B8%D0%BC%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8-%D0%BD%D0%B0-hid-%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Постоянные симлинки на HID-устройства</h2>
+
+<p>В каталоге <code class="language-plaintext highlighter-rouge">/etc/udev/rules.d</code> создаем файл правил (например, <code class="language-plaintext highlighter-rouge">80-ups-hiddev.rules</code>):</p>
+
+<figure class="highlight">
+  <pre><code class="language-udev" data-lang="udev">KERNEL=="hiddev*", ATTRS{serial}=="5B1807T46538", SYMLINK="usb_es550g"
+KERNEL=="hiddev*", ATTRS{serial}=="4B1813P15017", SYMLINK="usb_xs1400u"</code></pre>
+</figure>
+
+<p>Где конкретные значения <code class="language-plaintext highlighter-rouge">serial</code> взяты все из того же выхлопа команды <code class="language-plaintext highlighter-rouge">upower -d</code>, а имена символических ссылок произвольны.</p>
+
+<p>Теперь можно вписать в конфиги в каталоге <code class="language-plaintext highlighter-rouge">/etc/apcupsd</code> в переменные <code class="language-plaintext highlighter-rouge">DEVICE</code> уже пути через эти ссылки: <code class="language-plaintext highlighter-rouge">/dev/usb_es550g</code> и <code class="language-plaintext highlighter-rouge">/dev/usb_xs1400u</code>
+(в моем случае) соответственно.</p>
+
+<p>Перезагружаемся.</p>
+
+<h2 id="настройка-conky">
+<a class="anchor" href="#%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-conky" aria-hidden="true"><span class="octicon octicon-link"></span></a>Настройка Conky</h2>
+
+<p>С одной стороны, в Conky есть специальные выражения для получения данных от сервиса <code class="language-plaintext highlighter-rouge">apcupsd</code>, причем есть даже и специальный вызов <code class="language-plaintext highlighter-rouge">${apcupsd host}</code>
+для выбора хоста и порта… Но, с другой стороны, работает этот вызов один раз, т.е. мы можем выводить данные по любому UPS, но только по одному. Что
+меня не устроило.</p>
+
+<p>В итоге я опять же решил это дело скриптом. Модуль для этого, как обычно, помещен на <strong><a href="https://github.com/shikhalev/conky" class="img-icon-github">GitHub</a></strong>, модуль <a href="https://github.com/shikhalev/conky/blob/main/lua/apcups.lua"><code class="language-plaintext highlighter-rouge">apcups</code></a>.</p>
+
+<h3 id="как-это-работает">
+<a class="anchor" href="#%D0%BA%D0%B0%D0%BA-%D1%8D%D1%82%D0%BE-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82" aria-hidden="true"><span class="octicon octicon-link"></span></a>Как это работает</h3>
+
+<p>Используется вызов внешней утилиты — <code class="language-plaintext highlighter-rouge">apcaccess</code>, выдача которой парсится и помещается в таблицу в памяти, чтобы не дергать внешний вызов на каждое
+свойство.</p>
+
+<h3 id="как-использовать">
+<a class="anchor" href="#%D0%BA%D0%B0%D0%BA-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Как использовать</h3>
+
+<p>Все работает по сути через одну функцию:</p>
+
+<figure class="highlight">
+  <pre><code class="language-lua" data-lang="lua"><span class="k">function</span> <span class="nf">conky_apcups_get</span><span class="p">(</span><span class="n">hostport</span><span class="p">,</span> <span class="n">property</span><span class="p">,</span> <span class="n">update</span><span class="p">)</span></code></pre>
+</figure>
+
+<p>Где первый параметр имеет вид типа <code class="language-plaintext highlighter-rouge">localhost:3551</code>, второй означает конкретное свойство (в нижнем регистре), например, <code class="language-plaintext highlighter-rouge">bcharge</code><sup id="fnref:props"><a href="#fn:props" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>, а третий
+выставляется в <code class="language-plaintext highlighter-rouge">true</code> в тех случаях, когда нужно обновить данные (по задумке так нужно делать при получении первого свойства для устройства,
+тогда как для остальных свойств этот параметр выставляем в <code class="language-plaintext highlighter-rouge">false</code> или просто опускаем). Ну, то есть такой код:</p>
+
+<figure class="highlight">
+  <pre><code class="language-conky" data-lang="conky">${lua apcups localhost:3551 model true}
+${lua apcups localhost:3551 bcharge}%</code></pre>
+</figure>
+
+<p>Выдаст модель бесперебойника в первой строчке и текущий уровень заряда во второй. При этом вызов <code class="language-plaintext highlighter-rouge">apcaccess</code> будет только один за цикл обновления.</p>
+
+<p>Само собой, можно (и лично я так делаю) вызывать функцию в собственном коде на Lua в различных вспомогательных функциях типа <code class="language-plaintext highlighter-rouge">xs1400u_model()</code>.</p>
+
+<p>Есть, правда, еще мысль — сделать пропуск обновления, т.е. делать его, например, один раз на десять вызовов с <code class="language-plaintext highlighter-rouge">update = true</code>: все таки вызов внешней
+утилиты — операция тяжелая. Подумаю еще.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:ever">
+      <p>Про <em>каждую</em> перезагрузку я, конечно, преувеличиваю, но поскольку переименование происходит непредсказуемо, легче не становится. <a href="#fnref:ever" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:props">
+      <p>Список возможных свойств проще всего получить, вызвав вручную <code class="language-plaintext highlighter-rouge">apcaccess</code> из командной строки. Вообще, этот набор зависит от конкретной модели UPS. <a href="#fnref:props" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2020.01.11 |</span>
+            <a href="/2020/01/rack.html" title="Библиотека Rack — простой объектный интерфейс для написания веб-приложений (статья в журнале «Системный администратор»)">Rack — основа веб-фреймворков в Ruby</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a>​<a class="fa-icon-globe" href="/tech/web/" title="HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.">Web</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2019.07.17 |</span>
+            <a href="/2019/07/storages.html" title="Небольшой тест имеющихся у меня носителей данных">Поиздевался над железками</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a>​<a class="fa-icon-calendar-alt" href="/life/dybr/" title="Просто кусочки повседневности">Дыбр</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2016.06.23 |</span>
+            <a href="/2016/06/stacking.html" title="Приемы стекинга фотографий под Linux с использованием пакета enfuse">Пингвин-фотолюбитель: 5. Стекинг</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-linux" href="/photo/processing/penguin/" title="Цикл постов 2016 года об обработке фотографий под Linux">Пингвин-фотолюбитель</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#настройка-сервисов">Настройка сервисов</a></li>
+<li class="toc-entry toc-h2"><a href="#постоянные-симлинки-на-hid-устройства">Постоянные симлинки на HID-устройства</a></li>
+<li class="toc-entry toc-h2"><a href="#настройка-conky">Настройка Conky</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#как-это-работает">Как это работает</a></li>
+<li class="toc-entry toc-h3"><a href="#как-использовать">Как использовать</a></li>
+</ul>
+</li>
+</ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/2022/10/harddybr.html" title="Некоторые заметки после обновления компьютера">Большой дыбр по железу</a></li></ul>
+    </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

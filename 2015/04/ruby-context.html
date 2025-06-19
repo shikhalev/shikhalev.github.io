@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Блоки и контекст в Ruby | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Блоки и контекст в Ruby" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Статья рассказывает о программном контексте в Ruby: какие переменные и другие объекты доступны в конкретном месте программы, и как интерпретатор их ищет." />
+<meta property="og:description" content="Статья рассказывает о программном контексте в Ruby: какие переменные и другие объекты доступны в конкретном месте программы, и как интерпретатор их ищет." />
+<link rel="canonical" href="https://shikhalev.github.io/2015/04/ruby-context.html" />
+<meta property="og:url" content="https://shikhalev.github.io/2015/04/ruby-context.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/2015/04/01/ruby-context/screen-context-640x640-500-261-0-0.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-04-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/img/2015/04/01/ruby-context/screen-context-640x640-500-261-0-0.webp" />
+<meta property="twitter:title" content="Блоки и контекст в Ruby" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2015-04-01T00:00:00+00:00","datePublished":"2015-04-01T00:00:00+00:00","description":"Статья рассказывает о программном контексте в Ruby: какие переменные и другие объекты доступны в конкретном месте программы, и как интерпретатор их ищет.","headline":"Блоки и контекст в Ruby","image":"https://shikhalev.github.io/img/2015/04/01/ruby-context/screen-context-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/2015/04/ruby-context.html"},"url":"https://shikhalev.github.io/2015/04/ruby-context.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">Блоки и контекст в Ruby</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2015%2F04%2Fruby-context.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2015%2F04%2Fruby-context.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2015%2F04%2Fruby-context.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2015%2F04%2Fruby-context.html&text=%D0%91%D0%BB%D0%BE%D0%BA%D0%B8+%D0%B8+%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BA%D1%81%D1%82+%D0%B2+Ruby">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%91%D0%BB%D0%BE%D0%BA%D0%B8+%D0%B8+%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BA%D1%81%D1%82+%D0%B2+Ruby&url=https%3A%2F%2Fshikhalev.github.io%2F2015%2F04%2Fruby-context.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2015-04-01T00:00:00+00:00" itemprop="datePublished">2015.04.01
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#замыкания">замыкания</a>​<a class="tag" href="/tags#контекст">контекст</a></aside></header><div itemprop="articleBody">
+  <p><a href="http://samag.ru/archive/article/2622">Оригинал этой статьи опубликован в журнале «Системный администратор» №1–2 (134–135) за январь–февраль 2014</a>.</p>
+
+<hr>
+
+<figure class="__figure __implicit_figure __right" style="max-width:158px;padding: 5px;"><a href="http://samag.ru/archive/article/2622"><img src="/img/2015/04/01/ruby-context/134-5-158.webp" class="__image"></a></figure>
+
+<div class="note">
+  <p><strong>Что стоит за конкретным идентификатором в данном окружении</strong></p>
+
+  <p>Давайте разберемся с программным контекстом в Ruby: какие переменные и другие объекты доступны в конкретном месте
+программы, и как интерпретатор их ищет? Что обозначает конкретный идентификатор, откуда он берется? Почему отсюда,
+а не оттуда? И чему, наконец, в этом трижды перекинутом блоке будет равен <code class="language-plaintext highlighter-rouge">self</code>?</p>
+
+  <p>Ruby очень гибок и позволяет переопределить так много, что, образно выражаясь, вы можете выстрелить себе в ногу
+из самой этой ноги. Картечью.</p>
+</div>
+
+<!--more-->
+
+<p>В программировании, неважно на каком языке, есть такое понятие — <em>контекст выполнения</em> — если мы не работаем исключительно
+с глобальными переменными, важно понимать, какие локальные объекты доступны и задействованы в каждой конкретной точке
+программы. Это достаточно просто для понимания, хотя и важно, в случае объектно-ориентированных языков, дизайн которых
+направлен на то, чтобы максимально изолироваться от глобального окружения и работать внутри одного объекта; и несколько
+сложнее, но еще более важно, в случаях, когда язык поддерживает <em>замыкания</em> — по сути вынесение кода вместе с его контекстом
+куда-то в другое место.</p>
+
+<p>На самом деле, никакой особой магии (по крайней мере, в случае Ruby) тут нет, и правила, определяющие работу с контекстом,
+довольно просты, а главное — логичны. Однако их надо знать и понимать очень четко, поскольку вариантов использования очень
+много, а кроме того, в языке есть способы переопределить поведение по умолчанию. Кроме того, <em>блоки</em>, образующие замыкания,
+в Ruby очень удобны и используются постоянно. При этом переменные не требуют отдельного объявления (подобного <code class="language-plaintext highlighter-rouge">var</code> в других
+языках), а определяются в момент инициализации — первого присваивания значения. Все это может привести к недопониманию
+и кажущейся неоднозначности.</p>
+
+<h2 id="из-чего-состоит-контекст">
+<a class="anchor" href="#%D0%B8%D0%B7-%D1%87%D0%B5%D0%B3%D0%BE-%D1%81%D0%BE%D1%81%D1%82%D0%BE%D0%B8%D1%82-%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BA%D1%81%D1%82" aria-hidden="true"><span class="octicon octicon-link"></span></a>Из чего состоит контекст?</h2>
+
+<p>В Ruby в любой точке программы мы имеем доступ к трем слоям контекста: локальный контекст, контекст объекта и глобальный.
+Рассмотрим их, так сказать, сверху вниз — от глобального к локальному.</p>
+
+<p>В <em>глобальном контексте</em>, строго говоря, находятся только глобальные переменные — это те, имена которых начинаются с символа
+«<code class="language-plaintext highlighter-rouge">$</code>». Однако, мы же можем обращаться к другим элементам — константам, методам — находясь как бы в чисто глобальном окружении —
+непосредственно в тексте исходного файла вне всяких <code class="language-plaintext highlighter-rouge">class</code> и <code class="language-plaintext highlighter-rouge">def</code>? Можем, но только потому, что на самом деле находимся
+в неявном безымянном методе неявного объекта <code class="language-plaintext highlighter-rouge">main</code>. А «глобальные» константы и методы на самом деле принадлежат классу <code class="language-plaintext highlighter-rouge">Object</code>,
+к которому относится и <code class="language-plaintext highlighter-rouge">main</code> (поскольку от этого класса наследуются все остальные, его элементы и доступны в любом контексте).</p>
+
+<p class="note">Строго говоря, начиная с Ruby 1.9, это не совсем так — существует класс <code class="language-plaintext highlighter-rouge">BasicObject</code>, являющийся не наследником,
+а предком <code class="language-plaintext highlighter-rouge">Object</code>. Если мы для каких-то целей унаследуемся непосредственно от него, то внезапно обнаружим, что нам очень мало,
+чего доступно. Но так делать имеет смысл только в очень специфических задачах, на грани «хака».</p>
+
+<p><em>Контекст объекта</em> позволяет нам обращаться к его методам и константам класса без указания самого объекта, а также к его
+переменным экземпляра с префиксом «<code class="language-plaintext highlighter-rouge">@</code>» и переменным класса с «<code class="language-plaintext highlighter-rouge">@@</code>». Сам же текущий объект мы всегда можем получить
+посредством ключевого слова «<code class="language-plaintext highlighter-rouge">self</code>».</p>
+
+<p>Наконец, <em>локальный контекст</em> — это все локальные переменные заданные выше по тексту в рамках текущего метода.</p>
+
+<p>Одна из особенностей Ruby — то, что принадлежность идентификатора тому или иному контексту, как правило, можно определить
+и не просматривая снизу вверх области видимости — глобальные переменные, переменные экземпляра и класса отличаются префиксами,
+имена констант всегда начинаются с большой буквы, а локальных переменных — с маленькой. Некоторую сумятицу вносят только
+методы — обладая именами, как у локальных переменных, они принадлежат контексту объекта. Тут действует простое правило:
+присваивание создает переменную и перекрывает имя метода. Тем не менее, к нему по прежнему можно обратится посредством
+«<code class="language-plaintext highlighter-rouge">self.‹имя›</code>». Стоит заметить, что присваивание всегда создает переменную, даже если у нас ранее определен атрибут,
+доступный для присваивания. Т.е. в ситуации<sup id="fnref:gist"><a href="#fn:gist" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Alpha</span>
+
+  <span class="nb">attr_accessor</span> <span class="ss">:alpha</span>
+
+  <span class="k">def</span> <span class="nf">beta</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">alpha</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="mi">2</span>
+  <span class="k">end</span>
+
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>Атрибут после вызова <code class="language-plaintext highlighter-rouge">beta</code> будет равен единице, поскольку строчка без <code class="language-plaintext highlighter-rouge">self</code> к нему отношения не имеет.</p>
+
+<h2 id="блоки">
+<a class="anchor" href="#%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Блоки</h2>
+
+<p>Блоком в Ruby называется конструкция вида:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby"><i>‹вызов метода›</i> <span class="k">do</span> |<i>‹аргументы›</i>|
+  <i>‹какие-то действия›</i>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>или же:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby"><i>‹вызов метода›</i> { |<i>‹аргументы›</i>| <i>‹какие-то действия›</i> }</code></pre>
+</figure>
+
+<p>Это две равнозначные формы записи одного и того же. Вторая обычно используется, когда блок умещается в одну строку.
+Вызываемый метод частью блока не является, но необходим — каким-либо другим способом блоки не используются.</p>
+
+<p>Блок в Ruby — очень часто используемая конструкция языка, одна из определяющих, если так можно выразиться, ruby-way.</p>
+
+<p>Выглядит в реальности это примерно так (выводим элементы массива):</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">].</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">item</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="n">item</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>или так (преобразуем массив в массив строк):</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="n">strs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">].</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span><span class="p">.</span><span class="nf">to_s</span> <span class="p">}</span></code></pre>
+</figure>
+
+<p>С другой стороны — со стороны метода — блок может быть вызван посредством ключевого слова «<code class="language-plaintext highlighter-rouge">yield</code>»:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">do_smth</span>
+  <span class="k">if</span> <span class="nb">block_given?</span>
+    <span class="k">yield</span> <span class="nb">self</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>Здесь проверка <code class="language-plaintext highlighter-rouge">block_given?</code> нужна, чтобы определить, а был ли собственно передан блок, или метод вызывали без него.</p>
+
+<p>Другой вариант — это объявить специальный параметр, который в теле метода волшебным образом превратится в объект класса
+<code class="language-plaintext highlighter-rouge">Proc</code> (и его уже можно будет не только вызвать непосредственно, но и сохранить в переменную или передать в другой метод):</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">do_smth_else</span> <span class="o">&amp;</span><span class="n">block</span>
+  <span class="vi">@smth</span> <span class="o">=</span> <span class="n">block</span>
+  <span class="n">do_smth</span> <span class="o">&amp;</span><span class="n">block</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>Если же при вызове блок не будет передан, параметр будет равен <code class="language-plaintext highlighter-rouge">nil</code>.</p>
+
+<p>В рамках разговора о контекстах важно, что блок образует замыкание, т.е. несмотря на то, что выполняться он будет
+где-то там в глубинах вызванного метода, а то и вовсе — будет сохранен, а затем вызван уже совсем в другое время,
+в блоке можно обращаться к локальным переменным, доступным в месте его объявления. Но при этом блок еще и образует
+собственный контекст: имена его формальных параметров, а так же переменные, впервые инициализированные внутри блока,
+снаружи не доступны. Рассмотрим такой пример:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="n">a</span> <span class="o">=</span> <span class="s1">'INIT'</span>
+
+<span class="k">def</span> <span class="nf">alpha</span>
+  <span class="n">a</span> <span class="o">||=</span> <span class="ss">:a</span>
+  <span class="nb">p</span> <span class="p">[</span><span class="ss">:alpha</span><span class="p">,</span> <span class="n">a</span><span class="p">]</span>
+<span class="k">end</span>
+
+<span class="n">define_singleton_method</span> <span class="ss">:beta</span> <span class="k">do</span>
+  <span class="n">a</span> <span class="o">||=</span> <span class="ss">:b</span>
+  <span class="nb">p</span> <span class="p">[</span><span class="ss">:beta</span><span class="p">,</span> <span class="n">a</span><span class="p">]</span>
+<span class="k">end</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="s1">'TEST'</span>
+
+<span class="n">alpha</span>
+
+<span class="n">beta</span></code></pre>
+</figure>
+
+<p>Использованный здесь оператор «<code class="language-plaintext highlighter-rouge">||=</code>» выполняет присваивание в том случае, если переменная слева от него логически ложна
+(равна <code class="language-plaintext highlighter-rouge">false</code> или <code class="language-plaintext highlighter-rouge">nil</code>), или не определена. Приведенный код должен дать следующий вывод:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby demo02.rb
+<span class="go">[:alpha, :a]
+[:beta, "TEST"]</span></code></pre>
+</figure>
+
+<p>Как видим, в методе, определенном через «<code class="language-plaintext highlighter-rouge">def</code>», внешняя переменная не видна, а вот метод, созданный из блока, ее видит,
+поскольку она попала в замыкание. Если же мы закомментируем первую строчку примера, то на момент определения <code class="language-plaintext highlighter-rouge">beta</code> переменная
+существовать не будет, соответственно, в замыкание не попадет, и результат будет следующий:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="go">[:alpha, :a]
+[:beta, :b]</span></code></pre>
+</figure>
+
+<p>Несмотря на то, что присваивание строки «TEST» никуда не делось, оно уже не имеет отношения к той переменной <code class="language-plaintext highlighter-rouge">a</code>, которая
+расположена в локальном контексте блока.</p>
+
+<p>Формальные аргументы блока всегда относятся исключительно к его контексту, даже если их имена совпадают с внешними
+переменными. В старых версиях Ruby, по 1.8.7 включительно, параметры блока не были изолированы, что вызывало множество
+нареканий.</p>
+
+<p>Например, код:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="n">a</span> <span class="o">=</span> <span class="s1">'A'</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s1">'B'</span>
+
+<span class="mi">2</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span> <span class="o">|</span><span class="n">a</span><span class="o">|</span>
+  <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+  <span class="nb">p</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">]</span>
+<span class="k">end</span>
+
+<span class="nb">p</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">]</span></code></pre>
+</figure>
+
+<p>Выдаст следующее:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby demo03.rb
+<span class="go">[0, 0]
+[1, 1]
+["A", 1]</span></code></pre>
+</figure>
+
+<p>Здесь можно видеть, что переменная <code class="language-plaintext highlighter-rouge">a</code> изолирована в блоке, тогда как <code class="language-plaintext highlighter-rouge">b</code> — нет.</p>
+
+<p>Что же касается контекста объекта, то он, как и локальный, попадает в замыкание, т.е. соответствует месту объявления блока,
+если метод, которому передан блок, не подразумевает иное (как, в частности, <code class="language-plaintext highlighter-rouge">define_singleton_method</code>). К методам, изменяющим
+контекст, мы еще вернемся, а сейчас рассмотрим подробнее контекст объекта как таковой.</p>
+
+<h2 id="контекст-объекта">
+<a class="anchor" href="#%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BA%D1%81%D1%82-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Контекст объекта</h2>
+
+<p>Как уже говорилось выше, в Ruby мы всегда действуем в контексте некоего объекта, причем доступные методы полностью определяются
+его классом. Но, в общем случае, это не тот класс, который был использован при создании объекта и возвращается методом <code class="language-plaintext highlighter-rouge">class</code>,
+а «персональный» класс, присущий только данному объекту и никому более — наследник его «номинального» класса. Чтобы получить этот
+«персональный» класс, используется метод <code class="language-plaintext highlighter-rouge">singleton_class</code>.</p>
+
+<p>Пример, демонстрирующий вышесказанное:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Alpha</span>
+
+  <span class="k">def</span> <span class="nf">alpha</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="no">Alpha</span><span class="p">.</span><span class="nf">new</span>
+
+<span class="n">a</span><span class="p">.</span><span class="nf">define_singleton_method</span> <span class="ss">:beta</span> <span class="k">do</span>
+<span class="k">end</span>
+
+<span class="nb">p</span> <span class="n">a</span>
+<span class="nb">p</span> <span class="p">[</span><span class="n">a</span><span class="p">.</span><span class="nf">class</span><span class="p">,</span> <span class="n">a</span><span class="p">.</span><span class="nf">class</span><span class="p">.</span><span class="nf">instance_methods</span><span class="p">(</span><span class="kp">false</span><span class="p">)]</span>
+<span class="nb">p</span> <span class="p">[</span><span class="n">a</span><span class="p">.</span><span class="nf">singleton_class</span><span class="p">,</span>
+   <span class="n">a</span><span class="p">.</span><span class="nf">singleton_class</span><span class="p">.</span><span class="nf">instance_methods</span><span class="p">(</span><span class="kp">false</span><span class="p">)]</span>
+<span class="nb">p</span> <span class="n">a</span><span class="p">.</span><span class="nf">class</span><span class="p">.</span><span class="nf">ancestors</span>
+<span class="nb">p</span> <span class="n">a</span><span class="p">.</span><span class="nf">singleton_class</span><span class="p">.</span><span class="nf">ancestors</span></code></pre>
+</figure>
+
+<p>В результате должен получиться примерно такой вывод:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby demo04.rb
+<span class="go">♯‹Alpha:0x0000000175c140›
+[Alpha, [:alpha]]
+[♯‹Class:♯‹Alpha:0x0000000175c140››, [:beta]]
+[Alpha, Object, Kernel, BasicObject]
+[Alpha, Object, Kernel, BasicObject]</span></code></pre>
+</figure>
+
+<p>В общем случае при вызове метода происходит его поиск сначала в «персональном» классе объекта, а затем в классах и модулях,
+список которых выдается методом <code class="language-plaintext highlighter-rouge">ancestors</code> — именно в том порядке, в каком они перечислены. Если оставить одни классы,
+получится цепочка наследования, а модули там появляются путем «подмешивания» (в английской терминологии — «mixin») методом
+<code class="language-plaintext highlighter-rouge">include</code> (другой вариант добавления «примесей» — <code class="language-plaintext highlighter-rouge">extend</code> — полностью соответствует <code class="language-plaintext highlighter-rouge">include</code>, выполненному для синглтон-класса).
+В примере выше можно видеть модуль <code class="language-plaintext highlighter-rouge">Kernel</code>, подмешанный в класс <code class="language-plaintext highlighter-rouge">Object</code>.</p>
+
+<p>Что касается переменных, то в данном контексте имеются, во-первых, <em>переменные объекта</em>, чьи имена начинаются с символа «<code class="language-plaintext highlighter-rouge">@</code>».
+С ними все просто, поскольку они принадлежат конкретному экземпляру и больше ниоткуда не доступны. Есть, правда, еще методы
+<code class="language-plaintext highlighter-rouge">instance_variable_get</code>, <code class="language-plaintext highlighter-rouge">_set</code> и т.д., но, будучи, как и всякие методы, применяемы к конкретному объекту, они не вносят
+дополнительной путаницы.</p>
+
+<p>Несколько интересней с <em>переменными класса</em> — это те, чьи имена начинаются с «<code class="language-plaintext highlighter-rouge">@@</code>». Во-первых, их следовало бы назвать
+переменными модуля, поскольку в модулях они ведут себя так же, как и в классах. Во-вторых, они наследуются, т.е. если где-то
+в цепочке <code class="language-plaintext highlighter-rouge">ancestors</code> уже была объявлена переменная с таким именем, будет использоваться именно она, а не создана новая
+для текущего класса. И это довольно важный момент, поскольку при сложном многоуровневом наследовании одноименные переменные
+могут появиться и случайно — тут надо быть внимательным. Наконец, в третьих, эти переменные трактуются по разному, когда
+используются в контексте обычного объекта — они считаются относящимися к его классу, и в контексте модуля или класса
+(а это ведь с точки зрения Ruby тоже объект) — тогда они относятся непосредственно к нему.</p>
+
+<p>Небольшой пример, где мы инициализируем переменную в контексте класса, изменяем ее в контексте экземпляра этого класса,
+а затем еще раз изменяем в контексте класса-наследника:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Alpha</span>
+
+  <span class="vc">@@alpha</span> <span class="o">=</span> <span class="s1">'A'</span>
+
+  <span class="k">def</span> <span class="nc">Alpha</span><span class="o">.</span><span class="nf">alpha</span>
+    <span class="vc">@@alpha</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">set_alpha</span> <span class="n">x</span>
+    <span class="vc">@@alpha</span> <span class="o">=</span> <span class="n">x</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="no">Alpha</span><span class="p">.</span><span class="nf">new</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">set_alpha</span> <span class="s1">'X'</span>
+
+<span class="nb">p</span> <span class="no">Alpha</span><span class="p">.</span><span class="nf">alpha</span>
+
+<span class="k">class</span> <span class="nc">Beta</span> <span class="o">&lt;</span> <span class="no">Alpha</span>
+  <span class="vc">@@alpha</span> <span class="o">=</span> <span class="s1">'B'</span>
+<span class="k">end</span>
+
+<span class="nb">p</span> <span class="no">Alpha</span><span class="p">.</span><span class="nf">alpha</span></code></pre>
+</figure>
+
+<p>Во всех случаях мы имеем дело с одной и той же переменной и, соответственно, получаем ожидаемый вывод:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby demo06.rb
+<span class="go">"X"
+"B"</span></code></pre>
+</figure>
+
+<h2 id="константы-и-пространства-имен">
+<a class="anchor" href="#%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D1%8B-%D0%B8-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%B0-%D0%B8%D0%BC%D0%B5%D0%BD" aria-hidden="true"><span class="octicon octicon-link"></span></a>Константы и пространства имен</h2>
+
+<p>Константы в Ruby отличаются от всего остального заглавной первой буквой. Имена классов и модулей — это тоже константы,
+значением которых является соответствующий объект класса <code class="language-plaintext highlighter-rouge">Class</code> или <code class="language-plaintext highlighter-rouge">Module</code>.</p>
+
+<p>Константы в чем-то подобны переменным класса, только доступны снаружи (посредством «<code class="language-plaintext highlighter-rouge">::</code>»), и повторное присваивание
+им значения выдает предупреждение. Есть и еще два существенных отличия.</p>
+
+<p>Первое — если в классе-предке и классе-потомке имеются одноименные константы, то это разные константы, т.е. переопределение
+задает новую константу для потомка, а не затирает значение в предке. Второй же момент — это то, что к поиску «по предкам»
+добавляется такая вещь как пространства имен.</p>
+
+<p>В принципе, пространства имен в Ruby понять достаточно просто: имена классов и модулей представляют собой константы,
+при этом классы и модули сами могут содержать константы, в том числе, правильно, другие классы и модули. Выглядит это
+примерно так:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Alpha</span>
+
+  <span class="k">class</span> <span class="nc">Beta</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="no">Alpha</span><span class="o">::</span><span class="no">Beta</span><span class="p">.</span><span class="nf">new</span></code></pre>
+</figure>
+
+<p>Так вот, если где-то в классе <code class="language-plaintext highlighter-rouge">Beta</code> обратиться к константе, после собственного класса, интерпретатор будет ее искать во внешнем
+классе — <code class="language-plaintext highlighter-rouge">Alpha</code>. И даже более того — такой вложенный поиск более приоритетен, чем поиск по цепочке наследования. Немного
+парадоксальный пример:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Alpha</span>
+
+  <span class="no">ALPHA</span> <span class="o">=</span> <span class="s1">'A'</span>
+
+<span class="k">end</span>
+
+<span class="k">module</span> <span class="nn">Beta</span>
+
+  <span class="no">ALPHA</span> <span class="o">=</span> <span class="s1">'B'</span>
+
+  <span class="k">class</span> <span class="nc">Gamma</span> <span class="o">&lt;</span> <span class="no">Alpha</span>
+
+    <span class="k">def</span> <span class="nc">Gamma</span><span class="o">.</span><span class="nf">alpha</span>
+      <span class="no">ALPHA</span>
+    <span class="k">end</span>
+
+  <span class="k">end</span>
+
+<span class="k">end</span>
+
+<span class="nb">p</span> <span class="no">Beta</span><span class="o">::</span><span class="no">Gamma</span><span class="p">.</span><span class="nf">alpha</span>
+<span class="nb">p</span> <span class="no">Beta</span><span class="o">::</span><span class="no">Gamma</span><span class="o">::</span><span class="no">ALPHA</span></code></pre>
+</figure>
+
+<p>Выдаст, невзирая на здравый смысл, два разных значения:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby demo07.rb
+<span class="go">"B"
+"A"</span></code></pre>
+</figure>
+
+<p>Т.е. в первом случае найдена ближайшая внешняя константа, а во втором — ближайшая унаследованная… Что с этим делать?
+Могу порекомендовать только одно: в сложных случаях не рассчитывать на определенное поведение интерпретатора — оно-то
+определено и стабильно (вышеприведенный код я проверил на версиях 1.8, 1.9, 2.0 и 2.1), но не всегда очевидно разработчику
+и зависит от способов обращения, которые в течении жизненного цикла кода могут изменяться. В общем, при малейшем подозрении
+на неоднозначность, лучше прописывать явно полный идентификатор со всеми «<code class="language-plaintext highlighter-rouge">::</code>». Кстати, к именам верхнего уровня, никуда
+не вложенным, можно обратиться так: «<code class="language-plaintext highlighter-rouge">::Object</code>» или «<code class="language-plaintext highlighter-rouge">::Kernel</code>» — это всегда будет работать правильно, что бы ни было
+одноименное определено в том контексте, где находится вызов. Ну и, конечно, не стоит злоупотреблять пространствами имен
+и переопределением уже использованных идентификаторов. Как и любыми другими возможностями языка: Ruby очень гибок и позволяет
+переопределить так много, что, образно выражаясь, вы можете выстрелить себе в ногу из самой этой ноги. Картечью.</p>
+
+<h2 id="замена-контекста">
+<a class="anchor" href="#%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD%D0%B0-%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Замена контекста</h2>
+
+<p>Локальный контекст, равно как и контекст объекта, может быть указан явно. Для этого существует несколько разнородных техник,
+о которых мы сейчас и поговорим.</p>
+
+<p>Начнем с простого и прозрачного — явного указания объекта. Для этой цели служат методы <code class="language-plaintext highlighter-rouge">instance_eval</code> и <code class="language-plaintext highlighter-rouge">instance_exec</code>,
+немного различающиеся между собой синтаксисом. Они позволяют выполнить блок в контексте заданного объекта. При этом блок
+остается замыканием, т.е. локальный контекст он захватывает свой. Пример:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Alpha</span>
+  <span class="nb">attr_accessor</span> <span class="ss">:alpha</span>
+<span class="k">end</span>
+
+<span class="n">alpha</span> <span class="o">=</span> <span class="s1">'a'</span>
+<span class="n">x</span> <span class="o">=</span> <span class="s1">'x'</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="no">Alpha</span><span class="p">.</span><span class="nf">new</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">alpha</span> <span class="o">=</span> <span class="s1">'A'</span>
+
+<span class="n">a</span><span class="p">.</span><span class="nf">instance_eval</span> <span class="k">do</span>
+  <span class="nb">p</span> <span class="p">[</span><span class="n">alpha</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="nb">self</span><span class="p">]</span>
+  <span class="nb">self</span><span class="p">.</span><span class="nf">alpha</span> <span class="o">=</span> <span class="n">x</span>
+<span class="k">end</span>
+
+<span class="nb">p</span> <span class="p">[</span><span class="n">alpha</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">]</span></code></pre>
+</figure>
+
+<p>Выдаст примерно следующее:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby demo08.rb
+<span class="go">["a", "x", ♯‹Alpha:0x0000000107bb50 @alpha="A"›]
+["a", "x", ♯‹Alpha:0x0000000107bb50 @alpha="x"›]</span></code></pre>
+</figure>
+
+<p>А если мы перенесем присвоение значения переменной <code class="language-plaintext highlighter-rouge">alpha</code> в строчку сразу за блоком, то получим:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="go">["A", "x", ♯‹Alpha:0x0000000213bad0 @alpha="A"›]
+["a", "x", ♯‹Alpha:0x0000000213bad0 @alpha="x"›]</span></code></pre>
+</figure>
+
+<p>Таким образом видно, что идентификатор сначала ищется в замыкании, а если его там нет — в методах объекта.</p>
+
+<p>Для классов и модулей есть методы <code class="language-plaintext highlighter-rouge">module_eval</code> и <code class="language-plaintext highlighter-rouge">module_exec</code> (существуют также методы <code class="language-plaintext highlighter-rouge">class_eval</code> и <code class="language-plaintext highlighter-rouge">class_exec</code>,
+являющиеся полными синонимами <code class="language-plaintext highlighter-rouge">module_xxx</code>.), которые отличаются от <code class="language-plaintext highlighter-rouge">instance</code>-методов семантикой определения методов.
+Внутри <code class="language-plaintext highlighter-rouge">instance_eval</code> конструкция «<code class="language-plaintext highlighter-rouge">def</code>» определяет синглтон-метод, независимо от того, является ли объект модулем/классом,
+или нет; в случае <code class="language-plaintext highlighter-rouge">module_eval</code> она определяет метод экземпляра. То есть:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Alpha</span>
+<span class="k">end</span>
+
+<span class="no">Alpha</span><span class="p">.</span><span class="nf">instance_eval</span> <span class="k">do</span>
+  <span class="k">def</span> <span class="nf">alpha</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="no">Alpha</span><span class="p">.</span><span class="nf">module_eval</span> <span class="k">do</span>
+  <span class="k">def</span> <span class="nf">beta</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="nb">p</span> <span class="p">[</span><span class="no">Alpha</span><span class="p">.</span><span class="nf">methods</span><span class="p">(</span><span class="kp">false</span><span class="p">),</span>
+   <span class="no">Alpha</span><span class="p">.</span><span class="nf">instance_methods</span><span class="p">(</span><span class="kp">false</span><span class="p">)]</span></code></pre>
+</figure>
+
+<p>Нам покажет:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby demo09.rb
+<span class="go">[[:alpha], [:beta]]</span></code></pre>
+</figure>
+
+<p>Схожим образом формируется контекст при определении методов из блоков посредством <code class="language-plaintext highlighter-rouge">define_method</code>, или <code class="language-plaintext highlighter-rouge">define_singleton_method</code>.
+И это зачастую очень удобный способ создавать методы, опирающиеся на замыкания. Как-то так:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Alpha</span>
+
+  <span class="k">def</span> <span class="nf">name_method</span> <span class="nb">name</span>
+    <span class="n">define_singleton_method</span> <span class="nb">name</span> <span class="k">do</span>
+      <span class="s2">"name: </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="no">Alpha</span><span class="p">.</span><span class="nf">new</span>
+
+<span class="n">a</span><span class="p">.</span><span class="nf">name_method</span> <span class="ss">:alpha</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">name_method</span> <span class="ss">:beta</span>
+
+<span class="nb">p</span> <span class="p">[</span><span class="n">a</span><span class="p">.</span><span class="nf">alpha</span><span class="p">,</span> <span class="n">a</span><span class="p">.</span><span class="nf">beta</span><span class="p">]</span></code></pre>
+</figure>
+
+<p>С результатом:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby demo10.rb
+<span class="go">["name: alpha", "name: beta"]</span></code></pre>
+</figure>
+
+<p>Что же касается локального контекста, с ним сложнее. Нельзя, скажем, взять и выполнить блок в чужом локальном контексте,
+однако можно сохранить некий контекст и выполнить в нем код, представленный в виде строки. Для этого используется метод
+<code class="language-plaintext highlighter-rouge">binding</code>, возвращающий объект класса <code class="language-plaintext highlighter-rouge">Binding</code>. Выглядит это примерно так:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">get_binding</span>
+  <span class="n">local</span> <span class="o">=</span> <span class="mi">100</span>
+  <span class="k">return</span> <span class="nb">binding</span>
+<span class="k">end</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="n">get_binding</span>
+
+<span class="n">b</span><span class="p">.</span><span class="nf">eval</span> <span class="s1">'p local'</span></code></pre>
+</figure>
+
+<p>Если быть точным, то объект класса <code class="language-plaintext highlighter-rouge">Binding</code> хранит не только локальный контекст, но и объектный — это полный контекст
+в той точке, где был вызван метод <code class="language-plaintext highlighter-rouge">binding</code>. С учетом того, что выполнение кода из строки — процесс довольно медленный
+(по сравнению с нормальным, предварительно разобранным кодом), использовать эту технику как-либо, кроме как в отладке,
+наверное, не стоит. С другой стороны, локальный контекст на то и локальный, чтобы не заботиться о нем снаружи.</p>
+
+<h2 id="замыкания-и-многозадачность">
+<a class="anchor" href="#%D0%B7%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B8-%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Замыкания и многозадачность</h2>
+
+<p>Если мы пишем многопоточную программу, надо помнить, что замыкания содержат переменные, а не их значения. Т.е. значения
+могут поменяться со времени старта потока.</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="n">a</span> <span class="o">=</span> <span class="ss">:start</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="no">Thread</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span>
+  <span class="nb">sleep</span> <span class="mi">1</span>
+  <span class="no">Thread</span><span class="p">.</span><span class="nf">exclusive</span> <span class="p">{</span> <span class="nb">p</span> <span class="n">a</span> <span class="p">}</span>
+<span class="k">end</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="ss">:continue</span>
+
+<span class="n">t</span><span class="p">.</span><span class="nf">join</span></code></pre>
+</figure>
+
+<p>Выдаст <code class="language-plaintext highlighter-rouge">:continue</code>, а не <code class="language-plaintext highlighter-rouge">:start</code>. И не забываем оборачивать обращения к внешним переменным в блок метода <code class="language-plaintext highlighter-rouge">exclusive</code>
+во избежание конфликтов. В данном примере, конечно, можно без него обойтись, но только потому, что ничего полезного
+в нем и не делается.</p>
+
+<p>Другая картина в случае, если мы захотим использовать дочерний процесс — в этом случае мы получим полную копию всего,
+включая глобальный контекст, и никаких общих переменных — для обмена данными между процессами используются уже совсем
+другие средства, например, dRuby<sup id="fnref:druby"><a href="#fn:druby" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>. Т.е.:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="vg">$a</span> <span class="o">=</span> <span class="ss">:start</span>
+
+<span class="nb">fork</span> <span class="k">do</span>
+  <span class="nb">sleep</span> <span class="mi">1</span>
+  <span class="nb">p</span> <span class="vg">$a</span>
+<span class="k">end</span>
+
+<span class="vg">$a</span> <span class="o">=</span> <span class="ss">:continue</span>
+
+<span class="no">Process</span><span class="p">.</span><span class="nf">wait</span></code></pre>
+</figure>
+
+<p>Выдаст нам все-таки <code class="language-plaintext highlighter-rouge">:start</code>, именно это значение будет скопировано в момент форка вместе со всем остальным.</p>
+
+<p>Вообще говоря, сказанное в этом разделе довольно очевидно для программистов, представляющих себе управление потоками и
+процессами как таковое, однако скриптовые языки, и Ruby в частности, нередко используют люди, в недавнем прошлом далекие
+от программирования… А задач, которые можно распараллелить — множество, тем более, что в Ruby это очень просто.</p>
+
+<h2 id="итого">
+<a class="anchor" href="#%D0%B8%D1%82%D0%BE%D0%B3%D0%BE" aria-hidden="true"><span class="octicon octicon-link"></span></a>Итого</h2>
+
+<p>Надеюсь, понимание вышеизложенного поможет избегать ошибок при написании программ. Впрочем, еще важнее это понимание
+при чтении чужих исходников — чтобы не возникало вопросов: а что у нас тут обозначает этот идентификатор, откуда он берется?
+А почему именно отсюда, а не оттуда? И чему, наконец, в этом трижды перекинутом между разными методами блоке будет равен <code class="language-plaintext highlighter-rouge">self</code>?..</p>
+
+<p>Отдельно хотелось бы сказать: несмотря на то, что поведение интерпретатора всегда однозначно и для большинства случаев
+стабильно от версии к версии, лучше избегать неочевидностей — человеческий мозг не компьютер и может долго «не замечать»,
+что какой-то нужный идентификатор оказался перекрыт другим, или что вместо переменной объекта используется переменная класса, и т.д.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:gist">
+      <p>Полные тексты примеров — <a href="https://gist.github.com/shikhalev/8301163">https://gist.github.com/shikhalev/8301163</a>. <a href="#fnref:gist" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:druby">
+      <p>Шихалев И. <a href="/2015/03/druby.html">Распределенный Ruby</a>. Прозрачный RPC для взаимодействия Ruby-программ // Системный администратор, №12(133), 2013г., — С. 58—61 <a href="#fnref:druby" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.04.08 |</span>
+            <a href="/2021/04/rms.html" title="Почему происходящее с FSF и сообществом свободного ПО в целом важно для всех.">Ричард Столлман как отражатель мировой революции</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a>​<a class="fa-icon-bullhorn" href="/life/social/politics/" title="Посты о политике">Политика</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2023.01.04 |</span>
+            <a href="/2023/01/chatgpt.html" title="Об очередных страданиях на тему искусственного интеллекта">Отставить панику...</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-brain" href="/life/psi/mind/" title="Заметки о том, как мы думаем">Мышление</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.03.06 |</span>
+            <a href="/2021/03/resize-png.html" title="Способы ресайза картинок формата PNG — какие возможности у нас есть под Linux...">О ресайзе PNG на примерах</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#из-чего-состоит-контекст">Из чего состоит контекст?</a></li>
+<li class="toc-entry toc-h2"><a href="#блоки">Блоки</a></li>
+<li class="toc-entry toc-h2"><a href="#контекст-объекта">Контекст объекта</a></li>
+<li class="toc-entry toc-h2"><a href="#константы-и-пространства-имен">Константы и пространства имен</a></li>
+<li class="toc-entry toc-h2"><a href="#замена-контекста">Замена контекста</a></li>
+<li class="toc-entry toc-h2"><a href="#замыкания-и-многозадачность">Замыкания и многозадачность</a></li>
+<li class="toc-entry toc-h2"><a href="#итого">Итого</a></li>
+</ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/2016/03/introspection.html" title="Что программа может знать о самой себе?">Средства самопознания в Ruby</a></li><li class="fa-icon-li-file-alt"><a href="/2016/01/metaprogramming.html" title="Добавление собственных абстракций в объектную модель — это просто. И интересно.">Мета­программи­ро­вание в Ruby: разбор примера</a></li><li class="fa-icon-li-file-alt"><a href="/2015/04/ruby-multitasking.html" title="В статье рассматриваются основные средства работы с потоками (threads) и процессами в языке и стандартной библиотеке Ruby.">Ruby и многозадачность</a></li></ul>
+    </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li><li><a href="/feed/pub.xml" title="Публикации в СМИ">Публикации</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>FPC-Notes: И с чем его едят… | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="FPC-Notes: И с чем его едят…" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Давайте рассмотрим различный софт, с которым нам, возможно, придется взаимодействовать при программировании на Free Pascal." />
+<meta property="og:description" content="Давайте рассмотрим различный софт, с которым нам, возможно, придется взаимодействовать при программировании на Free Pascal." />
+<link rel="canonical" href="https://shikhalev.github.io/2012/08/fpc-tools.html" />
+<meta property="og:url" content="https://shikhalev.github.io/2012/08/fpc-tools.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/2012/08/24/fpc-tools/editors-640x640-500-261-0-0.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-08-24T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/img/2012/08/24/fpc-tools/editors-640x640-500-261-0-0.webp" />
+<meta property="twitter:title" content="FPC-Notes: И с чем его едят…" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2012-08-24T00:00:00+00:00","datePublished":"2012-08-24T00:00:00+00:00","description":"Давайте рассмотрим различный софт, с которым нам, возможно, придется взаимодействовать при программировании на Free Pascal.","headline":"FPC-Notes: И с чем его едят…","image":"https://shikhalev.github.io/img/2012/08/24/fpc-tools/editors-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/2012/08/fpc-tools.html"},"url":"https://shikhalev.github.io/2012/08/fpc-tools.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-keyboard" href="/tech/programming/fpc/" title="Free Pascal Compiler, Lazarus и все, что с ними связано">FPC</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">FPC-Notes: И с чем его едят...</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2012%2F08%2Ffpc-tools.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2012%2F08%2Ffpc-tools.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2012%2F08%2Ffpc-tools.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2012%2F08%2Ffpc-tools.html&text=FPC-Notes%3A+%D0%98+%D1%81+%D1%87%D0%B5%D0%BC+%D0%B5%D0%B3%D0%BE+%D0%B5%D0%B4%D1%8F%D1%82...">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=FPC-Notes%3A+%D0%98+%D1%81+%D1%87%D0%B5%D0%BC+%D0%B5%D0%B3%D0%BE+%D0%B5%D0%B4%D1%8F%D1%82...&url=https%3A%2F%2Fshikhalev.github.io%2F2012%2F08%2Ffpc-tools.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2012-08-24T00:00:00+00:00" itemprop="datePublished">2012.08.24
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#IDE">IDE</a>​<a class="tag" href="/tags#Pascal">Pascal</a>​<a class="tag" href="/tags#binutils">binutils</a>​<a class="tag" href="/tags#редакторы">редакторы</a>​<a class="tag" href="/tags#свободное ПО">свободное ПО</a></aside></header><div itemprop="articleBody">
+  <figure class="__figure __implicit_figure __right logo" style="max-width:320px;"><a href="/img/2012/08/24/fpc-tools/editors-fhd.webp" class="__image_link"><img src="/img/2012/08/24/fpc-tools/editors-320.webp" class="__image"></a></figure>
+
+<p>Программное обеспечение используется нами не в вакууме, а в некотором окружении. Одни программы необходимы для работы других,
+третьи могут быть полезны для совместного использования, четвертые позволяют решать смежные задачи…</p>
+
+<p>Давайте рассмотрим различный софт, с которым нам, возможно, придется взаимодействовать при программировании на Free Pascal.</p>
+
+<!--more-->
+
+<h2 id="обязательная-программа">
+<a class="anchor" href="#%D0%BE%D0%B1%D1%8F%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Обязательная программа</h2>
+
+<dl>
+  <dt>GNU BinUtils <a href="#binutils">[1]</a>
+</dt>
+  <dd>
+    <p>Этот пакет уже упоминался ранее в подразделе <a href="/2011/11/fpc-start.html#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0">«Установка»</a>, без него обойтись вряд ли удастся, разве что только
+под Windows, где можно (и нужно) использовать внутренний компоновщик вместо <code class="language-plaintext highlighter-rouge">ld</code>, пользуясь исключительно готовой бинарной
+сборкой (потому что для сборки из исходников потребуется скомпилировать несколько ассемблерных файлов посредством <code class="language-plaintext highlighter-rouge">as</code>)
+и не используя файлы ресурсов, для которых по-умолчанию нужен <code class="language-plaintext highlighter-rouge">windres</code>, или же вручную компилируя их в объектные посредством
+некоего аналога, такого как GoRC <a href="#gorc">[2]</a>, например.</p>
+  </dd>
+  <dt>GNU Make <a href="#make">[3]</a>
+</dt>
+  <dd>
+    <p>Обеспечивает сборку сложных проектов через описания в <code class="language-plaintext highlighter-rouge">Makefile</code>. Для разработки на FPC его сложно назвать необходимым,
+поскольку модульная структура программ позволяет обойтись без таких описаний. Однако оказывается более чем полезным, если
+в проекте задействованы разные языки, отдельная сборка документации и так далее и тому подобное. Все это можно обеспечить
+и batch/shell-скриптами, но <code class="language-plaintext highlighter-rouge">make</code> — общепринятый и, что немаловажно, кроссплатформенный способ.</p>
+  </dd>
+  <dd>
+    <p>Кроме того, значительно упрощает сборку Free Pascal из исходников. Обойтись без <code class="language-plaintext highlighter-rouge">make</code>, правда, можно, но придется набирать
+множество команд с длинными строками параметров, непосредственно в консоли или в файле скрипта, тогда как соответствующий
+<code class="language-plaintext highlighter-rouge">Makefile</code> уже есть готовый.</p>
+  </dd>
+  <dt>GDB <a href="#gdb">[4]</a>
+</dt>
+  <dd>
+    <p>GNU-отладчик. Вообще, полезность, а тем более необходимость отладчика — вопрос спорный, но тем не менее… Если вам нужен
+отладчик, то вот, пожалуйста — Free Pascal рассчитан на работу именно с GDB, то есть, при соответствующих ключах компилятора,
+вставляет нужную отладочную информацию. На него же ориентированы <code class="language-plaintext highlighter-rouge">fp</code> — IDE текстового режима, и Lazarus.</p>
+  </dd>
+</dl>
+
+<p>Замечу, что все вышеописанные GNU-утилиты легко находятся (а зачастую уже установлены по-умолчанию) в основных linux-дистрибутивах,
+а под DOS и Windows включены в поставку Free Pascal, т.е. ставятся вместе с ним одним установщиком, не тре­буя дополнительных телодвижений.</p>
+
+<dl>
+  <dt>Go32v2 <a href="#go32v2">[5]</a>
+</dt>
+  <dd>
+    <p>DOS-расширитель. Позволяет писать программы для защищенного 32-разрядного режима DOS. Соответственно, входит в комплект FPC для DOS.
+Это не единственный расширитель, с которым может работать Free Pascal (можно упомянуть, например, WDOSX <a href="#wdosx">[6]</a>), но единственный,
+предлагаемый «из коробки».</p>
+  </dd>
+  <dt>XCode <a href="#xcode">[7]</a>
+</dt>
+  <dd>
+    <p>Для работы под Mac OS X потребуются установленные инструменты разработчика.</p>
+  </dd>
+</dl>
+
+<h2 id="управление-версиями">
+<a class="anchor" href="#%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%D0%BC%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Управление версиями</h2>
+
+<div class="note">
+  <p>Как уже говорилось ранее<sup id="fnref:see-src"><a href="#fn:see-src" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>, сами исходники Free Pascal и Lazarus находятся под управлением Subversion…
+Тем не менее, лично я считаю централизованные системы управления версиями вчерашним днем и даже с SVN предпочитаю
+иметь дело через Git, что уж говорить о начальном выборе для собственных проектов…</p>
+
+  <p>Однако, для собственно управления версиями используемый компилятор никакого значения не имеет. Посему, давайте кратко
+рассмотрим оба наиболее популярных на сегодняшний день варианта.</p>
+</div>
+
+<dl>
+  <dt>Apache™ Subversion® <a href="#svn">[8]</a>
+</dt>
+  <dd>
+    <p>Самая популярная централизованная <abbr title="Version Control System">VCS</abbr>. Разрабатывается Apache Software Foundation <a href="#apache">[9]</a>, используется
+во многих проектах, поддерживается, в том числе, самым известным хостингом для исходного кода — SourceForge <a href="#sf">[10]</a>,
+а также Google Code <a href="#gc">[11]</a>. Кроме того, имеется интеграция с Windows Explorer (см. TortoiseSVN <a href="#tortoise-svn">[12]</a>),
+а также со множеством редакторов и IDE, включая Lazarus (требуется установить пакет <code class="language-plaintext highlighter-rouge">lazsvnpkg</code>).</p>
+  </dd>
+  <dd>
+    <p><em>Плюсы:</em> интеграция с Lazarus.</p>
+  </dd>
+  <dd>
+    <p><em>Минусы:</em> это все-таки централизованная <abbr title="Version Control System">VCS</abbr>…</p>
+  </dd>
+  <dt>Git <a href="#git">[13]</a>
+</dt>
+  <dd>
+    <p>Наиболее популярная (и лично мне симпатичная) распределенная <abbr title="Version Control System">VCS</abbr>. Проект был начат Линусом Торвальдсом для уп­рав­ле­ния кодом
+ядра Linux. Поддерживается как SourceForge, так и Google Code и многими другими хостингами, включая набирающий популярность
+GitHub <a href="#gh">[14]</a>. Интеграция с Windows Explorer (см. TortoiseGit <a href="#tortoise-git">[15]</a>) также имеется.</p>
+  </dd>
+  <dd>
+    <p><em>Плюсы:</em> распределенная система, работа ориентирована на наборы изменений. Отлично подходит для индивидуального проекта,
+не требуя никакого выделенного сервера.</p>
+  </dd>
+  <dd>
+    <p><em>Минусы:</em> пока что нет интеграции с Lazarus…</p>
+  </dd>
+</dl>
+
+<h2 id="редакторы-кода">
+<a class="anchor" href="#%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D1%8B-%D0%BA%D0%BE%D0%B4%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Редакторы кода</h2>
+
+<h3 id="собственные-средства">
+<a class="anchor" href="#%D1%81%D0%BE%D0%B1%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D1%81%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B2%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Собственные средства</h3>
+
+<figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2012/08/24/fpc-tools/tools-fp-fhd.webp" class="__image_link"><img src="/img/2012/08/24/fpc-tools/tools-fp-320.webp" class="__image" alt="Рис. 1: Среда разработки текстового режима — `fp`." title="Рис. 1: Среда разработки текстового режима — `fp`." id="fp-pic"></a><figcaption>Рис. 1: Среда разработки текстового режима — <code class="language-plaintext highlighter-rouge">fp</code>.</figcaption></figure>
+
+<p>Для начала замечу, что Free Pascal уже в своем составе имеет IDE текстового режима — <code class="language-plaintext highlighter-rouge">fp</code>, скриншот которой (в окне консоли KDE)
+можно видеть на <a href="#fp-pic">рис. 1</a>.</p>
+
+<p>Данная среда имеет свои, кому-то, возможно, существенные, достоинства:</p>
+
+<ul>
+  <li>
+    <p>Интеграция с отладчиком GDB.</p>
+  </li>
+  <li>
+    <p>Во многом интерфейс повторяет хорошо известную, хотя и безнадежно устаревшую, среду Turbo Pascal от Borland. Это,
+в совокупности с режимом совместимости <code class="language-plaintext highlighter-rouge">TP</code>, позволяет, например, легко адаптировать старинные учебные пособия и планы,
+в которых, если отделить собственно программирование от используемых технологий, немало здравого и актуального.</p>
+  </li>
+  <li>
+    <p>Возможность работы без графической оболочки тоже может считаться достоинством: это позволяет использовать IDE на очень
+слабых компьютерах под управлением Linux или, скажем, FreeDOS <a href="#freedos">[16]</a>.</p>
+  </li>
+</ul>
+
+<p>Недостатки текстового режима вполне очевидны… Стоит отметить, пожалуй, только тот печальный факт, что fp IDE
+не умеет работать с Unicode в исходных текстах, что, помимо прочего, мешает использовать русский язык в современных
+дистрибутивах Linux, которые по умолчанию задают кодировку консоли UTF-8. К счастью, Linux всегда можно отконфигурировать
+на однобайтную кодировку, такую как KOI8-r или CP866…</p>
+
+<figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2012/08/24/fpc-tools/tools-lazarus-fhd.webp" class="__image_link"><img src="/img/2012/08/24/fpc-tools/tools-lazarus-320.webp" class="__image" alt="Рис. 2. Lazarus IDE" title="Рис. 2. Lazarus IDE" id="lazarus-pic"></a><figcaption>Рис. 2. Lazarus IDE</figcaption></figure>
+
+<p>Lazarus (<a href="#lazarus-pic">рис. 2</a>) — интегрированная среда разработки, о которой мы еще будем говорить много и подробно.
+И о преимуществах и об особенностях.</p>
+
+<p>К недостаткам можно отнести некоторую тяжеловесность. Чтобы быстренько написать маленькую консольную утилиту,
+среда явно избыточна. Кроме того, средства визуальной разработки, скрывая от программиста низкоуровневые действия,
+могут сослужить плохую службу при обучении.</p>
+
+<p>Тем не менее, интеграция с компилятором, встроенный отладчик, средства анализа кода, расширяемость и визуальные компоненты
+делают Lazarus лучшим выбором для реальной разработки. Посему в дальнейшем мы будем рассматривать его как основной вариант.
+А сейчас я кратко приведу рекомендации, чем еще можно воспользоваться при программировании на Free Pascal.</p>
+
+<h3 id="другие-редакторы">
+<a class="anchor" href="#%D0%B4%D1%80%D1%83%D0%B3%D0%B8%D0%B5-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Другие редакторы</h3>
+
+<figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2012/08/24/fpc-tools/tools-kate-fhd.webp" class="__image_link"><img src="/img/2012/08/24/fpc-tools/tools-kate-320.webp" class="__image" alt="Рис. 3. Kate" title="Рис. 3. Kate" id="kate-pic"></a><figcaption>Рис. 3. Kate</figcaption></figure>
+
+<p>В отличие от <code class="language-plaintext highlighter-rouge">fp</code> и Lazarus, перечисленные далее программы не кроссплатформенны. И это нормально — если мы ищем легковесный
+редактор с поддержкой множества языков, чем-то придется пожертвовать: или легковесностью (но тогда стоило ли отказываться
+от Lazarus’а?), или кросс­плат­фор­мен­нос­тью.</p>
+
+<p>На деле, выбор будет зависеть не только от используемой операционной системы, но и от графического окружения в ней.</p>
+
+<figure class="__figure __implicit_figure __left" style="max-width:320px;"><a href="/img/2012/08/24/fpc-tools/tools-gedit-fhd.webp" class="__image_link"><img src="/img/2012/08/24/fpc-tools/tools-gedit-320.webp" class="__image" alt="Рис. 4. gedit" title="Рис. 4. gedit" id="gedit-pic"></a><figcaption>Рис. 4. gedit</figcaption></figure>
+
+<p>Так, для Linux я бы рекомендовал использовать Kate <a href="#kate">[17]</a> (<a href="#kate-pic">рис. 3</a>), если работа ведется в окружении KDE,
+и gedit <a href="#gedit">[18]</a> (<a href="#gedit-pic">рис. 4</a>), если вы предпочитаете Gnome или Xfce<sup id="fnref:native"><a href="#fn:native" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>. Это наиболее развитые редакторы
+для своих оболочек. Хотя, безусловно, можно использовать и любой другой… Пожалуй, главное — обратить внимание на две вещи:
+подсветка синтаксиса Pascal, желательно — настраиваемая, и возможность вызова прямо из редактора внешних программ с перехватом
+вывода, чтобы видеть сообщения компилятора. Хотя, например, в Kate реализован другой механизм, лично для меня даже более удобный —
+встроенная консоль. Отдельно замечу, что в Kate очень хорошо реализован список открытых файлов — в виде дерева с подкаталогами,
+а также имеется возможность сохранять набор этих файлов в виде «Сеанса» — чрезвычайно важная вещь, когда приходится параллельно
+работать над несколькими проектами.</p>
+
+<p>Оба редактора поддерживают расширения в виде плагинов, кроме того, Kate — еще и сценарии, написанные на JavaScript.</p>
+
+<p class="note">Вообще, как нетрудно заметить, я вообще предпочитаю KDE и особенно люблю редактор Kate. Если для разработки на Free Pascal
+он и уступает Lazarus, в качестве универсального программистского редактора у него практически нет конкурентов.</p>
+
+<figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2012/08/24/fpc-tools/tools-npp-fhd.webp" class="__image_link"><img src="/img/2012/08/24/fpc-tools/tools-npp-320.webp" class="__image" alt="Рис. 5. Notepad++" title="Рис. 5. Notepad++" id="npp-pic"></a><figcaption>Рис. 5. Notepad++</figcaption></figure>
+
+<p>Что касается Windows, стоит в первую очередь обратить внимание на Note­pad++ <a href="#npp">[19]</a> — отличный универсальный расширяемый
+редактор с поддержкой Unicode, множества языков программирования, русского интерфейса и т.д. Его скриншот — на <a href="#npp-pic">рис. 5</a>.</p>
+
+<p>Чтобы закончить с редакторами, кратко перечислю еще несколько, стоящих внимания, возможно, кому-то они окажутся наиболее
+подходящими… Только список, без скриншотов и подробных характеристик.</p>
+
+<ul>
+  <li>
+    <p>KDevelop <a href="#kdevelop">[20]</a> (Linux, KDE) — вообще, это IDE для разработки на C++ с умеренной поддержкой других языков.
+Соответственно, имеет довольно широкие возможности, но для Free Pascal они малополезны. Т.е. его вполне можно использовать
+как универсальную среду, но в этом качестве преимущества перед Kate, мягко говоря, неочевидны.</p>
+  </li>
+  <li>
+    <p>Anjuta DevStudio <a href="#anjuta">[21]</a> (Linux, Gnome) — можно сказать, аналог предыдущего, только для Gnome — тоже умеет много
+гитик, которые не пригодятся при работе с Free Pascal, тоже довольно тяжеловесная среда.</p>
+  </li>
+  <li>
+    <p>Вероятно, наиболее удобный linux-редактор, из тех, кого я не внес в рекомендованный список ранее — Geany <a href="#geany">[22]</a>
+(Linux, GTK2) — универсальный, расширяемый… По функциональности несколько обгоняет gedit, но в отличие от него, не входит
+в установку по-умолчанию. На мой взгляд, это не компенсируется преимуществами Geany. Впрочем, я мало имел дела с GTK-редакторами
+вообще, так что мое мнение тут не авторитетно.</p>
+  </li>
+  <li>
+    <p>SciTE <a href="#scite">[23]</a> (кроссплатформенный: Windows и Linux, GTK2) — довольно специфичный в настройке редактор, хотя и
+с приемлемой функциональностью. Может пригодиться тем, для кого желательно использовать один и тот же софт в разных системах
+(например, чтобы не менять программу обучения).</p>
+  </li>
+</ul>
+
+<h2 id="что-еще">
+<a class="anchor" href="#%D1%87%D1%82%D0%BE-%D0%B5%D1%89%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что еще?..</h2>
+
+<p>Теоретически, много о чем еще можно поговорить, поскольку разработка программ предполагает не только программирование,
+но и работу с графикой для интерфейса, формирование справочной системы и так далее. Для всего этого существуют программы,
+в том числе хорошие и интересные… Однако, это уведет нас далеко от основной темы «Заметок».</p>
+
+<p>Рассмотрим, пожалуй, еще две программы, благо они имеют непосредственное отношение к Free Pascal — не только используются
+вместе с ним, но и на нем же написаны. Это утилиты автодокументирования исходников fpDoc <a href="#fpdoc">[24]</a> (входящая в состав FPC)
+и PasDoc <a href="#pasdoc">[25]</a>. Обе обрабатывают исходные тексты, обе формируют документацию в различных форматах, основными
+из которых можно назвать HTML и LaTeX (для последующего получения PDF или PostScript). В обоих случаях структура документа
+соответствует структуре исходных текстов. Разница между ними в том, откуда берутся описания элементов программы: fpDoc берет
+их из отдельного xml-файла, тогда как PasDoc — из комментариев в тексте исходников.</p>
+
+<p>Оба подхода имеют свои преимущества и недостатки. Первый более удачен для создания полноценной документации на многих языках
+и с подробностями, тогда как второй позволяет документировать «по ходу дела», держа краткие описания вместе с объявлениями
+того, что описывается. Какой из них выбрать, зависит от масштабов проекта и требований к документации. Ну, и от личных
+предпочтений, конечно же.</p>
+
+<h2 id="ссылки">
+<a class="anchor" href="#%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ссылки</h2>
+
+<div class="links-box">
+
+  <p id="binutils">[1] GNU BinUtils
+<a href="http://www.gnu.org/s/binutils/">http://www.gnu.org/s/binutils/</a> [en]</p>
+
+  <p id="gorc">[2] The «Go» Tools, <em>Jeremy Gordon</em>
+<a href="http://www.godevtool.com/">http://www.godevtool.com/</a> [en]</p>
+
+  <p id="make">[3] GNU Make
+<a href="http://www.gnu.org/s/make/">http://www.gnu.org/s/make/</a> [en]</p>
+
+  <p id="gdb">[4] GDB: The GNU Project Debugger
+<a href="http://www.gnu.org/s/gdb/">http://www.gnu.org/s/gdb/</a> [en]</p>
+
+  <p id="go32v2">[5] DJGPP, <em>DJ Delorie</em>
+<a href="http://www.delorie.com/djgpp/">http://www.delorie.com/djgpp/</a> [en]</p>
+
+  <p id="wdosx">[6] Wuschel’s DOS eXtender
+<a href="http://tippach.business.t-online.de/wdosx/">http://tippach.business.t-online.de/wdosx/</a> [en]</p>
+
+  <p id="xcode">[7] XCode
+<a href="https://developer.apple.com/xcode/">https://developer.apple.com/xcode/</a> [en]</p>
+
+  <p id="svn">[8] Apache™ Subversion®
+<a href="http://subversion.apache.org/">http://subversion.apache.org/</a> [en]</p>
+
+  <p id="apache">[9] The Apache Software Foundation
+<a href="http://www.apache.org/">http://www.apache.org/</a> [en]</p>
+
+  <p id="sf">[10] SourceForge.net
+<a href="http://sourceforge.net/">http://sourceforge.net/</a> [en]</p>
+
+  <p id="gc">[11] Google code
+<a href="http://code.google.com/">http://code.google.com/</a> [en] [ru]</p>
+
+  <p id="tortoise-svn">[12] TortoiseSVN: the coolest interface to (Sub)version control
+<a href="http://tortoisesvn.net/">http://tortoisesvn.net/</a> [en]</p>
+
+  <p id="git">[13] Git — Fast Version Control System
+<a href="http://git-scm.com/">http://git-scm.com/</a> [en]</p>
+
+  <p id="gh">[14] github: social coding
+<a href="https://github.com/">https://github.com/</a> [en] [ru]</p>
+
+  <p id="tortoise-git">[15] tortoisegit: Porting TortoiseSVN to TortoiseGIT
+<a href="http://code.google.com/p/tortoisegit/">http://code.google.com/p/tortoisegit/</a> [en]</p>
+
+  <p id="freedos">[16] The FreeDOS Project
+<a href="http://www.freedos.org/">http://www.freedos.org/</a> [en]</p>
+
+  <p id="kate">[17] The Kate Editor
+<a href="http://kate-editor.org/">http://kate-editor.org/</a> [en]</p>
+
+  <p id="gedit">[18] gedit text editor
+<a href="http://projects.gnome.org/gedit/">http://projects.gnome.org/gedit/</a> [en]</p>
+
+  <p id="npp">[19] Notepad++
+<a href="http://notepad-plus-plus.org/">http://notepad-plus-plus.org/</a> [en]</p>
+
+  <p id="kdevelop">[20] KDevelop: KDE Development Environment
+<a href="http://kdevelop.org/">http://kdevelop.org/</a> [en]</p>
+
+  <p id="anjuta">[21] Anjuta DevStudio: GNOME Integrated Development Environment
+<a href="http://projects.gnome.org/anjuta/">http://projects.gnome.org/anjuta/</a> [en]</p>
+
+  <p id="geany">[22] Geany
+<a href="http://www.geany.org/">http://www.geany.org/</a> [en]</p>
+
+  <p id="scite">[23] SciTE: A free source code editor for Win32 and X
+<a href="http://www.scintilla.org/SciTE.html">http://www.scintilla.org/SciTE.html</a> [en]</p>
+
+  <p id="fpdoc">[24] FPDoc: Reference Manual, <em>Michaël Van Canneyt</em>
+Файл: <a href="ftp://ftp.freepascal.org/pub/fpc/docs-pdf/fpdoc.pdf">[fpdoc.pdf]</a> [en]</p>
+
+  <p id="pasdoc">[25] PasDoc
+<a href="http://pasdoc.sipsolutions.net/">http://pasdoc.sipsolutions.net/</a> [en]</p>
+
+</div>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:see-src">
+      <p>См. подраздел <a href="/2011/11/fpc-start.html#%D1%82%D0%B5%D0%BA%D1%83%D1%89%D0%B8%D0%B5-%D0%B8%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8-%D1%81-svn">«Текущие исходники с SVN»</a>. <a href="#fnref:see-src" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:native">
+      <p>Это не значит, что нельзя воспользоваться программой для другого окружения. Просто работа с «родными» приложениями во многом проще и удобнее. <a href="#fnref:native" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.04.08 |</span>
+            <a href="/2021/04/rms.html" title="Почему происходящее с FSF и сообществом свободного ПО в целом важно для всех.">Ричард Столлман как отражатель мировой революции</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a>​<a class="fa-icon-bullhorn" href="/life/social/politics/" title="Посты о политике">Политика</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2013.04.26 |</span>
+            <a href="/2013/04/tdd.html" title="TDD — выдаем нужду за добродетель. Убедительно.">Слоган</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-biohazard" href="/tech/programming/abs/" title="Абстрактные размышления о программировании в целом">Абстракции</a>​<a class="fa-icon-brain" href="/life/psi/mind/" title="Заметки о том, как мы думаем">Мышление</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2019.07.17 |</span>
+            <a href="/2019/07/storages.html" title="Небольшой тест имеющихся у меня носителей данных">Поиздевался над железками</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a>​<a class="fa-icon-calendar-alt" href="/life/dybr/" title="Просто кусочки повседневности">Дыбр</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#обязательная-программа">Обязательная программа</a></li>
+<li class="toc-entry toc-h2"><a href="#управление-версиями">Управление версиями</a></li>
+<li class="toc-entry toc-h2"><a href="#редакторы-кода">Редакторы кода</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#собственные-средства">Собственные средства</a></li>
+<li class="toc-entry toc-h3"><a href="#другие-редакторы">Другие редакторы</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#что-еще">Что еще?..</a></li>
+<li class="toc-entry toc-h2"><a href="#ссылки">Ссылки</a></li>
+</ul>
+</aside><aside id="backs" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

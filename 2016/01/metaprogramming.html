@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Мета­программи­ро­вание в Ruby: разбор примера | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Мета­программи­ро­вание в Ruby: разбор примера" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Добавление собственных абстракций в объектную модель — это просто. И интересно." />
+<meta property="og:description" content="Добавление собственных абстракций в объектную модель — это просто. И интересно." />
+<link rel="canonical" href="https://shikhalev.github.io/2016/01/metaprogramming.html" />
+<meta property="og:url" content="https://shikhalev.github.io/2016/01/metaprogramming.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/2016/01/27/metaprogramming/screen-meta-640x640-500-261-0-0.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-01-27T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/img/2016/01/27/metaprogramming/screen-meta-640x640-500-261-0-0.webp" />
+<meta property="twitter:title" content="Мета­программи­ро­вание в Ruby: разбор примера" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2016-01-27T00:00:00+00:00","datePublished":"2016-01-27T00:00:00+00:00","description":"Добавление собственных абстракций в объектную модель — это просто. И интересно.","headline":"Мета­программи­ро­вание в Ruby: разбор примера","image":"https://shikhalev.github.io/img/2016/01/27/metaprogramming/screen-meta-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/2016/01/metaprogramming.html"},"url":"https://shikhalev.github.io/2016/01/metaprogramming.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.org</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">Мета­программи­ро­вание в Ruby: разбор примера</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F01%2Fmetaprogramming.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2F2016%2F01%2Fmetaprogramming.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F01%2Fmetaprogramming.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F01%2Fmetaprogramming.html&text=%D0%9C%D0%B5%D1%82%D0%B0%C2%AD%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%C2%AD%D1%80%D0%BE%C2%AD%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2%C2%A0Ruby%3A+%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80%C2%A0%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D0%B0">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%9C%D0%B5%D1%82%D0%B0%C2%AD%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%C2%AD%D1%80%D0%BE%C2%AD%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2%C2%A0Ruby%3A+%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80%C2%A0%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D0%B0&url=https%3A%2F%2Fshikhalev.github.io%2F2016%2F01%2Fmetaprogramming.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2016-01-27T00:00:00+00:00" itemprop="datePublished">2016.01.27
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#метапрограммирование">метапрограммирование</a></aside></header><div itemprop="articleBody">
+  <p><a href="http://samag.ru/archive/article/2842">Оригинал этой статьи опубликован в журнале «Системный администратор» №12 (145) за декабрь 2014</a>.</p>
+
+<hr>
+
+<figure class="__figure __implicit_figure __right" style="max-width:158px;padding: 5px;"><a href="http://samag.ru/archive/article/2842"><img src="/img/2016/01/27/metaprogramming/145-158.webp" class="__image"></a></figure>
+
+<div class="note">
+  <p><strong>Добавление собственных абстракций в объектную модель — это просто. И интересно.</strong></p>
+
+  <p>Авторы книги «Programming Ruby: The Pragmatic Programmers’ Guide» называют метапрограммированием расширение и изменение
+абстракций языка (тогда как собственно программирование пользуется теми, что есть). Конечно, можно поспорить о том, что
+считать такой абстракцией, а что нет, однако нельзя не заметить, что в современных динамических языках, таких как Ruby или,
+например, Python, легко делаются некоторые вещи, которые в классических языках находились именно на языковом уровне и жестко
+определялись компилятором. Тут можно вспомнить, для примера, декораторы, о которых я писал в сентябре прошлого года<sup id="fnref:deco"><a href="#fn:deco" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>.
+И сейчас мы рассмотрим нечто подобное. В процессе я буду делать обобщающие отступления, переходя от частного примера к общим
+принципам программирования в Ruby.</p>
+</div>
+
+<!--more-->
+
+<h2 id="формулировка-задачи">
+<a class="anchor" href="#%D1%84%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0-%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Формулировка задачи</h2>
+
+<p>В объектно-ориентированных языках, как правило, имеются такие абстракции как методы и свойства. В Ruby свойства называются
+атрибутами, что, впрочем, сути не меняет. Однако в Ruby мы можем и сами определить аналогичные конструкции с нужной нам
+специфической функциональностью. Так и поступим.</p>
+
+<p>Наши свойства будут поддерживать:</p>
+
+<ul>
+  <li>контроль присваиваемых значений;</li>
+  <li>значения по умолчанию;</li>
+  <li>события, вызываемые при установке значения.</li>
+</ul>
+
+<p>Определение свойств будет выглядеть примерно так:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="n">property</span> <span class="ss">:alpha</span><span class="p">,</span> <span class="ss">filter: </span><span class="no">String</span><span class="p">,</span> <span class="ss">default: </span><span class="s1">''</span>
+<span class="n">property</span> <span class="ss">:beta</span><span class="p">,</span> <span class="ss">:gamma</span><span class="p">,</span> <span class="ss">filter: </span><span class="no">Integer</span><span class="p">,</span> <span class="ss">default: </span><span class="mi">0</span>
+<span class="n">property</span> <span class="ss">:delta</span><span class="p">,</span> <span class="ss">filter: </span><span class="no">Float</span><span class="p">,</span>
+    <span class="ss">default: </span><span class="mf">1.0</span> <span class="k">do</span> <span class="o">|</span><span class="n">obj</span><span class="p">,</span> <span class="n">prop</span><span class="p">,</span> <span class="n">value</span><span class="o">|</span>
+  <span class="nb">p</span> <span class="p">[</span><span class="n">obj</span><span class="p">,</span> <span class="n">prop</span><span class="p">,</span> <span class="n">value</span><span class="p">]</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>Последний вариант задает обработчик события. В случае, когда никаких именованных параметров, даже <code class="language-plaintext highlighter-rouge">filter</code>, не задано, <code class="language-plaintext highlighter-rouge">property</code>
+будет работать, в сущности, аналогично стандартному <code class="language-plaintext highlighter-rouge">attr_accessor</code>. Заметим, что атрибуты в Ruby определяются не ключевыми словами,
+а приватными методами класса <code class="language-plaintext highlighter-rouge">Module</code>. Логично будет пойти тем же путем.</p>
+
+<p class="note"><em>Замечание:</em> ключевые слова <code class="language-plaintext highlighter-rouge">module</code> и <code class="language-plaintext highlighter-rouge">class</code> в Ruby не формируют какое-то сакральное определение, принципиально отличающееся
+от остальной части программы, а просто переводят исполнение в контекст модуля (или класса, соответственно), по необходимости
+создавая его. Это значит, что внутри определений мы можем писать, в общем-то, произвольный код, учитывая контекст, конечно<sup id="fnref:context"><a href="#fn:context" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>.
+При этом благодаря необязательности скобок при вызове, такие методы, как <code class="language-plaintext highlighter-rouge">attr</code>, <code class="language-plaintext highlighter-rouge">include</code>, <code class="language-plaintext highlighter-rouge">private</code>, <code class="language-plaintext highlighter-rouge">module_function</code>, выглядят
+структурными элементами языка.</p>
+
+<h2 id="минимальный-вариант">
+<a class="anchor" href="#%D0%BC%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82" aria-hidden="true"><span class="octicon octicon-link"></span></a>Минимальный вариант</h2>
+
+<p>Начнем с самого простого — реализуем аналог <code class="language-plaintext highlighter-rouge">attr_accessor</code>. Заявленный выше функционал добавим после. Определение выглядит так<sup id="fnref:gist"><a href="#fn:gist" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Module</span>
+
+  <span class="kp">private</span>
+
+  <span class="k">def</span> <span class="nf">prop</span> <span class="nb">name</span>
+    <span class="n">varnm</span> <span class="o">=</span> <span class="s2">"@</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+    <span class="n">getnm</span> <span class="o">=</span> <span class="nb">name</span>
+    <span class="n">setnm</span> <span class="o">=</span> <span class="s2">"</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">="</span>
+    <span class="n">define_method</span> <span class="n">getnm</span> <span class="k">do</span>
+      <span class="nb">instance_variable_get</span> <span class="n">varnm</span>
+    <span class="k">end</span>
+    <span class="n">define_method</span> <span class="n">setnm</span> <span class="k">do</span> <span class="o">|</span><span class="n">value</span><span class="o">|</span>
+      <span class="nb">instance_variable_set</span> <span class="n">varnm</span><span class="p">,</span> <span class="n">value</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">property</span> <span class="o">*</span><span class="n">names</span>
+    <span class="n">names</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">nm</span><span class="o">|</span>
+      <span class="n">prop</span> <span class="n">nm</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>Собственно определение (единственного) свойства выделено в отдельный метод prop для ясности. А для проверки напишем следующее:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Alpha</span>
+  <span class="n">property</span> <span class="ss">:alpha</span><span class="p">,</span> <span class="ss">:beta</span>
+  <span class="nb">attr_accessor</span> <span class="ss">:gamma</span>
+<span class="k">end</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="no">Alpha</span><span class="p">.</span><span class="nf">new</span>
+
+<span class="n">a</span><span class="p">.</span><span class="nf">alpha</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">beta</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">gamma</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="nb">p</span> <span class="p">[</span><span class="n">a</span><span class="p">.</span><span class="nf">alpha</span><span class="p">,</span> <span class="n">a</span><span class="p">.</span><span class="nf">beta</span><span class="p">,</span> <span class="n">a</span><span class="p">.</span><span class="nf">gamma</span><span class="p">]</span>
+<span class="nb">p</span> <span class="n">a</span></code></pre>
+</figure>
+
+<p>И выполним:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby demo00.rb
+<span class="go">[1, 2, 3]
+♯‹Alpha:0x0000000260bbc8 @alpha=1, @beta=2, @gamma=3›</span></code></pre>
+</figure>
+
+<p>Нетрудно видеть, что нет разницы между работой нашего метода и стандартного. Теперь можно двигаться дальше, но сначала некоторые пояснения.</p>
+
+<p>Свойство в Ruby — это пара методов: один возвращает значение одноименной переменной экземпляра объекта, а второй — устанавливает.
+Имя метода-сеттера заканчивается символом <code class="language-plaintext highlighter-rouge">=</code>, это необходимо и достаточно, чтобы в дальнейшем можно было использовать такой метод
+в левой части оператора присваивания. В принципе, привязка именно к переменной объекта необязательна, методы могут использовать
+любые данные.</p>
+
+<p>Из приведенного кода можно видеть, что <code class="language-plaintext highlighter-rouge">define_method</code> (в отличие от <code class="language-plaintext highlighter-rouge">def</code>) работает с замыканием, таким образом мы можем использовать
+в нем внешние переменные. Другим вариантом могло бы быть формирование строки кода и выполнение ее через <code class="language-plaintext highlighter-rouge">module_eval</code>, но такой способ
+даст замедление за счет того, что эта строка будет разбираться и компилироваться при каждом вызове, тогда как в нашем случае разбор
+производится однократно, при первом проходе.</p>
+
+<h2 id="значения-по-умолчанию">
+<a class="anchor" href="#%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BF%D0%BE-%D1%83%D0%BC%D0%BE%D0%BB%D1%87%D0%B0%D0%BD%D0%B8%D1%8E" aria-hidden="true"><span class="octicon octicon-link"></span></a>Значения по умолчанию</h2>
+
+<p>Если мы сейчас обратимся к определенному нами свойству, значение которого не установлено, то получим <code class="language-plaintext highlighter-rouge">nil</code>, так же как для стандартного
+атрибута. Это поведение можно переопределить. Введем два именованных параметра: <code class="language-plaintext highlighter-rouge">default</code> — значение по умолчанию; и <code class="language-plaintext highlighter-rouge">default_proc</code> — объект,
+приводимый к классу <code class="language-plaintext highlighter-rouge">Proc</code>, который будет вызываться для инициализации внутренней переменной, если она не установлена при первом вызове
+свойства. Если заданы оба, преимущество имеет <code class="language-plaintext highlighter-rouge">default_proc</code>.</p>
+
+<p>Метод <code class="language-plaintext highlighter-rouge">prop</code> теперь будет выглядеть так:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">prop</span> <span class="nb">name</span><span class="p">,</span> <span class="ss">default: </span><span class="kp">nil</span><span class="p">,</span> <span class="ss">default_proc: </span><span class="kp">nil</span>
+  <span class="n">varnm</span> <span class="o">=</span> <span class="s2">"@</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+  <span class="n">getnm</span> <span class="o">=</span> <span class="nb">name</span>
+  <span class="n">setnm</span> <span class="o">=</span> <span class="s2">"</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">="</span>
+  <span class="n">define_method</span> <span class="n">getnm</span> <span class="k">do</span>
+    <span class="k">if</span> <span class="o">!</span> <span class="n">instance_variable_defined?</span><span class="p">(</span><span class="n">varnm</span><span class="p">)</span>
+      <span class="k">if</span> <span class="n">default_proc</span>
+        <span class="nb">instance_variable_set</span> <span class="n">varnm</span><span class="p">,</span>
+              <span class="n">default_proc</span><span class="p">.</span><span class="nf">to_proc</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
+      <span class="k">else</span>
+        <span class="nb">instance_variable_set</span> <span class="n">varnm</span><span class="p">,</span> <span class="n">default</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+    <span class="nb">instance_variable_get</span> <span class="n">varnm</span>
+  <span class="k">end</span>
+  <span class="n">define_method</span> <span class="n">setnm</span> <span class="k">do</span> <span class="o">|</span><span class="n">value</span><span class="o">|</span>
+    <span class="nb">instance_variable_set</span> <span class="n">varnm</span><span class="p">,</span> <span class="n">value</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>К методу <code class="language-plaintext highlighter-rouge">property</code> тоже добавятся соответствующие именованные параметры, которые он просто передаст в prop для каждого имени свойства.
+Проверим, что у нас получилось, следующим кодом:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Alpha</span>
+  <span class="n">property</span> <span class="ss">:alpha</span><span class="p">,</span> <span class="ss">default: </span><span class="mi">100</span>
+  <span class="n">property</span> <span class="ss">:beta</span><span class="p">,</span>
+    <span class="ss">default_proc: </span><span class="nb">proc</span> <span class="p">{</span> <span class="o">|</span><span class="n">o</span><span class="o">|</span> <span class="n">o</span><span class="p">.</span><span class="nf">class</span><span class="p">.</span><span class="nf">name</span> <span class="p">}</span>
+  <span class="n">property</span> <span class="ss">:gamma</span><span class="p">,</span> <span class="ss">default_proc: :class</span>
+<span class="k">end</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="no">Alpha</span><span class="p">.</span><span class="nf">new</span>
+
+<span class="nb">p</span> <span class="p">[</span><span class="n">a</span><span class="p">.</span><span class="nf">alpha</span><span class="p">,</span> <span class="n">a</span><span class="p">.</span><span class="nf">beta</span><span class="p">,</span> <span class="n">a</span><span class="p">.</span><span class="nf">gamma</span><span class="p">]</span>
+<span class="nb">p</span> <span class="n">a</span></code></pre>
+</figure>
+
+<p>Вывод должен быть примерно следующий:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby demo01.rb
+<span class="go">[100, "Alpha", Alpha]
+♯‹Alpha:0x00000002252a90 @alpha=100, @beta="Alpha", @gamma=Alpha›</span></code></pre>
+</figure>
+
+<p>Стоит заметить, что для последнего свойства мы применили немного необычный фокус: оказывается, значения класса <code class="language-plaintext highlighter-rouge">Symbol</code> имеют метод
+<code class="language-plaintext highlighter-rouge">to_proc</code>, который формально можно записать как:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">to_proc</span>
+  <span class="nb">proc</span> <span class="p">{</span> <span class="o">|</span><span class="n">obj</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="o">|</span> <span class="n">obj</span><span class="p">.</span><span class="nf">send</span> <span class="nb">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span> <span class="p">}</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>То есть, получается вызов метода с соответствующим именем для объекта, переданного первым параметром, и с аргументами из остальных
+параметров, если таковые присутствуют. При этом собственного метода <code class="language-plaintext highlighter-rouge">call</code> объекты класса <code class="language-plaintext highlighter-rouge">Symbol</code> не имеют — преобразование <code class="language-plaintext highlighter-rouge">to_proc</code>
+здесь обязательно.</p>
+
+<h2 id="вызов-события">
+<a class="anchor" href="#%D0%B2%D1%8B%D0%B7%D0%BE%D0%B2-%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>Вызов события</h2>
+
+<p>Добавим к параметрам <code class="language-plaintext highlighter-rouge">prop</code> (и <code class="language-plaintext highlighter-rouge">property</code> соответственно) <code class="language-plaintext highlighter-rouge">&amp;block</code> — собственно обработчик, и преобразуем слегка определение сеттера
+из предыдущих примеров.</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="n">define_method</span> <span class="n">setnm</span> <span class="k">do</span> <span class="o">|</span><span class="n">value</span><span class="o">|</span>
+  <span class="nb">instance_variable_set</span> <span class="n">varnm</span><span class="p">,</span> <span class="n">value</span>
+  <span class="k">if</span> <span class="n">block</span>
+    <span class="n">block</span><span class="p">.</span><span class="nf">call</span> <span class="nb">self</span><span class="p">,</span> <span class="nb">name</span><span class="p">,</span> <span class="n">value</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>Тестируем:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Alpha</span>
+  <span class="n">property</span> <span class="ss">:alpha</span>
+  <span class="n">property</span> <span class="ss">:beta</span> <span class="k">do</span> <span class="o">|</span><span class="n">obj</span><span class="p">,</span> <span class="n">prop</span><span class="p">,</span> <span class="n">value</span><span class="o">|</span>
+    <span class="nb">p</span> <span class="p">[</span><span class="n">obj</span><span class="p">,</span> <span class="n">prop</span><span class="p">,</span> <span class="n">value</span><span class="p">]</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="no">Alpha</span><span class="p">.</span><span class="nf">new</span>
+
+<span class="n">a</span><span class="p">.</span><span class="nf">alpha</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">beta</span> <span class="o">=</span> <span class="mi">200</span></code></pre>
+</figure>
+
+<p>Получаем:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby demo02.rb
+<span class="go">[♯‹Alpha:0x000000025d2e18 @alpha=100, @beta=200›, :beta, 200]</span></code></pre>
+</figure>
+
+<h2 id="проверка-значений">
+<a class="anchor" href="#%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D0%B9" aria-hidden="true"><span class="octicon octicon-link"></span></a>Проверка значений</h2>
+
+<p>Добавим к <code class="language-plaintext highlighter-rouge">prop</code> следующие именованные аргументы: <code class="language-plaintext highlighter-rouge">filter</code> — собственно фильтр, и <code class="language-plaintext highlighter-rouge">on_invalid</code> — параметр, определяющий,
+как будет обрабатываться попытка присвоить неподходящее значение. Вообще говоря, тут может быть множество вариантов поведения,
+но два основных — это проигнорировать и сгенерировать исключение, поэтому мы сделаем так: если в параметре <code class="language-plaintext highlighter-rouge">on_invalid</code>
+передан класс исключения, вызываем <code class="language-plaintext highlighter-rouge">raise</code>, если <code class="language-plaintext highlighter-rouge">nil</code> — игнорируем. А чтобы дать возможность определить какое-то произвольное
+поведение, будем принимать также объекты класса <code class="language-plaintext highlighter-rouge">Proc</code>.</p>
+
+<p>Изменим определение сеттера следующим образом:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="n">define_method</span> <span class="n">setnm</span> <span class="k">do</span> <span class="o">|</span><span class="n">value</span><span class="o">|</span>
+  <span class="k">if</span> <span class="n">filter</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="p">(</span><span class="n">filter</span> <span class="o">===</span> <span class="n">value</span><span class="p">)</span>
+    <span class="k">if</span> <span class="no">Class</span> <span class="o">===</span> <span class="n">on_invalid</span> <span class="o">&amp;&amp;</span> <span class="n">on_invalid</span> <span class="o">&lt;=</span> <span class="no">Exception</span>
+      <span class="k">raise</span> <span class="n">on_invalid</span><span class="p">,</span> <span class="s2">"Invalid property (</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">)"</span> <span class="o">+</span>
+          <span class="s2">" value: </span><span class="si">#{</span><span class="n">value</span><span class="p">.</span><span class="nf">inspect</span><span class="si">}</span><span class="s2">!"</span><span class="p">,</span> <span class="nb">caller</span>
+    <span class="k">elsif</span> <span class="no">Proc</span> <span class="o">===</span> <span class="n">on_invalid</span>
+      <span class="n">on_invalid</span><span class="p">.</span><span class="nf">call</span> <span class="nb">self</span><span class="p">,</span> <span class="nb">name</span><span class="p">,</span> <span class="n">value</span>
+    <span class="k">end</span>
+  <span class="k">else</span>
+    <span class="nb">instance_variable_set</span> <span class="n">varnm</span><span class="p">,</span> <span class="n">value</span>
+    <span class="k">if</span> <span class="n">block</span>
+      <span class="n">block</span><span class="p">.</span><span class="nf">call</span> <span class="nb">self</span><span class="p">,</span> <span class="nb">name</span><span class="p">,</span> <span class="n">value</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>И проверим при помощи следующего кода:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Alpha</span>
+
+  <span class="n">property</span> <span class="ss">:alpha</span><span class="p">,</span> <span class="ss">filter: </span><span class="no">Integer</span>
+  <span class="n">property</span> <span class="ss">:beta</span><span class="p">,</span>
+      <span class="ss">filter: </span><span class="nb">proc</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="no">Integer</span> <span class="o">===</span> <span class="n">x</span> <span class="o">&amp;&amp;</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">},</span>
+      <span class="ss">on_invalid: </span><span class="no">StandardError</span>
+
+<span class="k">end</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="no">Alpha</span><span class="p">.</span><span class="nf">new</span>
+
+<span class="n">a</span><span class="p">.</span><span class="nf">alpha</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">beta</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nb">p</span> <span class="n">a</span>
+
+<span class="n">a</span><span class="p">.</span><span class="nf">alpha</span> <span class="o">=</span> <span class="s2">"String"</span>
+<span class="nb">p</span> <span class="n">a</span>
+
+<span class="n">a</span><span class="p">.</span><span class="nf">beta</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="nb">p</span> <span class="n">a</span></code></pre>
+</figure>
+
+<p>Результат должен получиться примерно такой:</p>
+
+<figure class="highlight">
+  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>ruby demo03.rb
+<span class="go">♯‹Alpha:0x00000001b193c8 @alpha=11, @beta=2›
+♯‹Alpha:0x00000001b193c8 @alpha=11, @beta=2›
+demo03.rb:24:in `‹main›': Invalid property (beta) value: -1! (StandardError)</span></code></pre>
+</figure>
+
+<p>Здесь хотелось бы отметить оператор соответствия — <code class="language-plaintext highlighter-rouge">===</code>, который мы использовали для проверки условия. В отличие от, например, JavaScript,
+где три знака «равно» означают точное равенство, в Ruby этот оператор принято трактовать как «правая часть соответствует левой» — обычно это
+означает равенство, но не всегда: если в левой части класс, то выполняется проверка принадлежности классу (с учетом наследования), если диапазон —
+вхождения в диапазон… Так же можно проверять соответствие регулярному выражению, а значения класса <code class="language-plaintext highlighter-rouge">Proc</code> будут выполнены с правой частью
+в качестве аргумента, что и позволило нам записать условие для свойства <code class="language-plaintext highlighter-rouge">beta</code> в коротком и удобочитаемом виде.</p>
+
+<p>Кроме того, мы можем определить этот оператор для каких-то своих классов условий, задав ему произвольное поведение. Или переопределить его
+для каких-либо стандартных классов, что, впрочем, может иметь непредсказуемые последствия.</p>
+
+<h2 id="что-дальше">
+<a class="anchor" href="#%D1%87%D1%82%D0%BE-%D0%B4%D0%B0%D0%BB%D1%8C%D1%88%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что дальше?</h2>
+
+<p>В общем-то, задача, поставленная в начале статьи, решена. Замечу только, что совершенно необязательно формировать один большой
+метод с несколькими условными ветвлениями — можно, и даже нужно с точки зрения оптимизации, проверять <code class="language-plaintext highlighter-rouge">filter</code> снаружи, и уже
+в зависимости от его значения определять метод-сеттер: простой без проверок, игнорирующий, с исключением, или же с обработкой.</p>
+
+<p>Вынесение всего, что возможно — в данном случае это проверки условий — из повторяющейся части (метода) в выполняемую однократно
+при его определении — азы оптимизации, и тут возможность задавать определения на ходу, доступная в динамических языках, очень
+нам на руку.</p>
+
+<h2 id="практический-смысл">
+<a class="anchor" href="#%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9-%D1%81%D0%BC%D1%8B%D1%81%D0%BB" aria-hidden="true"><span class="octicon octicon-link"></span></a>Практический смысл</h2>
+
+<p>Собственно, даже такая простая, взятая для примера, функциональность не бесполезна. А еще можно создавать свойства (поля)
+с внешним хранением данных, с дополнительными параметрами отображения и так далее и тому подобное. Можно привязать класс Ruby
+к таблице базы данных, определить поля, ключи, связи между таблицами… В общем, легко создать удобный и прозрачный ORM<sup id="fnref:orm"><a href="#fn:orm" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>.
+Что, кстати, и сделано в фреймворке Ruby on Rails (см. <code class="language-plaintext highlighter-rouge">ActiveRecord</code> и <code class="language-plaintext highlighter-rouge">ActiveModel</code>).</p>
+
+<p>Естественно, базами данных область применения не ограничивается. Важно помнить, что внутри определений классов и модулей
+мы можем использовать все средства языка и, соответственно, запрограммировать какие-то сложные вещи в короткие «однострочные»
+конструкции. Это напоминает макросы в некоторых компилируемых языках, но, поскольку определения доступны во время выполнения,
+дает гораздо более широкие возможности.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:deco">
+      <p>Статья <a href="/2015/03/decorator.html">«Декораторы в Ruby»</a>. «Системный администратор» № 9 (130), сентябрь 2013. Стр. 68–71. <a href="#fnref:deco" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:context">
+      <p>Подробнее о контекстах см. мою статью <a href="/2015/04/ruby-context.html">«Блоки и контекст в Ruby»</a>. «Системный администратор» № 1–2 (134–135), январь-февраль 2014. Стр. 111–115. <a href="#fnref:context" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:gist">
+      <p>Полные тексты примеров размещены на GitHub — <a href="https://gist.github.com/shikhalev/5f19659a7ed82ce83c58">https://gist.github.com/shikhalev/5f19659a7ed82ce83c58</a>. <a href="#fnref:gist" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:orm">
+      <p>Object-Relational Mapping — отображение реляционных баз данных в объектную модель. <a href="#fnref:orm" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2023.01.07 |</span>
+            <a href="/2023/01/evil-ai.html" title="Искусственный интеллект в руках естественного идиота">Паникуем иначе</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.03.16 |</span>
+            <a href="/2021/03/rust-small-stone.html" title="Нечастый случай, когда Rust (его стандартная библиотека) прямо-таки подталкивает сделать ошибку по невнимательности при чтении из файла в вектор.">Небольшой подводный камень в Rust</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-rust" href="/tech/programming/rust/" title="Язык программирования Rust">Rust</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2009.01.23 |</span>
+            <a href="/2009/01/manifest.html" title="">МанифестЪ</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#формулировка-задачи">Формулировка задачи</a></li>
+<li class="toc-entry toc-h2"><a href="#минимальный-вариант">Минимальный вариант</a></li>
+<li class="toc-entry toc-h2"><a href="#значения-по-умолчанию">Значения по умолчанию</a></li>
+<li class="toc-entry toc-h2"><a href="#вызов-события">Вызов события</a></li>
+<li class="toc-entry toc-h2"><a href="#проверка-значений">Проверка значений</a></li>
+<li class="toc-entry toc-h2"><a href="#что-дальше">Что дальше?</a></li>
+<li class="toc-entry toc-h2"><a href="#практический-смысл">Практический смысл</a></li>
+</ul>
+</aside><aside id="backs" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li><li><a href="/feed/pub.xml" title="Публикации в СМИ">Публикации</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a>
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a>
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2025 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>
