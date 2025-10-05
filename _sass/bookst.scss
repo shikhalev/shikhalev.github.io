@@ -1,7 +1,10 @@
 
 .module {
+  @media screen and (min-width: 779px) {
     columns: 2;
-    font-family: "PT Sans Narrow", gnarrow, "Arial Narrow", sans-serif;
+  }
+
+  font-family: "PT Sans Narrow", gnarrow, "Arial Narrow", sans-serif;
 
 .left, .__left {
   @media print {
@@ -51,4 +54,47 @@ pre {
 .origlink {
     font-size: 80%;
     margin-bottom: 20px;
+}
+
+.sticker.copy {
+  background-color: antiquewhite;
+  text-align: center;
+}
+
+.booktoc {
+
+  h3::before, h4::before {
+    content: "\f07c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    color: silver;
+  }
+
+  ul {
+
+    list-style-position: outside;
+
+    li {
+      font-family: 'PT Sans Caption', sans-serif;
+      padding-left: 0.5em;
+
+      &::marker {
+        content: "\f15b";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 400;
+        color: silver;
+      }
+
+      ul {
+
+        li {
+          &::marker {
+            content: "\f02e";
+          }
+        }
+
+      }
+
+    }
+  }
 }

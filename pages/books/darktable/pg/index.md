@@ -1,15 +1,68 @@
 ---
-title: "darktable – Практическое руководство"
+title: Практическое руководство по darktable
 short: Практическое руководство
 icon: book
 ---
 
+<hr style="border: 2px; margin: 20px auto; width: 40%;">
+
+{% include book/gpl.html %}
+
+-----
+
+Поскольку функционал **darktable** весьма обширен и, более того,
+во многих аспектах требует не только примеров, но и существенных теоретических пояснений, изложение разделено на несколько глав,
+выстроенных по принципу «от простого к сложному», и некоторые темы рассматриваются в нескольких главах на разном уровне.
+
 ## Оглавление (план)
+
+<section class="booktoc">
 
 ### [Введение]({%- link pages/books/darktable/pg/0_intro.md -%})
 
++ **[Обзор]({%- link pages/books/darktable/pg/0_intro.md -%} #overview)**
+
+  + [Установка]({%- link pages/books/darktable/pg/0_intro.md -%} #install)
+
+  + [Интерфейс]({%- link pages/books/darktable/pg/0_intro.md -%} #interface)
+
++ **[Начало работы]({%- link pages/books/darktable/pg/0_intro.md -%} #start)**
+
+  + [Импорт]({%- link pages/books/darktable/pg/0_intro.md -%} #start-import)
+    + [Связанные XMP-файлы]({%- link pages/books/darktable/pg/0_intro.md -%} #xmp-files)
+
+  + [Световой стол]({%- link pages/books/darktable/pg/0_intro.md -%} #lighttable)
+    + [Рабочая область]({%- link pages/books/darktable/pg/0_intro.md -%} #work-area)
+    + [Верхняя панель]({%- link pages/books/darktable/pg/0_intro.md -%} #top-panel)
+    + [Нижняя панель]({%- link pages/books/darktable/pg/0_intro.md -%} #bottom-panel)
+    + [Боковые панели]({%- link pages/books/darktable/pg/0_intro.md -%} #side-panels)
+    + [Таймлайн и лента кадров]({%- link pages/books/darktable/pg/0_intro.md -%} #timeline-filmstrip)
+
+  + [Экспорт]({%- link pages/books/darktable/pg/0_intro.md -%} #start-export)
+
++ **[Итог]({%- link pages/books/darktable/pg/0_intro.md -%} #done)**
+
++ **[Справочная информация]({%- link pages/books/darktable/pg/0_intro.md -%} #refs)**
+
+  + [Модуль actions on selection (действия над выбранными)]({%- link pages/books/darktable/pg/0_intro.md -%} #mod-actions-on-selection)
+
+  + [Модуль collections (коллекции)]({%- link pages/books/darktable/pg/0_intro.md -%} #mod-collections)
+
+  + [Модуль export (экспорт)]({%- link pages/books/darktable/pg/0_intro.md -%} #mod-export)
+
+  + [Модуль image information (информация об изображении)]({%- link pages/books/darktable/pg/0_intro.md -%} #mod-image-information)
+
+  + [Модуль import (импорт)]({%- link pages/books/darktable/pg/0_intro.md -%} #mod-import)
+
+  + [Модуль selection (выбор)]({%- link pages/books/darktable/pg/0_intro.md -%} #mod-selection)
+
+</section>
+
+<section class="booktoc">
 
 ### Глава 1: Базовая обработка
+
+</section>
 
 Рассмотрим основные действия, которые всегда (или почти всегда) приходится производить над снимками.
 
@@ -20,6 +73,8 @@ icon: book
 + Кадрирование, поворот и перспектива.
 
 Также обсудим варианты демозаики.
+
+<section class="booktoc">
 
 ### Глава 2: Организация изображений
 
@@ -48,6 +103,8 @@ icon: book
 
 ### Глава 7 и далее
 
+</section>
+
 Здесь пока нет окончательной разбивки по главам. Можно сказать, какие темы будут рассмотрены:
 
 + Стили и пресеты (если не будут подробно описаны ранее);
@@ -65,3 +122,9 @@ icon: book
 Структура изложения внутри глав будет аналогична структуре данного Введения — сначала рассматриваем процесс на конкретном примере,
 затем справочная информация (максимально точный перевод официальной справки, там, где она недостаточна или устарела, будут сноски,
 а не авторское вмешательство в текст). В конце каждой главы краткий итог: что пройдено.
+
+-----
+
+{% include book/gpl.html %}
+
+-----

@@ -105,6 +105,10 @@ defaults:
       path: "pages/books"
     values:
       layout: book/page
+  - scope:
+      path: "pages/books/darktable"
+    values:
+      image: _src/2025/10/darktable.png
 
 header_pages:
   - _streams/tech.md
