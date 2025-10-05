@@ -97,9 +97,14 @@ defaults:
   - scope:
       path: "*"
     values:
+      layout: nova/page
       image: _src/IMG_2774.jpg
       hide_last_comments: true
       toc: true
+  - scope:
+      path: "pages/books"
+    values:
+      layout: book/page
 
 header_pages:
   - _streams/tech.md
@@ -142,3 +147,5 @@ category_page_limit: 10
 category_page_maximum: 12
 home_page_limit: 12
 home_page_maximum: 15
+
+watermark: "shikhalev.*"

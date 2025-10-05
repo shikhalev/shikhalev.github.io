@@ -1,0 +1,54 @@
+
+.module {
+    columns: 2;
+    font-family: "PT Sans Narrow", gnarrow, "Arial Narrow", sans-serif;
+
+.left, .__left {
+  @media print {
+    float: none;
+    margin: 5px auto 5px;
+  }
+}
+.right, .__right {
+  @media print {
+    float: none;
+    margin: 10px auto;
+  }
+}
+
+dt {
+    font-family: "PT Sans", gsans, Arial, sans-serif;
+}
+
+}
+
+.unbreakable {
+    break-inside: avoid;
+}
+
+a[href*="docs.darktable.org"]:link {
+    color: red;
+}
+
+a[href*="docs.darktable.org"]:visited {
+    color: darkred;
+}
+
+p, dt, dd, li {
+    img {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+pre {
+    code {
+        padding: 0px;
+        border: 0px;
+    }
+}
+
+.origlink {
+    font-size: 80%;
+    margin-bottom: 20px;
+}
