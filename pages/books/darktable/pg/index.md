@@ -1,7 +1,8 @@
 ---
-title: Практическое руководство по darktable
+title: Практическое руководство по darktable
 short: Практическое руководство
-icon: book
+icon: book-open
+last_modified_at: 2025-10-10
 ---
 
 <hr style="border: 2px; margin: 20px auto; width: 40%;">
@@ -50,17 +51,21 @@ icon: book
 
   + [Модуль export (экспорт)]({%- link pages/books/darktable/pg/0_intro.md -%} #mod-export)
 
+  + [Модуль filmstrip (лента миниатюр)]({%- link pages/books/darktable/pg/0_intro.md -%} #mod-filmstrip)
+
   + [Модуль image information (информация об изображении)]({%- link pages/books/darktable/pg/0_intro.md -%} #mod-image-information)
 
   + [Модуль import (импорт)]({%- link pages/books/darktable/pg/0_intro.md -%} #mod-import)
 
   + [Модуль selection (выбор)]({%- link pages/books/darktable/pg/0_intro.md -%} #mod-selection)
 
+  + [Модуль timeline (таймлайн)]({%- link pages/books/darktable/pg/0_intro.md -%} #mod-timeline)
+
 </section>
 
 <section class="booktoc">
 
-### Глава 1: Базовая обработка
+### [Глава 1: Базовая обработка]({%- link pages/books/darktable/pg/1_base_processing.md -%})
 
 </section>
 

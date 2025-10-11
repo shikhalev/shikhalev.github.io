@@ -1,5 +1,6 @@
 ---
 title: "Введение"
+last_modified_at: 2025-10-10
 ---
 
 <hr style="border: 2px; margin: 20px auto; width: 40%;">
@@ -82,10 +83,10 @@ $ sudo flatpak install org.darktable.Darktable
 Что касается представлений, то всего их шесть: два основных, видимых на скриншоте, и четыре вспомогательных, скрытых в вы­па­да­ю­щем
 списке за меткой «other»:
 
-+ **lighttable** — световой стол — предоставляет обзор текущего набора кадров и групповые действия над ними (пока у нас
-  не импортированы никакие кадры, и в рабочей области отображаются стартовые подсказки);
++ **lighttable** — световой стол — предоставляет обзор текущего набора снимков и групповые действия над ними (пока у нас
+  не импортированы никакие снимки, и в рабочей области отображаются стартовые подсказки);
 
-+ **darkroom** — темная комната — в этом режиме отображается один выбранный кадр и производится вся его обработка;
++ **darkroom** — темная комната — в этом режиме отображается один выбранный снимок и производится вся его обработка;
 
 + **map** — карта — позволяет увидеть и изменить привязку фотографий к географическим точкам;
 
@@ -120,7 +121,7 @@ $ sudo flatpak install org.darktable.Darktable
 Чтобы начать работать в raw-файлами, необходимо *импортировать* их в **darktable**. [Модуль импорта](#mod-import) находится в представлении
 lighttable в левой панели в самом верху. Как можно видеть на скриншоте, там имеются две кнопки: «add to library...»
 и «copy & import...» — в первом случае мы добавляем файлы по их текущему расположению, а во втором копируем их в каталог,
-прописанный в настойках. Чтобы не заморачиваться сейчас с настройками мы пойдем по первому пути. После нажатия на «add to library...»
+прописанный в настройках. Чтобы не заморачиваться сейчас с настройками мы пойдем по первому пути. После нажатия на «add to library...»
 откроется окно диалога:
 
 {% image @pages/books/darktable/pg/img/004_import_dialog.png figure center width=640px
@@ -149,7 +150,7 @@ XMP-файлы могут содержать дополнительные мет
 {% image @pages/books/darktable/pg/img/005_lighttable4.png figure center width=890px
    caption="Скриншот светового стола после импорта" %}
 
-После импорта мы видим наши кадры в представлении lighttable в виде миниатюр, и можем обсудить данное представление поподробнее.
+После импорта мы видим наши снимки в представлении lighttable в виде миниатюр, и можем обсудить данное представление поподробнее.
 
 {:#work-area}
 #### Рабочая область
@@ -157,9 +158,9 @@ XMP-файлы могут содержать дополнительные мет
 {% image @pages/books/darktable/pg/img/006_thumb_overlay.png figure right width=276px link=false
    title="Миниатюра кадра с наложенной информацией" %}
 
-Основная рабочая область в центре в данном представлении предоставляет интерфейс управления кадрами.
+Основная рабочая область в центре в данном представлении предоставляет интерфейс управления снимками.
 
-Просмотр и выбор кадров может работать в пяти разных режимах (layouts), которые выбираются иконками в [нижней панели](#bottom-panel).
+Просмотр и выбор снимков может работать в пяти разных режимах (layouts), которые выбираются иконками в [нижней панели](#bottom-panel).
 
 {% image @pages/books/darktable/pg/img/016_filemanager.png width=28px link=false %} Файловый менеджер *(filemanager)*
 
@@ -172,24 +173,24 @@ XMP-файлы могут содержать дополнительные мет
 {% image @pages/books/darktable/pg/img/017_zoomable.png width=28px link=false %} Масштабируемый вид *(zoomable)*
 
 : В этом режиме колесиком мыши мы можем «приближать/отдалять световой стол, на котором разложены кадры», при этом взаимное положение
-  кадров при изменении масштаба не перестраивается.
+  снимков при изменении масштаба не перестраивается.
 
   Удобно для быстрых переходов из конца в конец большой коллекции.
 
 {% image @pages/books/darktable/pg/img/018_culling.png width=28px link=false %} Режим отбраковки *(culling)*
 
-: Режим предназначен для просмотра нескольких кадров «бок о бок» для сравнения и отбраковки.
+: Режим предназначен для просмотра нескольких снимков «бок о бок» для сравнения и отбраковки.
 
 {% image @pages/books/darktable/pg/img/019_dynamic_culling.png width=28px link=false %} Динамический режим отбраковки *(dynamic culling)*
 
-: Схож с предыдущим режимом, но одновременно показывается не фиксированное количество кадров, а выбранные в лен­те миниатюр.
+: Схож с предыдущим режимом, но одновременно показывается не фиксированное количество снимков, а выбранные в лен­те миниатюр.
 
-  То есть, если у нас есть серия почти одинаковых кадров, мы можем перейти в этот режим, выделить эту серию и увидеть их настолько крупно,
+  То есть, если у нас есть серия почти одинаковых снимков, мы можем перейти в этот режим, выделить эту серию и увидеть их настолько крупно,
   насколько возможно — распределенными по всему рабочему пространству.
 
 {% image @pages/books/darktable/pg/img/020_full_preview.png width=28px link=false %} Просмотр *(full preview)*
 
-: Показывает текущий кадр во всё доступное пространство, скрыв все панели и элементы управления.
+: Показывает текущий снимок во всё доступное пространство, скрыв все панели и элементы управления.
 
   Выход из этого режима — по клавише `ESC`. Колесико мыши листает кадры, а вместе с `Ctrl` позволяет приблизить/отдалить изображение.
 
@@ -229,7 +230,7 @@ XMP-файлы могут содержать дополнительные мет
 
 {% image @pages/books/darktable/pg/img/008_selected.png width=160px link=false %} Информация о выделении
 
-: Показывает сколько кадров выбрано из общего количества. Если выбран один кадр, показывает его порядковый номер.
+: Показывает сколько снимков выбрано из общего количества. Если выбран один снимок, показывает его порядковый номер.
 
 {% image @pages/books/darktable/pg/img/012_grouping.png width=23px link=false %} Группы
 
@@ -270,11 +271,11 @@ XMP-файлы могут содержать дополнительные мет
 
 {% image @pages/books/darktable/pg/img/022_stars.png width=126px link=false %} Звезды
 
-: Позволяет установить оценку в звездах выбранным кадрам.
+: Позволяет установить оценку в звездах выбранным снимкам.
 
 {% image @pages/books/darktable/pg/img/023_labels.png width=160px link=false %} Цветовые метки
 
-: Аналогично — позволяет установить/снять цветовые метки выбранным кадрам. Последняя иконка снимает все метки.
+: Аналогично — позволяет установить/снять цветовые метки выбранным снимкам. Последняя иконка снимает все метки.
 
 {% image @pages/books/darktable/pg/img/024_modes.png width=266px link=false %} Управление режимом просмотра
 
@@ -284,7 +285,7 @@ XMP-файлы могут содержать дополнительные мет
 
   + Для масштабируемого просмотра это масштаб — сколько было бы миниатюр того же размера в ряду файлового менеджера;
 
-  + Для режима отбраковки это количество кадров одновременно на экране.
+  + Для режима отбраковки это количество снимков одновременно на экране.
 
 {% image @pages/books/darktable/pg/img/025_focus.png width=28px link=false %} Фокус-пикинг
 
@@ -302,10 +303,11 @@ XMP-файлы могут содержать дополнительные мет
 
 Мы не будем сейчас подробно останавливаться на каждом модуле, просто упомянем, какие есть. Наиболее важные будут описаны позднее.
 
-<div style="columns: 2;">
+<div style="columns: 2; margin-top: 12px;">
 
 <section class="unbreakable">
 
+{:style="margin-top:0px;"}
 ##### Модули левой панели
 
 [import](#mod-import)
@@ -380,7 +382,8 @@ geotagging
 {% image @pages/books/darktable/pg/img/028_filmstrip.png figure center width=890px
    caption="Лента кадров (из режима отбора)" %}
 
-В самом низу окна **darktable** находится, в зависимости от представления и режима, или панель *таймлайна*, или панель *ленты кадров*.
+В самом низу окна **darktable** находится, в зависимости от представления и режима, или панель *[таймлайна](#mod-timeline)*,
+или панель *[ленты кадров](#mod-filmstrip)*.
 
 Первая позволяет быстро переключаться по истории вашего архива с точностью до месяца. Вторая — это выбор кадра(-ов)
 для просмотра / обработки / позиционирования на карте (в соответствующем представлении) и так далее — своего рода элемент
@@ -402,7 +405,7 @@ geotagging
 Остановимся на экспорте немного подробнее. [Соответствующий модуль](#mod-export) находится в правой боковой панели в самом низу —
 довольно интуитивно, если вспомнить о том, что модуль импорта, с которого мы начинали, расположен в верхнем левом углу.
 
-Первым делом нам нужно выбрать снимки, которые мы хотим экспортировать. Будут экспортированы только выбранные кадры, а не все, принадлежащие
+Первым делом нам нужно выбрать снимки, которые мы хотим экспортировать. Будут экспортированы только выбранные снимки, а не все, принадлежащие
 текущей коллекции и подходящие по фильтрам.
 
 Затем убедимся, что целевое хранилище *(target storage)* у нас «file on disk», другие варианты («LaTeX book template», «Piwigo[^piwigo]»,
@@ -440,7 +443,10 @@ geotagging
 {:#refs}
 ## Справочная информация
 
-Ниже приведен перевод документации по тем моментам, которые мы использовали.
+Ниже приведен перевод документации по тем моментам, которые мы использовали. Рядом со ссылкой на оригинал указывается версия darktable,
+для которой он был написан. Как правило, это версия, в которой модуль (или что-то другое) был добавлен или существенно изменен, и документация
+остается актуальной для последующих версий, но изредка может быть так, что документация не успевает за актуальными изменениями, что некритично,
+но стоит иметь в виду.
 
 -----
 
@@ -448,7 +454,7 @@ geotagging
 ### Модуль actions on selection (действия над выбранными)
 
 {:.origlink}
-+ [docs.darktable.org/user­manual/de­ve­lop­ment/en/mo­du­le-re­fe­ren­ce/uti­li­ty-mo­du­les/light­tab­le/se­lec­ted-image/](https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/selected-image/)
++ [docs.darktable.org/user­manual/de­ve­lop­ment/en/mo­du­le-re­fe­ren­ce/uti­li­ty-mo­du­les/light­tab­le/se­lec­ted-image/](https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/selected-image/) (v3.6)
 
 <section class="module">
 
@@ -642,7 +648,7 @@ color
 ### Модуль collections (коллекции)
 
 {:.origlink}
-+ [docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/collections/](https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/collections/)
++ [docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/collections/](https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/collections/) (v4.6)
 
 <section class="module">
 
@@ -1138,7 +1144,7 @@ sort film rolls by
 ### Модуль export (экспорт)
 
 {:.origlink}
-+ [docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/export/](https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/export/)
++ [docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/export/](https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/export/) (v5.2)
 
 <section class="module">
 
@@ -1197,7 +1203,7 @@ on conflict
   - _overwrite_: Автоматически перезаписывать существующие файлы. Эта опция покажет вам диалог подтверждения для защиты
     от случайной потери данных — вы можете отключить это
     в [pre­fe­ren­ces > security > ask before exporting in overwrite
-    mode](https://docs.darktable.org/usermanual/development/en/preferences-settings/security/).
+    mo­de](https://docs.darktable.org/usermanual/development/en/preferences-settings/security/).
     **Примечание:** Этот диалог показывается не для каждого файла, а как однократное подтверждение перед началом задачи экспорта.
 
   - _overwrite if changed_: Автоматически перезаписывать существующие файлы, если последняя временная метка экспорта, сохраненная
@@ -1522,9 +1528,9 @@ _Помните, что тег, установленный как категор
 
 Пример 2
 
-: Тег первого уровня под названием creator за которым следует имя фотографа, оба установлены как категории: `creator|firstname lastname`.
-  Формула copyrights (`$(YEAR) $(CATEGORY0(creator))`) строит текст, связанный с правами на изображение.
-  Здесь [image information](#mod-image-information) отображает "creator: firstname lastname" как категории. Ни creator,
+: Тег первого уровня под названием creator за которым следует имя фотографа, оба установлены как категории: `cre­a­tor|first­na­me last­na­me`.
+  Формула co­py­rights (`$(YEAR) $(CA­TE­GO­RY0​(cre­a­tor))`) строит текст, связанный с правами на изображение.
+  Здесь [image information](#mod-image-information) отображает «cre­a­tor: first­na­me last­na­me» как категории. Ни creator,
   ни «firstname lastname» не появляются в списке тегов, и они не экспортируются как простые теги.
 
 </div>
@@ -1541,13 +1547,75 @@ _Помните, что тег, установленный как категор
 
 </section>
 
------
+
+{:#mod-filmstrip}
+### Модуль filmstrip (лента миниатюр)
+
+{:.origlink}
++ [docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/filmstrip/](https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/filmstrip/) (v4.6)
+
+<section class="module">
+
+Лента миниатюр позволяет быстро переключаться между кадрами. Отображаемые кадры совпадают с теми, что показаны в представлении
+«Световой стол», и определяются текущей выбранной коллекцией.
+
+{% image @_src/2025/10/dpg0/filmstrip.png figure center width=437px
+   title="Модуль filmstrip" %}
+
+Ленту миниатюр можно включить или выключить с помощью горячей клавиши `Ctrl`+`F`. Высоту панели ленты миниатюр можно изменить,
+кликнув и перетащив её верхнюю границу.
+
+Для быстрого перемещения по кадрам в ленте миниатюр прокручивайте колёсико мыши. Ускорьте прокрутку с помощью `Shift`+прокрутка.
+Из­ме­няй­те высоту ленты миниатюр с помощью `Ctrl`+прокрутка или кликнув и перетащив верхнюю границу панели. В тёмной комнате
+вы можете сменить обрабатываемый кадр, кликнув на другой кадр в ленте миниатюр.
+
+В тёмной комнате текущий обрабатываемый кадр выделен и подсвечен. Кликните на кадр в ленте миниатюр или наведите на него курсор мыши,
+чтобы выбрать его (для выполнения действий с помощью горячих клавиш) без смены текущего обрабатываемого кадра. Дважды кликните на кадр,
+чтобы открыть его для редактирования.
+
+Чтобы выбрать несколько кадров в ленте миниатюр, кликните на первый кадр, затем используйте `Ctrl`+клик для выбора или снятия выбора
+дополнительных кадров либо `Shift`+клик для выбора диапазона кадров.
+
+Следующие горячие клавиши можно использовать для выбора кадров в ленте миниатюр:
+
+- `Ctrl`+`A` — выбирает все кадры в ленте миниатюр.
+
+- `Ctrl`+`Shift`+`A` — снимает выбор со всех кадров.
+
+- `Ctrl`+`I` — инвертирует текущий выбор.
+
+Следующие горячие клавиши можно использовать для выполнения операций над выбранными кадрами:
+
+- `F1`, `F2`, `F3`, `F4`, `F5` — добавляет или убирает цветовую метку (красная, жёлтая, зелёная, синяя, фиолетовая соответственно).
+  Метка добавляется, если хотя бы у одного из выбранных кадров её нет; в про­тив­ном случае метка убирается.
+
+- `0`, `1`, `2`, `3`, `4`, `5` — устанавливает рейтинг в звёздах.
+
+- `R` — отклоняет кадр(ы).
+
+- `Ctrl`+`D` — дублирует кадр(ы).
+
+- `Ctrl`+`C` — копирует полный стек истории.
+
+- `Ctrl`+`V` — вставляет весь скопированный стек истории.
+
+- `Ctrl`+`X` — копирует настройки последнего изменённого модуля для всех выбранных кадров.
+
+- `Ctrl`+`Shift`+`C` — выборочно копирует стек истории.
+
+- `Ctrl`+`Shift`+`V` — выборочно вставляет из скопированного стека истории.
+
+Подробности о функциях копирования и вставки см. в до­ку­мен­та­ции модуля
+[his­to­ry stack](https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/history-stack/)
+для представления «световой стол».
+
+</section>
 
 {:#mod-image-information}
 ### Модуль image information (информация об изображении)
 
 {:.origlink}
-+ [docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/image-information/](https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/image-information/)
++ [docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/image-information/](https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/image-information/) (v3.6)
 
 <section class="module">
 
@@ -1591,7 +1659,7 @@ _Помните, что тег, установленный как категор
 ### Модуль import (импорт)
 
 {:.origlink}
-+ [docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/import/](https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/import/)
++ [docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/import/](https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/import/) (v5.0)
 
 <section class="module">
 
@@ -1701,8 +1769,8 @@ metadata
 
 : Если включена опция «apply metadata», отображается список _видимых_ полей метаданных для заполнения (подробности
   см. модуль
-  [metadata editor](https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/metadata-editor/)).
-  Все заполненные строки автоматически добавляются к импортированным изображениям. Также можно выбрать пресеты, сохранённые
+  [me­ta­da­ta editor](https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/metadata-editor/)).
+  Все заполненные строки автоматически добавляются к им­пор­ти­ро­ван­ным изображениям. Также можно выбрать пресеты, со­хра­нён­ные
   в модуле редактора метаданных.
 
   Двойной клик по метке сбрасывает соответствующее поле. Двойной клик по метке «metadata presets» сбрасывает все поля.
@@ -1941,7 +2009,7 @@ keep this window open
 ### Модуль selection (выбор)
 
 {:.origlink}
-+ [docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/select/](https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/select/)
++ [docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/select/](https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/select/) (v3.2.1)
 
 <section class="module">
 
@@ -1991,6 +2059,32 @@ select untouched
 
 </section>
 
+{:#mod-timeline}
+### Модуль timeline (таймлайн)
+
+{:.origlink}
++ [docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/timeline/](https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/timeline/) (v3.2.1)
+
+<section class="module">
+
+<div class="unbreakable">
+
+Позволяет просматривать кадры по дате и времени съёмки.
+
+{% image @_src/2025/10/dpg0/timeline.png figure center width=747px title="Модуль «timeline»" %}
+
+</div>
+
+В представлении «Световой стол» в режиме файлового менеджера вы можете показать или скрыть модуль таймлайна в нижней панели
+с помощью горячей клавиши `Ctrl`+`F`.
+
+В таймлайне прокрутка колёсика мыши позволяет переключаться между предыдущей и следующей датами; используйте `Ctrl`+прокрутка
+для увеличения или уменьшения масштаба.
+
+Также вы можете использовать таймлайн для выбора кадров по диапазону дат, кликнув и перетащив мышь.
+
+</section>
+
 [^camera-support]: <https://www.darktable.org/resources/camera-support/>
 
 [^rawtherapee]: <https://rawtherapee.com/>
@@ -2012,5 +2106,3 @@ select untouched
 -----
 
 {% include book/gpl.html %}
-
------
