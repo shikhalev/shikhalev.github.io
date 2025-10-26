@@ -67,17 +67,93 @@ last_modified_at: 2025-10-10
 
 ### [Глава 1: Базовая обработка]({%- link pages/books/darktable/pg/1_base_processing.md -%})
 
++ **[О чем эта глава?]({%- link pages/books/darktable/pg/1_base_processing.md -%} #about)**
+
+  + [Задачи]({%- link pages/books/darktable/pg/1_base_processing.md -%} #tasks)
+
+  + [Процесс]({%- link pages/books/darktable/pg/1_base_processing.md -%} #process)
+
++ **[Интерфейс тёмной комнаты]({%- link pages/books/darktable/pg/1_base_processing.md -%} #darkroom)**
+
+  + [Нижняя панель]({%- link pages/books/darktable/pg/1_base_processing.md -%} #bottom)
+
+  + [Левая панель]({%- link pages/books/darktable/pg/1_base_processing.md -%} #left)
+    + [navigation]({%- link pages/books/darktable/pg/1_base_processing.md -%} #navigation)
+    + [Прочие модули]({%- link pages/books/darktable/pg/1_base_processing.md -%} #left-other)
+
+  + [Правая панель]({%- link pages/books/darktable/pg/1_base_processing.md -%} #right)
+    + [scopes]({%- link pages/books/darktable/pg/1_base_processing.md -%} #scopes)
+    + [Управление модулями]({%- link pages/books/darktable/pg/1_base_processing.md -%} #module-control)
+
+  + [Пресеты и стили]({%- link pages/books/darktable/pg/1_base_processing.md -%} #presets)
+
++ **[Порядок работы]({%- link pages/books/darktable/pg/1_base_processing.md -%} #working)**
+
+  + [Открываем файл]({%- link pages/books/darktable/pg/1_base_processing.md -%} #opening)
+
+  + [Еще немного автоматики]({%- link pages/books/darktable/pg/1_base_processing.md -%} #automatics)
+
+  + [Геометрия]({%- link pages/books/darktable/pg/1_base_processing.md -%} #geometry)
+
+  + [Вытягиваем тени]({%- link pages/books/darktable/pg/1_base_processing.md -%} #shadows)
+    + [Множественная экспозиция в модуле базовой кривой]({%- link pages/books/darktable/pg/1_base_processing.md -%} #multiexpo)
+    + [Базовая кривая + модуль экспозиции]({%- link pages/books/darktable/pg/1_base_processing.md -%} #expo)
+    + [RGB-уровни + RGB-кривая]({%- link pages/books/darktable/pg/1_base_processing.md -%} #rgbs)
+    + [Другие варианты и выбор между ними]({%- link pages/books/darktable/pg/1_base_processing.md -%} #shadows-other)
+
+  + [Финальный штрих]({%- link pages/books/darktable/pg/1_base_processing.md -%} #fine)
+
++ **[Итог]({%- link pages/books/darktable/pg/1_base_processing.md -%} #done)**
+
++ **[Справочная информация]({%- link pages/books/darktable/pg/1_base_processing.md -%} #refs)**
+
+  + [Модуль base curve (базовая кривая)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #mod-base-curve)
+
+  + [Модуль crop (кадрирование)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #mod-crop)
+
+  + [Модуль demosaic (демозаика/дебайеризация)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #mod-demosaic)
+
+  + [Модуль exposure (экспозиция)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #mod-exposure)
+
+  + [Модуль highlight reconstruction (восстановление пересветов)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #mod-highlight-reconstruction)
+
+  + [Модуль history (история изменений)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #mod-history)
+
+  + [Модуль input color profile (входной цветовой профиль)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #mod-input-color-profile)
+
+  + [Модуль lens correction (исправление искажений объектива)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #mod-lens-correction)
+
+  + [Модуль local contrast (локальный контраст)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #mod-local-contrast)
+
+  + [Модуль navigation (навигация)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #mod-navigation)
+
+  + [Модуль orientation (ориентация)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #mod-orientation)
+
+  + [Модуль output color profile (выходной цветовой профиль)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #mod-output-color-profile)
+
+  + [Модуль rgb curve (RGB-кривая)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #mod-rgb-curve)
+
+  + [Модуль rgb levels (RGB-уровни)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #mod-rgb-levels)
+
+  + [Модуль rotate and perspective (поворот и перспектива)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #mod-rotate-perspective)
+
+  + [Модуль scopes (приборы)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #mod-scopes)
+    + [histogram (гистограмма)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #histogram)
+    + [waveform (осциллограмма)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #waveform)
+    + [RGB parade (парад каналов RGB)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #rgb-parade)
+    + [vectorscope (вектороскоп)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #vectorscope)
+
+  + [Модуль tone curve (тоновая кривая)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #mod-tone-curve)
+
+  + [Модуль white balance (баланс белого)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #mod-white-balance)
+
+  + [Устройство модулей обработки (I)]({%- link pages/books/darktable/pg/1_base_processing.md -%} #doc-processing-modules)
+    + [Заголовок модуля]({%- link pages/books/darktable/pg/1_base_processing.md -%} #doc-module-header)
+    + [Пресеты]({%- link pages/books/darktable/pg/1_base_processing.md -%} #doc-presets)
+    + [Элементы управления модулями]({%- link pages/books/darktable/pg/1_base_processing.md -%} #doc-module-controls)
+    + [Кривые]({%- link pages/books/darktable/pg/1_base_processing.md -%} #doc-curves)
+
 </section>
-
-Рассмотрим основные действия, которые всегда (или почти всегда) приходится производить над снимками.
-
-+ Коррекции: устранение оптических искажений, шумоподавление, баланс белого, восстановление пересветов.
-
-+ Уровни, кривые, локальный контраст. Вытягивание теней и светов.
-
-+ Кадрирование, поворот и перспектива.
-
-Также обсудим варианты демозаики.
 
 <section class="booktoc">
 
