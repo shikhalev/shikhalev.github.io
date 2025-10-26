@@ -1,6 +1,6 @@
 ---
 title: "Введение"
-last_modified_at: 2025-10-10
+last_modified_at: 2025-10-26
 ---
 
 <hr style="border: 2px; margin: 20px auto; width: 40%;">

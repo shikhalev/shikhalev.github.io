@@ -1,7 +1,7 @@
 ---
 title: darktable
 icon: camera
-last_modified_at: 2025-10-10
+last_modified_at: 2025-10-26
 ---
 
 <section class="booktoc">

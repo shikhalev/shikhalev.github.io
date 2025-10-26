@@ -2,7 +2,7 @@
 title: «Книги» (большие тексты)
 short: Книги
 icon: university
-last_modified_at: 2025-10-10
+last_modified_at: 2025-10-26
 ---
 
 ## [darktable]({%- link pages/books/darktable/index.md -%}){:.img-icon-darktable}
