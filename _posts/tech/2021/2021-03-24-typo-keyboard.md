@@ -14,6 +14,7 @@ tags:
 image: _src/2021/03/2021-03-24/keyboard-layout.png
 seo_image_crop: "500:261+183+0"
 recommend: true
+redirect_from: 2021/03/typo-keyboard.html
 ---
 {% image @_src/2021/03/2021-03-24/keyboard-layout.png figure right width=320px title="Раскладка клавиатуры с третьим и четвертым уровнями" %}
 

@@ -30,6 +30,7 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag"
   gem "jekyll-toc"
   gem "jekyll-remote-theme"
+  gem "jekyll-redirect-from"
 end
 
 gem 'jekyll-theme-shikhalev', '>= 0.1.0.15'
