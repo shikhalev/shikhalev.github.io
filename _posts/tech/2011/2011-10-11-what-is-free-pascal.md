@@ -16,11 +16,11 @@ redirect_from: /2011/10/what-is-free-pascal.html
 ---
 {% image @_src/2011/10/fpc/lazarus-over.png figure right width=300px title="Скриншот IDE Lazarus" %}
 
-**Free Pascal** [[1]](/2011/10/what-is-free-pascal.html#site-fpc), точнее Free Pascal Compiler aka FPC — это свободный[^fpc-free] кроссплатформенный компилятор
+**Free Pascal** [[1]](#site-fpc), точнее Free Pascal Compiler aka FPC — это свободный[^fpc-free] кроссплатформенный компилятор
 языка программирования Pascal. В отличие от другой свободной реализации этого языка — GNU Pascal, FPC ориентирован
 не на стандарт, а на популярные диалекты — то, что когда-то называлось Object Pascal, а теперь Delphi Language.
 
-Существует также проект **Lazarus** [[2]](/2011/10/what-is-free-pascal.html#site-lazarus) — основанная на FPC свободная среда программирования, реализующая
+Существует также проект **Lazarus** [[2]](#site-lazarus) — основанная на FPC свободная среда программирования, реализующая
 значительную часть функционала собственно среды Borland Delphi (см. врезку). Простые проекты можно переносить практически
 без ру­ч­ной работы, после чего они могут быть скомпилированы для систем, отличных от Win32.
 
@@ -260,7 +260,7 @@ FPDoc: Reference Manual [[11]](#pdf-fpdoc)
 
 </div>
 
-[^fpc-free]: GNU General Public License, см. подраздел [«Лицензии»](/2011/10/what-is-free-pascal.html#licenses).
+[^fpc-free]: GNU General Public License, см. подраздел [«Лицензии»](#licenses).
 
 [^lang]: Совместимость стандартных библиотек менее полная.
 
