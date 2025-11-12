@@ -32,8 +32,3 @@ tags:
 
 [guide]: {% link pages/books/darktable/pg/index.md %}
 [intro]: {% link pages/books/darktable/pg/0_intro.md %}
-
-
-<script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="shikhalev_blog/5" data-width="100%"></script>
-
------
