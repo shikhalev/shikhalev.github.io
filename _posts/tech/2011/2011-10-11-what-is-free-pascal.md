@@ -12,7 +12,6 @@ tags:
   - компиляторы
   - языки программирования
 image: _src/2011/10/fpc/lazarus-over.png
-redirect_from: /2011/10/what-is-free-pascal.html
 ---
 {% image @_src/2011/10/fpc/lazarus-over.png figure right width=300px title="Скриншот IDE Lazarus" %}
 
