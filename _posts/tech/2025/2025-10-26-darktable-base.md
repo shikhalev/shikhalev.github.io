@@ -2,7 +2,7 @@
 title: Первая глава «Практического руководства...»
 description: Первая глава «Практического руководства по darktable» — «Базовая обработка»
 image: _src/2025/10/darktable.png
-category: [ tech, soft, photo, processing ]
+category: [ tech, soft, graphics, photo, processing ]
 tags:
   - Darktable
   - Linux

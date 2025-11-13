@@ -2,7 +2,7 @@
 title: Этим стулом...
 description: Анонс «Практического руководства по darktable»
 image: _src/2025/10/darktable.png
-category: [ tech, soft, photo, processing ]
+category: [ tech, soft, graphics, photo, processing ]
 tags:
   - Darktable
   - Linux
