@@ -30,7 +30,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-tmp-
       - name: Announce new posts
-        uses: jekyll-is/action-announce@v1
+        uses: jekyll-is/action-announce@main
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
           GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
