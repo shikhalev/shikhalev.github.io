@@ -24,7 +24,9 @@ jobs:
       - name: Middle Cache
         uses: actions/cache@v3
         with:
-          path: tmp
+          path: |
+            tmp
+            _site
           key: ${{ runner.os }}-tmp-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-tmp-
@@ -42,5 +44,7 @@ jobs:
       - name: Middle Cache Save
         uses: actions/cache@v3
         with:
-          path: tmp
+          path: |
+            tmp
+            _site
           key: ${{ runner.os }}-tmp-${{ hashFiles('**/Gemfile.lock') }}
