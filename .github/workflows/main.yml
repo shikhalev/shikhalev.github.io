@@ -30,7 +30,7 @@ jobs:
       - name: Waiting...
         run: sleep 100
       - name: Announce new posts
-        uses: jekyll-is/action-announce@v8
+        uses: jekyll-is/action-announce@v1
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
           GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
