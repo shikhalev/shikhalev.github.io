@@ -1,0 +1,18 @@
+name: Build & Deploy Site
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with: 
+          ruby-version: 3.4
+          bundler-cache: true
+      - name: Setup Imagemagick
+        uses: mfinelli/setup-imagemagick@v7
