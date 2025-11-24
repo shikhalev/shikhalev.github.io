@@ -44,6 +44,7 @@ plugins:
   - jekyll-toc
   - jekyll-redirect-from
   - shi-jekyll-images
+  - jekyll-is-announcer
 
 theme: jekyll-theme-shikhalev
 
@@ -177,3 +178,16 @@ home_page_limit: 12
 home_page_maximum: 15
 
 watermark: "shikhalev.*"
+
+announcer:
+  url: "https://shikhalev.github.io"
+  categories:
+    tech: технологии
+    programming: программирование
+    life: жизнь
+    social: общество
+    psi: психология
+    mind: мышление
+  telegram:
+    method: telegram
+    chat_id: "@shikhalev_blog"
