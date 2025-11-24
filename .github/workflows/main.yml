@@ -36,15 +36,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
           GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
-      - name: Bundler Cache Save
-        uses: actions/cache@v3
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-      - name: Middle Cache Save
-        uses: actions/cache@v3
-        with:
-          path: |
-            tmp
-            _site
-          key: ${{ runner.os }}-tmp-${{ hashFiles('**/Gemfile.lock') }}
