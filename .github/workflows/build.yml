@@ -19,6 +19,7 @@ jobs:
       - name: Build
         run: |
           echo "TODO: BUILD"
+          date > build.txt
       - name: Back push
         run: |
           git config user.name "github-actions[bot]"
