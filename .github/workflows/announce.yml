@@ -3,6 +3,7 @@ name: Jekyll Announce
 on:
   schedule:
     - cron: '30 3,7,13,17,18 * * *'
+  workflow_dispatch:
 
 jobs:
   build_and_deploy:
