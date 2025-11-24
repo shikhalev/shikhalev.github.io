@@ -20,6 +20,13 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-gems-
+      - name: Middle Cache
+        uses: actions/cache@v3
+        with:
+          path: tmp
+          key: ${{ runner.os }}-tmp-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-tmp-
       - name: Announce new posts
         uses: jekyll-is/action-announce@v1
         env:
