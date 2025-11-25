@@ -50,6 +50,8 @@ jobs:
           BRANCH=gh-pages
           MESSAGE="published by action @ $(date)"
           git clone --branch ${BRANCH} --single-branch ${REPO} _site
+          ls -la
+          ls -la _data/
           cp -f _data/announced.json _site/data/announced.json
           cd _site
           git config user.name "${GITHUB_ACTOR}"
