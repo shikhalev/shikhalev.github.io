@@ -23,6 +23,9 @@ jobs:
           JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build
           date >> build.txt
       - name: Back push
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TG_USER_ID: ${{ secrets.MY_TG_ID }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
