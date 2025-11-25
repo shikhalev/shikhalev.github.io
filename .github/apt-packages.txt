@@ -1,3 +1,0 @@
-libwebp-dev
-webp
-imagemagick
