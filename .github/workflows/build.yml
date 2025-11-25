@@ -14,7 +14,8 @@ jobs:
         with: 
           ruby-version: 3.4
           bundler-cache: true
-      - name: actions/cache@v4
+      - name: Apt Cache
+        uses: actions/cache@v4
         with:
           path: /var/cache/apt/archives
           key: ${{ runner.os }}-apt-${{ hashFiles('.github/apt-packages.txt') }}
