@@ -21,7 +21,6 @@ jobs:
         run: |
           echo "Build..."
           JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build
-          date >> build.txt
       - name: Back push
         env:
           TG_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
