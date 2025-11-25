@@ -1,1 +1,22 @@
-{}
+{
+  "telegram": {
+    "config": {
+      "method": "telegram",
+      "chat_id": "@shikhalev_blog"
+    },
+    "posts": {
+      "_posts/photo/2025/2025-06-19-sigma-60-600.md": {
+        "url": "https://shikhalev.github.io/photo/2025/06/sigma-60-600.html",
+        "title": "Объектив Sigma 60-600mm",
+        "description": "Мой новый объектив — Sigma AF 60-600mm f/4.5-6.3 DG OS HSM Sports",
+        "categories": [
+          "photo",
+          "birdwatching",
+          "технологии",
+          "hard",
+          "dybr"
+        ]
+      }
+    }
+  }
+}
