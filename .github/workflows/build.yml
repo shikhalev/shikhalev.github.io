@@ -16,6 +16,9 @@ jobs:
           bundler-cache: true
       - name: Setup ImageMagick
         uses: mfinelli/setup-imagemagick@v7
+      - name: Setup LibWebP
+        run: |
+          sudo apt-get update && sudo apt-get install -y libwebp-dev libwebp-tools
       - name: Build
         run: |
           echo "Build..."
