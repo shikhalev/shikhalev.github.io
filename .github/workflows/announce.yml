@@ -1,6 +1,8 @@
 name: Make Announces
 
 on:
+  schedule:
+    - cron: "0 3,7,13,17 * * *"
   workflow_dispatch:
 
 jobs:
