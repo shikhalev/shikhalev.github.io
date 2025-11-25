@@ -1,0 +1,47 @@
+{
+  "telegram": {
+    "config": {
+      "method": "telegram",
+      "chat_id": "@shikhalev_blog"
+    },
+    "posts": {
+      "_posts/tech/2025/2025-10-05-darktable.md": {
+        "url": "https://shikhalev.github.io/tech/2025/10/darktable.html",
+        "title": "Этим стулом...",
+        "description": "Анонс «Практического руководства по darktable»",
+        "categories": [
+          "технологии",
+          "soft",
+          "graphics",
+          "photo",
+          "processing"
+        ]
+      },
+      "_posts/tech/2025/2025-10-26-darktable-base.md": {
+        "url": "https://shikhalev.github.io/tech/2025/10/darktable-base.html",
+        "title": "Первая глава «Практического руководства...»",
+        "description": "Первая глава «Практического руководства по darktable» — «Базовая обработка»",
+        "categories": [
+          "технологии",
+          "soft",
+          "graphics",
+          "photo",
+          "processing"
+        ]
+      },
+      "_posts/tech/2025/2025-11-21-llm.md": {
+        "url": "https://shikhalev.github.io/tech/2025/11/llm.html",
+        "title": "Заметки об LLM и нейросетях вообще",
+        "description": "За последнее время (особенно последний год) мне довелось довольно активно поработать с боль­ши­ми языковыми моделями (LLM), которые сейчас модно называть искусственным интеллектом. Захотелось кое-что сформулировать и подытожить.\n",
+        "categories": [
+          "технологии",
+          "программирование",
+          "жизнь",
+          "общество",
+          "психология",
+          "мышление"
+        ]
+      }
+    }
+  }
+}
