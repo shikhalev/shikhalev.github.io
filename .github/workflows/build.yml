@@ -21,7 +21,7 @@ jobs:
         run: |
           echo "Build..."
           JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build
-          touch build.txt
+          date >> build.txt
       - name: Back push
         run: |
           git config user.name "github-actions[bot]"
