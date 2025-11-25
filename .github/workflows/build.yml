@@ -18,7 +18,8 @@ jobs:
         uses: mfinelli/setup-imagemagick@v7
       - name: Build
         run: |
-          echo "TODO: BUILD"
+          echo "Build..."
+          JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build
       - name: Back push
         run: |
           git config user.name "github-actions[bot]"
