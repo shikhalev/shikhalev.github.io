@@ -66,7 +66,7 @@ GEM
       webrick (~> 1.7)
     jekyll-feed (0.17.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-is-announcer (0.8.0.6)
+    jekyll-is-announcer (0.8.0.8)
       is-ial-parser (~> 0.8)
       is-static-files (~> 0.8)
       jekyll (~> 4.3)
@@ -181,7 +181,7 @@ DEPENDENCIES
   csv
   jekyll (~> 4.3.1)
   jekyll-feed
-  jekyll-is-announcer (>= 0.8.0.6)
+  jekyll-is-announcer (>= 0.8.0.8)
   jekyll-redirect-from
   jekyll-remote-theme
   jekyll-seo-tag
