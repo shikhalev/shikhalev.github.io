@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build_and_deploy:
+  announce:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -51,11 +51,9 @@ jobs:
           REPO="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           BRANCH=gh-pages
           MESSAGE="published by action @ $(date)"
-          git clone --branch ${BRANCH} --single-branch ${REPO} _site
-          ls -la
-          ls -la _data/
+          git clone --branch ${BRANCH} --single-branch ${REPO} gh-pages
           cp -f _data/announced.json _site/data/announced.json
-          cd _site
+          cd gh-pages
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git add .
