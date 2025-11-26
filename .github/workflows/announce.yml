@@ -2,7 +2,7 @@ name: Make Announces
 
 on:
   schedule:
-    - cron: "0 3,7,13,17 * * *"
+    - cron: "0 13 * * *"
   workflow_dispatch:
 
 jobs:
