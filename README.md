@@ -8,7 +8,7 @@ published: false
 
 ### Лицензия
 
-* [CC BY-SA][cc-by-sa] для контента,
+* [CC BY-SA][cc-by-sa] для контента, если явно не указано иное;
 * [MIT][mit] для кода сайта.
 
 [cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
