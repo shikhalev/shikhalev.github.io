@@ -8,6 +8,7 @@ tags:
   - Linux
   - RAW
 announce: true
+recommend: true
 ---
 
 {% image @_src/2025/10/cover.png figure right width=240px title="Картинка для привлечения внимания" %}

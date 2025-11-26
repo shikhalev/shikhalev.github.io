@@ -15,6 +15,7 @@ tags:
 image: _src/2021/05/2021-05-23/IMG_4458.jpg
 seo_image_crop: "500:261+113+282"
 recommend: true
+announce: true
 last_modified_at: 2021-05-24 21:12 +0500
 ---
 {% image @_src/2021/05/2021-05-23/IMG_0280.jpg figure right width=320px title="Чайка на фоне зданий" crop="3473x3472+126+0" %}

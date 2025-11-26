@@ -19,6 +19,7 @@ tags:
 image: _src/2021/07/2021-07-17/benjfrank.jpg
 seo_image_crop: "500:261+0+472"
 recommend: true
+announce: true
 ---
 {% image @_src/2021/07/2021-07-17/benjfrank.jpg figure right width=240px crop="2070x2450+0+163"
          title="Портрет Бенджамина Франклина 1767 года кисти английского художника Дэвида Мартина (взят с Википедии)"

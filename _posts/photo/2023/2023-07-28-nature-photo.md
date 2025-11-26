@@ -14,6 +14,7 @@ tags:
 image: _src/2023/07/26/00094-2752207474.png
 seo_image_crop: "768x400+0+94"
 recommend: true
+announce: true
 ---
 {% image @_src/2023/07/26/00094-2752207474.png figure right width=400px title="Сгенерироованная нейросетью иллюстрация" %}
 

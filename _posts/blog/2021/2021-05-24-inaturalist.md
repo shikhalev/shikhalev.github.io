@@ -15,6 +15,7 @@ tags:
 image: _src/2021/05/2021-05-24/2559.png
 seo_image_crop: "500:261+183+0"
 recommend: true
+announce: true
 date: 2021-05-24 21:12 +0500
 ---
 {% image @_src/2021/05/2021-05-24/1414.png figure right width=420px shape fig_class="logo"

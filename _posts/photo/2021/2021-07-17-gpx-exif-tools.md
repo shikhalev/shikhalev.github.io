@@ -24,6 +24,7 @@ tags:
   - мобильные приложения
 image: _src/2021/07/2021-07-17/gpxlab.png
 recommend: true
+announce: true
 ---
 ## Получение трека
 

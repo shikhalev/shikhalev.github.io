@@ -189,6 +189,28 @@ announcer:
     social: общество
     psi: психология
     mind: мышление
+    about: сайт
+    photo: фото
+    pub: публикации
+    text: тексты
+    dybr: дыбр
+    nature: природа
+    politics: политика
+    birdwatching: бёрдвотчинг
+    processing: обработка
+    penguin: false
+    samag: false
+    db: БД
+    hard: железо
+    soft: ПО
+    web: веб
+    abs: абстракции
+    fpc: FPC
+    graphics: графика
+    best: избранное
+    prose: проза
+    verses: стихи
+    tales: сказочки
   telegram:
     method: telegram
     chat_id: "@shikhalev_blog"
