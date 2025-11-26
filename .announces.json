@@ -1,1 +1,155 @@
-{}
+{
+  "telegram": {
+    "config": {
+      "method": "telegram",
+      "chat_id": "@shikhalev_blog"
+    },
+    "posts": {
+      "_posts/tech/2021/2021-03-24-typo-keyboard.md": {
+        "url": "https://shikhalev.github.io/tech/2021/03/typo-keyboard.html",
+        "title": "Ввод «типографских» символов с клавиатуры (ed. 2021)",
+        "description": "Настройка клавиатуры в Linux для ввода различных символов, таких как, например, длинное тире, кавычки-ёлочки, знак копирайта и так далее. В редакции 2021 года.",
+        "categories": [
+          "технологии",
+          "ПО"
+        ]
+      },
+      "_posts/blog/2021/2021-04-04-birds.md": {
+        "url": "https://shikhalev.github.io/life/2021/04/birds.html",
+        "title": "Птицы на кормушке и их поведение",
+        "description": "Небольшие заметки о разных видах птиц, посещавших мою кормушку, и о различиях в их поведении. В некотором роде подведение итогов кормушечного сезона.",
+        "categories": [
+          "жизнь",
+          "природа",
+          "бёрдвотчинг"
+        ]
+      },
+      "_posts/photo/2021/2021-04-10-bshot.md": {
+        "url": "https://shikhalev.github.io/photo/2021/04/bshot.html",
+        "title": "Съемка птиц на кормушке",
+        "description": "Чем, как (и почему), я снимал",
+        "categories": [
+          "фото",
+          "бёрдвотчинг",
+          "железо",
+          "природа"
+        ]
+      },
+      "_posts/blog/2021/2021-05-23-birds-in-the-city.md": {
+        "url": "https://shikhalev.github.io/life/2021/05/birds-in-the-city.html",
+        "title": "Птицы (и не только) в большом городе",
+        "description": "Некоторые мысли о биоценозах больших городов",
+        "categories": [
+          "жизнь",
+          "природа",
+          "общество"
+        ]
+      },
+      "_posts/blog/2021/2021-05-24-inaturalist.md": {
+        "url": "https://shikhalev.github.io/life/2021/05/inaturalist.html",
+        "title": "iNaturalist — рекомендую",
+        "description": "Проект iNaturalist: краткое введение и личный опыт",
+        "categories": [
+          "жизнь",
+          "природа",
+          "фото",
+          "бёрдвотчинг",
+          "общество"
+        ]
+      },
+      "_posts/blog/2021/2021-07-17-free-speech.md": {
+        "url": "https://shikhalev.github.io/life/2021/07/free-speech.html",
+        "title": "Об свободу слова",
+        "description": "Почему свободу слова не следует недооценивать и прочее — три с половиной тезиса",
+        "categories": [
+          "жизнь",
+          "общество",
+          "политика"
+        ]
+      },
+      "_posts/photo/2021/2021-07-17-gpx-exif-tools.md": {
+        "url": "https://shikhalev.github.io/photo/2021/07/gpx-exif-tools.html",
+        "title": "Как я ставлю геометки к фотографиям",
+        "description": "Запись GPX и корректная его обработка",
+        "categories": [
+          "фото",
+          "обработка",
+          "технологии",
+          "ПО",
+          "бёрдвотчинг"
+        ]
+      },
+      "_posts/photo/2023/2023-07-28-nature-photo.md": {
+        "url": "https://shikhalev.github.io/photo/2023/07/nature-photo.html",
+        "title": "Обработка фото наблюдений",
+        "description": "Как стоит и как не стоит обрабатывать фотографии наблюдений живой природы",
+        "categories": [
+          "фото",
+          "обработка",
+          "бёрдвотчинг",
+          "природа"
+        ]
+      },
+      "_posts/blog/2023/2023-10-03-merlin.md": {
+        "url": "https://shikhalev.github.io/life/2023/10/merlin.html",
+        "title": "Merlin Bird ID",
+        "description": "Приложение для рас­поз­на­ва­ния птиц по го­ло­су",
+        "categories": [
+          "жизнь",
+          "природа",
+          "бёрдвотчинг",
+          "технологии"
+        ]
+      },
+      "_posts/photo/2025/2025-06-19-sigma-60-600.md": {
+        "url": "https://shikhalev.github.io/photo/2025/06/sigma-60-600.html",
+        "title": "Объектив Sigma 60-600mm",
+        "description": "Мой новый объектив — Sigma AF 60-600mm f/4.5-6.3 DG OS HSM Sports",
+        "categories": [
+          "фото",
+          "бёрдвотчинг",
+          "технологии",
+          "железо",
+          "дыбр"
+        ]
+      },
+      "_posts/tech/2025/2025-10-05-darktable.md": {
+        "url": "https://shikhalev.github.io/tech/2025/10/darktable.html",
+        "title": "Этим стулом...",
+        "description": "Анонс «Практического руководства по darktable»",
+        "categories": [
+          "технологии",
+          "ПО",
+          "графика",
+          "фото",
+          "обработка"
+        ]
+      },
+      "_posts/tech/2025/2025-10-26-darktable-base.md": {
+        "url": "https://shikhalev.github.io/tech/2025/10/darktable-base.html",
+        "title": "Первая глава «Практического руководства...»",
+        "description": "Первая глава «Практического руководства по darktable» — «Базовая обработка»",
+        "categories": [
+          "технологии",
+          "ПО",
+          "графика",
+          "фото",
+          "обработка"
+        ]
+      },
+      "_posts/tech/2025/2025-11-21-llm.md": {
+        "url": "https://shikhalev.github.io/tech/2025/11/llm.html",
+        "title": "Заметки об LLM и нейросетях вообще",
+        "description": "За последнее время (особенно последний год) мне довелось довольно активно поработать с боль­ши­ми языковыми моделями (LLM), которые сейчас модно называть искусственным интеллектом. Захотелось кое-что сформулировать и подытожить.\n",
+        "categories": [
+          "технологии",
+          "программирование",
+          "жизнь",
+          "общество",
+          "психология",
+          "мышление"
+        ]
+      }
+    }
+  }
+}
