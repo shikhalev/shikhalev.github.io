@@ -34,3 +34,35 @@
   margin-left: 2em;
   margin-right: 2em;
 }
+
+.announcer-block {
+  max-width: 360px;
+  margin: 30px auto;
+  text-align: center;
+  background-color: steelblue;
+  border-radius: 10px;
+  border: solid 2px silver;
+
+  &:hover {
+    box-shadow: 0px 0px 5px #987;
+  }
+
+  a {
+    font-size: 24px;
+    color: #DDD;
+    text-decoration: none;
+    padding: 15px 30px;
+    display: inline-block;
+
+    &:hover {
+      color: white;
+      text-shadow: 0px 0px 3px #FED;
+    }
+
+    &::before {
+      content: "\f1d8  ";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 400;
+    }
+  }
+}

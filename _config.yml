@@ -167,6 +167,7 @@ date_format: "%Y.%m.%d"
 
 exclude:
   - .vscode/
+  - .announces.json
 
 # Собственные настройки сайта
 

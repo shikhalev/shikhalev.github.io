@@ -36,6 +36,7 @@ announce: true
 
 Следующая глава будет про организацию изображений — снова представление светового стола, но уже в максимально развернутом виде.
 
+
 [guide]: {% link pages/books/darktable/pg/index.md %}
 [first]: {% link pages/books/darktable/pg/1_base_processing.md %}
 [intro]: {% link pages/books/darktable/pg/0_intro.md %}
