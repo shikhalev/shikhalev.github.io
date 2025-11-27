@@ -1,0 +1,65 @@
+@charset "UTF-8";
+.shift10 {
+  margin-top: -10px;
+}
+
+.shift20 {
+  margin-top: -20px;
+}
+
+.shift30 {
+  margin-top: -30px;
+}
+
+.shift50 {
+  margin-top: -50px;
+}
+
+@media screen and (max-width: 500px) {
+  .shift10, .shift20, .shift30, .shift50 {
+    margin-top: 0px;
+  }
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.wrapable {
+  white-space: normal;
+}
+
+.summa {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.announcer-block {
+  max-width: 360px;
+  margin: 30px auto;
+  text-align: center;
+  background-color: steelblue;
+  border-radius: 10px;
+  border: solid 2px silver;
+}
+.announcer-block:hover {
+  box-shadow: 0px 0px 5px #987;
+}
+.announcer-block a {
+  font-size: 24px;
+  color: #DDD;
+  text-decoration: none;
+  padding: 15px 30px;
+  display: inline-block;
+}
+.announcer-block a:hover {
+  color: white;
+  text-shadow: 0px 0px 3px #FED;
+}
+.announcer-block a::before {
+  content: "\f1d8  ";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=local.css.map */

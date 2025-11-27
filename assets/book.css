@@ -1,0 +1,161 @@
+@charset "UTF-8";
+.shift10 {
+  margin-top: -10px;
+}
+
+.shift20 {
+  margin-top: -20px;
+}
+
+.shift30 {
+  margin-top: -30px;
+}
+
+.shift50 {
+  margin-top: -50px;
+}
+
+@media screen and (max-width: 500px) {
+  .shift10, .shift20, .shift30, .shift50 {
+    margin-top: 0px;
+  }
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.wrapable {
+  white-space: normal;
+}
+
+.summa {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.announcer-block {
+  max-width: 360px;
+  margin: 30px auto;
+  text-align: center;
+  background-color: steelblue;
+  border-radius: 10px;
+  border: solid 2px silver;
+}
+.announcer-block:hover {
+  box-shadow: 0px 0px 5px #987;
+}
+.announcer-block a {
+  font-size: 24px;
+  color: #DDD;
+  text-decoration: none;
+  padding: 15px 30px;
+  display: inline-block;
+}
+.announcer-block a:hover {
+  color: white;
+  text-shadow: 0px 0px 3px #FED;
+}
+.announcer-block a::before {
+  content: "\f1d8  ";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+}
+
+@media screen and (min-width: 779px) {
+  .twocolumns {
+    columns: 2;
+  }
+}
+@media print {
+  .twocolumns {
+    columns: 2;
+  }
+}
+
+@media screen and (min-width: 779px) {
+  .module {
+    columns: 2;
+  }
+}
+@media print {
+  .module {
+    columns: 2;
+  }
+}
+.module {
+  font-family: "PT Sans Narrow", gnarrow, "Arial Narrow", sans-serif;
+}
+@media print {
+  .module .left, .module .__left {
+    float: none;
+    margin: 5px auto 5px;
+  }
+}
+@media print {
+  .module .right, .module .__right {
+    float: none;
+    margin: 10px auto;
+  }
+}
+.module dt {
+  font-family: "PT Sans", gsans, Arial, sans-serif;
+}
+
+.unbreakable {
+  break-inside: avoid;
+}
+
+a[href*="docs.darktable.org"]:link {
+  color: red;
+}
+
+a[href*="docs.darktable.org"]:visited {
+  color: darkred;
+}
+
+p img, dt img, dd img, li img {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+pre code {
+  padding: 0px;
+  border: 0px;
+}
+
+.origlink {
+  font-size: 80%;
+  margin-bottom: 20px;
+}
+
+.sticker.copy {
+  background-color: antiquewhite;
+  text-align: center;
+}
+
+.booktoc h3::before, .booktoc h4::before {
+  content: "\f07c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  color: silver;
+}
+.booktoc ul {
+  list-style-position: outside;
+}
+.booktoc ul li {
+  font-family: "PT Sans Caption", sans-serif;
+  padding-left: 0.5em;
+}
+.booktoc ul li::marker {
+  content: "\f15b";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  color: silver;
+}
+.booktoc ul li ul li::marker {
+  content: "\f02e";
+}
+
+/*# sourceMappingURL=book.css.map */
