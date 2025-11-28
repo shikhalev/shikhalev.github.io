@@ -48,8 +48,8 @@ jobs:
         with:
           label: 'Jekyll Build'
           sync-dir: '_site'
-          github-actor: ${{ secrets.GITHUB_ACTOR }}
+          github-actor: ${{ github.actor }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          pages-repository: ${{ secrets.GITHUB_REPOSITORY }}
+          pages-repository: ${{ github.repository }}
           telegram-bot-token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           telegram-user-id: ${{ secrets.MY_TG_ID }}
