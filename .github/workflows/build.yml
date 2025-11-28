@@ -44,7 +44,7 @@ jobs:
             fi
           fi
       - name: Publish
-        uses: jekyll-is/action-jekyll-is-publish@main
+        uses: jekyll-is/action-jekyll-is-publish@v1
         with:
           label: 'Jekyll Build'
           sync-dir: '_site'
