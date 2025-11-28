@@ -41,31 +41,17 @@ jobs:
               curl -X POST "https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage" -H "Content-Type: application/json" -d "${JSON}"
             fi
           fi
-      - name: Publish
-        env:
-          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
-          TG_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TG_USER_ID: ${{ secrets.MY_TG_ID }}
+      - name: Copy File
         run: |
-          echo "Publish..."
-          REPO="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          BRANCH=gh-pages
-          MESSAGE="published by action @ $(date)"
-          git clone --branch ${BRANCH} --single-branch ${REPO} gh-pages
-          cp -f _data/announced.json gh-pages/data/announced.json
-          cd gh-pages
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-          git add .
-          if git diff --cached --quiet; then
-            echo "Nothing to do."
-          else
-            git commit -m "$MESSAGE"
-            git push --force ${REPO} ${BRANCH}:${BRANCH}
-            if [ -n "$TG_BOT_TOKEN" ] && [ -n "$TG_USER_ID" ]; then
-              JSON="{\"chat_id\":\"${TG_USER_ID}\",\"text\":\"Announce: ${MESSAGE}\"}"
-              curl -X POST "https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage" -H "Content-Type: application/json" -d "${JSON}"
-            fi
-          fi
+          mkdir -p tmp/data
+          cp -f _data/announced.json tmp/data/announced.json
+      - name: Publish
+        uses: jekyll-is/action-jekyll-is-publish@main
+        with:
+          label: 'Jekyll Build'
+          copy-dir: 'tmp'
+          github-actor: ${{ github.actor }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          pages-repository: ${{ github.repository }}
+          telegram-bot-token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          telegram-user-id: ${{ secrets.MY_TG_ID }}
