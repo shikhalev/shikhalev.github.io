@@ -48,7 +48,7 @@ jobs:
       - name: Publish
         uses: jekyll-is/action-jekyll-is-publish@main
         with:
-          label: 'Jekyll Build'
+          label: 'Jekyll Announce'
           copy-dir: 'tmp'
           github-actor: ${{ github.actor }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
