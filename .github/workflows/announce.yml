@@ -23,7 +23,7 @@ jobs:
           echo "Announce..."
           bundle exec jekyll-is-announcer
       - name: Back push
-        uses: jekyll-is/action-jekyll-is-backpush@main
+        uses: jekyll-is/action-jekyll-is-backpush@v1
         with:
           label: 'Jekyll Announce'
           telegram-bot-token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
