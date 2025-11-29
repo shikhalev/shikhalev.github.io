@@ -1,4 +1,158 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://shikhalev.github.io/feed/tech.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2025-11-28T17:37:25+00:00</updated><id>https://shikhalev.github.io/feed/tech.xml</id><title type="html">Иван Шихалев | Tech</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Телеграм-канал сайта</title><link href="https://shikhalev.github.io/about/2025/11/telegram.html" rel="alternate" type="text/html" title="Телеграм-канал сайта" /><published>2025-11-26T00:00:00+00:00</published><updated>2025-11-26T00:00:00+00:00</updated><id>https://shikhalev.github.io/about/2025/11/telegram</id><content type="html" xml:base="https://shikhalev.github.io/about/2025/11/telegram.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:320px;margin-bottom:0px; margin-top:-3px;"><a href="/img/2025/11/26/telegram/cover-fhd.webp" class="__image_link"><img src="/img/2025/11/26/telegram/cover-320-753x633-368-138.webp" class="__image" alt="Картинка для привлечения внимания" title="Картинка для привлечения внимания" /></a></figure>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://shikhalev.github.io/feed/tech.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2025-11-29T03:40:10+00:00</updated><id>https://shikhalev.github.io/feed/tech.xml</id><title type="html">Иван Шихалев | Tech</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Анонсер — техническая сторона</title><link href="https://shikhalev.github.io/tech/2025/11/announcer.html" rel="alternate" type="text/html" title="Анонсер — техническая сторона" /><published>2025-11-29T00:00:00+00:00</published><updated>2025-11-29T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/11/announcer</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/11/announcer.html"><![CDATA[<figure class="__figure __implicit_figure __right logo" style="max-width:240px;margin-top:-5px;shape-outside:url(/img/2025/11/29/announcer/notification-240.webp);"><a href="/img/2025/11/29/announcer/notification-fhd.webp" class="__image_link"><img src="/img/2025/11/29/announcer/notification-240.webp" class="__image" style="filter: drop-shadow(0px 0px 5px silver);shape-outside:url(/img/2025/11/29/announcer/notification-240.webp);" alt="Скриншот уведомления о публикации" title="Скриншот уведомления о публикации" /></a></figure>
+
+<p>В <a href="/about/2025/11/telegram.html">посте о подключении телеграм-канала</a> я уже предполагал, что напишу подробнее о технической стороне этого подключения.
+Вообще-то, я планировал этим заняться попозже, а пока переключиться на <a href="/pages/books/darktable/pg/">«Прак­ти­чес­кое руководство по dark­table»</a>… Но внезапно
+обнаружил, что толком переключиться не могу, пока не доведу эту задачу с анонсером до какой-то логической точки.</p>
+
+<p>Что ж, причесал Actions, отладил это хозяйство до более-менее стабильного со­сто­я­ния — хоть и далекого от завершения, но уже приемлемого для описания.
+Принципиальных изменений в ближайших версиях, скорее всего, не будет, а о плановых доделках я здесь еще скажу.</p>
+
+<h2 id="задача">Задача</h2>
+
+<p>Собственно, основная задача стояла в следующем:</p>
+
+<ul>
+  <li>
+    <p>Отправлять анонсы (пока только в телеграм-канал) <em>новых</em> постов;</p>
+  </li>
+  <li>
+    <p>Сохранять ссылки на анонсы и показывать их на страницах, чтобы можно было перейти к обсуждению.</p>
+  </li>
+</ul>
+
+<p>Уже по ходу дела решил добавить в Actions отправку уведомлений себе о выполненных операциях.</p>
+
+<!--more-->
+
+<h2 id="текущее-состояние">Текущее состояние</h2>
+
+<ul class="check-list">
+  <li>
+    <p>Анонсы в телеграм отправляются.</p>
+  </li>
+  <li>
+    <p>Специальный liquid-тег формирует ссылку на анонс (через <code class="language-plaintext highlighter-rouge">t.me</code>), которую затем JavaScript динамически заполняет дан­ны­ми и делает видимой.</p>
+  </li>
+  <li>
+    <p>Дополнительно я получаю уведомления об обновлениях сайта в личку от бота, как показано на КДПВ.</p>
+  </li>
+</ul>
+
+<p>Чего точно <a href="https://github.com/jekyll-is/jekyll-is-announcer/issues">нужно доделать</a>:</p>
+
+<ul class="square-list">
+  <li>
+    <p>Анонсирование в <a href="https://www.indexnow.org/ru_ru/index">IndexNow</a>;</p>
+  </li>
+  <li>
+    <p>Анонсирование в другие соцсети, желательно сделать какой-то удобный способ расширения;</p>
+  </li>
+  <li>
+    <p>Доработать вставляемую ссылку;</p>
+  </li>
+  <li>
+    <p>Доработать настройки, в т.ч. сделать раздельный флаг анонсирования в front-matter;</p>
+  </li>
+  <li>
+    <p><strong>Документировать полноценно и зарелизить.</strong></p>
+  </li>
+</ul>
+
+<p>И в процессе еще вышел на пару задач, не связанных напрямую с анонсером:</p>
+
+<ul class="square-list">
+  <li>
+    <p><a href="https://github.com/shikhalev/shikhalev.github.io/issues/18">Уведомления о дискуссиях в репозитории</a>;</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/shikhalev/shikhalev.github.io/issues/19">Поменять вывод рекомендаций на динамический</a> (дело в том, что получение уведомлений о публикации сейчас малоинформативно из-за того,
+что при каждой сборке меняются все стра­ни­цы — статическая генерация случайных рекомендаций так работает).</p>
+  </li>
+</ul>
+
+<h2 id="что-и-как-работает">Что и как работает</h2>
+
+<h3 id="общий-принцип">Общий принцип</h3>
+
+<p>Плагин при генерации сайта собирает список страниц с установленным флагом <code class="language-plaintext highlighter-rouge">announce</code> и загружает список уже анонсированных, хранящийся в каталоге
+<code class="language-plaintext highlighter-rouge">_data</code> jekyll-проекта. Сравнивает эти два списка и определяет новые анонсы, данные по которым записывает в отдельный файл <code class="language-plaintext highlighter-rouge">.announces.json</code>, вместе
+с некоторыми параметрами из конфига, чтобы в дальнейшем при отправке анонсов не требовалось дополнительно читать и парсить конфиг.</p>
+
+<p>Чтобы передать эту информацию на этап отправки, приходится делать обратный пуш (с файлом <code class="language-plaintext highlighter-rouge">.announces.json</code>) в репозиторий.
+Собственно, почему этап отправки анонсов сделан отдельным? Дело в том, что телеграм получает информацию о странице при первом знакомстве с ней, и, соответственно,
+к этому моменту она должна быть опубликована.</p>
+
+<p>Затем отдельный ruby-скрипт (входящий в тот же гем, что и плагин) читает этот файл с анонсами и файл с уже проанонсированными (тот тоже в формате JSON),
+отправляет анонсы и добавляет информацию в файл с проанонсированными. Его, соответственно, тоже нужно запушить обратно в репозиторий.</p>
+
+<p>Все эти обратные пуши делаются не в скрипте, а посредством GitHub Actions. Для локальной отладки можно запускать сборку сайта, а потом ruby-скрипт просто
+руками, если потребуется использовать все это на каком-то другом хостинге, можно будет автоматизировать процесс через shell-скрипты или как-то еще.</p>
+
+<p>Кроме того, файл с данными по уже анонсированным копируется также на сайт, откуда его и берет в дальнейшем JavaScript.</p>
+
+<h3 id="исходники">Исходники</h3>
+
+<dl>
+  <dt><strong><a href="https://github.com/jekyll-is/jekyll-is-announcer"><code class="language-plaintext highlighter-rouge">jekyll-is-announcer</code></a></strong></dt>
+  <dd>
+    <p>Собственно, гем с анонсером. Ключевые файлы:</p>
+
+    <ul>
+      <li>
+        <p><a href="https://github.com/jekyll-is/jekyll-is-announcer/blob/main/lib/jekyll-is/announcer.rb"><code class="language-plaintext highlighter-rouge">announcer.rb</code></a> — код плагина (генератора);</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/jekyll-is/jekyll-is-announcer/blob/main/lib/jekyll-is/marker.rb"><code class="language-plaintext highlighter-rouge">marker.rb</code></a> — код liquid-тега для ссылки;</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/jekyll-is/jekyll-is-announcer/blob/main/bin/jekyll-is-announcer"><code class="language-plaintext highlighter-rouge">jekyll-is-announcer</code></a> — скрипт для анонсирования;</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/jekyll-is/jekyll-is-announcer/blob/main/assets/announcer.js"><code class="language-plaintext highlighter-rouge">announcer.js</code></a> — JavaScript.</p>
+      </li>
+    </ul>
+  </dd>
+  <dt>Пример использования</dt>
+  <dd>
+    <p>Репозиторий с <a href="https://github.com/shikhalev/shikhalev.github.io">исходниками данного сайта</a>, а конкретней — его каталог <a href="https://github.com/shikhalev/shikhalev.github.io/tree/main/.github/workflows"><code class="language-plaintext highlighter-rouge">.github/workflows</code></a>.</p>
+
+    <ul>
+      <li>
+        <p><a href="https://github.com/shikhalev/shikhalev.github.io/blob/main/.github/workflows/build.yml#L26"><code class="language-plaintext highlighter-rouge">build.yml</code></a> — сборка Jekyll с обратным пушем и деплоем GitHub Pages. Срабатывает на пуш в ветку <code class="language-plaintext highlighter-rouge">main</code>.</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/shikhalev/shikhalev.github.io/blob/main/.github/workflows/announce.yml#L24"><code class="language-plaintext highlighter-rouge">announce.yml</code></a> — отправка анонсов, с обратным пушем и опять же деплоем с обновленным списком анонсированных. Запускается
+вручную или раз в сутки по расписанию (на случай, если забуду сам запустить).</p>
+      </li>
+      <li>
+        <p>Пример использования liquid-тега можно увидеть лэйауте для постов — <a href="https://github.com/shikhalev/shikhalev.github.io/blob/main/_layouts/post.html#L7"><code class="language-plaintext highlighter-rouge">post.html</code></a>.</p>
+      </li>
+      <li>
+        <p>И что важно: конфигурация в <a href="https://github.com/shikhalev/shikhalev.github.io/blob/main/_config.yml#L184-L217"><code class="language-plaintext highlighter-rouge">_config.yml</code></a>.</p>
+      </li>
+    </ul>
+  </dd>
+  <dt>Вспомогательное</dt>
+  <dd>
+    <p>Как можно видеть workflows репозитория сайта ссылаются также на некоторые нестандартные actions:</p>
+
+    <ul>
+      <li>
+        <p><a href="https://github.com/jekyll-is/action-jekyll-is-backpush"><code class="language-plaintext highlighter-rouge">action-jekyll-is-backpush</code></a> — обратный пуш с уведомлением. Проверяет, есть ли чего пушить, если нечего — то ничего не делает
+(и не уведомляет, ибо не о чем). Обратный пуш отправляется с «[skip ci]» в сообщении коммита, соответственно, триггеры на него не срабатывают.</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/jekyll-is/action-jekyll-is-publish"><code class="language-plaintext highlighter-rouge">action-jekyll-is-publish</code></a> — публикация, то есть отправка в ветку <code class="language-plaintext highlighter-rouge">gh-pages</code>. Опять же пушит и уведомляет только если есть изменения.</p>
+      </li>
+    </ul>
+  </dd>
+</dl>
+
+<p>Телеграм-бот в моем случае используется один и тот же для анонсов и для уведомлений, что, конечно, совершенно необязательно.</p>
+
+<h2 id="вместо-итого">Вместо итого</h2>
+
+<p>Надеюсь, код достаточно понятный сам по себе. Но если что, готов ответить на вопросы в комментариях.</p>]]></content><author><name>Иван Шихалев</name></author><category term="tech" /><category term="programming" /><category term="web" /><category term="about" /><category term="сайт" /><category term="Telegram" /><category term="Jekyll" /><category term="GitHub" /><category term="GitHub Actions" /><category term="планы" /><category term="Jekyll IS" /><summary type="html"><![CDATA[Как я сделал автоанонсирование постов на данном сайте в Telegram — логика, Jekyll-плагин и GitHub Actions]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Телеграм-канал сайта</title><link href="https://shikhalev.github.io/about/2025/11/telegram.html" rel="alternate" type="text/html" title="Телеграм-канал сайта" /><published>2025-11-26T00:00:00+00:00</published><updated>2025-11-26T00:00:00+00:00</updated><id>https://shikhalev.github.io/about/2025/11/telegram</id><content type="html" xml:base="https://shikhalev.github.io/about/2025/11/telegram.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:320px;margin-bottom:0px; margin-top:-3px;"><a href="/img/2025/11/26/telegram/cover-fhd.webp" class="__image_link"><img src="/img/2025/11/26/telegram/cover-320-753x633-368-138.webp" class="__image" alt="Картинка для привлечения внимания" title="Картинка для привлечения внимания" /></a></figure>
 
 <p>Завел себе (точнее, этому сайту) канал в те­ле­ге — <strong><a href="https://t.me/shikhalev_blog">https://t.me/shikhalev_blog</a></strong>.</p>
 
@@ -1778,12 +1932,4 @@ sa­fe-под­мно­жес­т­во не ве­ри­фи­ци­ру­е­
 <hr />
 
 <p>Итак, я тут набросал открытый список открытых проблем, и это тот случай, как мне кажется, когда активное обсуждение будет более
-чем уместно.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;life&quot;, &quot;social&quot;]" /><category term="ИИ" /><category term="искусственный интеллект" /><category term="ChatGPT" /><category term="нейросети" /><category term="будущее" /><category term="автопилот" /><category term="преступность" /><category term="спам" /><category term="поиск" /><category term="TDD" /><summary type="html"><![CDATA[Искусственный интеллект в руках естественного идиота]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2023/01/07/evil-ai/blue-girl-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2023/01/07/evil-ai/blue-girl-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Кстати, о птичках</title><link href="https://shikhalev.github.io/about/2023/01/searches.html" rel="alternate" type="text/html" title="Кстати, о птичках" /><published>2023-01-06T00:00:00+00:00</published><updated>2023-01-06T00:00:00+00:00</updated><id>https://shikhalev.github.io/about/2023/01/searches</id><content type="html" xml:base="https://shikhalev.github.io/about/2023/01/searches.html"><![CDATA[<figure class="__figure __implicit_figure __center" style="max-width:767px;"><a href="/img/2023/01/06/searches/searches-fhd.webp" class="__image_link"><img src="/img/2023/01/06/searches/searches-fhd.webp" class="__image" alt="Скриншот из Я.Вебмастер" title="Скриншот из Я.Вебмастер" /></a></figure>
-
-<p>В ка­кой-то момент — где-то во вто­рой половине но­я­б­ря — я заметил, что ко мне стали заходить читатели из по­ис­ко­вых систем по за­про­сам,
-связанным с кор­муш­кой и птицами. За но­ябрь-де­кабрь пост <a href="/life/2021/04/birds.html">«Птицы на кормушке и их поведение»</a> даже обогнал по по­пу­ляр­нос­ти
-«главный» материал этого сайта, т.е. <a href="/tech/2021/03/typo-keyboard.html">«Ввод «типографских» символов с клавиатуры»</a>, что само по се­бе довольно странно…</p>
-
-<p>Но не­дав­но я обнаружил еще более странный момент, заглянув в <strong><a href="https://webmaster.yandex.ru/" class="img-icon-webmaster">Я.Веб­мас­тер</a></strong> — см. соб­с­т­вен­но скриншот.
-Т.е. лю­ди ищут уже не прос­то поведение птиц на кор­муш­ке, а конкретный текст конкретного автора. Такое ощущение, что попал в ка­кую-то
-учебную программу в ка­чес­т­ве рекомендованного материала. Или что это вообще?</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;about&quot;, &quot;tech&quot;, &quot;web&quot;, &quot;nature&quot;, &quot;birdwatching&quot;]" /><category term="птицы" /><category term="поиск" /><category term="сайты" /><category term="shikhalev.org" /><summary type="html"><![CDATA[Странные поисковые запросы, по которым ко мне приходят]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2023/01/06/searches/searches-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2023/01/06/searches/searches-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+чем уместно.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;life&quot;, &quot;social&quot;]" /><category term="ИИ" /><category term="искусственный интеллект" /><category term="ChatGPT" /><category term="нейросети" /><category term="будущее" /><category term="автопилот" /><category term="преступность" /><category term="спам" /><category term="поиск" /><category term="TDD" /><summary type="html"><![CDATA[Искусственный интеллект в руках естественного идиота]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2023/01/07/evil-ai/blue-girl-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2023/01/07/evil-ai/blue-girl-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

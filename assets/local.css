@@ -62,4 +62,21 @@
   font-weight: 400;
 }
 
+ul.square-list li::marker {
+  content: "☐ "; /* ☐ Пустой квадратик */
+  font-size: 1em;
+  color: #666;
+  font-weight: bold;
+  /* vertical-align: baseline; */
+}
+
+ul.check-list li::marker {
+  content: "✔ "; /* "\2611";  */ /* ☑ Галочка в квадрате */
+  /* или "\2714" для ✓ */
+  color: #333;
+  font-size: 1em;
+  /* font-weight: 900; */
+  vertical-align: baseline;
+}
+
 /*# sourceMappingURL=local.css.map */

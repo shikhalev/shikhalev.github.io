@@ -1,4 +1,158 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://shikhalev.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2025-11-28T17:37:25+00:00</updated><id>https://shikhalev.github.io/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Телеграм-канал сайта</title><link href="https://shikhalev.github.io/about/2025/11/telegram.html" rel="alternate" type="text/html" title="Телеграм-канал сайта" /><published>2025-11-26T00:00:00+00:00</published><updated>2025-11-26T00:00:00+00:00</updated><id>https://shikhalev.github.io/about/2025/11/telegram</id><content type="html" xml:base="https://shikhalev.github.io/about/2025/11/telegram.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:320px;margin-bottom:0px; margin-top:-3px;"><a href="/img/2025/11/26/telegram/cover-fhd.webp" class="__image_link"><img src="/img/2025/11/26/telegram/cover-320-753x633-368-138.webp" class="__image" alt="Картинка для привлечения внимания" title="Картинка для привлечения внимания" /></a></figure>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://shikhalev.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2025-11-29T03:40:10+00:00</updated><id>https://shikhalev.github.io/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Анонсер — техническая сторона</title><link href="https://shikhalev.github.io/tech/2025/11/announcer.html" rel="alternate" type="text/html" title="Анонсер — техническая сторона" /><published>2025-11-29T00:00:00+00:00</published><updated>2025-11-29T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/11/announcer</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/11/announcer.html"><![CDATA[<figure class="__figure __implicit_figure __right logo" style="max-width:240px;margin-top:-5px;shape-outside:url(/img/2025/11/29/announcer/notification-240.webp);"><a href="/img/2025/11/29/announcer/notification-fhd.webp" class="__image_link"><img src="/img/2025/11/29/announcer/notification-240.webp" class="__image" style="filter: drop-shadow(0px 0px 5px silver);shape-outside:url(/img/2025/11/29/announcer/notification-240.webp);" alt="Скриншот уведомления о публикации" title="Скриншот уведомления о публикации" /></a></figure>
+
+<p>В <a href="/about/2025/11/telegram.html">посте о подключении телеграм-канала</a> я уже предполагал, что напишу подробнее о технической стороне этого подключения.
+Вообще-то, я планировал этим заняться попозже, а пока переключиться на <a href="/pages/books/darktable/pg/">«Прак­ти­чес­кое руководство по dark­table»</a>… Но внезапно
+обнаружил, что толком переключиться не могу, пока не доведу эту задачу с анонсером до какой-то логической точки.</p>
+
+<p>Что ж, причесал Actions, отладил это хозяйство до более-менее стабильного со­сто­я­ния — хоть и далекого от завершения, но уже приемлемого для описания.
+Принципиальных изменений в ближайших версиях, скорее всего, не будет, а о плановых доделках я здесь еще скажу.</p>
+
+<h2 id="задача">Задача</h2>
+
+<p>Собственно, основная задача стояла в следующем:</p>
+
+<ul>
+  <li>
+    <p>Отправлять анонсы (пока только в телеграм-канал) <em>новых</em> постов;</p>
+  </li>
+  <li>
+    <p>Сохранять ссылки на анонсы и показывать их на страницах, чтобы можно было перейти к обсуждению.</p>
+  </li>
+</ul>
+
+<p>Уже по ходу дела решил добавить в Actions отправку уведомлений себе о выполненных операциях.</p>
+
+<!--more-->
+
+<h2 id="текущее-состояние">Текущее состояние</h2>
+
+<ul class="check-list">
+  <li>
+    <p>Анонсы в телеграм отправляются.</p>
+  </li>
+  <li>
+    <p>Специальный liquid-тег формирует ссылку на анонс (через <code class="language-plaintext highlighter-rouge">t.me</code>), которую затем JavaScript динамически заполняет дан­ны­ми и делает видимой.</p>
+  </li>
+  <li>
+    <p>Дополнительно я получаю уведомления об обновлениях сайта в личку от бота, как показано на КДПВ.</p>
+  </li>
+</ul>
+
+<p>Чего точно <a href="https://github.com/jekyll-is/jekyll-is-announcer/issues">нужно доделать</a>:</p>
+
+<ul class="square-list">
+  <li>
+    <p>Анонсирование в <a href="https://www.indexnow.org/ru_ru/index">IndexNow</a>;</p>
+  </li>
+  <li>
+    <p>Анонсирование в другие соцсети, желательно сделать какой-то удобный способ расширения;</p>
+  </li>
+  <li>
+    <p>Доработать вставляемую ссылку;</p>
+  </li>
+  <li>
+    <p>Доработать настройки, в т.ч. сделать раздельный флаг анонсирования в front-matter;</p>
+  </li>
+  <li>
+    <p><strong>Документировать полноценно и зарелизить.</strong></p>
+  </li>
+</ul>
+
+<p>И в процессе еще вышел на пару задач, не связанных напрямую с анонсером:</p>
+
+<ul class="square-list">
+  <li>
+    <p><a href="https://github.com/shikhalev/shikhalev.github.io/issues/18">Уведомления о дискуссиях в репозитории</a>;</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/shikhalev/shikhalev.github.io/issues/19">Поменять вывод рекомендаций на динамический</a> (дело в том, что получение уведомлений о публикации сейчас малоинформативно из-за того,
+что при каждой сборке меняются все стра­ни­цы — статическая генерация случайных рекомендаций так работает).</p>
+  </li>
+</ul>
+
+<h2 id="что-и-как-работает">Что и как работает</h2>
+
+<h3 id="общий-принцип">Общий принцип</h3>
+
+<p>Плагин при генерации сайта собирает список страниц с установленным флагом <code class="language-plaintext highlighter-rouge">announce</code> и загружает список уже анонсированных, хранящийся в каталоге
+<code class="language-plaintext highlighter-rouge">_data</code> jekyll-проекта. Сравнивает эти два списка и определяет новые анонсы, данные по которым записывает в отдельный файл <code class="language-plaintext highlighter-rouge">.announces.json</code>, вместе
+с некоторыми параметрами из конфига, чтобы в дальнейшем при отправке анонсов не требовалось дополнительно читать и парсить конфиг.</p>
+
+<p>Чтобы передать эту информацию на этап отправки, приходится делать обратный пуш (с файлом <code class="language-plaintext highlighter-rouge">.announces.json</code>) в репозиторий.
+Собственно, почему этап отправки анонсов сделан отдельным? Дело в том, что телеграм получает информацию о странице при первом знакомстве с ней, и, соответственно,
+к этому моменту она должна быть опубликована.</p>
+
+<p>Затем отдельный ruby-скрипт (входящий в тот же гем, что и плагин) читает этот файл с анонсами и файл с уже проанонсированными (тот тоже в формате JSON),
+отправляет анонсы и добавляет информацию в файл с проанонсированными. Его, соответственно, тоже нужно запушить обратно в репозиторий.</p>
+
+<p>Все эти обратные пуши делаются не в скрипте, а посредством GitHub Actions. Для локальной отладки можно запускать сборку сайта, а потом ruby-скрипт просто
+руками, если потребуется использовать все это на каком-то другом хостинге, можно будет автоматизировать процесс через shell-скрипты или как-то еще.</p>
+
+<p>Кроме того, файл с данными по уже анонсированным копируется также на сайт, откуда его и берет в дальнейшем JavaScript.</p>
+
+<h3 id="исходники">Исходники</h3>
+
+<dl>
+  <dt><strong><a href="https://github.com/jekyll-is/jekyll-is-announcer"><code class="language-plaintext highlighter-rouge">jekyll-is-announcer</code></a></strong></dt>
+  <dd>
+    <p>Собственно, гем с анонсером. Ключевые файлы:</p>
+
+    <ul>
+      <li>
+        <p><a href="https://github.com/jekyll-is/jekyll-is-announcer/blob/main/lib/jekyll-is/announcer.rb"><code class="language-plaintext highlighter-rouge">announcer.rb</code></a> — код плагина (генератора);</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/jekyll-is/jekyll-is-announcer/blob/main/lib/jekyll-is/marker.rb"><code class="language-plaintext highlighter-rouge">marker.rb</code></a> — код liquid-тега для ссылки;</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/jekyll-is/jekyll-is-announcer/blob/main/bin/jekyll-is-announcer"><code class="language-plaintext highlighter-rouge">jekyll-is-announcer</code></a> — скрипт для анонсирования;</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/jekyll-is/jekyll-is-announcer/blob/main/assets/announcer.js"><code class="language-plaintext highlighter-rouge">announcer.js</code></a> — JavaScript.</p>
+      </li>
+    </ul>
+  </dd>
+  <dt>Пример использования</dt>
+  <dd>
+    <p>Репозиторий с <a href="https://github.com/shikhalev/shikhalev.github.io">исходниками данного сайта</a>, а конкретней — его каталог <a href="https://github.com/shikhalev/shikhalev.github.io/tree/main/.github/workflows"><code class="language-plaintext highlighter-rouge">.github/workflows</code></a>.</p>
+
+    <ul>
+      <li>
+        <p><a href="https://github.com/shikhalev/shikhalev.github.io/blob/main/.github/workflows/build.yml#L26"><code class="language-plaintext highlighter-rouge">build.yml</code></a> — сборка Jekyll с обратным пушем и деплоем GitHub Pages. Срабатывает на пуш в ветку <code class="language-plaintext highlighter-rouge">main</code>.</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/shikhalev/shikhalev.github.io/blob/main/.github/workflows/announce.yml#L24"><code class="language-plaintext highlighter-rouge">announce.yml</code></a> — отправка анонсов, с обратным пушем и опять же деплоем с обновленным списком анонсированных. Запускается
+вручную или раз в сутки по расписанию (на случай, если забуду сам запустить).</p>
+      </li>
+      <li>
+        <p>Пример использования liquid-тега можно увидеть лэйауте для постов — <a href="https://github.com/shikhalev/shikhalev.github.io/blob/main/_layouts/post.html#L7"><code class="language-plaintext highlighter-rouge">post.html</code></a>.</p>
+      </li>
+      <li>
+        <p>И что важно: конфигурация в <a href="https://github.com/shikhalev/shikhalev.github.io/blob/main/_config.yml#L184-L217"><code class="language-plaintext highlighter-rouge">_config.yml</code></a>.</p>
+      </li>
+    </ul>
+  </dd>
+  <dt>Вспомогательное</dt>
+  <dd>
+    <p>Как можно видеть workflows репозитория сайта ссылаются также на некоторые нестандартные actions:</p>
+
+    <ul>
+      <li>
+        <p><a href="https://github.com/jekyll-is/action-jekyll-is-backpush"><code class="language-plaintext highlighter-rouge">action-jekyll-is-backpush</code></a> — обратный пуш с уведомлением. Проверяет, есть ли чего пушить, если нечего — то ничего не делает
+(и не уведомляет, ибо не о чем). Обратный пуш отправляется с «[skip ci]» в сообщении коммита, соответственно, триггеры на него не срабатывают.</p>
+      </li>
+      <li>
+        <p><a href="https://github.com/jekyll-is/action-jekyll-is-publish"><code class="language-plaintext highlighter-rouge">action-jekyll-is-publish</code></a> — публикация, то есть отправка в ветку <code class="language-plaintext highlighter-rouge">gh-pages</code>. Опять же пушит и уведомляет только если есть изменения.</p>
+      </li>
+    </ul>
+  </dd>
+</dl>
+
+<p>Телеграм-бот в моем случае используется один и тот же для анонсов и для уведомлений, что, конечно, совершенно необязательно.</p>
+
+<h2 id="вместо-итого">Вместо итого</h2>
+
+<p>Надеюсь, код достаточно понятный сам по себе. Но если что, готов ответить на вопросы в комментариях.</p>]]></content><author><name>Иван Шихалев</name></author><category term="tech" /><category term="programming" /><category term="web" /><category term="about" /><category term="сайт" /><category term="Telegram" /><category term="Jekyll" /><category term="GitHub" /><category term="GitHub Actions" /><category term="планы" /><category term="Jekyll IS" /><summary type="html"><![CDATA[Как я сделал автоанонсирование постов на данном сайте в Telegram — логика, Jekyll-плагин и GitHub Actions]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Телеграм-канал сайта</title><link href="https://shikhalev.github.io/about/2025/11/telegram.html" rel="alternate" type="text/html" title="Телеграм-канал сайта" /><published>2025-11-26T00:00:00+00:00</published><updated>2025-11-26T00:00:00+00:00</updated><id>https://shikhalev.github.io/about/2025/11/telegram</id><content type="html" xml:base="https://shikhalev.github.io/about/2025/11/telegram.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:320px;margin-bottom:0px; margin-top:-3px;"><a href="/img/2025/11/26/telegram/cover-fhd.webp" class="__image_link"><img src="/img/2025/11/26/telegram/cover-320-753x633-368-138.webp" class="__image" alt="Картинка для привлечения внимания" title="Картинка для привлечения внимания" /></a></figure>
 
 <p>Завел себе (точнее, этому сайту) канал в те­ле­ге — <strong><a href="https://t.me/shikhalev_blog">https://t.me/shikhalev_blog</a></strong>.</p>
 
@@ -1734,139 +1888,4 @@ RAW (те самые сырые данные с мат­ри­цы) на ко�
       <p>См. мой пост <a href="/photo/2020/01/darktable-rgb-levels.html" title="Новый модуль Darktable — «Уровни RGB»">«Новый модуль Darktable — „Уровни RGB“» от 17.01.2020</a>. <a href="#fnref:rgb" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;photo&quot;, &quot;processing&quot;, &quot;birdwatching&quot;, &quot;nature&quot;]" /><category term="iNaturalist" /><category term="Darktable" /><category term="RAW" /><category term="JPEG" /><summary type="html"><![CDATA[Как стоит и как не стоит обрабатывать фотографии наблюдений живой природы]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2023/07/28/nature-photo/00094-2752207474-640x640-768x400-0-94.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2023/07/28/nature-photo/00094-2752207474-640x640-768x400-0-94.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Почему KDE?</title><link href="https://shikhalev.github.io/tech/2023/03/why-kde.html" rel="alternate" type="text/html" title="Почему KDE?" /><published>2023-03-28T00:00:00+00:00</published><updated>2023-03-28T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2023/03/why-kde</id><content type="html" xml:base="https://shikhalev.github.io/tech/2023/03/why-kde.html"><![CDATA[<figure class="__figure __implicit_figure __right logo" style="max-width:320px;shape-outside:url(/img/2023/03/28/why-kde/mascot_konqi-app-dev-320.webp);"><a href="https://community.kde.org/File:Mascot_konqi-app-dev.png"><img src="/img/2023/03/28/why-kde/mascot_konqi-app-dev-320.webp" class="__image" style="shape-outside:url(/img/2023/03/28/why-kde/mascot_konqi-app-dev-320.webp);" alt="KDE's Developer Konqi mascot by Tyson Tan." title="KDE's Developer Konqi mascot by Tyson Tan." /></a></figure>
-
-<p>В по­след­нее время я как-то в оче­ред­ной раз заинтересовался, что там творится в ми­ре DE, рабочих окружений и прочая. Ничего
-принципиально нового не уви­дел, зато собственное мнение по это­му вопросу несколько уточнил и детализировал.</p>
-
-<p>Собственно данный пост и посвящен тому, почему я начал пользоваться и пользуюсь именно <strong><a href="https://kde.org/" title="K Desktop Environment" class="img-icon-kde">KDE</a></strong> и, видимо,
-продолжу им пользоваться в обо­зри­мом будущем. Это, кстати, не значит, что я рекомендую это окружение всем и на вся­кий слу­чай —
-задачи бывают разные, предпочтения и привычки бывают разные, а альтернативные варианты не так уж плохи сами по себе.</p>
-
-<p>KDE у меня основная и, по су­ти, единственная оболочка на лич­ном компьютере примерно с 2006 го­да — с той самой поры, как
-я полностью перешел на Li­nux. Другие оболочки я пробовал, но надолго они у ме­ня не за­дер­жи­ва­лись. Впрочем, в по­след­нее
-время я довольно часто имею с ни­ми дело по ра­бо­те — т.е. на ра­бо­чих компьютерах, на вир­ту­ал­ках и т.д., так что некоторое
-представление имею.</p>
-
-<!--more-->
-
-<h2 id="дела-давно-минувших-дней">Дела давно минувших дней</h2>
-
-<p>Итак, почему я остановился на KDE в 2006–2007 го­дах? До пол­но­го перехода на Li­nux я уже был с ним в це­лом знаком, в ос­нов­ном
-в ви­де дистрибутива Mandrake, который как раз к это­му времени превратился в Man­dri­va.</p>
-
-<ul style="text-align:justify;">
-  <li>Так что причина пер­вая — это, конечно
-<em>синдром утен­ка</em> — в тех дистрибутивах KDE был рабочим окружением по умол­ча­нию.</li>
-</ul>
-
-<p>Тем не ме­нее тогда у ме­ня стояли параллельно несколько DE и WM — <strong><a href="https://www.gnome.org/" title="GNOME" class="img-icon-gnome">GNOME</a></strong>, <strong><a href="https://www.xfce.org" title="Окружение Xfce" class="img-icon-xfce">Xfce</a></strong>,
-<strong><a href="https://ice-wm.org/" title="IceWM">IceWM</a></strong> и прочая, включая <strong><a href="https://ru.wikipedia.org/wiki/Openbox" title="Страница об OpenBox на Википедии">Open-</a></strong> и <strong><a href="https://ru.wikipedia.org/wiki/Fluxbox" title="Страница о FluxBox на Википедии">Flux­Box</a></strong>‘ы — я их активно пробовал и изучал. Таким образом
-следующие причины для сде­лан­но­го выбора были все же более серьезны.</p>
-
-<ul>
-  <li>
-    <p>Причина вто­рая — <em>эстетическая</em>. От ви­да классического вто­ро­гно­ма меня и сейчас передергивает, с IceWM и прочей мелочью все
-не так плохо, они просто ко­ря­вень­кие. Более менее нормально выглядели Xfce и <strong><a href="http://www.enlightenment.org/" title="Enlightenment WM">En­light­en­ment</a></strong><sup id="fnref:e17"><a href="#fn:e17" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>, но тут вставала
-в полный рост причина уже следующая.</p>
-  </li>
-  <li>
-    <p>Номер три и самое важное — <em>функциональность</em>. Точнее, не столь­ко важное, сколько ма­ло­пре­о­до­ли­мое на тот момент (почему именно на тот,
-а не во­об­ще, поясню позже).</p>
-
-    <ul>
-      <li>
-        <p>Во-первых, сам <strong><a href="https://apps.kde.org/" title="Приложения KDE">набор приложений</a></strong><sup id="fnref:apps"><a href="#fn:apps" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>, который закрывает очень много задач первой необходимости. В этом плане хоть как-то
-может посоревноваться только GNOME (да и то не очень), но про не­го см. выше.</p>
-      </li>
-      <li>
-        <p>Во-вторых, файловый ме­нед­жер — самый функциональный среди «из­ко­ро­боч­ных». Что тогдашний <strong><a href="https://apps.kde.org/konqueror/" title="Konqueror — веб-браузер и файловый менеджер в прошлом" class="img-icon-konqueror">Kon­que­ror</a></strong>,
-что нынешний <strong><a href="https://apps.kde.org/dolphin/" title="Файловый менеджер Dolphin" class="img-icon-dolphin">Dol­phin</a></strong>, при всей разнице между ними. Причем функциональность файлового менеджера очень
-сильно завязана на сис­те­му в це­лом, его ценность именно во вза­и­мо­дей­с­т­вии с дру­ги­ми компонентами.</p>
-      </li>
-      <li>
-        <p>В-третьих, на тот момент мне было очень полезно все, связанное с контактами и организацией дел, т.е. <strong><a href="https://kontact.kde.org/" title="Набор программ Kontact" class="img-icon-kontact">Kontact</a></strong>
-(KDE <abbr title="Personal Information Manager">PIM</abbr>) + <strong><a href="https://apps.kde.org/kopete/" title="Kopete — мультипротокольная программа обмена мгновенными сообщениями" class="img-icon-kopete">Kopete</a></strong>.</p>
-      </li>
-      <li>
-        <p>Ну и в-четвертых, конечно, это <strong><a href="https://kate-editor.org/" title="Kate — текстовый редактор" class="img-icon-kate">Kate</a></strong>. Аналогов по сути и не бы­ло никаких, не толь­ко «из ко­роб­ки», но и вообще
-под Li­nux. Разве что запускать Note­pad++ под Wi­ne, но это извращение (особенно под тем еще Wi­ne).</p>
-      </li>
-    </ul>
-
-    <p>В общем-то почти со все­ми программами из ком­п­лек­та KDE ситуация схо­жая — аналогов в на­бо­ре других DE или нет, или они гораздо слабее
-по фун­к­ци­о­наль­нос­ти или качеству.</p>
-  </li>
-</ul>
-
-<h2 id="что-то-поменялось">Что-то поменялось?</h2>
-
-<p>Если коротко — то примерно все, но ничего существенного.</p>
-
-<p>В прин­ци­пе, эстетическую составляющую можно снять. Новые версии GNOME и его производные уже не вы­зы­ва­ют той оторопи, разве что MA­TE, но даже
-он не так страшен, как был вто­ро­гном… Правда, теперь это место занимает банальное не­у­доб­с­т­во — современный GNOME (а также не­до­по­чив­шая Unity)
-предназначены для план­ше­тов, или хо­тя бы ноутбуков с тач­па­дом, а не для обыч­ных компьютеров с мышкой.</p>
-
-<div class="note">
-  <p>Интересно, мно­го ли людей в ре­аль­нос­ти используют Linux на план­ше­тах? Вот что-то есть у ме­ня сомнения… Однако мейнстрим устремлен именно туда.
-Сама идея конвергенции интересна, но переносить интерфейс с вось­ми­дюй­мо­во­го устройства, управляемого толстыми пальцами,
-на три­дца­ти­двух­дюй­мо­вый монитор с клавиатурой и мышкой — то такое…</p>
-
-  <p>Да даже тач­па­ды есть не у всех. Только не го­во­ри­те об этом разработчикам GNOME, а то их родимчик хватит от вне­зап­нос­ти.</p>
-</div>
-
-<p><em>Очень</em> бесит свалка приложений вместо структурированного меню (да, в KDE тоже есть такой режим, но никто его включать не за­став­ля­ет).</p>
-
-<p>А вот к <strong><a href="https://projects.linuxmint.com/cinnamon/" title="Cinnamon Projects" class="img-icon-cinnamon">Cin­na­mon</a></strong> претензий, пожалуй, что и нет. Хотя по фун­к­ци­о­на­лу KDE и побогаче будет, но…
-В це­лом его приложений уже хватает, но не по­то­му, что они такие молодцы, а потому, что:</p>
-
-<ul>
-  <li>
-    <p>Отпала надобность в <abbr title="Personal Information Manager">PIM</abbr> — все это в те­ле­фо­не и в об­ла­ках преимущественно.</p>
-  </li>
-  <li>
-    <p>Вместо Kate теперь можно использовать VSCode в тя­же­лых случаях и примерно любой простенький редактор — в легких.</p>
-  </li>
-</ul>
-
-<p>Если бы я выбирал себе сейчас окружение <em>с нуля</em>, то вполне возможно, что и выбрал бы Cinnamon. Но это с нуля, а переходить на него,
-менять все привычки — это совсем другое дело и требует серьезных доводов. Кроме того в мелочах он все равно чуть-чуть да отстает:</p>
-
-<ul>
-  <li>
-    <p>Есть такая полезная соф­ти­на — KDE Con­nect. В прин­ци­пе она за со­бой KDE не та­щит, можно использовать в лю­бом окружении, но…</p>
-  </li>
-  <li>
-    <p>Стандартный набор приложений в KDE все равно и обширней и лучше.</p>
-  </li>
-  <li>
-    <p>Почему-то GTK-приложения в KDE выглядят гораздо приятней и единообразней, чем Qt-приложения в лю­бых GTK-based окружениях.</p>
-  </li>
-</ul>
-
-<p>В об­щем, хотя изначальные причины для вы­бо­ра KDE несколько поослабли, причин против такого выбора не по­я­ви­лось.</p>
-
-<h3 id="и-далее">И далее…</h3>
-
-<p>Этот пост я начал писать больше месяца назад, но отложил в дол­гий ящик, поскольку грядущий (на тот момент) ре­лиз — <strong>5.27</strong> —
-обещал кое-что интересное. Это ин­те­рес­ное — возвращение с но­вой стороны к тай­лин­го­вым функциям. Во­об­ще-то, когда-то в KDE
-уже был тай­лин­го­вый режим, но его давно выпилили, вероятно, за не­вос­тре­бо­ван­нос­тью. И вот ввели <a href="https://kde.org/ru/announcements/plasma/5/5.26.90/">новый <strong>«мозаичный режим»</strong></a>
-(как и ранее, не от­ме­ня­ю­щий общий стековый прин­цип) — теперь можно разметить экран на об­лас­ти, в ко­то­рые будет вписываться окно,
-перетаскиваемое при за­жа­той клавише <code class="language-plaintext highlighter-rouge">[Shift]</code>.</p>
-
-<p>Мне эта фишка прямо вот очень нравится <a href="/tech/2022/10/harddybr.html#monitor">как владельцу большого монитора</a>, однако не мо­гу не от­ме­тить сыроватость управления всем
-этим. Бу­дет ли управление доработано в рамках пятой вет­ки — большой вопрос, объявлено, что 5.27 — последний большой ре­лиз 5.x.</p>
-
-<p>А что там будет в шес­той ветке, не вы­бро­сят ли чего по­лез­но­го — можно только ждать и надеяться.</p>
-
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:e17">
-      <p>На­до бы, кстати, на до­су­ге посмотреть побаловаться… Исключительно ради любопытства. <a href="#fnref:e17" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:apps">
-      <p>По ссылке далеко не толь­ко те приложения, которые идут «из ко­роб­ки», там много разного, в том числе того, что и не в каж­дом
-     дистрибутиве найдется… Но бо­лее конкретной ссылки я не нашел. <a href="#fnref:apps" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-  </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;soft&quot;, &quot;dybr&quot;]" /><category term="Linux" /><category term="KDE" /><category term="рабочий стол" /><category term="окружение рабочего стола" /><category term="DE" /><category term="наброс" /><summary type="html"><![CDATA[Некоторые размышления об окружении рабочего стола]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;photo&quot;, &quot;processing&quot;, &quot;birdwatching&quot;, &quot;nature&quot;]" /><category term="iNaturalist" /><category term="Darktable" /><category term="RAW" /><category term="JPEG" /><summary type="html"><![CDATA[Как стоит и как не стоит обрабатывать фотографии наблюдений живой природы]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2023/07/28/nature-photo/00094-2752207474-640x640-768x400-0-94.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2023/07/28/nature-photo/00094-2752207474-640x640-768x400-0-94.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
