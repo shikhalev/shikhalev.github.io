@@ -25,7 +25,7 @@ jobs:
           echo "Build..."
           JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build
       - name: Back push
-        uses: jekyll-is/action-jekyll-is-backpush@main
+        uses: jekyll-is/action-jekyll-is-backpush@v1
         with:
           label: 'Jekyll Build'
           telegram-bot-token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
