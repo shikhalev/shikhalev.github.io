@@ -31,7 +31,7 @@ group :jekyll_plugins do
   gem "jekyll-toc"
   gem "jekyll-remote-theme"
   gem "jekyll-redirect-from"
-  gem "jekyll-is-announcer", ">= 0.8.0.10" # , path: '/home/ivan/wrk/projects/site/jekyll-is/jekyll-is-announcer'
+  gem "jekyll-is-announcer", ">= 0.8.1" # , path: '/home/ivan/wrk/projects/site/jekyll-is/jekyll-is-announcer'
 end
 
-gem 'jekyll-theme-shikhalev', '>= 0.1.0.15'
+gem 'jekyll-theme-shikhalev', '>= 0.1.0.16'
