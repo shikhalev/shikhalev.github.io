@@ -2243,6 +2243,24 @@ li.fa-icon-li-youtube::marker {
   white-space: normal;
 }
 
+.img-icon-tg::before {
+  content: "";
+  background-image: url(/assets/img/ico/tg.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -12%;
+  margin-right: 0.2em;
+}
+.img-icon-tg {
+  white-space: nowrap;
+}
+.img-icon-tg span {
+  white-space: normal;
+}
+
 .img-icon-jekyll::before {
   width: 0.5em;
 }
