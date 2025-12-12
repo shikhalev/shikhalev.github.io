@@ -1,1 +1,24 @@
-{}
+{
+  "telegram": {
+    "config": {
+      "method": "telegram",
+      "chat_id": "@shikhalev_blog"
+    },
+    "posts": {
+      "_posts/tech/2025/2025-12-12-inat-channel.md": {
+        "url": "https://shikhalev.github.io/tech/2025/12/inat-channel.html",
+        "date": "2025/12/12",
+        "title": "iNaturalist + Telegram",
+        "description": "Написал скрипт для автопостинга выборок из iNaturalist в tg-каналы",
+        "categories": [
+          "технологии",
+          "программирование",
+          "ruby",
+          "веб",
+          "природа",
+          "общество"
+        ]
+      }
+    }
+  }
+}
