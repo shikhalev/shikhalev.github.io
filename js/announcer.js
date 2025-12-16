@@ -16,11 +16,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log({key: key})
                 if (!key || !(key in data)) return;
 
-                const link = elem.querySelector('a');
-                if (link) {
-                    link.href = data[key];
-                    elem.style.display = '';
-                }
+                // const link = elem.querySelector('a');
+                // if (link) {
+                //     link.href = data[key];
+                //     elem.style.display = '';
+                // }
+                const match = data[key].match(/t\.me\/(.+)/);
+                console.log({match:match})
+                const discussion = match ? match[1] : null; // "shikhalev_blog/66"
+                console.log({discussion:discussion});
+
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = 'https://telegram.org/js/telegram-widget.js?22';
+                script.setAttribute('data-telegram-discussion', discussion);
+                script.setAttribute('data-comments-limit', '5');
+                script.setAttribute('data-width', '100%');
+                script.setAttribute('data-dark', '0');
+                script.setAttribute('data-color', '#3e5662');
+                elem.appendChild(script);
+                elem.style.display = '';
+                console.log({Telegram:Telegram});
             });
         })
         .catch(error => {

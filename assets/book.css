@@ -35,15 +35,8 @@
 }
 
 .announcer-block {
-  max-width: 360px;
   margin: 30px auto;
-  text-align: center;
-  background-color: steelblue;
-  border-radius: 10px;
-  border: solid 2px silver;
-}
-.announcer-block:hover {
-  box-shadow: 0px 0px 5px #987;
+  border-top: solid 10px #DDD;
 }
 .announcer-block a {
   font-size: 24px;
@@ -60,6 +53,9 @@
   content: "\f1d8  ";
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
+}
+.announcer-block iframe {
+  filter: opacity(0.8) saturate(1.2);
 }
 
 ul.square-list li::marker {
