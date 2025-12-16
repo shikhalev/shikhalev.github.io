@@ -36,15 +36,15 @@
 }
 
 .announcer-block {
-  max-width: 360px;
+  // max-width: 360px;
   margin: 30px auto;
-  text-align: center;
-  background-color: steelblue;
-  border-radius: 10px;
-  border: solid 2px silver;
+  // text-align: center;
+  // background-color: steelblue;
+  // border-radius: 10px;
+  border-top: solid 10px #DDD;
 
   &:hover {
-    box-shadow: 0px 0px 5px #987;
+    // box-shadow: 0px 0px 5px #987;
   }
 
   a {
@@ -64,6 +64,10 @@
       font-family: "Font Awesome 5 Free";
       font-weight: 400;
     }
+  }
+
+  iframe {
+    filter: opacity(0.8) saturate(1.2);
   }
 }
 
