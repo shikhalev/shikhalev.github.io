@@ -5,16 +5,15 @@
       "chat_id": "@shikhalev_blog"
     },
     "posts": {
-      "_posts/tech/2025/2025-12-23-is-dsl.md": {
-        "url": "https://shikhalev.github.io/tech/2025/12/is-dsl.html",
+      "_posts/blog/2025/2025-12-23-entropy.md": {
+        "url": "https://shikhalev.github.io/life/2025/12/entropy.html",
         "date": "2025/12/23",
-        "title": "Паттерн «Фасад» и гем для DSL",
-        "description": "Написал гем, в первую очередь предназначенный для формирования DSL, а по сути — реализующий паттерн «Фасад» с нюансами.",
+        "title": "Продолжая повышать энтропию интернетов...",
+        "description": "Еще три телеграм-канала с фотографиями из iNaturalist.",
         "categories": [
-          "технологии",
-          "программирование",
-          "ruby",
-          "абстракции"
+          "жизнь",
+          "природа",
+          "веб"
         ]
       }
     }
