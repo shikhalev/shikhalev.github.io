@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2025-12-23T12:02:40+00:00</updated><id>https://shikhalev.github.io/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Паттерн «Фасад» и гем для DSL</title><link href="https://shikhalev.github.io/tech/2025/12/is-dsl.html" rel="alternate" type="text/html" title="Паттерн «Фасад» и гем для DSL" /><published>2025-12-23T00:00:00+00:00</published><updated>2025-12-23T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/12/is-dsl</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/12/is-dsl.html"><![CDATA[<figure class="__figure __implicit_figure __right face" style="max-width:320px;"><img src="/img/2025/12/23/is-dsl/facade-320-1664x1664-411-0.webp" class="__image" alt="Картинка для привлечения внимания" title="Картинка для привлечения внимания" /></figure>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2025-12-23T13:10:51+00:00</updated><id>https://shikhalev.github.io/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Продолжая повышать энтропию интернетов…</title><link href="https://shikhalev.github.io/life/2025/12/entropy.html" rel="alternate" type="text/html" title="Продолжая повышать энтропию интернетов…" /><published>2025-12-23T00:00:00+00:00</published><updated>2025-12-23T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2025/12/entropy</id><content type="html" xml:base="https://shikhalev.github.io/life/2025/12/entropy.html"><![CDATA[<p>В порядке продолжения повышения энтропии, а также эксперимента ради, я недавно завел еще три канала в те­ле­грам с на­блю­де­ни­я­ми из iNa­tu­ra­list:</p>
+
+<dl>
+  <dt><a href="https://t.me/daily_flowers_of_the_world" class="img-icon-tg">Daily Flowers of the World</a></dt>
+  <dd>
+    <p>Наблюдения цветов — в запросе указаны <code class="language-plaintext highlighter-rouge">term_id</code> и <code class="language-plaintext highlighter-rouge">term_value_id</code>, чтобы в выборку попадали именно наблюдения с цве­та­ми, а не во­об­ще все наблюдения
+цветковых растений.</p>
+  </dd>
+  <dt><a href="https://t.me/daily_birds_of_the_world" class="img-icon-tg">Daily Birds of the World</a></dt>
+  <dd>
+    <p>Наблюдения птиц. Тут ничего специфического, просто каждый день разные птицы.</p>
+  </dd>
+  <dt><a href="https://t.me/daily_butterflies_of_the_world" class="img-icon-tg">Daily Butterflies of the World</a></dt>
+  <dd>
+    <p>Наблюдения бабочек — в запросе опять же указаны <code class="language-plaintext highlighter-rouge">term_id</code> и <code class="language-plaintext highlighter-rouge">term_value_id</code>, чтобы в выборку попадали только взрослые особи, т.е. собственно бабочки,
+а не гусеницы, куколки или яйца.</p>
+  </dd>
+</dl>
+
+<!--more-->
+
+<p>Конфигурации доступны на GitHub — <strong><a href="https://github.com/inat-get/channels-daily" class="img-icon-github">inat-get/channels-daily</a></strong>.</p>
+
+<h2 id="примеры">Примеры</h2>
+
+<script async="" src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="daily_flowers_of_the_world/15" data-width="100%"></script>
+
+<script async="" src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="daily_birds_of_the_world/6" data-width="100%"></script>
+
+<script async="" src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="daily_butterflies_of_the_world/4" data-width="100%"></script>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="nature" /><category term="web" /><category term="птицы" /><category term="бабочки" /><category term="цветы" /><category term="iNaturalist" /><category term="Telegram" /><summary type="html"><![CDATA[Еще три телеграм-канала с фотографиями из iNaturalist.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Паттерн «Фасад» и гем для DSL</title><link href="https://shikhalev.github.io/tech/2025/12/is-dsl.html" rel="alternate" type="text/html" title="Паттерн «Фасад» и гем для DSL" /><published>2025-12-23T00:00:00+00:00</published><updated>2025-12-23T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/12/is-dsl</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/12/is-dsl.html"><![CDATA[<figure class="__figure __implicit_figure __right face" style="max-width:320px;"><img src="/img/2025/12/23/is-dsl/facade-320-1664x1664-411-0.webp" class="__image" alt="Картинка для привлечения внимания" title="Картинка для привлечения внимания" /></figure>
 
 <p>При написании <strong><a href="https://github.com/inat-get/inat-channel" class="img-icon-github">inat-channel</a></strong> я столкнулся вот с какой проблемой: с одной стороны, более-менее сложные
 действия должны быть декомпозированы, то есть разбиты на модули и отдельные методы в них; с другой — глубокая декомпозиция заставляет
@@ -1480,18 +1509,4 @@ Grok налажал с хуками Jekyll, неверно отнеся один
       <p><a href="https://www.inaturalist.org/observations/288683861" class="img-icon-inaturalist">#288683861</a>. <a href="#fnref:obs-flo" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;photo&quot;, &quot;birdwatching&quot;, &quot;tech&quot;, &quot;hard&quot;, &quot;dybr&quot;]" /><category term="Sigma" /><category term="Sigma AF 60-600mm f/4.5-6.3 DG OS HSM Sports" /><category term="iNaturalist" /><category term="объектив" /><category term="телеобъектив" /><summary type="html"><![CDATA[Мой новый объектив — Sigma AF 60-600mm f/4.5-6.3 DG OS HSM Sports]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/06/19/sigma-60-600/sigma-60-600mm-640x640-1992x1040-127-314.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/06/19/sigma-60-600/sigma-60-600mm-640x640-1992x1040-127-314.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Небольшое объявление</title><link href="https://shikhalev.github.io/about/2023/11/domain.html" rel="alternate" type="text/html" title="Небольшое объявление" /><published>2023-11-13T00:00:00+00:00</published><updated>2023-11-13T00:00:00+00:00</updated><id>https://shikhalev.github.io/about/2023/11/domain</id><content type="html" xml:base="https://shikhalev.github.io/about/2023/11/domain.html"><![CDATA[<figure class="__figure __implicit_figure __right logo" style="max-width:150px;shape-outside:url(/img/2023/11/13/domain/face-uncertain.svg);"><a href="/img/2023/11/13/domain/face-uncertain.svg" class="__image_link"><img src="/img/2023/11/13/domain/face-uncertain.svg" class="__image" style="shape-outside:url(/img/2023/11/13/domain/face-uncertain.svg);" /></a></figure>
-
-<p>Есть очень большое подозрение, что в этом году я не смогу оплатить продление домена.
-В этом случае сайт будет доступен по адресу <strong><a href="https://shikhalev.github.io">https://shikhalev.github.io</a></strong>.</p>
-
-<p>Терять домен, конечно, грустненько, но денег нет, держимся.</p>
-
-<hr />
-
-<p>На всякий случай замечу, что ежели кто-то что-то <a href="#donate">задонатит</a>, эти деньги пойдут
-на оплату домена в самую первую очередь. Вообще же, сайт денег не приносит, предметом
-первой необходимости не является, соответственно ресурсы из других источников на него
-тратить нерационально.</p>
-
-<hr />]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;about&quot;]" /><category term="shikhalev.org" /><summary type="html"><![CDATA[Есть очень большое подозрение, что в этом году я не смогу оплатить продление домена. В этом случае сайт будет доступен по адресу https://shikhalev.github.io. Терять домен, конечно, грустненько, но денег нет, держимся. На всякий случай замечу, что ежели кто-то что-то задонатит, эти деньги пойдут на оплату домена в самую первую очередь. Вообще же, сайт денег не приносит, предметом первой необходимости не является, соответственно ресурсы из других источников на него тратить нерационально.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;photo&quot;, &quot;birdwatching&quot;, &quot;tech&quot;, &quot;hard&quot;, &quot;dybr&quot;]" /><category term="Sigma" /><category term="Sigma AF 60-600mm f/4.5-6.3 DG OS HSM Sports" /><category term="iNaturalist" /><category term="объектив" /><category term="телеобъектив" /><summary type="html"><![CDATA[Мой новый объектив — Sigma AF 60-600mm f/4.5-6.3 DG OS HSM Sports]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/06/19/sigma-60-600/sigma-60-600mm-640x640-1992x1040-127-314.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/06/19/sigma-60-600/sigma-60-600mm-640x640-1992x1040-127-314.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
