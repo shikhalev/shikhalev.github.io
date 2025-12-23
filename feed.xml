@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2025-12-16T20:31:42+00:00</updated><id>https://shikhalev.github.io/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Пара апдейтов</title><link href="https://shikhalev.github.io/tech/2025/12/updates.html" rel="alternate" type="text/html" title="Пара апдейтов" /><published>2025-12-16T00:00:00+00:00</published><updated>2025-12-16T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/12/updates</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/12/updates.html"><![CDATA[<h2 id="inat-channel-v092"><a href="https://github.com/inat-get/inat-channel" class="img-icon-github">inat-channel</a> v0.9.2</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2025-12-23T12:02:40+00:00</updated><id>https://shikhalev.github.io/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Паттерн «Фасад» и гем для DSL</title><link href="https://shikhalev.github.io/tech/2025/12/is-dsl.html" rel="alternate" type="text/html" title="Паттерн «Фасад» и гем для DSL" /><published>2025-12-23T00:00:00+00:00</published><updated>2025-12-23T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/12/is-dsl</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/12/is-dsl.html"><![CDATA[<figure class="__figure __implicit_figure __right face" style="max-width:320px;"><img src="/img/2025/12/23/is-dsl/facade-320-1664x1664-411-0.webp" class="__image" alt="Картинка для привлечения внимания" title="Картинка для привлечения внимания" /></figure>
+
+<p>При написании <strong><a href="https://github.com/inat-get/inat-channel" class="img-icon-github">inat-channel</a></strong> я столкнулся вот с какой проблемой: с одной стороны, более-менее сложные
+действия должны быть декомпозированы, то есть разбиты на модули и отдельные методы в них; с другой — глубокая декомпозиция заставляет
+писать длинные обращения к методам типа <code class="language-plaintext highlighter-rouge">INat­Chan­nel::​Te­le­gram::​send_​ob­ser­va­ti­on</code>, что неудобно, да и не эстетично. По хо­ро­ше­му вообще
+нужно верхний уровень методов ин­клю­дить и писать <code class="language-plaintext highlighter-rouge">send_observation</code> в основной программе, но если писать все как включаемые методы модулей,
+то во-первых, они все из всех модулей попадут в финале в одно пространство имен, а во-вторых, туда же попадут и приватные методы.</p>
+
+<p>Для подобных случаев и предназначен <strong><a href="https://ru.wikipedia.org/wiki/Фасад_(шаблон_проектирования)">паттерн «Фасад»</a></strong> — мы создаем отдельный программный модуль — в данном случае это модуль же
+в терминах Ruby — который содержит только нужные извне методы, делегируя их в основной нормально де­ком­по­зи­ро­ван­ный код. И затем его спокойно
+ин­клю­дим в ко­де основного скрипта.</p>
+
+<p>Собственно, именно так я и сделал, определив модуль <code class="language-plaintext highlighter-rouge">IC</code> и заполняя его методами в тех же файлах, где они определены. Туда же отправились
+некоторые методы, не нужные вовне, а используемые слабо логически связанными модулями — здесь речь скорее не о логике и отделении фасада,
+а о сокращении (текстовом) кросс­мо­дуль­ных вызовов. Впрочем, по мере разрастания структуры вопрос, что считать внутренним, а что внешним,
+становится не очень однозначным.</p>
+
+<p>Подумав немного на эту тему, я решил вынести абстракцию в код и написал <strong><a href="https://github.com/inat-get/is-dsl" class="img-icon-github">is-dsl</a></strong> — гем, упрощающий, а главное —
+структурирующий делегирование методов и констант фасаду. Подробнее — в <a href="https://github.com/inat-get/is-dsl/blob/main/README.md">README</a> репозитория (есть <a href="https://github.com/inat-get/is-dsl/blob/main/README-ru.md">русская версия</a>), а также
+в <a href="https://inat-get.github.io/is-dsl/IS/DSL.html">yard-документации</a>. Здесь коротко обозначу основные особенности:</p>
+
+<ul>
+  <li>
+    <p>Помимо основного модуля фасада формируется теневой модуль — для использования внутри библиотеки. Все, что попадает в основной, попадает
+и в теневой, обратное неверно. См. <code class="language-plaintext highlighter-rouge">shadow</code>-методы.</p>
+  </li>
+  <li>
+    <p>Можно делегировать как статически сингл­тон-методы классов и модулей, так и лениво методы произвольных сингл­тон-объектов, где сам объект
+создается или получается через вызов блока. См. <code class="language-plaintext highlighter-rouge">lazy</code>-ме­то­ды. Предполагается применение с ме­то­дом класса <code class="language-plaintext highlighter-rouge">instance</code> в пер­вую очередь.</p>
+  </li>
+</ul>
+
+<hr />
+
+<p>Планов менять или добавлять что-то в основную функциональность нет, думаю когда-нибудь сделать плагин для <a href="https://yardoc.org/">YARD</a>, чтобы делегирование
+методов правильно автоматически документировалось.</p>]]></content><author><name>Иван Шихалев</name></author><category term="tech" /><category term="programming" /><category term="ruby" /><category term="abs" /><category term="gem" /><category term="is-dsl" /><category term="DSL" /><category term="паттерны проектирования" /><summary type="html"><![CDATA[Написал гем, в первую очередь предназначенный для формирования DSL, а по сути — реализующий паттерн «Фасад» с нюансами.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/12/23/is-dsl/facade-640x640-2432x1269-0-178.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/12/23/is-dsl/facade-640x640-2432x1269-0-178.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Пара апдейтов</title><link href="https://shikhalev.github.io/tech/2025/12/updates.html" rel="alternate" type="text/html" title="Пара апдейтов" /><published>2025-12-16T00:00:00+00:00</published><updated>2025-12-16T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/12/updates</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/12/updates.html"><![CDATA[<h2 id="inat-channel-v092"><a href="https://github.com/inat-get/inat-channel" class="img-icon-github">inat-channel</a> v0.9.2</h2>
 
 <p>Что это такое — см. <a href="/tech/2025/12/inat-channel.html">пре­ды­ду­щий пост</a>.</p>
 
@@ -1459,232 +1494,4 @@ Grok налажал с хуками Jekyll, неверно отнеся один
 первой необходимости не является, соответственно ресурсы из других источников на него
 тратить нерационально.</p>
 
-<hr />]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;about&quot;]" /><category term="shikhalev.org" /><summary type="html"><![CDATA[Есть очень большое подозрение, что в этом году я не смогу оплатить продление домена. В этом случае сайт будет доступен по адресу https://shikhalev.github.io. Терять домен, конечно, грустненько, но денег нет, держимся. На всякий случай замечу, что ежели кто-то что-то задонатит, эти деньги пойдут на оплату домена в самую первую очередь. Вообще же, сайт денег не приносит, предметом первой необходимости не является, соответственно ресурсы из других источников на него тратить нерационально.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">INat::Get — ранняя альфа</title><link href="https://shikhalev.github.io/tech/2023/11/inat-get.html" rel="alternate" type="text/html" title="INat::Get — ранняя альфа" /><published>2023-11-13T00:00:00+00:00</published><updated>2023-11-13T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2023/11/inat-get</id><content type="html" xml:base="https://shikhalev.github.io/tech/2023/11/inat-get.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2023/11/13/inat-get/github-screen-fhd.webp" class="__image_link"><img src="/img/2023/11/13/inat-get/github-screen-320.webp" class="__image" alt="Скриншот репозитория" title="Скриншот репозитория" /></a></figure>
-
-<blockquote class="epigraph">
-  <p>— Я зделяль. ©</p>
-</blockquote>
-
-<p>Итак, прошу любить и жаловать — <strong><a href="https://github.com/shikhalev/inat-get" class="img-icon-github">INat::Get</a></strong> — софтина для по­лу­че­ния и обработки данных
-с <strong><a href="https://www.inaturalist.org/" class="img-icon-inaturalist">iNaturalist</a></strong>. Основное изначальное пред­наз­на­че­ние — подбивать всякую статистику
-для про­ек­тов на том же iNaturalist’е, но варианты использования гораздо шире.</p>
-
-<p>Первым делом хочу отметить, что текущее со­сто­я­ние — это ранняя альфа. Я <em>не ре­ко­мен­дую</em> никому этим пользоваться иначе
-как из любопытства и желания поучаствовать. Тем не ме­нее делаю пост уже сейчас в на­деж­де, что любопытные желающие найдутся.
-Со сво­ей стороны готов подробно отвечать на во­про­сы и учитывать пожелания.</p>
-
-<h2 id="зачем">Зачем?</h2>
-
-<p><strong><a href="https://www.inaturalist.org/" class="img-icon-inaturalist">iNaturalist</a></strong> предоставляет открытый доступ к ог­ром­но­му массиву наблюдений, а также
-по су­ти к по­сто­ян­но ак­ту­али­зи­ру­ему таксономическому справочнику (тут можно обсуждать нюансы, но для лю­би­тель­с­ких целей
-это очень хорошие данные). Интерфейс самого сайта не по­кры­ва­ет и, конечно, не мо­жет покрывать все возможные варианты
-запросов и выборок, но мы можем получить сами данные через <a href="https://www.inaturalist.org/observations/export">механизм выгрузок</a> или посредством <a href="https://api.inaturalist.org/v1/docs/">открытого API</a>,
-и второй вариант богаче, гибче и вообще интересней.</p>
-
-<!--more-->
-
-<p>В ка­чес­т­ве примера таких отчетов, которые нельзя получить просто из ин­тер­фей­са, приведу свои посты в про­ек­те
-<a href="https://www.inaturalist.org/projects/bioraznoobrazie-artinskogo-rayona">«Био­раз­но­об­ра­зие Артинского района»</a>. Не по­то­му, что они представляют собой что-то особо ценное,
-а именно как демонстрацию:</p>
-
-<ul>
-  <li>
-    <p><a href="https://www.inaturalist.org/projects/bioraznoobrazie-artinskogo-rayona/journal/83533">«Неитоги 2023»</a> (как бы итоги сезона, только подведенные в его середине). Здесь интересны «Новинки» и «Потеряшки».</p>
-  </li>
-  <li>
-    <p><a href="https://www.inaturalist.org/projects/bioraznoobrazie-artinskogo-rayona/journal/83535">«Сравнение с соседями»</a>. Не прос­то количественное сравнение, а сравнение видового состава.</p>
-  </li>
-  <li>
-    <p><a href="https://www.inaturalist.org/projects/bioraznoobrazie-artinskogo-rayona/journal/83536">«Виды, по которым недостаточно наблюдений»</a>.</p>
-  </li>
-</ul>
-
-<p>Эти посты были сформированы по дан­ным выгрузок, а не API, посредством мною же написанного <strong><a href="https://github.com/shikhalev/inat-script" class="img-icon-github">inat-script</a></strong>,
-в про­цес­се работы с ко­то­рым (и над ко­то­рым) я осознал все недостатки механизма выгрузок:</p>
-<ul>
-  <li>ограниченность данных;</li>
-  <li>необходимость ручного создания процесса выгрузки и, потом, загрузки файла;</li>
-  <li>и глав­ное — неизвестный заранее срок го­тов­нос­ти — некоторые выгрузки делались вовсе несколько дней.</li>
-</ul>
-
-<p>Кроме того, сам скрипт, как всякий первый блин, требовал существенной переработки для то­го, чтобы удобно внедрять в не­го новые
-варианты выборок и отчетов, и я решил написать с ну­ля новый инструмент, работающий непосредственно с API.</p>
-
-<h2 id="принцип-действия">Принцип действия</h2>
-
-<p>На са­мом деле я сначала пытался сделать как-то так, чтобы отчеты формировались через конфигурационные файлы. Однако гибкости
-в та­ком подходе никакой (ну или потребуется senior-yaml-de­ve­lo­per для ис­поль­зо­ва­ния, ЕВПОЧЯ). В ито­ге пришел к вы­во­ду, что
-проще предположить в про­д­ви­ну­том пользователе базовые знания Ruby…</p>
-
-<p>В об­щем, программа запускает ruby-скрипты, называемые задачами, которые работают на уров­не абстрактных выборок и списков,
-оставляя все обращения к API и кэширование ответов под ка­по­том. По боль­шо­му счету пользователь имеет дело (помимо объектов,
-представляющих собственно данные) с дву­мя классами: <code class="language-plaintext highlighter-rouge">DataSet</code>, который представляет собой набор наблюдений, уже отфильтрованный
-тем или иным образом; и <code class="language-plaintext highlighter-rouge">List</code> — по су­ти датасет, сгруппированный по неким объектам, как пра­ви­ло — таксонам.</p>
-
-<p>Для фор­ми­ро­ва­ния вывода имеется специальный объект <code class="language-plaintext highlighter-rouge">Table</code>, который сначала определяется, т.е. задаются колонки с за­го­лов­ка­ми,
-шириной и выравниванием, а затем наполняется данными, которые должны представлять собой массив хэш-таб­лиц… Звучит страшно,
-но в дей­с­т­ви­тель­нос­ти скрипты могут быть совсем простые. Например, давайте получим список видов в Ар­тин­с­ком районе, которых
-я никогда не наблюдал.</p>
-
-<figure class="highlight">
-  <pre><code class="language-ruby" data-lang="ruby"><span class="n">user</span> <span class="o">=</span> <span class="no">User</span><span class="o">::</span><span class="n">by_login</span> <span class="s1">'shikhalev'</span>
-<span class="n">place</span> <span class="o">=</span> <span class="no">Place</span><span class="o">::</span><span class="n">by_slug</span> <span class="s1">'artinskiy-gorodskoy-okrug-osm-2023-sv-ru'</span>
-
-<span class="n">user_dataset</span> <span class="o">=</span> <span class="nb">select</span> <span class="ss">user_id: </span><span class="n">user</span><span class="p">.</span><span class="nf">id</span>
-<span class="n">place_dataset</span> <span class="o">=</span> <span class="nb">select</span> <span class="ss">place_id: </span><span class="n">place</span><span class="p">.</span><span class="nf">id</span>
-
-<span class="n">user_list</span> <span class="o">=</span> <span class="n">user_dataset</span><span class="p">.</span><span class="nf">to_list</span>
-<span class="n">place_list</span> <span class="o">=</span> <span class="n">place_dataset</span><span class="p">.</span><span class="nf">to_list</span>
-
-<span class="n">result_list</span> <span class="o">=</span> <span class="n">place_list</span> <span class="o">-</span> <span class="n">user_list</span>
-
-<span class="n">result_table</span> <span class="o">=</span> <span class="n">table</span> <span class="k">do</span>
-  <span class="n">column</span> <span class="s1">'#'</span><span class="p">,</span> <span class="ss">width: </span><span class="mi">3</span><span class="p">,</span> <span class="ss">align: :right</span><span class="p">,</span> <span class="ss">data: :line_no</span>
-  <span class="n">column</span> <span class="s1">'Таксон'</span><span class="p">,</span> <span class="ss">data: :taxon</span>
-  <span class="n">column</span> <span class="s1">'К-во набл.'</span><span class="p">,</span> <span class="ss">width: </span><span class="mi">6</span><span class="p">,</span> <span class="ss">align: :right</span><span class="p">,</span> <span class="ss">data: :count</span>
-<span class="k">end</span>
-
-<span class="n">result_rows</span> <span class="o">=</span> <span class="n">result_list</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">ds</span><span class="o">|</span> <span class="p">{</span> <span class="ss">taxon: </span><span class="n">ds</span><span class="p">.</span><span class="nf">object</span><span class="p">,</span> <span class="ss">count: </span><span class="n">ds</span><span class="p">.</span><span class="nf">count</span> <span class="p">}</span> <span class="p">}</span>
-
-<span class="n">result_table</span> <span class="o">&lt;&lt;</span> <span class="n">result_rows</span>
-
-<span class="no">File</span><span class="p">.</span><span class="nf">write</span> <span class="s1">'notmy.htm'</span><span class="p">,</span> <span class="n">result_table</span><span class="p">.</span><span class="nf">to_html</span></code></pre>
-</figure>
-
-<p>Файл я поместил в <a href="https://github.com/shikhalev/inat-get/tree/main/samples">каталог примеров</a> под именем <a href="https://github.com/shikhalev/inat-get/blob/main/samples/notmy.inat"><code class="language-plaintext highlighter-rouge">notmy.inat</code></a>, теперь мы можем его запустить командой:</p>
-
-<figure class="highlight">
-  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>inat-get notmy.inat</code></pre>
-</figure>
-
-<p>И через некоторое время получим результат.</p>
-
-<p>Результат можно увидеть <a href="https://www.inaturalist.org/posts/86663-kogo-ya-esche-ne-videl-u-nas-zdes">в мо­ем посте на iNa­tu­ra­list</a>. Да, на дан­ный момент, все форматирование рассчитано именно и только
-на пос­ты в iNat, активно используя тамошние стили. Есть планы расширить данный момент, но об этом позже.</p>
-
-<p>Что важно, если мы тут же запустим ту же команду, то результат получим практически мгновенно, причем идентичный. А ес­ли выждем сутки,
-то некоторое  дополнительное время понадобится, но существенно меньшее, чем при пер­вом запуске. Это первый ключевой мо­мент — <strong>данные кэшируются</strong>.</p>
-
-<p>Кроме того, следует обратить внимание на то, что на са­мом-то деле API отдает не бо­лее 200 наб­лю­де­ний за один запрос. Здесь же
-этого ограничения мы не ви­дим и работаем с пол­ны­ми да­та­се­та­ми (объемом 3k+ и 4k+) — <strong>организация последовательной постраничной загрузки</strong>
-так же находится под капотом.</p>
-
-<h3 id="некоторые-детали">Некоторые детали</h3>
-
-<ul>
-  <li>
-    <p>Метод <code class="language-plaintext highlighter-rouge">select</code> выполняет запрос и возвращает объект класса <code class="language-plaintext highlighter-rouge">DataSet</code>. Именованные параметры данного метода примерно соответствуют
-параметрам API, правда, реализованы не все.</p>
-  </li>
-  <li>
-    <p>Класс <code class="language-plaintext highlighter-rouge">DataSet</code> инкапсулирует <em>набор наблюдений</em>, плюс опционально ассоциирует его с не­ко­то­рым объектом. В ос­нов­ном его поведение
-определяется включенным модулем <code class="language-plaintext highlighter-rouge">Enumerable</code>, и бинарными операциями:</p>
-
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">|</code> — объединение;</li>
-      <li><code class="language-plaintext highlighter-rouge">&amp;</code> — пересечение;</li>
-      <li><code class="language-plaintext highlighter-rouge">-</code> — разность.</li>
-    </ul>
-
-    <p>Также у класса <code class="language-plaintext highlighter-rouge">DataSet</code> имеется важный метод <code class="language-plaintext highlighter-rouge">to_list</code>, который создает объект класса <code class="language-plaintext highlighter-rouge">List</code>, группируя наблюдения по то­му или иному
-параметру. Для груп­пи­ров­ки используется <code class="language-plaintext highlighter-rouge">proc</code>-объ­ект, который должен выдавать по на­блю­де­нию собственно ключ группировки. Наиболее
-полезные (на мой взгляд) группировки уже определены как константы модуля <code class="language-plaintext highlighter-rouge">Listers</code>:</p>
-
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Listers::SPECIES</code> возвращает таксон, «приведенный к ви­ду». В ка­выч­ках потому, что результатом может быть как вид, так и гибрид
-или комплекс.</li>
-      <li><code class="language-plaintext highlighter-rouge">Listers::YEAR</code> возвращает год.</li>
-      <li>И так далее.</li>
-    </ul>
-
-    <p>Если вызвать <code class="language-plaintext highlighter-rouge">to_list</code> без параметров, то по умол­ча­нию будет использован <code class="language-plaintext highlighter-rouge">Listers::SPECIES</code>.</p>
-  </li>
-  <li>
-    <p>Класс <code class="language-plaintext highlighter-rouge">List</code> представляет собой список датасетов с ас­со­ци­и­ро­ван­ны­ми значениями. Также реализует модуль <code class="language-plaintext highlighter-rouge">Enumerable</code>, только итерируемыми
-элементами будут объекты класса <code class="language-plaintext highlighter-rouge">DataSet</code>, а не <code class="language-plaintext highlighter-rouge">Observation</code>. Для спис­ков также определены некоторые бинарные операции:</p>
-
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">+</code> — объединение;</li>
-      <li><code class="language-plaintext highlighter-rouge">*</code> — пересечение;</li>
-      <li><code class="language-plaintext highlighter-rouge">-</code> — разность (что и использовано в примере).</li>
-    </ul>
-
-    <p>Объединенный датасет из списка можно получить посредством метода <code class="language-plaintext highlighter-rouge">to_dataset</code>.</p>
-  </li>
-  <li>
-    <p>Классы данных: <code class="language-plaintext highlighter-rouge">Observation</code>, <code class="language-plaintext highlighter-rouge">Taxon</code>, <code class="language-plaintext highlighter-rouge">Place</code>, <code class="language-plaintext highlighter-rouge">User</code> и так далее предоставляют собственно данные. Свойств там много, их следует
-от­до­ку­мен­ти­ро­вать, но пока руки не до­шли. Впрочем, это тот случай, когда код действительно является документацией, так что см. <a href="https://github.com/shikhalev/inat-get/tree/main/lib/inat/data/entity">ка­та­лог
-<code class="language-plaintext highlighter-rouge">entity</code></a>.</p>
-
-    <p>Отмечу, что все они имеют метод класса <code class="language-plaintext highlighter-rouge">by_id</code> для по­лу­че­ния соответствующего объекта, и в до­пол­не­ние классы <code class="language-plaintext highlighter-rouge">Place</code> и <code class="language-plaintext highlighter-rouge">Project</code> имеют
-метод <code class="language-plaintext highlighter-rouge">by_slug</code>, а класс <code class="language-plaintext highlighter-rouge">User</code> — метод <code class="language-plaintext highlighter-rouge">by_login</code>.</p>
-  </li>
-</ul>
-
-<h2 id="установка">Установка</h2>
-
-<p>Установка максимально проста:</p>
-
-<figure class="highlight">
-  <pre><code class="language-console" data-lang="console"><span class="gp">#</span><span class="w"> </span>gem <span class="nb">install </span>inat-get</code></pre>
-</figure>
-
-<p>Правда, <em>на дан­ный момент все это гарантированно работает только под Li­nux</em>. Тестирование под Win­dows в пла­нах есть, но скорее ближе
-к весне.</p>
-
-<h2 id="планы">Планы</h2>
-
-<p>Вообще, на гит­ха­бе есть такой замечательный раздел <strong><a href="https://github.com/shikhalev/inat-get/issues" class="img-icon-github">«Issues»</a></strong>, где можно посмотреть процесс планирования в ре­аль­ном времени.
-Здесь постараюсь дать сводную картину.</p>
-
-<h3 id="к-версии-10">К версии 1.0</h3>
-
-<dl>
-  <dt>Документация</dt>
-  <dd>
-    <p>На первом этапе — полноценное руководство пользователя на рус­с­ком языке. Затем расширенное руководство как на рус­с­ком, так и на ан­г­лий­с­ком.</p>
-  </dd>
-  <dt>Данные</dt>
-  <dd>
-    <p>Сейчас многие поля, в том числе такие важные, как охранный статус, просто игнорируются. Это категорически неправильно и, естественно,
-будет исправлено уже в бе­та-вер­сии.</p>
-
-    <p>Сю­да же отнесу поддержку всех ключей запроса доступных в API. Тут есть некоторые нюансы, которые следует продумать, почему собственно
-на дан­ном этапе их и нет, но все решаемо.</p>
-  </dd>
-  <dt>Доделки и исправления</dt>
-  <dd>
-    <p>Уже замеченные баги есть, и их, само собой, исправлять нужно, причем в первую очередь. К счас­тью, критичный, т.е. приводящий к вы­ле­ту,
-только один и возникает он редко.</p>
-
-    <p>Есть запланированная, но пока нереализованная базовая функциональность, такая как чистка устаревших данных.</p>
-  </dd>
-  <dt>Оптимизация запросов</dt>
-  <dd>
-    <p>Есть мысли, как можно уменьшить количество запросов к API, что существенно ускорит работу в целом.</p>
-  </dd>
-</dl>
-
-<h3 id="дальнейшее-развитие">Дальнейшее развитие</h3>
-
-<dl>
-  <dt>Разнообразные возможности вывода</dt>
-  <dd>
-    <p>Тут с од­ной стороны, явно нужно сделать поддержку не толь­ко упрощенной разметки, используемой в жур­на­лах iNa­tu­ra­list, но и форматов,
-которые можно использовать в раз­лич­ных местах независимо.</p>
-
-    <p>С другой стороны, на­до бы добавить что-то типа вывода иерархических списков, а возможно и каких-то еще вариантов оформления.</p>
-
-    <p>Все это пока на уров­не исследования и формулирования задачи.</p>
-  </dd>
-  <dt>Оптимизация кэширования</dt>
-  <dd>
-    <p>Подробно расписывать не бу­ду, но там есть над чем работать. В пер­вую очередь это касается разбора и трансляции условий проектов.</p>
-  </dd>
-</dl>
-
-<h2 id="обратная-связь">Обратная связь</h2>
-
-<p>Буду рад вопросам, замечаниям и предложениям, как в ком­мен­та­ри­ях к это­му посту, так и в <a href="https://github.com/shikhalev/inat-get/discussions">со­от­вет­с­т­ву­ю­щем разделе на <strong class="img-icon-github">Git­Hub</strong></a>.
-Можно так же писать в лич­ные сообщения на iNa­tu­ra­list, хотя предпочтительно все же общаться в от­кры­тых комментариях, чтобы не воз­ни­ка­ло
-дублирования.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;birdwatching&quot;, &quot;nature&quot;]" /><category term="iNaturalist" /><summary type="html"><![CDATA[Набор инструментов для получения и обработки данных с iNaturalist]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2023/11/13/inat-get/screen-640x640-931x481-0-52.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2023/11/13/inat-get/screen-640x640-931x481-0-52.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<hr />]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;about&quot;]" /><category term="shikhalev.org" /><summary type="html"><![CDATA[Есть очень большое подозрение, что в этом году я не смогу оплатить продление домена. В этом случае сайт будет доступен по адресу https://shikhalev.github.io. Терять домен, конечно, грустненько, но денег нет, держимся. На всякий случай замечу, что ежели кто-то что-то задонатит, эти деньги пойдут на оплату домена в самую первую очередь. Вообще же, сайт денег не приносит, предметом первой необходимости не является, соответственно ресурсы из других источников на него тратить нерационально.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

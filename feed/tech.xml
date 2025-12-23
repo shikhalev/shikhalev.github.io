@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed/tech.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2025-12-16T20:31:42+00:00</updated><id>https://shikhalev.github.io/feed/tech.xml</id><title type="html">Иван Шихалев | Tech</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Пара апдейтов</title><link href="https://shikhalev.github.io/tech/2025/12/updates.html" rel="alternate" type="text/html" title="Пара апдейтов" /><published>2025-12-16T00:00:00+00:00</published><updated>2025-12-16T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/12/updates</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/12/updates.html"><![CDATA[<h2 id="inat-channel-v092"><a href="https://github.com/inat-get/inat-channel" class="img-icon-github">inat-channel</a> v0.9.2</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed/tech.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2025-12-23T12:02:40+00:00</updated><id>https://shikhalev.github.io/feed/tech.xml</id><title type="html">Иван Шихалев | Tech</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Паттерн «Фасад» и гем для DSL</title><link href="https://shikhalev.github.io/tech/2025/12/is-dsl.html" rel="alternate" type="text/html" title="Паттерн «Фасад» и гем для DSL" /><published>2025-12-23T00:00:00+00:00</published><updated>2025-12-23T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/12/is-dsl</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/12/is-dsl.html"><![CDATA[<figure class="__figure __implicit_figure __right face" style="max-width:320px;"><img src="/img/2025/12/23/is-dsl/facade-320-1664x1664-411-0.webp" class="__image" alt="Картинка для привлечения внимания" title="Картинка для привлечения внимания" /></figure>
+
+<p>При написании <strong><a href="https://github.com/inat-get/inat-channel" class="img-icon-github">inat-channel</a></strong> я столкнулся вот с какой проблемой: с одной стороны, более-менее сложные
+действия должны быть декомпозированы, то есть разбиты на модули и отдельные методы в них; с другой — глубокая декомпозиция заставляет
+писать длинные обращения к методам типа <code class="language-plaintext highlighter-rouge">INat­Chan­nel::​Te­le­gram::​send_​ob­ser­va­ti­on</code>, что неудобно, да и не эстетично. По хо­ро­ше­му вообще
+нужно верхний уровень методов ин­клю­дить и писать <code class="language-plaintext highlighter-rouge">send_observation</code> в основной программе, но если писать все как включаемые методы модулей,
+то во-первых, они все из всех модулей попадут в финале в одно пространство имен, а во-вторых, туда же попадут и приватные методы.</p>
+
+<p>Для подобных случаев и предназначен <strong><a href="https://ru.wikipedia.org/wiki/Фасад_(шаблон_проектирования)">паттерн «Фасад»</a></strong> — мы создаем отдельный программный модуль — в данном случае это модуль же
+в терминах Ruby — который содержит только нужные извне методы, делегируя их в основной нормально де­ком­по­зи­ро­ван­ный код. И затем его спокойно
+ин­клю­дим в ко­де основного скрипта.</p>
+
+<p>Собственно, именно так я и сделал, определив модуль <code class="language-plaintext highlighter-rouge">IC</code> и заполняя его методами в тех же файлах, где они определены. Туда же отправились
+некоторые методы, не нужные вовне, а используемые слабо логически связанными модулями — здесь речь скорее не о логике и отделении фасада,
+а о сокращении (текстовом) кросс­мо­дуль­ных вызовов. Впрочем, по мере разрастания структуры вопрос, что считать внутренним, а что внешним,
+становится не очень однозначным.</p>
+
+<p>Подумав немного на эту тему, я решил вынести абстракцию в код и написал <strong><a href="https://github.com/inat-get/is-dsl" class="img-icon-github">is-dsl</a></strong> — гем, упрощающий, а главное —
+структурирующий делегирование методов и констант фасаду. Подробнее — в <a href="https://github.com/inat-get/is-dsl/blob/main/README.md">README</a> репозитория (есть <a href="https://github.com/inat-get/is-dsl/blob/main/README-ru.md">русская версия</a>), а также
+в <a href="https://inat-get.github.io/is-dsl/IS/DSL.html">yard-документации</a>. Здесь коротко обозначу основные особенности:</p>
+
+<ul>
+  <li>
+    <p>Помимо основного модуля фасада формируется теневой модуль — для использования внутри библиотеки. Все, что попадает в основной, попадает
+и в теневой, обратное неверно. См. <code class="language-plaintext highlighter-rouge">shadow</code>-методы.</p>
+  </li>
+  <li>
+    <p>Можно делегировать как статически сингл­тон-методы классов и модулей, так и лениво методы произвольных сингл­тон-объектов, где сам объект
+создается или получается через вызов блока. См. <code class="language-plaintext highlighter-rouge">lazy</code>-ме­то­ды. Предполагается применение с ме­то­дом класса <code class="language-plaintext highlighter-rouge">instance</code> в пер­вую очередь.</p>
+  </li>
+</ul>
+
+<hr />
+
+<p>Планов менять или добавлять что-то в основную функциональность нет, думаю когда-нибудь сделать плагин для <a href="https://yardoc.org/">YARD</a>, чтобы делегирование
+методов правильно автоматически документировалось.</p>]]></content><author><name>Иван Шихалев</name></author><category term="tech" /><category term="programming" /><category term="ruby" /><category term="abs" /><category term="gem" /><category term="is-dsl" /><category term="DSL" /><category term="паттерны проектирования" /><summary type="html"><![CDATA[Написал гем, в первую очередь предназначенный для формирования DSL, а по сути — реализующий паттерн «Фасад» с нюансами.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/12/23/is-dsl/facade-640x640-2432x1269-0-178.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/12/23/is-dsl/facade-640x640-2432x1269-0-178.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Пара апдейтов</title><link href="https://shikhalev.github.io/tech/2025/12/updates.html" rel="alternate" type="text/html" title="Пара апдейтов" /><published>2025-12-16T00:00:00+00:00</published><updated>2025-12-16T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/12/updates</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/12/updates.html"><![CDATA[<h2 id="inat-channel-v092"><a href="https://github.com/inat-get/inat-channel" class="img-icon-github">inat-channel</a> v0.9.2</h2>
 
 <p>Что это такое — см. <a href="/tech/2025/12/inat-channel.html">пре­ды­ду­щий пост</a>.</p>
 
@@ -1673,141 +1708,4 @@ Grok налажал с хуками Jekyll, неверно отнеся один
 
 <p>Буду рад вопросам, замечаниям и предложениям, как в ком­мен­та­ри­ях к это­му посту, так и в <a href="https://github.com/shikhalev/inat-get/discussions">со­от­вет­с­т­ву­ю­щем разделе на <strong class="img-icon-github">Git­Hub</strong></a>.
 Можно так же писать в лич­ные сообщения на iNa­tu­ra­list, хотя предпочтительно все же общаться в от­кры­тых комментариях, чтобы не воз­ни­ка­ло
-дублирования.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;birdwatching&quot;, &quot;nature&quot;]" /><category term="iNaturalist" /><summary type="html"><![CDATA[Набор инструментов для получения и обработки данных с iNaturalist]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2023/11/13/inat-get/screen-640x640-931x481-0-52.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2023/11/13/inat-get/screen-640x640-931x481-0-52.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Merlin Bird ID</title><link href="https://shikhalev.github.io/life/2023/10/merlin.html" rel="alternate" type="text/html" title="Merlin Bird ID" /><published>2023-10-03T00:00:00+00:00</published><updated>2023-10-03T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2023/10/merlin</id><content type="html" xml:base="https://shikhalev.github.io/life/2023/10/merlin.html"><![CDATA[<figure class="__figure __implicit_figure __right face" style="max-width:300px;"><a href="/img/2023/10/03/merlin/merlin-main-fhd.webp" class="__image_link"><img src="/img/2023/10/03/merlin/merlin-main-300-600x600-240-540.webp" class="__image" alt="Скриншот главного экрана Merlin Bird ID" title="Скриншот главного экрана Merlin Bird ID" /></a></figure>
-
-<p>Активные пользователи <strong><a href="https://www.inaturalist.org/" title="iNaturalist" class="img-icon-inaturalist">iNaturalist</a></strong>, наверное, знают, что хотя там есть возможность загружать <em>зву­ко​вые</em> наблюдения,
-тамошний интеллект распознавать их автоматически не уме­ет. Это довольно печально, поскольку услышать многих птиц гораздо легче, чем увидеть, а тем более
-сфотографировать. Я, к то­му же, очень плохо запоминаю звуки и, соответственно, не мо­гу полагаться на се­бя в пла­не такого распознавания.</p>
-
-<p>И вот, наконец-то, благодаря <strong><a href="https://www.youtube.com/@fotoparus" title="Канал Василия Вишневского">Василию Вишневскому</a></strong>, его <a href="https://www.youtube.com/@VeshVish" title="Канал «Вещи Вишневского»">второму ютуб-каналу</a>, я узнал о за­ме­ча­тель­ном приложении, которое эту
-задачу решает. Его короткое видео по это­му по­во­ду — <strong><a href="https://youtu.be/G--0oTYRjYA" title="Как узнать кто поет? Приложение для смартфона" class="fa-icon-youtube">«Как узнать кто поет? Приложение для смарт­фо­на»</a></strong> —
-советую посмотреть (а тем, кто интересуется птицами и бердвотчингом, рекомендую подписаться на его основной канал). Я же здесь хочу изложить собственный опыт.</p>
-
-<p>Приложение называется <strong><a href="https://merlin.allaboutbirds.org/" title="Merlin Bird ID — официальная страницы" class="img-icon-merlin-bird">Merlin Bird ID</a></strong> и позволяет определять птиц не толь­ко по го­ло­су, но и по фо­то­гра­фии, а также
-как в клас­си­чес­ких оп­ре­де­ли­те­лях — по клю­чам. Однако лично мне интересно именно голосовое распознавание и только им я и пользовался.</p>
-
-<hr />
-
-<p class="i2">Кстати, Merlin — это не толь­ко волшебник из ле­генд о ко­ро­ле Артуре, но и пти­ца — <a href="https://en.wikipedia.org/wiki/Merlin_(bird)" title="Merlin (bird)">сокол <em>дербник (Falco columbarius)</em></a>. Птица вполне обычная для все­го
-северного полушария, включая и наши края.</p>
-
-<!--more-->
-
-<h2 id="функциональность">Функциональность</h2>
-
-<ul>
-  <li>
-    <p>Merlin действительно распознает голоса птиц, причем делает это даже че­рез шум и, главное, умеет распознавать нескольких поющих одновременно.
-Это очень большой и важный плюс. Распознает не иде­аль­но, но все-таки.</p>
-
-    <p>Кстати, довольно плохо распознает врановых. Возможно, так работает ка­кой-то шу­мо­дав, подрезая низкие частоты.</p>
-
-    <p>Для рас­поз­на­ва­ния в прин­ци­пе достаточно встроенного микрофона в те­ле­фо­не, хотя, конечно, с внеш­ним получается лучше.</p>
-  </li>
-  <li>
-    <p>Звук при рас­поз­на­ва­нии сохраняется в файл формата WAV, который затем можно перекинуть на ком­пью­тер и там что-то с ним поделать.
-А можно и наоборот, скинуть на те­ле­фон WAV-файл из дру­го­го источника и запустить распознавание на нем.</p>
-  </li>
-  <li>
-    <p>Наблюдения можно сохранять в свой список наблюдений/видов. Тут, правда, есть два неприятных момента:</p>
-
-    <ul>
-      <li>
-        <p>Во-первых, что-то у меня не за­да­лось с ло­ги­ном на eBird че­рез Mer­lin. То ли санкции так действуют, то ли я криворукий.</p>
-      </li>
-      <li>
-        <p>Во-вторых, что гораздо печальней, сохранение не ра­бо­та­ет офф­лайн. В ито­ге, если наблюдение сделано там, где нет связи,
-то сохранить его не по­лу­чит­ся. При этом файл звука сохраняется, а вот ко­ор­ди­на­ты — нет. Приходится их восстанавливать
-из об­ще­го трека<sup id="fnref:gpx"><a href="#fn:gpx" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>.</p>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="мой-порядок-действий">Мой порядок действий</h2>
-
-<p>Предварительно нужно не толь­ко установить приложение на те­ле­фон, но и внутри него скачать данные для рас­поз­на­ва­ния («птичьи пакеты»). Я себе скачал
-как Европу, так и Россию. Пробовал ставить также Центральную Азию, но начал получать много явно лож­но­по­ло­жи­тель­ных срабатываний. Еще отдельно стоит
-выбрать и выкачать язык названий. Или использовать английский, но лично мне это не­удоб­но — логика исторически сложившихся в раз­ных языках названий
-разная и просто так не пе­ре­во­дит­ся, а международные названия все равно латинские (и их отображение в на­с­трой­ках стоит включить<sup id="fnref:nomen"><a href="#fn:nomen" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>).</p>
-
-<figure class="__figure __implicit_figure __right" style="max-width:240px;"><a href="/img/2023/10/03/merlin/merlin-observation-fhd.webp" class="__image_link"><img src="/img/2023/10/03/merlin/merlin-observation-240.webp" class="__image" alt="Скриншот записи" title="Скриншот записи" /></a></figure>
-
-<ol>
-  <li>
-    <p>Я использую внешний микрофон <strong><a href="https://aliclick.shop/s/yot9gn">BOYA BY-MM1</a></strong>, покупал я его для камеры, но и с те­ле­фо­ном он прекрасно работает. Вообще, конечно,
-для за­пи­си птиц это далеко не луч­ший вариант, зато уже имеется в на­ли­чии.</p>
-
-    <p>Внешний микрофон довольно заметно улучшает распознавание, а главное, делает запись куда более четкой. Загружать записанное со встро­ен­но­го
-я, пожалуй, не со­ве­тую — будет очень тихо (и очень шумно после нормализации).</p>
-
-    <p>При этом по крайней мере мой микрофон сильно подвержен наводкам. Поэтому <em>при записи я включаю авиа­ре­жим</em>, иначе будут очень противные
-помехи, которые вро­де бы на рас­поз­на­ва­ние не осо­бо влияют, но выкладывать потом запись на iNa­tu­ra­list уже несколько стыдно. Авиа­ре­жим
-решает эту проблему полностью.</p>
-  </li>
-  <li>
-    <p>Записываю я обычно порядка двух минут, стараясь не ше­ве­лить­ся, чтобы не со­зда­вать незаметных для се­бя, но очень заметных для мик­ро­фо­на
-шумов. Дополнительный плюс — за это время многие птицы успокаиваются и начинают подлетать ближе, и после записи их можно и пофотографировать.</p>
-  </li>
-  <li>
-    <p>После записи нужно сохранить себе в спи­сок хо­тя бы одну распознанную птицу, иначе координаты записи не со­хра­нят­ся. А пе­ред этим отключить
-авиа­ре­жим, поскольку, как я уже сказал, оффлайн сохранение не ра­бо­та­ет. Помещение птицы в спи­сок делается через не впол­не очевидную кнопку
-«Это моя птица»… Впрочем, в кон­тек­с­те она бо­лее-ме­нее очевидна, но чтобы до нее добраться нужно тап­нуть на рас­кры­ва­ю­щий уголок справа
-от на­зва­ния птицы и промотать экран вниз, поскольку сначала будут предъявлены примеры голоса данной птицы.</p>
-
-    <p>На скрин­шо­те можно видеть завершенную запись с рас­поз­нан­ны­ми тремя видами. Если тап­нуть на стро­ку с пти­цей, вверху в по­ло­се отображения звука
-позиция будет проматываться к то­му месту, где голос этой птицы был зафиксирован. И это нам очень пригодится на сле­ду­ю­щем этапе.</p>
-  </li>
-  <li>
-    <p>А следующий этап проходит уже дома на компьютере. Из большого записанного файла нарезаю фрагменты (10–20 секунд), где шумов поменьше, а пение, наоборот,
-максимально отчетливое. Для ускорения поиска как раз и нужны указания от Merlin на начало фрагмента. Звук на записи даже с внешним микрофоном очень
-тихий, поэтому включаю нормализацию в редакторе. Использую банальный <strong><a href="https://apps.kde.org/ru/kwave/" class="img-icon-kwave">KWave</a></strong>, подойдет любой простой звуковой редактор,
-способный нарезать кусочки и нормализовать громкость.</p>
-
-    <p>Для проверки готовые фрагменты закидываю обратно на телефон и Merlin’ом же проверяю, распознает ли он там ту же птицу. Если у вас со слухом
-не все так плохо, как у меня, без этого этапа можно вполне обойтись.</p>
-  </li>
-  <li>
-    <p>В итоге конвертирую файл в формат MP3 посредством <strong><a href="https://store.kde.org/p/1126634" class="img-icon-soundkonverter">soundKonverter</a></strong> и загружаю на iNaturalist.
-Попытки загрузить не­с­кон­вер­ти­ро­ван­ный WAV ни к чему хорошему не при­ве­ли — во-пер­вых зачастую он не проходит по лимиту размера файла, а во-вторых,
-не проигрывается встроенными средствами на странице наблюдения.</p>
-  </li>
-</ol>
-
-<p>Вот <strong><a href="https://www.inaturalist.org/observations?d1=2023-01-01&amp;place_id=any&amp;sounds&amp;user_id=shikhalev" title="Примеры моих звуковых наблюдений на iNaturalist">здесь</a></strong> можно посмотреть, что у меня в этом сезоне получилось. Наблюдений не много, поскольку я не загружал
-звуковые наблюдения в тех случаях, когда были фотографии того же вида с той же прогулки.</p>
-
-<h2 id="общие-впечатления">Общие впечатления</h2>
-
-<p>В целом я очень и очень доволен.</p>
-
-<p>Чудес, правда, ожидать не стоит, и когда я говорю, что распознает и через шум, надо понимать, что шум имеется в виду
-умеренный. Иногда бывает так, что ничего не слышит в, казалось бы, почти идеальных условиях. Вообще, есть подозрение, что с микрофоном мой телефон работает
-как-то криво. Возможно, если поразбираться, то удастся улучшить как чувствительность, так и качество записи.</p>
-
-<p>Можно ли обойтись совсем без микрофона? Можно, но, на мой взгляд, для публикации наблюдений качество уже не подойдет. Да, следует оговориться, что это
-проблема телефона, а не приложения.</p>
-
-<p>А если говорить только о приложении, то я бы отметил два основных недостатка:</p>
-
-<ul>
-  <li>
-    <p>Проблемы с определением врановых. Зачастую просто игнорирует.</p>
-  </li>
-  <li>
-    <p>Невозможность сохранения координат без интернета. Это какой-то дурной косяк, на мой взгляд, причем полностью программный.</p>
-  </li>
-</ul>
-
-<p>И, если честно, хотелось бы такую функциональность иметь прямо в iNaturalist, чтобы не метаться ту­да-сю­да…</p>
-
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:gpx">
-      <p>См. пост <a href="/photo/2021/07/gpx-exif-tools.html" title="Как я ставлю геометки к фотографиям">«Как я ставлю геометки к фотографиям»</a>. Там и про за­пись трека и про его чистку от «вы­ле­тов». <a href="#fnref:gpx" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:nomen">
-      <p>Как русские, так и английские названия в раз­ных источниках могут не со­от­вет­с­т­во­вать друг другу, в том числе могут различаться в ба­зе eBird (с ко­то­рой работает Mer­lin) и в iNa­tu­ra­list. Латинские, правда, тоже от это­го не за­страхо­в­аны полностью, но все-та­ки расхождения а) менее вероятны, б) отслеживаются списками синонимов, переименований таксона и т.д. В об­щем, если хотите поискать информацию о ка­ком-ни­будь виде, всегда ориентируйтесь на ла­тин­с­кое название, тем более, что в на­уч­ных публикациях оно будет обязательно, а вот анг­лий­с­кое — опционально. <a href="#fnref:nomen" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-  </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;life&quot;, &quot;nature&quot;, &quot;birdwatching&quot;, &quot;tech&quot;]" /><category term="птицы" /><category term="Merlin Bird ID" /><category term="iNaturalist" /><category term="звук" /><category term="KWave" /><category term="мобильные приложения" /><category term="микрофон" /><summary type="html"><![CDATA[Приложение для рас­поз­на­ва­ния птиц по го­ло­су]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2023/10/03/merlin/merlin-main-640x640-1080x563-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2023/10/03/merlin/merlin-main-640x640-1080x563-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+дублирования.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;birdwatching&quot;, &quot;nature&quot;]" /><category term="iNaturalist" /><summary type="html"><![CDATA[Набор инструментов для получения и обработки данных с iNaturalist]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2023/11/13/inat-get/screen-640x640-931x481-0-52.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2023/11/13/inat-get/screen-640x640-931x481-0-52.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
