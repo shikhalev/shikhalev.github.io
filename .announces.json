@@ -1,1 +1,24 @@
-{}
+{
+  "telegram": {
+    "config": {
+      "method": "telegram",
+      "chat_id": "@shikhalev_blog"
+    },
+    "posts": {
+      "_posts/blog/2025/2025-12-25-naturadybr.md": {
+        "url": "https://shikhalev.github.io/life/2025/12/naturadybr.html",
+        "date": "2025/12/25",
+        "title": "Натурадыбр – 2025",
+        "description": "Мои итоги года на iNaturalist",
+        "categories": [
+          "жизнь",
+          "дыбр",
+          "природа",
+          "фото",
+          "бёрдвотчинг",
+          "железо"
+        ]
+      }
+    }
+  }
+}
