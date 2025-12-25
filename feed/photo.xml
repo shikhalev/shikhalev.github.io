@@ -1,4 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed/photo.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2025-12-23T13:48:43+00:00</updated><id>https://shikhalev.github.io/feed/photo.xml</id><title type="html">Иван Шихалев | Photo</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Первая глава «Практического руководства…»</title><link href="https://shikhalev.github.io/tech/2025/10/darktable-base.html" rel="alternate" type="text/html" title="Первая глава «Практического руководства…»" /><published>2025-10-26T00:00:00+00:00</published><updated>2025-10-26T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/10/darktable-base</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/10/darktable-base.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:240px;"><a href="/img/2025/10/05/darktable/cover-fhd.webp" class="__image_link"><img src="/img/2025/10/05/darktable/cover-240.webp" class="__image" alt="Картинка для привлечения внимания" title="Картинка для привлечения внимания" /></a></figure>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed/photo.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2025-12-25T01:25:29+00:00</updated><id>https://shikhalev.github.io/feed/photo.xml</id><title type="html">Иван Шихалев | Photo</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Натурадыбр – 2025</title><link href="https://shikhalev.github.io/life/2025/12/naturadybr.html" rel="alternate" type="text/html" title="Натурадыбр – 2025" /><published>2025-12-25T00:00:00+00:00</published><updated>2025-12-25T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2025/12/naturadybr</id><content type="html" xml:base="https://shikhalev.github.io/life/2025/12/naturadybr.html"><![CDATA[<figure class="__figure __implicit_figure __right face" style="max-width:360px;"><a href="/img/2025/06/19/sigma-60-600/IMG_8552-fhd.webp" class="__image_link"><img src="/img/2025/12/25/naturadybr/IMG_8552-360-1599x1599-313-0.webp" class="__image" alt="Самец косули" title="Самец косули" /></a></figure>
+
+<p>Что ж, год подходит к концу, я продолжаю снимать птичек на кормушке, но не думаю, что туда заявится кто-то новый и неожиданный.
+Так что можно подвести итоги наблюдательского года. Конечно, <strong><a href="https://www.inaturalist.org/" class="img-icon-inaturalist">iNaturalist</a></strong> предлагает
+<a href="https://www.inaturalist.org/stats/2025/shikhalev">свою <strong>инфографику</strong></a>, но это все же сухая цифра, хоть и приятно оформленная.</p>
+
+<p>Здесь я попробую изложить итоги года более субъективно и оценочно.</p>
+
+<p>Количественно, как можно видеть, в этом году я снимал меньше, чем в прош­лом и позапрошлом. Так получилось, в основном, потому,
+что в ию­ле, августе и начале сентября я учился на водительские права (сдал), и у меня резко перестало совпадать свободное время
+с подходящей погодой.</p>
+
+<p>Хотелось бы сказать «зато качественно…», но судя по количеству новых видов (и видов вообще), качество наблюдений осталось примерно
+таким же. Разве что чисто технически оно выросло, о чем ниже.</p>
+
+<p>Ну и еще про количество, чтобы потом не возвращаться: в мае перешагнул отметку в 5000 наблюдений на iNa­tu­ra­list, а в сен­тяб­ре — 6000.
+Сейчас у меня в профиле показывается 6069 наблюдений всего и 1111 видов. Правда, если брать только наблюдения исследовательского
+уровня, т.е. подтвержденные, получится 4748 и 836 видов соответственно, так что тысячником называться еще не смею. Ну да ладно,
+новые виды пока прибавляются, так что пара-тройка лет — и за ты­ся­чу перевалю.</p>
+
+<!--more-->
+
+<h2 id="железо-истекло">Железо (и стекло)</h2>
+
+<p>По технической части главная новина этого года, конечно, <a href="/photo/2025/06/sigma-60-600.html"><strong>объектив Sigma 60-600mm</strong>, о котором я писал довольно подробно</a>.
+Это действительно новый уровень съемки. Поснимав на него я как-то разок прогулялся со старым 18-300mm и понял, что тот меня больше
+не устраивает. Да, это универсальный прогулочный набор фокусных, да, несущественный вес, но качество совсем не то, все-таки 60-600 —
+совсем другой класс. Говорят, что новый Sigma 16-300mm для беззеркалок существенно лучше оптически, чем его предшественник, но он
+и стоит других денег, и беззеркалки у меня пока нет…</p>
+
+<p>Немного парадоксальным следствием перехода на новую тяжелую оптику стало то, что я <strong>начал много снимать на те­ле­фон</strong> — растения и грибы,
+в основном. Во-первых, чтобы лишний раз не ворочать кистью, а во-вторых, на телефон можно снимать одной рукой, второй придерживая
+раскачиваемый ветром стебель какой-нибудь травки. Этому, впрочем, поспособствовало еще и то, что прошлой зимой я обновил телефон
+и он снимает существенно лучше предыдущего. В общем, более-менее современные телефоны (причем у меня далеко не флагманская мо­дель —
+POCO X6) уже вполне приемлемо (для меня) справляются со съемкой <em>неподвижных</em> объектов <em>вблизи</em>.</p>
+
+<p>В целом такой набор — телезум и телефон — покрывает большинство моих потребностей. Не хватает только настоящего макрика 1:1 с эффективным
+фокусным от 100mm — для насекомых телефон слишком медленный, а телевик слишком неповоротливый (да и коэффициент 1:3.3 маловат будет
+для всякой мелочи). А еще не хватает второй камеры, на которой он будет прицеплен… Ее даже сильнее недостает, поскольку у меня есть резкий
+Гелиос с макрокольцами (но фокусное лучше бы побольше — с Гелиосом приходится практически упираться передней линзой в объект).</p>
+
+<p>Еще одна техническая обновка весны, которую я вполне протестировал за ле­то — это рекордер <strong>Zoom H1­es­sen­ti­al</strong> для записи звуков птиц.
+К нему бы, в идеале, еще направленный микрофон с тарелкой, но и так не­пло­хо — гораздо разборчивей, а глав­ное — стабильней, чем запись
+на телефон с дешевым внешним микрофоном.</p>
+
+<p>Ну и о печальном — чтобы жизнь мне медом не казалась, в начале лета <strong>сдох архивный HDD Seagate Archive 8TB</strong>, где лежали исходники фотографий
+прошлых лет и немного уже этого года, что было разобрано. Чуть-чуть не дотянул до 10 лет эксплуатации (куплен был в октябре 2015 го­да)…
+Возможно, удастся что-то с него вытянуть, когда появятся свободные деньги и время свозить его в Екатеринбург. А возможно, и хрен с ним.
+Все существенное так или иначе было где-то выложено.</p>
+
+<h2 id="животные-и-растения">Животные (и растения)</h2>
+
+<figure class="__figure __implicit_figure __right face" style="max-width:270px;"><a href="/img/2025/12/25/naturadybr/owl-fhd.webp" class="__image_link"><img src="/img/2025/12/25/naturadybr/owl-270-1698x1698-143-128.webp" class="__image" alt="Совёнок длиннохвостой (уральской) неясыти" title="Совёнок длиннохвостой (уральской) неясыти" /></a></figure>
+
+<p>Теперь, собственно, кого наблюдал.</p>
+
+<p>На самом деле, главными удачами мне кажутся не новые виды, а уже попадавшиеся мне ранее, но в этом сезоне получившие именно что качественные
+снимки. Это, во-первых, <strong><a href="https://www.inaturalist.org/observations/288662931">косуля</a></strong> на фото в начале поста, а во-вторых, <strong><a href="https://www.inaturalist.org/observations/284750212">совята длиннохвостой неясыти</a></strong>. Вот как раз
+за ори­ги­на­лы фото совят немного обид­но — они пропали с ар­хи­вом. В наблюдении на iNaturalist качество более чем достаточное для интернета,
+конечно, но их, возможно, имело б смысл и распечатать…</p>
+
+<p>Что же до <em>новых</em> видов птиц, то здесь новый объектив сработал скорее на дальность, чем на качество. Могу, пожалуй, похвастаться наблюдениями
+(но не самими фото): <strong><a href="https://www.inaturalist.org/observations/288665630">полевого</a> и <a href="https://www.inaturalist.org/observations/302357143">степного</a> луней</strong> (ранее у меня уже были <a href="https://www.inaturalist.org/observations/82016420">луговой</a> и <a href="https://www.inaturalist.org/observations/87085976">болотный</a>),
+<strong><a href="https://www.inaturalist.org/observations/288663831">болотной совы</a></strong>, да <strong><a href="https://www.inaturalist.org/observations/288665231">пустельги</a></strong>. Ах да, еще наконец-то удалось кое-как записать голос <strong><a href="https://www.inaturalist.org/observations/289768933">вяхиря</a></strong>, тут, конечно,
+спасибо рекордеру.</p>
+
+<figure class="__figure __implicit_figure __left face" style="max-width:220px;"><a href="/img/2025/12/25/naturadybr/IMG_5690-fhd.webp" class="__image_link"><img src="/img/2025/12/25/naturadybr/IMG_5690-220-643x643-543-269.webp" class="__image" alt="Ветреница алтайская" title="Ветреница алтайская" /></a></figure>
+
+<p>А из растений в первую очередь хотелось бы отметить <strong><a href="https://www.inaturalist.org/observations/274648417">ветреницу алтайскую</a></strong> (на фото слева). О ее существовании в наших краях я знал,
+но никак она мне не попадалась раньше. И не попалась бы, если б не пренебрег заветом классика не разговаривать с незнакомцами. Место, где она
+цвела мне указал случайно встреченный чувак в лесу, причем место это было совсем близко к моему маршруту, но все же в стороне, там, где я
+обычно и не хожу, поскольку раньше не замечал ничего интересного.</p>
+
+<figure class="__figure __implicit_figure __right face" style="max-width:220px;"><a href="/img/2025/12/25/naturadybr/IMG_8353-fhd.webp" class="__image_link"><img src="/img/2025/12/25/naturadybr/IMG_8353-220-1024x1024-282-23.webp" class="__image" alt="Адонис весенний" title="Адонис весенний" /></a></figure>
+
+<p>Вторым же «долгожданным сюрпризом» стал <strong><a href="https://www.inaturalist.org/observations/288703584">адонис весенний</a></strong>. Про него я правда не имел точных сведений, что он растет где-то неподалеку,
+но имел все основания такое предполагать. И вот обнаружил — без посторонней помощи, то есть случайно. Вообще, это была самая интересная прогулка,
+пожалуй — две косули (обоего пола), сова, пустельга, полевой лунь и всякого разного по мелочи.</p>
+
+<hr />
+
+<p>Были, конечно, и другие новые для меня виды, общий список я, думаю, повешу где-то в январе <a href="https://www.inaturalist.org/journal/shikhalev">в своем журнале на iNaturalist</a>.
+Там вырисовывается 74 пун­к­та, но о большинстве из них мне сказать особо нечего.</p>
+
+<h2 id="итого">Итого</h2>
+
+<p>В целом прошедший сезон вспомнить приятно. Хотелось бы больше, но что-то я стал привередлив к погоде и неохотно выхожу из зоны комфорта…
+При этом все еще могу спокойно отмотать 15–20 километров за шесть часов и не зажужжать, что немного успокаивает.</p>
+
+<p>Посмотрим, каков будет следующий сезон…</p>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="dybr" /><category term="nature" /><category term="photo" /><category term="birdwatching" /><category term="hard" /><category term="натурадыбр" /><category term="iNaturalist" /><category term="птицы" /><category term="звери" /><category term="прогулки" /><category term="наблюдения" /><category term="фототехника" /><category term="оптика" /><summary type="html"><![CDATA[Мои итоги года на iNaturalist]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/12/25/naturadybr/IMG_8552-640x640-2400x1252-0-156.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/12/25/naturadybr/IMG_8552-640x640-2400x1252-0-156.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Первая глава «Практического руководства…»</title><link href="https://shikhalev.github.io/tech/2025/10/darktable-base.html" rel="alternate" type="text/html" title="Первая глава «Практического руководства…»" /><published>2025-10-26T00:00:00+00:00</published><updated>2025-10-26T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/10/darktable-base</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/10/darktable-base.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:240px;"><a href="/img/2025/10/05/darktable/cover-fhd.webp" class="__image_link"><img src="/img/2025/10/05/darktable/cover-240.webp" class="__image" alt="Картинка для привлечения внимания" title="Картинка для привлечения внимания" /></a></figure>
 
 <p>Выложил <a href="/pages/books/darktable/pg/1_base_processing.html">первую главу</a> «<a href="/pages/books/darktable/pg/">Практического руководства по <strong class="img-icon-darktable">darktable</strong></a>» — <strong><a href="/pages/books/darktable/pg/1_base_processing.html">«Базовая обработка»</a></strong>.</p>
 
@@ -1096,88 +1185,4 @@ Wi-Fi, и управлять камерой с те­ле­фо­на полу�
       <p>Или это просто мне так «везло»… к то­му же, есть у ме­ня два наблюдения <em>предположительно</em> рода <em>беляночки (Leptidea)</em> — <a href="https://www.inaturalist.org/observations/87082850">#8708­2850</a> и <a href="https://www.inaturalist.org/observations/86981114">#8698­1114</a>. <a href="#fnref:bels" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;life&quot;, &quot;nature&quot;, &quot;photo&quot;, &quot;birdwatching&quot;, &quot;dybr&quot;]" /><category term="птицы" /><category term="растения" /><category term="наблюдения" /><category term="iNaturalist" /><category term="Арти" /><category term="насекомые" /><category term="ирга" /><category term="фауна" /><category term="флора" /><category term="инвазивные виды" /><category term="ядовитые растения" /><category term="биоразнообразие" /><category term="хищные птицы" /><category term="стрекозы" /><category term="моллюски" /><category term="жуки" /><category term="пчелы" /><category term="бабочки" /><summary type="html"><![CDATA[Пара (тройка) очередных выходов в лес с камерой]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2021/07/31/walks/IMG_0235-640x640-500-261-1200-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2021/07/31/walks/IMG_0235-640x640-500-261-1200-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Как я ставлю геометки к фотографиям</title><link href="https://shikhalev.github.io/photo/2021/07/gpx-exif-tools.html" rel="alternate" type="text/html" title="Как я ставлю геометки к фотографиям" /><published>2021-07-17T00:00:00+00:00</published><updated>2021-07-17T00:00:00+00:00</updated><id>https://shikhalev.github.io/photo/2021/07/gpx-exif-tools</id><content type="html" xml:base="https://shikhalev.github.io/photo/2021/07/gpx-exif-tools.html"><![CDATA[<h2 id="получение-трека">Получение трека</h2>
-
-<figure class="__figure __implicit_figure __right" style="max-width:200px;"><a href="/img/2021/07/17/gpx-exif-tools/locus-map-fhd.webp" class="__image_link"><img src="/img/2021/07/17/gpx-exif-tools/locus-map-200.webp" class="__image" alt="Скриншот Locus Map" title="Скриншот Locus Map" /></a></figure>
-
-<p>Фотокамера у меня недорогая, и <abbr title="Global Positioning System">GPS</abbr> в ней, конечно, нет. Зато есть в телефоне. Поэтому треки я записываю приложением
-<strong><a href="https://www.locusmap.app/" class="img-icon-locus-map">Locus<span> Map Free</span></a></strong> (не Pro) — большую часть его возможностей (даже бесплатной
-версии) я не использую, но треки пи­шет хорошо, меня устраивает. И, кста­ти, весьма скромно использует батарею.</p>
-
-<p><em>Перед выходом</em>, сразу после проверки заряда во всех устройствах и места на флешке, <em>крайне желательно убедиться, что время
-на телефоне и в ка­ме­ре — одинаковое</em>. Конечно, при пешем передвижении минутная разница не так существенна, но однажды у меня
-камера отстала на пять минут, и результаты были для меня несколько внезапны.</p>
-
-<p>Что еще важно для записи трека: дать приложению нужные разрешения <em>для всех режимов</em> — не хо­дить же с постоянно включенным
-экраном, на котором оно распахнуто. То есть, доступ к мес­то­по­ло­же­нию должен быть «Разрешить в лю­бом режиме», и «Кон­т­роль
-активности» — «Нет ограничений», при ре­ко­мен­до­ван­ном «Умном режиме» нормального трека получить не удас­т­ся. Что хо­ро­шо —
-Locus Map проверяет эти разрешения и выдает подсказку, если они не ус­та­нов­ле­ны, не ис­клю­че­но, что именно отсутствие такой
-подсказки и не позволило мне подружиться с другими приложениями для записи треков.</p>
-
-<p>Трек пишется в <abbr title="GPS eXchange Format">GPX</abbr>-файл, и это хорошо, поскольку данный формат понимают если не все, то очень многие программы, с ко­то­ры­ми
-нужно взаимодействовать. Я его отправляю прямо из при­ло­же­ния кнопкой шаринга «<span class="fas"></span>»,
-из предлагаемых вариантов выбирая <strong><a href="https://kdeconnect.kde.org/" class="img-icon-kdeconnect">KDE<span> Con­nect</span></a></strong> — архиполезная вещь, хоть
-и глюч­ная (впрочем, каким путем передать файл на компьютер — непринципиально).</p>
-
-<!--more-->
-
-<h2 id="подготовка-файла-трека">Подготовка файла трека</h2>
-
-<p>Итак, у нас есть <abbr title="GPS eXchange Format">GPX</abbr>-файл со все­ми перемещениями. Необязательно полученный именно с телефона, и имен­но так, как я изложил
-выше — подойдет любой источник, глав­ное — часы синхронизировать.</p>
-
-<figure class="__figure __implicit_figure __center" style="max-width:800px;"><a href="/img/2021/07/17/gpx-exif-tools/gpxlab-fhd.webp" class="__image_link"><img src="/img/2021/07/17/gpx-exif-tools/gpxlab-800.webp" class="__image" alt="Главное окно GPXLab" title="Главное окно GPXLab" /></a></figure>
-
-<p>Теперь нужно почистить трек: <abbr title="Global Positioning System">GPS</abbr> — штука тонкая, и слу­ча­ют­ся вылеты типа показанного на скрин­шо­те — там аж несколько точек,
-образующих «треугольную» петлю, явно лажовые. Вообще, существуют программы, ищущие и вы­чи­ща­ю­щие такие точки автоматически
-(например, <strong><a href="https://www.gpsbabel.org/" class="img-icon-gpsbabel">GPSBabel</a></strong>),
-но мне проще глазами посмотреть и руками удалить. Для этой цели хорошо подходит <strong><a href="https://github.com/BourgeoisLab/GPXLab" class="img-icon-gpxlab">GPXLab</a></strong>.
-Можно ориентироваться прямо по карте, можно просмотреть список точек справа внизу, обращая внимание на не­су­раз­ные значения шага
-и ско­рос­ти — ну, не мог я передвигаться пешком по ле­су со ско­рос­тью почти 80 км/ч… Такие точки просто удаляем. Можно еще
-обратить внимание на слиш­ком резкие перепады высот (верхний правый угол) и вычистить их тоже.</p>
-
-<h2 id="запись-вexif">Запись в <abbr title="Exchangeable Image File Format">EXIF</abbr></h2>
-
-<p>Сохраняем очищенный трек в тот же каталог, где у нас лежат фотографии, и даль­ше все просто, запись делается одним вызовом
-<strong><a href="https://exiftool.org/" class="img-icon-phil-harvey">ExifTool</a></strong>:</p>
-
-<figure class="highlight">
-  <pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>exiftool <span class="nt">-progress</span> <span class="nt">-overwrite_original</span> <span class="nt">-geotag</span><span class="o">=</span>‹файл трека›.gpx ./</code></pre>
-</figure>
-
-<p>Это командная строка, которую я реально использую. Что с ней не так? Ключ <code class="language-plaintext highlighter-rouge">-overwrite_original</code> перезаписывает <abbr title="На самом деле, не аббревиатура, а просто слово «raw» — «сырой», но поскольку постоянно встречается рядом с аббревиатурными обозначениями форматов, закрепилось в таком написании.">RAW</abbr>-фай­лы,
-не оставляя бэкап. Поскольку я это делаю далеко не первый раз, могу себе позволить, чтобы не возиться с их удалением, но
-для первого раза — не рекомендую. Более того, же­ла­тель­но бы все операции проводить не с исходниками, а со свя­зан­ны­ми с ни­ми
-<abbr title="Extensible Metadata Platform">XMP</abbr>-файлами. Однако для этого понадобится сначала скопировать в них время съемки, а потом вызвать <code class="language-plaintext highlighter-rouge">exiftool</code> с аргументом
-вроде <code class="language-plaintext highlighter-rouge">./*.xmp</code>. Возможно, ког­да-ни­будь я не поленюсь и за­го­ню такую последовательность действий в скрипт…</p>
-
-<p>А что с <strong><a href="https://www.darktable.org/" class="img-icon-darktable">Darktable</a></strong>? У не­го же есть модуль загрузки <abbr title="GPS eXchange Format">GPX</abbr>… Есть, но мне пока ни ра­зу
-не уда­лось им воспользоваться — судя по все­му, он ожидает файл с точками, полностью соответствующими по вре­ме­ни фотографиям,
-что возможно только при ис­поль­зо­ва­нии специального <abbr title="Global Positioning System">GPS</abbr>-устройства для горячего башмака, которое будет писать точки синхронно.
-А стоит такое устройство, как пол-камеры… Тогда как <strong>ExifTool</strong> <em>вычисляет</em> положение, где была сделана фотография
-по имеющимся точкам трека, что, конечно, добавляет некоторую погрешность, зато позволяет использовать уже имеющийся телефон
-вместо специального устройства.</p>
-
-<p>Зато <strong>Darktable</strong> позволяет просто поместить фото на кар­ту, если у вас и трека-то никакого нет. Правда, время от времени
-я таким образом промахиваюсь метров на 50… Моя ли это неаккуратность, или какой-то баг — не знаю.</p>
-
-<p>Еще одна особенность Darktable, о ко­то­рой необходимо упомянуть — он не пе­ре­чи­ты­ва­ет метаданные из <abbr title="На самом деле, не аббревиатура, а просто слово «raw» — «сырой», но поскольку постоянно встречается рядом с аббревиатурными обозначениями форматов, закрепилось в таком написании.">RAW</abbr>, уже находящихся в его
-базе. Вот за изменением <abbr title="Extensible Metadata Platform">XMP</abbr> следит и спра­ши­ва­ет, чем руководствоваться — файлом, или базой, а ис­ход­ни­ки не смот­рит. Поэтому,
-если вы уже импортировали съемку в Darktable, и только после этого вспомнили, что нужно прописать геотеги, придется удалить
-эти кадры из ба­зы (из «кол­лек­ции» в тер­ми­нах Darktable) (при этом <abbr title="Extensible Metadata Platform">XMP</abbr> с ис­то­ри­ей изменений прекрасно сохранятся), прописать
-геотеги посредством <code class="language-plaintext highlighter-rouge">exiftool</code> и уже после этого импортировать фотографии в Dark­table заново. Таков путь.</p>
-
-<h2 id="итого">Итого</h2>
-
-<p>Основная цепочка в моем случае выглядит так:</p>
-
-<p class="bold"><a href="https://www.locusmap.app/" class="img-icon-locus-map">Locus Map</a> → <a href="https://github.com/BourgeoisLab/GPXLab" class="img-icon-gpxlab">GPXLab</a> → <a href="https://exiftool.org/" class="img-icon-phil-harvey">ExifTool</a> →
-<a href="https://www.darktable.org/" class="img-icon-darktable">Darktable</a></p>
-
-<p>Дополнительно можно на этапе подготовки файла задействовать <strong><a href="https://www.gpsbabel.org/" class="img-icon-gpsbabel">GPSBabel</a></strong> — до или вмес­то GPXLab,
-особенно, если у вас <abbr title="Global Positioning System">GPS</abbr>-лог­гер пишет не <abbr title="GPS eXchange Format">GPX</abbr>, а ка­кой-то другой формат — GPSBabel знает их несколько и умеет конвертировать.
-А уже в Dark­table можно разместить фотографии на кар­те вручную.</p>
-
-<p>Я ничего не на­пи­сал про кор­рек­ти­ров­ку времени, поскольку не при­ш­лось с ней сталкиваться — у ме­ня все работает по умолчанию.
-Однако, если часы на ус­т­рой­с­т­вах рассинхронизированы, или ка­кие-то заморочки с ча­со­вы­ми поясами, или еще какая напасть —
-ExifTool имеет параметры сдвига времени, можно этим воспользоваться.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;photo&quot;, &quot;processing&quot;, &quot;tech&quot;, &quot;soft&quot;, &quot;birdwatching&quot;]" /><category term="GPX" /><category term="EXIF" /><category term="exiftool" /><category term="Darktable" /><category term="GPXLab" /><category term="карты" /><category term="HOWTO" /><category term="геометки" /><category term="геотеги" /><category term="GPSBabel" /><category term="Locus Map" /><category term="KDE Connect" /><category term="GPS" /><category term="мобильные приложения" /><summary type="html"><![CDATA[Запись GPX и корректная его обработка]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2021/07/17/gpx-exif-tools/gpxlab-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2021/07/17/gpx-exif-tools/gpxlab-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;life&quot;, &quot;nature&quot;, &quot;photo&quot;, &quot;birdwatching&quot;, &quot;dybr&quot;]" /><category term="птицы" /><category term="растения" /><category term="наблюдения" /><category term="iNaturalist" /><category term="Арти" /><category term="насекомые" /><category term="ирга" /><category term="фауна" /><category term="флора" /><category term="инвазивные виды" /><category term="ядовитые растения" /><category term="биоразнообразие" /><category term="хищные птицы" /><category term="стрекозы" /><category term="моллюски" /><category term="жуки" /><category term="пчелы" /><category term="бабочки" /><summary type="html"><![CDATA[Пара (тройка) очередных выходов в лес с камерой]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2021/07/31/walks/IMG_0235-640x640-500-261-1200-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2021/07/31/walks/IMG_0235-640x640-500-261-1200-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
