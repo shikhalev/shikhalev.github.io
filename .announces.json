@@ -1,1 +1,23 @@
-{}
+{
+  "telegram": {
+    "config": {
+      "method": "telegram",
+      "chat_id": "@shikhalev_blog"
+    },
+    "posts": {
+      "_posts/tech/2026/2026-01-19-cache-invalidation.md": {
+        "url": "https://shikhalev.github.io/tech/2026/01/cache-invalidation.html",
+        "date": "2026/01/19",
+        "title": "Об инвалидацию кэша",
+        "description": "Размышления и сомнения относительно одной частной задачи",
+        "categories": [
+          "технологии",
+          "программирование",
+          "абстракции",
+          "ruby",
+          "дыбр"
+        ]
+      }
+    }
+  }
+}
