@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed/tech.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2025-12-29T17:12:26+00:00</updated><id>https://shikhalev.github.io/feed/tech.xml</id><title type="html">Иван Шихалев | Tech</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Паттерн «Фасад» и гем для DSL</title><link href="https://shikhalev.github.io/tech/2025/12/is-dsl.html" rel="alternate" type="text/html" title="Паттерн «Фасад» и гем для DSL" /><published>2025-12-23T00:00:00+00:00</published><updated>2025-12-23T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/12/is-dsl</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/12/is-dsl.html"><![CDATA[<figure class="__figure __implicit_figure __right face" style="max-width:320px;"><img src="/img/2025/12/23/is-dsl/facade-320-1664x1664-411-0.webp" class="__image" alt="Картинка для привлечения внимания" title="Картинка для привлечения внимания" /></figure>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed/tech.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-01-19T06:18:34+00:00</updated><id>https://shikhalev.github.io/feed/tech.xml</id><title type="html">Иван Шихалев | Tech</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Об инвалидацию кэша</title><link href="https://shikhalev.github.io/tech/2026/01/cache-invalidation.html" rel="alternate" type="text/html" title="Об инвалидацию кэша" /><published>2026-01-19T00:00:00+00:00</published><updated>2026-01-19T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2026/01/cache-invalidation</id><content type="html" xml:base="https://shikhalev.github.io/tech/2026/01/cache-invalidation.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:360px;"><a href="/img/2026/01/19/cache-invalidation/cache-invalidation-fhd.webp" class="__image_link"><img src="/img/2026/01/19/cache-invalidation/cache-invalidation-360-970x350-380-360.webp" class="__image" alt="КДПВ сгенерирована нейросетью по запросу «cache invalidation»" title="КДПВ сгенерирована нейросетью по запросу «cache invalidation»" /></a></figure>
+
+<p>Как известно, в программировании есть только две реально сложные задачи: именование переменных и инвалидация кэша<sup id="fnref:cite"><a href="#fn:cite" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>.
+С первой мы сделать ничего не можем, со второй, конечно, тоже, но что-то делать приходится…</p>
+
+<p>И вот в процессе большого рефакторинга <strong><a href="https://github.com/inat-get/inat-get" class="img-icon-github">inat-get</a></strong> я в очередной раз задумался. Суть тут
+вот в чем: данные, которые требуется получать из <a href="https://api.inaturalist.org/v1/docs/" class="img-icon-inaturalist">API iNa­tu­ra­list</a> — очень большие (зависит
+от це­лей, конечно, но они <em>могут</em> быть <em>очень</em> большими), и логично их за­кэ­ши­ро­вать в локальной базе данных. Естественно,
+кэшированные данные нужно обновлять.</p>
+
+<p>Есть прекрасный параметр <code class="language-plaintext highlighter-rouge">updated_since</code> в запросах к API, т.е. мы храним у себя информацию о сделанных запросах, и когда
+нам нужно получить новые данные по тем же условиям, указываем дату/время предыдущего запроса в этом параметре. Но полностью
+проблему это не решает: <code class="language-plaintext highlighter-rouge">updated_since</code> не отменяет (и не должен отменять) все остальные параметры запроса, т.е. те
+наблюдения, которые <em>выпали</em> из запроса, в выборку не попадут. И останутся в локальной БД в старом состоянии.</p>
+
+<p class="note italic">Ну, то есть, выбрали мы, например, данные по проекту, который фильтрует наблюдения с <code class="language-plaintext highlighter-rouge">quality_grade=research</code>, а потом
+пришел добрый человек и заметил, что в наблюдении культурное растение. Наблюдение выпадает из проекта, но мы об этом
+не можем узнать через обновление…</p>
+
+<p>Какие есть пути решения? Вижу несколько вариантов, ни один из которых меня не устраивает полностью…</p>
+
+<!--more-->
+
+<ul>
+  <li>
+    <p>Первое, что сформулировалось после консультации с нейросетками, это делать помимо обновляющего второй запрос — без <code class="language-plaintext highlighter-rouge">updated_since</code>,
+зато с <code class="language-plaintext highlighter-rouge">only_id</code>, т.е. запрашивать список наблюдений без данных. Затем сравнивать этот список с тем, что у нас лежит в базе,
+и уже по расхождениям запрашивать данные через <code class="language-plaintext highlighter-rouge">id</code>.</p>
+
+    <p>Это можно делать <em>реже</em>, чем обычное обновление, т.е. не при каждом запросе, а, скажем, когда от предыдущего прошла неделя
+(или другое настраиваемое время). Но тем не менее, несмотря на небольшой трафик, это потребует множества запросов, что
+не есть хорошо. Просто для понимания, сейчас по Свердловской об­лас­ти — <a href="https://www.inaturalist.org/observations?place_id=139490">более 400 ты­сяч наблюдений</a>, а по России —
+<a href="https://www.inaturalist.org/observations?place_id=7161">почти 11 мил­ли­о­нов</a>. Это более 2 ты­сяч и почти 550 ты­сяч запросов соответственно (за один запрос можно получить
+не бо­лее 200 на­б­лю­де­ний).</p>
+  </li>
+  <li>
+    <p>Как вариант, использовать в запросе <code class="language-plaintext highlighter-rouge">only_id</code> также и <code class="language-plaintext highlighter-rouge">updated_since</code> с датой, сдвинутой в прошлое на какое-то разумное время,
+аналогично и формировать список <code class="language-plaintext highlighter-rouge">id</code> из локальной базы. Т.е. исходить из того, что наблюдения, которые давно никто не трогал,
+имеют меньшую вероятность быть потроганными и впредь. Проблема тут в том, что <em>гарантированно</em> актуальной базы мы при таком
+подходе не получим <em>никогда</em>.</p>
+
+    <p>Еще мне нейросеть предложила разбить массив данных на слои по древности, синхронизировать все, но с разной частотой. Так
+мы получим постепенное обновление все базы, но за счет существенного усложнения программы.</p>
+  </li>
+  <li>
+    <p>Еще один ва­ри­ант — формирование случайных выборок для обновления (в комбинации со слоями)… Довольно бессмысленно,
+как по мне.</p>
+
+    <p>Но можно просто при каждом запросе апдейтить пакет наиболее старых (по времени последнего обновления в БД) наблюдений…
+Фоновую задачу не пред­ла­гать — просто не впи­сы­ва­ет­ся в архитектуру.</p>
+  </li>
+  <li>
+    <p>И последнее, что пришло мне в голову, это в обновляющем запросе (том, который с <code class="language-plaintext highlighter-rouge">updated_since</code>) <em>ослаблять</em> требования
+за счет условий, соответствие которым может легко штатно меняться (например, вышеупомянутый параметр <code class="language-plaintext highlighter-rouge">quality_grade</code>).
+Проблема тут опять же в отсутствии гарантий, поскольку в принципе поменяться может что угодно.</p>
+  </li>
+</ul>
+
+<p>Продолжаю думать. Если у кого есть соображения по этому поводу, пишите в комментариях, не стесняйтесь.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:cite">
+      <p>Автор этой фразы, предположительно, Фил Карлтон (Phil Karlton), ведущий инженер компании Netscape. <a href="#fnref:cite" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="tech" /><category term="programming" /><category term="abs" /><category term="ruby" /><category term="dybr" /><category term="iNaturalist" /><category term="inat-get" /><summary type="html"><![CDATA[Размышления и сомнения относительно одной частной задачи]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2026/01/19/cache-invalidation/cache-invalidation-640x640-1856x968-0-179.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2026/01/19/cache-invalidation/cache-invalidation-640x640-1856x968-0-179.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Паттерн «Фасад» и гем для DSL</title><link href="https://shikhalev.github.io/tech/2025/12/is-dsl.html" rel="alternate" type="text/html" title="Паттерн «Фасад» и гем для DSL" /><published>2025-12-23T00:00:00+00:00</published><updated>2025-12-23T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/12/is-dsl</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/12/is-dsl.html"><![CDATA[<figure class="__figure __implicit_figure __right face" style="max-width:320px;"><img src="/img/2025/12/23/is-dsl/facade-320-1664x1664-411-0.webp" class="__image" alt="Картинка для привлечения внимания" title="Картинка для привлечения внимания" /></figure>
 
 <p>При написании <strong><a href="https://github.com/inat-get/inat-channel" class="img-icon-github">inat-channel</a></strong> я столкнулся вот с какой проблемой: с одной стороны, более-менее сложные
 действия должны быть декомпозированы, то есть разбиты на модули и отдельные методы в них; с другой — глубокая декомпозиция заставляет
@@ -1480,232 +1546,4 @@ Grok налажал с хуками Jekyll, неверно отнеся один
       <p><a href="https://www.inaturalist.org/observations/288683861" class="img-icon-inaturalist">#288683861</a>. <a href="#fnref:obs-flo" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;photo&quot;, &quot;birdwatching&quot;, &quot;tech&quot;, &quot;hard&quot;, &quot;dybr&quot;]" /><category term="Sigma" /><category term="Sigma AF 60-600mm f/4.5-6.3 DG OS HSM Sports" /><category term="iNaturalist" /><category term="объектив" /><category term="телеобъектив" /><summary type="html"><![CDATA[Мой новый объектив — Sigma AF 60-600mm f/4.5-6.3 DG OS HSM Sports]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/06/19/sigma-60-600/sigma-60-600mm-640x640-1992x1040-127-314.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/06/19/sigma-60-600/sigma-60-600mm-640x640-1992x1040-127-314.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">INat::Get — ранняя альфа</title><link href="https://shikhalev.github.io/tech/2023/11/inat-get.html" rel="alternate" type="text/html" title="INat::Get — ранняя альфа" /><published>2023-11-13T00:00:00+00:00</published><updated>2023-11-13T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2023/11/inat-get</id><content type="html" xml:base="https://shikhalev.github.io/tech/2023/11/inat-get.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2023/11/13/inat-get/github-screen-fhd.webp" class="__image_link"><img src="/img/2023/11/13/inat-get/github-screen-320.webp" class="__image" alt="Скриншот репозитория" title="Скриншот репозитория" /></a></figure>
-
-<blockquote class="epigraph">
-  <p>— Я зделяль. ©</p>
-</blockquote>
-
-<p>Итак, прошу любить и жаловать — <strong><a href="https://github.com/shikhalev/inat-get" class="img-icon-github">INat::Get</a></strong> — софтина для по­лу­че­ния и обработки данных
-с <strong><a href="https://www.inaturalist.org/" class="img-icon-inaturalist">iNaturalist</a></strong>. Основное изначальное пред­наз­на­че­ние — подбивать всякую статистику
-для про­ек­тов на том же iNaturalist’е, но варианты использования гораздо шире.</p>
-
-<p>Первым делом хочу отметить, что текущее со­сто­я­ние — это ранняя альфа. Я <em>не ре­ко­мен­дую</em> никому этим пользоваться иначе
-как из любопытства и желания поучаствовать. Тем не ме­нее делаю пост уже сейчас в на­деж­де, что любопытные желающие найдутся.
-Со сво­ей стороны готов подробно отвечать на во­про­сы и учитывать пожелания.</p>
-
-<h2 id="зачем">Зачем?</h2>
-
-<p><strong><a href="https://www.inaturalist.org/" class="img-icon-inaturalist">iNaturalist</a></strong> предоставляет открытый доступ к ог­ром­но­му массиву наблюдений, а также
-по су­ти к по­сто­ян­но ак­ту­али­зи­ру­ему таксономическому справочнику (тут можно обсуждать нюансы, но для лю­би­тель­с­ких целей
-это очень хорошие данные). Интерфейс самого сайта не по­кры­ва­ет и, конечно, не мо­жет покрывать все возможные варианты
-запросов и выборок, но мы можем получить сами данные через <a href="https://www.inaturalist.org/observations/export">механизм выгрузок</a> или посредством <a href="https://api.inaturalist.org/v1/docs/">открытого API</a>,
-и второй вариант богаче, гибче и вообще интересней.</p>
-
-<!--more-->
-
-<p>В ка­чес­т­ве примера таких отчетов, которые нельзя получить просто из ин­тер­фей­са, приведу свои посты в про­ек­те
-<a href="https://www.inaturalist.org/projects/bioraznoobrazie-artinskogo-rayona">«Био­раз­но­об­ра­зие Артинского района»</a>. Не по­то­му, что они представляют собой что-то особо ценное,
-а именно как демонстрацию:</p>
-
-<ul>
-  <li>
-    <p><a href="https://www.inaturalist.org/projects/bioraznoobrazie-artinskogo-rayona/journal/83533">«Неитоги 2023»</a> (как бы итоги сезона, только подведенные в его середине). Здесь интересны «Новинки» и «Потеряшки».</p>
-  </li>
-  <li>
-    <p><a href="https://www.inaturalist.org/projects/bioraznoobrazie-artinskogo-rayona/journal/83535">«Сравнение с соседями»</a>. Не прос­то количественное сравнение, а сравнение видового состава.</p>
-  </li>
-  <li>
-    <p><a href="https://www.inaturalist.org/projects/bioraznoobrazie-artinskogo-rayona/journal/83536">«Виды, по которым недостаточно наблюдений»</a>.</p>
-  </li>
-</ul>
-
-<p>Эти посты были сформированы по дан­ным выгрузок, а не API, посредством мною же написанного <strong><a href="https://github.com/shikhalev/inat-script" class="img-icon-github">inat-script</a></strong>,
-в про­цес­се работы с ко­то­рым (и над ко­то­рым) я осознал все недостатки механизма выгрузок:</p>
-<ul>
-  <li>ограниченность данных;</li>
-  <li>необходимость ручного создания процесса выгрузки и, потом, загрузки файла;</li>
-  <li>и глав­ное — неизвестный заранее срок го­тов­нос­ти — некоторые выгрузки делались вовсе несколько дней.</li>
-</ul>
-
-<p>Кроме того, сам скрипт, как всякий первый блин, требовал существенной переработки для то­го, чтобы удобно внедрять в не­го новые
-варианты выборок и отчетов, и я решил написать с ну­ля новый инструмент, работающий непосредственно с API.</p>
-
-<h2 id="принцип-действия">Принцип действия</h2>
-
-<p>На са­мом деле я сначала пытался сделать как-то так, чтобы отчеты формировались через конфигурационные файлы. Однако гибкости
-в та­ком подходе никакой (ну или потребуется senior-yaml-de­ve­lo­per для ис­поль­зо­ва­ния, ЕВПОЧЯ). В ито­ге пришел к вы­во­ду, что
-проще предположить в про­д­ви­ну­том пользователе базовые знания Ruby…</p>
-
-<p>В об­щем, программа запускает ruby-скрипты, называемые задачами, которые работают на уров­не абстрактных выборок и списков,
-оставляя все обращения к API и кэширование ответов под ка­по­том. По боль­шо­му счету пользователь имеет дело (помимо объектов,
-представляющих собственно данные) с дву­мя классами: <code class="language-plaintext highlighter-rouge">DataSet</code>, который представляет собой набор наблюдений, уже отфильтрованный
-тем или иным образом; и <code class="language-plaintext highlighter-rouge">List</code> — по су­ти датасет, сгруппированный по неким объектам, как пра­ви­ло — таксонам.</p>
-
-<p>Для фор­ми­ро­ва­ния вывода имеется специальный объект <code class="language-plaintext highlighter-rouge">Table</code>, который сначала определяется, т.е. задаются колонки с за­го­лов­ка­ми,
-шириной и выравниванием, а затем наполняется данными, которые должны представлять собой массив хэш-таб­лиц… Звучит страшно,
-но в дей­с­т­ви­тель­нос­ти скрипты могут быть совсем простые. Например, давайте получим список видов в Ар­тин­с­ком районе, которых
-я никогда не наблюдал.</p>
-
-<figure class="highlight">
-  <pre><code class="language-ruby" data-lang="ruby"><span class="n">user</span> <span class="o">=</span> <span class="no">User</span><span class="o">::</span><span class="n">by_login</span> <span class="s1">'shikhalev'</span>
-<span class="n">place</span> <span class="o">=</span> <span class="no">Place</span><span class="o">::</span><span class="n">by_slug</span> <span class="s1">'artinskiy-gorodskoy-okrug-osm-2023-sv-ru'</span>
-
-<span class="n">user_dataset</span> <span class="o">=</span> <span class="nb">select</span> <span class="ss">user_id: </span><span class="n">user</span><span class="p">.</span><span class="nf">id</span>
-<span class="n">place_dataset</span> <span class="o">=</span> <span class="nb">select</span> <span class="ss">place_id: </span><span class="n">place</span><span class="p">.</span><span class="nf">id</span>
-
-<span class="n">user_list</span> <span class="o">=</span> <span class="n">user_dataset</span><span class="p">.</span><span class="nf">to_list</span>
-<span class="n">place_list</span> <span class="o">=</span> <span class="n">place_dataset</span><span class="p">.</span><span class="nf">to_list</span>
-
-<span class="n">result_list</span> <span class="o">=</span> <span class="n">place_list</span> <span class="o">-</span> <span class="n">user_list</span>
-
-<span class="n">result_table</span> <span class="o">=</span> <span class="n">table</span> <span class="k">do</span>
-  <span class="n">column</span> <span class="s1">'#'</span><span class="p">,</span> <span class="ss">width: </span><span class="mi">3</span><span class="p">,</span> <span class="ss">align: :right</span><span class="p">,</span> <span class="ss">data: :line_no</span>
-  <span class="n">column</span> <span class="s1">'Таксон'</span><span class="p">,</span> <span class="ss">data: :taxon</span>
-  <span class="n">column</span> <span class="s1">'К-во набл.'</span><span class="p">,</span> <span class="ss">width: </span><span class="mi">6</span><span class="p">,</span> <span class="ss">align: :right</span><span class="p">,</span> <span class="ss">data: :count</span>
-<span class="k">end</span>
-
-<span class="n">result_rows</span> <span class="o">=</span> <span class="n">result_list</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">ds</span><span class="o">|</span> <span class="p">{</span> <span class="ss">taxon: </span><span class="n">ds</span><span class="p">.</span><span class="nf">object</span><span class="p">,</span> <span class="ss">count: </span><span class="n">ds</span><span class="p">.</span><span class="nf">count</span> <span class="p">}</span> <span class="p">}</span>
-
-<span class="n">result_table</span> <span class="o">&lt;&lt;</span> <span class="n">result_rows</span>
-
-<span class="no">File</span><span class="p">.</span><span class="nf">write</span> <span class="s1">'notmy.htm'</span><span class="p">,</span> <span class="n">result_table</span><span class="p">.</span><span class="nf">to_html</span></code></pre>
-</figure>
-
-<p>Файл я поместил в <a href="https://github.com/shikhalev/inat-get/tree/main/samples">каталог примеров</a> под именем <a href="https://github.com/shikhalev/inat-get/blob/main/samples/notmy.inat"><code class="language-plaintext highlighter-rouge">notmy.inat</code></a>, теперь мы можем его запустить командой:</p>
-
-<figure class="highlight">
-  <pre><code class="language-console" data-lang="console"><span class="gp">$</span><span class="w"> </span>inat-get notmy.inat</code></pre>
-</figure>
-
-<p>И через некоторое время получим результат.</p>
-
-<p>Результат можно увидеть <a href="https://www.inaturalist.org/posts/86663-kogo-ya-esche-ne-videl-u-nas-zdes">в мо­ем посте на iNa­tu­ra­list</a>. Да, на дан­ный момент, все форматирование рассчитано именно и только
-на пос­ты в iNat, активно используя тамошние стили. Есть планы расширить данный момент, но об этом позже.</p>
-
-<p>Что важно, если мы тут же запустим ту же команду, то результат получим практически мгновенно, причем идентичный. А ес­ли выждем сутки,
-то некоторое  дополнительное время понадобится, но существенно меньшее, чем при пер­вом запуске. Это первый ключевой мо­мент — <strong>данные кэшируются</strong>.</p>
-
-<p>Кроме того, следует обратить внимание на то, что на са­мом-то деле API отдает не бо­лее 200 наб­лю­де­ний за один запрос. Здесь же
-этого ограничения мы не ви­дим и работаем с пол­ны­ми да­та­се­та­ми (объемом 3k+ и 4k+) — <strong>организация последовательной постраничной загрузки</strong>
-так же находится под капотом.</p>
-
-<h3 id="некоторые-детали">Некоторые детали</h3>
-
-<ul>
-  <li>
-    <p>Метод <code class="language-plaintext highlighter-rouge">select</code> выполняет запрос и возвращает объект класса <code class="language-plaintext highlighter-rouge">DataSet</code>. Именованные параметры данного метода примерно соответствуют
-параметрам API, правда, реализованы не все.</p>
-  </li>
-  <li>
-    <p>Класс <code class="language-plaintext highlighter-rouge">DataSet</code> инкапсулирует <em>набор наблюдений</em>, плюс опционально ассоциирует его с не­ко­то­рым объектом. В ос­нов­ном его поведение
-определяется включенным модулем <code class="language-plaintext highlighter-rouge">Enumerable</code>, и бинарными операциями:</p>
-
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">|</code> — объединение;</li>
-      <li><code class="language-plaintext highlighter-rouge">&amp;</code> — пересечение;</li>
-      <li><code class="language-plaintext highlighter-rouge">-</code> — разность.</li>
-    </ul>
-
-    <p>Также у класса <code class="language-plaintext highlighter-rouge">DataSet</code> имеется важный метод <code class="language-plaintext highlighter-rouge">to_list</code>, который создает объект класса <code class="language-plaintext highlighter-rouge">List</code>, группируя наблюдения по то­му или иному
-параметру. Для груп­пи­ров­ки используется <code class="language-plaintext highlighter-rouge">proc</code>-объ­ект, который должен выдавать по на­блю­де­нию собственно ключ группировки. Наиболее
-полезные (на мой взгляд) группировки уже определены как константы модуля <code class="language-plaintext highlighter-rouge">Listers</code>:</p>
-
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Listers::SPECIES</code> возвращает таксон, «приведенный к ви­ду». В ка­выч­ках потому, что результатом может быть как вид, так и гибрид
-или комплекс.</li>
-      <li><code class="language-plaintext highlighter-rouge">Listers::YEAR</code> возвращает год.</li>
-      <li>И так далее.</li>
-    </ul>
-
-    <p>Если вызвать <code class="language-plaintext highlighter-rouge">to_list</code> без параметров, то по умол­ча­нию будет использован <code class="language-plaintext highlighter-rouge">Listers::SPECIES</code>.</p>
-  </li>
-  <li>
-    <p>Класс <code class="language-plaintext highlighter-rouge">List</code> представляет собой список датасетов с ас­со­ци­и­ро­ван­ны­ми значениями. Также реализует модуль <code class="language-plaintext highlighter-rouge">Enumerable</code>, только итерируемыми
-элементами будут объекты класса <code class="language-plaintext highlighter-rouge">DataSet</code>, а не <code class="language-plaintext highlighter-rouge">Observation</code>. Для спис­ков также определены некоторые бинарные операции:</p>
-
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">+</code> — объединение;</li>
-      <li><code class="language-plaintext highlighter-rouge">*</code> — пересечение;</li>
-      <li><code class="language-plaintext highlighter-rouge">-</code> — разность (что и использовано в примере).</li>
-    </ul>
-
-    <p>Объединенный датасет из списка можно получить посредством метода <code class="language-plaintext highlighter-rouge">to_dataset</code>.</p>
-  </li>
-  <li>
-    <p>Классы данных: <code class="language-plaintext highlighter-rouge">Observation</code>, <code class="language-plaintext highlighter-rouge">Taxon</code>, <code class="language-plaintext highlighter-rouge">Place</code>, <code class="language-plaintext highlighter-rouge">User</code> и так далее предоставляют собственно данные. Свойств там много, их следует
-от­до­ку­мен­ти­ро­вать, но пока руки не до­шли. Впрочем, это тот случай, когда код действительно является документацией, так что см. <a href="https://github.com/shikhalev/inat-get/tree/main/lib/inat/data/entity">ка­та­лог
-<code class="language-plaintext highlighter-rouge">entity</code></a>.</p>
-
-    <p>Отмечу, что все они имеют метод класса <code class="language-plaintext highlighter-rouge">by_id</code> для по­лу­че­ния соответствующего объекта, и в до­пол­не­ние классы <code class="language-plaintext highlighter-rouge">Place</code> и <code class="language-plaintext highlighter-rouge">Project</code> имеют
-метод <code class="language-plaintext highlighter-rouge">by_slug</code>, а класс <code class="language-plaintext highlighter-rouge">User</code> — метод <code class="language-plaintext highlighter-rouge">by_login</code>.</p>
-  </li>
-</ul>
-
-<h2 id="установка">Установка</h2>
-
-<p>Установка максимально проста:</p>
-
-<figure class="highlight">
-  <pre><code class="language-console" data-lang="console"><span class="gp">#</span><span class="w"> </span>gem <span class="nb">install </span>inat-get</code></pre>
-</figure>
-
-<p>Правда, <em>на дан­ный момент все это гарантированно работает только под Li­nux</em>. Тестирование под Win­dows в пла­нах есть, но скорее ближе
-к весне.</p>
-
-<h2 id="планы">Планы</h2>
-
-<p>Вообще, на гит­ха­бе есть такой замечательный раздел <strong><a href="https://github.com/shikhalev/inat-get/issues" class="img-icon-github">«Issues»</a></strong>, где можно посмотреть процесс планирования в ре­аль­ном времени.
-Здесь постараюсь дать сводную картину.</p>
-
-<h3 id="к-версии-10">К версии 1.0</h3>
-
-<dl>
-  <dt>Документация</dt>
-  <dd>
-    <p>На первом этапе — полноценное руководство пользователя на рус­с­ком языке. Затем расширенное руководство как на рус­с­ком, так и на ан­г­лий­с­ком.</p>
-  </dd>
-  <dt>Данные</dt>
-  <dd>
-    <p>Сейчас многие поля, в том числе такие важные, как охранный статус, просто игнорируются. Это категорически неправильно и, естественно,
-будет исправлено уже в бе­та-вер­сии.</p>
-
-    <p>Сю­да же отнесу поддержку всех ключей запроса доступных в API. Тут есть некоторые нюансы, которые следует продумать, почему собственно
-на дан­ном этапе их и нет, но все решаемо.</p>
-  </dd>
-  <dt>Доделки и исправления</dt>
-  <dd>
-    <p>Уже замеченные баги есть, и их, само собой, исправлять нужно, причем в первую очередь. К счас­тью, критичный, т.е. приводящий к вы­ле­ту,
-только один и возникает он редко.</p>
-
-    <p>Есть запланированная, но пока нереализованная базовая функциональность, такая как чистка устаревших данных.</p>
-  </dd>
-  <dt>Оптимизация запросов</dt>
-  <dd>
-    <p>Есть мысли, как можно уменьшить количество запросов к API, что существенно ускорит работу в целом.</p>
-  </dd>
-</dl>
-
-<h3 id="дальнейшее-развитие">Дальнейшее развитие</h3>
-
-<dl>
-  <dt>Разнообразные возможности вывода</dt>
-  <dd>
-    <p>Тут с од­ной стороны, явно нужно сделать поддержку не толь­ко упрощенной разметки, используемой в жур­на­лах iNa­tu­ra­list, но и форматов,
-которые можно использовать в раз­лич­ных местах независимо.</p>
-
-    <p>С другой стороны, на­до бы добавить что-то типа вывода иерархических списков, а возможно и каких-то еще вариантов оформления.</p>
-
-    <p>Все это пока на уров­не исследования и формулирования задачи.</p>
-  </dd>
-  <dt>Оптимизация кэширования</dt>
-  <dd>
-    <p>Подробно расписывать не бу­ду, но там есть над чем работать. В пер­вую очередь это касается разбора и трансляции условий проектов.</p>
-  </dd>
-</dl>
-
-<h2 id="обратная-связь">Обратная связь</h2>
-
-<p>Буду рад вопросам, замечаниям и предложениям, как в ком­мен­та­ри­ях к это­му посту, так и в <a href="https://github.com/shikhalev/inat-get/discussions">со­от­вет­с­т­ву­ю­щем разделе на <strong class="img-icon-github">Git­Hub</strong></a>.
-Можно так же писать в лич­ные сообщения на iNa­tu­ra­list, хотя предпочтительно все же общаться в от­кры­тых комментариях, чтобы не воз­ни­ка­ло
-дублирования.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;birdwatching&quot;, &quot;nature&quot;]" /><category term="iNaturalist" /><summary type="html"><![CDATA[Набор инструментов для получения и обработки данных с iNaturalist]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2023/11/13/inat-get/screen-640x640-931x481-0-52.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2023/11/13/inat-get/screen-640x640-931x481-0-52.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;photo&quot;, &quot;birdwatching&quot;, &quot;tech&quot;, &quot;hard&quot;, &quot;dybr&quot;]" /><category term="Sigma" /><category term="Sigma AF 60-600mm f/4.5-6.3 DG OS HSM Sports" /><category term="iNaturalist" /><category term="объектив" /><category term="телеобъектив" /><summary type="html"><![CDATA[Мой новый объектив — Sigma AF 60-600mm f/4.5-6.3 DG OS HSM Sports]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/06/19/sigma-60-600/sigma-60-600mm-640x640-1992x1040-127-314.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/06/19/sigma-60-600/sigma-60-600mm-640x640-1992x1040-127-314.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

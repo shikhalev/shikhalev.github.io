@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2025-12-29T17:12:26+00:00</updated><id>https://shikhalev.github.io/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Натурадыбр – 2025</title><link href="https://shikhalev.github.io/life/2025/12/naturadybr.html" rel="alternate" type="text/html" title="Натурадыбр – 2025" /><published>2025-12-25T00:00:00+00:00</published><updated>2025-12-25T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2025/12/naturadybr</id><content type="html" xml:base="https://shikhalev.github.io/life/2025/12/naturadybr.html"><![CDATA[<figure class="__figure __implicit_figure __right face" style="max-width:380px;"><a href="/img/2025/06/19/sigma-60-600/IMG_8552-fhd.webp" class="__image_link"><img src="/img/2025/12/25/naturadybr/IMG_8552-380-1599x1599-313-0.webp" class="__image" alt="Самец сибирской косули (Capreolus pygargus)" title="Самец сибирской косули (Capreolus pygargus)" /></a></figure>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-01-19T06:18:34+00:00</updated><id>https://shikhalev.github.io/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Об инвалидацию кэша</title><link href="https://shikhalev.github.io/tech/2026/01/cache-invalidation.html" rel="alternate" type="text/html" title="Об инвалидацию кэша" /><published>2026-01-19T00:00:00+00:00</published><updated>2026-01-19T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2026/01/cache-invalidation</id><content type="html" xml:base="https://shikhalev.github.io/tech/2026/01/cache-invalidation.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:360px;"><a href="/img/2026/01/19/cache-invalidation/cache-invalidation-fhd.webp" class="__image_link"><img src="/img/2026/01/19/cache-invalidation/cache-invalidation-360-970x350-380-360.webp" class="__image" alt="КДПВ сгенерирована нейросетью по запросу «cache invalidation»" title="КДПВ сгенерирована нейросетью по запросу «cache invalidation»" /></a></figure>
+
+<p>Как известно, в программировании есть только две реально сложные задачи: именование переменных и инвалидация кэша<sup id="fnref:cite"><a href="#fn:cite" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>.
+С первой мы сделать ничего не можем, со второй, конечно, тоже, но что-то делать приходится…</p>
+
+<p>И вот в процессе большого рефакторинга <strong><a href="https://github.com/inat-get/inat-get" class="img-icon-github">inat-get</a></strong> я в очередной раз задумался. Суть тут
+вот в чем: данные, которые требуется получать из <a href="https://api.inaturalist.org/v1/docs/" class="img-icon-inaturalist">API iNa­tu­ra­list</a> — очень большие (зависит
+от це­лей, конечно, но они <em>могут</em> быть <em>очень</em> большими), и логично их за­кэ­ши­ро­вать в локальной базе данных. Естественно,
+кэшированные данные нужно обновлять.</p>
+
+<p>Есть прекрасный параметр <code class="language-plaintext highlighter-rouge">updated_since</code> в запросах к API, т.е. мы храним у себя информацию о сделанных запросах, и когда
+нам нужно получить новые данные по тем же условиям, указываем дату/время предыдущего запроса в этом параметре. Но полностью
+проблему это не решает: <code class="language-plaintext highlighter-rouge">updated_since</code> не отменяет (и не должен отменять) все остальные параметры запроса, т.е. те
+наблюдения, которые <em>выпали</em> из запроса, в выборку не попадут. И останутся в локальной БД в старом состоянии.</p>
+
+<p class="note italic">Ну, то есть, выбрали мы, например, данные по проекту, который фильтрует наблюдения с <code class="language-plaintext highlighter-rouge">quality_grade=research</code>, а потом
+пришел добрый человек и заметил, что в наблюдении культурное растение. Наблюдение выпадает из проекта, но мы об этом
+не можем узнать через обновление…</p>
+
+<p>Какие есть пути решения? Вижу несколько вариантов, ни один из которых меня не устраивает полностью…</p>
+
+<!--more-->
+
+<ul>
+  <li>
+    <p>Первое, что сформулировалось после консультации с нейросетками, это делать помимо обновляющего второй запрос — без <code class="language-plaintext highlighter-rouge">updated_since</code>,
+зато с <code class="language-plaintext highlighter-rouge">only_id</code>, т.е. запрашивать список наблюдений без данных. Затем сравнивать этот список с тем, что у нас лежит в базе,
+и уже по расхождениям запрашивать данные через <code class="language-plaintext highlighter-rouge">id</code>.</p>
+
+    <p>Это можно делать <em>реже</em>, чем обычное обновление, т.е. не при каждом запросе, а, скажем, когда от предыдущего прошла неделя
+(или другое настраиваемое время). Но тем не менее, несмотря на небольшой трафик, это потребует множества запросов, что
+не есть хорошо. Просто для понимания, сейчас по Свердловской об­лас­ти — <a href="https://www.inaturalist.org/observations?place_id=139490">более 400 ты­сяч наблюдений</a>, а по России —
+<a href="https://www.inaturalist.org/observations?place_id=7161">почти 11 мил­ли­о­нов</a>. Это более 2 ты­сяч и почти 550 ты­сяч запросов соответственно (за один запрос можно получить
+не бо­лее 200 на­б­лю­де­ний).</p>
+  </li>
+  <li>
+    <p>Как вариант, использовать в запросе <code class="language-plaintext highlighter-rouge">only_id</code> также и <code class="language-plaintext highlighter-rouge">updated_since</code> с датой, сдвинутой в прошлое на какое-то разумное время,
+аналогично и формировать список <code class="language-plaintext highlighter-rouge">id</code> из локальной базы. Т.е. исходить из того, что наблюдения, которые давно никто не трогал,
+имеют меньшую вероятность быть потроганными и впредь. Проблема тут в том, что <em>гарантированно</em> актуальной базы мы при таком
+подходе не получим <em>никогда</em>.</p>
+
+    <p>Еще мне нейросеть предложила разбить массив данных на слои по древности, синхронизировать все, но с разной частотой. Так
+мы получим постепенное обновление все базы, но за счет существенного усложнения программы.</p>
+  </li>
+  <li>
+    <p>Еще один ва­ри­ант — формирование случайных выборок для обновления (в комбинации со слоями)… Довольно бессмысленно,
+как по мне.</p>
+
+    <p>Но можно просто при каждом запросе апдейтить пакет наиболее старых (по времени последнего обновления в БД) наблюдений…
+Фоновую задачу не пред­ла­гать — просто не впи­сы­ва­ет­ся в архитектуру.</p>
+  </li>
+  <li>
+    <p>И последнее, что пришло мне в голову, это в обновляющем запросе (том, который с <code class="language-plaintext highlighter-rouge">updated_since</code>) <em>ослаблять</em> требования
+за счет условий, соответствие которым может легко штатно меняться (например, вышеупомянутый параметр <code class="language-plaintext highlighter-rouge">quality_grade</code>).
+Проблема тут опять же в отсутствии гарантий, поскольку в принципе поменяться может что угодно.</p>
+  </li>
+</ul>
+
+<p>Продолжаю думать. Если у кого есть соображения по этому поводу, пишите в комментариях, не стесняйтесь.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:cite">
+      <p>Автор этой фразы, предположительно, Фил Карлтон (Phil Karlton), ведущий инженер компании Netscape. <a href="#fnref:cite" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="tech" /><category term="programming" /><category term="abs" /><category term="ruby" /><category term="dybr" /><category term="iNaturalist" /><category term="inat-get" /><summary type="html"><![CDATA[Размышления и сомнения относительно одной частной задачи]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2026/01/19/cache-invalidation/cache-invalidation-640x640-1856x968-0-179.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2026/01/19/cache-invalidation/cache-invalidation-640x640-1856x968-0-179.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Натурадыбр – 2025</title><link href="https://shikhalev.github.io/life/2025/12/naturadybr.html" rel="alternate" type="text/html" title="Натурадыбр – 2025" /><published>2025-12-25T00:00:00+00:00</published><updated>2025-12-25T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2025/12/naturadybr</id><content type="html" xml:base="https://shikhalev.github.io/life/2025/12/naturadybr.html"><![CDATA[<figure class="__figure __implicit_figure __right face" style="max-width:380px;"><a href="/img/2025/06/19/sigma-60-600/IMG_8552-fhd.webp" class="__image_link"><img src="/img/2025/12/25/naturadybr/IMG_8552-380-1599x1599-313-0.webp" class="__image" alt="Самец сибирской косули (Capreolus pygargus)" title="Самец сибирской косули (Capreolus pygargus)" /></a></figure>
 
 <p>Что ж, год подходит к концу, я продолжаю снимать птичек на кормушке, но не думаю, что туда заявится кто-то новый и неожиданный.
 Так что можно подвести итоги наблюдательского года. Конечно, <strong><a href="https://www.inaturalist.org/" class="img-icon-inaturalist">iNaturalist</a></strong> предлагает
@@ -1428,23 +1494,4 @@ Grok налажал с хуками Jekyll, неверно отнеся один
 
 <p><strong>По прежнему жду замечаний и вопросов.</strong></p>
 
-<p>Следующая глава будет про организацию изображений — снова представление светового стола, но уже в максимально развернутом виде.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;soft&quot;, &quot;graphics&quot;, &quot;photo&quot;, &quot;processing&quot;]" /><category term="Darktable" /><category term="Linux" /><category term="RAW" /><summary type="html"><![CDATA[Первая глава «Практического руководства по darktable» — «Базовая обработка»]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/10/05/darktable/darktable-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/10/05/darktable/darktable-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Этим стулом…</title><link href="https://shikhalev.github.io/tech/2025/10/darktable.html" rel="alternate" type="text/html" title="Этим стулом…" /><published>2025-10-05T00:00:00+00:00</published><updated>2025-10-05T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/10/darktable</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/10/darktable.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:240px;"><a href="/img/2025/10/05/darktable/cover-fhd.webp" class="__image_link"><img src="/img/2025/10/05/darktable/cover-240.webp" class="__image" alt="Картинка для привлечения внимания" title="Картинка для привлечения внимания" /></a></figure>
-
-<p>Начал писать большое <a href="/pages/books/darktable/pg/">Практическое руководство по <strong class="img-icon-darktable">darktable</strong></a>. Выложил <a href="/pages/books/darktable/pg/0_intro.html">«Введение»</a>, где
-рассматриваю общий интерфейс и базовое управление снимками.</p>
-
-<p><em>Это всё пока черновик, который будет правиться и дорабатываться, поэтому замечания и вопросы крайне приветствуются.</em></p>
-
-<hr />
-
-<p>Общая идея — соединить изложение в практическом ключе, посредством сквозных примеров и теоретических отступлений, со справочными
-материалами, прямо соответствующими родной справке darktable.</p>
-
-<p>На данный момент справочная часть — это ИИ-перевод, тогда как практическая — оригинальный текст (писать не-перевод посредством ИИ
-оказалось практически невозможно, т.е. писать промпт куда сложнее и дольше, чем сам текст… это отдельная интересная тема, надо будет
-пост написать). По ходу дела буду и справочную часть активно редактировать, чтобы привести язык в порядок и единообразие.</p>
-
-<hr />
-
-<p>Вообще, конечно, задумка масштабная, писать буду долго, тем более, что не могу этому посвятить все свое время… Но надеюсь где-то
-за полгода-год закончить. И опять же, рассчитываю на фидбэк по ходу дела, чтобы ничего не забыть и не схалтурить.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;soft&quot;, &quot;graphics&quot;, &quot;photo&quot;, &quot;processing&quot;]" /><category term="Darktable" /><category term="Linux" /><category term="RAW" /><summary type="html"><![CDATA[Анонс «Практического руководства по darktable»]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/10/05/darktable/darktable-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/10/05/darktable/darktable-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>Следующая глава будет про организацию изображений — снова представление светового стола, но уже в максимально развернутом виде.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;soft&quot;, &quot;graphics&quot;, &quot;photo&quot;, &quot;processing&quot;]" /><category term="Darktable" /><category term="Linux" /><category term="RAW" /><summary type="html"><![CDATA[Первая глава «Практического руководства по darktable» — «Базовая обработка»]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/10/05/darktable/darktable-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/10/05/darktable/darktable-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
