@@ -1,4 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-01-19T06:18:34+00:00</updated><id>https://shikhalev.github.io/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Об инвалидацию кэша</title><link href="https://shikhalev.github.io/tech/2026/01/cache-invalidation.html" rel="alternate" type="text/html" title="Об инвалидацию кэша" /><published>2026-01-19T00:00:00+00:00</published><updated>2026-01-19T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2026/01/cache-invalidation</id><content type="html" xml:base="https://shikhalev.github.io/tech/2026/01/cache-invalidation.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:360px;"><a href="/img/2026/01/19/cache-invalidation/cache-invalidation-fhd.webp" class="__image_link"><img src="/img/2026/01/19/cache-invalidation/cache-invalidation-360-970x350-380-360.webp" class="__image" alt="КДПВ сгенерирована нейросетью по запросу «cache invalidation»" title="КДПВ сгенерирована нейросетью по запросу «cache invalidation»" /></a></figure>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-02-05T07:31:52+00:00</updated><id>https://shikhalev.github.io/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Автодокументирование моделей Sequel</title><link href="https://shikhalev.github.io/tech/2026/02/yard-is-sequel.html" rel="alternate" type="text/html" title="Автодокументирование моделей Sequel" /><published>2026-02-05T00:00:00+00:00</published><updated>2026-02-05T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2026/02/yard-is-sequel</id><content type="html" xml:base="https://shikhalev.github.io/tech/2026/02/yard-is-sequel.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:380px;border-radius: 25px;"><a href="/img/2026/02/05/yard-is-sequel/yard-is-sequel-fhd.webp" class="__image_link"><img src="/img/2026/02/05/yard-is-sequel/yard-is-sequel-380.webp" class="__image" style="border-radius: 25px;" alt="КДПВ сгенерирована по запросу «(yard) is (sequel) in winter fantasy style, detailed eyes»" title="КДПВ сгенерирована по запросу «(yard) is (sequel) in winter fantasy style, detailed eyes»" /></a></figure>
+
+<p>Набросал предварительную версию <a href="https://github.com/lsegal/yard">YARD</a>-плагина для автодокументирования <a href="https://sequel.jeremyevans.net/">Sequel</a>-моделей — <strong><a href="https://github.com/inat-get/yard-is-sequel" class="img-icon-github">yard-is-sequel</a></strong>.
+Су­щес­т­ву­ю­щий <a href="https://github.com/kmoschcau/yard-sequel"><code class="language-plaintext highlighter-rouge">yard-sequel</code></a> с современными версиями YARD/Ruby/Sequel не работает.</p>
+
+<p>Мой вариант, конечно, не может пока похвастаться полнофункциональностью (версия 0.8.0 — это ранняя альфа), но кое-что самое важное умеет:</p>
+
+<ul>
+  <li>
+    <p>Генерирует <em>список ассоциаций</em>: <code class="language-plaintext highlighter-rouge">many_to_many</code>, <code class="language-plaintext highlighter-rouge">many_to_one</code> и <code class="language-plaintext highlighter-rouge">one_to_many</code> с корректными ссылками на типы.</p>
+  </li>
+  <li>
+    <p>Генерирует <em>список полей</em>. Также с типами, но тут есть нюансы…</p>
+
+    <ol>
+      <li>
+        <p>Маппинг типов полей требует доработки. Кроме того, ти­пы, не поддерживаемые SQLite, скорее всего, не будут нормально обрабатываться в принципе.</p>
+
+        <p>Поля берутся из <code class="language-plaintext highlighter-rouge">Database#schema</code> на созданной in-memory SQLite базе данных. Было бы хорошо, безусловно, брать их непосредственно из миграций,
+но пока непонятно, как это сделать.</p>
+      </li>
+      <li>
+        <p>Путь к миграциям следует указать через переменную окружения.</p>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<p>Чего нужно доделать?</p>
+
+<ul>
+  <li>
+    <p>Отрефакторить и упростить обработку ассоциаций.</p>
+  </li>
+  <li>
+    <p>Расширить обработку типов в полях и сделать ее менее хрупкой. Сейчас есть подозрение, что минорная смена версии Sequel может всё поломать…</p>
+  </li>
+  <li>
+    <p>Добавить возможность брать схему из отдельно сохраненного файла (в формате JSON, скорее всего).</p>
+  </li>
+</ul>
+
+<hr />
+
+<p>Но надо понимать, что я буду что-то править и дорабатывать только постольку, поскольку мне это самому нужно… Однако, если кто-то предложит
+свои пулл-реквесты, или хотя бы подробные баг-репорты, отнесусь со вниманием.</p>]]></content><author><name>Иван Шихалев</name></author><category term="tech" /><category term="programming" /><category term="ruby" /><category term="db" /><category term="документирование" /><category term="YARD" /><category term="yardoc" /><category term="Sequel" /><summary type="html"><![CDATA[YARD-плагин для документирования моделей Sequel]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2026/02/05/yard-is-sequel/yard-is-sequel-640x640-1856x968-0-223.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2026/02/05/yard-is-sequel/yard-is-sequel-640x640-1856x968-0-223.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Об инвалидацию кэша</title><link href="https://shikhalev.github.io/tech/2026/01/cache-invalidation.html" rel="alternate" type="text/html" title="Об инвалидацию кэша" /><published>2026-01-19T00:00:00+00:00</published><updated>2026-01-19T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2026/01/cache-invalidation</id><content type="html" xml:base="https://shikhalev.github.io/tech/2026/01/cache-invalidation.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:360px;"><a href="/img/2026/01/19/cache-invalidation/cache-invalidation-fhd.webp" class="__image_link"><img src="/img/2026/01/19/cache-invalidation/cache-invalidation-360-970x350-380-360.webp" class="__image" alt="КДПВ сгенерирована нейросетью по запросу «cache invalidation»" title="КДПВ сгенерирована нейросетью по запросу «cache invalidation»" /></a></figure>
 
 <p>Как известно, в программировании есть только две реально сложные задачи: именование переменных и инвалидация кэша<sup id="fnref:cite"><a href="#fn:cite" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>.
 С первой мы сделать ничего не можем, со второй, конечно, тоже, но что-то делать приходится…</p>
@@ -1462,36 +1507,4 @@ Grok налажал с хуками Jekyll, неверно отнеся один
       <p>«Исследование METR: использование Cursor замедляет опытных разработчиков на 19%», <a href="https://habr.com/ru/articles/927072/">https://habr.com/ru/articles/927072/</a> <a href="#fnref:slow" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;life&quot;, &quot;social&quot;, &quot;psi&quot;, &quot;mind&quot;]" /><category term="нейросети" /><category term="ChatGPT" /><category term="Grok" /><category term="Perplexity" /><category term="ИИ" /><category term="искусственный интеллект" /><summary type="html"><![CDATA[За последнее время (особенно последний год) мне довелось довольно активно поработать с боль­ши­ми языковыми моделями (LLM), которые сейчас модно называть искусственным интеллектом. Захотелось кое-что сформулировать и подытожить.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/11/21/llm/girl-640x640-1216x634-0-105.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/11/21/llm/girl-640x640-1216x634-0-105.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Первая глава «Практического руководства…»</title><link href="https://shikhalev.github.io/tech/2025/10/darktable-base.html" rel="alternate" type="text/html" title="Первая глава «Практического руководства…»" /><published>2025-10-26T00:00:00+00:00</published><updated>2025-10-26T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/10/darktable-base</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/10/darktable-base.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:240px;"><a href="/img/2025/10/05/darktable/cover-fhd.webp" class="__image_link"><img src="/img/2025/10/05/darktable/cover-240.webp" class="__image" alt="Картинка для привлечения внимания" title="Картинка для привлечения внимания" /></a></figure>
-
-<p>Выложил <a href="/pages/books/darktable/pg/1_base_processing.html">первую главу</a> «<a href="/pages/books/darktable/pg/">Практического руководства по <strong class="img-icon-darktable">darktable</strong></a>» — <strong><a href="/pages/books/darktable/pg/1_base_processing.html">«Базовая обработка»</a></strong>.</p>
-
-<p>Вместе с <a href="/pages/books/darktable/pg/0_intro.html">«Введением»</a> первая глава должна дать полноценный быстрый старт — основные вещи, которые необходимы, чтобы начать уже делать что-то полезное.</p>
-
-<p>Описаны действия и модули для:</p>
-
-<ul>
-  <li>
-    <p>Выставления баланса белого;</p>
-  </li>
-  <li>
-    <p>Исправления оптических искажений и шумоподавления;</p>
-  </li>
-  <li>
-    <p>Кадрирования и изменения геометрии;</p>
-  </li>
-  <li>
-    <p>Работы с общим контрастом и экспозицией, вытягивания теней;</p>
-  </li>
-  <li>
-    <p>Подчеркивания деталей посредством локального контраста.</p>
-  </li>
-</ul>
-
-<hr />
-
-<p>Огроменный вышел справочный раздел, подумываю о том, чтобы вынести переводы справки отдельно от глав все-таки… Но пока не уверен.</p>
-
-<p><strong>По прежнему жду замечаний и вопросов.</strong></p>
-
-<p>Следующая глава будет про организацию изображений — снова представление светового стола, но уже в максимально развернутом виде.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;soft&quot;, &quot;graphics&quot;, &quot;photo&quot;, &quot;processing&quot;]" /><category term="Darktable" /><category term="Linux" /><category term="RAW" /><summary type="html"><![CDATA[Первая глава «Практического руководства по darktable» — «Базовая обработка»]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/10/05/darktable/darktable-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/10/05/darktable/darktable-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;life&quot;, &quot;social&quot;, &quot;psi&quot;, &quot;mind&quot;]" /><category term="нейросети" /><category term="ChatGPT" /><category term="Grok" /><category term="Perplexity" /><category term="ИИ" /><category term="искусственный интеллект" /><summary type="html"><![CDATA[За последнее время (особенно последний год) мне довелось довольно активно поработать с боль­ши­ми языковыми моделями (LLM), которые сейчас модно называть искусственным интеллектом. Захотелось кое-что сформулировать и подытожить.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/11/21/llm/girl-640x640-1216x634-0-105.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/11/21/llm/girl-640x640-1216x634-0-105.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
