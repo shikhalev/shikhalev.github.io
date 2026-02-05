@@ -5,16 +5,15 @@
       "chat_id": "@shikhalev_blog"
     },
     "posts": {
-      "_posts/tech/2026/2026-02-05-yard-is-sequel.md": {
-        "url": "https://shikhalev.github.io/tech/2026/02/yard-is-sequel.html",
+      "_posts/blog/2026/2026-02-05-channels.md": {
+        "url": "https://shikhalev.github.io/life/2026/02/channels.html",
         "date": "2026/02/05",
-        "title": "Автодокументирование моделей Sequel",
-        "description": "YARD-плагин для документирования моделей Sequel",
+        "title": "Что там в Tg?",
+        "description": "Подборка наблюдений за январь.",
         "categories": [
-          "технологии",
-          "программирование",
-          "ruby",
-          "БД"
+          "жизнь",
+          "природа",
+          "веб"
         ]
       }
     }
