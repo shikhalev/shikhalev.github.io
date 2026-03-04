@@ -1,4 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed/tech.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-03-02T04:34:02+00:00</updated><id>https://shikhalev.github.io/feed/tech.xml</id><title type="html">Иван Шихалев | Tech</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Автодокументирование моделей Sequel</title><link href="https://shikhalev.github.io/tech/2026/02/yard-is-sequel.html" rel="alternate" type="text/html" title="Автодокументирование моделей Sequel" /><published>2026-02-05T00:00:00+00:00</published><updated>2026-02-05T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2026/02/yard-is-sequel</id><content type="html" xml:base="https://shikhalev.github.io/tech/2026/02/yard-is-sequel.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:380px;border-radius: 25px;"><a href="/img/2026/02/05/yard-is-sequel/yard-is-sequel-fhd.webp" class="__image_link"><img src="/img/2026/02/05/yard-is-sequel/yard-is-sequel-380.webp" class="__image" style="border-radius: 25px;" alt="КДПВ сгенерирована по запросу «(yard) is (sequel) in winter fantasy style, detailed eyes»" title="КДПВ сгенерирована по запросу «(yard) is (sequel) in winter fantasy style, detailed eyes»" /></a></figure>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed/tech.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-03-04T14:18:43+00:00</updated><id>https://shikhalev.github.io/feed/tech.xml</id><title type="html">Иван Шихалев | Tech</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">iNatGet v0.9.0</title><link href="https://shikhalev.github.io/tech/2026/03/inat-get-0-9.html" rel="alternate" type="text/html" title="iNatGet v0.9.0" /><published>2026-03-04T00:00:00+00:00</published><updated>2026-03-04T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2026/03/inat-get-0-9</id><content type="html" xml:base="https://shikhalev.github.io/tech/2026/03/inat-get-0-9.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:320px;border-radius: 25px;"><a href="/img/2026/03/04/inat-get-0-9/logo-fhd.webp" class="__image_link"><img src="/img/2026/03/04/inat-get-0-9/logo-320-571x571-371-198.webp" class="__image" style="border-radius: 25px;" alt="" /></a></figure>
+
+<p>Что ж… Вот я и за­ре­ли­зил <strong><a href="https://github.com/inat-get/inat-get">🌿 iNatGet</a> <a href="https://github.com/inat-get/inat-get/releases/tag/v0.9.0">v0.9</a></strong>. Через два с небольшим года после <strong><a href="/tech/2023/11/inat-get.html">v0.8</a></strong>,
+и через примерно год после последней вер­сии — v0.8.0.16. Обо всех этих минорных корректирующих версиях я ничего не писал,
+главным образом потому, что там мучительно правились мелкие баги, а нормальная работа требовала глобального рефакторинга (т.е.
+переписать заново с нуля), на который никак не находилось времени.</p>
+
+<p>Однако все это время я не прекращал <em>пользоваться</em> своей программой, регулярно формируя отчеты для своих проектов<sup id="fnref:prj"><a href="#fn:prj" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> на iNa­tu­ra­list.
+Таким образом я постепенно уточнял свое понимание того, как это в принципе должно работать и где у меня провалы в архитектуре.
+Плюс развитие ней­ро­се­тей…
+В проекте ни строчки сгенерированного кода, но для консультаций и ревью я пользовался различными LLM очень активно<sup id="fnref:llm"><a href="#fn:llm" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>, что и позволило
+сравнительно быстро написать новую, полностью переделанную, версию.</p>
+
+<p>Если версии v0.8.x я характеризовал как <em>альфа</em>-версии, то ветка v0.9.x пусть будет <em>бетой</em>, но пока — <em>очень ранней бетой</em>…</p>
+
+<p>Коротко о том, что это за проект вообще, можно прочитать в <a href="https://github.com/inat-get/inat-get/blob/main/README-ru.md">README-ru.md</a> в репозитории.</p>
+
+<!--more-->
+
+<h2 id="что-нового">Что нового?</h2>
+
+<p class="note italic"><strong>Важно:</strong> никакой совместимости со старыми версиями нет. Ни старые скрипты, ни старая БД кэша, с новой версией работать не будут.
+И до полноценного релиза — версии 1.0 — совместимости обещать не могу. Впрочем, механизм миграций внедрен и настроен, так что
+по возможности данные таки будут сохраняться.</p>
+
+<p>Точнее, что <em>принципиально</em> нового <em>для пользователя</em>? Что из внутреннего устройства влияет на работу с программой?</p>
+
+<ul>
+  <li>
+    <p>Многозадачность на основе дочерних <em>процессов</em> (через <code class="language-plaintext highlighter-rouge">fork</code>), а <em>не потоков</em>. Все-таки GIL в Ruby никто не отменял, и потоки существенно друг другу мешают.</p>
+
+    <p>Кстати, сначала я попытался использовать новомодные <code class="language-plaintext highlighter-rouge">Ractor</code>‘ы, но увы — с боль­шин­с­т­вом имеющихся библиотек,
+в част­нос­ти — <code class="language-plaintext highlighter-rouge">Sequel</code>, они работать
+пока не могут, поскольку в принципе запрещают общие данные, тогда как классический запуск под­про­цес­сов через <code class="language-plaintext highlighter-rouge">fork</code> их клонирует
+(там есть нюансы, которые приходится учитывать, но работать можно).</p>
+
+    <p class="note italic"><strong>Важно:</strong> межпроцессное взаимодействие делается через unix-сокеты. Под виндой ничего работать не будет, во всяком случае, без WSL.</p>
+  </li>
+  <li>
+    <p>Более-менее нормально перенесена работа с данными на уровень БД, <em>без загрузки</em> больших объемов <em>в память</em>.</p>
+  </li>
+  <li>
+    <p>Отказался от настраиваемых режимов кэширования/обновления. Впрочем, они все равно не работали… Сейчас остался только обычный режим и off­li­ne —
+во втором случае не делаются <em>никакие</em> обращения к API. Кэширование теперь работает только так, как задумано, зато работает.</p>
+
+    <p>Вообще, параметров командной строки стало меньше, настройки остались только в конфиге. Зато в командной строке есть ключ выбора конфига.</p>
+
+    <p class="note italic">По конфигу нужно писать отдельную доку. К релизу (т.е. к 1.0) обязательно будет.</p>
+  </li>
+  <li>
+    <p><em>Потенциально</em> все должно работать с разными СУБД. Но пока не тестировалось<sup id="fnref:testing"><a href="#fn:testing" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>.</p>
+  </li>
+  <li>
+    <p><abbr title="Domain Specific Language">DSL</abbr> тоже поменялся. См. его описание в репозитории в <a href="https://github.com/inat-get/inat-get/blob/main/DSL-ru.md" class="img-icon-github"><abbr title="Domain Specific Language">DSL</abbr>-ru.md</a>.</p>
+  </li>
+  <li>
+    <p><u>Пока</u> нет средств формирования отчетов и таблиц в них.</p>
+
+    <p>Я планирую и здесь сделать все по новому и по уму, чтобы можно было задавать
+структуру отчета и затем выводить его в разных форматах без переделки. А пока пользуюсь простой записью в текстовый файл.</p>
+  </li>
+  <li>
+    <p>Ну и наконец, <em>репозиторий</em> переехал с моего личного аккаунта в <a href="https://github.com/inat-get">одноименную «организацию»</a>. По сути это ничего не меняет, но мне так удобнее —
+сгруппировать этот проект и все, с ним связанные, в одном месте.</p>
+  </li>
+</ul>
+
+<h2 id="что-дальше">Что дальше?</h2>
+
+<p>Отчасти ближайшие планы уже расписаны по задачам и майлстоунам версий, см. <strong><a href="https://github.com/inat-get/inat-get/milestones?sort=due_date&amp;direction=asc" class="img-icon-github">Milestones</a></strong> на гитхабе.</p>
+
+<p>Если коротко, то основных направлений три:</p>
+
+<ul>
+  <li>
+    <p>Доработка кэширования,</p>
+  </li>
+  <li>
+    <p>Разработка системы мультиформатных отчетов,</p>
+  </li>
+  <li>
+    <p>Добавление графики и карт.</p>
+  </li>
+</ul>
+
+<p>И, конечно, <strong><a href="https://inat-get.github.io/inat-get/">документация</a></strong>.</p>
+
+<p>Сроки, естественно, совершенно неопределенные — мне за эту разработку никто не платит, и все делается в свободное время.
+В майлстоунах какие-то даты прописаны, но это так — чисто ориентировочно, чтобы они в правильном порядке выстраивались.</p>
+
+<h2 id="на-полях">На полях…</h2>
+
+<p>Наверное, стоит написать отдельные посты о разных нюансах, с которыми пришлось столкнуться в процессе разработки…
+И в пер­вую очередь — о плюсах, минусах и сложностях <strong><a href="https://sequel.jeremyevans.net/">Sequel</a></strong> — это очень мощный инструмент, но местами без подсказок LLM
+мне бы пришлось туго.</p>
+
+<p>А кроме того, я впервые за долгое время снова всерьез погрузился в Ruby, и там обнаружилось много нового и вкусного. В частности,
+мне понравилось, как работает JIT — выигрыш вполне ощутимый во многих случаях.</p>
+
+<p>Надеюсь, напишу…</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:prj">
+      <p>См. журналы проекта <a href="https://www.inaturalist.org/projects/bioraznoobrazie-rayonov-sverdlovskoy-oblasti">«Биоразнообразие районов Свердловской области»</a> и его дочерних. <a href="#fnref:prj" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:llm">
+      <p>О своем отношении и подходе к использованию нейросетей я подробно писал в посте: <a href="/tech/2025/11/llm.html">«Заметки об LLM и нейросетях вообще»</a>. <a href="#fnref:llm" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:testing">
+      <p>Тестирование на разных СУБД и сравнение их работы запланировано на версию 0.9.4 — там вообще итерация задумана как тестирующая и корректирующая. <a href="#fnref:testing" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="tech" /><category term="programming" /><category term="ruby" /><category term="nature" /><category term="birdwatching" /><category term="inat-get" /><category term="iNatGet" /><category term="iNaturalist" /><summary type="html"><![CDATA[Релизнул таки новую, полностью переписанную, версию...]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2026/03/04/inat-get-0-9/logo-640x640-1024x534-0-227.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2026/03/04/inat-get-0-9/logo-640x640-1024x534-0-227.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Автодокументирование моделей Sequel</title><link href="https://shikhalev.github.io/tech/2026/02/yard-is-sequel.html" rel="alternate" type="text/html" title="Автодокументирование моделей Sequel" /><published>2026-02-05T00:00:00+00:00</published><updated>2026-02-05T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2026/02/yard-is-sequel</id><content type="html" xml:base="https://shikhalev.github.io/tech/2026/02/yard-is-sequel.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:380px;border-radius: 25px;"><a href="/img/2026/02/05/yard-is-sequel/yard-is-sequel-fhd.webp" class="__image_link"><img src="/img/2026/02/05/yard-is-sequel/yard-is-sequel-380.webp" class="__image" style="border-radius: 25px;" alt="КДПВ сгенерирована по запросу «(yard) is (sequel) in winter fantasy style, detailed eyes»" title="КДПВ сгенерирована по запросу «(yard) is (sequel) in winter fantasy style, detailed eyes»" /></a></figure>
 
 <p>Набросал предварительную версию <a href="https://github.com/lsegal/yard">YARD</a>-плагина для автодокументирования <a href="https://sequel.jeremyevans.net/">Sequel</a>-моделей — <strong><a href="https://github.com/inat-get/yard-is-sequel" class="img-icon-github">yard-is-sequel</a></strong>.
 Су­щес­т­ву­ю­щий <a href="https://github.com/kmoschcau/yard-sequel"><code class="language-plaintext highlighter-rouge">yard-sequel</code></a> с современными версиями YARD/Ruby/Sequel не работает.</p>
@@ -1419,23 +1532,4 @@ Grok налажал с хуками Jekyll, неверно отнеся один
 
 <p><strong>По прежнему жду замечаний и вопросов.</strong></p>
 
-<p>Следующая глава будет про организацию изображений — снова представление светового стола, но уже в максимально развернутом виде.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;soft&quot;, &quot;graphics&quot;, &quot;photo&quot;, &quot;processing&quot;]" /><category term="Darktable" /><category term="Linux" /><category term="RAW" /><summary type="html"><![CDATA[Первая глава «Практического руководства по darktable» — «Базовая обработка»]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/10/05/darktable/darktable-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/10/05/darktable/darktable-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Этим стулом…</title><link href="https://shikhalev.github.io/tech/2025/10/darktable.html" rel="alternate" type="text/html" title="Этим стулом…" /><published>2025-10-05T00:00:00+00:00</published><updated>2025-10-05T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/10/darktable</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/10/darktable.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:240px;"><a href="/img/2025/10/05/darktable/cover-fhd.webp" class="__image_link"><img src="/img/2025/10/05/darktable/cover-240.webp" class="__image" alt="Картинка для привлечения внимания" title="Картинка для привлечения внимания" /></a></figure>
-
-<p>Начал писать большое <a href="/pages/books/darktable/pg/">Практическое руководство по <strong class="img-icon-darktable">darktable</strong></a>. Выложил <a href="/pages/books/darktable/pg/0_intro.html">«Введение»</a>, где
-рассматриваю общий интерфейс и базовое управление снимками.</p>
-
-<p><em>Это всё пока черновик, который будет правиться и дорабатываться, поэтому замечания и вопросы крайне приветствуются.</em></p>
-
-<hr />
-
-<p>Общая идея — соединить изложение в практическом ключе, посредством сквозных примеров и теоретических отступлений, со справочными
-материалами, прямо соответствующими родной справке darktable.</p>
-
-<p>На данный момент справочная часть — это ИИ-перевод, тогда как практическая — оригинальный текст (писать не-перевод посредством ИИ
-оказалось практически невозможно, т.е. писать промпт куда сложнее и дольше, чем сам текст… это отдельная интересная тема, надо будет
-пост написать). По ходу дела буду и справочную часть активно редактировать, чтобы привести язык в порядок и единообразие.</p>
-
-<hr />
-
-<p>Вообще, конечно, задумка масштабная, писать буду долго, тем более, что не могу этому посвятить все свое время… Но надеюсь где-то
-за полгода-год закончить. И опять же, рассчитываю на фидбэк по ходу дела, чтобы ничего не забыть и не схалтурить.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;soft&quot;, &quot;graphics&quot;, &quot;photo&quot;, &quot;processing&quot;]" /><category term="Darktable" /><category term="Linux" /><category term="RAW" /><summary type="html"><![CDATA[Анонс «Практического руководства по darktable»]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/10/05/darktable/darktable-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/10/05/darktable/darktable-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>Следующая глава будет про организацию изображений — снова представление светового стола, но уже в максимально развернутом виде.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;soft&quot;, &quot;graphics&quot;, &quot;photo&quot;, &quot;processing&quot;]" /><category term="Darktable" /><category term="Linux" /><category term="RAW" /><summary type="html"><![CDATA[Первая глава «Практического руководства по darktable» — «Базовая обработка»]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/10/05/darktable/darktable-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/10/05/darktable/darktable-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

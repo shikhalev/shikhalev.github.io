@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+  <link rel="stylesheet" href="/assets/local.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>iNatGet v0.9.0 | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="iNatGet v0.9.0" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Релизнул таки новую, полностью переписанную, версию…" />
+<meta property="og:description" content="Релизнул таки новую, полностью переписанную, версию…" />
+<link rel="canonical" href="https://shikhalev.github.io/tech/2026/03/inat-get-0-9.html" />
+<meta property="og:url" content="https://shikhalev.github.io/tech/2026/03/inat-get-0-9.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/2026/03/04/inat-get-0-9/logo-640x640-1024x534-0-227.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-04T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://shikhalev.github.io/img/2026/03/04/inat-get-0-9/logo-640x640-1024x534-0-227.webp" />
+<meta property="twitter:title" content="iNatGet v0.9.0" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2026-03-04T00:00:00+00:00","datePublished":"2026-03-04T00:00:00+00:00","description":"Релизнул таки новую, полностью переписанную, версию…","headline":"iNatGet v0.9.0","image":"https://shikhalev.github.io/img/2026/03/04/inat-get-0-9/logo-640x640-1024x534-0-227.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2026/03/inat-get-0-9.html"},"url":"https://shikhalev.github.io/tech/2026/03/inat-get-0-9.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "u2gczedmo7");
+</script>
+
+</head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.*</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">iNatGet v0.9.0</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2Ftech%2F2026%2F03%2Finat-get-0-9.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2Ftech%2F2026%2F03%2Finat-get-0-9.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2Ftech%2F2026%2F03%2Finat-get-0-9.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2Ftech%2F2026%2F03%2Finat-get-0-9.html&text=iNatGet+v0.9.0">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=iNatGet+v0.9.0&url=https%3A%2F%2Fshikhalev.github.io%2Ftech%2F2026%2F03%2Finat-get-0-9.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2026-03-04T00:00:00+00:00" itemprop="datePublished">2026.03.04
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#iNatGet">iNatGet</a>​<a class="tag" href="/tags#iNaturalist">iNaturalist</a>​<a class="tag" href="/tags#inat-get">inat-get</a></aside></header><div itemprop="articleBody">
+  <figure class="__figure __implicit_figure __right" style="max-width:320px;border-radius: 25px;"><a href="/img/2026/03/04/inat-get-0-9/logo-fhd.webp" class="__image_link"><img src="/img/2026/03/04/inat-get-0-9/logo-320-571x571-371-198.webp" class="__image" style="border-radius: 25px;" alt=""></a></figure>
+
+<p>Что ж… Вот я и за­ре­ли­зил <strong><a href="https://github.com/inat-get/inat-get">🌿 iNatGet</a> <a href="https://github.com/inat-get/inat-get/releases/tag/v0.9.0">v0.9</a></strong>. Через два с небольшим года после <strong><a href="/tech/2023/11/inat-get.html">v0.8</a></strong>,
+и через примерно год после последней вер­сии — v0.8.0.16. Обо всех этих минорных корректирующих версиях я ничего не писал,
+главным образом потому, что там мучительно правились мелкие баги, а нормальная работа требовала глобального рефакторинга (т.е.
+переписать заново с нуля), на который никак не находилось времени.</p>
+
+<p>Однако все это время я не прекращал <em>пользоваться</em> своей программой, регулярно формируя отчеты для своих проектов<sup id="fnref:prj"><a href="#fn:prj" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> на iNa­tu­ra­list.
+Таким образом я постепенно уточнял свое понимание того, как это в принципе должно работать и где у меня провалы в архитектуре.
+Плюс развитие ней­ро­се­тей…
+В проекте ни строчки сгенерированного кода, но для консультаций и ревью я пользовался различными LLM очень активно<sup id="fnref:llm"><a href="#fn:llm" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>, что и позволило
+сравнительно быстро написать новую, полностью переделанную, версию.</p>
+
+<p>Если версии v0.8.x я характеризовал как <em>альфа</em>-версии, то ветка v0.9.x пусть будет <em>бетой</em>, но пока — <em>очень ранней бетой</em>…</p>
+
+<p>Коротко о том, что это за проект вообще, можно прочитать в <a href="https://github.com/inat-get/inat-get/blob/main/README-ru.md">README-ru.md</a> в репозитории.</p>
+
+<!--more-->
+
+<h2 id="что-нового">
+<a class="anchor" href="#%D1%87%D1%82%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что нового?</h2>
+
+<p class="note italic"><strong>Важно:</strong> никакой совместимости со старыми версиями нет. Ни старые скрипты, ни старая БД кэша, с новой версией работать не будут.
+И до полноценного релиза — версии 1.0 — совместимости обещать не могу. Впрочем, механизм миграций внедрен и настроен, так что
+по возможности данные таки будут сохраняться.</p>
+
+<p>Точнее, что <em>принципиально</em> нового <em>для пользователя</em>? Что из внутреннего устройства влияет на работу с программой?</p>
+
+<ul>
+  <li>
+    <p>Многозадачность на основе дочерних <em>процессов</em> (через <code class="language-plaintext highlighter-rouge">fork</code>), а <em>не потоков</em>. Все-таки GIL в Ruby никто не отменял, и потоки существенно друг другу мешают.</p>
+
+    <p>Кстати, сначала я попытался использовать новомодные <code class="language-plaintext highlighter-rouge">Ractor</code>‘ы, но увы — с боль­шин­с­т­вом имеющихся библиотек,
+в част­нос­ти — <code class="language-plaintext highlighter-rouge">Sequel</code>, они работать
+пока не могут, поскольку в принципе запрещают общие данные, тогда как классический запуск под­про­цес­сов через <code class="language-plaintext highlighter-rouge">fork</code> их клонирует
+(там есть нюансы, которые приходится учитывать, но работать можно).</p>
+
+    <p class="note italic"><strong>Важно:</strong> межпроцессное взаимодействие делается через unix-сокеты. Под виндой ничего работать не будет, во всяком случае, без WSL.</p>
+  </li>
+  <li>
+    <p>Более-менее нормально перенесена работа с данными на уровень БД, <em>без загрузки</em> больших объемов <em>в память</em>.</p>
+  </li>
+  <li>
+    <p>Отказался от настраиваемых режимов кэширования/обновления. Впрочем, они все равно не работали… Сейчас остался только обычный режим и off­li­ne —
+во втором случае не делаются <em>никакие</em> обращения к API. Кэширование теперь работает только так, как задумано, зато работает.</p>
+
+    <p>Вообще, параметров командной строки стало меньше, настройки остались только в конфиге. Зато в командной строке есть ключ выбора конфига.</p>
+
+    <p class="note italic">По конфигу нужно писать отдельную доку. К релизу (т.е. к 1.0) обязательно будет.</p>
+  </li>
+  <li>
+    <p><em>Потенциально</em> все должно работать с разными СУБД. Но пока не тестировалось<sup id="fnref:testing"><a href="#fn:testing" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>.</p>
+  </li>
+  <li>
+    <p><abbr title="Domain Specific Language">DSL</abbr> тоже поменялся. См. его описание в репозитории в <a href="https://github.com/inat-get/inat-get/blob/main/DSL-ru.md" class="img-icon-github"><abbr title="Domain Specific Language">DSL</abbr>-ru.md</a>.</p>
+  </li>
+  <li>
+    <p><u>Пока</u> нет средств формирования отчетов и таблиц в них.</p>
+
+    <p>Я планирую и здесь сделать все по новому и по уму, чтобы можно было задавать
+структуру отчета и затем выводить его в разных форматах без переделки. А пока пользуюсь простой записью в текстовый файл.</p>
+  </li>
+  <li>
+    <p>Ну и наконец, <em>репозиторий</em> переехал с моего личного аккаунта в <a href="https://github.com/inat-get">одноименную «организацию»</a>. По сути это ничего не меняет, но мне так удобнее —
+сгруппировать этот проект и все, с ним связанные, в одном месте.</p>
+  </li>
+</ul>
+
+<h2 id="что-дальше">
+<a class="anchor" href="#%D1%87%D1%82%D0%BE-%D0%B4%D0%B0%D0%BB%D1%8C%D1%88%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что дальше?</h2>
+
+<p>Отчасти ближайшие планы уже расписаны по задачам и майлстоунам версий, см. <strong><a href="https://github.com/inat-get/inat-get/milestones?sort=due_date&amp;direction=asc" class="img-icon-github">Milestones</a></strong> на гитхабе.</p>
+
+<p>Если коротко, то основных направлений три:</p>
+
+<ul>
+  <li>
+    <p>Доработка кэширования,</p>
+  </li>
+  <li>
+    <p>Разработка системы мультиформатных отчетов,</p>
+  </li>
+  <li>
+    <p>Добавление графики и карт.</p>
+  </li>
+</ul>
+
+<p>И, конечно, <strong><a href="https://inat-get.github.io/inat-get/">документация</a></strong>.</p>
+
+<p>Сроки, естественно, совершенно неопределенные — мне за эту разработку никто не платит, и все делается в свободное время.
+В майлстоунах какие-то даты прописаны, но это так — чисто ориентировочно, чтобы они в правильном порядке выстраивались.</p>
+
+<h2 id="на-полях">
+<a class="anchor" href="#%D0%BD%D0%B0-%D0%BF%D0%BE%D0%BB%D1%8F%D1%85" aria-hidden="true"><span class="octicon octicon-link"></span></a>На полях…</h2>
+
+<p>Наверное, стоит написать отдельные посты о разных нюансах, с которыми пришлось столкнуться в процессе разработки…
+И в пер­вую очередь — о плюсах, минусах и сложностях <strong><a href="https://sequel.jeremyevans.net/">Sequel</a></strong> — это очень мощный инструмент, но местами без подсказок LLM
+мне бы пришлось туго.</p>
+
+<p>А кроме того, я впервые за долгое время снова всерьез погрузился в Ruby, и там обнаружилось много нового и вкусного. В частности,
+мне понравилось, как работает JIT — выигрыш вполне ощутимый во многих случаях.</p>
+
+<p>Надеюсь, напишу…</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:prj">
+      <p>См. журналы проекта <a href="https://www.inaturalist.org/projects/bioraznoobrazie-rayonov-sverdlovskoy-oblasti">«Биоразнообразие районов Свердловской области»</a> и его дочерних. <a href="#fnref:prj" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:llm">
+      <p>О своем отношении и подходе к использованию нейросетей я подробно писал в посте: <a href="/tech/2025/11/llm.html">«Заметки об LLM и нейросетях вообще»</a>. <a href="#fnref:llm" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:testing">
+      <p>Тестирование на разных СУБД и сравнение их работы запланировано на версию 0.9.4 — там вообще итерация задумана как тестирующая и корректирующая. <a href="#fnref:testing" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+
+<div markdown="span" class="announcer-block announcer-channel-telegram" style="display:none;" data-key="_posts/tech/2026/2026-03-04-inat-get-0-9.md" data-channel="telegram"></div>
+<script src="/js/announcer.js"></script>
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2015.04.01 |</span>
+            <a href="/tech/2015/04/ruby-context.html" title="Статья рассказывает о программном контексте в Ruby: какие переменные и другие объекты доступны в конкретном месте программы, и как интерпретатор их ищет.">Блоки и контекст в Ruby</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2025.12.12 |</span>
+            <a href="/tech/2025/12/inat-channel.html" title="Написал скрипт для автопостинга выборок из iNaturalist в tg-каналы">iNaturalist + Telegram</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-globe" href="/tech/web/" title="HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.">Web</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2015.03.31 |</span>
+            <a href="/tech/2015/03/druby.html" title="Введение в технологию dRuby. Прозрачный RPC для взаимодействия Ruby-программ.">Распределенный Ruby</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#что-нового">Что нового?</a></li>
+<li class="toc-entry toc-h2"><a href="#что-дальше">Что дальше?</a></li>
+<li class="toc-entry toc-h2"><a href="#на-полях">На полях…</a></li>
+</ul>
+</aside><aside id="backs" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <!-- <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a> -->
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <!-- <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a> -->
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2026 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>
