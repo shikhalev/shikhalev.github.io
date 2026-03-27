@@ -1,4 +1,95 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-03-19T16:20:38+00:00</updated><id>https://shikhalev.github.io/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">iNatGet v0.9.0</title><link href="https://shikhalev.github.io/tech/2026/03/inat-get-0-9.html" rel="alternate" type="text/html" title="iNatGet v0.9.0" /><published>2026-03-04T00:00:00+00:00</published><updated>2026-03-04T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2026/03/inat-get-0-9</id><content type="html" xml:base="https://shikhalev.github.io/tech/2026/03/inat-get-0-9.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:320px;border-radius: 25px;"><a href="/img/2026/03/04/inat-get-0-9/logo-fhd.webp" class="__image_link"><img src="/img/2026/03/04/inat-get-0-9/logo-320-571x571-371-198.webp" class="__image" style="border-radius: 25px;" alt="" /></a></figure>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-03-27T02:24:29+00:00</updated><id>https://shikhalev.github.io/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">iNatGet v0.9.2 и его практическое применение</title><link href="https://shikhalev.github.io/tech/2026/03/inat-get-0-9-2.html" rel="alternate" type="text/html" title="iNatGet v0.9.2 и его практическое применение" /><published>2026-03-27T00:00:00+00:00</published><updated>2026-03-27T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2026/03/inat-get-0-9-2</id><content type="html" xml:base="https://shikhalev.github.io/tech/2026/03/inat-get-0-9-2.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:320px;border-radius: 25px;"><a href="/img/2026/03/04/inat-get-0-9/logo-fhd.webp" class="__image_link"><img src="/img/2026/03/04/inat-get-0-9/logo-320-571x571-371-198.webp" class="__image" style="border-radius: 25px;" alt="" /></a></figure>
+
+<h2 id="версия-09018">Версия 0.9.0.18</h2>
+
+<p>Итак, финальные отчеты по <a href="https://www.inaturalist.org/projects/bioraznoobrazie-rayonov-sverdlovskoy-oblasti">сво­им районным проектам</a> на <strong><a href="https://www.inaturalist.org/" class="img-icon-inaturalist">iNa­tu­ra­list</a></strong> я сфор­ми­ро­вал, пользуясь
+уже новой версией <strong><a href="https://github.com/inat-get/inat-get" class="img-icon-github">inat-get</a></strong>. Сразу выяснилось, что вер­сия <a href="https://github.com/inat-get/inat-get/releases/tag/v0.9.0">0.9.0</a><sup id="fnref:prev"><a href="#fn:prev" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>, несмотря на то, что я старался
+для ба­зо­вых вещей писать тесты, никуда не го­дит­ся. Впрочем, это нормально на дан­ном этапе (ранней беты). В ре­зуль­та­те, отлаживая
+на ре­аль­ных данных, я дошел до вер­сии <strong><a href="https://github.com/inat-get/inat-get/releases/tag/v0.9.0.18">0.9.0.18</a></strong> — уже вполне рабочей.</p>
+
+<p>Полученными отчетами я вполне доволен. Примеры:</p>
+
+<ul>
+  <li>
+    <p><a href="https://www.inaturalist.org/posts/126355" class="img-icon-inaturalist">Итоги 2025 (сводка по районам)</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.inaturalist.org/posts/126344" class="img-icon-inaturalist">Итоги 2025 по западному округу</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.inaturalist.org/posts/126293" class="img-icon-inaturalist">Сравнение с соседями Артинского района</a></p>
+  </li>
+</ul>
+
+<p>В подвале скриптов можно разглядеть мелким шрифтом, что сгенерированы они версией <em>0.9.0.15</em>, а не <em>.18</em>. Это потому, что самые последние
+исправления в вет­ке 0.9.0 касались исключительно оптимизаций, и на результат не влияли.</p>
+
+<p>Средств для <em>удоб­но­го</em> формирования отчетов все еще нет, пишу текстом в фай­лы, так что скрипты отчетов получились довольно развесистые.
+Я их поместил в от­дель­ный репозиторий <strong><a href="https://github.com/inat-get/ing-sv-districts" class="img-icon-github">ing-sv-districts</a></strong> — можно полюбоваться, хотя стру­к­ту­ра там сильно
+так себе…</p>
+
+<h2 id="версия-092">Версия 0.9.2</h2>
+
+<p>А здесь добавлена довольно мелкая фи­ча — поддержка <strong><a href="https://docs.ruby-lang.org/en/3.4/ERB.html" class="img-icon-ruby">ERB</a></strong>, как в ка­чес­т­ве шаблонов, вызываемых из поль­зо­ва­тель­с­ких
+скриптов, так и в ка­чес­т­ве пользовательских скриптов как таковых. Не то, чтобы это было существенное улучшение, но может, кому и пригодится.</p>
+
+<p>Переводить районные скрипты на этот механизм я не стал, поскольку это ничего нового не да­ет. Впрочем, возможно, имело бы смысл для до­пол­ни­тель­ной
+отладки…</p>
+
+<h2 id="промежуточные-итоги">Промежуточные итоги</h2>
+
+<p>В общем и целом, текущая архитектура вполне годная, от глав­ных тормозов вер­сии 0.8.x удалось избавиться, основной упор по вре­ме­ни
+идет в ско­рость интернета, причем обновления, как и задумано, берутся ин­к­ре­мен­т­но — через параметр <code class="language-plaintext highlighter-rouge">updated_since</code>, что резко ускоряет
+повторные запросы.</p>
+
+<p>Но работа с ло­каль­ной БД оставляет желать лучшего, груп­пи­ро­воч­ные запросы промахиваются мимо индексов, причем даже группировки
+по поль­зо­ва­те­лям, которые самые простые по сво­е­му внутреннему устройству… Что ж, значит следующая ите­ра­ция — <strong><a href="https://github.com/inat-get/inat-get/milestone/6">0.9.4</a></strong>,
+запланированная для ре­ше­ния именно этих про­б­лем — запланирована не зря. <em>Заметные</em> тормоза, впрочем, видны только на ге­не­ра­ции итоговой
+сводки — она сейчас занимает у ме­ня пару часов, что печально, конечно, но по срав­не­нию с 0.8.x — просто прекрасный результат.</p>
+
+<p>Что по­ра­до­ва­ло — уже отлаженный на SQLite вариант на Post­greSQL заработал <em>сра­зу</em> — спасибо <strong><a href="https://sequel.jeremyevans.net/">Sequel</a></strong>. Скорость работы
+на раз­ных СУБД практически не от­ли­ча­ет­ся. Нужны, конечно, аккуратные замеры, но в це­лом разницу можно игнорировать.</p>
+
+<h2 id="что-дальше">Что дальше?</h2>
+
+<p>Общий роадмап имеется на ви­ки проекта — <strong><a href="https://github.com/inat-get/inat-get/wiki/Roadmap" class="img-icon-github">Roadmap</a></strong>. Кстати, я тут «на­вайб­ко­дил» генератор ро­ад­ма­пов
+из Is­su­es и Mi­le­sto­nes — <strong><a href="https://github.com/inat-get/action-is-roadmap" class="img-icon-github">action-is-roadmap</a></strong> — довольно прикольно получилось, люблю наглядность.
+Даты майл­сто­у­нов проставлены от фо­на­ря — чисто для упо­ря­до­че­ния, как обещания их воспринимать точно не стоит.</p>
+
+<p>А если не вдаваться в детали, то ключевые задачи такие:</p>
+
+<ul>
+  <li>
+    <p><em>Оптимизация запросов.</em></p>
+
+    <p>Не знаю, насколько удастся их ускорить, но желательно выжать все возможное.</p>
+  </li>
+  <li>
+    <p><em>Доделать кэширование.</em></p>
+  </li>
+  <li>
+    <p><em>Удобный конструктор отчетов.</em></p>
+
+    <p>Чтобы не нужно было заморачиваться на оформление в пользовательских скриптах. Писать их, думая
+только о ло­ги­ке, причем в тер­ми­нах множеств и выборок.</p>
+  </li>
+  <li>
+    <p><em>Доделать работу с про­чи­ми данными.</em></p>
+
+    <p>Пока реализованы далеко не все возможные запросы и фильтры, есть куда развиваться. И здесь
+нужно будет не за­бы­вать об оп­ти­маль­нос­ти запросов.</p>
+  </li>
+</ul>
+
+<p>Наверное, по ходу дела будут появляться новые задачи, и уж точ­но — находиться новые баги…</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:prev">
+      <p>См. <a href="/tech/2026/03/inat-get-0-9.html">предыдущий пост — «iNatGet v0.9.0» от 2026.03.04</a>. <a href="#fnref:prev" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="tech" /><category term="programming" /><category term="ruby" /><category term="nature" /><category term="birdwatching" /><category term="inat-get" /><category term="iNatGet" /><category term="iNaturalist" /><category term="ERB" /><category term="Sequel" /><category term="PostgreSQL" /><category term="SQLite" /><summary type="html"><![CDATA[Сформировал отчеты районных проектов за 2025 год новым скриптом, отловил основные баги, можно пользоваться...]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2026/03/04/inat-get-0-9/logo-640x640-1024x534-0-227.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2026/03/04/inat-get-0-9/logo-640x640-1024x534-0-227.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">iNatGet v0.9.0</title><link href="https://shikhalev.github.io/tech/2026/03/inat-get-0-9.html" rel="alternate" type="text/html" title="iNatGet v0.9.0" /><published>2026-03-04T00:00:00+00:00</published><updated>2026-03-04T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2026/03/inat-get-0-9</id><content type="html" xml:base="https://shikhalev.github.io/tech/2026/03/inat-get-0-9.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:320px;border-radius: 25px;"><a href="/img/2026/03/04/inat-get-0-9/logo-fhd.webp" class="__image_link"><img src="/img/2026/03/04/inat-get-0-9/logo-320-571x571-371-198.webp" class="__image" style="border-radius: 25px;" alt="" /></a></figure>
 
 <p>Что ж… Вот я и за­ре­ли­зил <strong><a href="https://github.com/inat-get/inat-get">🌿 iNatGet</a> <a href="https://github.com/inat-get/inat-get/releases/tag/v0.9.0">v0.9</a></strong>. Через два с небольшим года после <strong><a href="/tech/2023/11/inat-get.html">v0.8</a></strong>,
 и через примерно год после последней вер­сии — v0.8.0.16. Обо всех этих минорных корректирующих версиях я ничего не писал,
@@ -528,99 +619,4 @@ POCO X6) уже вполне приемлемо (для меня) справля
       <p>См. <a href="/tech/2025/11/llm.html#programming">раздел об использовании LLM в программировании</a> в соответствующем посте. <a href="#fnref:neur" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="tech" /><category term="programming" /><category term="web" /><category term="about" /><category term="Telegram" /><category term="iNaturalist" /><category term="Jekyll IS" /><category term="комментарии" /><category term="inat-channel" /><category term="jekyll-is-announcer" /><summary type="html"><![CDATA[Обновления двух гемов: inat-channel и jekyll-is-announcer]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/12/16/updates/gremlins-640x640-1216x634-0-71.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/12/16/updates/gremlins-640x640-1216x634-0-71.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">iNaturalist + Telegram</title><link href="https://shikhalev.github.io/tech/2025/12/inat-channel.html" rel="alternate" type="text/html" title="iNaturalist + Telegram" /><published>2025-12-12T00:00:00+00:00</published><updated>2025-12-12T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/12/inat-channel</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/12/inat-channel.html"><![CDATA[<figure class="__figure __implicit_figure __right logo" style="max-width:320px;margin-top: -5px;shape-outside:url(/img/2025/12/12/inat-channel/owl-320.webp);"><a href="https://t.me/inat_sverdlobl/49"><img src="/img/2025/12/12/inat-channel/owl-320.webp" class="__image" style="filter: drop-shadow(0px 0px 5px silver);shape-outside:url(/img/2025/12/12/inat-channel/owl-320.webp);" alt="Пример телеграм-поста" title="Пример телеграм-поста" /></a></figure>
-
-<h2 id="анонс">Анонс</h2>
-
-<p>Написал скрипт для автопостинга выборок из <strong><a href="https://www.inaturalist.org/" class="img-icon-inaturalist">iNaturalist</a></strong> в tg-каналы. Скрипт делает выборку по произвольно
-сконфигурированным параметрам (которые, разумеется, должны поддерживаться iNaturalist API), затем берет случайное наблюдение, постит его,
-а остальные складывает в пул, который будет задействован, если свежие кончатся. Это если коротко.</p>
-
-<p>Более подробно, как это все работает, а главное — как настраивается, я описал в <a href="https://github.com/inat-get/inat-channel/blob/main/README.md">README</a> проекта <strong><a href="https://github.com/inat-get/inat-channel" class="img-icon-github">inat-get/inat-channel</a></strong>.
-В том числе и <a href="https://github.com/inat-get/inat-channel/blob/main/README-ru.md">на русском</a>. Здесь пара моментов:</p>
-
-<ul>
-  <li>
-    <p>Наблюдения не дублируются.</p>
-  </li>
-  <li>
-    <p>Можно включить режим, когда и таксоны не будут дублироваться, с ограниченным, правда, сроком. Но его можно выставить произвольно большим.</p>
-  </li>
-  <li>
-    <p>Форматирование делается ERB-шаблоном, т.е. максимально гибко.</p>
-  </li>
-  <li>
-    <p>Скрипт прекрасно работает на GitHub Actions, запускаясь по расписанию. Для контроля неповторямости необходимо настроить обратный пуш, чтобы данные,
-которые хранятся в JSON-файлах, сохранялись в репозитории между сеансами.</p>
-  </li>
-  <li>
-    <p>Используется <a href="https://api.inaturalist.org/v2/docs/" class="img-icon-inaturalist">iNaturalist API <strong>v2</strong></a>, которое находится в ранней бете и может поломаться. Однако, на первой версии
-пришлось бы вытягивать в десятки, если не в сотни раз бо́льшие объемы данных, что малоприемлемо.</p>
-  </li>
-</ul>
-
-<h2 id="примеры">Примеры</h2>
-
-<p>На реальных примерах работу скрипта можно посмотреть на двух моих каналах:</p>
-
-<ul>
-  <li>
-    <p>Во-первых, я оживил канал <strong>«<a href="https://t.me/urals_nature" class="img-icon-tg wrapable">Природа Урала — наблюдения с iNa­tu­ra­list</a>»</strong>. Там, напомню, наблюдения
-со всего Урала и прилегающих районов — от Оренбуржья до ЯНАО. Ни один регион не входит в выборку целиком, только отдельные районы, относящиеся
-непосредственно к Уральским горам, или прилегающие. В канале выходит до четырех постов в день по разным группам таксонов.</p>
-
-    <p>Все настройки и workflow
-для Actions доступны в ре­по­зи­то­рии <strong><a href="https://github.com/inat-get/channel-ural" class="img-icon-github">inat-get/channel-ural</a></strong>.</p>
-  </li>
-  <li>
-    <p>Во-вторых, для проекта <strong>«<a href="https://www.inaturalist.org/projects/bioraznoobrazie-rayonov-sverdlovskoy-oblasti" class="img-icon-inaturalist wrapable">Биоразнообразие районов Свердловской области</a>»</strong> тоже завел канал,
-под немудреным названием <strong>«<a href="https://t.me/inat_sverdlobl" class="img-icon-tg wrapable">Био­раз­но­об­ра­зие Свердловской области в TG</a>»</strong>. Там один пост в день (да и выборка поменьше).</p>
-
-    <p>Все его настройки и workflow также доступны на GitHub — <strong><a href="https://github.com/inat-get/channel-sverdlobl" class="img-icon-github wrapable">inat-get/channel-sverdlobl</a></strong>.</p>
-  </li>
-</ul>
-
-<p>Подписывайтесь, ставьте лайки, комментируйте… Отелеграмливайте свои проекты. В общем, велкам.</p>
-
-<!--more-->
-
-<h2 id="замечания">Замечания</h2>
-
-<p>Из разряда <em>«сегодня я узнал, что…»</em></p>
-
-<dl>
-  <dt>iNaturalist API v2</dt>
-  <dd>
-    <p>Вторая версия API позволяет выбирать получаемые поля. С учетом того, что поля сами по себе зачастую составные и объемные, это очень важный момент.</p>
-
-    <p>У меня есть смутное ощущение, что отвечает вторая версия чуть медленнее, чем первая (в смысле пинга), но а) я могу ошибаться — это лишь ощущение,
-б) не сказать, чтоб задержка была прям большой, и в) когда эта версия выйдет из бе­ты и станет основной, думаю, на нее выделят мощности.</p>
-  </dd>
-  <dt>Schedule в GitHub Actions</dt>
-  <dd>
-    <p>Это вполне документировано, что нет никаких гарантий своевременного запуска. Задержка зависит от текущей загрузки серверов и всегда разная.
-И она может быть реально большой — до часа у меня пока ни разу не доходило, но 55 минут — вполне.</p>
-  </dd>
-  <dt>Запланированные сообщения</dt>
-  <dd>
-    <p>Через Telegram Bot API <em>нельзя</em> создать запланированное сообщение. Это можно сделать только через MTProto API, но там нужно использовать
-человеческий аккаунт, а не ботовый… Так что придется смириться с тем, что посты выходят не по точному расписанию, поскольку рисковать
-своим собственным акком я не собираюсь.</p>
-  </dd>
-  <dt>Эмодзи</dt>
-  <dd>
-    <p>В сообщениях Telegram нельзя вставлять произвольные иконки, переключать шрифты и т.д. Можно использовать эмодзи, но они выглядят, на мой взгляд,
-аляповато. Так что, хотя я их использовал в шаблоне по умолчанию для независимости от языка, но в своих каналах из шаблона убрал. Как выглядит
-пост, разукрашенный эмодзи, можно посмотреть тут — <a href="https://t.me/urals_nature/1541">https://t.me/urals_nature/1541</a> — это один из тех постов, которые были сделаны в процессе
-отладки/наладки.</p>
-  </dd>
-</dl>
-
-<h2 id="текущая-версия-и-планы">Текущая версия и планы</h2>
-
-<p>Сейчас версия <strong>0.9.0</strong>, которую я бы охарактеризовал как довольно уверенную бету.</p>
-
-<p>Думаю неторопливо (очень неторопливо) сделать тесты и документацию, упорядочить нотификацию админа (в случае сбоев или исчерпания пула), после
-чего зафиксировать версию 1.0.</p>
-
-<p>Для дальнейшего развития есть мысли на предмет приоритетов по ротации мест и авторов наблюдений, но пока ничего конкретного сказать нельзя.</p>]]></content><author><name>Иван Шихалев</name></author><category term="tech" /><category term="programming" /><category term="ruby" /><category term="web" /><category term="nature" /><category term="social" /><category term="iNaturalist" /><category term="Telegram" /><category term="автоматизация" /><category term="inat-channel" /><summary type="html"><![CDATA[Написал скрипт для автопостинга выборок из iNaturalist в tg-каналы]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="tech" /><category term="programming" /><category term="web" /><category term="about" /><category term="Telegram" /><category term="iNaturalist" /><category term="Jekyll IS" /><category term="комментарии" /><category term="inat-channel" /><category term="jekyll-is-announcer" /><summary type="html"><![CDATA[Обновления двух гемов: inat-channel и jekyll-is-announcer]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/12/16/updates/gremlins-640x640-1216x634-0-71.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/12/16/updates/gremlins-640x640-1216x634-0-71.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
