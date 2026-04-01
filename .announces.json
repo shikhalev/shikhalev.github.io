@@ -5,17 +5,15 @@
       "chat_id": "@shikhalev_blog"
     },
     "posts": {
-      "_posts/tech/2026/2026-03-27-inat-get-0-9-2.md": {
-        "url": "https://shikhalev.github.io/tech/2026/03/inat-get-0-9-2.html",
-        "date": "2026/03/27",
-        "title": "iNatGet v0.9.2 и его практическое применение",
-        "description": "Сформировал отчеты районных проектов за 2025 год новым скриптом, отловил основные баги, можно пользоваться...",
+      "_posts/blog/2026/2026-04-01-channels-mar.md": {
+        "url": "https://shikhalev.github.io/life/2026/04/channels-mar.html",
+        "date": "2026/04/01",
+        "title": "Tg: март 2026",
+        "description": "Подборка наблюдений за март",
         "categories": [
-          "технологии",
-          "программирование",
-          "ruby",
+          "жизнь",
           "природа",
-          "бёрдвотчинг"
+          "веб"
         ]
       }
     }
