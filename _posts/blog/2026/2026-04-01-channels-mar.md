@@ -13,8 +13,8 @@ tags:
   - млекопитающие
   - насекомые
 announce: true
-image: _src/2026/03/feb-digest.jpg
-seo_image_crop: 1024x534+0+25
+image: _src/2026/04/digest/klesch.jpg
+seo_image_crop: 1935x1009+0+257
 ---
 
 Что ж, пришло время для очередной подборки. См. также посты [за январь][jan] и [за февраль][feb].
