@@ -155,7 +155,7 @@ GEM
       jekyll (>= 4.0, < 5.0)
       liquid (~> 4.0)
       shi-tools (~> 0.2.0)
-    shi-jekyll-images (0.1.0.14)
+    shi-jekyll-images (0.1.0.15)
       jekyll (>= 4.0, < 5.0)
       liquid (~> 4.0)
       shi-args (~> 0.3.4.2)
@@ -194,7 +194,7 @@ DEPENDENCIES
   jekyll-toc
   json
   logger
-  shi-jekyll-images (~> 0.1.0.14)
+  shi-jekyll-images (~> 0.1.0.15)
 
 CHECKSUMS
   addressable (2.9.0) sha256=7fdf6ac3660f7f4e867a0838be3f6cf722ace541dd97767fa42bc6cfa980c7af
@@ -270,7 +270,7 @@ CHECKSUMS
   sass-embedded (1.99.0-x86_64-linux-gnu) sha256=a4e2ae5e9951815cb8b3ab408cee8b800852491988a57de735f18d259c70d7c4
   sass-embedded (1.99.0-x86_64-linux-musl) sha256=94be72a6f856c610e67b12303dc76a58412e64b24ce97bdf4912199b8145c8dd
   shi-args (0.3.4.2) sha256=caf07976278d04037a3d78fc26184bfd85b2195e78cbd4675b3c4d722b5b6dbd
-  shi-jekyll-images (0.1.0.14) sha256=9f890c01845cefee8141bcceaa21c0af09e1d1be1de7173ad19b8756330379d0
+  shi-jekyll-images (0.1.0.15) sha256=e17ba94604ee68cad515ed0700733bc3424d7a655e33a78fabcbb12ddd0feb38
   shi-tools (0.2.0) sha256=8a6fdec4870c466397559ec290ba64f716e2178a0317e5d3123246c924d88269
   terminal-table (3.0.2) sha256=f951b6af5f3e00203fb290a669e0a85c5dd5b051b3b023392ccfd67ba5abae91
   unicode-display_width (2.6.0) sha256=12279874bba6d5e4d2728cef814b19197dbb10d7a7837a869bab65da943b7f5a
