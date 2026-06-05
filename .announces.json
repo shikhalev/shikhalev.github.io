@@ -5,17 +5,15 @@
       "chat_id": "@shikhalev_blog"
     },
     "posts": {
-      "_posts/blog/2026/2026-05-20-trip-18.md": {
-        "url": "https://shikhalev.github.io/life/2026/05/trip-18.html",
-        "date": "2026/05/20",
-        "title": "Выезд 18 мая",
-        "description": "Впервые отправился снимать птичек за рулем: грабли и выводы",
+      "_posts/blog/2026/2026-06-05-merch.md": {
+        "url": "https://shikhalev.github.io/life/2026/06/merch.html",
+        "date": "2026/06/05",
+        "title": "Принтшопы, первые опыты",
+        "description": null,
         "categories": [
           "жизнь",
           "дыбр",
-          "природа",
-          "фото",
-          "бёрдвотчинг"
+          "фото"
         ]
       }
     }
