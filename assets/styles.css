@@ -2261,6 +2261,60 @@ li.fa-icon-li-youtube::marker {
   white-space: normal;
 }
 
+.img-icon-vsemayki::before {
+  content: "";
+  background-image: url(/assets/img/ico/vsemayki.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -12%;
+  margin-right: 0.2em;
+}
+.img-icon-vsemayki {
+  white-space: nowrap;
+}
+.img-icon-vsemayki span {
+  white-space: normal;
+}
+
+.img-icon-printdirect::before {
+  content: "";
+  background-image: url(/assets/img/ico/printdirect.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -12%;
+  margin-right: 0.2em;
+}
+.img-icon-printdirect {
+  white-space: nowrap;
+}
+.img-icon-printdirect span {
+  white-space: normal;
+}
+
+.img-icon-fun::before {
+  content: "";
+  background-image: url(/assets/img/ico/fun.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -12%;
+  margin-right: 0.2em;
+}
+.img-icon-fun {
+  white-space: nowrap;
+}
+.img-icon-fun span {
+  white-space: normal;
+}
+
 .img-icon-jekyll::before {
   width: 0.5em;
 }
