@@ -34,4 +34,4 @@ group :jekyll_plugins do
   gem "jekyll-is-announcer", '~> 0.8.3' # path: '/home/ivan/wrk/projects/site/jekyll-is/jekyll-is-announcer'
 end
 
-gem 'jekyll-theme-shikhalev', '>= 0.1.0.16'
+gem 'jekyll-theme-shikhalev', '>= 0.1.0.17'
