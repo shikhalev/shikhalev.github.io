@@ -134,6 +134,11 @@ defaults:
       path: "pages/books/darktable"
     values:
       image: _src/2025/10/darktable.png
+  - scope:
+      path: "_designs"
+      type: "designs"
+    values:
+      layout: merch/design
 
 header_pages:
   - _streams/tech.md
@@ -159,6 +164,12 @@ collections:
   calendars:
     output: true
     permalink: /:path/all
+  designs:
+    output: true
+    permalink: /merch/:path/
+  goods:
+    output: true
+    permalink: /merch/goods/:path/
   src:
     output: false
 
