@@ -1,0 +1,14 @@
+{%- if filtered_goods == nil -%}
+  {%- assign filtered_goods = "" | split: "," -%}
+{%- endif -%}
+{%- assign design = include.design | default: page -%}
+{%- assign current = site.data.flat_goods | where: 'design', design.path -%}
+{%- assign filtered_goods = filtered_goods | concat: current | uniq -%}
+{%- if design.children and design.children.size > 0 -%}
+  {%- for child_path in design.children -%}
+    {%- assign child = site.designs | where: 'path', child_path | first -%}
+    {%- if child -%}
+      {%- include goods/filter_by_design.liquid design=child -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}

@@ -146,6 +146,7 @@ header_pages:
   - _streams/photo.md
   - _streams/life.md
   - _streams/text.md
+  - _designs/merch.md
   - _streams/about.md
 
 feed:
@@ -167,7 +168,7 @@ collections:
     permalink: /:path/all
   designs:
     output: true
-    permalink: /merch/:path/
+    permalink: /:path/
   goods:
     output: true
     permalink: /merch/goods/:path/
@@ -181,6 +182,7 @@ exclude:
   - .vscode/
   - .announces.json
   - tmp/
+  - flatten.log
 
 # Собственные настройки сайта
 

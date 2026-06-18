@@ -1,0 +1,21 @@
+{%- if all_goods_flattened == nil -%}
+  {%- comment -%} Initialization {%- endcomment -%}
+  {%- assign all_goods_flattened = "" | split: "," -%}
+{%- endif -%}
+{%- assign node = include.node | default: site.data.goods -%}
+{%- for entry in node -%}
+  {%- assign data_item = entry[1] -%}
+  {%- if data_item.items -%}
+    {%- comment -%} Data File {%- endcomment -%}
+    {%- assign data_json = data_item | jsonify -%}
+    {%- assign cleaned = data_json | replace_regex: '"items"\s*:\s*\[.*?\]\s*,?', '' | replace: ',}', '}' | replace: '{,', '{' -%}
+    {%- assign common = cleaned | parse_json -%}
+    {%- for item in data_item.items -%}
+      {%- assign merged = data_item | merge: item -%}
+      {%- assign all_goods_flattened = all_goods_flattened | push: merged -%}
+    {%- endfor -%}
+  {%- else -%}
+    {%- comment -%} Data SubDir {%- endcomment -%}
+    {%- include goods/allgoods.liquid node=data_item -%}
+  {%- endif -%}
+{%- endfor -%}
