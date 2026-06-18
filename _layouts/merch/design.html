@@ -31,7 +31,7 @@ stylesheet: goods
 {%- assign sorted_goods = filtered_goods | sample: filtered_goods.size | sort: 'date' | reverse -%}
 {% if sorted_goods.size > 0 %}
 <h2 id="goods">Товары</h2>
-<p class="italic">Новые сверху (по дате публикации на сайте).</p>
+<p class="italic">Новые сверху (по дате публикации на этом сайте, а не по дате публикации на принтшопе).</p>
 <div class="goods-min-grid">
   {% for product in sorted_goods %}
     {% assign product_design = site.designs | where: 'path', product.design | first %}

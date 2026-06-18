@@ -152,10 +152,10 @@ items:
   - good: _goods/all/dishes/tumbler.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488394
     img: https://cdn99.printdirect.ru/cache/product/f2/bb/9488394/tov/all/480z480_front_3564_0_0_0_408a7ec31ef0e25857d1ee7a95f4.jpg
-  - good: _goods/all/dishes/bottles/plastic.md
+  - good: _goods/all/dishes/bottles/plastic/printdirect.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488404
     img: https://cdn99.printdirect.ru/cache/product/35/79/9488404/tov/all/480z480_front_3424_0_0_0_46053fb4b5e945b66d3194461b58.jpg
-  - good: _goods/all/dishes/bottles/plastic.md
+  - good: _goods/all/dishes/bottles/plastic/printdirect.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483353
     img: https://cdn99.printdirect.ru/cache/product/aa/d2/9483353/tov/all/480z480_front_3424_0_0_0_5acf86bf1f2f5340cc56cc2bbca3.jpg
   - good: _goods/all/dishes/bottles/alum/400.md

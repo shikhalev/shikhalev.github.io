@@ -1,0 +1,91 @@
+design: _designs/merch/photo/birds/20250611-roe.md
+date: 2026-06-17
+shop: fun
+items:
+  - good: _goods/all/dishes/bottles/plastic/fun-700.md
+    url: https://fun.ru/bottle-speedy/samets_sibirskoy_kosuli
+    img: https://fun.ru/upload/99/6f/996fa2adf1.jpg
+  - good: _goods/all/dishes/cups/ceramics/full/fun.md
+    url: https://fun.ru/mugs/samets_sibirskoy_kosuli
+    img: https://fun.ru/upload/df/a1/dfa16f152f.jpg
+  - good: _goods/all/dishes/thermos.md
+    url: https://fun.ru/thermos/samets_sibirskoy_kosuli
+    img: https://fun.ru/upload/11/9f/119fa96e39.jpg
+  - good: _goods/all/dishes/bottles/plastic/fun-630.md
+    url: https://fun.ru/bottle/samets_sibirskoy_kosuli
+    img: https://fun.ru/upload/ce/c6/cec6b598d5.jpg
+  - good: _goods/all/bag/shopper/fun.md
+    url: https://fun.ru/bags/sibirskaya_kosulya1
+    img: https://fun.ru/upload/1e/86/1e86537fb5.jpg
+  - good: _goods/all/cloth/s-shirts/f-sweatshirt/fun.md
+    url: https://fun.ru/women-sweatshirts/sibirskaya_kosulya1
+    img: https://fun.ru/upload/74/aa/74aa1d4aa5.jpg
+  - good: _goods/all/cloth/s-shirts/m-sweatshirt/fun.md
+    url: https://fun.ru/men-sweatshirts/sibirskaya_kosulya1
+    img: https://fun.ru/upload/77/6d/776debc66a.jpg
+  - good: _goods/all/cloth/t-shirts/child/fun-oversize.md
+    url: https://fun.ru/kids-tshirts-oversize/sibirskaya_kosulya1
+    img: https://fun.ru/upload/53/40/5340726f9c.jpg
+  - good: _goods/all/cloth/t-shirts/m-classic/fun.md
+    url: https://fun.ru/men-tshirts/sibirskaya_kosulya1
+    img: https://fun.ru/upload/d0/4e/d04e14d7ac.jpg
+  - good: _goods/all/cloth/t-shirts/f-classic/fun.md
+    url: https://fun.ru/women-tshirts/sibirskaya_kosulya1
+    img: https://fun.ru/upload/e9/ee/e9ee879880.jpg
+  - good: _goods/all/cloth/t-shirts/u-oversize/fun.md
+    url: https://fun.ru/tshirts-oversize/sibirskaya_kosulya1
+    img: https://fun.ru/upload/5f/c5/5fc500979a.jpg
+  - good: _goods/all/cloth/t-shirts/child/fun.md
+    url: https://fun.ru/kids-tshirts/sibirskaya_kosulya1
+    img: https://fun.ru/upload/9f/da/9fdae73674.jpg
+  - good: _goods/all/bag/shopper/fun.md
+    url: https://fun.ru/bags/sibirskaya_kosulya
+    img: https://fun.ru/upload/61/47/614754670b.jpg
+  - good: _goods/all/cloth/s-shirts/f-sweatshirt/fun.md
+    url: https://fun.ru/women-sweatshirts/sibirskaya_kosulya
+    img: https://fun.ru/upload/ac/a7/aca71c7184.jpg
+  - good: _goods/all/cloth/s-shirts/m-sweatshirt/fun.md
+    url: https://fun.ru/men-sweatshirts/sibirskaya_kosulya
+    img: https://fun.ru/upload/12/b6/12b608291f.jpg
+  - good: _goods/all/cloth/t-shirts/child/fun-oversize.md
+    url: https://fun.ru/kids-tshirts-oversize/sibirskaya_kosulya
+    img: https://fun.ru/upload/41/e3/41e3d4c7f3.jpg
+  - good: _goods/all/cloth/t-shirts/m-classic/fun.md
+    url: https://fun.ru/men-tshirts/sibirskaya_kosulya
+    img: https://fun.ru/upload/41/ab/41ab57be37.jpg
+  - good: _goods/all/cloth/t-shirts/f-classic/fun.md
+    url: https://fun.ru/women-tshirts/sibirskaya_kosulya
+    img: https://fun.ru/upload/84/d4/84d4064c1b.jpg
+  - good: _goods/all/cloth/t-shirts/u-oversize/fun.md
+    url: https://fun.ru/tshirts-oversize/sibirskaya_kosulya
+    img: https://fun.ru/upload/66/0e/660ef2b48a.jpg
+  - good: _goods/all/cloth/t-shirts/child/fun.md
+    url: https://fun.ru/kids-tshirts/sibirskaya_kosulya
+    img: https://fun.ru/upload/44/01/4401ff6569.jpg
+  - good: _goods/all/dishes/thermos.md
+    url: https://fun.ru/thermos/sibirskaya_kosulya3
+    img: https://fun.ru/upload/b3/dd/b3dd2ed399.jpg
+  - good: _goods/all/dishes/bottles/plastic/fun-700.md
+    url: https://fun.ru/bottle-speedy/sibirskaya_kosulya3
+    img: https://fun.ru/upload/c9/f8/c9f88037d9.jpg
+  - good: _goods/all/office/diary/fun.md
+    url: https://fun.ru/diary/sibirskaya_kosulya3
+    img: https://fun.ru/upload/0e/83/0e839dab3d.jpg
+  - good: _goods/all/dishes/cups/ceramics/full/fun.md
+    url: https://fun.ru/mugs/sibirskaya_kosulya3
+    img: https://fun.ru/upload/d1/7e/d17e1aaf02.jpg
+  - good: _goods/all/dishes/bottles/plastic/fun-630.md
+    url: https://fun.ru/bottle/sibirskaya_kosulya3
+    img: https://fun.ru/upload/4f/62/4f62919871.jpg
+  - good: _goods/all/dishes/thermos.md
+    url: https://fun.ru/thermos/sibirskaya_kosulya2
+    img: https://fun.ru/upload/d7/6a/d76a9234a3.jpg
+  - good: _goods/all/dishes/bottles/plastic/fun-630.md
+    url: https://fun.ru/bottle/sibirskaya_kosulya2
+    img: https://fun.ru/upload/83/97/8397bff47a.jpg
+  - good: _goods/all/office/diary/fun.md
+    url: https://fun.ru/diary/sibirskaya_kosulya2
+    img: https://fun.ru/upload/41/ea/41ea6657bc.jpg
+  - good: _goods/all/dishes/bottles/plastic/fun-700.md
+    url: https://fun.ru/bottle-speedy/sibirskaya_kosulya2
+    img: https://fun.ru/upload/46/86/4686de7771.jpg
