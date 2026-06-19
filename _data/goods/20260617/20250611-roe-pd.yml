@@ -2,19 +2,19 @@ design: _designs/merch/photo/birds/20250611-roe.md
 date: 2026-06-17
 shop: printdirect
 items:
-  - good: _goods/all/interior/foam/120x80.md
+  - good: _goods/all/home/wall/foam/pd-foam-120x80.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483442
     img: https://cdn99.printdirect.ru/cache/product/50/76/9483442/tov/all/400z400_front_2866_0_0_0_513d655772a58b7bcb32635eccc1.jpg
-  - good: _goods/all/interior/foam/90x60.md
+  - good: _goods/all/home/wall/foam/pd-foam-90x60.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483338
     img: https://cdn99.printdirect.ru/cache/product/69/78/9483338/tov/all/400z400_front_2864_0_0_0_42d45f7c1c1ea4881e8bf568fb8e.jpg
-  - good: _goods/all/interior/canvas/30x30.md
+  - good: _goods/all/home/wall/canvas/pd-holst-30x30.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483356
     img: https://cdn99.printdirect.ru/cache/product/67/d8/9483356/tov/3d/400z400_front_1178_0_0_0_cdbd714ea25639cde3898139fe31.jpg
-  - good: _goods/all/interior/calendar/a3/2026.md
+  - good: _goods/all/home/wall/calendar/2026/pd-calendar-2026-A3.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483357
     img: https://cdn99.printdirect.ru/cache/product/b4/ed/9483357/tov/all/480z480_front_543_0_0_0_276548d07f997b6adb55c0f978fd.jpg
-  - good: _goods/all/interior/clock.md
+  - good: _goods/all/home/wall/pd-clock.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483360
     img: https://cdn99.printdirect.ru/cache/product/e4/ae/9483360/tov/all/480z480_front_1839_0_0_0_87189d0da75696f6d8bb8646ba08.jpg
   - good: _goods/all/office/pad/rect/printdirect.md
@@ -35,10 +35,10 @@ items:
   - good: _goods/all/toys/puzzle/a4.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483997
     img: https://cdn99.printdirect.ru/cache/product/ca/5a/9483997/tov/all/480z480_front_711_0_0_0_0b5200db690b4ab6b5bfc1d2b784.jpg
-  - good: _goods/all/home/pillow/rect/47x35.md
+  - good: _goods/all/home_old/pillow/rect/47x35.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483349
     img: https://cdn99.printdirect.ru/cache/product/2a/d2/9483349/tov/all/480z480_front_2085_0_0_0_cf32284c40e2a786b7a6853308bc.jpg
-  - good: _goods/all/home/pillow/r35.md
+  - good: _goods/all/home_old/pillow/r35.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483359
     img: https://cdn99.printdirect.ru/cache/product/89/5e/9483359/tov/all/480z480_front_2087_0_0_0_a5d4a02949081416b87853f9315d.jpg
   - good: _goods/all/access/magnets/opener.md
@@ -272,9 +272,9 @@ items:
   - good: _goods/all/cloth/outerwear/windbreaker/pd-w-hood.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488202
     img: https://cdn99.printdirect.ru/cache/product/5d/98/9488202/tov/all/480z480_front_3597_0_0_0_eacc86fe59f16ba12b12ecf41cde.jpg
-  - good: _goods/all/home/apron/printdirect.md
+  - good: _goods/all/home_old/apron/printdirect.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488175
     img: https://cdn99.printdirect.ru/cache/product/3f/67/9488175/tov/all/480z480_front_3407_0_0_0_89138007a23f528f2a947d9faefe.jpg
-  - good: _goods/all/home/apron/printdirect.md
+  - good: _goods/all/home_old/apron/printdirect.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488176
     img: https://cdn99.printdirect.ru/cache/product/e6/3a/9488176/tov/all/480z480_front_735_0_0_0_5a28bf74b425d5df0b7c4886db6f.jpg

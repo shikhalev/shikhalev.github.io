@@ -18,10 +18,14 @@
       {% endif %}
       {% assign filtered_goods = nil %}
       {% include goods/filter_by_kind.liquid kind=child_kind %}
+      {% unless include.skip_empty and filtered_goods.size == 0 %}
       <li>
-       <p><a href="{{ child_url }}">{{ child_title }} ({{ filtered_goods.size }})</a>{{ child_flag }}</p>
-       {% include goods/subkinds.liquid kind=child_kind %}
+        <p><a href="{{ child_url }}">{{ child_title }} ({{ filtered_goods.size }})</a>{{ child_flag }}</p>
+        {% unless child_kind.no_expand %}
+          {% include goods/subkinds.liquid kind=child_kind skip_empty=include.skip_empty %}
+        {% endunless %}
       </li>
+      {% endunless %}
     {% endif %}
   {% endfor %}
   </ul>

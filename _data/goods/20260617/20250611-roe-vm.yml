@@ -617,19 +617,19 @@ items:
   - good: _goods/all/access/magsafe.md
     url: https://shikhalev.vsemaykishop.ru/article/cardholder_magsafe/4095133?color=black
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_1000_cardholder_magsafe_front_black_700.jpg
-  - good: _goods/all/home/pillow/cushion.md
+  - good: _goods/all/home_old/pillow/cushion.md
     url: https://shikhalev.vsemaykishop.ru/article/cushion_full/4095133?color=3D_wellsoft
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_10_cushion_full_front_3D_wellsoft_700.jpg
-  - good: _goods/all/home/shower-curtain.md
+  - good: _goods/all/home_old/shower-curtain.md
     url: https://shikhalev.vsemaykishop.ru/article/shower_curtain/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_1_shower_curtain_front_white_700.jpg
-  - good: _goods/all/home/pillow/cusion-antistress.md
+  - good: _goods/all/home_old/pillow/cusion-antistress.md
     url: https://shikhalev.vsemaykishop.ru/article/cushion_antistress/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_2_cushion_antistress_front_white_700.jpg
-  - good: _goods/all/home/plaid.md
+  - good: _goods/all/home_old/plaid.md
     url: https://shikhalev.vsemaykishop.ru/article/plaid/4095133?color=3D_wellsoft
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_1000_plaid_front_3D_wellsoft_700.jpg
-  - good: _goods/all/home/plaid-sleeves.md
+  - good: _goods/all/home_old/plaid-sleeves.md
     url: https://shikhalev.vsemaykishop.ru/article/plaid_sleeves/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_1001_plaid_sleeves_front_white_700.jpg
   - good: _goods/all/dishes/flask/vm.md
@@ -644,13 +644,13 @@ items:
   - good: _goods/all/dishes/cups/vm-thermo.md
     url: https://shikhalev.vsemaykishop.ru/article/thermocup_nonspillable/4095133?size=one_size&color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_10_thermocup_nonspillable_front_white_700.jpg
-  - good: _goods/all/interior/canvas/vm-rect.md
+  - good: _goods/all/home/wall/canvas/vm-holst-rectangle.md
     url: https://shikhalev.vsemaykishop.ru/article/holst_rectangle/4095133?size=a3&color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_10_holst_rectangle_front_white_700.jpg
   - good: _goods/all/interior/tree-ball.md
     url: https://shikhalev.vsemaykishop.ru/article/christmas_tree_ball/4095133?color=transparent
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_11_christmas_tree_ball_front_transparent_700.jpg
-  - good: _goods/all/interior/canvas/vm-square.md
+  - good: _goods/all/home/wall/canvas/vm-holst-square.md
     url: https://shikhalev.vsemaykishop.ru/article/holst_square_full/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_10_holst_square_full_front_white_700.jpg
   - good: _goods/all/office/pad/round.md
@@ -695,7 +695,7 @@ items:
   - good: _goods/all/access/vm-giftbag.md
     url: https://shikhalev.vsemaykishop.ru/article/newyear_bag_fullprint/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_2_newyear_bag_fullprint_front_white_700.jpg
-  - good: _goods/all/home/apron/vm.md
+  - good: _goods/all/home_old/apron/vm.md
     url: https://shikhalev.vsemaykishop.ru/article/apron_fullprint/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_10_apron_fullprint_front_white_700.jpg
   - good: _goods/all/access/cover-pass.md

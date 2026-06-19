@@ -1,10 +1,11 @@
 ---
 title: Товары для дома
-short: Для дома
+short: Дом
 children:
-  - _goods/all/home/apron.md
-  - _goods/all/home/pillow.md
-  - _goods/all/home/plaid-sleeves.md
-  - _goods/all/home/plaid.md
-  - _goods/all/home/shower-curtain.md
+  - _goods/all/home/wall.md
+  - _goods/all/home/puzzle.md
+  - _goods/all/home/magnet.md
+  - _goods/all/home/textile.md
+  - _goods/all/home/dish.md
+  - _goods/all/home/other.md
 ---
