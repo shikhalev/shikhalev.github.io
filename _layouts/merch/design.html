@@ -28,7 +28,12 @@ stylesheet: goods
 {{ content }}
 
 {%- include goods/filter_by_design.liquid -%}
-{%- assign sorted_goods = filtered_goods | sample: filtered_goods.size | sort: 'date' | reverse -%}
+{% if filtered_goods.size > 1 %}
+{% assign sampled = filtered_goods | sample: filtered_goods.size %}
+{% else %}
+{% assign sampled = filtered_goods %}
+{% endif %}
+{%- assign sorted_goods = sampled | sort: 'date' | reverse -%}
 {% if sorted_goods.size > 0 %}
 <h2 id="goods">Товары</h2>
 <p class="italic">Новые сверху (по дате публикации на этом сайте, а не по дате публикации на принтшопе).</p>

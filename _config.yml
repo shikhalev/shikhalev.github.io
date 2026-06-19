@@ -140,6 +140,11 @@ defaults:
       type: "designs"
     values:
       layout: merch/design
+  - scope:
+      path: "_goods"
+      type: "goods"
+    values:
+      layout: merch/kind
 
 header_pages:
   - _streams/tech.md

@@ -1,4 +1,67 @@
 ---
 layout: nova/page
+stylesheet: goods
 ---
+
+{% comment %}{%- include goods/allgoods.liquid -%}{% endcomment %}
+{% if page.children and page.children.size > 0 %}
+<h2 id="children" style="visibility: hidden;height: 0px;">Подкатегории</h2>
+<div class="subcategories" style="columns: unset;">
+<ul>
+{% for child_path in page.children %}
+{% if child_path == 'sep' or child_path == 'separator' %}
+<hr>
+{% else %}
+{% assign xchild = site.goods | where: 'path', child_path | first %}
+{% if xchild %}
+{%- assign filtered_goods = nil -%}
+{%- include goods/filter_by_kind.liquid kind=xchild -%}
+<li><a href="{{ xchild.url | relative_url }}">{{ xchild.title }} ({{- filtered_goods.size -}})</a></li>
+{% endif %}
+{% endif %}
+{% endfor %}
+</ul>
+</div>
+<hr>
+{% endif %}
+
 {{ content }}
+
+{%- include goods/filter_by_kind.liquid -%}
+{% if filtered_goods.size > 1 %}
+{% assign sampled = filtered_goods | sample: filtered_goods.size %}
+{% else %}
+{% assign sampled = filtered_goods %}
+{% endif %}
+{%- assign sorted_goods = sampled | sort: 'date' | reverse -%}
+{% if sorted_goods.size > 0 %}
+<h2 id="goods">Товары</h2>
+<p class="italic">Новые сверху (по дате публикации на этом сайте, а не по дате публикации на принтшопе).</p>
+<div class="goods-min-grid">
+  {% for product in sorted_goods %}
+    {% assign product_design = site.designs | where: 'path', product.design | first %}
+    {% if product_design %}
+      {% assign product_title = product_design.title %}
+    {% else %}
+      {% assign product_title = '' %}
+    {% endif %}
+    {% assign product_good = site.goods | where: 'path', product.good | first %}
+    {% if product_good %}
+      {% assign product_type = product_good.title %}
+    {% else %}
+      {% assign product_type = '' %}
+    {% endif %}
+    <div class="product-min-card">
+    <a href="{{ product.url }}">
+      {% if product.img %}
+        <img src="{{ product.img }}" alt="{{ product_title | escape }}" loading="lazy">
+      {% else %}
+        <div class="no-photo">Нет фото</div>
+      {% endif %}
+    </a>
+    <span class="product-kind"><a href="{{ product_good.url | relative_url }}">{{ product_type }}</a></span>
+    <span class="product-design"><a href="{{ product_design.url | relative_url }}">{{ product_title }}</a></span>
+    </div>
+  {% endfor %}
+</div>
+{% endif %}
