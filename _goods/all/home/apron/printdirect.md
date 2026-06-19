@@ -1,3 +1,4 @@
 ---
-title: Фартук (PrintDirect)
+title: Фартук
+shop: printdirect
 ---

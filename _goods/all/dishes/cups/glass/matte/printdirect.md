@@ -1,3 +1,4 @@
 ---
-title: Кружка матового стекла (PrintDirect)
+title: Кружка матового стекла
+shop: printdirect
 ---

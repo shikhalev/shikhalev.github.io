@@ -1,3 +1,4 @@
 ---
 title: Тарелка
+shop: vsemayki
 ---

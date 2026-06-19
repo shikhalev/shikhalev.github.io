@@ -1,3 +1,4 @@
 ---
-title: Футболка женская классическая (PrintDirect)
+title: Футболка женская классическая
+shop: printdirect
 ---

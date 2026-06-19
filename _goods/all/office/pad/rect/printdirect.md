@@ -1,4 +1,5 @@
 ---
-title: Коврик для мыши (PrintDirect)
+title: Коврик для мыши
 short: PrintDirect
+shop: printdirect
 ---

@@ -1,3 +1,4 @@
 ---
 title: Тетрадь
+shop: vsemayki
 ---

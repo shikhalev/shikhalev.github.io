@@ -1,4 +1,5 @@
 ---
-title: Кружка-хамелеон (PrintDirect)
-short: (PrintDirect)
+title: Кружка-хамелеон
+short:
+shop: printdirect
 ---

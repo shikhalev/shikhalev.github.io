@@ -1,3 +1,4 @@
 ---
-title: Свитшот оверсайз (PrintDirect)
+title: Свитшот оверсайз
+shop: printdirect
 ---

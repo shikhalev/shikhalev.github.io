@@ -3,7 +3,6 @@ layout: nova/page
 stylesheet: goods
 ---
 
-{% comment %}{%- include goods/allgoods.liquid -%}{% endcomment %}
 {% if page.children and page.children.size > 0 %}
 <h2 id="children" style="visibility: hidden;height: 0px;">Подкатегории</h2>
 <div class="subcategories" style="columns: unset;">
@@ -35,22 +34,16 @@ stylesheet: goods
 {% endif %}
 {%- assign sorted_goods = sampled | sort: 'date' | reverse -%}
 {% if sorted_goods.size > 0 %}
-<h2 id="goods">Товары</h2>
+<h2 id="goods">Товары ({{ sorted_goods.size }})</h2>
 <p class="italic">Новые сверху (по дате публикации на этом сайте, а не по дате публикации на принтшопе).</p>
 <div class="goods-min-grid">
   {% for product in sorted_goods %}
     {% assign product_design = site.designs | where: 'path', product.design | first %}
-    {% if product_design %}
-      {% assign product_title = product_design.title %}
-    {% else %}
-      {% assign product_title = '' %}
-    {% endif %}
+    {% if product_design == nil %}{% console_log product.design %}{% link ololo_error.md %}{% endif %}
+    {% assign product_title = product_design.title %}
     {% assign product_good = site.goods | where: 'path', product.good | first %}
-    {% if product_good %}
-      {% assign product_type = product_good.title %}
-    {% else %}
-      {% assign product_type = '' %}
-    {% endif %}
+    {% if product_good == nil %}{% console_log product.good %}{% link ololo_error.md %}{% endif %}
+    {% assign product_type = product_good.title %}
     <div class="product-min-card">
     <a href="{{ product.url }}">
       {% if product.img %}

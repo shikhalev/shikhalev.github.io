@@ -1,4 +1,40 @@
 ---
 title: Футболки и майки
 short: Футболки
+children:
+  - _goods/all/cloth/t-shirts/child.md
+  - _goods/all/cloth/t-shirts/f-classic.md
+  - _goods/all/cloth/t-shirts/f-longsleeve.md
+  - _goods/all/cloth/t-shirts/f-mayka.md
+  - _goods/all/cloth/t-shirts/f-oversize-3d.md
+  - _goods/all/cloth/t-shirts/f-oversize-premium.md
+  - _goods/all/cloth/t-shirts/f-pajamas-shorts.md
+  - _goods/all/cloth/t-shirts/f-pajamas-white.md
+  - _goods/all/cloth/t-shirts/f-pajamas.md
+  - _goods/all/cloth/t-shirts/f-polo.md
+  - _goods/all/cloth/t-shirts/f-rashgard-3d.md
+  - _goods/all/cloth/t-shirts/f-sport.md
+  - _goods/all/cloth/t-shirts/f-vm-cotton-oversize.md
+  - _goods/all/cloth/t-shirts/f-vm-cotton-top.md
+  - _goods/all/cloth/t-shirts/f-vm-dress-shirt.md
+  - _goods/all/cloth/t-shirts/f-vm-oversize-texture.md
+  - _goods/all/cloth/t-shirts/f-vm-shorts.md
+  - _goods/all/cloth/t-shirts/f-vm-slim-3d.md
+  - _goods/all/cloth/t-shirts/f-vm-slim.md
+  - _goods/all/cloth/t-shirts/m-classic.md
+  - _goods/all/cloth/t-shirts/m-longsleeve.md
+  - _goods/all/cloth/t-shirts/m-mayka.md
+  - _goods/all/cloth/t-shirts/m-oversize-3d.md
+  - _goods/all/cloth/t-shirts/m-pajamas-longsleeve.md
+  - _goods/all/cloth/t-shirts/m-pajamas-white.md
+  - _goods/all/cloth/t-shirts/m-pajamas.md
+  - _goods/all/cloth/t-shirts/m-polo.md
+  - _goods/all/cloth/t-shirts/m-rashgard.md
+  - _goods/all/cloth/t-shirts/m-sport.md
+  - _goods/all/cloth/t-shirts/m-vm-cotton-oversize.md
+  - _goods/all/cloth/t-shirts/m-vm-oversize-premium.md
+  - _goods/all/cloth/t-shirts/m-vm-shorts.md
+  - _goods/all/cloth/t-shirts/m-vm-slim-3d.md
+  - _goods/all/cloth/t-shirts/m-vm-slim.md
+  - _goods/all/cloth/t-shirts/u-oversize.md
 ---

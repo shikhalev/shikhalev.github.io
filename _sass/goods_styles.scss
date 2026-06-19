@@ -66,3 +66,64 @@
         background-color: #DDD;
     }
 }
+
+.product-kind {
+  &.printdirect, &.vsemayki, &.fun {
+    ::before {
+      font-family: 'PT Mono', gmono, monospace;
+      font-size: 60%;
+      font-weight: bold;
+      padding: 4px 5px;
+      margin-right: 1em;
+      color: white;
+      border-radius: 5px;
+      vertical-align: middle;
+    }
+    background-color: white;
+    font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+    font-weight: normal;
+    vertical-align: middle;
+    text-indent: -2.3em;
+    padding-left: 2.3em;
+  }
+  &.printdirect {
+    ::before {
+      content: 'pd';
+      background-color: #363d4077;
+    }
+  }
+  &.vsemayki {
+    ::before {
+      content: 'vm';
+      background-color: #ff018977;
+    }
+  }
+  &.fun {
+    ::before {
+      content: 'fn';
+      background-color: #7262e977;
+    }
+  }
+}
+
+span {
+  &.printdirect, &.vsemayki, &.fun {
+    font-family: 'PT Mono', gmono, monospace;
+    font-size: 60%;
+    font-weight: bold;
+    padding: 4px 5px;
+    color: white;
+    border-radius: 5px;
+    vertical-align: middle;
+  }
+
+  &.printdirect {
+    background-color: #363d4077;
+  }
+  &.vsemayki {
+    background-color: #ff018977;
+  }
+  &.fun {
+    background-color: #7262e977;
+  }
+}

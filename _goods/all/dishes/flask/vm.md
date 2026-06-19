@@ -1,3 +1,4 @@
 ---
 title: Фляга
+shop: vsemayki
 ---

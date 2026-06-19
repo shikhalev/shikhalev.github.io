@@ -1,3 +1,4 @@
 ---
-title: Майка женская (PrintDirect)
+title: Майка женская
+shop: printdirect
 ---

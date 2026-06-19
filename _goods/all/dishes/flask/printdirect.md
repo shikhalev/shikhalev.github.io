@@ -1,3 +1,4 @@
 ---
-title: Фляжка (PrintDirect)
+title: Фляжка
+shop: printdirect
 ---

@@ -1,4 +1,5 @@
 ---
-title: Кружка двухцветная (PrintDirect)
-short: (PrintDirect)
+title: Кружка двухцветная
+short:
+shop: printdirect
 ---

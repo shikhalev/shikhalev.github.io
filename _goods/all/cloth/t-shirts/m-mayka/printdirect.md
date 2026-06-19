@@ -1,3 +1,4 @@
 ---
-title: Майка мужская (PrintDirect)
+title: Майка мужская
+shop: printdirect
 ---

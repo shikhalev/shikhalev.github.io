@@ -1,3 +1,4 @@
 ---
-title: Футболка детская (PrintDirect)
+title: Футболка детская
+shop: printdirect
 ---

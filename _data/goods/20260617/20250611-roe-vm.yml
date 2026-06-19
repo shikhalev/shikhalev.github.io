@@ -452,7 +452,7 @@ items:
   - good: _goods/all/cloth/s-shirts/f-hoodie.md
     url: https://shikhalev.vsemaykishop.ru/article/woman_hoodie/4100325?color=terracotta
     img: https://storage.vsemayki.ru/images/0/4/4100/4100325/previews/people_1000_woman_hoodie_front_terracotta_700.jpg
-  - good: _goods/all/cloth/s-shirts/f-sweatshirt.md
+  - good: _goods/all/cloth/s-shirts/f-sweatshirt/vm-cotton.md
     url: https://shikhalev.vsemaykishop.ru/article/woman_sweatshirt/4100325?size=xs_42-44&color=darkblue
     img: https://storage.vsemayki.ru/images/0/4/4100/4100325/previews/people_1000_woman_sweatshirt_front_darkblue_700.jpg
   - good: _goods/all/cloth/t-shirts/f-vm-cotton-oversize.md
@@ -677,3 +677,30 @@ items:
   - good: _goods/all/bag/beach.md
     url: https://shikhalev.vsemaykishop.ru/article/beach_bag/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_1003_beach_bag_front_white_700.jpg
+  - good: _goods/all/access/keychain/vm.md
+    url: https://shikhalev.vsemaykishop.ru/article/keychain_round/4095133?color=transparent
+    img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_2_keychain_round_front_transparent_700.jpg
+  - good: _goods/all/access/magnets/acrylic/vm-55x55.md
+    url: https://shikhalev.vsemaykishop.ru/article/magnet_55_55/4095133?color=transparent
+    img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_2_magnet_55_55_front_transparent_700.jpg
+  - good: _goods/all/access/magnets/acrylic/vm-45x70.md
+    url: https://shikhalev.vsemaykishop.ru/article/magnet_45_70/4095133?size=one_size&color=transparent
+    img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_2_magnet_45_70_front_transparent_700.jpg
+  - good: _goods/all/access/magnets/vm-vinyl.md
+    url: https://shikhalev.vsemaykishop.ru/article/magnet_vinyl_square/4095133?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_1000_magnet_vinyl_square_front_white_700.jpg
+  - good: _goods/all/access/magnets/vm-3x2.md
+    url: https://shikhalev.vsemaykishop.ru/article/magnet_poster_3x2/4095133?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_1000_magnet_poster_3x2_front_white_700.jpg
+  - good: _goods/all/access/vm-giftbag.md
+    url: https://shikhalev.vsemaykishop.ru/article/newyear_bag_fullprint/4095133?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_2_newyear_bag_fullprint_front_white_700.jpg
+  - good: _goods/all/home/apron/vm.md
+    url: https://shikhalev.vsemaykishop.ru/article/apron_fullprint/4095133?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_10_apron_fullprint_front_white_700.jpg
+  - good: _goods/all/access/cover-pass.md
+    url: https://shikhalev.vsemaykishop.ru/article/passport_cover_leather_matt/4095133?color=pink
+    img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_11_passport_cover_leather_matt_front_pink_700.jpg
+  - good: _goods/all/access/flag.md
+    url: https://shikhalev.vsemaykishop.ru/article/flag_big/4095133?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_10_flag_big_front_white_700.jpg

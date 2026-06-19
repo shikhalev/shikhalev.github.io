@@ -1,3 +1,4 @@
 ---
-title: Пластиковая бутылка для воды (PrintDirect)
+title: Пластиковая бутылка для воды
+shop: printdirect
 ---

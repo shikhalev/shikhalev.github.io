@@ -1,3 +1,4 @@
 ---
-title: Футболка оверсайз (PrintDirect)
+title: Футболка оверсайз
+shop: printdirect
 ---

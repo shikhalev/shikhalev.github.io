@@ -1,3 +1,4 @@
 ---
 title: Рюмка
+shop: printdirect
 ---

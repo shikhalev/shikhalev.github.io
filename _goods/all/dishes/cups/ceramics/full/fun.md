@@ -1,3 +1,4 @@
 ---
-title: Кружка (FUN)
+title: Кружка
+shop: fun
 ---

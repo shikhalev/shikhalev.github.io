@@ -1,3 +1,4 @@
 ---
-title: Термос (FUN)
+title: Термос
+shop: fun
 ---

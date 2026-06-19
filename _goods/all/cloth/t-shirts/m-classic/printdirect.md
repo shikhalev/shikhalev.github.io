@@ -1,3 +1,4 @@
 ---
-title: Футболка мужская классическая (PrintDirect)
+title: Футболка мужская классическая
+shop: printdirect
 ---

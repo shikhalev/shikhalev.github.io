@@ -1,3 +1,4 @@
 ---
-title: Толстовка-худи (PrintDirect)
+title: Толстовка-худи
+shop: printdirect
 ---

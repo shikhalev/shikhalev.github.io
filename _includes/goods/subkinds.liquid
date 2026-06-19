@@ -1,0 +1,28 @@
+{% if include.kind.children and include.kind.children.size > 0 %}
+  <ul>
+  {% for child_path in include.kind.children %}
+    {% if child_path == nil or child_path == '' or child_path == 'separator' %}
+      <hr>
+    {% else %}
+      {% assign child_kind = site.goods | where: 'path', child_path | first %}
+      {% assign child_url = child_kind.url %}
+      {% assign child_title = child_kind.title %}
+      {% if child_kind.shop == 'printdirect' %}
+        {% assign child_flag = ' • <span class="printdirect">pd</span>' %}
+      {% elsif child_kind.shop == 'vsemayki' %}
+        {% assign child_flag = ' • <span class="vsemayki">vm</span>' %}
+      {% elsif child_kind.shop == 'fun' %}
+        {% assign child_flag = ' • <span class="fun">fn</span>' %}
+      {% else %}
+        {% assign child_flag = '' %}
+      {% endif %}
+      {% assign filtered_goods = nil %}
+      {% include goods/filter_by_kind.liquid kind=child_kind %}
+      <li>
+       <p><a href="{{ child_url }}">{{ child_title }} ({{ filtered_goods.size }})</a>{{ child_flag }}</p>
+       {% include goods/subkinds.liquid kind=child_kind %}
+      </li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+{% endif %}

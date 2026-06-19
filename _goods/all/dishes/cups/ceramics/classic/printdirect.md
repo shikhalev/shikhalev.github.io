@@ -1,4 +1,5 @@
 ---
-title: Кружка классическая (PrintDirect)
-short: (PrintDirect)
+title: Кружка классическая
+short:
+shop: printdirect
 ---

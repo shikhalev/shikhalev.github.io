@@ -1,3 +1,4 @@
 ---
-title: Футболка-поло мужская (PrintDirect)
+title: Футболка-поло мужская
+shop: printdirect
 ---

@@ -1,3 +1,26 @@
 ---
 title: Кофты
+children:
+  - _goods/all/cloth/s-shirts/f-costume-hoodie.md
+  - _goods/all/cloth/s-shirts/f-costume-oversize.md
+  - _goods/all/cloth/s-shirts/f-costume.md
+  - _goods/all/cloth/s-shirts/f-dress-hoodie.md
+  - _goods/all/cloth/s-shirts/f-hoodie-oversize.md
+  - _goods/all/cloth/s-shirts/f-hoodie.md
+  - _goods/all/cloth/s-shirts/f-sweatshirt.md
+  - _goods/all/cloth/s-shirts/f-vm-hoodie-3d.md
+  - _goods/all/cloth/s-shirts/m-costume-oversize.md
+  - _goods/all/cloth/s-shirts/m-costume.md
+  - _goods/all/cloth/s-shirts/m-hoodie.md
+  - _goods/all/cloth/s-shirts/m-sweatshirt.md
+  - _goods/all/cloth/s-shirts/m-vm-costume-hoodie.md
+  - _goods/all/cloth/s-shirts/u-hoodie.md
+  - _goods/all/cloth/s-shirts/u-sweatshirt-oversize.md
+  - _goods/all/cloth/s-shirts/u-sweatshirt.md
+  - _goods/all/cloth/s-shirts/vm-ch-costume-hoodie.md
+  - _goods/all/cloth/s-shirts/vm-ch-costume-oversize.md
+  - _goods/all/cloth/s-shirts/vm-ch-hoodie-3d.md
+  - _goods/all/cloth/s-shirts/vm-ch-hoodie-oversize.md
+  - _goods/all/cloth/s-shirts/vm-ch-hoodie.md
+  - _goods/all/cloth/s-shirts/vm-child-sweatshirt.md
 ---

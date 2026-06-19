@@ -1,3 +1,4 @@
 ---
-title: Ветровка с капюшоном (PrintDirect)
+title: Ветровка с капюшоном
+shop: printdirect
 ---

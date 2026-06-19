@@ -1,3 +1,4 @@
 ---
-title: Свитшот (PrintDirect)
+title: Свитшот
+shop: printdirect
 ---

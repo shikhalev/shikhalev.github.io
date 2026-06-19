@@ -1,3 +1,4 @@
 ---
-title: Ветровка без капюшона (PrintDirect)
+title: Ветровка без капюшона
+shop: printdirect
 ---

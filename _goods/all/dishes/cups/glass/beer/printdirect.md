@@ -1,3 +1,4 @@
 ---
-title: Пивная кружка (PrintDirect)
+title: Пивная кружка
+shop: printdirect
 ---

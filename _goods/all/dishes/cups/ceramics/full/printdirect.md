@@ -1,4 +1,5 @@
 ---
-title: Кружка с круговой запечаткой (PrintDirect)
-short: (PrintDirect)
+title: Кружка с круговой запечаткой
+short:
+shop: printdirect
 ---
