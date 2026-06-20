@@ -620,7 +620,7 @@ items:
   - good: _goods/all/home/textile/cushion/vm-cushion_full.md
     url: https://shikhalev.vsemaykishop.ru/article/cushion_full/4095133?color=3D_wellsoft
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_10_cushion_full_front_3D_wellsoft_700.jpg
-  - good: _goods/all/home_old/shower-curtain.md
+  - good: _goods/all/home/other/vm-shower_curtain.md
     url: https://shikhalev.vsemaykishop.ru/article/shower_curtain/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_1_shower_curtain_front_white_700.jpg
   - good: _goods/all/home/textile/cushion/vm-cushion_antistress.md
@@ -647,7 +647,7 @@ items:
   - good: _goods/all/home/wall/canvas/vm-holst_rectangle.md
     url: https://shikhalev.vsemaykishop.ru/article/holst_rectangle/4095133?size=a3&color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_10_holst_rectangle_front_white_700.jpg
-  - good: _goods/all/interior/tree-ball.md
+  - good: _goods/all/home/other/vm-christmas_tree_ball.md
     url: https://shikhalev.vsemaykishop.ru/article/christmas_tree_ball/4095133?color=transparent
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_11_christmas_tree_ball_front_transparent_700.jpg
   - good: _goods/all/home/wall/canvas/vm-holst_square_full.md
