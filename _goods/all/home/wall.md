@@ -5,4 +5,5 @@ children:
   - _goods/all/home/wall/canvas.md
   - _goods/all/home/wall/calendar.md
   - _goods/all/home/wall/pd-clock.md
+  - _goods/all/home/wall/flag.md
 ---

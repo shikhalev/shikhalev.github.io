@@ -608,7 +608,7 @@ items:
   - good: _goods/all/access/cover-auto.md
     url: https://shikhalev.vsemaykishop.ru/article/cover_auto/4095133?size=one_size&color=blue
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_5_cover_auto_front_blue_700.jpg
-  - good: _goods/all/access/flag-banner.md
+  - good: _goods/all/home/wall/flag/vm-flag_banner.md
     url: https://shikhalev.vsemaykishop.ru/article/flag_banner/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_10_flag_banner_front_white_700.jpg
   - good: _goods/all/access/cardholder.md
@@ -701,6 +701,6 @@ items:
   - good: _goods/all/access/cover-pass.md
     url: https://shikhalev.vsemaykishop.ru/article/passport_cover_leather_matt/4095133?color=pink
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_11_passport_cover_leather_matt_front_pink_700.jpg
-  - good: _goods/all/access/flag.md
+  - good: _goods/all/home/wall/flag/vm-flag_big.md
     url: https://shikhalev.vsemaykishop.ru/article/flag_big/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_10_flag_big_front_white_700.jpg
