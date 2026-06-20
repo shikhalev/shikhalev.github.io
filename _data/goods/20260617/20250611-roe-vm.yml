@@ -380,13 +380,13 @@ items:
   - good: _goods/all/dishes/sets/vm-set.md
     url: https://shikhalev.vsemaykishop.ru/article/set_of_dishes/4100323?color=white
     img: https://storage.vsemayki.ru/images/0/4/4100/4100323/previews/people_10_set_of_dishes_front_white_700.jpg
-  - good: _goods/all/dishes/cups/ceramics/classic/vm.md
+  - good: _goods/all/home/dish/mug/ceramics/classic/vm-krujka.md
     url: https://shikhalev.vsemaykishop.ru/article/krujka/4100323?size=one_size&color=silver
     img: https://storage.vsemayki.ru/images/0/4/4100/4100323/previews/people_2_krujka_front_silver_700.jpg
-  - good: _goods/all/dishes/cups/ceramics/bicolor/vm.md
+  - good: _goods/all/home/dish/mug/ceramics/bicolor/vm-mug_twotone.md
     url: https://shikhalev.vsemaykishop.ru/article/mug_twotone/4100323?size=one_size&color=whitegreen
     img: https://storage.vsemayki.ru/images/0/4/4100/4100323/previews/people_8_mug_twotone_front_whitegreen_700.jpg
-  - good: _goods/all/dishes/cups/ceramics/chameleon/vm.md
+  - good: _goods/all/home/dish/mug/ceramics/chameleon/vm-mug_chameleon.md
     url: https://shikhalev.vsemaykishop.ru/article/mug_chameleon/4100323?color=whiteblack
     img: https://storage.vsemayki.ru/images/0/4/4100/4100323/previews/people_20_mug_chameleon_front_whiteblack_700.jpg
   - good: _goods/all/dishes/plate.md
@@ -638,7 +638,7 @@ items:
   - good: _goods/all/dishes/cups/ceramics/latte/vm.md
     url: https://shikhalev.vsemaykishop.ru/article/mug_latte/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_5_mug_latte_front_white_700.jpg
-  - good: _goods/all/dishes/cups/ceramics/full/vm.md
+  - good: _goods/all/home/dish/mug/ceramics/circle/vm-mug_fullprint.md
     url: https://shikhalev.vsemaykishop.ru/article/mug_fullprint/4095133?size=one_size&color=whitelightgreen
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_22_mug_fullprint_front_whitelightgreen_700.jpg
   - good: _goods/all/dishes/cups/vm-thermo.md

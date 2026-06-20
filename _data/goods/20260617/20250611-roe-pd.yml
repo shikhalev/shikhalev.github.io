@@ -92,31 +92,31 @@ items:
   - good: _goods/all/access/badges/75.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488408
     img: https://cdn99.printdirect.ru/cache/product/6e/73/9488408/tov/all/480z480_front_573_0_0_0_277b60d72b0ad3c67798bfbf3921.jpg
-  - good: _goods/all/dishes/cups/ceramics/full/printdirect.md
+  - good: _goods/all/home/dish/mug/ceramics/circle/pd-circle.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483339
     img: https://cdn99.printdirect.ru/cache/product/87/bf/9483339/tov/all/480z480_front_2841_0_0_0_946797e0541625fcda55f568d564.jpg
-  - good: _goods/all/dishes/cups/ceramics/full/printdirect.md
+  - good: _goods/all/home/dish/mug/ceramics/circle/pd-circle.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9486941
     img: https://cdn99.printdirect.ru/cache/product/12/ab/9486941/tov/all/480z480_front_2841_0_0_0_2f9b1df3fcfc86d40d524082144e.jpg
-  - good: _goods/all/dishes/cups/ceramics/chameleon/printdirect.md
+  - good: _goods/all/home/dish/mug/ceramics/chameleon/pd-chameleon.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488383
     img: https://cdn99.printdirect.ru/cache/product/cb/6c/9488383/tov/all/480z480_front_709_0_0_0_18e0f94ba92f3df689166f21c32e.jpg
-  - good: _goods/all/dishes/cups/ceramics/classic/printdirect.md
+  - good: _goods/all/home/dish/mug/ceramics/classic/pd-classic.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488162
     img: https://cdn99.printdirect.ru/cache/product/b5/1d/9488162/tov/all/480z480_front_663_0_0_0_b820ac3e8c8d922a0bc1ec3ebd5c.jpg
-  - good: _goods/all/dishes/cups/ceramics/bicolor/printdirect.md
+  - good: _goods/all/home/dish/mug/ceramics/bicolor/pd-bicolor.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488381
     img: https://cdn99.printdirect.ru/cache/product/68/43/9488381/tov/all/480z480_front_146_0_0_0_8484326a1032cd004e1562b43236.jpg
-  - good: _goods/all/dishes/cups/ceramics/color.md
+  - good: _goods/all/home/dish/mug/ceramics/pd-colored.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483366
     img: https://cdn99.printdirect.ru/cache/product/4d/e9/9483366/tov/all/480z480_front_3609_0_0_0_b4dd246372659b2bc1b2d2f24a12.jpg
-  - good: _goods/all/dishes/cups/ceramics/color.md
+  - good: _goods/all/home/dish/mug/ceramics/pd-colored.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488159
     img: https://cdn99.printdirect.ru/cache/product/bd/94/9488159/tov/all/480z480_front_3605_0_0_0_2390b4dca92e0a0dd8ff2887e26d.jpg
-  - good: _goods/all/dishes/cups/ceramics/color.md
+  - good: _goods/all/home/dish/mug/ceramics/pd-colored.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488160
     img: https://cdn99.printdirect.ru/cache/product/11/86/9488160/tov/all/480z480_front_3611_0_0_0_9e2b8dc10ed75a43dcadccbd4f6b.jpg
-  - good: _goods/all/dishes/cups/ceramics/big.md
+  - good: _goods/all/home/dish/mug/ceramics/pd-big.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488164
     img: https://cdn99.printdirect.ru/cache/product/4e/47/9488164/tov/all/480z480_front_787_0_0_0_417e9c6b53cc3a1f7eb8e7837d10.jpg
   - good: _goods/all/dishes/cups/ceramics/latte/360.md

@@ -5,7 +5,7 @@ items:
   - good: _goods/all/dishes/bottles/plastic/fun-700.md
     url: https://fun.ru/bottle-speedy/samets_sibirskoy_kosuli
     img: https://fun.ru/upload/99/6f/996fa2adf1.jpg
-  - good: _goods/all/dishes/cups/ceramics/full/fun.md
+  - good: _goods/all/home/dish/mug/ceramics/circle/fn-mug.md
     url: https://fun.ru/mugs/samets_sibirskoy_kosuli
     img: https://fun.ru/upload/df/a1/dfa16f152f.jpg
   - good: _goods/all/dishes/thermos.md
@@ -71,7 +71,7 @@ items:
   - good: _goods/all/office/diary/fun.md
     url: https://fun.ru/diary/sibirskaya_kosulya3
     img: https://fun.ru/upload/0e/83/0e839dab3d.jpg
-  - good: _goods/all/dishes/cups/ceramics/full/fun.md
+  - good: _goods/all/home/dish/mug/ceramics/circle/fn-mug.md
     url: https://fun.ru/mugs/sibirskaya_kosulya3
     img: https://fun.ru/upload/d1/7e/d17e1aaf02.jpg
   - good: _goods/all/dishes/bottles/plastic/fun-630.md
