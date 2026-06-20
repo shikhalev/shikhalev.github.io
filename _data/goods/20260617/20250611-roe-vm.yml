@@ -617,13 +617,13 @@ items:
   - good: _goods/all/access/magsafe.md
     url: https://shikhalev.vsemaykishop.ru/article/cardholder_magsafe/4095133?color=black
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_1000_cardholder_magsafe_front_black_700.jpg
-  - good: _goods/all/home_old/pillow/cushion.md
+  - good: _goods/all/home/textile/cushion/vm-cushion_full.md
     url: https://shikhalev.vsemaykishop.ru/article/cushion_full/4095133?color=3D_wellsoft
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_10_cushion_full_front_3D_wellsoft_700.jpg
   - good: _goods/all/home_old/shower-curtain.md
     url: https://shikhalev.vsemaykishop.ru/article/shower_curtain/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_1_shower_curtain_front_white_700.jpg
-  - good: _goods/all/home_old/pillow/cusion-antistress.md
+  - good: _goods/all/home/textile/cushion/vm-cushion_antistress.md
     url: https://shikhalev.vsemaykishop.ru/article/cushion_antistress/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_2_cushion_antistress_front_white_700.jpg
   - good: _goods/all/home/textile/plaid/vm-plaid.md
@@ -695,7 +695,7 @@ items:
   - good: _goods/all/access/vm-giftbag.md
     url: https://shikhalev.vsemaykishop.ru/article/newyear_bag_fullprint/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_2_newyear_bag_fullprint_front_white_700.jpg
-  - good: _goods/all/home_old/apron/vm.md
+  - good: _goods/all/home/textile/apron/vm-apron_fullprint.md
     url: https://shikhalev.vsemaykishop.ru/article/apron_fullprint/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_10_apron_fullprint_front_white_700.jpg
   - good: _goods/all/access/cover-pass.md

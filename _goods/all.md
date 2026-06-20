@@ -11,5 +11,4 @@ children:
   - _goods/all/home_old.md
   - _goods/all/interior.md
   - _goods/all/office.md
-  - _goods/all/toys.md
 ---
