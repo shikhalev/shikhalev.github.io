@@ -26,13 +26,13 @@ items:
   - good: _goods/all/bag/shopper/pd-canvas.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488182
     img: https://cdn99.printdirect.ru/cache/product/18/44/9488182/tov/all/480z480_front_52_0_0_0_3f1f89d76139d513fbb8e904916c.jpg
-  - good: _goods/all/toys/puzzle/a3.md
+  - good: _goods/all/home/puzzle/carton/pd-puzzle-a3.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483345
     img: https://cdn99.printdirect.ru/cache/product/87/3f/9483345/tov/all/480z480_front_719_0_0_0_4ed3489395e1c4b6298d78083785.jpg
-  - good: _goods/all/toys/puzzle/a4.md
+  - good: _goods/all/home/puzzle/carton/pd-puzzle-a4.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483346
     img: https://cdn99.printdirect.ru/cache/product/d6/7b/9483346/tov/all/480z480_front_718_0_0_0_b092c83c11c953547999a222c692.jpg
-  - good: _goods/all/toys/puzzle/a4.md
+  - good: _goods/all/home/puzzle/carton/pd-puzzle-a4.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483997
     img: https://cdn99.printdirect.ru/cache/product/ca/5a/9483997/tov/all/480z480_front_711_0_0_0_0b5200db690b4ab6b5bfc1d2b784.jpg
   - good: _goods/all/home_old/pillow/rect/47x35.md
@@ -41,25 +41,25 @@ items:
   - good: _goods/all/home_old/pillow/r35.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483359
     img: https://cdn99.printdirect.ru/cache/product/89/5e/9483359/tov/all/480z480_front_2087_0_0_0_a5d4a02949081416b87853f9315d.jpg
-  - good: _goods/all/access/magnets/opener.md
+  - good: _goods/all/home/magnet/pd-metal.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483350
     img: https://cdn99.printdirect.ru/cache/product/03/8f/9483350/tov/all/480z480_front_572_0_0_0_b508d1e29b3f33bbab5cffdc8f43.jpg
   - good: _goods/all/access/badges/58.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483350&override_item=240
     img: https://cdn99.printdirect.ru/cache/product/03/8f/9483350/tov/all/480z480_front_571_240_0_0_b508d1e29b3f33bbab5cffdc8f43.jpg
-  - good: _goods/all/access/magnets/opener.md
+  - good: _goods/all/home/magnet/pd-metal.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483864
     img: https://cdn99.printdirect.ru/cache/product/6c/e8/9483864/tov/all/480z480_front_572_0_0_0_fe8e69f5be1700f2d84e9992f21f.jpg
   - good: _goods/all/access/badges/58.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483864&override_item=240
     img: https://cdn99.printdirect.ru/cache/product/6c/e8/9483864/tov/all/480z480_front_571_240_0_0_fe8e69f5be1700f2d84e9992f21f.jpg
-  - good: _goods/all/access/magnets/acrylic/7x5.md
+  - good: _goods/all/home/magnet/acryl/pd-magnet-75x51.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483361
     img: https://cdn99.printdirect.ru/cache/product/d5/c8/9483361/tov/all/480z480_front_691_0_0_0_be18d65e47981e356a078ab46a48.jpg
-  - good: _goods/all/access/magnets/acrylic/6x6.md
+  - good: _goods/all/home/magnet/acryl/pd-magnet-65x65.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483866
     img: https://cdn99.printdirect.ru/cache/product/7f/bd/9483866/tov/all/480z480_front_33_0_0_0_65c077613bd2000f957ddd2fe57c.jpg
-  - good: _goods/all/access/magnets/opener.md
+  - good: _goods/all/home/magnet/pd-metal.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488409
     img: https://cdn99.printdirect.ru/cache/product/e6/ea/9488409/tov/all/480z480_front_572_0_0_0_6e54b580353411c3212ca06d03c1.jpg
   - good: _goods/all/access/badges/58.md

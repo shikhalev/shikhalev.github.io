@@ -644,13 +644,13 @@ items:
   - good: _goods/all/dishes/cups/vm-thermo.md
     url: https://shikhalev.vsemaykishop.ru/article/thermocup_nonspillable/4095133?size=one_size&color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_10_thermocup_nonspillable_front_white_700.jpg
-  - good: _goods/all/home/wall/canvas/vm-holst-rectangle.md
+  - good: _goods/all/home/wall/canvas/vm-holst_rectangle.md
     url: https://shikhalev.vsemaykishop.ru/article/holst_rectangle/4095133?size=a3&color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_10_holst_rectangle_front_white_700.jpg
   - good: _goods/all/interior/tree-ball.md
     url: https://shikhalev.vsemaykishop.ru/article/christmas_tree_ball/4095133?color=transparent
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_11_christmas_tree_ball_front_transparent_700.jpg
-  - good: _goods/all/home/wall/canvas/vm-holst-square.md
+  - good: _goods/all/home/wall/canvas/vm-holst_square_full.md
     url: https://shikhalev.vsemaykishop.ru/article/holst_square_full/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_10_holst_square_full_front_white_700.jpg
   - good: _goods/all/office/pad/round.md
@@ -680,16 +680,16 @@ items:
   - good: _goods/all/access/keychain/vm.md
     url: https://shikhalev.vsemaykishop.ru/article/keychain_round/4095133?color=transparent
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_2_keychain_round_front_transparent_700.jpg
-  - good: _goods/all/access/magnets/acrylic/vm-55x55.md
+  - good: _goods/all/home/magnet/acryl/vm-magnet_55_55.md
     url: https://shikhalev.vsemaykishop.ru/article/magnet_55_55/4095133?color=transparent
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_2_magnet_55_55_front_transparent_700.jpg
-  - good: _goods/all/access/magnets/acrylic/vm-45x70.md
+  - good: _goods/all/home/magnet/acryl/vm-magnet_45_70.md
     url: https://shikhalev.vsemaykishop.ru/article/magnet_45_70/4095133?size=one_size&color=transparent
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_2_magnet_45_70_front_transparent_700.jpg
-  - good: _goods/all/access/magnets/vm-vinyl.md
+  - good: _goods/all/home/magnet/vinyl/vm-magnet_vinyl_square.md
     url: https://shikhalev.vsemaykishop.ru/article/magnet_vinyl_square/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_1000_magnet_vinyl_square_front_white_700.jpg
-  - good: _goods/all/access/magnets/vm-3x2.md
+  - good: _goods/all/home/magnet/vinyl/vm-magnet_poster_3x2.md
     url: https://shikhalev.vsemaykishop.ru/article/magnet_poster_3x2/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_1000_magnet_poster_3x2_front_white_700.jpg
   - good: _goods/all/access/vm-giftbag.md
