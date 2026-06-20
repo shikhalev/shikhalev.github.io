@@ -1,4 +1,0 @@
----
-title: Фляжка
-shop: printdirect
----

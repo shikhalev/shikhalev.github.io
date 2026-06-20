@@ -1,4 +1,0 @@
----
-title: Велобутылка
-shop: printdirect
----

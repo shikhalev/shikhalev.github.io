@@ -8,4 +8,5 @@ children:
   - _goods/all/home/dish/mug/ceramics/bicolor.md
   - _goods/all/home/dish/mug/ceramics/pd-colored.md
   - _goods/all/home/dish/mug/ceramics/pd-big.md
+  - _goods/all/home/dish/mug/ceramics/latte.md
 ---

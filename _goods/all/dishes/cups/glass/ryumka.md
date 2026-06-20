@@ -1,4 +1,0 @@
----
-title: Рюмка
-shop: printdirect
----

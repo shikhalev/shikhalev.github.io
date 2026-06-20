@@ -5,10 +5,10 @@ items:
   - good: _goods/all/bag/shopper/bionature.md
     url: https://shikhalev.vsemaykishop.ru/article/bionature_bag/4100317?color=natural
     img: https://storage.vsemayki.ru/images/0/4/4100/4100317/previews/people_10_bionature_bag_front_natural_700.jpg
-  - good: _goods/all/dishes/bottles/alum/vm-sport.md
+  - good: _goods/all/home/dish/bottle/metal/carabine/vm-bottle_sport.md
     url: https://shikhalev.vsemaykishop.ru/article/bottle_sport/4100317?color=white
     img: https://storage.vsemayki.ru/images/0/4/4100/4100317/previews/people_2_bottle_sport_front_white_700.jpg
-  - good: _goods/all/dishes/bottles/alum/vm-water.md
+  - good: _goods/all/home/dish/bottle/metal/vm-water_bottle_straw.md
     url: https://shikhalev.vsemaykishop.ru/article/water_bottle_straw/4100317?color=red
     img: https://storage.vsemayki.ru/images/0/4/4100/4100317/previews/people_10_water_bottle_straw_front_red_700.jpg
   - good: _goods/all/cloth/t-shirts/m-classic/vm-cotton.md
@@ -377,7 +377,7 @@ items:
   - good: _goods/all/cloth/head/panamas/ch-vm.md
     url: https://shikhalev.vsemaykishop.ru/article/kids_panamas/4100323?size=one_size&color=beige
     img: https://storage.vsemayki.ru/images/0/4/4100/4100323/previews/people_10_kids_panamas_front_beige_700.jpg
-  - good: _goods/all/dishes/sets/vm-set.md
+  - good: _goods/all/home/dish/other/vm-set_of_dishes.md
     url: https://shikhalev.vsemaykishop.ru/article/set_of_dishes/4100323?color=white
     img: https://storage.vsemayki.ru/images/0/4/4100/4100323/previews/people_10_set_of_dishes_front_white_700.jpg
   - good: _goods/all/home/dish/mug/ceramics/classic/vm-krujka.md
@@ -389,10 +389,10 @@ items:
   - good: _goods/all/home/dish/mug/ceramics/chameleon/vm-mug_chameleon.md
     url: https://shikhalev.vsemaykishop.ru/article/mug_chameleon/4100323?color=whiteblack
     img: https://storage.vsemayki.ru/images/0/4/4100/4100323/previews/people_20_mug_chameleon_front_whiteblack_700.jpg
-  - good: _goods/all/dishes/plate.md
+  - good: _goods/all/home/dish/other/vm-plate.md
     url: https://shikhalev.vsemaykishop.ru/article/plate/4100323?color=white
     img: https://storage.vsemayki.ru/images/0/4/4100/4100323/previews/people_10_plate_front_white_700.jpg
-  - good: _goods/all/dishes/cups/glass/matte/vm.md
+  - good: _goods/all/home/dish/mug/glass/matte/vm-mug_matte.md
     url: https://shikhalev.vsemaykishop.ru/article/mug_matte/4100323?color=transparent_matte
     img: https://storage.vsemayki.ru/images/0/4/4100/4100323/previews/people_1_mug_matte_front_transparent_matte_700.jpg
   - good: _goods/all/cloth/t-shirts/m-classic/vm-cotton.md
@@ -632,16 +632,16 @@ items:
   - good: _goods/all/home/textile/plaid/vm-plaid_sleeves.md
     url: https://shikhalev.vsemaykishop.ru/article/plaid_sleeves/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_1001_plaid_sleeves_front_white_700.jpg
-  - good: _goods/all/dishes/flask/vm.md
+  - good: _goods/all/home/dish/flask/vm-flask.md
     url: https://shikhalev.vsemaykishop.ru/article/flask/4095133?color=metal
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_11_flask_front_metal_700.jpg
-  - good: _goods/all/dishes/cups/ceramics/latte/vm.md
+  - good: _goods/all/home/dish/mug/ceramics/latte/vm-mug_latte.md
     url: https://shikhalev.vsemaykishop.ru/article/mug_latte/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_5_mug_latte_front_white_700.jpg
   - good: _goods/all/home/dish/mug/ceramics/circle/vm-mug_fullprint.md
     url: https://shikhalev.vsemaykishop.ru/article/mug_fullprint/4095133?size=one_size&color=whitelightgreen
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_22_mug_fullprint_front_whitelightgreen_700.jpg
-  - good: _goods/all/dishes/cups/vm-thermo.md
+  - good: _goods/all/home/dish/mug/thermo/vm-thermocup_nonspillable.md
     url: https://shikhalev.vsemaykishop.ru/article/thermocup_nonspillable/4095133?size=one_size&color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_10_thermocup_nonspillable_front_white_700.jpg
   - good: _goods/all/home/wall/canvas/vm-holst_rectangle.md
