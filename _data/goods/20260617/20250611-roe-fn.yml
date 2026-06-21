@@ -26,7 +26,7 @@ items:
   - good: _goods/all/clothes/kids/t-shirt/fn-kids-tshirts-oversize.md
     url: https://fun.ru/kids-tshirts-oversize/sibirskaya_kosulya1
     img: https://fun.ru/upload/53/40/5340726f9c.jpg
-  - good: _goods/all/cloth/t-shirts/m-classic/fun.md
+  - good: _goods/all/clothes/men/t-shirt/fn-men-tshirts.md
     url: https://fun.ru/men-tshirts/sibirskaya_kosulya1
     img: https://fun.ru/upload/d0/4e/d04e14d7ac.jpg
   - good: _goods/all/clothes/women/t-shirt/fn-women-tshirts.md
@@ -50,7 +50,7 @@ items:
   - good: _goods/all/clothes/kids/t-shirt/fn-kids-tshirts-oversize.md
     url: https://fun.ru/kids-tshirts-oversize/sibirskaya_kosulya
     img: https://fun.ru/upload/41/e3/41e3d4c7f3.jpg
-  - good: _goods/all/cloth/t-shirts/m-classic/fun.md
+  - good: _goods/all/clothes/men/t-shirt/fn-men-tshirts.md
     url: https://fun.ru/men-tshirts/sibirskaya_kosulya
     img: https://fun.ru/upload/41/ab/41ab57be37.jpg
   - good: _goods/all/clothes/women/t-shirt/fn-women-tshirts.md

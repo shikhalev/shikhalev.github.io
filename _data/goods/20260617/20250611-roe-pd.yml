@@ -230,10 +230,10 @@ items:
   - good: _goods/all/clothes/women/t-shirt/pd-woman-tshirt-sport.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488210
     img: https://cdn99.printdirect.ru/cache/product/55/1a/9488210/tov/all/480z480_front_2220_0_0_0_095c563f6e1fad3385e0a00f6798.jpg
-  - good: _goods/all/cloth/t-shirts/f-mayka/printdirect.md
+  - good: _goods/all/clothes/women/tank/pd-woman-tank.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488208
     img: https://cdn99.printdirect.ru/cache/product/67/e7/9488208/tov/all/480z480_front_340_0_0_0_f6e18667d697e0d5e668377c1287.jpg
-  - good: _goods/all/cloth/t-shirts/f-mayka/printdirect.md
+  - good: _goods/all/clothes/women/tank/pd-woman-tank.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488209
     img: https://cdn99.printdirect.ru/cache/product/3b/f8/9488209/tov/all/480z480_front_1340_0_0_0_d7a67c87055c2afa16f5fe56ef64.jpg
   - good: _goods/all/cloth/t-shirts/child/printdirect.md
@@ -254,10 +254,10 @@ items:
   - good: _goods/all/cloth/s-shirts/u-sweatshirt/printdirect.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488196
     img: https://cdn99.printdirect.ru/cache/product/0e/4c/9488196/tov/all/480z480_front_1762_0_0_0_00847bf5720b5db81331a027aaa5.jpg
-  - good: _goods/all/cloth/s-shirts/u-sweatshirt-oversize/printdirect.md
+  - good: _goods/all/clothes/unisex/sweatshirt/pd-sweatshirt-oversize.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488197
     img: https://cdn99.printdirect.ru/cache/product/03/9e/9488197/tov/all/480z480_front_3305_0_0_0_7a0b19c731313ddb5ba917324149.jpg
-  - good: _goods/all/cloth/s-shirts/u-sweatshirt-oversize/printdirect.md
+  - good: _goods/all/clothes/unisex/sweatshirt/pd-sweatshirt-oversize.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488198
     img: https://cdn99.printdirect.ru/cache/product/5f/ba/9488198/tov/all/480z480_front_3285_0_0_0_9a54eb7c8c5fd6920f904e4541bd.jpg
   - good: _goods/all/clothes/unisex/windbreaker/pd-windbreaker.md
@@ -266,10 +266,10 @@ items:
   - good: _goods/all/clothes/unisex/windbreaker/pd-windbreaker.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488201
     img: https://cdn99.printdirect.ru/cache/product/86/a8/9488201/tov/all/480z480_front_3454_0_0_0_b5433140d05eb68a3afec7d45393.jpg
-  - good: _goods/all/cloth/outerwear/windbreaker/pd-w-hood.md
+  - good: _goods/all/clothes/unisex/windbreaker/pd-windbreaker-hood.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488205
     img: https://cdn99.printdirect.ru/cache/product/1b/77/9488205/tov/all/480z480_front_3593_0_0_0_a18228afbcef4377b04d446f2446.jpg
-  - good: _goods/all/cloth/outerwear/windbreaker/pd-w-hood.md
+  - good: _goods/all/clothes/unisex/windbreaker/pd-windbreaker-hood.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488202
     img: https://cdn99.printdirect.ru/cache/product/5d/98/9488202/tov/all/480z480_front_3597_0_0_0_eacc86fe59f16ba12b12ecf41cde.jpg
   - good: _goods/all/home/textile/apron/pd-apron.md

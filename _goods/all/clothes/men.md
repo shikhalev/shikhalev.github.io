@@ -7,5 +7,6 @@ children:
   - _goods/all/clothes/men/pajamas.md
   - _goods/all/clothes/men/sweatshirt.md
   - _goods/all/clothes/men/suit.md
+  - _goods/all/clothes/men/bottom.md
   - _goods/all/clothes/men/hat.md
 ---
