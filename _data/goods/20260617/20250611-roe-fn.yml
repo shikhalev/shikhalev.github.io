@@ -29,10 +29,10 @@ items:
   - good: _goods/all/cloth/t-shirts/m-classic/fun.md
     url: https://fun.ru/men-tshirts/sibirskaya_kosulya1
     img: https://fun.ru/upload/d0/4e/d04e14d7ac.jpg
-  - good: _goods/all/cloth/t-shirts/f-classic/fun.md
+  - good: _goods/all/clothes/women/t-shirt/fn-women-tshirts.md
     url: https://fun.ru/women-tshirts/sibirskaya_kosulya1
     img: https://fun.ru/upload/e9/ee/e9ee879880.jpg
-  - good: _goods/all/cloth/t-shirts/u-oversize/fun.md
+  - good: _goods/all/clothes/unisex/t-shirt/fn-tshirts-oversize.md
     url: https://fun.ru/tshirts-oversize/sibirskaya_kosulya1
     img: https://fun.ru/upload/5f/c5/5fc500979a.jpg
   - good: _goods/all/cloth/t-shirts/child/fun.md
@@ -53,10 +53,10 @@ items:
   - good: _goods/all/cloth/t-shirts/m-classic/fun.md
     url: https://fun.ru/men-tshirts/sibirskaya_kosulya
     img: https://fun.ru/upload/41/ab/41ab57be37.jpg
-  - good: _goods/all/cloth/t-shirts/f-classic/fun.md
+  - good: _goods/all/clothes/women/t-shirt/fn-women-tshirts.md
     url: https://fun.ru/women-tshirts/sibirskaya_kosulya
     img: https://fun.ru/upload/84/d4/84d4064c1b.jpg
-  - good: _goods/all/cloth/t-shirts/u-oversize/fun.md
+  - good: _goods/all/clothes/unisex/t-shirt/fn-tshirts-oversize.md
     url: https://fun.ru/tshirts-oversize/sibirskaya_kosulya
     img: https://fun.ru/upload/66/0e/660ef2b48a.jpg
   - good: _goods/all/cloth/t-shirts/child/fun.md

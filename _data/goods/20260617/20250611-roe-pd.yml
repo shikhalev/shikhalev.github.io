@@ -215,10 +215,10 @@ items:
   - good: _goods/all/cloth/t-shirts/m-polo/printdirect.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488188
     img: https://cdn99.printdirect.ru/cache/product/d1/53/9488188/tov/all/480z480_front_3012_0_0_0_24837dbf908fc75fbb707b46a8c3.jpg
-  - good: _goods/all/cloth/t-shirts/u-oversize/printdirect.md
+  - good: _goods/all/clothes/unisex/t-shirt/pd-t-shirt-oversize.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488186
     img: https://cdn99.printdirect.ru/cache/product/0a/93/9488186/tov/all/480z480_front_3155_0_0_0_2cfc6d21a60e09dae2c92e922fa4.jpg
-  - good: _goods/all/cloth/t-shirts/u-oversize/printdirect.md
+  - good: _goods/all/clothes/unisex/t-shirt/pd-t-shirt-oversize.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488185
     img: https://cdn99.printdirect.ru/cache/product/86/16/9488185/tov/all/480z480_front_3337_0_0_0_4c377c88612320b410c399081c08.jpg
   - good: _goods/all/cloth/t-shirts/f-classic/printdirect.md
