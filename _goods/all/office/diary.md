@@ -1,6 +1,6 @@
 ---
-title: Ежедневник
+title: Ежедневники
 children:
-  - _goods/all/office/diary/fun.md
-  - _goods/all/office/diary/vm.md
+  - _goods/all/office/diary/vm-diaries.md
+  - _goods/all/office/diary/fn-diary.md
 ---

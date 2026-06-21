@@ -17,13 +17,13 @@ items:
   - good: _goods/all/home/wall/pd-clock.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483360
     img: https://cdn99.printdirect.ru/cache/product/e4/ae/9483360/tov/all/480z480_front_1839_0_0_0_87189d0da75696f6d8bb8646ba08.jpg
-  - good: _goods/all/office/pad/rect/printdirect.md
+  - good: _goods/all/office/pad/pd-mousepad.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483365
     img: https://cdn99.printdirect.ru/cache/product/2c/8c/9483365/tov/all/480z480_front_26_0_0_0_ebb59e5b30d6fbb65e73757c2e1c.jpg
-  - good: _goods/all/bag/tablet.md
+  - good: _goods/all/accessories/bag/pd-planshet.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483579
     img: https://cdn99.printdirect.ru/cache/product/bf/13/9483579/tov/all/480z480_front_1728_0_0_0_be870a3fe4f18e6fb27c2a2866df.jpg
-  - good: _goods/all/bag/shopper/pd-canvas.md
+  - good: _goods/all/accessories/bag/shopper/pd-shopper-canvas.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488182
     img: https://cdn99.printdirect.ru/cache/product/18/44/9488182/tov/all/480z480_front_52_0_0_0_3f1f89d76139d513fbb8e904916c.jpg
   - good: _goods/all/home/puzzle/carton/pd-puzzle-a3.md
@@ -44,13 +44,13 @@ items:
   - good: _goods/all/home/magnet/pd-metal.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483350
     img: https://cdn99.printdirect.ru/cache/product/03/8f/9483350/tov/all/480z480_front_572_0_0_0_b508d1e29b3f33bbab5cffdc8f43.jpg
-  - good: _goods/all/access/badges/58.md
+  - good: _goods/all/accessories/badge/pd-badge-58.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483350&override_item=240
     img: https://cdn99.printdirect.ru/cache/product/03/8f/9483350/tov/all/480z480_front_571_240_0_0_b508d1e29b3f33bbab5cffdc8f43.jpg
   - good: _goods/all/home/magnet/pd-metal.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483864
     img: https://cdn99.printdirect.ru/cache/product/6c/e8/9483864/tov/all/480z480_front_572_0_0_0_fe8e69f5be1700f2d84e9992f21f.jpg
-  - good: _goods/all/access/badges/58.md
+  - good: _goods/all/accessories/badge/pd-badge-58.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483864&override_item=240
     img: https://cdn99.printdirect.ru/cache/product/6c/e8/9483864/tov/all/480z480_front_571_240_0_0_fe8e69f5be1700f2d84e9992f21f.jpg
   - good: _goods/all/home/magnet/acryl/pd-magnet-75x51.md
@@ -62,34 +62,34 @@ items:
   - good: _goods/all/home/magnet/pd-metal.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488409
     img: https://cdn99.printdirect.ru/cache/product/e6/ea/9488409/tov/all/480z480_front_572_0_0_0_6e54b580353411c3212ca06d03c1.jpg
-  - good: _goods/all/access/badges/58.md
+  - good: _goods/all/accessories/badge/pd-badge-58.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488409&override_item=240
     img: https://cdn99.printdirect.ru/cache/product/e6/ea/9488409/tov/all/480z480_front_571_240_0_0_6e54b580353411c3212ca06d03c1.jpg
-  - good: _goods/all/access/keychain/opener.md
+  - good: _goods/all/accessories/keychain/pd-keychain-opener.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483363
     img: https://cdn99.printdirect.ru/cache/product/b9/24/9483363/tov/all/480z480_front_575_0_0_0_547e5c5c8cc9a83d21363db09ff3.jpg
-  - good: _goods/all/access/badges/50.md
+  - good: _goods/all/accessories/badge/pd-badge-50.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483363&override_item=237&use_blank_item=0
     img: https://cdn99.printdirect.ru/cache/product/b9/24/9483363/tov/all/480z480_front_568_237_0_0_547e5c5c8cc9a83d21363db09ff3.jpg
-  - good: _goods/all/access/keychain/opener.md
+  - good: _goods/all/accessories/keychain/pd-keychain-opener.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483868
     img: https://cdn99.printdirect.ru/cache/product/79/d2/9483868/tov/all/480z480_front_575_0_0_0_1338c77550709855d315905465cd.jpg
-  - good: _goods/all/access/badges/50.md
+  - good: _goods/all/accessories/badge/pd-badge-50.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483868&override_item=237&use_blank_item=0
     img: https://cdn99.printdirect.ru/cache/product/79/d2/9483868/tov/all/480z480_front_568_237_0_0_1338c77550709855d315905465cd.jpg
-  - good: _goods/all/access/keychain/opener.md
+  - good: _goods/all/accessories/keychain/pd-keychain-opener.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488407
     img: https://cdn99.printdirect.ru/cache/product/73/c7/9488407/tov/all/480z480_front_575_0_0_0_970cc24b455dde98b33df60ae742.jpg
-  - good: _goods/all/access/badges/50.md
+  - good: _goods/all/accessories/badge/pd-badge-50.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488407&override_item=237&use_blank_item=0
     img: https://cdn99.printdirect.ru/cache/product/73/c7/9488407/tov/all/480z480_front_568_237_0_0_970cc24b455dde98b33df60ae742.jpg
-  - good: _goods/all/access/keychain/acrylic/3x3.md
+  - good: _goods/all/accessories/keychain/pd-keychain-39x39.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483364
     img: https://cdn99.printdirect.ru/cache/product/ce/18/9483364/tov/all/480z480_front_694_0_0_0_eb538b1954b599acc253b76cb11e.jpg
-  - good: _goods/all/access/keychain/acrylic/5x4.md
+  - good: _goods/all/accessories/keychain/pd-keychain-57x41.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483867
     img: https://cdn99.printdirect.ru/cache/product/2d/16/9483867/tov/all/480z480_front_693_0_0_0_78d3813c63e31df43a804b7b710f.jpg
-  - good: _goods/all/access/badges/75.md
+  - good: _goods/all/accessories/badge/pd-badge-75.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488408
     img: https://cdn99.printdirect.ru/cache/product/6e/73/9488408/tov/all/480z480_front_573_0_0_0_277b60d72b0ad3c67798bfbf3921.jpg
   - good: _goods/all/home/dish/mug/ceramics/circle/pd-circle.md

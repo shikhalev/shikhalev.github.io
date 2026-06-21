@@ -14,7 +14,7 @@ items:
   - good: _goods/all/home/dish/bottle/plastic/fn-bottle.md
     url: https://fun.ru/bottle/samets_sibirskoy_kosuli
     img: https://fun.ru/upload/ce/c6/cec6b598d5.jpg
-  - good: _goods/all/bag/shopper/fun.md
+  - good: _goods/all/accessories/bag/shopper/fn-bags.md
     url: https://fun.ru/bags/sibirskaya_kosulya1
     img: https://fun.ru/upload/1e/86/1e86537fb5.jpg
   - good: _goods/all/cloth/s-shirts/f-sweatshirt/fun.md
@@ -38,7 +38,7 @@ items:
   - good: _goods/all/cloth/t-shirts/child/fun.md
     url: https://fun.ru/kids-tshirts/sibirskaya_kosulya1
     img: https://fun.ru/upload/9f/da/9fdae73674.jpg
-  - good: _goods/all/bag/shopper/fun.md
+  - good: _goods/all/accessories/bag/shopper/fn-bags.md
     url: https://fun.ru/bags/sibirskaya_kosulya
     img: https://fun.ru/upload/61/47/614754670b.jpg
   - good: _goods/all/cloth/s-shirts/f-sweatshirt/fun.md
@@ -68,7 +68,7 @@ items:
   - good: _goods/all/home/dish/bottle/plastic/fn-bottle-speedy.md
     url: https://fun.ru/bottle-speedy/sibirskaya_kosulya3
     img: https://fun.ru/upload/c9/f8/c9f88037d9.jpg
-  - good: _goods/all/office/diary/fun.md
+  - good: _goods/all/office/diary/fn-diary.md
     url: https://fun.ru/diary/sibirskaya_kosulya3
     img: https://fun.ru/upload/0e/83/0e839dab3d.jpg
   - good: _goods/all/home/dish/mug/ceramics/circle/fn-mug.md
@@ -83,7 +83,7 @@ items:
   - good: _goods/all/home/dish/bottle/plastic/fn-bottle.md
     url: https://fun.ru/bottle/sibirskaya_kosulya2
     img: https://fun.ru/upload/83/97/8397bff47a.jpg
-  - good: _goods/all/office/diary/fun.md
+  - good: _goods/all/office/diary/fn-diary.md
     url: https://fun.ru/diary/sibirskaya_kosulya2
     img: https://fun.ru/upload/41/ea/41ea6657bc.jpg
   - good: _goods/all/home/dish/bottle/plastic/fn-bottle-speedy.md

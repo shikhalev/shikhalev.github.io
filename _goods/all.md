@@ -3,9 +3,9 @@ title: Все товары
 short: Все
 children:
   - _goods/all/home.md
-  -
-  - _goods/all/access.md
-  - _goods/all/bag.md
-  - _goods/all/cloth.md
   - _goods/all/office.md
+  - _goods/all/accessories.md
+  - _goods/all/clothes.md
+  -
+  - _goods/all/cloth.md
 ---

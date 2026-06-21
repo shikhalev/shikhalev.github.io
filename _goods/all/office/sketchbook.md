@@ -1,4 +1,0 @@
----
-title: Скетчбук
-shop: vsemayki
----
