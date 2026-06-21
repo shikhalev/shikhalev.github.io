@@ -194,13 +194,13 @@ items:
   - good: _goods/all/home/dish/flask/pd-flask.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483340
     img: https://cdn99.printdirect.ru/cache/product/e7/4a/9483340/tov/all/480z480_front_3655_0_0_0_a064f654d56d806f17a617b339b0.jpg
-  - good: _goods/all/cloth/t-shirts/m-classic/printdirect.md
+  - good: _goods/all/clothes/men/t-shirt/pd-man-tshirt.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488183
     img: https://cdn99.printdirect.ru/cache/product/ac/fc/9488183/tov/all/480z480_front_1255_0_0_0_753df0428c81cb882daeb95bc273.jpg
-  - good: _goods/all/cloth/t-shirts/m-classic/printdirect.md
+  - good: _goods/all/clothes/men/t-shirt/pd-man-tshirt.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488184
     img: https://cdn99.printdirect.ru/cache/product/64/00/9488184/tov/all/480z480_front_1264_0_0_0_bfc871f65f6477513961c568ea0b.jpg
-  - good: _goods/all/cloth/t-shirts/m-sport.md
+  - good: _goods/all/clothes/men/t-shirt/pd-man-tshirt-sport.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488191
     img: https://cdn99.printdirect.ru/cache/product/5c/25/9488191/tov/all/480z480_front_1922_0_0_0_6d80d949e720d1807535f50051b2.jpg
   - good: _goods/all/cloth/t-shirts/m-mayka/printdirect.md
@@ -209,10 +209,10 @@ items:
   - good: _goods/all/cloth/t-shirts/m-mayka/printdirect.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488190
     img: https://cdn99.printdirect.ru/cache/product/c8/39/9488190/tov/all/480z480_front_1356_0_0_0_d4ca9baf10a728aee252c213defa.jpg
-  - good: _goods/all/cloth/t-shirts/m-polo/printdirect.md
+  - good: _goods/all/clothes/men/polo/pd-man-polo.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488187
     img: https://cdn99.printdirect.ru/cache/product/b4/7a/9488187/tov/all/480z480_front_1013_0_0_0_920b6ab2bb0d0fa61f4e8d6177c3.jpg
-  - good: _goods/all/cloth/t-shirts/m-polo/printdirect.md
+  - good: _goods/all/clothes/men/polo/pd-man-polo.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488188
     img: https://cdn99.printdirect.ru/cache/product/d1/53/9488188/tov/all/480z480_front_3012_0_0_0_24837dbf908fc75fbb707b46a8c3.jpg
   - good: _goods/all/clothes/unisex/t-shirt/pd-t-shirt-oversize.md
@@ -236,10 +236,10 @@ items:
   - good: _goods/all/clothes/women/tank/pd-woman-tank.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488209
     img: https://cdn99.printdirect.ru/cache/product/3b/f8/9488209/tov/all/480z480_front_1340_0_0_0_d7a67c87055c2afa16f5fe56ef64.jpg
-  - good: _goods/all/cloth/t-shirts/child/printdirect.md
+  - good: _goods/all/clothes/kids/t-shirt/pd-child-t-shirt.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488211
     img: https://cdn99.printdirect.ru/cache/product/18/36/9488211/tov/all/480z480_front_1449_0_0_0_8f8d8ad64c89f067df39328362ee.jpg
-  - good: _goods/all/cloth/t-shirts/child/printdirect.md
+  - good: _goods/all/clothes/kids/t-shirt/pd-child-t-shirt.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488212
     img: https://cdn99.printdirect.ru/cache/product/42/3f/9488212/tov/all/480z480_front_1443_0_0_0_6ab256ee197ed769e6c250b72db8.jpg
   - good: _goods/all/clothes/unisex/hoodie/pd-hoodie.md
