@@ -6,7 +6,7 @@ stylesheet: goods
 {%- if page.children and page.children.size > 0 -%}
 <h2 id="children" style="visibility: hidden;height: 0px;">Подкатегории</h2>
 <div class="subcategories" style="columns: unset;">
-{%- include goods/subkinds.liquid kind=page skip_empty=false depth=7 start=true -%}
+{%- include goods/subkinds.liquid kind=page skip_empty=true depth=7 start=true -%}
 </div>
 <hr>
 {%- endif -%}

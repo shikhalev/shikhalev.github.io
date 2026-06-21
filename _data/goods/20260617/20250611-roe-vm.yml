@@ -29,7 +29,7 @@ items:
   - good: _goods/all/cloth/t-shirts/m-vm-cotton-oversize.md
     url: https://shikhalev.vsemaykishop.ru/article/tshirt_oversize/4100319?size=xs_42-44&color=lightgreen
     img: https://storage.vsemayki.ru/images/0/4/4100/4100319/previews/people_1000_tshirt_oversize_front_lightgreen_700.jpg
-  - good: _goods/all/cloth/t-shirts/m-pajamas.md
+  - good: _goods/all/clothes/men/pajamas/vm-man_pajamas.md
     url: https://shikhalev.vsemaykishop.ru/article/man_pajamas/4100319?color=lightgreen
     img: https://storage.vsemayki.ru/images/0/4/4100/4100319/previews/people_1000_man_pajamas_front_lightgreen_700.jpg
   - good: _goods/all/clothes/men/suit/vm-man_knit_suit.md
@@ -50,7 +50,7 @@ items:
   - good: _goods/all/cloth/t-shirts/m-longsleeve/vm-oversize.md
     url: https://shikhalev.vsemaykishop.ru/article/men_longsleeves_oversize/4100319?color=melange
     img: https://storage.vsemayki.ru/images/0/4/4100/4100319/previews/people_1000_men_longsleeves_oversize_front_melange_700.jpg
-  - good: _goods/all/cloth/t-shirts/m-vm-oversize-premium.md
+  - good: _goods/all/clothes/men/t-shirt/vm-tshirt_oversize_man_premium.md
     url: https://shikhalev.vsemaykishop.ru/article/tshirt_oversize_man_premium/4100319?color=white
     img: https://storage.vsemayki.ru/images/0/4/4100/4100319/previews/people_1000_tshirt_oversize_man_premium_front_white_700.jpg
   - good: _goods/all/cloth/s-shirts/m-sweatshirt/vm-oversize.md
@@ -98,7 +98,7 @@ items:
   - good: _goods/all/cloth/t-shirts/f-longsleeve/vm-oversize.md
     url: https://shikhalev.vsemaykishop.ru/article/women_longsleeves_oversize/4100319?color=melange
     img: https://storage.vsemayki.ru/images/0/4/4100/4100319/previews/people_1000_women_longsleeves_oversize_front_melange_700.jpg
-  - good: _goods/all/cloth/t-shirts/f-oversize-premium.md
+  - good: _goods/all/clothes/women/t-shirt/vm-tshirt_oversize_woman_premium.md
     url: https://shikhalev.vsemaykishop.ru/article/tshirt_oversize_woman_premium/4100319?color=white
     img: https://storage.vsemayki.ru/images/0/4/4100/4100319/previews/people_1000_tshirt_oversize_woman_premium_front_white_700.jpg
   - good: _goods/all/cloth/s-shirts/f-sweatshirt/vm-oversize.md
@@ -119,7 +119,7 @@ items:
   - good: _goods/all/cloth/t-shirts/child/vm-longsleeve.md
     url: https://shikhalev.vsemaykishop.ru/article/child_long_cotton/4100319?color=lightgreen
     img: https://storage.vsemayki.ru/images/0/4/4100/4100319/previews/people_20_child_long_cotton_front_lightgreen_700.jpg
-  - good: _goods/all/cloth/t-shirts/child/vm-mayka.md
+  - good: _goods/all/clothes/kids/tank/vm-child_tank.md
     url: https://shikhalev.vsemaykishop.ru/article/child_tank/4100319?size=86sm&color=lightgreen
     img: https://storage.vsemayki.ru/images/0/4/4100/4100319/previews/people_20_child_tank_front_lightgreen_700.jpg
   - good: _goods/all/cloth/t-shirts/child/vm-pajamas-shorts.md
@@ -146,7 +146,7 @@ items:
   - good: _goods/all/cloth/t-shirts/m-vm-cotton-oversize.md
     url: https://shikhalev.vsemaykishop.ru/article/tshirt_oversize/4100321?color=black
     img: https://storage.vsemayki.ru/images/0/4/4100/4100321/previews/people_1000_tshirt_oversize_front_black_700.jpg
-  - good: _goods/all/cloth/t-shirts/m-pajamas.md
+  - good: _goods/all/clothes/men/pajamas/vm-man_pajamas.md
     url: https://shikhalev.vsemaykishop.ru/article/man_pajamas/4100321?color=black
     img: https://storage.vsemayki.ru/images/0/4/4100/4100321/previews/people_20_man_pajamas_front_black_700.jpg
   - good: _goods/all/cloth/s-shirts/m-hoodie/vm-oversize.md
@@ -158,7 +158,7 @@ items:
   - good: _goods/all/cloth/s-shirts/m-hoodie/vm-zip.md
     url: https://shikhalev.vsemaykishop.ru/article/mens_hoodies_zip/4100321?color=black
     img: https://storage.vsemayki.ru/images/0/4/4100/4100321/previews/people_20_mens_hoodies_zip_front_black_700.jpg
-  - good: _goods/all/cloth/t-shirts/m-vm-oversize-premium.md
+  - good: _goods/all/clothes/men/t-shirt/vm-tshirt_oversize_man_premium.md
     url: https://shikhalev.vsemaykishop.ru/article/tshirt_oversize_man_premium/4100321?color=grey
     img: https://storage.vsemayki.ru/images/0/4/4100/4100321/previews/people_1001_tshirt_oversize_man_premium_front_grey_700.jpg
   - good: _goods/all/cloth/s-shirts/m-sweatshirt/vm-oversize.md
@@ -188,7 +188,7 @@ items:
   - good: _goods/all/clothes/women/t-shirt/vm-womens_t_shirts_slim_cotton.md
     url: https://shikhalev.vsemaykishop.ru/article/womens_t_shirts_slim_cotton/4100321?color=black
     img: https://storage.vsemayki.ru/images/0/4/4100/4100321/previews/people_1000_womens_t_shirts_slim_cotton_front_black_700.jpg
-  - good: _goods/all/cloth/t-shirts/f-oversize-premium.md
+  - good: _goods/all/clothes/women/t-shirt/vm-tshirt_oversize_woman_premium.md
     url: https://shikhalev.vsemaykishop.ru/article/tshirt_oversize_woman_premium/4100321?color=grey
     img: https://storage.vsemayki.ru/images/0/4/4100/4100321/previews/people_1000_tshirt_oversize_woman_premium_front_grey_700.jpg
   - good: _goods/all/cloth/s-shirts/f-sweatshirt/vm-oversize.md
@@ -206,7 +206,7 @@ items:
   - good: _goods/all/cloth/t-shirts/child/vm-longsleeve.md
     url: https://shikhalev.vsemaykishop.ru/article/child_long_cotton/4100321?size=104sm&color=terracotta
     img: https://storage.vsemayki.ru/images/0/4/4100/4100321/previews/people_20_child_long_cotton_front_terracotta_700.jpg
-  - good: _goods/all/cloth/t-shirts/child/vm-mayka.md
+  - good: _goods/all/clothes/kids/tank/vm-child_tank.md
     url: https://shikhalev.vsemaykishop.ru/article/child_tank/4100321?color=black
     img: https://storage.vsemayki.ru/images/0/4/4100/4100321/previews/people_20_child_tank_front_black_700.jpg
   - good: _goods/all/cloth/t-shirts/child/vm-pajamas-shorts.md
@@ -239,7 +239,7 @@ items:
   - good: _goods/all/cloth/s-shirts/u-hoodie/vm-superoversize.md
     url: https://shikhalev.vsemaykishop.ru/article/hoodie_superoversize/4100323?size=one_size&color=melange
     img: https://storage.vsemayki.ru/images/0/4/4100/4100323/previews/people_1000_hoodie_superoversize_front_melange_700.jpg
-  - good: _goods/all/cloth/t-shirts/m-pajamas.md
+  - good: _goods/all/clothes/men/pajamas/vm-man_pajamas.md
     url: https://shikhalev.vsemaykishop.ru/article/man_pajamas/4100323?color=lightgreen
     img: https://storage.vsemayki.ru/images/0/4/4100/4100323/previews/people_20_man_pajamas_front_lightgreen_700.jpg
   - good: _goods/all/clothes/men/suit/vm-man_knit_suit.md
@@ -266,10 +266,10 @@ items:
   - good: _goods/all/cloth/t-shirts/m-longsleeve/vm-oversize.md
     url: https://shikhalev.vsemaykishop.ru/article/men_longsleeves_oversize/4100323?color=melange
     img: https://storage.vsemayki.ru/images/0/4/4100/4100323/previews/people_1000_men_longsleeves_oversize_front_melange_700.jpg
-  - good: _goods/all/cloth/t-shirts/m-polo/vm.md
+  - good: _goods/all/clothes/men/polo/vm-man_tshirt_polo.md
     url: https://shikhalev.vsemaykishop.ru/article/man_tshirt_polo/4100323?color=white
     img: https://storage.vsemayki.ru/images/0/4/4100/4100323/previews/people_1000_man_tshirt_polo_front_white_700.jpg
-  - good: _goods/all/cloth/t-shirts/m-vm-oversize-premium.md
+  - good: _goods/all/clothes/men/t-shirt/vm-tshirt_oversize_man_premium.md
     url: https://shikhalev.vsemaykishop.ru/article/tshirt_oversize_man_premium/4100323?color=white
     img: https://storage.vsemayki.ru/images/0/4/4100/4100323/previews/people_1001_tshirt_oversize_man_premium_front_white_700.jpg
   - good: _goods/all/cloth/s-shirts/m-sweatshirt/vm-oversize.md
@@ -320,7 +320,7 @@ items:
   - good: _goods/all/clothes/women/t-shirt/vm-womens_t_shirts_slim_cotton.md
     url: https://shikhalev.vsemaykishop.ru/article/womens_suits_with_hoodie_cotton/4100323?color=dustypink
     img: https://storage.vsemayki.ru/images/0/4/4100/4100323/previews/people_1000_womens_t_shirts_slim_cotton_front_white_700.jpg
-  - good: _goods/all/cloth/head/panamas/f-vm.md
+  - good: _goods/all/clothes/women/hat/vm-womens_panamas.md
     url: https://shikhalev.vsemaykishop.ru/article/womens_panamas/4100323?color=beige
     img: https://storage.vsemayki.ru/images/0/4/4100/4100323/previews/people_1000_womens_panamas_front_beige_700.jpg
   - good: _goods/all/cloth/t-shirts/f-longsleeve/vm-oversize.md
@@ -329,7 +329,7 @@ items:
   - good: _goods/all/cloth/t-shirts/f-polo.md
     url: https://shikhalev.vsemaykishop.ru/article/woman_tshirt_polo/4100323?color=white
     img: https://storage.vsemayki.ru/images/0/4/4100/4100323/previews/people_1000_woman_tshirt_polo_front_white_700.jpg
-  - good: _goods/all/cloth/t-shirts/f-oversize-premium.md
+  - good: _goods/all/clothes/women/t-shirt/vm-tshirt_oversize_woman_premium.md
     url: https://shikhalev.vsemaykishop.ru/article/tshirt_oversize_woman_premium/4100323?color=white
     img: https://storage.vsemayki.ru/images/0/4/4100/4100323/previews/people_1000_tshirt_oversize_woman_premium_front_white_700.jpg
   - good: _goods/all/cloth/t-shirts/f-vm-cotton-top.md
@@ -416,7 +416,7 @@ items:
   - good: _goods/all/cloth/s-shirts/u-hoodie/vm-superoversize.md
     url: https://shikhalev.vsemaykishop.ru/article/hoodie_superoversize/4100325?color=black
     img: https://storage.vsemayki.ru/images/0/4/4100/4100325/previews/people_1000_hoodie_superoversize_front_black_700.jpg
-  - good: _goods/all/cloth/t-shirts/m-pajamas.md
+  - good: _goods/all/clothes/men/pajamas/vm-man_pajamas.md
     url: https://shikhalev.vsemaykishop.ru/article/man_pajamas/4100325?color=black
     img: https://storage.vsemayki.ru/images/0/4/4100/4100325/previews/people_20_man_pajamas_front_black_700.jpg
   - good: _goods/all/cloth/s-shirts/m-hoodie/vm-oversize.md
@@ -428,10 +428,10 @@ items:
   - good: _goods/all/cloth/s-shirts/m-hoodie/vm-zip.md
     url: https://shikhalev.vsemaykishop.ru/article/mens_hoodies_zip/4100325?color=black
     img: https://storage.vsemayki.ru/images/0/4/4100/4100325/previews/people_20_mens_hoodies_zip_front_black_700.jpg
-  - good: _goods/all/cloth/t-shirts/m-polo/vm.md
+  - good: _goods/all/clothes/men/polo/vm-man_tshirt_polo.md
     url: https://shikhalev.vsemaykishop.ru/article/man_tshirt_polo/4100325?color=darkblue
     img: https://storage.vsemayki.ru/images/0/4/4100/4100325/previews/people_1000_man_tshirt_polo_front_darkblue_700.jpg
-  - good: _goods/all/cloth/t-shirts/m-vm-oversize-premium.md
+  - good: _goods/all/clothes/men/t-shirt/vm-tshirt_oversize_man_premium.md
     url: https://shikhalev.vsemaykishop.ru/article/tshirt_oversize_man_premium/4100325?size=xs_42-44&color=grey
     img: https://storage.vsemayki.ru/images/0/4/4100/4100325/previews/people_1000_tshirt_oversize_man_premium_front_grey_700.jpg
   - good: _goods/all/cloth/s-shirts/m-sweatshirt/vm-oversize.md
@@ -479,10 +479,10 @@ items:
   - good: _goods/all/cloth/t-shirts/f-polo.md
     url: https://shikhalev.vsemaykishop.ru/article/woman_tshirt_polo/4100325?color=darkblue
     img: https://storage.vsemayki.ru/images/0/4/4100/4100325/previews/people_1000_woman_tshirt_polo_front_darkblue_700.jpg
-  - good: _goods/all/cloth/t-shirts/f-vm-oversize-texture.md
+  - good: _goods/all/clothes/women/t-shirt/vm-tshirt_oversize_woman_pike.md
     url: https://shikhalev.vsemaykishop.ru/article/tshirt_oversize_woman_pike/4100325?color=burgundy
     img: https://storage.vsemayki.ru/images/0/4/4100/4100325/previews/people_1021_tshirt_oversize_woman_pike_front_burgundy_700.jpg
-  - good: _goods/all/cloth/t-shirts/f-oversize-premium.md
+  - good: _goods/all/clothes/women/t-shirt/vm-tshirt_oversize_woman_premium.md
     url: https://shikhalev.vsemaykishop.ru/article/tshirt_oversize_woman_premium/4100325?color=black
     img: https://storage.vsemayki.ru/images/0/4/4100/4100325/previews/people_1000_tshirt_oversize_woman_premium_front_black_700.jpg
   - good: _goods/all/clothes/women/bottom/vm-women_shorts_oversize.md
@@ -527,7 +527,7 @@ items:
   - good: _goods/all/cloth/s-shirts/m-hoodie/vm-3d.md
     url: https://shikhalev.vsemaykishop.ru/article/manhoodiefull/4095133?size=xxs_42&color=melange
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_1000_manhoodiefull_front_melange_700.jpg
-  - good: _goods/all/cloth/outerwear/vm-cover-3d.md
+  - good: _goods/all/clothes/unisex/vm-ski_cape.md
     url: https://shikhalev.vsemaykishop.ru/article/ski_cape/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_1001_ski_cape_front_white_700.jpg
   - good: _goods/all/cloth/t-shirts/m-vm-slim-3d.md
@@ -557,7 +557,7 @@ items:
   - good: _goods/all/cloth/t-shirts/f-rashgard-3d.md
     url: https://shikhalev.vsemaykishop.ru/article/womens_rashgards_fullprint/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_1000_womens_rashgards_fullprint_front_white_700.jpg
-  - good: _goods/all/cloth/t-shirts/f-oversize-3d.md
+  - good: _goods/all/clothes/women/t-shirt/vm-womens_t_shirts_oversize_3d.md
     url: https://shikhalev.vsemaykishop.ru/article/womens_t_shirts_oversize_3d/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_1000_womens_t_shirts_oversize_3d_front_white_700.jpg
   - good: _goods/all/cloth/t-shirts/child/vm-3d.md
@@ -572,7 +572,7 @@ items:
   - good: _goods/all/cloth/t-shirts/child/vm-longsleeve-3d.md
     url: https://shikhalev.vsemaykishop.ru/article/child_longsleeve/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_20_child_longsleeve_front_white_700.jpg
-  - good: _goods/all/cloth/t-shirts/child/vm-swimsuit-3d.md
+  - good: _goods/all/clothes/kids/swim/vm-kids_swimsuit.md
     url: https://shikhalev.vsemaykishop.ru/article/kids_swimsuit/4095133?color=white
     img: https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_10_kids_swimsuit_front_white_700.jpg
   - good: _goods/all/accessories/bag/backpack/vm-gym_sack.md

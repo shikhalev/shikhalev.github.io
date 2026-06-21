@@ -221,13 +221,13 @@ items:
   - good: _goods/all/clothes/unisex/t-shirt/pd-t-shirt-oversize.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488185
     img: https://cdn99.printdirect.ru/cache/product/86/16/9488185/tov/all/480z480_front_3337_0_0_0_4c377c88612320b410c399081c08.jpg
-  - good: _goods/all/cloth/t-shirts/f-classic/printdirect.md
+  - good: _goods/all/clothes/women/t-shirt/pd-woman-tshirt.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488206
     img: https://cdn99.printdirect.ru/cache/product/6a/a3/9488206/tov/all/480z480_front_1294_0_0_0_eef3df4b0fdf189d2ae595d56246.jpg
-  - good: _goods/all/cloth/t-shirts/f-classic/printdirect.md
+  - good: _goods/all/clothes/women/t-shirt/pd-woman-tshirt.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488207
     img: https://cdn99.printdirect.ru/cache/product/32/be/9488207/tov/all/480z480_front_1290_0_0_0_79889caa0dd888034fcea4e0a7da.jpg
-  - good: _goods/all/cloth/t-shirts/f-sport.md
+  - good: _goods/all/clothes/women/t-shirt/pd-woman-tshirt-sport.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488210
     img: https://cdn99.printdirect.ru/cache/product/55/1a/9488210/tov/all/480z480_front_2220_0_0_0_095c563f6e1fad3385e0a00f6798.jpg
   - good: _goods/all/cloth/t-shirts/f-mayka/printdirect.md
@@ -242,10 +242,10 @@ items:
   - good: _goods/all/cloth/t-shirts/child/printdirect.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488212
     img: https://cdn99.printdirect.ru/cache/product/42/3f/9488212/tov/all/480z480_front_1443_0_0_0_6ab256ee197ed769e6c250b72db8.jpg
-  - good: _goods/all/cloth/s-shirts/u-hoodie/printdirect.md
+  - good: _goods/all/clothes/unisex/hoodie/pd-hoodie.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488193
     img: https://cdn99.printdirect.ru/cache/product/aa/1c/9488193/tov/all/480z480_front_3040_0_0_0_fdb5c22df606f4fcba8c8ed88766.jpg
-  - good: _goods/all/cloth/s-shirts/u-hoodie/printdirect.md
+  - good: _goods/all/clothes/unisex/hoodie/pd-hoodie.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488194
     img: https://cdn99.printdirect.ru/cache/product/61/4c/9488194/tov/all/480z480_front_3036_0_0_0_c5c4afdc1df1e7234bac99a85f9e.jpg
   - good: _goods/all/cloth/s-shirts/u-sweatshirt/printdirect.md
