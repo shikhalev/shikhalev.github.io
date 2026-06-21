@@ -1,4 +1,9 @@
 ---
 title: Мужская одежда
 short: Муж.
+children:
+  - _goods/all/clothes/men/t-shirt.md
+  - _goods/all/clothes/men/sweatshirt.md
+  - _goods/all/clothes/men/suit.md
+  - _goods/all/clothes/men/hat.md
 ---

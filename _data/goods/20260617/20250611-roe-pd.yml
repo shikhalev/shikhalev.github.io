@@ -260,10 +260,10 @@ items:
   - good: _goods/all/cloth/s-shirts/u-sweatshirt-oversize/printdirect.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488198
     img: https://cdn99.printdirect.ru/cache/product/5f/ba/9488198/tov/all/480z480_front_3285_0_0_0_9a54eb7c8c5fd6920f904e4541bd.jpg
-  - good: _goods/all/cloth/outerwear/windbreaker/pd-wo-hood.md
+  - good: _goods/all/clothes/unisex/windbreaker/pd-windbreaker.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488200
     img: https://cdn99.printdirect.ru/cache/product/80/4f/9488200/tov/all/480z480_front_3450_0_0_0_012f541d392f66f3a03dd5165c09.jpg
-  - good: _goods/all/cloth/outerwear/windbreaker/pd-wo-hood.md
+  - good: _goods/all/clothes/unisex/windbreaker/pd-windbreaker.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488201
     img: https://cdn99.printdirect.ru/cache/product/86/a8/9488201/tov/all/480z480_front_3454_0_0_0_b5433140d05eb68a3afec7d45393.jpg
   - good: _goods/all/cloth/outerwear/windbreaker/pd-w-hood.md
