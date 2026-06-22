@@ -12,4 +12,7 @@ children:
   - _goods/all/clothes/men/suit.md
   - _goods/all/clothes/men/bottom.md
   - _goods/all/clothes/men/hat.md
+links:
+  - _goods/all/clothes/unisex/windbreaker.md
+  - _goods/all/clothes/unisex/vm-ski_cape.md
 ---

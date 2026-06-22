@@ -13,4 +13,6 @@ children:
   - _goods/all/clothes/women/t-shirt/vm-tshirt_oversize_woman_pike.md
   - _goods/all/clothes/women/t-shirt/vm-tshirt_oversize_woman_premium.md
   - _goods/all/clothes/women/t-shirt/fn-women-tshirts.md
+links:
+  - _goods/all/clothes/unisex/t-shirt.md
 ---

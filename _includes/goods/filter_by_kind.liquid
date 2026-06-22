@@ -1,12 +1,19 @@
 {%- if filtered_goods == nil -%}
   {%- assign filtered_goods = "" | split: "," -%}
 {%- endif -%}
-{%- assign kind = include.kind | default: page -%}
-{%- assign current = site.data.flat_goods | where: 'good', kind.path -%}
+{%- assign current = site.data.flat_goods | where: 'good', include.kind.path -%}
 {%- assign filtered_goods = filtered_goods | concat: current | uniq -%}
-{%- if kind.children and kind.children.size > 0 -%}
-  {%- for child_path in kind.children -%}
+{%- if include.kind.children and include.kind.children.size > 0 -%}
+  {%- for child_path in include.kind.children -%}
     {%- assign child = site.goods | where: 'path', child_path | first -%}
+    {%- if child -%}
+      {%- include goods/filter_by_kind.liquid kind=child -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+{%- if include.kind.links and include.kind.links.size > 0 -%}
+  {%- for link_path in include.kind.links -%}
+    {%- assign child = site.goods | where: 'path', link_path | first -%}
     {%- if child -%}
       {%- include goods/filter_by_kind.liquid kind=child -%}
     {%- endif -%}

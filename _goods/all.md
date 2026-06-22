@@ -6,6 +6,4 @@ children:
   - _goods/all/office.md
   - _goods/all/accessories.md
   - _goods/all/clothes.md
-  -
-  - _goods/all/cloth.md
 ---

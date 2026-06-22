@@ -13,7 +13,7 @@ stylesheet: goods
 
 {{ content }}
 
-{%- include goods/filter_by_kind.liquid -%}
+{%- include goods/filter_by_kind.liquid kind=page -%}
 {%- if filtered_goods.size > 1 -%}
 {%- assign sampled = filtered_goods | sample: filtered_goods.size -%}
 {%- else -%}

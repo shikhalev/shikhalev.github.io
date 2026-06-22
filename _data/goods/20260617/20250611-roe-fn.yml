@@ -17,10 +17,10 @@ items:
   - good: _goods/all/accessories/bag/shopper/fn-bags.md
     url: https://fun.ru/bags/sibirskaya_kosulya1
     img: https://fun.ru/upload/1e/86/1e86537fb5.jpg
-  - good: _goods/all/cloth/s-shirts/f-sweatshirt/fun.md
+  - good: _goods/all/clothes/women/sweatshirt/fn-women-sweatshirts.md
     url: https://fun.ru/women-sweatshirts/sibirskaya_kosulya1
     img: https://fun.ru/upload/74/aa/74aa1d4aa5.jpg
-  - good: _goods/all/cloth/s-shirts/m-sweatshirt/fun.md
+  - good: _goods/all/clothes/men/sweatshirt/fn-men-sweatshirts.md
     url: https://fun.ru/men-sweatshirts/sibirskaya_kosulya1
     img: https://fun.ru/upload/77/6d/776debc66a.jpg
   - good: _goods/all/clothes/kids/t-shirt/fn-kids-tshirts-oversize.md
@@ -35,16 +35,16 @@ items:
   - good: _goods/all/clothes/unisex/t-shirt/fn-tshirts-oversize.md
     url: https://fun.ru/tshirts-oversize/sibirskaya_kosulya1
     img: https://fun.ru/upload/5f/c5/5fc500979a.jpg
-  - good: _goods/all/cloth/t-shirts/child/fun.md
+  - good: _goods/all/clothes/kids/t-shirt/fn-kids-tshirts.md
     url: https://fun.ru/kids-tshirts/sibirskaya_kosulya1
     img: https://fun.ru/upload/9f/da/9fdae73674.jpg
   - good: _goods/all/accessories/bag/shopper/fn-bags.md
     url: https://fun.ru/bags/sibirskaya_kosulya
     img: https://fun.ru/upload/61/47/614754670b.jpg
-  - good: _goods/all/cloth/s-shirts/f-sweatshirt/fun.md
+  - good: _goods/all/clothes/women/sweatshirt/fn-women-sweatshirts.md
     url: https://fun.ru/women-sweatshirts/sibirskaya_kosulya
     img: https://fun.ru/upload/ac/a7/aca71c7184.jpg
-  - good: _goods/all/cloth/s-shirts/m-sweatshirt/fun.md
+  - good: _goods/all/clothes/men/sweatshirt/fn-men-sweatshirts.md
     url: https://fun.ru/men-sweatshirts/sibirskaya_kosulya
     img: https://fun.ru/upload/12/b6/12b608291f.jpg
   - good: _goods/all/clothes/kids/t-shirt/fn-kids-tshirts-oversize.md
@@ -59,7 +59,7 @@ items:
   - good: _goods/all/clothes/unisex/t-shirt/fn-tshirts-oversize.md
     url: https://fun.ru/tshirts-oversize/sibirskaya_kosulya
     img: https://fun.ru/upload/66/0e/660ef2b48a.jpg
-  - good: _goods/all/cloth/t-shirts/child/fun.md
+  - good: _goods/all/clothes/kids/t-shirt/fn-kids-tshirts.md
     url: https://fun.ru/kids-tshirts/sibirskaya_kosulya
     img: https://fun.ru/upload/44/01/4401ff6569.jpg
   - good: _goods/all/home/dish/thermos/fn-thermos.md

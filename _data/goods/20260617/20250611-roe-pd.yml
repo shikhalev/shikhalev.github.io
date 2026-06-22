@@ -248,10 +248,10 @@ items:
   - good: _goods/all/clothes/unisex/hoodie/pd-hoodie.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488194
     img: https://cdn99.printdirect.ru/cache/product/61/4c/9488194/tov/all/480z480_front_3036_0_0_0_c5c4afdc1df1e7234bac99a85f9e.jpg
-  - good: _goods/all/cloth/s-shirts/u-sweatshirt/printdirect.md
+  - good: _goods/all/clothes/unisex/sweatshirt/pd-sweatshirt.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488195
     img: https://cdn99.printdirect.ru/cache/product/42/1d/9488195/tov/all/480z480_front_1760_0_0_0_ee511cffe265ef6049a603757923.jpg
-  - good: _goods/all/cloth/s-shirts/u-sweatshirt/printdirect.md
+  - good: _goods/all/clothes/unisex/sweatshirt/pd-sweatshirt.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488196
     img: https://cdn99.printdirect.ru/cache/product/0e/4c/9488196/tov/all/480z480_front_1762_0_0_0_00847bf5720b5db81331a027aaa5.jpg
   - good: _goods/all/clothes/unisex/sweatshirt/pd-sweatshirt-oversize.md
