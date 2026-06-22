@@ -19,8 +19,7 @@
       {%- else -%}
         {%- assign child_flag = '' -%}
       {%- endif -%}
-      {%- assign filtered_goods = nil -%}
-      {%- include goods/filter_by_kind.liquid kind=child_kind -%}
+      {%- assign filtered_goods = child_kind.goods -%}
       {%- unless include.skip_empty and filtered_goods.size == 0 -%}
       <li{% if include.start %} class="start"{% endif %}>
         <p><a href="{{ child_url }}">{{ child_title }} ({{ filtered_goods.size }})</a>{{ child_flag }}</p>
@@ -45,8 +44,7 @@
     {%- else -%}
       {%- assign link_flag = '' -%}
     {%- endif -%}
-    {%- assign filtered_goods = nil -%}
-    {%- include goods/filter_by_kind.liquid kind=link_kind -%}
+    {%- assign filtered_goods = link_kind.goods -%}
     {%- unless include.skip_empty and filtered_goods.size == 0 -%}
     <li{% if include.start %} class="fa-icon-li-link start"{% else %} class="fa-icon-li-link"{% endif %}>
       <p><a href="{{ link_url }}">{{ link_title }} ({{ filtered_goods.size }})</a>{{ link_flag }}</p>

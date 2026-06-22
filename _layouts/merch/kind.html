@@ -4,16 +4,16 @@ stylesheet: goods
 ---
 
 {%- if page.children and page.children.size > 0 -%}
-<h2 id="children" style="visibility: hidden;height: 0px;">Подкатегории</h2>
+<h2 id="children">Подкатегории</h2>
 <div class="subcategories" style="columns: unset;">
-{%- include goods/subkinds.liquid kind=page skip_empty=true depth=7 start=true -%}
+{%- include goods/subkinds.liquid kind=page skip_empty=true depth=3 start=true -%}
 </div>
 <hr>
 {%- endif -%}
 
 {{ content }}
 
-{%- include goods/filter_by_kind.liquid kind=page -%}
+{%- assign filtered_goods = page.goods -%}
 {%- if filtered_goods.size > 1 -%}
 {%- assign sampled = filtered_goods | sample: filtered_goods.size -%}
 {%- else -%}
