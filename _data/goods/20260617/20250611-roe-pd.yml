@@ -203,10 +203,10 @@ items:
   - good: _goods/all/clothes/men/t-shirt/pd-man-tshirt-sport.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488191
     img: https://cdn99.printdirect.ru/cache/product/5c/25/9488191/tov/all/480z480_front_1922_0_0_0_6d80d949e720d1807535f50051b2.jpg
-  - good: _goods/all/cloth/t-shirts/m-mayka/printdirect.md
+  - good: _goods/all/clothes/men/tank/pd-man-tank.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488189
     img: https://cdn99.printdirect.ru/cache/product/bd/c7/9488189/tov/all/480z480_front_337_0_0_0_4ac0c4003f15aaee2fa46b7a8819.jpg
-  - good: _goods/all/cloth/t-shirts/m-mayka/printdirect.md
+  - good: _goods/all/clothes/men/tank/pd-man-tank.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9488190
     img: https://cdn99.printdirect.ru/cache/product/c8/39/9488190/tov/all/480z480_front_1356_0_0_0_d4ca9baf10a728aee252c213defa.jpg
   - good: _goods/all/clothes/men/polo/pd-man-polo.md

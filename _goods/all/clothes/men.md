@@ -3,6 +3,7 @@ title: Мужская одежда
 short: Муж.
 children:
   - _goods/all/clothes/men/t-shirt.md
+  - _goods/all/clothes/men/tank.md
   - _goods/all/clothes/men/polo.md
   - _goods/all/clothes/men/longsleeve.md
   - _goods/all/clothes/men/pajamas.md
