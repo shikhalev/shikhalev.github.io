@@ -1,0 +1,76 @@
+design: _designs/merch/photo/insecta/20260522-machaon.md
+date: 2026-06-17
+shop: fun
+items:
+  - good: _goods/type/office/diary/fn-diary.md
+    url: https://fun.ru/diary/mahaon_na_oduvanchike2
+    img: https://fun.ru/upload/22/13/221309698c.jpg
+  - good: _goods/type/home/dish/bottle/plastic/fn-bottle-speedy.md
+    url: https://fun.ru/bottle-speedy/mahaon_na_oduvanchike2
+    img: https://fun.ru/upload/df/87/df874ce451.jpg
+  - good: _goods/type/accessories/bag/shopper/fn-bags.md
+    url: https://fun.ru/bags/mahaon_na_oduvanchike1
+    img: https://fun.ru/upload/f2/51/f25126cd7e.jpg
+  - good: _goods/type/clothes/women/sweatshirt/fn-women-sweatshirts.md
+    url: https://fun.ru/women-sweatshirts/mahaon_na_oduvanchike1
+    img: https://fun.ru/upload/52/1a/521a7fff7e.jpg
+  - good: _goods/type/clothes/men/sweatshirt/fn-men-sweatshirts.md
+    url: https://fun.ru/men-sweatshirts/mahaon_na_oduvanchike1
+    img: https://fun.ru/upload/2d/7f/2d7f0be89b.jpg
+  - good: _goods/type/clothes/kids/t-shirt/fn-kids-tshirts-oversize.md
+    url: https://fun.ru/kids-tshirts-oversize/mahaon_na_oduvanchike1
+    img: https://fun.ru/upload/73/72/73728edf1b.jpg
+  - good: _goods/type/clothes/kids/t-shirt/fn-kids-tshirts.md
+    url: https://fun.ru/kids-tshirts/mahaon_na_oduvanchike1
+    img: https://fun.ru/upload/83/e1/83e1c0eae5.jpg
+  - good: _goods/type/clothes/unisex/t-shirt/fn-tshirts-oversize.md
+    url: https://fun.ru/tshirts-oversize/mahaon_na_oduvanchike1
+    img: https://fun.ru/upload/f2/a0/f2a0cf60ac.jpg
+  - good: _goods/type/clothes/women/t-shirt/fn-women-tshirts.md
+    url: https://fun.ru/women-tshirts/mahaon_na_oduvanchike1
+    img: https://fun.ru/upload/be/69/be69770b33.jpg
+  - good: _goods/type/clothes/men/t-shirt/fn-men-tshirts.md
+    url: https://fun.ru/men-tshirts/mahaon_na_oduvanchike1
+    img: https://fun.ru/upload/df/e3/dfe33071c4.jpg
+  - good: _goods/type/accessories/bag/shopper/fn-bags.md
+    url: https://fun.ru/bags/mahaon_na_oduvanchike
+    img: https://fun.ru/upload/3e/35/3e356195e6.jpg
+  - good: _goods/type/clothes/women/sweatshirt/fn-women-sweatshirts.md
+    url: https://fun.ru/women-sweatshirts/mahaon_na_oduvanchike
+    img: https://fun.ru/upload/d0/fc/d0fc7e0c2c.jpg
+  - good: _goods/type/clothes/men/sweatshirt/fn-men-sweatshirts.md
+    url: https://fun.ru/men-sweatshirts/mahaon_na_oduvanchike
+    img: https://fun.ru/upload/9c/33/9c33710d95.jpg
+  - good: _goods/type/clothes/kids/t-shirt/fn-kids-tshirts-oversize.md
+    url: https://fun.ru/kids-tshirts-oversize/mahaon_na_oduvanchike
+    img: https://fun.ru/upload/80/0e/800e273afd.jpg
+  - good: _goods/type/clothes/kids/t-shirt/fn-kids-tshirts.md
+    url: https://fun.ru/kids-tshirts/mahaon_na_oduvanchike
+    img: https://fun.ru/upload/2c/ef/2cefc08a53.jpg
+  - good: _goods/type/clothes/unisex/t-shirt/fn-tshirts-oversize.md
+    url: https://fun.ru/tshirts-oversize/mahaon_na_oduvanchike
+    img: https://fun.ru/upload/52/8f/528f8632ab.jpg
+  - good: _goods/type/clothes/women/t-shirt/fn-women-tshirts.md
+    url: https://fun.ru/women-tshirts/mahaon_na_oduvanchike
+    img: https://fun.ru/upload/ff/c3/ffc3e713fb.jpg
+  - good: _goods/type/clothes/men/t-shirt/fn-men-tshirts.md
+    url: https://fun.ru/men-tshirts/mahaon_na_oduvanchike
+    img: https://fun.ru/upload/04/2a/042a5f22ad.jpg
+  - good: _goods/type/home/dish/thermos/fn-thermos.md
+    url: https://fun.ru/thermos/mahaon_na_oduvanchike3
+    img: https://fun.ru/upload/d7/32/d73244a882.jpg
+  - good: _goods/type/home/dish/bottle/plastic/fn-bottle.md
+    url: https://fun.ru/bottle/mahaon_na_oduvanchike3
+    img: https://fun.ru/upload/88/2a/882a0de60b.jpg
+  - good: _goods/type/office/diary/fn-diary.md
+    url: https://fun.ru/diary/mahaon_na_oduvanchike3
+    img: https://fun.ru/upload/7f/46/7f4681fe59.jpg
+  - good: _goods/type/home/dish/bottle/plastic/fn-bottle-speedy.md
+    url: https://fun.ru/bottle-speedy/mahaon_na_oduvanchike3
+    img: https://fun.ru/upload/d4/87/d487ca24eb.jpg
+  - good: _goods/type/home/dish/thermos/fn-thermos.md
+    url: https://fun.ru/thermos/mahaon_na_oduvanchike2
+    img: https://fun.ru/upload/23/e3/23e32719a0.jpg
+  - good: _goods/type/home/dish/bottle/plastic/fn-bottle.md
+    url: https://fun.ru/bottle/mahaon_na_oduvanchike2
+    img: https://fun.ru/upload/2c/d1/2cd1253f16.jpg
