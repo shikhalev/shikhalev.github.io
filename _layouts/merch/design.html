@@ -24,27 +24,7 @@ stylesheet: goods
 <h2 id="goods">Товары (<span id="title-counter">{{- sorted_goods.size -}}</span>)</h2>
 <p class="italic">Новые сверху (по дате публикации на этом сайте, а не по дате публикации на принтшопе).</p>
 <div id="filter-container"></div>
-<div class="goods-min-grid">
-  {% for product in sorted_goods %}
-    {% assign product_design = site.designs | where: 'path', product.design | first %}
-    {% if product_design == nil %}{% console_log product.design %}{% link ololo_error.md %}{% endif %}
-    {% assign product_title = product_design.title %}
-    {% assign product_good = site.goods | where: 'path', product.good | first %}
-    {% if product_good == nil %}{% console_log product.good %}{% link ololo_error.md %}{% endif %}
-    {% assign product_type = product_good.title %}
-    <div class="product-min-card" data-kind="{{ product.good }}" data-design="{{ product.design }}">
-    <a href="{{ product.url }}">
-      {% if product.img %}
-        <img src="{{ product.img }}" alt="{{ product_title | escape }}" loading="lazy">
-      {% else %}
-        <div class="no-photo">Нет фото</div>
-      {% endif %}
-    </a>
-    <span class="product-kind"><a href="{{ product_good.url | relative_url }}">{{ product_type }}</a></span>
-    <span class="product-design"><a href="{{ product_design.url | relative_url }}">{{ product_title }}</a></span>
-    </div>
-  {% endfor %}
-</div>
+  {% include goods/products.liquid sorted_goods=sorted_goods %}
 {% endif %}
 
 <script>

@@ -91,11 +91,47 @@ class DataMaker
     end
   end
 
+  def add_kind_design design
+    result = {
+      'count' => 1,
+      'path' => design.relative_path,
+      'title' => design.data['title'],
+      'children' => []
+    }
+    path = design.relative_path
+    if @designs[path]
+      @designs[path]['count'] += 1
+      return @designs[path]
+    end
+    parent_designs = site.collections['designs'].docs.select { |d| d.data['children']&.include?(path) }
+    if parent_designs.empty?
+      result['root'] = true
+    else
+      parents = parent_designs.map { |p| add_kind_design p }
+      parents.each do |p|
+        p['children'] << path
+        p['children'].uniq!
+      end
+    end
+    @designs[path] = result
+    if result['root']
+      @designs['@root'] = result
+    end
+    return result
+  end
+
   def apply_for_kind
     @goods = []
+    @designs = {}
     add_kind @page
     @page.data['goods'] = @goods
-    #
+    @goods.each do |good|
+      design_path = good['design']
+      design = site.collections['designs'].docs.find { |d| d.relative_path == design_path }
+      raise RuntimeError, "Design not found: #{ design_path.inspect }" unless design
+      add_kind_design design
+    end
+    @page.data['designs'] = @designs
   end
 
 end

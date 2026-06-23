@@ -21,26 +21,13 @@ stylesheet: goods
 {%- endif -%}
 {%- assign sorted_goods = sampled | sort: 'date' | reverse -%}
 {%- if sorted_goods.size > 0 -%}
-<h2 id="goods">Товары ({{ sorted_goods.size }})</h2>
+<h2 id="goods">Товары (<span id="title-counter">{{- sorted_goods.size -}}</span>)</h2>
 <p class="italic">Новые сверху (по дате публикации на этом сайте, а не по дате публикации на принтшопе).</p>
-<div class="goods-min-grid">
-  {%- for product in sorted_goods -%}
-    {%- assign product_design = site.designs | where: 'path', product.design | first -%}
-    {%- assign product_title = product_design.title -%}
-    {%- assign product_good = site.goods | where: 'path', product.good | first -%}
-    {%- assign product_type = product_good.title -%}
-    {%- assign product_shop = product_good.shop -%}
-    <div class="product-min-card">
-    <a href="{{ product.url }}">
-      {%- if product.img -%}
-        <img src="{{ product.img }}" alt="{{ product_title | escape }}" loading="lazy">
-      {%- else -%}
-        <div class="no-photo">Нет фото</div>
-      {%- endif -%}
-    </a>
-    <span class="product-kind {{ product_shop }}"><a href="{{ product_good.url | relative_url }}">{{ product_type }}</a></span>
-    <span class="product-design"><a href="{{ product_design.url | relative_url }}">{{ product_title }}</a></span>
-    </div>
-  {%- endfor -%}
-</div>
+<div id="filter-container"></div>
+  {% include goods/products.liquid sorted_goods=sorted_goods %}
 {%- endif -%}
+
+<script>
+  window.goodDesigns = {{ page.designs | jsonify }};
+</script>
+<script src="/assets/js/goods.js"></script>
