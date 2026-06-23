@@ -6,5 +6,6 @@ children:
   - _goods/type/office/paper.md
   - _goods/type/office/diary.md
   - _goods/type/office/vm-postcard_a6.md
+links:
   - _goods/type/accessories/bag/vm-laptop_bags.md
 ---
