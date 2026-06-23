@@ -4,29 +4,16 @@ stylesheet: goods
 ---
 
 {% if page.children and page.children.size > 0 %}
-<h2 id="children" style="visibility: hidden;height: 0px;">Подкатегории</h2>
+<h2 id="children">Подкатегории</h2>
 <div class="subcategories" style="columns: unset;">
-<ul>
-{% for child_path in page.children %}
-{% if child_path == 'sep' or child_path == 'separator' %}
-<hr>
-{% else %}
-{% assign xchild = site.designs | where: 'path', child_path | first %}
-{% if xchild %}
-{%- assign filtered_goods = nil -%}
-{%- include goods/filter_by_design.liquid design=xchild -%}
-<li><a href="{{ xchild.url | relative_url }}">{{ xchild.title }} ({{- filtered_goods.size -}})</a></li>
-{% endif %}
-{% endif %}
-{% endfor %}
-</ul>
+  {%- include goods/subdesigns.liquid design=page skip_empty=true depth=3 start=true -%}
 </div>
 <hr>
 {% endif %}
 
 {{ content }}
 
-{%- include goods/filter_by_design.liquid -%}
+{%- assign filtered_goods = page.goods -%}
 {% if filtered_goods.size > 1 %}
 {% assign sampled = filtered_goods | sample: filtered_goods.size %}
 {% else %}
@@ -34,8 +21,9 @@ stylesheet: goods
 {% endif %}
 {%- assign sorted_goods = sampled | sort: 'date' | reverse -%}
 {% if sorted_goods.size > 0 %}
-<h2 id="goods">Товары ({{ sorted_goods.size }})</h2>
+<h2 id="goods">Товары (<span id="title-counter">{{- sorted_goods.size -}}</span>)</h2>
 <p class="italic">Новые сверху (по дате публикации на этом сайте, а не по дате публикации на принтшопе).</p>
+<div id="filter-container"></div>
 <div class="goods-min-grid">
   {% for product in sorted_goods %}
     {% assign product_design = site.designs | where: 'path', product.design | first %}
@@ -44,7 +32,7 @@ stylesheet: goods
     {% assign product_good = site.goods | where: 'path', product.good | first %}
     {% if product_good == nil %}{% console_log product.good %}{% link ololo_error.md %}{% endif %}
     {% assign product_type = product_good.title %}
-    <div class="product-min-card">
+    <div class="product-min-card" data-kind="{{ product.good }}" data-design="{{ product.design }}">
     <a href="{{ product.url }}">
       {% if product.img %}
         <img src="{{ product.img }}" alt="{{ product_title | escape }}" loading="lazy">
@@ -59,4 +47,7 @@ stylesheet: goods
 </div>
 {% endif %}
 
-<script src="/js/goods.js"></script>
+<script>
+  window.goodKinds = {{ page.kinds | jsonify }};
+</script>
+<script src="/assets/js/goods.js"></script>

@@ -1,0 +1,23 @@
+{%- if include.design.children and include.design.children.size > 0 and include.depth > 0 -%}
+  <ul>
+  {%- for child_path in include.design.children -%}
+    {%- if child_path == nil or child_path == '' or child_path == 'separator' -%}
+      <hr>
+    {%- else -%}
+      {%- assign child_design = site.designs | where: 'path', child_path | first -%}
+      {%- assign child_url = child_design.url -%}
+      {%- assign child_title = child_design.title -%}
+      {%- assign filtered_goods = child_design.goods -%}
+      {%- unless include.skip_empty and filtered_goods.size == 0 -%}
+      <li{% if include.start %} class="start"{% endif %}>
+        <p><a href="{{ child_url }}">{{ child_title }} ({{ filtered_goods.size }})</a></p>
+        {%- unless child_design.no_expand -%}
+          {%- assign subdepth = include.depth | minus: 1 -%}
+          {%- include goods/subdesigns.liquid design=child_design skip_empty=include.skip_empty depth=subdepth -%}
+        {%- endunless -%}
+      </li>
+      {%- endunless -%}
+    {%- endif -%}
+  {%- endfor -%}
+  </ul>
+{%- endif -%}

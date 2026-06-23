@@ -132,3 +132,17 @@ li.start > p {
   font-size: 112%;
   margin-top: 12px;
 }
+
+select {
+  padding: 10px;
+  margin: 10px;
+  background-color: rgb(90, 146, 196);
+  color: white;
+  border-radius: 10px;
+  border-color: silver;
+  border: none;
+  font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  text-align: center;
+}

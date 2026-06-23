@@ -21,8 +21,20 @@ class DataMaker
   end
 
   def add_design_kind kind
+    kind_title = case kind.data['shop']
+    when 'printdirect'
+      kind.data['title'] + ' • [pd]'
+    when 'vsemayki'
+      kind.data['title'] + ' • [vm]'
+    when 'fun'
+      kind.data['title'] + ' • [fn]'
+    else
+      kind.data['title']
+    end
     result = {
       'count' => 1,
+      'path' => kind.relative_path,
+      'title' => kind_title,
       'children' => []
     }
     path = kind.relative_path
@@ -41,6 +53,9 @@ class DataMaker
       end
     end
     @kinds[path] = result
+    if result['root']
+      @kinds['@root'] = result
+    end
     return result
   end
 
