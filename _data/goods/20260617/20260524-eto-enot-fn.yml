@@ -1,0 +1,34 @@
+design: _designs/merch/jokes/20260524-eto-enot.md
+date: 2026-06-17
+shop: fun
+items:
+  - good: _goods/type/home/dish/thermos/fn-thermos.md
+    url: https://fun.ru/thermos/eto_enot
+    img: https://fun.ru/upload/ed/be/edbeede0ce.jpg
+  - good: _goods/type/home/dish/bottle/plastic/fn-bottle.md
+    url: https://fun.ru/bottle/eto_enot/color-grey
+    img: https://fun.ru/upload/10/b5/10b5d65d80.jpg
+  - good: _goods/type/office/diary/fn-diary.md
+    url: https://fun.ru/diary/eto_enot
+    img: https://fun.ru/upload/01/ed/01ed6bdf4a.jpg
+  - good: _goods/type/accessories/bag/shopper/fn-bags.md
+    url: https://fun.ru/bags/eto_enot
+    img: https://fun.ru/upload/0c/77/0c7799e591.jpg
+  - good: _goods/type/home/dish/bottle/plastic/fn-bottle-speedy.md
+    url: https://fun.ru/bottle-speedy/eto_enot
+    img: https://fun.ru/upload/08/d4/08d4702a60.jpg
+  - good: _goods/type/clothes/kids/t-shirt/fn-kids-tshirts-oversize.md
+    url: https://fun.ru/kids-tshirts-oversize/eto_enot
+    img: https://fun.ru/upload/ef/51/ef51d60eb6.jpg
+  - good: _goods/type/clothes/kids/t-shirt/fn-kids-tshirts.md
+    url: https://fun.ru/kids-tshirts/eto_enot/color-white
+    img: https://fun.ru/upload/8e/18/8e1852d924.jpg
+  - good: _goods/type/clothes/unisex/t-shirt/fn-tshirts-oversize.md
+    url: https://fun.ru/tshirts-oversize/eto_enot
+    img: https://fun.ru/upload/38/bf/38bf6e910e.jpg
+  - good: _goods/type/clothes/women/t-shirt/fn-women-tshirts.md
+    url: https://fun.ru/women-tshirts/eto_enot/color-white
+    img: https://fun.ru/upload/e9/1e/e91ebb4941.jpg
+  - good: _goods/type/clothes/men/t-shirt/fn-men-tshirts.md
+    url: https://fun.ru/men-tshirts/eto_enot
+    img: https://fun.ru/upload/3b/77/3b779f3349.jpg

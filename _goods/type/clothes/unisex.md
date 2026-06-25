@@ -6,5 +6,7 @@ children:
   - _goods/type/clothes/unisex/sweatshirt.md
   - _goods/type/clothes/unisex/hoodie.md
   - _goods/type/clothes/unisex/windbreaker.md
+  - _goods/type/clothes/unisex/vm-raincoats_fullprint.md
+  - _goods/type/clothes/unisex/hat.md
   - _goods/type/clothes/unisex/vm-ski_cape.md
 ---

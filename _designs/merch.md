@@ -7,3 +7,7 @@ children:
   - _designs/merch/photo.md
   - _designs/merch/jokes.md
 ---
+
+См. также [**каталог по типам товаров**][cat].
+
+[cat]: {% link _goods/type.md %}

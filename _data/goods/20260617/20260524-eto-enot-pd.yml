@@ -1,0 +1,76 @@
+design: _designs/merch/jokes/20260524-eto-enot.md
+date: 2026-06-17
+shop: printdirect
+items:
+  - good: _goods/type/home/dish/flask/pd-flask.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487426
+    img: https://cdn99.printdirect.ru/cache/product/6f/75/9487426/tov/all/480z480_front_3655_0_0_0_8634303af8227784a8cd3c6b90aa.jpg
+  - good: _goods/type/clothes/men/t-shirt/pd-man-tshirt.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487432
+    img: https://cdn99.printdirect.ru/cache/product/68/88/9487432/tov/all/480z480_front_1282_0_0_0_27b65069555c480f9b2de1975e64.jpg
+  - good: _goods/type/clothes/men/t-shirt/pd-man-tshirt-sport.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487440
+    img: https://cdn99.printdirect.ru/cache/product/e5/ef/9487440/tov/all/480z480_front_1922_0_0_0_2a5203fadb7d1a5a9e2b97afcdba.jpg
+  - good: _goods/type/clothes/men/polo/pd-man-polo.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487438
+    img: https://cdn99.printdirect.ru/cache/product/a8/74/9487438/tov/all/480z480_front_3069_0_0_0_3172b56354566c88c3803d6b9ffb.jpg
+  - good: _goods/type/clothes/unisex/t-shirt/pd-t-shirt-oversize.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487436
+    img: https://cdn99.printdirect.ru/cache/product/38/dc/9487436/tov/all/480z480_front_3153_0_0_0_b1afff65ffdad3e569042d8ba09b.jpg
+  - good: _goods/type/clothes/women/t-shirt/pd-woman-tshirt.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487441
+    img: https://cdn99.printdirect.ru/cache/product/e9/ea/9487441/tov/all/480z480_front_1294_0_0_0_1573a87fa0a45963305dccb3a12b.jpg
+  - good: _goods/type/clothes/women/t-shirt/pd-woman-tshirt-sport.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487442
+    img: https://cdn99.printdirect.ru/cache/product/18/73/9487442/tov/all/480z480_front_2220_0_0_0_b8103c8e52671454a0f2317f6966.jpg
+  - good: _goods/type/home/dish/mug/metal/pd-mug-thermo.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487425
+    img: https://cdn99.printdirect.ru/cache/product/9f/1b/9487425/tov/all/480z480_front_173_0_0_0_9b14236acd6253eaeae5f72a471d.jpg
+  - good: _goods/type/home/dish/mug/glass/beer/pd-beer-mug.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487418
+    img: https://cdn99.printdirect.ru/cache/product/17/6c/9487418/tov/all/480z480_front_3410_0_0_0_dca0035a0bb9db97ec4d3e6ddbe7.jpg
+  - good: _goods/type/home/dish/pd-glass.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487419
+    img: https://cdn99.printdirect.ru/cache/product/a3/af/9487419/tov/all/480z480_front_3408_0_0_0_dc557dca32966bf5e1f3e9bcacaf.jpg
+  - good: _goods/type/home/dish/mug/glass/matte/pg-matte-glass.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487421
+    img: https://cdn99.printdirect.ru/cache/product/69/8c/9487421/tov/all/480z480_front_156_0_0_0_c7c690ba2a636569ef133a82fa45.jpg
+  - good: _goods/type/home/dish/other/pd-jar.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487422
+    img: https://cdn99.printdirect.ru/cache/product/76/c5/9487422/tov/all/480z480_front_3657_0_0_0_1b4b86862c584395a061b8622cf5.jpg
+  - good: _goods/type/home/dish/bottle/metal/carabine/pd-carabine-500.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487427
+    img: https://cdn99.printdirect.ru/cache/product/a8/79/9487427/tov/all/480z480_front_1802_0_0_0_f3f956f016a8eb6715088e3bc3b4.jpg
+  - good: _goods/type/accessories/bag/shopper/pd-shopper-canvas.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487430
+    img: https://cdn99.printdirect.ru/cache/product/6f/d8/9487430/tov/all/480z480_front_52_0_0_0_abffeb1f239a326d556769d77eeb.jpg
+  - good: _goods/type/home/magnet/acryl/pd-magnet-65x65.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487766
+    img: https://cdn99.printdirect.ru/cache/product/38/ef/9487766/tov/all/480z480_front_33_0_0_0_5561ea6ff26925a3b0515082335e.jpg
+  - good: _goods/type/home/dish/mug/ceramics/chameleon/pd-chameleon.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487429
+    img: https://cdn99.printdirect.ru/cache/product/60/6a/9487429/tov/all/480z480_front_709_0_0_0_6f6ab201a6da4e903880726f6a52.jpg
+  - good: _goods/type/home/dish/mug/ceramics/bicolor/pd-bicolor.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487429&override_item=63&use_blank_item=0
+    img: https://cdn99.printdirect.ru/cache/product/60/6a/9487429/tov/all/480z480_front_142_63_0_0_6f6ab201a6da4e903880726f6a52.jpg
+  - good: _goods/type/home/dish/mug/ceramics/classic/pd-classic.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487429&override_item=269&use_blank_item=0
+    img: https://cdn99.printdirect.ru/cache/product/60/6a/9487429/tov/all/480z480_front_663_269_0_0_6f6ab201a6da4e903880726f6a52.jpg
+  - good: _goods/type/home/dish/bottle/metal/carabine/pd-carabine-400.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487429&override_item=1441&use_blank_item=0
+    img: https://cdn99.printdirect.ru/cache/product/60/6a/9487429/tov/all/480z480_front_3482_1441_0_0_6f6ab201a6da4e903880726f6a52.jpg
+  - good: _goods/type/home/dish/mug/thermo/pd-tumbler.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487429&override_item=1481&use_blank_item=0
+    img: https://cdn99.printdirect.ru/cache/product/60/6a/9487429/tov/all/480z480_front_3566_1481_0_0_6f6ab201a6da4e903880726f6a52.jpg
+  - good: _goods/type/home/dish/mug/ceramics/pd-colored.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487429&override_item=1495&use_blank_item=0
+    img: https://cdn99.printdirect.ru/cache/product/60/6a/9487429/tov/all/480z480_front_3607_1495_0_0_6f6ab201a6da4e903880726f6a52.jpg
+  - good: _goods/type/home/dish/mug/ceramics/pd-big.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487429&override_item=343&use_blank_item=0
+    img: https://cdn99.printdirect.ru/cache/product/60/6a/9487429/tov/all/480z480_front_787_343_0_0_6f6ab201a6da4e903880726f6a52.jpg
+  - good: _goods/type/home/dish/mug/metal/pd-mug-thermo.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487429&override_item=74&use_blank_item=0
+    img: https://cdn99.printdirect.ru/cache/product/60/6a/9487429/tov/all/480z480_front_168_74_0_0_6f6ab201a6da4e903880726f6a52.jpg
+  - good: _goods/type/home/dish/mug/metal/pd-200.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487424
+    img: https://cdn99.printdirect.ru/cache/product/c8/11/9487424/tov/all/480z480_front_1438_0_0_0_afc50a188edbbd22ddcb6a9e0be7.jpg

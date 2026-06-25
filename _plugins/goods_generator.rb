@@ -64,7 +64,7 @@ class DataMaker
     @kinds = {}
     add_design @page
     @page.data['goods'] = @goods
-    @goods.each do |good|
+    @goods.sort_by { it['good'] }.each do |good|
       kind_path = good['good']
       kind = site.collections['goods'].docs.find { |k| k.relative_path == kind_path }
       raise RuntimeError, "Good not found: #{ kind_path.inspect }" unless kind
@@ -125,7 +125,7 @@ class DataMaker
     @designs = {}
     add_kind @page
     @page.data['goods'] = @goods
-    @goods.each do |good|
+    @goods.sort_by { it['design'] }.each do |good|
       design_path = good['design']
       design = site.collections['designs'].docs.find { |d| d.relative_path == design_path }
       raise RuntimeError, "Design not found: #{ design_path.inspect }" unless design

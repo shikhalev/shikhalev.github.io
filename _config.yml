@@ -176,7 +176,7 @@ collections:
     permalink: /:path/
   goods:
     output: true
-    permalink: /merch/goods/:path/
+    permalink: /merch/:path/
   src:
     output: false
 

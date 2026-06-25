@@ -11,9 +11,13 @@ children:
   - _goods/type/clothes/women/sweatshirt.md
   - _goods/type/clothes/women/hoodie.md
   - _goods/type/clothes/women/suit.md
+  - _goods/type/clothes/women/vm-woman_bomber.md
+  - _goods/type/clothes/women/jacket.md
   - _goods/type/clothes/women/bottom.md
+  - _goods/type/clothes/women/vm-swimsuit_body.md
   - _goods/type/clothes/women/hat.md
 links:
   - _goods/type/clothes/unisex/windbreaker.md
+  - _goods/type/clothes/unisex/vm-raincoats_fullprint.md
   - _goods/type/clothes/unisex/vm-ski_cape.md
 ---
