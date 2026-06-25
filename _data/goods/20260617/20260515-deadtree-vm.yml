@@ -134,3 +134,111 @@ items:
   - good: _goods/type/clothes/women/jacket/vm-woman_jacket.md
     url: https://shikhalev.vsemaykishop.ru/article/woman_jacket/4096463?color=black
     img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_1000_woman_jacket_back_black_700.jpg
+  - good: _goods/type/clothes/women/tank/vm-woman_tank_top.md
+    url: https://shikhalev.vsemaykishop.ru/article/woman_tank_top/4096463?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_1000_woman_tank_top_front_white_700.jpg
+  - good: _goods/type/clothes/women/t-shirt/vm-woman_tshirt_top.md
+    url: https://shikhalev.vsemaykishop.ru/article/woman_tshirt_top/4096463?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_1020_woman_tshirt_top_front_white_700.jpg
+  - good: _goods/type/clothes/unisex/hat/vm-sleep_mask.md
+    url: https://shikhalev.vsemaykishop.ru/article/sleep_mask/4096463?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_1000_sleep_mask_front_white_700.jpg
+  - good: _goods/type/clothes/women/jacket/vm-woman_winter_jacket.md
+    url: https://shikhalev.vsemaykishop.ru/article/woman_winter_jacket/4096463?size=oversizeXS&color=lightgray
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_1000_woman_winter_jacket_front_lightgray_700.jpg
+  - good: _goods/type/clothes/women/suit/vm-womens_suits_fullprint.md
+    url: https://shikhalev.vsemaykishop.ru/article/womens_suits_fullprint/4096463?size=xxs_42&color=blue
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_1000_womens_suits_fullprint_front_blue_700.jpg
+  - good: _goods/type/clothes/women/suit/vm-woman_suit_with_hoodiefull.md
+    url: https://shikhalev.vsemaykishop.ru/article/woman_suit_with_hoodiefull/4096463?color=melange
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_1001_woman_suit_with_hoodiefull_front_melange_700.jpg
+  - good: _goods/type/clothes/women/vm-womens_vests.md
+    url: https://shikhalev.vsemaykishop.ru/article/womens_vests/4096463?color=lightgray
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_1000_womens_vests_front_lightgray_700.jpg
+  - good: _goods/type/clothes/women/dress/vm-womens_dresses_t_shirts_fullprint.md
+    url: https://shikhalev.vsemaykishop.ru/article/womens_dresses_t_shirts_fullprint/4096463?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_1000_womens_dresses_t_shirts_fullprint_front_white_700.jpg
+  - good: _goods/type/clothes/women/windbreaker/vm-womens_windbreakers_fullprint.md
+    url: https://shikhalev.vsemaykishop.ru/article/womens_windbreakers_fullprint/4096463?size=xs_42-44&color=black
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_1000_womens_windbreakers_fullprint_front_black_700.jpg
+  - good: _goods/type/clothes/women/bottom/vm-cycling_shorts_fullprint.md
+    url: https://shikhalev.vsemaykishop.ru/article/cycling_shorts_fullprint/4096463?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_1000_cycling_shorts_fullprint_front_white_700.jpg
+  - good: _goods/type/clothes/women/t-shirt/vm-womens_t_shirts_slim_fullprint.md
+    url: https://shikhalev.vsemaykishop.ru/article/womens_t_shirts_slim_fullprint/4096463?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_1000_womens_t_shirts_slim_fullprint_front_white_700.jpg
+  - good: _goods/type/clothes/women/longsleeve/vm-womens_rashgards_fullprint.md
+    url: https://shikhalev.vsemaykishop.ru/article/womens_rashgards_fullprint/4096463?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_1000_womens_rashgards_fullprint_front_white_700.jpg
+  - good: _goods/type/clothes/unisex/hat/vm-headbands_fullprint.md
+    url: https://shikhalev.vsemaykishop.ru/article/headbands_fullprint/4096463?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_1000_headbands_fullprint_front_white_700.jpg
+  - good: _goods/type/clothes/women/t-shirt/vm-womens_t_shirts_oversize_3d.md
+    url: https://shikhalev.vsemaykishop.ru/article/womens_t_shirts_oversize_3d/4096463?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_1000_womens_t_shirts_oversize_3d_front_white_700.jpg
+  - good: _goods/type/clothes/women/vm-women_shirts_3d.md
+    url: https://shikhalev.vsemaykishop.ru/article/women_shirts_3d/4096463?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_1000_women_shirts_3d_front_white_700.jpg
+  - good: _goods/type/clothes/women/bottom/vm-woman_joggers_3d.md
+    url: https://shikhalev.vsemaykishop.ru/article/woman_joggers_3d/4096463?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_1001_woman_joggers_3d_front_white_700.jpg
+  - good: _goods/type/clothes/kids/t-shirt/vm-child_tshirt.md
+    url: https://shikhalev.vsemaykishop.ru/article/child_tshirt/4096463?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_90_child_tshirt_front_white_700.jpg
+  - good: _goods/type/clothes/kids/sweatshirt/vm-child_sweatshirt.md
+    url: https://shikhalev.vsemaykishop.ru/article/child_sweatshirt/4096463?color=melange
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_90_child_sweatshirt_front_melange_700.jpg
+  - good: _goods/type/clothes/kids/vm-child_bomber.md
+    url: https://shikhalev.vsemaykishop.ru/article/child_bomber/4096463?size=86sm&color=grey
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_20_child_bomber_front_grey_700.jpg
+  - good: _goods/type/clothes/kids/vm-child_windbreaker.md
+    url: https://shikhalev.vsemaykishop.ru/article/child_windbreaker/4096463?color=black
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_20_child_windbreaker_front_black_700.jpg
+  - good: _goods/type/clothes/kids/hoodie/vm-child_hoodie_full.md
+    url: https://shikhalev.vsemaykishop.ru/article/child_hoodie_full/4096463?size=86sm&color=melange
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_20_child_hoodie_full_front_melange_700.jpg
+  - good: _goods/type/clothes/kids/bottom/vm-child_trousers_full.md
+    url: https://shikhalev.vsemaykishop.ru/article/child_trousers_full/4096463?color=black
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_20_child_trousers_full_front_black_700.jpg
+  - good: _goods/type/clothes/kids/jacket/vm-child_jacket.md
+    url: https://shikhalev.vsemaykishop.ru/article/child_jacket/4096463?size=86sm&color=black
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_20_child_jacket_front_black_700.jpg
+  - good: _goods/type/clothes/kids/swim/vm-child_swimsuit.md
+    url: https://shikhalev.vsemaykishop.ru/article/child_swimsuit/4096463?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_30_child_swimsuit_front_white_700.jpg
+  - good: _goods/type/clothes/kids/bottom/vm-child_leggings.md
+    url: https://shikhalev.vsemaykishop.ru/article/child_leggings/4096463?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_20_child_leggings_front_white_700.jpg
+  - good: _goods/type/clothes/kids/vm-dress_child.md
+    url: https://shikhalev.vsemaykishop.ru/article/dress_child/4096463?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_20_dress_child_front_white_700.jpg
+  - good: _goods/type/clothes/kids/longsleeve/vm-child_longsleeve.md
+    url: https://shikhalev.vsemaykishop.ru/article/child_longsleeve/4096463?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_20_child_longsleeve_front_white_700.jpg
+  - good: _goods/type/clothes/kids/hoodie/vm-child_hoodie_jacket.md
+    url: https://shikhalev.vsemaykishop.ru/article/child_hoodie_jacket/4096463?color=melange
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_20_child_hoodie_jacket_front_melange_700.jpg
+  - good: _goods/type/clothes/kids/bottom/vm-child_shorts.md
+    url: https://shikhalev.vsemaykishop.ru/article/child_shorts/4096463?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_20_child_shorts_front_white_700.jpg
+  - good: _goods/type/clothes/kids/jacket/vm-boys_winter_jacket.md
+    url: https://shikhalev.vsemaykishop.ru/article/boys_winter_jacket/4096463?size=104sm&color=lightgray
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_20_boys_winter_jacket_front_lightgray_700.jpg
+  - good: _goods/type/clothes/kids/bottom/vm-child_trunks.md
+    url: https://shikhalev.vsemaykishop.ru/article/child_trunks/4096463?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_20_child_trunks_front_white_700.jpg
+  - good: _goods/type/clothes/kids/swim/vm-kids_swimsuit.md
+    url: https://shikhalev.vsemaykishop.ru/article/kids_swimsuit/4096463?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_10_kids_swimsuit_front_white_700.jpg
+  - good: _goods/type/clothes/kids/suit/vm-childrens_suits_with_hoodie_fullprint.md
+    url: https://shikhalev.vsemaykishop.ru/article/childrens_suits_with_hoodie_fullprint/4096463?color=melange
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_20_childrens_suits_with_hoodie_fullprint_front_melange_700.jpg
+  - good: _goods/type/clothes/kids/suit/vm-childrens_suits_fullprint.md
+    url: https://shikhalev.vsemaykishop.ru/article/childrens_suits_fullprint/4096463?size=86sm&color=black
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_30_childrens_suits_fullprint_front_black_700.jpg
+  - good: _goods/type/clothes/kids/vm-childrens_vests.md
+    url: https://shikhalev.vsemaykishop.ru/article/childrens_vests/4096463?color=lightgray
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_20_childrens_vests_front_lightgray_700.jpg
+  - good: _goods/type/clothes/kids/suit/vm-childrens_suits_shorts_3d.md
+    url: https://shikhalev.vsemaykishop.ru/article/childrens_suits_shorts_3d/4096463?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4096/4096463/previews/people_20_childrens_suits_shorts_3d_front_white_700.jpg

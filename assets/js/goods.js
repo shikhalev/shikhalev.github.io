@@ -1,8 +1,11 @@
+console.log({kinds: window.goodKinds});
 document.addEventListener('DOMContentLoaded', () => {
   if (window.goodKinds) {
     const container = document.getElementById('filter-container');
+    console.log({container: container});
     if (container) {
       const root = window.goodKinds['@root'];
+      console.log({root: root, kinds: window.goodKinds});
       const fillData = function (node) {
         node.valid = [];
         node.valid.push(node.path);
@@ -84,10 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  console.log({designs: window.goodDesigns});
   if (window.goodDesigns) {
     const container = document.getElementById('filter-container');
-    console.log({container:container});
     if (container) {
       const root = window.goodDesigns['@root'];
       const fillData = function (node) {
