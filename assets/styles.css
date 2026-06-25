@@ -280,7 +280,7 @@
   src: url("/assets/fa/webfonts/fa-regular-400.eot");
   src: url("/assets/fa/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("/assets/fa/webfonts/fa-regular-400.woff2") format("woff2"), url("/assets/fa/webfonts/fa-regular-400.woff") format("woff"), url("/assets/fa/webfonts/fa-regular-400.ttf") format("truetype"), url("/assets/fa/webfonts/fa-regular-400.svg#fontawesome") format("svg");
 }
-.far, .subcategories li.fa-icon-li-check-square::marker, .subcategories li.fa-icon-li-square::marker, .subcategories li.fa-icon-li-comment::marker, .subcategories li.fa-icon-li-comments::marker, .subcategories li.fa-icon-li-comment-dots::marker, .subcategories li.fa-icon-li-star::marker, .subcategories li.fa-icon-li-gem::marker, .subcategories li.fa-icon-li-keyboard::marker, .subcategories li.fa-icon-li-envelope::marker, .subcategories li.fa-icon-li-folder-open::marker, .subcategories li.fa-icon-li-calendar-alt::marker, .subcategories li.fa-icon-li-bookmark::marker, .subcategories li.fa-icon-li-file-alt::marker, .subcategories li.fa-icon-li-file::marker, .subcategories li.fa-icon-li-id-card::marker, .subcategories li.fa-icon-li-newspaper::marker, li.fa-icon-li-check-square::marker, .fa-icon-check-square::before, .fa-li-include-check-square, li.fa-icon-li-square::marker, .fa-icon-square::before, .fa-li-include-square, li.fa-icon-li-comment::marker, .fa-icon-comment::before, .fa-li-include-comment, li.fa-icon-li-comments::marker, .fa-icon-comments::before, .fa-li-include-comments, li.fa-icon-li-comment-dots::marker, .fa-icon-comment-dots::before, .fa-li-include-comment-dots, li.fa-icon-li-star::marker, .fa-icon-star::before, .fa-li-include-star, li.fa-icon-li-gem::marker, .fa-icon-gem::before, .fa-li-include-gem, li.fa-icon-li-keyboard::marker, .fa-icon-keyboard::before, .fa-li-include-keyboard, li.fa-icon-li-envelope::marker, .fa-icon-envelope::before, .fa-li-include-envelope, li.fa-icon-li-folder-open::marker, .subcategories li::marker, .fa-icon-folder-open::before, .fa-li-include-folder-open, li.fa-icon-li-calendar-alt::marker, .fa-icon-calendar-alt::before, .fa-li-include-calendar-alt, #toc.toc-calendar ul li::marker, li.fa-icon-li-bookmark::marker, .fa-icon-bookmark::before, .fa-li-include-bookmark, #toc.toc-post ul li::marker, #toc.toc-page ul li::marker, #toc.toc-stream ul li ul li ul li::marker, li.fa-icon-li-file-alt::marker, .fa-icon-file-alt::before, .fa-li-include-file-alt, #backs ul li.back-post::marker, #toc.toc-stream ul li ul li::marker, li.fa-icon-li-file::marker, .fa-icon-file::before, .fa-li-include-file, #backs ul li.back-page::marker, li.fa-icon-li-id-card::marker, .fa-icon-id-card::before, .fa-li-include-id-card, li.fa-icon-li-newspaper::marker, .fa-icon-newspaper::before, .fa-li-include-newspaper {
+.far, .subcategories li.fa-icon-li-credit-card::marker, .subcategories li.fa-icon-li-check-square::marker, .subcategories li.fa-icon-li-square::marker, .subcategories li.fa-icon-li-comment::marker, .subcategories li.fa-icon-li-comments::marker, .subcategories li.fa-icon-li-comment-dots::marker, .subcategories li.fa-icon-li-star::marker, .subcategories li.fa-icon-li-gem::marker, .subcategories li.fa-icon-li-keyboard::marker, .subcategories li.fa-icon-li-envelope::marker, .subcategories li.fa-icon-li-folder-open::marker, .subcategories li.fa-icon-li-calendar-alt::marker, .subcategories li.fa-icon-li-bookmark::marker, .subcategories li.fa-icon-li-file-alt::marker, .subcategories li.fa-icon-li-file::marker, .subcategories li.fa-icon-li-id-card::marker, .subcategories li.fa-icon-li-newspaper::marker, li.fa-icon-li-credit-card::marker, .fa-icon-credit-card::before, .fa-li-include-credit-card, li.fa-icon-li-check-square::marker, .fa-icon-check-square::before, .fa-li-include-check-square, li.fa-icon-li-square::marker, .fa-icon-square::before, .fa-li-include-square, li.fa-icon-li-comment::marker, .fa-icon-comment::before, .fa-li-include-comment, li.fa-icon-li-comments::marker, .fa-icon-comments::before, .fa-li-include-comments, li.fa-icon-li-comment-dots::marker, .fa-icon-comment-dots::before, .fa-li-include-comment-dots, li.fa-icon-li-star::marker, .fa-icon-star::before, .fa-li-include-star, li.fa-icon-li-gem::marker, .fa-icon-gem::before, .fa-li-include-gem, li.fa-icon-li-keyboard::marker, .fa-icon-keyboard::before, .fa-li-include-keyboard, li.fa-icon-li-envelope::marker, .fa-icon-envelope::before, .fa-li-include-envelope, li.fa-icon-li-folder-open::marker, .subcategories li::marker, .fa-icon-folder-open::before, .fa-li-include-folder-open, li.fa-icon-li-calendar-alt::marker, .fa-icon-calendar-alt::before, .fa-li-include-calendar-alt, #toc.toc-calendar ul li::marker, li.fa-icon-li-bookmark::marker, .fa-icon-bookmark::before, .fa-li-include-bookmark, #toc.toc-post ul li::marker, #toc.toc-page ul li::marker, #toc.toc-stream ul li ul li ul li::marker, li.fa-icon-li-file-alt::marker, .fa-icon-file-alt::before, .fa-li-include-file-alt, #backs ul li.back-post::marker, #toc.toc-stream ul li ul li::marker, li.fa-icon-li-file::marker, .fa-icon-file::before, .fa-li-include-file, #backs ul li.back-page::marker, li.fa-icon-li-id-card::marker, .fa-icon-id-card::before, .fa-li-include-id-card, li.fa-icon-li-newspaper::marker, .fa-icon-newspaper::before, .fa-li-include-newspaper {
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
 }
@@ -1156,6 +1156,18 @@ li.fa-icon-li-check-square::marker {
 
 li.fa-icon-li-youtube::marker {
   content: "\f167 ";
+}
+
+.fa-li-include-credit-card {
+  content: "\f09d ";
+}
+
+.fa-icon-credit-card::before {
+  content: "\f09d ";
+}
+
+li.fa-icon-li-credit-card::marker {
+  content: "\f09d ";
 }
 
 .fa-icon-youtube::before {
@@ -3896,6 +3908,9 @@ aside.tags a:hover {
 }
 .subcategories li.fa-icon-li-youtube::marker {
   content: "\f167 ";
+}
+.subcategories li.fa-icon-li-credit-card::marker {
+  content: "\f09d ";
 }
 .subcategories ul {
   padding-left: 35px;
