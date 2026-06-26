@@ -18,6 +18,7 @@ class DataMaker
         add_design child_design if child_design
       end
     end
+    @goods.shuffle!
   end
 
   def add_design_kind kind
@@ -63,7 +64,7 @@ class DataMaker
     @goods = []
     @kinds = {}
     add_design @page
-    @page.data['goods'] = @goods
+    @page.data['goods'] = @goods.sort_by { it['date'] }.reverse
     @goods.sort_by { it['good'] }.each do |good|
       kind_path = good['good']
       kind = site.collections['goods'].docs.find { |k| k.relative_path == kind_path }
@@ -89,6 +90,7 @@ class DataMaker
         add_kind link_kind if link_kind
       end
     end
+    @goods.shuffle!
   end
 
   def add_kind_design design
@@ -124,7 +126,7 @@ class DataMaker
     @goods = []
     @designs = {}
     add_kind @page
-    @page.data['goods'] = @goods
+    @page.data['goods'] = @goods.sort_by { it['date'] }.reverse
     @goods.sort_by { it['design'] }.each do |good|
       design_path = good['design']
       design = site.collections['designs'].docs.find { |d| d.relative_path == design_path }

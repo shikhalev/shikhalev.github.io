@@ -13,13 +13,7 @@ stylesheet: goods
 
 {{ content }}
 
-{%- assign filtered_goods = page.goods -%}
-{%- if filtered_goods.size > 1 -%}
-{%- assign sampled = filtered_goods | sample: filtered_goods.size -%}
-{%- else -%}
-{%- assign sampled = filtered_goods -%}
-{%- endif -%}
-{%- assign sorted_goods = sampled | sort: 'date' | reverse -%}
+{%- assign sorted_goods = page.goods -%}
 {%- if sorted_goods.size > 0 -%}
 <h2 id="goods">Товары (<span id="title-counter">{{- sorted_goods.size -}}</span>)</h2>
 <p class="italic">Новые сверху (по дате публикации на этом сайте, а не по дате публикации на принтшопе).</p>
