@@ -1,4 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed/life.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-06-25T20:47:27+00:00</updated><id>https://shikhalev.github.io/feed/life.xml</id><title type="html">Иван Шихалев | Life</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Tg: май 2026</title><link href="https://shikhalev.github.io/life/2026/06/channels-may.html" rel="alternate" type="text/html" title="Tg: май 2026" /><published>2026-06-11T00:00:00+00:00</published><updated>2026-06-11T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/06/channels-may</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/06/channels-may.html"><![CDATA[<p>В мае проблемы с ав­то­пос­тин­гом продолжились… Быстрое исправление не по­мог­ло, надо сидеть и разбираться.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed/life.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-06-26T08:15:56+00:00</updated><id>https://shikhalev.github.io/feed/life.xml</id><title type="html">Иван Шихалев | Life</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Каталог «мерча»</title><link href="https://shikhalev.github.io/life/2026/06/catalog.html" rel="alternate" type="text/html" title="Каталог «мерча»" /><published>2026-06-26T00:00:00+00:00</published><updated>2026-06-26T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/06/catalog</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/06/catalog.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:360px;border-radius:10px;"><a href="/merch/"><img src="/img/2026/06/26/catalog/screen-360.webp" class="__image" style="border-radius:10px;" alt="Скриншот нового раздела" title="Скриншот нового раздела" /></a></figure>
+
+<p>Хотел начать этот пост со слов «не прошло и двух недель», ан нет, <a href="/life/2026/06/merch.html">прошло</a>… Как быстро время летит…
+На самом деле бо́льшую часть внемени заняло не написание кода, а заполнение данных. Надо бы это дело заскриптовать,
+но пока вручную.</p>
+
+<p>Итак, <strong>каталог мерча</strong> доступен. Основное представление — <em><a href="/merch/">рубрикатор по картинкам с фильтром по видам товаров</a></em>,
+но можно переключиться на <em><a href="/merch/type/">рубрикатор по видам товаров с фильтром по категориям картинок</a></em>.</p>
+
+<p>Пока далеко не все выложенное на принтшопах я залил на сайт. Это из-за медленного ручного копипаста и огромного количества
+получившихся вариантов (пока не начал их собирать в одно место, я не очень даже и представлял это количество). Тем не менее
+уже есть чего посмотреть, да и через какое-то время я нагоню к актуальному состоянию. Сейчас, эти 875 товаров — это всего
+лишь три фотографии и одна картинка про енота.</p>
+
+<p>Понятно, что всё это очень черновой вариант, но переделывать буду, скорее всего, уже вместе с рефакторингом сайта,
+который давно назрел — например, добавить теги нормальным способом без переделки сайта не получится. Я не очень доволен
+текущим интерфейсом фильтров, но пока не придумал, как сделать идеально. В общем, работы непочатый край…</p>
+
+<hr />
+
+<p>Думаю, в ближайшее время я буду примерно раз в неделю анонсировать свежевыложенное. А выкладывать буду блоками по фотографиям,
+возможно, блоками «фотография × принтшоп».</p>
+
+<p>Сейчас, как можно видеть, выложены:</p>
+
+<ul>
+  <li>
+    <p><a href="/merch/photo/birds/20250611-roe/">Сибирская косуля</a></p>
+  </li>
+  <li>
+    <p><a href="/merch/photo/insecta/20260522-machaon/">Махаон на одуванчике</a></p>
+  </li>
+  <li>
+    <p><a href="/merch/photo/patterns/20260515-deadtree/">Сухое дерево</a> — это из разряда того, что я называю <em>квазипаттернами</em>.</p>
+  </li>
+  <li>
+    <p><a href="/merch/jokes/20260524-eto-enot/">«Это енот…»</a> — проходит по разряду приколов.</p>
+  </li>
+</ul>
+
+<hr />
+
+<p>Возможно, я где-то накосячил в массиве данных. Если где-то не стыкуются картинка, ссылка и текст, напишите, пожалуйста, в комментариях —
+буду исправлять.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;life&quot;, &quot;dybr&quot;, &quot;web&quot;, &quot;about&quot;]" /><category term="мерч" /><category term="принтшопы" /><category term="ВсеМайки" /><category term="PrintDirect" /><category term="FUN" /><summary type="html"><![CDATA[Сделал каталог своего «мерча» на сайте, осталось заполнить.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2026/06/26/catalog/screen-640x640-921x480-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2026/06/26/catalog/screen-640x640-921x480-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Tg: май 2026</title><link href="https://shikhalev.github.io/life/2026/06/channels-may.html" rel="alternate" type="text/html" title="Tg: май 2026" /><published>2026-06-11T00:00:00+00:00</published><updated>2026-06-11T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/06/channels-may</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/06/channels-may.html"><![CDATA[<p>В мае проблемы с ав­то­пос­тин­гом продолжились… Быстрое исправление не по­мог­ло, надо сидеть и разбираться.
 Тем не менее постов было много и дайджест имеет смысл.</p>
 
 <h2 id="биоразнообразие-свердловскойобласти-вtg">Биоразнообразие Свердловской области в TG</h2>
@@ -988,33 +1031,4 @@ POCO X6) уже вполне приемлемо (для меня) справля
 <p>В целом прошедший сезон вспомнить приятно. Хотелось бы больше, но что-то я стал привередлив к погоде и неохотно выхожу из зоны комфорта…
 При этом все еще могу спокойно отмотать 15–20 километров за шесть часов и не зажужжать, что немного успокаивает.</p>
 
-<p>Посмотрим, каков будет следующий сезон…</p>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="dybr" /><category term="nature" /><category term="photo" /><category term="birdwatching" /><category term="hard" /><category term="натурадыбр" /><category term="iNaturalist" /><category term="птицы" /><category term="звери" /><category term="прогулки" /><category term="наблюдения" /><category term="фототехника" /><category term="оптика" /><summary type="html"><![CDATA[Мои итоги года на iNaturalist]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/12/25/naturadybr/IMG_8552-640x640-2400x1252-0-156.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/12/25/naturadybr/IMG_8552-640x640-2400x1252-0-156.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Продолжая повышать энтропию интернетов…</title><link href="https://shikhalev.github.io/life/2025/12/entropy.html" rel="alternate" type="text/html" title="Продолжая повышать энтропию интернетов…" /><published>2025-12-23T00:00:00+00:00</published><updated>2025-12-23T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2025/12/entropy</id><content type="html" xml:base="https://shikhalev.github.io/life/2025/12/entropy.html"><![CDATA[<p>В порядке продолжения повышения энтропии, а также эксперимента ради, я недавно завел еще три канала в те­ле­грам с на­блю­де­ни­я­ми из iNa­tu­ra­list:</p>
-
-<dl>
-  <dt><a href="https://t.me/daily_flowers_of_the_world" class="img-icon-tg">Daily Flowers of the World</a></dt>
-  <dd>
-    <p>Наблюдения цветов — в запросе указаны <code class="language-plaintext highlighter-rouge">term_id</code> и <code class="language-plaintext highlighter-rouge">term_value_id</code>, чтобы в выборку попадали именно наблюдения с цве­та­ми, а не во­об­ще все наблюдения
-цветковых растений.</p>
-  </dd>
-  <dt><a href="https://t.me/daily_birds_of_the_world" class="img-icon-tg">Daily Birds of the World</a></dt>
-  <dd>
-    <p>Наблюдения птиц. Тут ничего специфического, просто каждый день разные птицы.</p>
-  </dd>
-  <dt><a href="https://t.me/daily_butterflies_of_the_world" class="img-icon-tg">Daily Butterflies of the World</a></dt>
-  <dd>
-    <p>Наблюдения бабочек — в запросе опять же указаны <code class="language-plaintext highlighter-rouge">term_id</code> и <code class="language-plaintext highlighter-rouge">term_value_id</code>, чтобы в выборку попадали только взрослые особи, т.е. собственно бабочки,
-а не гусеницы, куколки или яйца.</p>
-  </dd>
-</dl>
-
-<!--more-->
-
-<p>Конфигурации доступны на GitHub — <strong><a href="https://github.com/inat-get/channels-daily" class="img-icon-github">inat-get/channels-daily</a></strong>.</p>
-
-<h2 id="примеры">Примеры</h2>
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="daily_flowers_of_the_world/15" data-width="100%"></script>
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="daily_birds_of_the_world/6" data-width="100%"></script>
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="daily_butterflies_of_the_world/4" data-width="100%"></script>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="nature" /><category term="web" /><category term="птицы" /><category term="бабочки" /><category term="цветы" /><category term="iNaturalist" /><category term="Telegram" /><summary type="html"><![CDATA[Еще три телеграм-канала с фотографиями из iNaturalist.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>Посмотрим, каков будет следующий сезон…</p>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="dybr" /><category term="nature" /><category term="photo" /><category term="birdwatching" /><category term="hard" /><category term="натурадыбр" /><category term="iNaturalist" /><category term="птицы" /><category term="звери" /><category term="прогулки" /><category term="наблюдения" /><category term="фототехника" /><category term="оптика" /><summary type="html"><![CDATA[Мои итоги года на iNaturalist]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/12/25/naturadybr/IMG_8552-640x640-2400x1252-0-156.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/12/25/naturadybr/IMG_8552-640x640-2400x1252-0-156.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
