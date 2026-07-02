@@ -1,0 +1,198 @@
+design: _designs/merch/photo/birds/20260102-passer.md
+date: 2026-06-27
+items:
+  - good: _goods/type/clothes/men/t-shirt/vm-manshortfull.md
+    url: https://shikhalev.vsemaykishop.ru/article/manshortfull/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1020_manshortfull_front_white_700.jpg
+  - good: _goods/type/clothes/men/longsleeve/vm-manlongfull.md
+    url: https://shikhalev.vsemaykishop.ru/article/manlongfull/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1000_manlongfull_front_white_700.jpg
+  - good: _goods/type/clothes/men/sweatshirt/vm-mansmockfull.md
+    url: https://shikhalev.vsemaykishop.ru/article/mansmockfull/4099471?color=melange
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1000_mansmockfull_front_melange_700.jpg
+  - good: _goods/type/clothes/unisex/hat/vm-hat_pompom.md
+    url: https://shikhalev.vsemaykishop.ru/article/hat_pompom/4099471?size=s&color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_20_hat_pompom_front_white_700.jpg
+  - good: _goods/type/clothes/men/bottom/vm-pants_fullprint.md
+    url: https://shikhalev.vsemaykishop.ru/article/pants_fullprint/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_20_pants_fullprint_front_white_700.jpg
+  - good: _goods/type/clothes/unisex/vm-ski_cape.md
+    url: https://shikhalev.vsemaykishop.ru/article/ski_cape/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1001_ski_cape_front_white_700.jpg
+  - good: _goods/type/clothes/men/t-shirt/vm-man_tshirt_sport.md
+    url: https://shikhalev.vsemaykishop.ru/article/man_tshirt_sport/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_15_man_tshirt_sport_front_white_700.jpg
+  - good: _goods/type/clothes/men/t-shirt/vm-mens_t_shirts_oversize_3d.md
+    url: https://shikhalev.vsemaykishop.ru/article/mens_t_shirts_oversize_3d/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1000_mens_t_shirts_oversize_3d_front_white_700.jpg
+  - good: _goods/type/clothes/men/tank/vm-workout_mens_tshirt.md
+    url: https://shikhalev.vsemaykishop.ru/article/workout_mens_tshirt/4099471?color=black
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1001_workout_mens_tshirt_front_black_700.jpg
+  - good: _goods/type/clothes/women/t-shirt/vm-womanshortfull.md
+    url: https://shikhalev.vsemaykishop.ru/article/womanshortfull/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1020_womanshortfull_front_white_700.jpg
+  - good: _goods/type/clothes/women/longsleeve/vm-womanlongfull.md
+    url: https://shikhalev.vsemaykishop.ru/article/womanlongfull/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1001_womanlongfull_front_white_700.jpg
+  - good: _goods/type/clothes/women/sweatshirt/vm-womansmockfull.md
+    url: https://shikhalev.vsemaykishop.ru/article/womansmockfull/4099471?size=xxs_42&color=melange
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1000_womansmockfull_front_melange_700.jpg
+  - good: _goods/type/clothes/women/t-shirt/vm-woman_tshirt_top.md
+    url: https://shikhalev.vsemaykishop.ru/article/woman_tshirt_top/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1020_woman_tshirt_top_front_white_700.jpg
+  - good: _goods/type/clothes/unisex/hat/vm-sleep_mask.md
+    url: https://shikhalev.vsemaykishop.ru/article/sleep_mask/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1000_sleep_mask_front_white_700.jpg
+  - good: _goods/type/clothes/women/t-shirt/vm-womens_t_shirts_oversize_3d.md
+    url: https://shikhalev.vsemaykishop.ru/article/womens_t_shirts_oversize_3d/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1000_womens_t_shirts_oversize_3d_front_white_700.jpg
+  - good: _goods/type/clothes/kids/t-shirt/vm-child_tshirt.md
+    url: https://shikhalev.vsemaykishop.ru/article/child_tshirt/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_94_child_tshirt_front_white_700.jpg
+  - good: _goods/type/clothes/kids/sweatshirt/vm-child_sweatshirt.md
+    url: https://shikhalev.vsemaykishop.ru/article/child_sweatshirt/4099471?size=86sm&color=melange
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_90_child_sweatshirt_front_melange_700.jpg
+  - good: _goods/type/clothes/kids/longsleeve/vm-child_longsleeve.md
+    url: https://shikhalev.vsemaykishop.ru/article/child_longsleeve/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_20_child_longsleeve_front_white_700.jpg
+  - good: _goods/type/accessories/bag/backpack/vm-child_backpack_full.md
+    url: https://shikhalev.vsemaykishop.ru/article/child_backpack_full/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_21_child_backpack_full_front_white_700.jpg
+  - good: _goods/type/accessories/bag/backpack/vm-gym_sack.md
+    url: https://shikhalev.vsemaykishop.ru/article/gym_sack/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1000_gym_sack_front_white_700.jpg
+  - good: _goods/type/accessories/bag/shopper/vm-bag_fullprint.md
+    url: https://shikhalev.vsemaykishop.ru/article/bag_fullprint/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1000_bag_fullprint_front_white_700.jpg
+  - good: _goods/type/accessories/bag/vm-Bumbag.md
+    url: https://shikhalev.vsemaykishop.ru/article/Bumbag/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_31_Bumbag_front_white_700.jpg
+  - good: _goods/type/accessories/bag/shopper/vm-shopper.md
+    url: https://shikhalev.vsemaykishop.ru/article/shopper/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1000_shopper_front_white_700.jpg
+  - good: _goods/type/accessories/bag/vm-laptop_bags.md
+    url: https://shikhalev.vsemaykishop.ru/article/laptop_bags/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1001_laptop_bags_front_white_700.jpg
+  - good: _goods/type/accessories/bag/vm-sport_bags.md
+    url: https://shikhalev.vsemaykishop.ru/article/sport_bags/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_10_sport_bags_front_white_700.jpg
+  - good: _goods/type/accessories/bag/vm-cosmetic_bag.md
+    url: https://shikhalev.vsemaykishop.ru/article/cosmetic_bag/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_11_cosmetic_bag_front_white_700.jpg
+  - good: _goods/type/accessories/keychain/vm-keychain_round.md
+    url: https://shikhalev.vsemaykishop.ru/article/keychain_round/4099471?color=transparent
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_2_keychain_round_front_transparent_700.jpg
+  - good: _goods/type/home/magnet/acryl/vm-magnet_55_55.md
+    url: https://shikhalev.vsemaykishop.ru/article/magnet_55_55/4099471?color=transparent
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_2_magnet_55_55_front_transparent_700.jpg
+  - good: _goods/type/home/magnet/acryl/vm-magnet_45_70.md
+    url: https://shikhalev.vsemaykishop.ru/article/magnet_45_70/4099471?size=one_size&color=transparent
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_2_magnet_45_70_front_transparent_700.jpg
+  - good: _goods/type/home/magnet/vinyl/vm-magnet_vinyl_square.md
+    url: https://shikhalev.vsemaykishop.ru/article/magnet_vinyl_square/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1000_magnet_vinyl_square_front_white_700.jpg
+  - good: _goods/type/home/magnet/vinyl/vm-magnet_poster_3x2.md
+    url: https://shikhalev.vsemaykishop.ru/article/magnet_poster_3x2/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1000_magnet_poster_3x2_front_white_700.jpg
+  - good: _goods/type/accessories/other/vm-newyear_bag_fullprint.md
+    url: https://shikhalev.vsemaykishop.ru/article/newyear_bag_fullprint/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_2_newyear_bag_fullprint_front_white_700.jpg
+  - good: _goods/type/home/textile/apron/vm-apron_fullprint.md
+    url: https://shikhalev.vsemaykishop.ru/article/apron_fullprint/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_10_apron_fullprint_front_white_700.jpg
+  - good: _goods/type/accessories/cover/vm-passport_cover_leather_matt.md
+    url: https://shikhalev.vsemaykishop.ru/article/passport_cover_leather_matt/4099471?color=yellow
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_11_passport_cover_leather_matt_front_yellow_700.jpg
+  - good: _goods/type/home/wall/flag/vm-flag_big.md
+    url: https://shikhalev.vsemaykishop.ru/article/flag_big/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_10_flag_big_front_white_700.jpg
+  - good: _goods/type/accessories/other/vm-flag_auto.md
+    url: https://shikhalev.vsemaykishop.ru/article/flag_auto/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_10_flag_auto_front_white_700.jpg
+  - good: _goods/type/accessories/other/vm-wrapping_paper.md
+    url: https://shikhalev.vsemaykishop.ru/article/wrapping_paper/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_3_wrapping_paper_front_white_700.jpg
+  - good: _goods/type/accessories/cover/vm-cover_auto.md
+    url: https://shikhalev.vsemaykishop.ru/article/cover_auto/4099471?color=blue
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_5_cover_auto_front_blue_700.jpg
+  - good: _goods/type/home/wall/flag/vm-flag_banner.md
+    url: https://shikhalev.vsemaykishop.ru/article/flag_banner/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_10_flag_banner_front_white_700.jpg
+  - good: _goods/type/accessories/cover/vm-cardholder_print.md
+    url: https://shikhalev.vsemaykishop.ru/article/cardholder_print/4099471?color=black
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_12_cardholder_print_front_black_700.jpg
+  - good: _goods/type/accessories/cover/vm-cardholder_magsafe.md
+    url: https://shikhalev.vsemaykishop.ru/article/cardholder_magsafe/4099471?color=black
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1000_cardholder_magsafe_front_black_700.jpg
+  - good: _goods/type/home/textile/cushion/vm-cushion_full.md
+    url: https://shikhalev.vsemaykishop.ru/article/cushion_full/4099471?color=3D_wellsoft
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_10_cushion_full_front_3D_wellsoft_700.jpg
+  - good: _goods/type/home/other/vm-shower_curtain.md
+    url: https://shikhalev.vsemaykishop.ru/article/shower_curtain/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1_shower_curtain_front_white_700.jpg
+  - good: _goods/type/home/textile/cushion/vm-cushion_antistress.md
+    url: https://shikhalev.vsemaykishop.ru/article/cushion_antistress/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_2_cushion_antistress_front_white_700.jpg
+  - good: _goods/type/home/textile/plaid/vm-plaid.md
+    url: https://shikhalev.vsemaykishop.ru/article/plaid/4099471?color=3D_wellsoft
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1000_plaid_front_3D_wellsoft_700.jpg
+  - good: _goods/type/home/dish/mug/ceramics/latte/vm-mug_latte.md
+    url: https://shikhalev.vsemaykishop.ru/article/mug_latte/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_5_mug_latte_front_white_700.jpg
+  - good: _goods/type/home/dish/flask/vm-flask.md
+    url: https://shikhalev.vsemaykishop.ru/article/flask/4099471?color=metal
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_11_flask_front_metal_700.jpg
+  - good: _goods/type/home/dish/mug/ceramics/circle/vm-mug_fullprint.md
+    url: https://shikhalev.vsemaykishop.ru/article/mug_fullprint/4099471?color=whiteblack
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_22_mug_fullprint_front_whiteblack_700.jpg
+  - good: _goods/type/home/dish/mug/thermo/vm-thermocup_nonspillable.md
+    url: https://shikhalev.vsemaykishop.ru/article/thermocup_nonspillable/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_11_thermocup_nonspillable_front_white_700.jpg
+  - good: _goods/type/home/wall/canvas/vm-holst_rectangle.md
+    url: https://shikhalev.vsemaykishop.ru/article/holst_rectangle/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_10_holst_rectangle_front_white_700.jpg
+  - good: _goods/type/home/other/vm-christmas_tree_ball.md
+    url: https://shikhalev.vsemaykishop.ru/article/christmas_tree_ball/4099471?color=transparent
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_11_christmas_tree_ball_front_transparent_700.jpg
+  - good: _goods/type/home/other/vm-snow_globe.md
+    url: https://shikhalev.vsemaykishop.ru/article/snow_globe/4099471?color=transparent
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_10_snow_globe_front_transparent_700.jpg
+  - good: _goods/type/home/wall/canvas/vm-holst_square_full.md
+    url: https://shikhalev.vsemaykishop.ru/article/holst_square_full/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_10_holst_square_full_front_white_700.jpg
+  - good: _goods/type/home/wall/poster/vm-poster.md
+    url: https://shikhalev.vsemaykishop.ru/article/poster/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_10_poster_front_white_700.jpg
+  - good: _goods/type/office/pad/vm-pad.md
+    url: https://shikhalev.vsemaykishop.ru/article/pad/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_2_pad_front_white_700.jpg
+  - good: _goods/type/office/pad/vm-pad2.md
+    url: https://shikhalev.vsemaykishop.ru/article/pad2/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_3_pad2_front_white_700.jpg
+  - good: _goods/type/office/vm-pencil_case.md
+    url: https://shikhalev.vsemaykishop.ru/article/pencil_case/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_4_pencil_case_front_white_700.jpg
+  - good: _goods/type/office/vm-postcard_a6.md
+    url: https://shikhalev.vsemaykishop.ru/article/postcard_a6/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_10_postcard_a6_front_white_700.jpg
+  - good: _goods/type/office/paper/vm-exercise_book.md
+    url: https://shikhalev.vsemaykishop.ru/article/exercise_book/4099471?color=suit_cells1
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_10_exercise_book_front_suit_cells1_700.jpg
+  - good: _goods/type/office/paper/vm-sketchbook.md
+    url: https://shikhalev.vsemaykishop.ru/article/sketchbook/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_10_sketchbook_front_white_700.jpg
+  - good: _goods/type/office/paper/vm-notepad.md
+    url: https://shikhalev.vsemaykishop.ru/article/notepad/4099471?color=suit_cells1
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1_notepad_front_suit_cells1_700.jpg
+  - good: _goods/type/office/paper/vm-album.md
+    url: https://shikhalev.vsemaykishop.ru/article/album/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1_album_front_white_700.jpg
+  - good: _goods/type/accessories/bag/vm-beach_bag.md
+    url: https://shikhalev.vsemaykishop.ru/article/beach_bag/4099471?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4099/4099471/previews/people_1003_beach_bag_front_white_700.jpg
+  - good: _goods/type/home/dish/bottle/metal/carabine/vm-bottle_sport.md
+    url: https://shikhalev.vsemaykishop.ru/article/bottle_sport/4101367?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101367/previews/people_2_bottle_sport_front_white_700.jpg
+  - good: _goods/type/home/dish/bottle/metal/vm-water_bottle_straw.md
+    url: https://shikhalev.vsemaykishop.ru/article/water_bottle_straw/4101367?color=red
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101367/previews/people_10_water_bottle_straw_front_red_700.jpg
