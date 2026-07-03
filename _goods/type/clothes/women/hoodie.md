@@ -6,6 +6,7 @@ children:
   - _goods/type/clothes/women/hoodie/vm-woman_hoodie_jacket.md
   - _goods/type/clothes/women/hoodie/vm-woman_hoodie.md
   - _goods/type/clothes/women/hoodie/vm-woman_hoodie_oversize.md
+  - _goods/type/clothes/women/hoodie/vm-women_sweatshirt_without_fleece_basic.md
   - _goods/type/clothes/women/hoodie/vm-hoodie_dress.md
 links:
   - _goods/type/clothes/unisex/hoodie.md
