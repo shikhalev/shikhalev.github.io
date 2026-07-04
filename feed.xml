@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-06-26T08:15:56+00:00</updated><id>https://shikhalev.github.io/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Каталог «мерча»</title><link href="https://shikhalev.github.io/life/2026/06/catalog.html" rel="alternate" type="text/html" title="Каталог «мерча»" /><published>2026-06-26T00:00:00+00:00</published><updated>2026-06-26T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/06/catalog</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/06/catalog.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:360px;border-radius:10px;"><a href="/merch/"><img src="/img/2026/06/26/catalog/screen-360.webp" class="__image" style="border-radius:10px;" alt="Скриншот нового раздела" title="Скриншот нового раздела" /></a></figure>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-07-04T17:18:31+00:00</updated><id>https://shikhalev.github.io/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Обновление каталога мерча</title><link href="https://shikhalev.github.io/life/2026/07/catalog-update.html" rel="alternate" type="text/html" title="Обновление каталога мерча" /><published>2026-07-04T00:00:00+00:00</published><updated>2026-07-04T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/07/catalog-update</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/07/catalog-update.html"><![CDATA[<p>Добавил в каталог еще три коллекции.</p>
+
+<figure class="__figure __implicit_figure __center logo" style="max-width:320px;"><a href="/merch/jokes/20260528-chto-sovoy/"><img src="/img/2026/07/04/catalog-update/sova-320.webp" class="__image" alt="«Что совой об пень...»" title="«Что совой об пень...»" /></a></figure>
+
+<!--more-->
+
+<figure class="__figure __implicit_figure __center" style="max-width:640px;border-radius:25px;"><a href="/merch/photo/landscapes/20260511-arti/"><img src="/img/2026/07/04/catalog-update/IMG_5565-640.webp" class="__image" style="border-radius:25px;" alt="Арти, май 2026" title="Арти, май 2026" /></a></figure>
+
+<figure class="__figure __implicit_figure __center" style="max-width:640px;border-radius:25px;"><a href="/merch/photo/birds/20260102-passer/"><img src="/img/2026/07/04/catalog-update/IMG_7541-640.webp" class="__image" style="border-radius:25px;" alt="Арти, май 2026" title="Арти, май 2026" /></a></figure>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;life&quot;, &quot;dybr&quot;, &quot;web&quot;, &quot;about&quot;]" /><category term="мерч" /><category term="принтшопы" /><category term="ВсеМайки" /><category term="PrintDirect" /><category term="FUN" /><summary type="html"><![CDATA[Добавил еще три коллекции...]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Каталог «мерча»</title><link href="https://shikhalev.github.io/life/2026/06/catalog.html" rel="alternate" type="text/html" title="Каталог «мерча»" /><published>2026-06-26T00:00:00+00:00</published><updated>2026-06-26T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/06/catalog</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/06/catalog.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:360px;border-radius:10px;"><a href="/merch/"><img src="/img/2026/06/26/catalog/screen-360.webp" class="__image" style="border-radius:10px;" alt="Скриншот нового раздела" title="Скриншот нового раздела" /></a></figure>
 
 <p>Хотел начать этот пост со слов «не прошло и двух недель», ан нет, <a href="/life/2026/06/merch.html">прошло</a>… Как быстро время летит…
 На самом деле бо́льшую часть внемени заняло не написание кода, а заполнение данных. Надо бы это дело заскриптовать,
@@ -1024,67 +1032,4 @@ Av с f/8… То есть мало того, что диафрагма зажа
       <p>Тестирование на разных СУБД и сравнение их работы запланировано на версию 0.9.4 — там вообще итерация задумана как тестирующая и корректирующая. <a href="#fnref:testing" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="tech" /><category term="programming" /><category term="ruby" /><category term="nature" /><category term="birdwatching" /><category term="inat-get" /><category term="iNatGet" /><category term="iNaturalist" /><summary type="html"><![CDATA[Релизнул таки новую, полностью переписанную, версию...]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2026/03/04/inat-get-0-9/logo-640x640-1024x534-0-227.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2026/03/04/inat-get-0-9/logo-640x640-1024x534-0-227.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Tg: февраль 2026</title><link href="https://shikhalev.github.io/life/2026/03/channels-feb.html" rel="alternate" type="text/html" title="Tg: февраль 2026" /><published>2026-03-02T00:00:00+00:00</published><updated>2026-03-02T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/03/channels-feb</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/03/channels-feb.html"><![CDATA[<p>Что ж, продолжу делать месячный дайджест того, что принесли мои tg-каналы с популярными наблюдениями.
-Здесь — све­же­про­шед­ший февраль. См. так­же пост <a href="/life/2026/02/channels.html">за январь</a>.</p>
-
-<h2 id="биоразнообразие-свердловской-области-вtg">Биоразнообразие Свердловской области в TG</h2>
-
-<p>Долго думал, в итоге решил взять вот такого каменского февральского орлана-белохвоста. Солидная птица. И не так уж часто его наблюдают в принципе,
-особенно у нас в области.</p>
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="inat_sverdlobl/255" data-width="100%"></script>
-
-<!--more-->
-
-<hr />
-
-<h2 id="природа-урала--наблюдения-сinaturalist">Природа Урала — наблюдения с iNaturalist</h2>
-
-<p>Ну, начнем с наблюдения, которое меня изрядно удивило — росомаха в Че­ля­бин­с­кой области. Ни за что бы не подумал.
-Однако, сообщество никаких сомнений не высказывает, так что вот…</p>
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="urals_nature/2077" data-width="100%"></script>
-
-<hr />
-
-<p>Для кого-то, возможно, напротив — сюрпризом станет башкирский тарантул…</p>
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="urals_nature/2133" data-width="100%"></script>
-
-<hr />
-
-<p>А следующим будет гибрид черной и серой вороны. Нетипичная птица для Ура­ла — у нас сама черная во­ро­на — гость довольно редкий.</p>
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="urals_nature/2300" data-width="100%"></script>
-
-<hr />
-
-<p>И просто красивое башкирское разнотравье…</p>
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="urals_nature/2192" data-width="100%"></script>
-
-<hr />
-
-<p>Что-то подборка получилась сплошь южноуральская, ну да ладно.</p>
-
-<hr />
-
-<h2 id="с-миру-по-нитке">С миру по нитке</h2>
-
-<p>По традиции — без комментариев.</p>
-
-<hr />
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="daily_flowers_of_the_world/278" data-width="100%"></script>
-
-<hr />
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="daily_birds_of_the_world/159" data-width="100%"></script>
-
-<hr />
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="daily_butterflies_of_the_world/136" data-width="100%"></script>
-
-<hr />
-
-<p>Подписывайтесь — там еще много.</p>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="nature" /><category term="web" /><category term="iNaturalist" /><category term="Telegram" /><category term="птицы" /><category term="цветы" /><category term="бабочки" /><category term="растения" /><category term="животные" /><category term="млекопитающие" /><category term="насекомые" /><summary type="html"><![CDATA[Подборка наблюдений за февраль]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2026/03/02/channels-feb/feb-digest-640x640-1024x534-0-25.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2026/03/02/channels-feb/feb-digest-640x640-1024x534-0-25.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="tech" /><category term="programming" /><category term="ruby" /><category term="nature" /><category term="birdwatching" /><category term="inat-get" /><category term="iNatGet" /><category term="iNaturalist" /><summary type="html"><![CDATA[Релизнул таки новую, полностью переписанную, версию...]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2026/03/04/inat-get-0-9/logo-640x640-1024x534-0-227.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2026/03/04/inat-get-0-9/logo-640x640-1024x534-0-227.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
