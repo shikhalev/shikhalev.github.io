@@ -1,0 +1,42 @@
+design: _designs/merch/jokes/20260528-chto-sovoy.md
+date: 2026-06-27
+items:
+  - good: _goods/type/clothes/men/t-shirt/fn-men-tshirts.md
+    url: https://fun.ru/men-tshirts/chto_sovoy_ob_pen/color-grayMelange
+    img: https://fun.ru/upload/7b/e5/7be58e0b6e.jpg
+  - good: _goods/type/clothes/women/t-shirt/fn-women-tshirts.md
+    url: https://fun.ru/women-tshirts/chto_sovoy_ob_pen
+    img: https://fun.ru/upload/e3/5f/e35fcdf032.jpg
+  - good: _goods/type/clothes/unisex/t-shirt/fn-tshirts-oversize.md
+    url: https://fun.ru/tshirts-oversize/chto_sovoy_ob_pen
+    img: https://fun.ru/upload/0f/75/0f750d6c75.jpg
+  - good: _goods/type/clothes/kids/t-shirt/fn-kids-tshirts.md
+    url: https://fun.ru/kids-tshirts/chto_sovoy_ob_pen
+    img: https://fun.ru/upload/d9/b8/d9b8f2bfc6.jpg
+  - good: _goods/type/clothes/kids/t-shirt/fn-kids-tshirts-oversize.md
+    url: https://fun.ru/kids-tshirts-oversize/chto_sovoy_ob_pen
+    img: https://fun.ru/upload/cc/05/cc0574382a.jpg
+  - good: _goods/type/clothes/men/sweatshirt/fn-men-sweatshirts.md
+    url: https://fun.ru/men-sweatshirts/chto_sovoy_ob_pen
+    img: https://fun.ru/upload/4f/c9/4fc9eabca8.jpg
+  - good: _goods/type/clothes/women/sweatshirt/fn-women-sweatshirts.md
+    url: https://fun.ru/women-sweatshirts/chto_sovoy_ob_pen
+    img: https://fun.ru/upload/3a/67/3a67985d88.jpg
+  - good: _goods/type/home/dish/bottle/plastic/fn-bottle-speedy.md
+    url: https://fun.ru/bottle-speedy/chto_sovoy_ob_pen
+    img: https://fun.ru/upload/31/e8/31e852e471.jpg
+  - good: _goods/type/accessories/bag/shopper/fn-bags.md
+    url: https://fun.ru/bags/chto_sovoy_ob_pen
+    img: https://fun.ru/upload/3b/d2/3bd2952d90.jpg
+  - good: _goods/type/office/diary/fn-diary.md
+    url: https://fun.ru/diary/chto_sovoy_ob_pen
+    img: https://fun.ru/upload/d9/8e/d98eefaed8.jpg
+  - good: _goods/type/home/dish/mug/ceramics/circle/fn-mug.md
+    url: https://fun.ru/mugs/chto_sovoy_ob_pen
+    img: https://fun.ru/upload/90/c3/90c397c73e.jpg
+  - good: _goods/type/home/dish/thermos/fn-thermos.md
+    url: https://fun.ru/thermos/chto_sovoy_ob_pen
+    img: https://fun.ru/upload/2e/9b/2e9b66c109.jpg
+  - good: _goods/type/home/dish/bottle/plastic/fn-bottle.md
+    url: https://fun.ru/bottle/chto_sovoy_ob_pen
+    img: https://fun.ru/upload/e3/55/e355b124c6.jpg
