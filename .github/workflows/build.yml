@@ -33,7 +33,7 @@ jobs:
           telegram-bot-token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           telegram-user-id: ${{ secrets.MY_TG_ID }}
       - name: Publish
-        uses: jekyll-is/action-jekyll-is-publish@v1
+        uses: jekyll-is/action-jekyll-is-publish@main
         with:
           label: 'Jekyll Build'
           sync-dir: '_site'
