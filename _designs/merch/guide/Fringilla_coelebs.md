@@ -1,8 +1,6 @@
 ---
-title: «Определитель»
-description: Стилизация под старинный справочник-определитель видов
-children:
-  - _designs/merch/guide/Fringilla_coelebs.md
+title: Зяблик (Fringilla coelebs)
+description: Лист псевдо-определителя для Fringilla coelebs
 ---
 
 > **Disclaimer:** *не является настоящим научно обоснованным определителем. Могут встречаться неточности и ошибки.*
