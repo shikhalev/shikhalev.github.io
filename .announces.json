@@ -1,1 +1,21 @@
-{}
+{
+  "telegram": {
+    "config": {
+      "method": "telegram",
+      "chat_id": "@shikhalev_blog"
+    },
+    "posts": {
+      "_posts/blog/2026/2026-07-11-channels-jun.md": {
+        "url": "https://shikhalev.github.io/life/2026/07/channels-jun.html",
+        "date": "2026/07/11",
+        "title": "Tg: июнь 2026",
+        "description": "Подборка наблюдений за июнь",
+        "categories": [
+          "жизнь",
+          "природа",
+          "веб"
+        ]
+      }
+    }
+  }
+}
