@@ -9,4 +9,5 @@ children:
   - _goods/type/home/dish/mug/ceramics/pd-colored.md
   - _goods/type/home/dish/mug/ceramics/pd-big.md
   - _goods/type/home/dish/mug/ceramics/latte.md
+  - _goods/type/home/dish/mug/ceramics/pd-w-spoon.md
 ---
