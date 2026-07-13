@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed/life.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-07-11T02:37:28+00:00</updated><id>https://shikhalev.github.io/feed/life.xml</id><title type="html">Иван Шихалев | Life</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Tg: июнь 2026</title><link href="https://shikhalev.github.io/life/2026/07/channels-jun.html" rel="alternate" type="text/html" title="Tg: июнь 2026" /><published>2026-07-11T00:00:00+00:00</published><updated>2026-07-11T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/07/channels-jun</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/07/channels-jun.html"><![CDATA[<p>Кажется, тьфу-тьфу-тьфу, проблемы с автопостингом закончились. Так что, если где-то что-то про­пу­ще­но — это реально
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed/life.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-07-13T17:21:54+00:00</updated><id>https://shikhalev.github.io/feed/life.xml</id><title type="html">Иван Шихалев | Life</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Стартовал «псевдо-определитель»</title><link href="https://shikhalev.github.io/life/2026/07/fringilla-coelebs.html" rel="alternate" type="text/html" title="Стартовал «псевдо-определитель»" /><published>2026-07-13T00:00:00+00:00</published><updated>2026-07-13T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/07/fringilla-coelebs</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/07/fringilla-coelebs.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:360px;"><a href="/merch/guide/Fringilla_coelebs/"><img src="/img/2026/07/13/fringilla-coelebs/fringilla_coelebs-360.webp" class="__image" alt="Развертка кружки с «определителем» Fringilla coelebs" title="Развертка кружки с «определителем» Fringilla coelebs" /></a></figure>
+
+<p>Как и <a href="/life/2026/06/merch.html#guide">обещал</a>, запустил <a href="/merch/guide/">мерч с «как бы определителем»</a>. И начал с <strong><a href="/merch/guide/Fringilla_coelebs/">Зяблика</a></strong>.</p>
+
+<p>Решил не выпендриваться с латынью, в первую очередь потому, что не мо­гу быть уверенным в правильности
+подписей. Так что все тексты на со­вре­мен­ном русском (и не сге­не­ри­ро­ван­ные, а написанные мной в ко­неч­ном итоге,
+точ­нее — скомпилированные из раз­ных источников). Были некоторые колебания между декором и информативностью,
+в итоге склонился к более-менее информативности. Из чистого декора осталась только стилизация и имитация старой бумаги.</p>
+
+<p><a href="https://www.inaturalist.org/taxa/10070">Зяблика <em>(Fringilla coelebs)</em></a> для старта я выбрал, потому что птичка эта распространенная, широко известная,
+кроме того хорошо визуально определяемая, да еще и с четкими половозрастными различиями. Идеальный объект для тренировки
+и понимания, как что делать в общем случае, поскольку на нем я, с одной стороны, сразу столкнулся со многими нюансами
+генерации, а с другой — столкнулся я с ними, как выяснилось, в довольно лайтовом варианте: генерация следующего вида —
+<a href="https://www.inaturalist.org/taxa/10069">юрка <em>(Fringilla montifringilla)</em></a> оказалась куда более геморройной, скорее всего, потому что его изображений
+в датасетах нейросетей существенно меньше… Хотя и там проблемы оказались решаемыми, так что скоро будет.</p>
+
+<p>На данный момент доступны предметы только с <strong><a href="https://shikhalev.printdirect.ru/" class="img-icon-printdirect">PrintDirect</a></strong>, на <strong><a href="https://shikhalev.vsemaykishop.ru/" class="img-icon-vsemayki">ВсехМайках</a></strong>
+жду модерации (и что-то мне подсказывает, что она пройдет нескоро — всё замерло уже почти три недели как), а на <strong><a href="https://fun.ru/designer/shikhalev?sort=new" class="img-icon-fun">FUN.ru</a></strong>
+модерация не прошла — фон им не понравился (их проблемы, хотя термос немного жалко).</p>
+
+<p>В любом случае, всё, что есть, можно посмотреть на странице «<strong><a href="/merch/guide/Fringilla_coelebs/">Зяблик (Fringilla coelebs)</a></strong>». А отдельно хочу обратить внимание
+на <strong><a href="https://shikhalev.printdirect.ru/index.php?action=addtocart&amp;product=9495095" class="img-icon-printdirect">большой постер</a></strong> (на пенокартоне опционально): там максимум информационных блоков, на остальных то­ва­рах —
+что влезло, то влезло.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;life&quot;, &quot;dybr&quot;, &quot;web&quot;, &quot;about&quot;]" /><category term="мерч" /><category term="принтшопы" /><category term="ВсеМайки" /><category term="PrintDirect" /><category term="птицы" /><category term="животные" /><category term="«определитель»" /><category term="Fringilla coelebs" /><summary type="html"><![CDATA[Начал выкладывать «мерч», оформленный в стиле старинного определителя.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2026/07/13/fringilla-coelebs/fringilla_coelebs-640x640-2271x1185-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2026/07/13/fringilla-coelebs/fringilla_coelebs-640x640-2271x1185-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Tg: июнь 2026</title><link href="https://shikhalev.github.io/life/2026/07/channels-jun.html" rel="alternate" type="text/html" title="Tg: июнь 2026" /><published>2026-07-11T00:00:00+00:00</published><updated>2026-07-11T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/07/channels-jun</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/07/channels-jun.html"><![CDATA[<p>Кажется, тьфу-тьфу-тьфу, проблемы с автопостингом закончились. Так что, если где-то что-то про­пу­ще­но — это реально
 не нашлось подходящих под условия наблюдений (и та­кое пару раз было).</p>
 
 <h2 id="биоразнообразие-свердловскойобласти-вtg">Биоразнообразие Свердловской области в TG</h2>
@@ -438,7 +460,7 @@
 
 <hr />
 
-<h3 id="винтажный-определитель">Винтажный «определитель»</h3>
+<h3 id="guide">Винтажный «определитель»</h3>
 
 <figure class="__figure __implicit_figure __right logo" style="max-width:180px;margin-top:-20px;margin-bottom:0px;shape-outside:url(/img/2026/06/05/merch/zyablo-180.webp);"><a href="https://shikhalev.vsemaykishop.ru/article/flask/4096381?color=metal"><img src="/img/2026/06/05/merch/zyablo-180.webp" class="__image" style="shape-outside:url(/img/2026/06/05/merch/zyablo-180.webp);" alt="Фляжка с определителем зяблика" title="Фляжка с определителем зяблика" /></a></figure>
 
@@ -881,67 +903,4 @@ Av с f/8… То есть мало того, что диафрагма зажа
 
 <hr />
 
-<p>Присоединяйтесь, если интересно.</p>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="nature" /><category term="web" /><category term="iNaturalist" /><category term="Telegram" /><category term="птицы" /><category term="цветы" /><category term="бабочки" /><category term="растения" /><category term="животные" /><category term="млекопитающие" /><category term="насекомые" /><summary type="html"><![CDATA[Подборка наблюдений за март]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2026/04/01/channels-mar/klesch-640x640-1935x1009-0-257.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2026/04/01/channels-mar/klesch-640x640-1935x1009-0-257.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Tg: февраль 2026</title><link href="https://shikhalev.github.io/life/2026/03/channels-feb.html" rel="alternate" type="text/html" title="Tg: февраль 2026" /><published>2026-03-02T00:00:00+00:00</published><updated>2026-03-02T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/03/channels-feb</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/03/channels-feb.html"><![CDATA[<p>Что ж, продолжу делать месячный дайджест того, что принесли мои tg-каналы с популярными наблюдениями.
-Здесь — све­же­про­шед­ший февраль. См. так­же пост <a href="/life/2026/02/channels.html">за январь</a>.</p>
-
-<h2 id="биоразнообразие-свердловской-области-вtg">Биоразнообразие Свердловской области в TG</h2>
-
-<p>Долго думал, в итоге решил взять вот такого каменского февральского орлана-белохвоста. Солидная птица. И не так уж часто его наблюдают в принципе,
-особенно у нас в области.</p>
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="inat_sverdlobl/255" data-width="100%"></script>
-
-<!--more-->
-
-<hr />
-
-<h2 id="природа-урала--наблюдения-сinaturalist">Природа Урала — наблюдения с iNaturalist</h2>
-
-<p>Ну, начнем с наблюдения, которое меня изрядно удивило — росомаха в Че­ля­бин­с­кой области. Ни за что бы не подумал.
-Однако, сообщество никаких сомнений не высказывает, так что вот…</p>
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="urals_nature/2077" data-width="100%"></script>
-
-<hr />
-
-<p>Для кого-то, возможно, напротив — сюрпризом станет башкирский тарантул…</p>
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="urals_nature/2133" data-width="100%"></script>
-
-<hr />
-
-<p>А следующим будет гибрид черной и серой вороны. Нетипичная птица для Ура­ла — у нас сама черная во­ро­на — гость довольно редкий.</p>
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="urals_nature/2300" data-width="100%"></script>
-
-<hr />
-
-<p>И просто красивое башкирское разнотравье…</p>
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="urals_nature/2192" data-width="100%"></script>
-
-<hr />
-
-<p>Что-то подборка получилась сплошь южноуральская, ну да ладно.</p>
-
-<hr />
-
-<h2 id="с-миру-по-нитке">С миру по нитке</h2>
-
-<p>По традиции — без комментариев.</p>
-
-<hr />
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="daily_flowers_of_the_world/278" data-width="100%"></script>
-
-<hr />
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="daily_birds_of_the_world/159" data-width="100%"></script>
-
-<hr />
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="daily_butterflies_of_the_world/136" data-width="100%"></script>
-
-<hr />
-
-<p>Подписывайтесь — там еще много.</p>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="nature" /><category term="web" /><category term="iNaturalist" /><category term="Telegram" /><category term="птицы" /><category term="цветы" /><category term="бабочки" /><category term="растения" /><category term="животные" /><category term="млекопитающие" /><category term="насекомые" /><summary type="html"><![CDATA[Подборка наблюдений за февраль]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2026/03/02/channels-feb/feb-digest-640x640-1024x534-0-25.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2026/03/02/channels-feb/feb-digest-640x640-1024x534-0-25.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>Присоединяйтесь, если интересно.</p>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="nature" /><category term="web" /><category term="iNaturalist" /><category term="Telegram" /><category term="птицы" /><category term="цветы" /><category term="бабочки" /><category term="растения" /><category term="животные" /><category term="млекопитающие" /><category term="насекомые" /><summary type="html"><![CDATA[Подборка наблюдений за март]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2026/04/01/channels-mar/klesch-640x640-1935x1009-0-257.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2026/04/01/channels-mar/klesch-640x640-1935x1009-0-257.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
