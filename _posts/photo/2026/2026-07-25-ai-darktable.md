@@ -15,6 +15,7 @@ tags:
   - шумоподавление
 image: _src/2026/07/ai-darktable/20260724_173940.png
 seo_image_crop: 1318x688+17+0
+announce: true
 ---
 
 {% image @_src/2026/07/ai-darktable/20260724_211905.png figure right width=329px title="Модуль neural restore" link=false %}
