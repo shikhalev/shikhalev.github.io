@@ -1,4 +1,125 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed/photo.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-07-13T17:21:54+00:00</updated><id>https://shikhalev.github.io/feed/photo.xml</id><title type="html">Иван Шихалев | Photo</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Принтшопы, первые опыты</title><link href="https://shikhalev.github.io/life/2026/06/merch.html" rel="alternate" type="text/html" title="Принтшопы, первые опыты" /><published>2026-06-05T00:00:00+00:00</published><updated>2026-06-05T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/06/merch</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/06/merch.html"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed/photo.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-07-25T11:46:51+00:00</updated><id>https://shikhalev.github.io/feed/photo.xml</id><title type="html">Иван Шихалев | Photo</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">AI-функции в Darktable 5.6</title><link href="https://shikhalev.github.io/photo/2026/07/ai-darktable.html" rel="alternate" type="text/html" title="AI-функции в Darktable 5.6" /><published>2026-07-25T00:00:00+00:00</published><updated>2026-07-25T00:00:00+00:00</updated><id>https://shikhalev.github.io/photo/2026/07/ai-darktable</id><content type="html" xml:base="https://shikhalev.github.io/photo/2026/07/ai-darktable.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:329px;"><img src="/img/2026/07/25/ai-darktable/20260724_211905-329.webp" class="__image" alt="Модуль neural restore" title="Модуль neural restore" /></figure>
+
+<p>Недавно вышел <strong><a href="https://www.darktable.org/2026/06/darktable-5.6.0-released/" class="img-icon-darktable">Darktable 5.6.0</a></strong>. Там довольно много нового и интересного, но, конечно,
+главное, что обращает на себя внимание — это AI-функции. Имеются: шумоподавление в RAW, просто шумоподавление, апскейл (т.е.
+увеличение картинки) и маски. Маски я пока не смотрел — я ими как-то вообще не пользуюсь и не очень понимаю, что проверять.
+Шумодавами и апскейлом я, правда, тоже почти не пользуюсь, но куда смотреть — представляю.</p>
+
+<h2 id="что-дают">Что дают?</h2>
+
+<p>Итак. «raw denoise», «denoise» и «upscale». Как можно видеть на скриншоте, они объединены в один модуль, и это <em>не модуль
+обработки</em>, он не участвует цепочке обработки и не попадает в историю, это <em>служебный модуль</em>, и находится он в <em>левой</em>
+панели.</p>
+
+<p>По кнопке «process» генерируется отдельный новый файл — TIFF в случае «denoise» и «upscale», и DNG — в случае «raw denoise».
+По умолчанию он размещается рядом с исходным и сразу регистрируется в библиотеке.</p>
+
+<p>За исходник «raw denoise» берет исходное состояние RAW-файла, тогда как «denoise» и «upscale» — результат всех примененных
+обработок. Что, безусловно, логично, но не консистентно. К то­му же конкретно для «denoise» это неудобно — по идее это действие
+должно быть внутри цепочки, ближе к началу… Я недоучел этот момент, когда делал свои тесты (о чем ниже), но переделывать
+не буду — «правильный» порядок действий слишком заморочный, чтобы реальный пользователь им занимался.</p>
+
+<h3 id="где-взять">Где взять?</h3>
+
+<p>Тут есть засада: если вы как порядочный человек просто обновитесь из своего дистрибутива, не факт, что новые фичи у вас появятся.
+У меня в Gentoo, например, не появились. Требуется сборка с дополнительным флагом, и когда мейнтейнеры разберутся — неизвестно.
+Поэтому самый простой способ — скачать <a href="https://github.com/darktable-org/darktable/releases/tag/release-5.6.0">официальный релиз с GitHib</a>. Для Linux там имеется AppImage, и он у меня заработал.</p>
+
+<p>Затем нужно зайти в настройки.</p>
+
+<figure class="__figure __implicit_figure __center" style="max-width:900px;"><a href="/img/2026/07/25/ai-darktable/20260724_173940-fhd.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/20260724_173940-900-1221x560-64-52.webp" class="__image" alt="Скриншот настроек" title="Скриншот настроек" /></a></figure>
+
+<ul>
+  <li>
+    <p>Включаем вверху галочку «enable AI features».</p>
+  </li>
+  <li>
+    <p>Скачиваем модели. Все, или только дефолтные.</p>
+  </li>
+  <li>
+    <p>Закрываем Darktable и запускаем его снова.</p>
+  </li>
+</ul>
+
+<p>Отдельный вопрос: как включить выполнение на GPU. По идее, нужно установить ONNX и радоваться, но у меня не получилось — ONNX установил,
+но он не цепляется. Для пробы это не критично, да и для использования — не так, чтобы очень — если нужно обработать небольшое количество
+фотографий, скорость на CPU вполне терпима.</p>
+
+<h2 id="что-получилось">Что получилось?</h2>
+
+<dl>
+  <dt>TL;DR</dt>
+  <dd>
+    <ul>
+      <li>
+        <p>Как работает <em>raw denoise</em> мне в целом понравилось, это сильно лучше шумоподавления в стандартных модулях.</p>
+      </li>
+      <li>
+        <p>А вот <em>denoise</em> просто на высоких ISO порождает артефакты. <em>Отчасти</em> эти артефакты могут усиливаться тем, что у ме­ня по умолчанию
+включен локальный контраст, а <em>denoise</em>, как сказано выше, берет уже обработанное изображение.</p>
+      </li>
+      <li>
+        <p>Что касается <em>upscale</em>… Я не понял. Если брать 100% кроп, то какого-то улучшения деталей в сравнении с тупым увеличением при экспорте
+(там можно разрешить увеличение). Общая картинка выглядит пошарпленной, но это опять же может быть вызвано двойным применением локального
+контраста.</p>
+      </li>
+    </ul>
+  </dd>
+</dl>
+
+<p>Ниже <em>много</em> тестовых картинок.</p>
+
+<!--more-->
+
+<h3 id="шумодавы">Шумодавы</h3>
+
+<p>Ниже на разных ISO показаны результаты работы шумоподавления. Порядок такой: без шумодава, AI raw denoise, AI denoise. стандартный модуль raw denoise,
+стандартный модуль denoise (profiled). В посте я показываю кроп, по клику откроется большая картинка, ужатая до 1800x1800px.</p>
+
+<h4 id="iso-3200">ISO 3200</h4>
+
+<p>Это то, что я на своей камере считаю максимальным условно рабочим ISO — шум заметен, но для информационных фото приемлем. Всё, что выше,
+я не использую — автоматика ограничена на этом значении.</p>
+
+<p style="text-align:center;"><a href="/img/2026/07/25/ai-darktable/ISO3200-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO3200-280-280x280-840-2220.webp" class="__image" style="margin: 5px;" alt="ISO3200, оригинал" title="ISO3200, оригинал" /></a>
+<a href="/img/2026/07/25/ai-darktable/ISO3200_ai_raw-denoise-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO3200_ai_raw-denoise-280-280x280-840-2220.webp" class="__image" style="margin: 5px;" alt="ISO3200, AI raw denoise" title="ISO3200, AI raw denoise" /></a>
+<a href="/img/2026/07/25/ai-darktable/ISO3200_ai_denoise-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO3200_ai_denoise-280-280x280-840-2220.webp" class="__image" style="margin: 5px;" alt="ISO3200, AI denoise" title="ISO3200, AI denoise" /></a>
+<a href="/img/2026/07/25/ai-darktable/ISO3200_std_raw-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO3200_std_raw-280-280x280-840-2220.webp" class="__image" style="margin: 5px;" alt="ISO3200, std raw denoise" title="ISO3200, std raw denoise" /></a>
+<a href="/img/2026/07/25/ai-darktable/ISO3200_std_denoised-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO3200_std_denoised-280-280x280-840-2220.webp" class="__image" style="margin: 5px;" alt="ISO3200, std denoise profiled" title="ISO3200, std denoise profiled" /></a></p>
+
+<h4 id="iso-12800">ISO 12800</h4>
+
+<p style="text-align:center;"><a href="/img/2026/07/25/ai-darktable/ISO12800-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO12800-280-280x280-1050-2250.webp" class="__image" style="margin: 5px;" alt="ISO12800, оригинал" title="ISO12800, оригинал" /></a>
+<a href="/img/2026/07/25/ai-darktable/ISO12800_ai_raw-denoise-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO12800_ai_raw-denoise-280-280x280-1050-2250.webp" class="__image" style="margin: 5px;" alt="ISO12800, AI raw denoise" title="ISO12800, AI raw denoise" /></a>
+<a href="/img/2026/07/25/ai-darktable/ISO12800_ai_denoise-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO12800_ai_denoise-280-280x280-1050-2250.webp" class="__image" style="margin: 5px;" alt="ISO12800, AI denoise" title="ISO12800, AI denoise" /></a>
+<a href="/img/2026/07/25/ai-darktable/ISO12800_std_raw_denoised-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO12800_std_raw_denoised-280-280x280-1050-2250.webp" class="__image" style="margin: 5px;" alt="ISO12800, std raw denoise" title="ISO12800, std raw denoise" /></a>
+<a href="/img/2026/07/25/ai-darktable/ISO12800_std_profiled-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO12800_std_profiled-280-280x280-1050-2250.webp" class="__image" style="margin: 5px;" alt="ISO12800, std denoise profiled" title="ISO12800, std denoise profiled" /></a></p>
+
+<h4 id="iso-51200">ISO 51200</h4>
+
+<p style="text-align:center;"><a href="/img/2026/07/25/ai-darktable/ISO51200-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO51200-280-280x280-1030-2180.webp" class="__image" style="margin: 5px;" alt="ISO51200, оригинал" title="ISO51200, оригинал" /></a>
+<a href="/img/2026/07/25/ai-darktable/ISO51200_ai_raw-denoise-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO51200_ai_raw-denoise-280-280x280-1030-2180.webp" class="__image" style="margin: 5px;" alt="ISO51200, AI raw denoise" title="ISO51200, AI raw denoise" /></a>
+<a href="/img/2026/07/25/ai-darktable/ISO51200_ai_denoise-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO51200_ai_denoise-280-280x280-1030-2180.webp" class="__image" style="margin: 5px;" alt="ISO51200, AI denoise" title="ISO51200, AI denoise" /></a>
+<a href="/img/2026/07/25/ai-darktable/ISO51200_std_raw-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO51200_std_raw-280-280x280-1030-2180.webp" class="__image" style="margin: 5px;" alt="ISO51200, std raw denoise" title="ISO51200, std raw denoise" /></a>
+<a href="/img/2026/07/25/ai-darktable/ISO51200_std_profiled-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO51200_std_profiled-280-280x280-1030-2180.webp" class="__image" style="margin: 5px;" alt="ISO51200, std denoise profiled" title="ISO51200, std denoise profiled" /></a></p>
+
+<h3 id="upscale">Upscale</h3>
+
+<p>Первая картинка — увеличение через стандартный экспорт, вторая — AI upscale.</p>
+
+<p style="text-align:center;"><a href="/img/2026/07/25/ai-darktable/ISO100_std_upscale-3200x3200.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO100_std_upscale-400-400x400-1900-2590.webp" class="__image" style="margin: 5px;" alt="Увеличение x2 стандартный экспорт" title="Увеличение x2 стандартный экспорт" /></a>
+<a href="/img/2026/07/25/ai-darktable/ISO100_ai_upscale-2x-3200x3200.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO100_ai_upscale-2x-400-400x400-1900-2590.webp" class="__image" style="margin: 5px;" alt="Увеличение x2 AI" title="Увеличение x2 AI" /></a></p>
+
+<p>Разница как бы есть… Но не особо понятна. Но учитывая, что я видел и такие ai-апскейлеры, которые делают <em>хуже</em>, чем простое увеличение…</p>
+
+<h2 id="итого">Итого</h2>
+
+<p>В общем, неплохо. Хотя для себя интересным я вижу только <em>raw denoise</em>, да и тем буду пользоваться редко.</p>
+
+<p>С одной стороны, было бы неплохо встроить эти операции в цепочку обработки. С другой стороны — они медленные, точ­нее — вообще ресурсоемкие,
+а цепочка обработки в процессе вычисляется много-много раз…</p>
+
+<p>Посмотрим, к чему Darktable будет двигаться, мне почему-то кажется текущее состояние не окончательным.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;photo&quot;, &quot;processing&quot;, &quot;tech&quot;, &quot;soft&quot;, &quot;graphics&quot;]" /><category term="Darktable" /><category term="RAW" /><category term="AI" /><category term="нейросети" /><category term="шумоподавление" /><summary type="html"><![CDATA[В Darktable завезли нейросетевой шумодав и апскейлер (и не только).]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2026/07/25/ai-darktable/20260724_173940-640x640-1318x688-17-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2026/07/25/ai-darktable/20260724_173940-640x640-1318x688-17-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Принтшопы, первые опыты</title><link href="https://shikhalev.github.io/life/2026/06/merch.html" rel="alternate" type="text/html" title="Принтшопы, первые опыты" /><published>2026-06-05T00:00:00+00:00</published><updated>2026-06-05T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/06/merch</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/06/merch.html"><![CDATA[<blockquote>
   <p><em>Шьём да порем — нитки портим…</em></p>
 </blockquote>
 
@@ -1256,189 +1377,4 @@ RAW (те самые сырые данные с мат­ри­цы) на ко�
       <p><a href="https://docs.darktable.org/usermanual/4.0/en/preferences-settings/processing/">https://docs.darktable.org/usermanual/4.0/en/preferences-settings/processing/</a> <a href="#fnref:settings" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;photo&quot;, &quot;processing&quot;, &quot;tech&quot;, &quot;soft&quot;, &quot;graphics&quot;]" /><category term="Darktable" /><category term="Linux" /><category term="RAW" /><category term="цвет" /><summary type="html"><![CDATA[Очередная версия Darktable, текущее состояние]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2022/12/26/darktable-4.2/management-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2022/12/26/darktable-4.2/management-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Натурадыбр –​ 2022</title><link href="https://shikhalev.github.io/life/2022/12/naturadybr-2022.html" rel="alternate" type="text/html" title="Натурадыбр –​ 2022" /><published>2022-12-15T00:00:00+00:00</published><updated>2022-12-15T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2022/12/naturadybr-2022</id><content type="html" xml:base="https://shikhalev.github.io/life/2022/12/naturadybr-2022.html"><![CDATA[<p class="note italic">Может быть, конечно, кто-нибудь интересный еще успеет до конца декабря залететь на кормушку, но во-первых, вряд ли, а во-вто­рых,
-кто ж мне запретит эту запись проапдейтить…</p>
-
-<hr />
-
-<figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2022/12/15/naturadybr-2022/IMG_1254-fhd.webp" class="__image_link"><img src="/img/2022/12/15/naturadybr-2022/IMG_1254-320.webp" class="__image" alt="Весеннее фото осенних листьев" title="Весеннее фото осенних листьев" /></a></figure>
-
-<p>Снимал я в этом году мало, настроение как-то не спо­соб­с­т­во­ва­ло, а писал об этом еще меньше — т.е. не пи­сал вообще. Но кое-что отметить
-все же хо­те­лось бы. Ко­го-то встретил впервые (терпеть не могу слово «лайфер»), ко­го-то впервые встретил в Ар­тях… Ну а кто-то просто
-прикольный.</p>
-
-<p>Так что я пробежался по <a href="https://www.inaturalist.org/calendar/shikhalev?year=2022">сво­ему календарю</a> на <strong><a href="https://www.inaturalist.org/" class="img-icon-inaturalist">iNaturalist</a></strong> и надергал немного наблюдений.
-Вообще, недавно сам iNaturalist выкатил <strong><a href="https://www.inaturalist.org/stats/2022/shikhalev">пер­со­на­ли­зи­ро­ван­ную статистику</a></strong>, из ко­то­рой можно выяснить, что всего за год я наблюл
-126 но­вых (для се­бя) видов… В ос­нов­ном это растения, причем вполне обычные и особого интереса не пред­став­ля­ю­щие.</p>
-
-<p>Но некоторые симпатичные, с них и начнем.</p>
-
-<!--more-->
-
-<h2 id="растения">Растения</h2>
-
-<figure class="__figure __implicit_figure __right face" style="max-width:180px;"><a href="/img/2022/12/15/naturadybr-2022/IMG_5328-fhd.webp" class="__image_link"><img src="/img/2022/12/15/naturadybr-2022/IMG_5328-180.webp" class="__image" alt="Сусак зонтичный (Butomus umbellatus)" title="Сусак зонтичный (Butomus umbellatus)" /></a></figure>
-
-<p><a href="https://www.inaturalist.org/observations/126326770"><strong>Сусак зонтичный</strong> <em>(Butomus umbellatus)</em></a>. Странно, но раньше я его как-то никогда не ви­дел. Или не за­ме­чал. Хотя во­об­ще-то
-цветок довольно заметный. Да и, судя по данным iNa­tu­ra­list, вовсе не ред­кий.</p>
-
-<p>Надо будет как-нибудь попробовать его корневище. А будь у ме­ня в на­ли­чии собственный прудик, я бы всенепременно посадил его вдоль бе­ре­га —
-очень красиво смотрится.</p>
-
-<figure class="__figure __implicit_figure __left face" style="max-width:180px;"><a href="/img/2022/12/15/naturadybr-2022/IMG_5350-fhd.webp" class="__image_link"><img src="/img/2022/12/15/naturadybr-2022/IMG_5350-180.webp" class="__image" alt="Чернокорень лекарственный (Cynoglossum officinale)" title="Чернокорень лекарственный (Cynoglossum officinale)" /></a></figure>
-
-<p><a href="https://www.inaturalist.org/observations/126328638"><strong>Чернокорень лекарственный</strong> <em>(Cynoglossum officinale)</em></a>. С этим хо­тя бы понятно, почему я его раньше не за­ме­чал — мелковат.
-В от­ли­чие от пре­ды­ду­ще­го — <em>ядовит</em> (эпитет «лекарственный» обязывает). <a href="https://ru.wikipedia.org/wiki/Чернокорень_лекарственный">В ви­ки­пе­дии</a> написано: «все части растения обладают
-неприятным запахом», но, видимо, не силь­ным, поскольку я ничего такого не за­ме­тил, хотя снимал вблизи, впрочем, не рвал и не мял.</p>
-
-<p>Но выглядит прикольно, цвет насыщенный.</p>
-
-<figure class="__figure __implicit_figure __right face pagebreak" style="max-width:180px;"><a href="/img/2022/12/15/naturadybr-2022/IMG_5588-fhd.webp" class="__image_link"><img src="/img/2022/12/15/naturadybr-2022/IMG_5588-180.webp" class="__image" alt="Кувшинка снежно-белая (Nymphaea candida)" title="Кувшинка снежно-белая (Nymphaea candida)" /></a></figure>
-
-<p><a href="https://www.inaturalist.org/observations/126332704"><strong>Кувшинка снежно-белая</strong> <em>(Nym­phaea can­di­da)</em></a>. К со­жа­ле­нию, кувшинка наотрез отказалась расти ближе к бе­ре­гу, поэтому фотография
-не очень.</p>
-
-<p>Причем я раньше был уверен, что кувшинки у нас не рас­тут, в от­ли­чие от <a href="https://www.inaturalist.org/observations/126326219">ку­бы­шек</a>, которые встречались мне и в про­ш­лые годы.
-Что касаемо сусака и чернокорня, то я просто не знал о их существовании как таковых, вот и познакомился.
-Но были и виды, которые я пусть не то, чтобы старательно искал, но в це­лом планировал при слу­чае снять, будучи уверен в их наличии. И та­ки снял:</p>
-
-<ul>
-  <li>
-    <p><a href="https://www.inaturalist.org/observations/126995199"><strong>Вяз гладкий</strong> <em>(Ulmus laevis)</em></a> (тут я, конечно, не рас­счи­ты­вал на кон­к­рет­ный вид, да и не в со­сто­я­нии был бы определить до ви­да без iNa­tu­ra­list).</p>
-  </li>
-  <li>
-    <p><a href="https://www.inaturalist.org/observations/126995195"><strong>Ольха серая</strong> <em>(Alnus incana)</em></a> (аналогично, мое личное опознание тут только до ро­да).</p>
-  </li>
-  <li>
-    <p><a href="https://www.inaturalist.org/observations/122667396"><strong>Хмель обыкновенный</strong> <em>(Humulus lupulus)</em></a> — его, правда, в на­ших краях полно в са­дах-ого­ро­дах, но мне нужен был дикий.</p>
-  </li>
-</ul>
-
-<h2 id="птицы">Птицы</h2>
-
-<figure class="__figure __implicit_figure __right face" style="max-width:180px;"><a href="/img/2022/12/15/naturadybr-2022/IMG_2654-fhd.webp" class="__image_link"><img src="/img/2022/12/15/naturadybr-2022/IMG_2654-180-1035x1035-524-642.webp" class="__image" alt="Обыкновенный клёст (Loxia curvirostra)" title="Обыкновенный клёст (Loxia curvirostra)" /></a></figure>
-
-<p><a href="https://www.inaturalist.org/observations/121740788"><strong>Обыкновенный клёст</strong> <em>(Lo­xia cur­vi­ros­t­ra)</em></a>. Совершенно замечательная птица, которую я и не ча­ял снять на са­мом-то деле, поскольку
-обычно они не стре­мят­ся как-то к лю­дям — у них рацион такой, что в ле­сах им интереснее. Од­на­ко же внезапно целая стайка из че­ты­рех особей
-(или, вероятно, семья с дву­мя детьми) прилетела прямо к нам во двор и любезно согласилась попозировать. Не мо­гу сказать, что хорошо снял,
-зато могу заметить, что они в ди­на­ми­ке еще более обаятельны, чем можно заключить по кар­тин­ке. А уж с ка­ким грохотом они кидают шишки на кры­шу гаража…</p>
-
-<hr />
-
-<figure class="__figure __implicit_figure __left face" style="max-width:180px;"><a href="/img/2022/12/15/naturadybr-2022/IMG_5548-fhd.webp" class="__image_link"><img src="/img/2022/12/15/naturadybr-2022/IMG_5548-180-600x600-766-714.webp" class="__image" alt="Лысуха (Fulica atra)" title="Лысуха (Fulica atra)" /></a></figure>
-
-<p><a href="https://www.inaturalist.org/observations/126330417"><strong>Лысуха</strong> <em>(Fulica atra)</em></a>. Тоже был уверен, что у нас <em>такое</em> не во­дит­ся. Что, конечно, меня не кра­сит. Интересная птица, особенно
-впечатляют лапы, которые мне снять не уда­лось (да и вообще фото вышли не очень, поскольку все издали).</p>
-
-<p>Вообще в ту часть пруда я поперся, чтобы найти уток, и как раз это-то мне удалось не впол­не — <a href="https://www.inaturalist.org/observations/126444560">один мутный кадр непонятно кого</a>.
-Но уже лысуха в об­щем-то сделала прогулку не без­ус­пеш­ной, а она оказалась не един­с­т­вен­ной новинкой. Помимо нее несколько новых растений,
-включая те три, фото которых я привел выше, но не толь­ко они.</p>
-
-<figure class="__figure __implicit_figure __right face" style="max-width:180px;"><a href="/img/2022/12/15/naturadybr-2022/IMG_5751-fhd.webp" class="__image_link"><img src="/img/2022/12/15/naturadybr-2022/IMG_5751-180-600x600-730-666.webp" class="__image" alt="Выпь большая (Botaurus stellaris)" title="Выпь большая (Botaurus stellaris)" /></a></figure>
-
-<p><a href="https://www.inaturalist.org/observations/126341851"><strong>Выпь большая</strong> <em>(Botaurus stellaris)</em></a>. Фоточка так себе, поскольку очень уж издали, однако опознается вполне однозначно.
-Отдельно прикольно то, что я вообще не от­ра­зил, что снимаю что-то ин­те­рес­ное — ну, летит кто-то и летит… Уже на раз­бор­ке фотографий
-обнаружил и обрадовался. Интересно, до­бе­рет­ся ли как-ни­будь до нас большая белая цапля для ком­п­лек­та?..</p>
-
-<p><a href="https://www.inaturalist.org/observations/126444558">Се­рой</a>-то полно, но поскольку она не но­вость, подробно останавливаться не бу­ду.</p>
-
-<figure class="__figure __implicit_figure __left face pagebreak" style="max-width:180px;"><a href="/img/2022/12/15/naturadybr-2022/IMG_5646-fhd.webp" class="__image_link"><img src="/img/2022/12/15/naturadybr-2022/IMG_5646-180-500x500-489-503.webp" class="__image" alt="Перевозчик (Actitis hypoleucos)" title="Перевозчик (Actitis hypoleucos)" /></a></figure>
-
-<p>Еще с той же прогулки (это все <a href="https://www.google.com/maps/d/edit?mid=1Szwx2ZSAbr82ScT41OCluF1k1Du9WMU&amp;usp=sharing">дальняя часть Ар­тин­с­ко­го пруда</a>) птички по­мень­ше.</p>
-
-<p><a href="https://www.inaturalist.org/observations/126326771"><strong>Перевозчик</strong> <em>(Actitis hy­po­leu­cos)</em></a> — как же эту сволочь трудно снять… Заполошные они ка­кие-то, ну и шустрые.</p>
-
-<figure class="__figure __implicit_figure __right face" style="max-width:180px;clear:right;"><a href="/img/2022/12/15/naturadybr-2022/IMG_6086-fhd.webp" class="__image_link"><img src="/img/2022/12/15/naturadybr-2022/IMG_6086-180.webp" class="__image" alt="Чеглок (Falco subbuteo)" title="Чеглок (Falco subbuteo)" /></a></figure>
-
-<p><a href="https://www.inaturalist.org/observations/126445163"><strong>Че­г­лок</strong> <em>(Falco sub­bu­teo)</em></a> — не нов для ме­ня вообще, но в Ар­тин­с­ком районе он мне до то­го не по­па­дал­ся. Со­ко­лов тоже трудно сни­мать —
-очень быстрые и маневренные.</p>
-
-<hr />
-
-<p>Теперь переместимся мысленно на дру­гой во­до­ем — реку Уфу, <a href="https://www.google.com/maps/d/edit?mid=1mJIlNvWbgBMNIQFLV2kbnsbLnxDlsE0&amp;usp=sharing">поблизости от де­рев­ни Усть-Югуш</a>. Оттуда, кстати, те новые растения,
-фотографии которых я приводить поленился (и там цветов нет, а листья и кора выглядят не столь симпатично).</p>
-
-<figure class="__figure __implicit_figure __left face" style="max-width:180px;clear:left;"><a href="/img/2022/12/15/naturadybr-2022/IMG_6709-fhd.webp" class="__image_link"><img src="/img/2022/12/15/naturadybr-2022/IMG_6709-180-1283x1283-483-475.webp" class="__image" alt="Большой крохаль (Mergus merganser)" title="Большой крохаль (Mergus merganser)" /></a></figure>
-
-<p>Обратный к вы­пи слу­чай — тут я сразу видел, что снимаю ко­го-то необычного… Утка с зу­ба­ми — это <em>достаточно</em> не­обыч­но.
-<a href="https://www.inaturalist.org/observations/126926983"><strong>Боль­шой крохаль</strong> <em>(Mergus mer­gan­ser)</em></a> — прошу любить и не жа­ло­вать­ся. Четко отснять «зубы» (на са­мом деле, конечно, это такой зазубренный клюв)
-у ме­ня не по­лу­чи­лось, но вживую выглядит впечатляюще.</p>
-
-<figure class="__figure __implicit_figure __right face" style="max-width:180px;clear:right;"><a href="/img/2022/12/15/naturadybr-2022/IMG_6319-fhd.webp" class="__image_link"><img src="/img/2022/12/15/naturadybr-2022/IMG_6319-180-1677x1677-1432-204.webp" class="__image" alt="Кулик-сорока (Haematopus ostralegus)" title="Кулик-сорока (Haematopus ostralegus)" /></a></figure>
-
-<p>И от­ту­да же еще один ку­лик — <a href="https://www.inaturalist.org/observations/126926659"><strong>кулик-сорока</strong> <em>(Hae­ma­to­pus os­t­ra­le­gus)</em></a>. Внесен в Крас­ную книгу<sup id="fnref:red"><a href="#fn:red" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>, между прочим.</p>
-
-<p>И на этом с вод­ны­ми и околоводными птицами закончим. Возвращаемся в лес.</p>
-
-<hr />
-
-<figure class="__figure __implicit_figure __left face" style="max-width:180px;clear:left;"><a href="/img/2022/12/15/naturadybr-2022/IMG_4409-fhd.webp" class="__image_link"><img src="/img/2022/12/15/naturadybr-2022/IMG_4409-180-1170x1170-560-747.webp" class="__image" alt="Осоед (Pernis apivorus)" title="Осоед (Pernis apivorus)" /></a></figure>
-
-<p><a href="https://www.inaturalist.org/observations/125216695"><strong>Осоед</strong> <em>(Per­nis api­vo­rus)</em></a>. Не пер­вый раз его встречаю, но раньше все как-то в чу­жих краях. Теперь галочка поставлена, гештальт закрыт.</p>
-
-<p>Если кто не в кур­се — это такая довольно крупная (по мер­кам наших мест) хищная птица, которая стала насекомоядной, что заметно по от­но­си­тель­но
-тонкому клюву.</p>
-
-<figure class="__figure __implicit_figure __right face" style="max-width:180px;"><a href="/img/2022/12/15/naturadybr-2022/IMG_2293-fhd.webp" class="__image_link"><img src="/img/2022/12/15/naturadybr-2022/IMG_2293-180-1141x1141-428-374.webp" class="__image" alt="Обыкновенный поползень (Sitta europaea)" title="Обыкновенный поползень (Sitta europaea)" /></a></figure>
-
-<p><a href="https://www.inaturalist.org/observations/120480679"><strong>Обыкновенный поползень</strong> <em>(Sitta europaea)</em></a> — это ура-ура и на­ка­нец­та! Ре­аль­но, обык­но­вен­ней­шая же птица, но он упорно
-мне не по­па­дал­ся именно в Ар­тях, хотя ясно, что должен быть, как без не­го. Даже на кор­муш­ку не при­ле­тал. Ви­ди­мо, ему хватает еды в ле­су. А за­ме­тить и сфотографировать его в ле­су… Ну, на фо­то видно, какое у птич­ки цветовое решение, и какое у бе­ре­зы. Тем не ме­нее в этом году таки попался, и даже <a href="https://www.inaturalist.org/observations/127518938">дважды</a>.</p>
-
-<p>Еще из лесных надо отметить <a href="https://www.inaturalist.org/observations/125222059"><strong>рябчика</strong> <em>(Tetrastes bo­na­sia)</em></a> — без ил­люс­т­ра­ции, очень уж мало там че­го-ли­бо видно сквозь подлесок.
-Собственно и это — большая уда­ча — птицы, на ко­то­рых люди охотятся, куда более осторожны, чем непромысловые. Тут я, похоже, оказался где-то рядом
-с вы­вод­ком и самка начала нарезать вокруг меня круги, не при­бли­жа­ясь, но и не те­ряя из виду.</p>
-
-<p>Упо­мя­ну также <em>воз­мож­ную</em> <a href="https://www.inaturalist.org/observations/118253624"><strong>глухую кукушку</strong> <em>(Cu­cu­lus op­ta­tus)</em></a>, но это не точ­но.</p>
-
-<hr />
-
-<p class="pagebreak">И совсем рядом с домом случились совершенно новые виды в коллекцию:</p>
-
-<figure class="__figure __implicit_figure __left face" style="max-width:180px;"><a href="/img/2022/12/15/naturadybr-2022/IMG_3232-fhd.webp" class="__image_link"><img src="/img/2022/12/15/naturadybr-2022/IMG_3232-180-1132x1132-505-542.webp" class="__image" alt="Горихвостка-чернушка (Phoenicurus ochruros)" title="Горихвостка-чернушка (Phoenicurus ochruros)" /></a></figure>
-
-<p><a href="https://www.inaturalist.org/observations/123966537"><strong>Горихвостка-чернушка</strong> <em>(Phoenicurus ochruros)</em></a>. Причем несколько раз за ле­то попалась, где-то рядом загнездилась, видимо.
-Хорошо бы весной еще и самца подловить, <a href="https://www.inaturalist.org/observations/125015537">обыч­ных</a>-то у ме­ня много на­фот­ка­но, а этих нету. Ну и, кстати, <a href="https://www.inaturalist.org/observations?locale=ru&amp;place_id=43269&amp;preferred_place_id=11829&amp;subview=table&amp;taxon_id=13000">в Ар­тин­с­ком районе я первым этот
-вид зафиксировал</a>.</p>
-
-<figure class="__figure __implicit_figure __right face" style="max-width:180px;"><a href="/img/2022/12/15/naturadybr-2022/IMG_8607-fhd.webp" class="__image_link"><img src="/img/2022/12/15/naturadybr-2022/IMG_8607-180-528x528-359-302.webp" class="__image" alt="Седой дятел (Picus canus)" title="Седой дятел (Picus canus)" /></a></figure>
-
-<p><a href="https://www.inaturalist.org/observations/139203209"><strong>Седой дятел</strong> <em>(Picus canus)</em></a>. Воз­мож­но, за­лет­ный — снято осенью, когда у мно­гих птиц движуха. С дру­гой стороны, почему б ему у нас и
-не гнез­дить­ся? В аре­ал вписываемся.</p>
-
-<p>Еще один шаг к то­му, чтобы собрать <em>всех</em> наших дятлов. Есть у ме­ня такая надежда.</p>
-
-<figure class="__figure __implicit_figure __left face" style="max-width:180px;clear:left;"><a href="/img/2022/12/15/naturadybr-2022/IMG_8726-fhd.webp" class="__image_link"><img src="/img/2022/12/15/naturadybr-2022/IMG_8726-180-2756x2756-113-539.webp" class="__image" alt="Урагус (Carpodacus sibiricus)" title="Урагус (Carpodacus sibiricus)" /></a></figure>
-
-<p><a href="https://www.inaturalist.org/observations/142269065"><strong>Урагус</strong> <em>(Carpodacus sibiricus)</em></a>. Не очень похоже на яр­ко-крас­ные классические изображения, да. Потому что это самка. Во­об­ще,
-когда я ее увидел, сначала подумал на сне­ги­ри­цу, но чуть приглядевшись, обратил внимание на пе­ст­ри­ны и полоски. И по­бе­жал за камерой.</p>
-
-<p>Интересно, что кормушкой с сем­ка­ми она не за­ин­те­ре­со­ва­лась, а обклевывала буквально рядом сухие сорняки (там много семян, но они же мелкие…)</p>
-
-<p>И последняя птичка, тоже новая для меня, тоже рядом с домом — <a href="https://www.inaturalist.org/observations/135825317"><strong>варакушка</strong> <em>(Luscinia sve­ci­ca)</em></a>. Увы, кадры получились исключительно
-неудачные (а для <em>та­кой</em> птицы это особенно обидно). Тем не ме­нее, закрыт еще один геш­тальт, давно, давно я ее искал…</p>
-
-<h2 id="остальные">Остальные</h2>
-
-<figure class="__figure __implicit_figure __right face" style="max-width:180px;"><a href="/img/2022/12/15/naturadybr-2022/IMG_4994-fhd.webp" class="__image_link"><img src="/img/2022/12/15/naturadybr-2022/IMG_4994-180.webp" class="__image" alt="Пескарь волжский (Gobio volgensis)" title="Пескарь волжский (Gobio volgensis)" /></a></figure>
-
-<p>На самом деле больше по­хвас­тать­ся-то особо и нечем. Среди насекомых и прочих беспозвоночных никого особо интересного не встре­ти­лось (а иксодового клеща,
-пойманного на се­бя, я снимать поленился). Из мле­ко­пи­та­ю­щих не снял никого: видел <a href="https://www.inaturalist.org/observations/118168988"><em>косулю</em></a><sup id="fnref:cos"><a href="#fn:cos" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>, но не ус­пел поднять фотоаппарат, ну а <a href="https://www.inaturalist.org/observations/127661967"><em>боб­ра</em></a>
-даже и не ви­дел, только снял нечто, очень похожее на пло­ти­ну. Ос­та­ет­ся только показывать рыбов. Самый обыкновенный наш пескарь внезапно
-оказался не пес­ка­рем обыкновенным, а <a href="https://www.inaturalist.org/observations/126106858"><strong>пескарем волжским</strong> <em>(Gobio vol­gen­sis)</em></a>. Ока­зы­ва­ет­ся, в 2008 го­ду еще ввели новый вид.</p>
-
-<hr />
-
-<p>Не знаю, можно ли что-то планировать на бу­ду­щее… Но ес­ли получится, то хо­те­лось бы все-та­ки в но­вом году снять нормально тех, кого снял
-ар­хи­хре­но­во, ну и совсем бы­ло бы прекрасно сфотографировать ко­го-ни­будь из вы­ше­у­по­мя­ну­тых млеков.</p>
-
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:red">
-      <p>Глобальный статус кулика-сороки — «near threatened», что должно переводиться примерно как «близок к уг­ро­жа­е­мо­му положению», но
-    в русс­ком интерфейсе iNaturalist на этом месте стоит перевод «близок к ис­чез­но­ве­нию», и как это исправить я до сих пор понятия не имею. <a href="#fnref:red" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:cos">
-      <p>На вся­кий случай замечу, что это было задолго до <a href="https://66.ru/news/incident/257974/">ны­неш­ней эпизоотии</a>, зафиксированной, впрочем, в дру­гих районах области, даже не со­сед­них. <a href="#fnref:cos" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-  </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;life&quot;, &quot;nature&quot;, &quot;photo&quot;, &quot;birdwatching&quot;, &quot;dybr&quot;]" /><category term="птицы" /><category term="iNaturalist" /><category term="растения" /><category term="цветы" /><category term="лысуха" /><category term="выпь" /><category term="поползень" /><category term="крохаль" /><category term="клёст" /><category term="урагус" /><category term="варакушка" /><summary type="html"><![CDATA[Наблюдательские итоги 2022 года]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2022/12/15/naturadybr-2022/IMG_1254-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2022/12/15/naturadybr-2022/IMG_1254-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;photo&quot;, &quot;processing&quot;, &quot;tech&quot;, &quot;soft&quot;, &quot;graphics&quot;]" /><category term="Darktable" /><category term="Linux" /><category term="RAW" /><category term="цвет" /><summary type="html"><![CDATA[Очередная версия Darktable, текущее состояние]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2022/12/26/darktable-4.2/management-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2022/12/26/darktable-4.2/management-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

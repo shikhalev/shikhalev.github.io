@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+  <link rel="stylesheet" href="/assets/local.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>AI-функции в Darktable 5.6 | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="AI-функции в Darktable 5.6" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="В Darktable завезли нейросетевой шумодав и апскейлер (и не только)." />
+<meta name="twitter:description" property="og:description" content="В Darktable завезли нейросетевой шумодав и апскейлер (и не только)." />
+<link rel="canonical" href="https://shikhalev.github.io/photo/2026/07/ai-darktable.html" />
+<meta property="og:url" content="https://shikhalev.github.io/photo/2026/07/ai-darktable.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/2026/07/25/ai-darktable/20260724_173940-640x640-1318x688-17-0.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-07-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/2026/07/25/ai-darktable/20260724_173940-640x640-1318x688-17-0.webp" />
+<meta name="twitter:title" content="AI-функции в Darktable 5.6" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2026-07-25T00:00:00+00:00","datePublished":"2026-07-25T00:00:00+00:00","description":"В Darktable завезли нейросетевой шумодав и апскейлер (и не только).","headline":"AI-функции в Darktable 5.6","image":"https://shikhalev.github.io/img/2026/07/25/ai-darktable/20260724_173940-640x640-1318x688-17-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/photo/2026/07/ai-darktable.html"},"url":"https://shikhalev.github.io/photo/2026/07/ai-darktable.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "u2gczedmo7");
+</script>
+
+</head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.*</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-credit-card" href="/merch/">Мерч</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">AI-функции в Darktable 5.6</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2Fphoto%2F2026%2F07%2Fai-darktable.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2Fphoto%2F2026%2F07%2Fai-darktable.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2Fphoto%2F2026%2F07%2Fai-darktable.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2Fphoto%2F2026%2F07%2Fai-darktable.html&text=AI-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8+%D0%B2%C2%A0Darktable%C2%A05.6">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=AI-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8+%D0%B2%C2%A0Darktable%C2%A05.6&url=https%3A%2F%2Fshikhalev.github.io%2Fphoto%2F2026%2F07%2Fai-darktable.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2026-07-25T00:00:00+00:00" itemprop="datePublished">2026.07.25
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#AI">AI</a>​<a class="tag" href="/tags#Darktable">Darktable</a>​<a class="tag" href="/tags#RAW">RAW</a>​<a class="tag" href="/tags#нейросети">нейросети</a>​<a class="tag" href="/tags#шумоподавление">шумоподавление</a></aside></header><div itemprop="articleBody">
+  <figure class="__figure __implicit_figure __right" style="max-width:329px;"><img src="/img/2026/07/25/ai-darktable/20260724_211905-329.webp" class="__image" alt="Модуль neural restore" title="Модуль neural restore"></figure>
+
+<p>Недавно вышел <strong><a href="https://www.darktable.org/2026/06/darktable-5.6.0-released/" class="img-icon-darktable">Darktable 5.6.0</a></strong>. Там довольно много нового и интересного, но, конечно,
+главное, что обращает на себя внимание — это AI-функции. Имеются: шумоподавление в RAW, просто шумоподавление, апскейл (т.е.
+увеличение картинки) и маски. Маски я пока не смотрел — я ими как-то вообще не пользуюсь и не очень понимаю, что проверять.
+Шумодавами и апскейлом я, правда, тоже почти не пользуюсь, но куда смотреть — представляю.</p>
+
+<h2 id="что-дают">
+<a class="anchor" href="#%D1%87%D1%82%D0%BE-%D0%B4%D0%B0%D1%8E%D1%82" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что дают?</h2>
+
+<p>Итак. «raw denoise», «denoise» и «upscale». Как можно видеть на скриншоте, они объединены в один модуль, и это <em>не модуль
+обработки</em>, он не участвует цепочке обработки и не попадает в историю, это <em>служебный модуль</em>, и находится он в <em>левой</em>
+панели.</p>
+
+<p>По кнопке «process» генерируется отдельный новый файл — TIFF в случае «denoise» и «upscale», и DNG — в случае «raw denoise».
+По умолчанию он размещается рядом с исходным и сразу регистрируется в библиотеке.</p>
+
+<p>За исходник «raw denoise» берет исходное состояние RAW-файла, тогда как «denoise» и «upscale» — результат всех примененных
+обработок. Что, безусловно, логично, но не консистентно. К то­му же конкретно для «denoise» это неудобно — по идее это действие
+должно быть внутри цепочки, ближе к началу… Я недоучел этот момент, когда делал свои тесты (о чем ниже), но переделывать
+не буду — «правильный» порядок действий слишком заморочный, чтобы реальный пользователь им занимался.</p>
+
+<h3 id="где-взять">
+<a class="anchor" href="#%D0%B3%D0%B4%D0%B5-%D0%B2%D0%B7%D1%8F%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Где взять?</h3>
+
+<p>Тут есть засада: если вы как порядочный человек просто обновитесь из своего дистрибутива, не факт, что новые фичи у вас появятся.
+У меня в Gentoo, например, не появились. Требуется сборка с дополнительным флагом, и когда мейнтейнеры разберутся — неизвестно.
+Поэтому самый простой способ — скачать <a href="https://github.com/darktable-org/darktable/releases/tag/release-5.6.0">официальный релиз с GitHib</a>. Для Linux там имеется AppImage, и он у меня заработал.</p>
+
+<p>Затем нужно зайти в настройки.</p>
+
+<figure class="__figure __implicit_figure __center" style="max-width:900px;"><a href="/img/2026/07/25/ai-darktable/20260724_173940-fhd.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/20260724_173940-900-1221x560-64-52.webp" class="__image" alt="Скриншот настроек" title="Скриншот настроек"></a></figure>
+
+<ul>
+  <li>
+    <p>Включаем вверху галочку «enable AI features».</p>
+  </li>
+  <li>
+    <p>Скачиваем модели. Все, или только дефолтные.</p>
+  </li>
+  <li>
+    <p>Закрываем Darktable и запускаем его снова.</p>
+  </li>
+</ul>
+
+<p>Отдельный вопрос: как включить выполнение на GPU. По идее, нужно установить ONNX и радоваться, но у меня не получилось — ONNX установил,
+но он не цепляется. Для пробы это не критично, да и для использования — не так, чтобы очень — если нужно обработать небольшое количество
+фотографий, скорость на CPU вполне терпима.</p>
+
+<h2 id="что-получилось">
+<a class="anchor" href="#%D1%87%D1%82%D0%BE-%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D0%BB%D0%BE%D1%81%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что получилось?</h2>
+
+<dl>
+  <dt>TL;DR</dt>
+  <dd>
+    <ul>
+      <li>
+        <p>Как работает <em>raw denoise</em> мне в целом понравилось, это сильно лучше шумоподавления в стандартных модулях.</p>
+      </li>
+      <li>
+        <p>А вот <em>denoise</em> просто на высоких ISO порождает артефакты. <em>Отчасти</em> эти артефакты могут усиливаться тем, что у ме­ня по умолчанию
+включен локальный контраст, а <em>denoise</em>, как сказано выше, берет уже обработанное изображение.</p>
+      </li>
+      <li>
+        <p>Что касается <em>upscale</em>… Я не понял. Если брать 100% кроп, то какого-то улучшения деталей в сравнении с тупым увеличением при экспорте
+(там можно разрешить увеличение). Общая картинка выглядит пошарпленной, но это опять же может быть вызвано двойным применением локального
+контраста.</p>
+      </li>
+    </ul>
+  </dd>
+</dl>
+
+<p>Ниже <em>много</em> тестовых картинок.</p>
+
+<!--more-->
+
+<h3 id="шумодавы">
+<a class="anchor" href="#%D1%88%D1%83%D0%BC%D0%BE%D0%B4%D0%B0%D0%B2%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Шумодавы</h3>
+
+<p>Ниже на разных ISO показаны результаты работы шумоподавления. Порядок такой: без шумодава, AI raw denoise, AI denoise. стандартный модуль raw denoise,
+стандартный модуль denoise (profiled). В посте я показываю кроп, по клику откроется большая картинка, ужатая до 1800x1800px.</p>
+
+<h4 id="iso-3200">
+<a class="anchor" href="#iso-3200" aria-hidden="true"><span class="octicon octicon-link"></span></a>ISO 3200</h4>
+
+<p>Это то, что я на своей камере считаю максимальным условно рабочим ISO — шум заметен, но для информационных фото приемлем. Всё, что выше,
+я не использую — автоматика ограничена на этом значении.</p>
+
+<p style="text-align:center;"><a href="/img/2026/07/25/ai-darktable/ISO3200-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO3200-280-280x280-840-2220.webp" class="__image" style="margin: 5px;" alt="ISO3200, оригинал" title="ISO3200, оригинал"></a>
+<a href="/img/2026/07/25/ai-darktable/ISO3200_ai_raw-denoise-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO3200_ai_raw-denoise-280-280x280-840-2220.webp" class="__image" style="margin: 5px;" alt="ISO3200, AI raw denoise" title="ISO3200, AI raw denoise"></a>
+<a href="/img/2026/07/25/ai-darktable/ISO3200_ai_denoise-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO3200_ai_denoise-280-280x280-840-2220.webp" class="__image" style="margin: 5px;" alt="ISO3200, AI denoise" title="ISO3200, AI denoise"></a>
+<a href="/img/2026/07/25/ai-darktable/ISO3200_std_raw-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO3200_std_raw-280-280x280-840-2220.webp" class="__image" style="margin: 5px;" alt="ISO3200, std raw denoise" title="ISO3200, std raw denoise"></a>
+<a href="/img/2026/07/25/ai-darktable/ISO3200_std_denoised-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO3200_std_denoised-280-280x280-840-2220.webp" class="__image" style="margin: 5px;" alt="ISO3200, std denoise profiled" title="ISO3200, std denoise profiled"></a></p>
+
+<h4 id="iso-12800">
+<a class="anchor" href="#iso-12800" aria-hidden="true"><span class="octicon octicon-link"></span></a>ISO 12800</h4>
+
+<p style="text-align:center;"><a href="/img/2026/07/25/ai-darktable/ISO12800-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO12800-280-280x280-1050-2250.webp" class="__image" style="margin: 5px;" alt="ISO12800, оригинал" title="ISO12800, оригинал"></a>
+<a href="/img/2026/07/25/ai-darktable/ISO12800_ai_raw-denoise-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO12800_ai_raw-denoise-280-280x280-1050-2250.webp" class="__image" style="margin: 5px;" alt="ISO12800, AI raw denoise" title="ISO12800, AI raw denoise"></a>
+<a href="/img/2026/07/25/ai-darktable/ISO12800_ai_denoise-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO12800_ai_denoise-280-280x280-1050-2250.webp" class="__image" style="margin: 5px;" alt="ISO12800, AI denoise" title="ISO12800, AI denoise"></a>
+<a href="/img/2026/07/25/ai-darktable/ISO12800_std_raw_denoised-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO12800_std_raw_denoised-280-280x280-1050-2250.webp" class="__image" style="margin: 5px;" alt="ISO12800, std raw denoise" title="ISO12800, std raw denoise"></a>
+<a href="/img/2026/07/25/ai-darktable/ISO12800_std_profiled-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO12800_std_profiled-280-280x280-1050-2250.webp" class="__image" style="margin: 5px;" alt="ISO12800, std denoise profiled" title="ISO12800, std denoise profiled"></a></p>
+
+<h4 id="iso-51200">
+<a class="anchor" href="#iso-51200" aria-hidden="true"><span class="octicon octicon-link"></span></a>ISO 51200</h4>
+
+<p style="text-align:center;"><a href="/img/2026/07/25/ai-darktable/ISO51200-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO51200-280-280x280-1030-2180.webp" class="__image" style="margin: 5px;" alt="ISO51200, оригинал" title="ISO51200, оригинал"></a>
+<a href="/img/2026/07/25/ai-darktable/ISO51200_ai_raw-denoise-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO51200_ai_raw-denoise-280-280x280-1030-2180.webp" class="__image" style="margin: 5px;" alt="ISO51200, AI raw denoise" title="ISO51200, AI raw denoise"></a>
+<a href="/img/2026/07/25/ai-darktable/ISO51200_ai_denoise-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO51200_ai_denoise-280-280x280-1030-2180.webp" class="__image" style="margin: 5px;" alt="ISO51200, AI denoise" title="ISO51200, AI denoise"></a>
+<a href="/img/2026/07/25/ai-darktable/ISO51200_std_raw-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO51200_std_raw-280-280x280-1030-2180.webp" class="__image" style="margin: 5px;" alt="ISO51200, std raw denoise" title="ISO51200, std raw denoise"></a>
+<a href="/img/2026/07/25/ai-darktable/ISO51200_std_profiled-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO51200_std_profiled-280-280x280-1030-2180.webp" class="__image" style="margin: 5px;" alt="ISO51200, std denoise profiled" title="ISO51200, std denoise profiled"></a></p>
+
+<h3 id="upscale">
+<a class="anchor" href="#upscale" aria-hidden="true"><span class="octicon octicon-link"></span></a>Upscale</h3>
+
+<p>Первая картинка — увеличение через стандартный экспорт, вторая — AI upscale.</p>
+
+<p style="text-align:center;"><a href="/img/2026/07/25/ai-darktable/ISO100_std_upscale-3200x3200.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO100_std_upscale-400-400x400-1900-2590.webp" class="__image" style="margin: 5px;" alt="Увеличение x2 стандартный экспорт" title="Увеличение x2 стандартный экспорт"></a>
+<a href="/img/2026/07/25/ai-darktable/ISO100_ai_upscale-2x-3200x3200.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO100_ai_upscale-2x-400-400x400-1900-2590.webp" class="__image" style="margin: 5px;" alt="Увеличение x2 AI" title="Увеличение x2 AI"></a></p>
+
+<p>Разница как бы есть… Но не особо понятна. Но учитывая, что я видел и такие ai-апскейлеры, которые делают <em>хуже</em>, чем простое увеличение…</p>
+
+<h2 id="итого">
+<a class="anchor" href="#%D0%B8%D1%82%D0%BE%D0%B3%D0%BE" aria-hidden="true"><span class="octicon octicon-link"></span></a>Итого</h2>
+
+<p>В общем, неплохо. Хотя для себя интересным я вижу только <em>raw denoise</em>, да и тем буду пользоваться редко.</p>
+
+<p>С одной стороны, было бы неплохо встроить эти операции в цепочку обработки. С другой стороны — они медленные, точ­нее — вообще ресурсоемкие,
+а цепочка обработки в процессе вычисляется много-много раз…</p>
+
+<p>Посмотрим, к чему Darktable будет двигаться, мне почему-то кажется текущее состояние не окончательным.</p>
+
+
+
+<div markdown="span" class="announcer-block announcer-channel-telegram" style="display:none;" data-key="_posts/photo/2026/2026-07-25-ai-darktable.md" data-channel="telegram"></div>
+<script src="/js/announcer.js"></script>
+
+</div>
+
+<aside class="recommendations"><div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2025.10.05 |</span>
+            <a href="/tech/2025/10/darktable.html" title="Анонс «Практического руководства по darktable»">Этим стулом...</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a>​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.07.31 |</span>
+            <a href="/life/2021/07/walks.html" title="Пара (тройка) очередных выходов в лес с камерой">Еще прогулки</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-calendar-alt" href="/life/dybr/" title="Просто кусочки повседневности">Дыбр</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2019.09.21 |</span>
+            <a href="/photo/2019/09/darktable-quickstart.html" title="Настоящим постом я хочу рассказать, какие я использую настройки для уменьшения телодвижений в процессе обработки фотографий, и какие же движения никто не отменял. Сразу скажу, что это а) мой личный опыт, б) только базовая обработка. Повторять страницы мануала нет никакого желания, а если говорить об осмысленном применении всех возможностей, то и компетентности.">Darktable — (не очень) быстрый старт</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a>
+</dd>
+        </dl>
+      </div></aside>
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#что-дают">Что дают?</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#где-взять">Где взять?</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#что-получилось">Что получилось?</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#шумодавы">Шумодавы</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#iso-3200">ISO 3200</a></li>
+<li class="toc-entry toc-h4"><a href="#iso-12800">ISO 12800</a></li>
+<li class="toc-entry toc-h4"><a href="#iso-51200">ISO 51200</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#upscale">Upscale</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#итого">Итого</a></li>
+</ul>
+</aside><aside id="backs" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/photo.xml" title="Тексты о фотографии">О фото</a></li><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <!-- <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a> -->
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <!-- <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a> -->
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2026 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>
