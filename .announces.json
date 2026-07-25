@@ -1,1 +1,23 @@
-{}
+{
+  "telegram": {
+    "config": {
+      "method": "telegram",
+      "chat_id": "@shikhalev_blog"
+    },
+    "posts": {
+      "_posts/photo/2026/2026-07-25-ai-darktable.md": {
+        "url": "https://shikhalev.github.io/photo/2026/07/ai-darktable.html",
+        "date": "2026/07/25",
+        "title": "AI-функции в Darktable 5.6",
+        "description": "В Darktable завезли нейросетевой шумодав и апскейлер (и не только).",
+        "categories": [
+          "фото",
+          "обработка",
+          "технологии",
+          "ПО",
+          "графика"
+        ]
+      }
+    }
+  }
+}
