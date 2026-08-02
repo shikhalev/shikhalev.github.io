@@ -5,15 +5,16 @@
       "chat_id": "@shikhalev_blog"
     },
     "posts": {
-      "_posts/blog/2026/2026-08-02-channels-jul.md": {
-        "url": "https://shikhalev.github.io/life/2026/08/channels-jul.html",
+      "_posts/blog/2026/2026-08-02-merch-fogged.md": {
+        "url": "https://shikhalev.github.io/life/2026/08/merch-fogged.html",
         "date": "2026/08/02",
-        "title": "Tg: июль 2026",
-        "description": "Подборка наблюдений за июль",
+        "title": "Мерч: Туманные низины",
+        "description": "Добавил в каталог мерча еще один пейзаж...",
         "categories": [
           "жизнь",
-          "природа",
-          "веб"
+          "дыбр",
+          "веб",
+          "сайт"
         ]
       }
     }
