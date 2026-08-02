@@ -7,6 +7,7 @@ children:
   - _goods/type/clothes/men/polo.md
   - _goods/type/clothes/men/longsleeve.md
   - _goods/type/clothes/men/pajamas.md
+  - _goods/type/clothes/men/vm-men_shirts_3d.md
   - _goods/type/clothes/men/sweatshirt.md
   - _goods/type/clothes/men/hoodie.md
   - _goods/type/clothes/men/suit.md
