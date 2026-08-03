@@ -13,7 +13,8 @@ tags:
     - мониторинг
 image: _src/2022/11/2022-11-04/weather.png
 ---
-{% image @_src/2022/11/2022-11-04/weather.png figure right width=489px link=false title="Погода в Conky" %}
+
+![Погода в Conky](_src/2022/11/2022-11-04/weather.png){: right width="489" href="none" }
 
 Подключил прогноз погоды от **[OpenWeather][ow]** к Conky. Пока оно сыровато, надо продумать получше архитектуру, чтобы было удобно
 пользоваться. Поэтому я не стал пока документировать этот модуль в [README][readme] **[репозитория][repo]{:.img-icon-github}**,

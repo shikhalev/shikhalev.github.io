@@ -15,8 +15,9 @@ tags:
 image: _src/2022/10/2022-10-24/conky-seo.svg
 recommend: true
 ---
-{% image @_src/2022/10/2022-10-24/conky.svg figure right width=240px
-                             shape=true fig_class="logo" fig_style="shape-margin:20px;" link="https://github.com/brndnmtthws/conky" %}
+
+{: style="shape-margin:20px;" }
+![](_src/2022/10/2022-10-24/conky.svg){: right shape width="240" .logo href="https://github.com/brndnmtthws/conky" }
 
 Дано — известная многим программа **[Conky][conky]**, используемая в основном для мониторинга различных параметров системы, датчиков и т.д.
 Собственно, с датчиками у меня и возникала регулярно проблема — выбор датчика в Conky производится по номеру, т.е. примерно так `${hwmon 1 temp 1}`;
