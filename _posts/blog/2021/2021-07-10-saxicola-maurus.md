@@ -14,10 +14,12 @@ tags:
   - наблюдения
   - iNaturalist
 image: _src/2021/07/2021-07-10/IMG_7016.jpg
-seo_image_crop: "500:261+0+562"
+is_images:
+  seo_image:
+    crop: "500:261+0+562"
 ---
-{% image @_src/2021/07/2021-07-10/IMG_7016.jpg figure right width=240px title="Сибирский черноголовый чекан (Saxicola maurus)"
-                                 fig_class="face" crop="874x874+504+641" %}
+
+![Сибирский черноголовый чекан (Saxicola maurus)](_src/2021/07/2021-07-10/IMG_7016.jpg){: right width="240" .face crop="874x874+504+641" }
 
 Помнится, я не так давно [жаловался][walk], что эта птичка мне никак не попадается в этом сезоне. Так вот — **[попался][nat]{:.img-icon-inaturalist}** (на фото самец).
 

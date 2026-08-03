@@ -13,13 +13,15 @@ tags:
   - растения
   - EXIF
 image: _src/2021/05/2021-05-24/2559.png
-seo_image_crop: "500:261+183+0"
+is_images:
+  seo_image:
+    crop: "500:261+183+0"
 recommend: true
 announce: true
 date: 2021-05-24 21:12 +0500
 ---
-{% image @_src/2021/05/2021-05-24/1414.png figure right width=420px shape fig_class="logo"
-                                   alt="Логотип iNaturalist" title="iNaturalist.org" link="https://www.inaturalist.org/" %}
+
+![Логотип iNaturalist](_src/2021/05/2021-05-24/1414.png){: right width="420" shape .logo title="iNaturalist.org" href="https://www.inaturalist.org/" }
 
 Я уже неоднократно упоминал[^birds][^bshot][^city] о сай­те
 **[iNa­tu­ra­list.org][inat]{:.img-icon-inaturalist}**
@@ -216,8 +218,7 @@ date: 2021-05-24 21:12 +0500
 {:#seek}
 ## Seek (приложение)
 
-{% image @_src/2021/05/2021-05-24/2559.png figure right width=380px fig_class="logo" alt="Логотип Seek" title="Seek by iNaturalist"
-                                              link="https://www.inaturalist.org/pages/seek_app" %}
+![Логотип Seek](_src/2021/05/2021-05-24/2559.png){: right width="380" .logo title="Seek by iNaturalist" href="https://www.inaturalist.org/pages/seek_app" }
 
 Итак. Для анонимов и тех, кто не желает делиться своими драгоценными наблюдениями ни с кем (а также для детей до 13 лет[^child]), имеется
 приложение, позволяющее определять живые природы без передачи данных наружу. На­зы­ва­ет­ся оно **[Seek][seek]** и содержит уже натренированную
