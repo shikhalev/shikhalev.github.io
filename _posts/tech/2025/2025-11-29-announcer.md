@@ -13,9 +13,7 @@ tags:
 announce: true
 ---
 
-{% image @_src/2025/11/announcer/notification.png figure right width=240px shape
-   fig_class="logo" fig_style="margin-top:-5px;" style="filter: drop-shadow(0px 0px 5px silver);"
-   title="Скриншот уведомления о публикации" %}
+![Скриншот уведомления о публикации](_src/2025/11/announcer/notification.png){: right shape width="240" .logo up="5" style="filter: drop-shadow(0px 0px 5px silver);" }
 
 В [посте о подключении телеграм-канала][telepost] я уже предполагал, что напишу подробнее о технической стороне этого подключения.
 Вообще-то, я планировал этим заняться попозже, а пока переключиться на [«Прак­ти­чес­кое руководство по dark­table»][darktable]... Но внезапно

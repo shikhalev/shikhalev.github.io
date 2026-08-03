@@ -11,7 +11,7 @@ announce: true
 recommend: true
 ---
 
-{% image @_src/2025/10/cover.png figure right width=240px title="Картинка для привлечения внимания" %}
+![Картинка для привлечения внимания](_src/2025/10/cover.png){: right width="240" }
 
 Начал писать большое [Практическое руководство по **darktable**{:.img-icon-darktable}][guide]. Выложил [«Введение»][intro], где
 рассматриваю общий интерфейс и базовое управление снимками.

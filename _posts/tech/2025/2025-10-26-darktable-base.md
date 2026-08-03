@@ -10,7 +10,7 @@ tags:
 announce: true
 ---
 
-{% image @_src/2025/10/cover.png figure right width=240px title="Картинка для привлечения внимания" %}
+![Картинка для привлечения внимания](_src/2025/10/cover.png){: right width="240" }
 
 Выложил [первую главу][first] «[Практического руководства по **darktable**{:.img-icon-darktable}][guide]» — **[«Базовая обработка»][first]**.
 

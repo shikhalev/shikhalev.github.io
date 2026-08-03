@@ -10,9 +10,8 @@ tags:
 recommend: true
 announce: true
 ---
-{% image @_src/2025/12/inat-channel/owl.png width=320px figure right shape fig_class=logo
-   fig_style="margin-top: -5px;" style="filter: drop-shadow(0px 0px 5px silver);"
-   title="Пример телеграм-поста" link="https://t.me/inat_sverdlobl/49" %}
+
+![Пример телеграм-поста](_src/2025/12/inat-channel/owl.png){: right shape width="320" .logo up="5" style="filter: drop-shadow(0px 0px 5px silver);" href="https://t.me/inat_sverdlobl/49" }
 
 ## Анонс
 
