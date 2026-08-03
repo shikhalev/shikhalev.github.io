@@ -14,11 +14,16 @@ tags:
   - нейросети
   - шумоподавление
 image: _src/2026/07/ai-darktable/20260724_173940.png
-seo_image_crop: 1318x688+17+0
+is_images:
+  seo_image:
+    crop: 1318x688+17+0
+  view:
+    width: 1800
+    height: 1800
 announce: true
 ---
 
-{% image @_src/2026/07/ai-darktable/20260724_211905.png figure right width=329px title="Модуль neural restore" link=false %}
+![Модуль «neural restore»](_src/2026/07/ai-darktable/20260724_211905.png){: right width="329" href="none" }
 
 Недавно вышел **[Darktable 5.6.0][release]{:.img-icon-darktable}**. Там довольно много нового и интересного, но, конечно,
 главное, что обращает на себя внимание — это AI-функции. Имеются: шумоподавление в RAW, просто шумоподавление, апскейл (т.е.
@@ -47,8 +52,7 @@ announce: true
 
 Затем нужно зайти в настройки.
 
-{% image @_src/2026/07/ai-darktable/20260724_173940.png figure center width=900px crop=1221x560+64+52
-         title="Скриншот настроек" %}
+![Скриншот настроек](_src/2026/07/ai-darktable/20260724_173940.png){: width="800" crop="1221x560+64+52" }
 
 + Включаем вверху галочку «enable AI features».
 
@@ -87,55 +91,40 @@ TL;DR
 Это то, что я на своей камере считаю максимальным условно рабочим ISO — шум заметен, но для информационных фото приемлем. Всё, что выше,
 я не использую — автоматика ограничена на этом значении.
 
-{:style="text-align:center;"}
-{% image @_src/2026/07/ai-darktable/ISO3200.jpg width=280px crop="280x280+840+2220" title="ISO3200, оригинал"
-         bounds=1800x1800 style="margin: 5px;" %}
-{% image @_src/2026/07/ai-darktable/ISO3200_ai_raw-denoise.jpg width=280px crop="280x280+840+2220" title="ISO3200, AI raw denoise"
-         bounds=1800x1800 style="margin: 5px;" %}
-{% image @_src/2026/07/ai-darktable/ISO3200_ai_denoise.jpg width=280px crop="280x280+840+2220" title="ISO3200, AI denoise"
-         bounds=1800x1800 style="margin: 5px;" %}
-{% image @_src/2026/07/ai-darktable/ISO3200_std_raw.jpg width=280px crop="280x280+840+2220" title="ISO3200, std raw denoise"
-         bounds=1800x1800 style="margin: 5px;" %}
-{% image @_src/2026/07/ai-darktable/ISO3200_std_denoised.jpg width=280px crop="280x280+840+2220" title="ISO3200, std denoise profiled"
-         bounds=1800x1800 style="margin: 5px;" %}
+<!-- TODO: переделать под слайды (там нужно кропать иначе) -->
+
+{: modes="grid" cell-width="280" cell-crop="280x280+840+2220" }
+![ISO3200, оригинал](_src/2026/07/ai-darktable/ISO3200.jpg)
+![ISO3200, AI raw denoise](_src/2026/07/ai-darktable/ISO3200_ai_raw-denoise.jpg)
+![ISO3200, AI denoise](_src/2026/07/ai-darktable/ISO3200_ai_denoise.jpg)
+![ISO3200, std raw denoise](_src/2026/07/ai-darktable/ISO3200_std_raw.jpg)
+![ISO3200, std denoise profiled](_src/2026/07/ai-darktable/ISO3200_std_denoised.jpg)
 
 #### ISO 12800
 
-{:style="text-align:center;"}
-{% image @_src/2026/07/ai-darktable/ISO12800.jpg width=280px crop="280x280+1050+2250" title="ISO12800, оригинал"
-         bounds=1800x1800 style="margin: 5px;" %}
-{% image @_src/2026/07/ai-darktable/ISO12800_ai_raw-denoise.jpg width=280px crop="280x280+1050+2250" title="ISO12800, AI raw denoise"
-         bounds=1800x1800 style="margin: 5px;" %}
-{% image @_src/2026/07/ai-darktable/ISO12800_ai_denoise.jpg width=280px crop="280x280+1050+2250" title="ISO12800, AI denoise"
-         bounds=1800x1800 style="margin: 5px;" %}
-{% image @_src/2026/07/ai-darktable/ISO12800_std_raw_denoised.jpg width=280px crop="280x280+1050+2250" title="ISO12800, std raw denoise"
-         bounds=1800x1800 style="margin: 5px;" %}
-{% image @_src/2026/07/ai-darktable/ISO12800_std_profiled.jpg width=280px crop="280x280+1050+2250" title="ISO12800, std denoise profiled"
-         bounds=1800x1800 style="margin: 5px;" %}
+{: modes="grid" cell-width="280" cell-crop="280x280+1050+2250" }
+![ISO12800, оригинал](_src/2026/07/ai-darktable/ISO12800.jpg)
+![ISO12800, AI raw denoise](_src/2026/07/ai-darktable/ISO12800_ai_raw-denoise.jpg)
+![ISO12800, AI denoise](_src/2026/07/ai-darktable/ISO12800_ai_denoise.jpg)
+![ISO12800, std raw denoise](_src/2026/07/ai-darktable/ISO12800_std_raw_denoised.jpg)
+![ISO12800, std denoise profiled](_src/2026/07/ai-darktable/ISO12800_std_profiled.jpg)
 
 #### ISO 51200
 
-{:style="text-align:center;"}
-{% image @_src/2026/07/ai-darktable/ISO51200.jpg width=280px crop="280x280+1030+2180" title="ISO51200, оригинал"
-         bounds=1800x1800 style="margin: 5px;" %}
-{% image @_src/2026/07/ai-darktable/ISO51200_ai_raw-denoise.jpg width=280px crop="280x280+1030+2180" title="ISO51200, AI raw denoise"
-         bounds=1800x1800 style="margin: 5px;" %}
-{% image @_src/2026/07/ai-darktable/ISO51200_ai_denoise.jpg width=280px crop="280x280+1030+2180" title="ISO51200, AI denoise"
-         bounds=1800x1800 style="margin: 5px;" %}
-{% image @_src/2026/07/ai-darktable/ISO51200_std_raw.jpg width=280px crop="280x280+1030+2180" title="ISO51200, std raw denoise"
-         bounds=1800x1800 style="margin: 5px;" %}
-{% image @_src/2026/07/ai-darktable/ISO51200_std_profiled.jpg width=280px crop="280x280+1030+2180" title="ISO51200, std denoise profiled"
-         bounds=1800x1800 style="margin: 5px;" %}
+{: modes="grid" cell-width="280" cell-crop="280x280+1030+2180" }
+![ISO51200, оригинал](_src/2026/07/ai-darktable/ISO51200.jpg)
+![ISO51200, AI raw denoise](_src/2026/07/ai-darktable/ISO51200_ai_raw-denoise.jpg)
+![ISO51200, AI denoise](_src/2026/07/ai-darktable/ISO51200_ai_denoise.jpg)
+![ISO51200, std raw denoise](_src/2026/07/ai-darktable/ISO51200_std_raw.jpg)
+![ISO51200, std denoise profiled](_src/2026/07/ai-darktable/ISO51200_std_profiled.jpg)
 
 ### Upscale
 
 Первая картинка — увеличение через стандартный экспорт, вторая — AI upscale.
 
-{:style="text-align:center;"}
-{% image @_src/2026/07/ai-darktable/ISO100_std_upscale.jpg width=400px crop="400x400+1900+2590" title="Увеличение x2 стандартный экспорт"
-         bounds=3200x3200 style="margin: 5px;" %}
-{% image @_src/2026/07/ai-darktable/ISO100_ai_upscale-2x.jpg width=400px crop="400x400+1900+2590" title="Увеличение x2 AI"
-         bounds=3200x3200 style="margin: 5px;" %}
+{: modes="grid" cell-width="400" cell-crop="400x400+1900+2590" }
+![Увеличение x2 стандартный экспорт](_src/2026/07/ai-darktable/ISO100_std_upscale.jpg)
+![Увеличение x2 AI](_src/2026/07/ai-darktable/ISO100_ai_upscale-2x.jpg)
 
 Разница как бы есть... Но не особо понятна. Но учитывая, что я видел и такие ai-апскейлеры, которые делают *хуже*, чем простое увеличение...
 

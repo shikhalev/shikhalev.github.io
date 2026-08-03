@@ -10,14 +10,15 @@ tags:
   - FUN
 announce: true
 image: _src/goods/IMG_7526.jpg
-seo_image_crop: 5224x2726+523+459
+is_images:
+  seo_image:
+    crop: 5224x2726+523+459
 ---
 
 Продолжаю пополнять каталог (да, очень медленно). Внес товары с июньским пейзажем **[«Туманные низины»][merch]**.
 
-{% image @_src/goods/IMG_7526.jpg figure center width=800px title="Начало дня после очень туманного утра июня 2026 года"
-   link="/merch/photo/landscapes/20260609-fogged/" crop="5224x2726+523+459"
-   fig_style="border-radius:15px;" style="border-radius:15px;" %}
+{: style="border-radius:15px;" }
+![Начало дня после очень туманного утра июня 2026 года](_src/goods/IMG_7526.jpg){: width="800" crop="5224x2726+523+459" href="/merch/photo/landscapes/20260609-fogged/" style="border-radius:15px;" }
 
 Ну и поскольку это пейзаж, я бы рекомендовал обратить внимание на **[боль­шой пенокартон][foam]**, на **[фо­то­што­ры][curt]** и,
 как ни странно, на **[круг­лый коврик для мыши][padd]**.

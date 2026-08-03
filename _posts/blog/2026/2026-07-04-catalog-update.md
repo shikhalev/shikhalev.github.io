@@ -15,15 +15,15 @@ seo_image_crop: 6016x3139+0+191
 
 Добавил в каталог еще три коллекции.
 
-{% image @_src/goods/sova.png width=320px figure center fig_class="logo" title="«Что совой об пень...»" link="/merch/jokes/20260528-chto-sovoy/" %}
+![«Что совой об пень...»](_src/goods/sova.png){: width="320" .logo href="/merch/jokes/20260528-chto-sovoy/" }
 
 <!--more-->
 
-{% image @_src/goods/IMG_5565.jpg figure center width=640px title="Арти, май 2026" link="/merch/photo/landscapes/20260511-arti/"
-   fig_style="border-radius:25px;" style="border-radius:25px;" %}
+{: style="border-radius:25px;" }
+![Арти, май 2026](_src/goods/IMG_5565.jpg){: width="640" style="border-radius:25px;" href="/merch/photo/landscapes/20260511-arti/" }
 
-{% image @_src/goods/IMG_7541.jpg figure center width=640px title="Арти, май 2026" link="/merch/photo/birds/20260102-passer/"
-   fig_style="border-radius:25px;" style="border-radius:25px;" %}
+{: style="border-radius:25px;" }
+![Зимний воробей](_src/goods/IMG_7541.jpg){: width="640" style="border-radius:25px;" href="/merch/photo/birds/20260102-passer/" }
 
 [land]: {% link _designs/merch/photo/landscapes/20260511-arti.md %}
 [sparrow]: {% link _designs/merch/photo/birds/20260102-passer.md %}

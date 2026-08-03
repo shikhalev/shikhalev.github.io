@@ -10,8 +10,7 @@ seo_image_crop: 1856x968+0+179
 announce: true
 ---
 
-{% image @_src/2026/01/cache/cache-invalidation.jpg figure right width=360px crop=970x350+380+360
-   title="КДПВ сгенерирована нейросетью по запросу «cache invalidation»" %}
+![КДПВ сгенерирована нейросетью по запросу «cache invalidation»](_src/2026/01/cache/cache-invalidation.jpg){: right width="360" crop="970x350+380+360" }
 
 Как известно, в программировании есть только две реально сложные задачи: именование переменных и инвалидация кэша[^cite].
 С первой мы сделать ничего не можем, со второй, конечно, тоже, но что-то делать приходится...

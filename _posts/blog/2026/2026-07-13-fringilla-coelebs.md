@@ -17,8 +17,7 @@ seo_image_crop: 2271x1185+0+0
 recommend: true
 ---
 
-{% image @_src/goods/fringilla_coelebs.jpg figure right width=360px title="Развертка кружки с «определителем» Fringilla coelebs"
-   link="/merch/guide/Fringilla_coelebs/" %}
+![Развертка кружки с «определителем» Fringilla coelebs](_src/goods/fringilla_coelebs.jpg){: right width="360" href="/merch/guide/Fringilla_coelebs/" }
 
 Как и [обещал][anno], запустил [мерч с «как бы определителем»][merch]. И начал с **[Зяблика][zyablo]**.
 
