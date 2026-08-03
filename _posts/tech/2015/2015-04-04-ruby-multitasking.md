@@ -13,7 +13,8 @@ recommend: true
 
 -----
 
-{% image @_src/samag/136.gif figure right width=158px fig_style="padding: 5px;" link="http://samag.ru/archive/article/2645" %}
+{: style="padding:5px;" }
+![](_src/samag/136.gif){: right width="158" href="http://samag.ru/archive/article/2645" }
 
 <div class="note">
 **В статье рассматриваются основные средства работы с потоками (threads) и процессами в языке и стандартной библиотеке Ruby**

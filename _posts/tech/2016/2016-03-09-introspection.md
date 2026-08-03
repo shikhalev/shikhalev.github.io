@@ -12,7 +12,8 @@ recommend: true
 
 -----
 
-{% image @_src/samag/146-7.jpg figure right width=158px fig_style="padding: 5px;" link="http://samag.ru/archive/article/2874" %}
+{: style="padding:5px;" }
+![](_src/samag/146-7.jpg){: right width="158" href="http://samag.ru/archive/article/2874" }
 
 <div class="note">
 

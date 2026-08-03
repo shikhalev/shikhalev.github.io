@@ -10,10 +10,12 @@ tags:
   - командная строка
 description: Работа с фотографиями из командной строки
 image: _src/penguin-photo/penguin.jpg
-seo_image_crop: 3989x2082+0+296
+is_images:
+  seo_image:
+    crop: 3989x2082+0+296
 ---
-{% image @_src/penguin-photo/02/kdpv.png figure right shape width=320px fig_class="logo"
-   title="Картинка стырена где-то в интернетах, найдена по ключевому слову „imagemagick“" %}
+
+![Картинка стырена где-то в интернетах, найдена по ключевому слову „imagemagick“](_src/penguin-photo/02/kdpv.png){: right shape width="320" .logo }
 
 Коротко о главном: главный обработчик изображений из командной строки, равно как и в пакетном режиме, у нас
 по прежнему пакет **[ImageMagick][imagemagick]{:.img-icon-imagemagick}**. КДПВ справа взята поиском по его названию в «картинках Google»,
@@ -123,7 +125,7 @@ convert \( -resize "$OUTPUT_SIZE" "$source" \) -gravity southeast "$stamp_png" -
 
 В итоге мы получаем возможность в пакетном режиме получать такое:
 
-{% image @_src/penguin-photo/02/IMG_8638.jpg figure center width=800px %}
+![](_src/penguin-photo/02/IMG_8638.jpg){: width="800" }
 
 Тонирование и кадрирование я до того сделал в Darktable, см. [предыдущий пост][myraw]. Почему-то ImageMagick на моих TIFF, полученных
 из Darktable, выдает кучу предупреждений типа «Unknown field...», но на результат они не влияют.

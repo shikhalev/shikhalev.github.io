@@ -13,7 +13,8 @@ tags:
   - языки программирования
 image: _src/2011/10/fpc/lazarus-over.png
 ---
-{% image @_src/2011/10/fpc/lazarus-over.png figure right width=300px title="Скриншот IDE Lazarus" %}
+
+![Скриншот IDE Lazarus](_src/2011/10/fpc/lazarus-over.png){: width="300" right }
 
 **Free Pascal** [[1]](#site-fpc), точнее Free Pascal Compiler aka FPC — это свободный[^fpc-free] кроссплатформенный компилятор
 языка программирования Pascal. В отличие от другой свободной реализации этого языка — GNU Pascal, FPC ориентирован

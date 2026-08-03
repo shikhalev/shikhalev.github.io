@@ -9,7 +9,9 @@ tags:
 image: _src/2013/07/git/gitweb.png
 recommend: true
 ---
-{% image @_src/2013/07/git/gitweb.png figure right width=320px fig_style="margin-bottom:-5px;" %}
+
+{: style="margin-bottom:-5px;" }
+![](_src/2013/07/git/gitweb.png){: right width="320" }
 
 Сначала немного об окружении. Во-первых, предполагается наличие доступа на сервер по SSH, причем управление
 доступом стандартное: через `~/.ssh/authorized_keys`. Во-вторых, в моем случае на сервере уже стоит nginx;

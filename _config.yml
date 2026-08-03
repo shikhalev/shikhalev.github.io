@@ -37,6 +37,7 @@ markdown: kramdown
 kramdown:
   parse_block_html: true
   auto_ids: true
+  input: ISKram
 
 plugins:
   - jekyll-feed
@@ -44,7 +45,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-toc
   - jekyll-redirect-from
-  - shi-jekyll-images
+  - jekyll-is-images
   - jekyll-is-announcer
 
 theme: jekyll-theme-shikhalev
@@ -234,3 +235,8 @@ announcer:
   telegram:
     method: telegram
     chat_id: "@shikhalev_blog"
+
+is_images:
+  view:
+    width: 1800
+    height: 1200

@@ -11,7 +11,8 @@ recommend: true
 
 -----
 
-{% image @_src/samag/130.gif figure right width=158px fig_style="padding: 5px;" link="http://samag.ru/archive/article/2520" %}
+{: style="padding:5px;" }
+![](_src/samag/130.gif){: right width="158" href="http://samag.ru/archive/article/2520" }
 
 <div class="note">
 Как известно, в языке Python существует красивый механизм декораторов, расширяющих функционал объекта без изменения

@@ -8,7 +8,8 @@ tags:
   - грабли
 image: _src/2015/03/druby/red_stones.jpg
 ---
-{% image @_src/2015/03/druby/red_stones.jpg figure right width=320px link=false %}
+
+![](_src/2015/03/druby/red_stones.jpg){: right width="320" href="none" }
 
 ## DRbObject не является DRbUndumped
 

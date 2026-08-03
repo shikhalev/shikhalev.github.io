@@ -11,7 +11,8 @@ recommend: true
 
 -----
 
-{% image @_src/samag/145.jpg figure right width=158px fig_style="padding: 5px;" link="http://samag.ru/archive/article/2842" %}
+{: style="padding:5px;" }
+![](_src/samag/145.jpg){: right width="158" href="http://samag.ru/archive/article/2842" }
 
 <div class="note">
 **Добавление собственных абстракций в объектную модель — это просто. И интересно.**

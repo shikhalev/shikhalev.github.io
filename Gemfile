@@ -17,7 +17,7 @@ gem "jekyll", "~> 4.4.1"
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
 
-gem 'shi-jekyll-images', '~> 0.1.0.15' # path: '/home/ivan/wrk/projects/site/gems/shi-jekyll-images'
+# gem 'shi-jekyll-images', '~> 0.1.0.15' # path: '/home/ivan/wrk/projects/site/gems/shi-jekyll-images'
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
@@ -32,6 +32,7 @@ group :jekyll_plugins do
   gem "jekyll-remote-theme"
   gem "jekyll-redirect-from"
   gem "jekyll-is-announcer", '~> 0.8.3' # path: '/home/ivan/wrk/projects/site/jekyll-is/jekyll-is-announcer'
+  gem 'jekyll-is-images', path: '../jekyll-is/jekyll-is-images'
 end
 
 gem 'jekyll-theme-shikhalev', '>= 0.1.0.18'

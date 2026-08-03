@@ -4,4 +4,4 @@ title: «Что совой об пень...»
 
 ## Базовая картинка
 
-{% image @_src/goods/sova.png center figure width=500px title="«Это енот. А чего добился ты?»" fig_class=logo link=false %}
+![«Что совой об пень, что пнём об сову...»](_src/goods/sova.png){: href="none" .logo width="500" }
