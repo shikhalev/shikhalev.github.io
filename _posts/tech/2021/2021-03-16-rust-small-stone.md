@@ -5,10 +5,13 @@ category: [ tech, programming, rust ]
 tags:
   - грабли
 image: _src/2021/03/2021-03-16/rust-logo-512x512.png
-seo_image_crop: "500:261+0+107"
+is_images:
+  seo_image:
+    crop: "500:261+0+107"
 recommend: true
 ---
-{% image @_src/2021/03/2021-03-16/rust-logo.png figure right width=256px shape fig_class="logo" link=false alt="Логотип Rust" %}
+
+![Логотип Rust](_src/2021/03/2021-03-16/rust-logo.png){: right width="256" .logo href="none" }
 
 Обнаружил тут некоторый подводный камень в стандартной библиотеке Rust. Багом это назвать, конечно, нельзя,
 просто такой момент, где можно по собственной невнимательности наступить на грабли и не сразу это заметить, что

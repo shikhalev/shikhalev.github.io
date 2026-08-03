@@ -10,9 +10,12 @@ tags:
 
 description: Встраиваемый кардридер с AliExpress
 image: _src/2020/12/2020-12-06/en.png
-seo_image_crop: "500:261+194+0"
+is_images:
+  seo_image:
+    crop: "500:261+194+0"
 ---
-{% image @_src/2020/12/2020-12-06/en.png figure right width=320px shape fig_class="logo" title="Иллюстрация честно потырена у продавца" %}
+
+![Иллюстрация честно потырена у продавца](_src/2020/12/2020-12-06/en.png){: right shape width="320" .logo }
 
 Приобрел на Али очередную железку, сегодня руки дошли проверить.
 
