@@ -15,7 +15,7 @@ recommend: true
 announce: true
 is_images:
   seo_image:
-    salt: 5
+    salt: 6
 ---
 
 {: style="border-radius:15px;" }
