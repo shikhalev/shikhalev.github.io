@@ -16,12 +16,19 @@ jobs:
         uses: actions/checkout@v7
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
-        with: 
+        with:
           ruby-version: 3.4
           bundler-cache: true
       - name: Setup ImageMagick
         run: |
-          sudo apt-get update && sudo apt-get install -y imagemagick
+          sudo apt-get update && sudo apt-get install -y imagemagick libheif-extra heif-gdk-pixbuf
+      - name: Cache images
+        uses: actions/cache@v4
+        with:
+          path: .is-images-cache
+          key: ${{ runner.os }}-jekyll-images
+          restore-keys: |
+            ${{ runner.os }}-jekyll-
       - name: Build
         run: |
           echo "Build..."
