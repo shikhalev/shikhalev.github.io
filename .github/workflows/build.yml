@@ -26,9 +26,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: .is-images-cache
-          key: ${{ runner.os }}-jekyll-images
+          key: ${{ runner.os }}-jekyll-images-${{ github.run_id }}
           restore-keys: |
-            ${{ runner.os }}-jekyll-
+            ${{ runner.os }}-jekyll-images
       - name: Build
         run: |
           echo "Build..."
