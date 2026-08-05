@@ -254,6 +254,7 @@ is_images:
     width: 1800
     height: 1200
   seo_image:
+    salt: 0
     font:
       caption: _src/fonts/PTC55F.ttf
       date: _src/fonts/PTC55F.ttf

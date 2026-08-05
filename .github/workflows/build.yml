@@ -39,7 +39,6 @@ jobs:
           JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build
       - name: Images to Cache
         uses: actions/cache/save@v4
-        if: always()
         with:
           path: .is-images-cache
           key: ${{ runner.os }}-jekyll-images-${{ github.run_id }}
