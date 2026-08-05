@@ -5,16 +5,16 @@
       "chat_id": "@shikhalev_blog"
     },
     "posts": {
-      "_posts/blog/2026/2026-08-02-merch-fogged.md": {
-        "url": "https://shikhalev.github.io/life/2026/08/merch-fogged.html",
-        "date": "2026/08/02",
-        "title": "Мерч: Туманные низины",
-        "description": "Добавил в каталог мерча еще один пейзаж...",
+      "_posts/tech/2026/2026-08-05-jekyll-is-images.md": {
+        "url": "https://shikhalev.github.io/tech/2026/08/jekyll-is-images.html",
+        "date": "2026/08/05",
+        "title": "Плагин jekyll-is-images v0.8.0.2",
+        "description": "Реализовал таки...",
         "categories": [
-          "жизнь",
-          "дыбр",
-          "веб",
-          "сайт"
+          "технологии",
+          "программирование",
+          "ruby",
+          "веб"
         ]
       }
     }
