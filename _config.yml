@@ -258,3 +258,6 @@ is_images:
       caption: _src/fonts/PTC55F.ttf
       date: _src/fonts/PTC55F.ttf
     date_format: '%Y / %m / %d'
+    overlay:
+      background: '#66666699'
+      foreground: '#EEEEEEEE'
