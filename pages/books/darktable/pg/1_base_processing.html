@@ -70,6 +70,11 @@
     })(window, document, "clarity", "script", "u2gczedmo7");
 </script>
 
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.4.css" />
+<script type="module" src="/js/is-images-0.8.0.4.js"></script>
+<!-- end of jekyll-is-images stuff -->
+
 </head>
 
 <body>
@@ -116,14 +121,16 @@
 <h3 id="tasks">
 <a class="anchor" href="#tasks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Задачи</h3>
 
-<figure class="__figure __implicit_figure __left" style="max-width:320px;"><a href="/img/pages/books/darktable/pg/1_base_processing.html/IMG_2686_02-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/1_base_processing.html/IMG_2686_02-320.webp" class="__image" alt="Снимок синиц, проявленный по умолчанию" title="Снимок синиц, проявленный по умолчанию"></a></figure>
-
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_350 __is_images__left" style="--is-images-width:320px;" data-modes="grid,slides">
+<a href="/img/bc/05/7f0o2e37.avif" title="Снимок синиц, проявленный по умолчанию" class="__is_images_wrapper"><img src="/img/b8/26/1eof3f29.avif" alt="Снимок синиц, проявленный по умолчанию" class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:320/213;" data-scale="1"></a>
+</figure>
 <p>Если мы посмотрим на пример во Введении, то можем заметить, что первый снимок выглядит не очень — светлое небо заставило камеру
 занизить экспозицию и детали в тенях совершенно неразборчивы. Именно из-за таких случаев мы и снимаем в RAW, а не в JPEG, и
 используем программы типа <strong>darktable</strong> для «проявки» снимков.</p>
 
-<figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/pages/books/darktable/pg/1_base_processing.html/IMG_2686_levels-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/1_base_processing.html/IMG_2686_levels-320.webp" class="__image" alt="Снимок синиц с базовой обработкой" title="Снимок синиц с базовой обработкой"></a></figure>
-
+<figure id="fig-2" class="__is_images_figure __is_images_single __is_images_width_350 __is_images__right" style="--is-images-width:320px;" data-modes="grid,slides">
+<a href="/img/6f/c9/682o80o3.avif" title="Снимок синиц с базовой обработкой" class="__is_images_wrapper"><img src="/img/bb/08/5cc335b1.avif" alt="Снимок синиц с базовой обработкой" class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
 <p>Слева (выше) этот снимок, проявленный по умолчанию, справа (ни­же) — выполнена базовая об­ра­бот­ка с rgb-кривой (и не толь­ко).
 Даже на миниатюрах можно видеть (а по клику открываются версии в большем разрешении), что птицы стали вполне узнаваемы, да
 и фактура веток проявилась.</p>
@@ -181,8 +188,9 @@
 <h2 id="darkroom">
 <a class="anchor" href="#darkroom" aria-hidden="true"><span class="octicon octicon-link"></span></a>Интерфейс тёмной комнаты</h2>
 
-<figure class="__figure __implicit_figure __center" style="max-width:890px;"><a href="/img/pages/books/darktable/pg/1_base_processing.html/100_darkroom-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/1_base_processing.html/100_darkroom-890.webp" class="__image" alt="Скриншот представления darkroom" title="Скриншот представления darkroom"></a><figcaption>Скриншот представления darkroom</figcaption></figure>
-
+<figure id="fig-3" class="__is_images_figure __is_images_single __is_images_width_900" style="--is-images-width:890px;" data-modes="grid,slides">
+<a href="/img/e2/fb/7of6b602.webp" title="Скриншот представления darkroom" class="__is_images_wrapper"><img src="/img/2b/1t/6601344f.webp" alt="Скриншот представления darkroom" class="__is_images_image __is_images_single" style="--is-images-width:890px;--is-images-aspect-ratio:445/241;" data-scale="1"></a>
+</figure>
 <p>Давайте для начала рассмотрим представление <em>darkroom</em> в целом. Общая структура всех представлений схожа и ее мы уже рассмотрели
 <a href="/pages/books/darktable/pg/0_intro.html#lighttable">во «Вве­де­нии»</a>, поэтому сосредоточимся на том, что данное представление отличает.</p>
 
@@ -201,14 +209,14 @@
 
 <dl>
   <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/100_darkroom-25-25x25-290-883.webp" class="__image"> quick access to presets</dt>
+<span class="__is_images_wrapper"><img src="/img/to/82/tb44ff13.webp" alt="" class="__is_images_image" style="--is-images-aspect-ratio:1/1;" data-scale="1"></span> quick access to presets</dt>
   <dd>
     <p><em>Быстрый доступ к <a href="#presets">пресетам</a>.</em> Позволяет из одного меню включать пресеты различных модулей — те, которые были для этого специально
 отмечены пользователем. Собственно отметка и формирование списка делаются через пункт «manage quick presets list…» в том же
 меню, которое открывается по этой кнопке.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/100_darkroom-25-25x25-317-883.webp" class="__image"> quick access for applying any of your styles</dt>
+<a href="/img/e2/fb/7of6b602.webp" class="__is_images_wrapper"><img src="/img/eo/7b/tbb0258f.webp" alt="" class="__is_images_image" style="--is-images-width:25px;--is-images-aspect-ratio:1/1;" data-scale="1"></a> quick access for applying any of your styles</dt>
   <dd>
     <p><em>Быстрый доступ к <a href="#styles">стилям</a>.</em></p>
 
@@ -216,17 +224,19 @@
   </dd>
 </dl>
 
-<figure class="__figure __implicit_figure __right" style="max-width:360px;"><a href="/img/pages/books/darktable/pg/1_base_processing.html/101_second_window-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/1_base_processing.html/101_second_window-360-1920x1040-0-0.webp" class="__image" alt="Скриншот darktable c дополнительным окном просмотра" title="Скриншот darktable c дополнительным окном просмотра"></a><figcaption>Скриншот darktable c дополнительным окном просмотра</figcaption></figure>
-
+<figure id="fig-4" class="__is_images_figure __is_images_single __is_images_width_400 __is_images__right" style="--is-images-width:360px;" data-modes="grid,slides">
+<a href="/img/25/93/625c7b89.webp" title="Скриншот darktable c дополнительным окном просмотра" class="__is_images_wrapper"><img src="/img/7e/63/t34f0bo1.webp" alt="Скриншот darktable c дополнительным окном просмотра" class="__is_images_image __is_images_single" style="--is-images-width:360px;--is-images-aspect-ratio:24/13;" data-scale="1" data-caption="Скриншот darktable c дополнительным окном просмотра"></a>
+<figcaption>Скриншот darktable c дополнительным окном просмотра</figcaption>
+</figure>
 <dl>
   <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/100_darkroom-25-25x25-346-883.webp" class="__image"> display a second darkroom image window</dt>
+<span class="__is_images_wrapper"><img src="/img/98/b6/1658bf84.webp" alt="" class="__is_images_image" style="--is-images-width:25px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> display a second darkroom image window</dt>
   <dd>
     <p>Открывает <em>дополнительное окно просмотра</em>. Это дополнительное ок­но позволяет параллельно с обработкой видеть изображение
 в дру­гом масштабе. На скрин­шо­те выглядит не осо­бо удобным, однако если у вас два мо­ни­то­ра — может стать очень полезным.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/100_darkroom-254-254x25-758-883.webp" class="__image"> Строка информации</dt>
+<span class="__is_images_wrapper"><img src="/img/c4/o6/b1159548.webp" alt="" class="__is_images_image" style="--is-images-width:254px;--is-images-aspect-ratio:254/25;" data-scale="1"></span> Строка информации</dt>
   <dd>
     <p><em>Строка информации о снимке.</em> Нетрудно видеть, что отображаются: выдержка, диафрагма, фокусное расстояние и значение ISO, а значок
 кнопки означает, что у снимка есть геопривязка. Впрочем, состав информации в данной строке настраивается
@@ -234,46 +244,46 @@
 for the ima­ge in­for­ma­ti­on li­ne».</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/100_darkroom-26-26x25-1403-883.webp" class="__image"> toggle focus-peaking mode</dt>
+<span class="__is_images_wrapper"><img src="/img/o2/87/o2ft5c8e.webp" alt="" class="__is_images_image" style="--is-images-width:26px;--is-images-aspect-ratio:26/25;" data-scale="1"></span> toggle focus-peaking mode</dt>
   <dd>
     <p>Включает <em>режим фокус-пикинга</em>. Таким образом мы можем видеть, какие именно части снимка в фокусе.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/100_darkroom-26-26x25-1434-883.webp" class="__image"> toggle color assessment conditions</dt>
+<span class="__is_images_wrapper"><img src="/img/47/40/2851eb3e.webp" alt="" class="__is_images_image" style="--is-images-width:26px;--is-images-aspect-ratio:26/25;" data-scale="1"></span> toggle color assessment conditions</dt>
   <dd>
     <p>Включает <em>режим оценки цвета</em>, окружая изображение широкой белой рамкой.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/100_darkroom-26-26x25-1465-883.webp" class="__image"> toggle color high quality processing</dt>
+<span class="__is_images_wrapper"><img src="/img/4t/53/92508352.webp" alt="" class="__is_images_image" style="--is-images-width:26px;--is-images-aspect-ratio:26/25;" data-scale="1"></span> toggle color high quality processing</dt>
   <dd>
     <p>Включает <em>высокое качество обработки</em>. В этом режиме отображение на экране формируется так же, как и финальное изображение
 при экспорте, тогда как по умолчанию для этого используются более быстрые и менее точные алгоритмы.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/100_darkroom-26-26x25-1496-883.webp" class="__image"> toggle indication of raw overexposure</dt>
+<span class="__is_images_wrapper"><img src="/img/c8/cc/c516405f.webp" alt="" class="__is_images_image" style="--is-images-width:26px;--is-images-aspect-ratio:26/25;" data-scale="1"></span> toggle indication of raw overexposure</dt>
   <dd>
     <p>Включает <em>показ пересветов в raw</em>.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/100_darkroom-26-26x25-1527-883.webp" class="__image"> toggle clipping indication</dt>
+<span class="__is_images_wrapper"><img src="/img/8t/e6/1367o6o2.webp" alt="" class="__is_images_image" style="--is-images-width:26px;--is-images-aspect-ratio:26/25;" data-scale="1"></span> toggle clipping indication</dt>
   <dd>
     <p>Включает <em>отображение клиппинга</em>. Таким образом мы можем увидеть, где у нас теряется информация в светах или тенях, или же
 значение цвета выходит за рамки цветового пространства.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/100_darkroom-26-26x25-1558-883.webp" class="__image"> toggle softproofing</dt>
+<span class="__is_images_wrapper"><img src="/img/35/t0/63of4f5c.webp" alt="" class="__is_images_image" style="--is-images-width:26px;--is-images-aspect-ratio:26/25;" data-scale="1"></span> toggle softproofing</dt>
   <dd>
     <p><em>Программная цветопроба.</em> Позволяет увидеть, как будет выглядеть фотография на устройствах с другим цветовым профилем.
 Сами профили выбираются по правой кнопке.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/100_darkroom-26-26x25-1589-883.webp" class="__image"> toggle gamut checking</dt>
+<span class="__is_images_wrapper"><img src="/img/51/o1/479b3470.webp" alt="" class="__is_images_image" style="--is-images-width:26px;--is-images-aspect-ratio:26/25;" data-scale="1"></span> toggle gamut checking</dt>
   <dd>
     <p><em>Контроль цветового пространства.</em> Включает показ зон, где значение цвета выходит за рамки выбранного цветового пространства.
 По правой кнопке выбираются профили так же, как в предыдущем случае.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/100_darkroom-26-26x25-1620-883.webp" class="__image"> toggle guide lines</dt>
+<span class="__is_images_wrapper"><img src="/img/5c/66/0598eco9.webp" alt="" class="__is_images_image" style="--is-images-width:26px;--is-images-aspect-ratio:26/25;" data-scale="1"></span> toggle guide lines</dt>
   <dd>
     <p>Включает <em>направляющие линии</em> для удобства выстраивания композиции, по правой кнопке можно выбрать разные варианты, такие как
 правило третей, золотое сечение и так далее, включая настраиваемую сетку.</p>
@@ -290,8 +300,9 @@ for the ima­ge in­for­ma­ti­on li­ne».</p>
 <a class="anchor" href="#navigation" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="#mod-navigation">navigation</a>
 </h4>
 
-<figure class="__figure __implicit_figure __right" style="max-width:276px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/100_darkroom-276-276x200-10-92.webp" class="__image" alt="Модуль «navigation»" title="Модуль «navigation»"></figure>
-
+<figure id="fig-5" class="__is_images_figure __is_images_single __is_images_width_300 __is_images__right" style="--is-images-width:276px;" data-modes="grid,slides">
+<span title="Модуль «navigation»" class="__is_images_wrapper"><img src="/img/13/9e/8t639350.webp" alt="Модуль «navigation»" class="__is_images_image __is_images_single" style="--is-images-width:276px;--is-images-aspect-ratio:69/50;" data-scale="1"></span>
+</figure>
 <p>В левом верхнем углу мы можем видеть уменьшенное изображение текущего снимка, на котором выделена текущая рабочая об­ласть —
 своего рода ми­ни­кар­та.</p>
 
@@ -367,8 +378,9 @@ for the ima­ge in­for­ma­ti­on li­ne».</p>
 <h4 id="scopes">
 <a class="anchor" href="#scopes" aria-hidden="true"><span class="octicon octicon-link"></span></a>scopes</h4>
 
-<figure class="__figure __implicit_figure __right" style="max-width:259px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/100_darkroom-259-259x180-1651-92.webp" class="__image" alt="Модуль «scopes» / гистограмма" title="Модуль «scopes» / гистограмма"></figure>
-
+<figure id="fig-6" class="__is_images_figure __is_images_single __is_images_width_300 __is_images__right" style="--is-images-width:259px;" data-modes="grid,slides">
+<a href="/img/e2/fb/7of6b602.webp" title="Модуль «scopes» / гистограмма" class="__is_images_wrapper"><img src="/img/f2/3c/625c2938.webp" alt="Модуль «scopes» / гистограмма" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></a>
+</figure>
 <p>В самом верху левой панели находится специальный модуль <em><a href="#mod-scopes">scopes</a></em>. Он не имеет отношения к английскому слову «scopes» как таковому,
 в действительности здесь использована составная часть таких слов, как «vectorscope», «oscilloscope» и так далее — в общем, речь идет о своего
 рода приборах, которые визуализируют данные.</p>
@@ -380,24 +392,26 @@ for the ima­ge in­for­ma­ti­on li­ne».</p>
 <h4 id="module-control">
 <a class="anchor" href="#module-control" aria-hidden="true"><span class="octicon octicon-link"></span></a>Управление модулями</h4>
 
-<figure class="__figure __implicit_figure __right" style="max-width:259px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/110_fullbar-259-259x58-1651-272.webp" class="__image" alt="Кнопки группировки и поиска модулей" title="Кнопки группировки и поиска модулей"></figure>
-
+<figure id="fig-7" class="__is_images_figure __is_images_single __is_images_width_300 __is_images__right" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Кнопки группировки и поиска модулей" class="__is_images_wrapper"><img src="/img/cf/58/78ec4e57.webp" alt="Кнопки группировки и поиска модулей" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/58;" data-scale="1"></span>
+</figure>
 <p>Оставшаяся часть правой панели посвящена модулям обработки. Их много, и при этом работа с ни­ми — основное, что мы делаем в dark­tab­le, поэтому
 то, как они сгруппированы и вообще ото­б­ра­жа­ют­ся, имеет существенное значение для удоб­с­т­ва использования.</p>
 
-<p>Для начала давайте обратим внимание на ме­ню — <img src="/img/pages/books/darktable/pg/1_base_processing.html/110_fullbar-25-25x25-1883-277.webp" class="__image"> — этого блока.
+<p>Для начала давайте обратим внимание на ме­ню — <span class="__is_images_wrapper"><img src="/img/o7/95/f29e40e1.webp" alt="" class="__is_images_image" style="--is-images-width:25px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> — этого блока.
 Там мы увидим список предопределенных пресетов, затем (если есть) список пользовательских пресетов, затем пункт «manage presets…».
 Чтобы все, используемые в этой главе, модули были доступны, нужно выбрать «modules: all», или «workflow: display-referred». Впрочем,
-все модули остаются доступны через по­иск — <img src="/img/pages/books/darktable/pg/1_base_processing.html/110_fullbar-255-255x23-1653-307.webp" class="__image">.</p>
+все модули остаются доступны через по­иск — <a href="/img/8b/22/8be20oe1.webp" class="__is_images_wrapper"><img src="/img/33/b7/79t806cf.webp" alt="" class="__is_images_image" style="--is-images-width:255px;--is-images-aspect-ratio:255/23;" data-scale="1"></a>.</p>
 
 <p>Слева от меню находятся кнопки групп. Вообще, их состав зависит от выбранного пресета, где они могут произвольно настраиваться,
-кроме двух первых: <img src="/img/pages/books/darktable/pg/1_base_processing.html/110_fullbar-25-25x25-1655-277.webp" class="__image"> — <em>quick access pa­nel</em> —
+кроме двух первых: <span class="__is_images_wrapper"><img src="/img/9f/o5/e5547123.webp" alt="" class="__is_images_image" style="--is-images-width:25px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> — <em>quick access pa­nel</em> —
 здесь не просто избранные модули, а избранные элементы управления мо­ду­лей — довольно интересное, но неоднозначное решение;
-а <img src="/img/pages/books/darktable/pg/1_base_processing.html/110_fullbar-25-25x25-1688-277.webp" class="__image"> — <em>ак­тив­ные</em> — показывает модули, уже
+а <span class="__is_images_wrapper"><img src="/img/82/11/976bbc85.webp" alt="" class="__is_images_image" style="--is-images-width:25px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> — <em>ак­тив­ные</em> — показывает модули, уже
 задействованные в об­ра­бот­ке текущего снимка.</p>
 
-<figure class="__figure __implicit_figure __right" style="max-width:259px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/110_fullbar-259-259x24-1651-881.webp" class="__image" alt="Управление порядком модулей" title="Управление порядком модулей"></figure>
-
+<figure id="fig-8" class="__is_images_figure __is_images_single __is_images_width_300 __is_images__right" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Управление порядком модулей" class="__is_images_wrapper"><img src="/img/07/63/c7077689.webp" alt="Управление порядком модулей" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/24;" data-scale="1"></span>
+</figure>
 <p>Внизу же правой панели находится управление порядком модулей. Поскольку мы пока работаем с ле­га­си-пред­ус­та­нов­ка­ми в целом, здесь
 будем подразумевать вариант <em>legacy</em> (хотя разница и не слишком существенна). На самом деле, в некоторых рамках этот порядок можно менять,
 но это точно не базовая тема, и результат может быть не совсем предсказуем.</p>
@@ -412,7 +426,7 @@ for the ima­ge in­for­ma­ti­on li­ne».</p>
 <ul>
   <li>
     <p>Меню пресетов имеется у каждого модуля в правой части за­го­лов­ка —
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/111_full_nodule_header-18-18x18-1875-601.webp" class="__image">. В этом меню сначала идет список
+<span class="__is_images_wrapper"><img src="/img/99/t1/444e1e7c.webp" alt="" class="__is_images_image" style="--is-images-width:18px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>. В этом меню сначала идет список
 предустановленных пресетов, зашитых в сам darktable; затем список пользовательских пресетов (если заданы); затем пункты управления ими.</p>
   </li>
   <li>
@@ -436,13 +450,14 @@ for the ima­ge in­for­ma­ti­on li­ne».</p>
 <p>Находясь в режиме <em>lighttable</em> мы можем открыть выбранный снимок двойным кликом по нему, или же нажав клавишу <code class="language-plaintext highlighter-rouge">d</code> (от названия режима <em>darkroom</em>,
 в который мы таким образом переходим).</p>
 
-<figure class="__figure __implicit_figure __right" style="max-width:267px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/102_defaulthistory-267-267x279-19-387.webp" class="__image" alt="Модуль «history»" title="Модуль «history»"></figure>
-
+<figure id="fig-9" class="__is_images_figure __is_images_single __is_images_width_300 __is_images__right" style="--is-images-width:267px;" data-modes="grid,slides">
+<span title="Модуль «history»" class="__is_images_wrapper"><img src="/img/21/95/124obcf8.webp" alt="Модуль «history»" class="__is_images_image __is_images_single" style="--is-images-width:267px;--is-images-aspect-ratio:89/93;" data-scale="1"></span>
+</figure>
 <p>Сразу обратим внимание на то, что нам показывает модуль <em><a href="#mod-history">history</a></em> — там мы обнаружим сразу десять строк, которые
 возникают по умолчанию, без нашего вмешательства. Часть из них помечена иконкой
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/102_defaulthistory-19-19x19-261-508.webp" class="__image"> — эти модули абсолютно обязательны,
+<span class="__is_images_wrapper"><img src="/img/c5/t7/o89o38b8.webp" alt="" class="__is_images_image" style="--is-images-width:19px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> — эти модули абсолютно обязательны,
 и отключить их мы никак не можем; другая часть — иконкой
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/102_defaulthistory-19-19x19-261-487.webp" class="__image"> — эти мы отключить можем, но не будем.</p>
+<span class="__is_images_wrapper"><img src="/img/07/bb/5614oe8f.webp" alt="" class="__is_images_image" style="--is-images-width:19px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> — эти мы отключить можем, но не будем.</p>
 
 <p>Пробежимся снизу вверх по этим пунктам.</p>
 
@@ -596,8 +611,9 @@ for the ima­ge in­for­ma­ti­on li­ne».</p>
   <dd>
     <p>Кадрирование — вырезаем нужную область.</p>
 
-    <figure class="__figure __implicit_figure __center" style="max-width:720px;"><a href="/img/pages/books/darktable/pg/1_base_processing.html/115_crop-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/1_base_processing.html/115_crop-720.webp" class="__image" style="border-radius:0px;" alt="darktable в режиме кадрирования" title="darktable в режиме кадрирования"></a></figure>
-
+<figure id="fig-10" class="__is_images_figure __is_images_single __is_images_width_750" style="--is-images-width:720px;" data-modes="grid,slides">
+<a href="/img/f1/5b/9e8c3fe1.webp" title="darktable в режиме кадрирования" class="__is_images_wrapper"><img src="/img/42/f0/9o408e1o.webp" alt="darktable в режиме кадрирования" class="__is_images_image __is_images_single" style="border-radius:0px;--is-images-width:720px;--is-images-aspect-ratio:24/13;" data-scale="1"></a>
+</figure>
     <p>Выбор области производится вручную — тянем туда-сюда края выделения. Если нам нужна конкретная пропорция кадра, выбираем ее в комбобоксе
 модуля (на при­ме­ре — квад­рат 1:1).</p>
 
@@ -613,10 +629,12 @@ for the ima­ge in­for­ma­ti­on li­ne».</p>
 разными способами, но в этой главе мы рассмотрим только три. На данном примере они практически равнозначны — результаты
 выглядят похоже — но в более сложных случаях ка­кой-то из них может оказаться предпочтительней, чем другие.</p>
 
-<figure class="__figure __implicit_figure __left" style="max-width:259px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/134_pre-histogram-259-259x180-1651-92.webp" class="__image" alt="Гистограмма до коррекции" title="Гистограмма до коррекции"></figure>
-
-<figure class="__figure __implicit_figure __right" style="max-width:259px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/132_rgb_levels-259-259x180-1651-92.webp" class="__image" alt="Гистограмма после коррекции «RGB-уровни + RGB-кривая»" title="Гистограмма после коррекции «RGB-уровни + RGB-кривая»"></figure>
-
+<figure id="fig-11" class="__is_images_figure __is_images_single __is_images_width_300 __is_images__left" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Гистограмма до коррекции" class="__is_images_wrapper"><img src="/img/3f/c5/8o426b52.webp" alt="Гистограмма до коррекции" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
+<figure id="fig-12" class="__is_images_figure __is_images_single __is_images_width_300 __is_images__right" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Гистограмма после коррекции «RGB-уровни + RGB-кривая»" class="__is_images_wrapper"><img src="/img/ce/40/b8o81f60.webp" alt="Гистограмма после коррекции «RGB-уровни + RGB-кривая»" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
 <p>Ключевой момент для всех способов — <em>обращаем внимание на гис­то­грам­му</em> — в результате она должна быть растянута от ле­во­го до пра­во­го
 края, не выходя (почти) за них. Более того, в иде­а­ле гистограмма должна быть максимально ровной, но это уже сложнодостижимо и обычно не требуется.</p>
 
@@ -626,14 +644,16 @@ for the ima­ge in­for­ma­ti­on li­ne».</p>
 <h4 id="multiexpo">
 <a class="anchor" href="#multiexpo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Множественная экспозиция в модуле базовой кривой</h4>
 
-<figure class="__figure __implicit_figure __left" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/130_hdr-249-249x441-1651-332.webp" class="__image"></figure>
-
+<figure id="fig-13" class="__is_images_figure __is_images_single __is_images_width_250 __is_images__left" style="--is-images-width:249px;" data-modes="grid,slides">
+<span class="__is_images_wrapper"><img src="/img/c7/t9/77442eo9.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:83/147;" data-scale="1"></span>
+</figure>
 <p>С одной стороны, этот способ позволяет ограничиться одним, уже подключенным по умол­ча­нию модулем. С другой стороны — это немного нарушает
 логику этого самого модуля — <em><a href="#mod-base-curve">base curve</a></em> — добавляет в его функциональность за рамками имитации камерного JPEG. Можно,
 впрочем, сказать, что он имитирует камерный HDR…</p>
 
-<figure class="__figure __implicit_figure __right" style="max-width:259px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/130_hdr-259-259x180-1651-92.webp" class="__image" alt="Гистограмма после коррекции методом множественной экспозиции" title="Гистограмма после коррекции методом множественной экспозиции"></figure>
-
+<figure id="fig-14" class="__is_images_figure __is_images_single __is_images_width_300 __is_images__right" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Гистограмма после коррекции методом множественной экспозиции" class="__is_images_wrapper"><img src="/img/o2/c5/6o3b4b12.webp" alt="Гистограмма после коррекции методом множественной экспозиции" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
 <p>То есть, darktable «под капотом» делает две или три вспомогательных копии снимка, проявленные с разным значением экспозиции, а затем сводит их в один,
 как это обычно делается при работе с HDR из не­с­коль­ких снимков.</p>
 
@@ -655,13 +675,15 @@ for the ima­ge in­for­ma­ti­on li­ne».</p>
 <h4 id="expo">
 <a class="anchor" href="#expo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Базовая кривая + модуль экспозиции</h4>
 
-<figure class="__figure __implicit_figure __left" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/131_exposure-249-249x206-1651-539.webp" class="__image"></figure>
-
+<figure id="fig-15" class="__is_images_figure __is_images_single __is_images_width_250 __is_images__left" style="--is-images-width:249px;" data-modes="grid,slides">
+<span class="__is_images_wrapper"><img src="/img/ft/82/9bo8c5t4.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:249/206;" data-scale="1"></span>
+</figure>
 <p>Это самый, наверное, классический способ и наименее интересный, но тем не менее рабочий. К счастью, <a href="#mod-exposure">модуль экспозиции</a>
 в darktable не просто сдвигает, а позволяет «растянуть» экспозицию.</p>
 
-<figure class="__figure __implicit_figure __right" style="max-width:259px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/131_exposure-259-259x180-1651-92.webp" class="__image" alt="Гистограмма после коррекции модулем экспозиции" title="Гистограмма после коррекции модулем экспозиции"></figure>
-
+<figure id="fig-16" class="__is_images_figure __is_images_single __is_images_width_300 __is_images__right" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Гистограмма после коррекции модулем экспозиции" class="__is_images_wrapper"><img src="/img/c1/7t/b7147996.webp" alt="Гистограмма после коррекции модулем экспозиции" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
 <p>Что мы делаем в этом случае?</p>
 
 <p><u>Во-первых:</u> оставляем модуль <em>base curve</em> в состоянии по умолчанию.</p>
@@ -682,10 +704,12 @@ for the ima­ge in­for­ma­ti­on li­ne».</p>
 <h4 id="rgbs">
 <a class="anchor" href="#rgbs" aria-hidden="true"><span class="octicon octicon-link"></span></a>RGB-уровни + RGB-кривая</h4>
 
-<figure class="__figure __implicit_figure __left" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/132_rgb_levels-249-249x358-1651-363.webp" class="__image"></figure>
-
-<figure class="__figure __implicit_figure __left" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/133_rgb_curve-249-249x403-1651-330.webp" class="__image"></figure>
-
+<figure id="fig-17" class="__is_images_figure __is_images_single __is_images_width_250 __is_images__left" style="--is-images-width:249px;" data-modes="grid,slides">
+<span class="__is_images_wrapper"><img src="/img/81/36/6o8f5843.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:249/358;" data-scale="1"></span>
+</figure>
+<figure id="fig-18" class="__is_images_figure __is_images_single __is_images_width_250 __is_images__left" style="--is-images-width:249px;" data-modes="grid,slides">
+<span class="__is_images_wrapper"><img src="/img/e7/e0/ct3eec93.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:249/403;" data-scale="1"></span>
+</figure>
 <p>Третий способ, наверное, наиболее гибкий из тех, которые мы рассмотрим в этой главе, за счет того, что мы разделяем два действия:
 растягивание гистограммы модулем <em><a href="#mod-rgb-levels">rgb levels</a></em> (RGB-уровни) и подъем теней модулем <em><a href="#mod-rgb-curve">rgb curve</a></em>
 (RGB-кривая). В принципе, в предыдущем случае мы делаем то же самое (экспозиция отдельно, базовая кривая отдельно), но там мы имеем
@@ -699,8 +723,9 @@ for the ima­ge in­for­ma­ti­on li­ne».</p>
 
 <p>Итак, что мы делаем в этом случае?</p>
 
-<figure class="__figure __implicit_figure __right" style="max-width:259px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/132_rgb_levels-259-259x180-1651-92.webp" class="__image" alt="Гистограмма после коррекции «RGB-уровни + RGB-кривая»" title="Гистограмма после коррекции «RGB-уровни + RGB-кривая»"></figure>
-
+<figure id="fig-19" class="__is_images_figure __is_images_single __is_images_width_300 __is_images__right" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Гистограмма после коррекции «RGB-уровни + RGB-кривая»" class="__is_images_wrapper"><img src="/img/ce/40/b8o81f60.webp" alt="Гистограмма после коррекции «RGB-уровни + RGB-кривая»" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
 <p><u>Во-первых:</u> отключаем базовую кривую. Это не принципиально, но в целом использование одновременно <em>base curve</em> и <em>rgb curve</em>
 может дать некоторый перебор с тенями.</p>
 
@@ -745,21 +770,29 @@ for the ima­ge in­for­ma­ti­on li­ne».</p>
 существенным преимуществом, если у нас сложная обработка из большого количества шагов… И конечно, во всех случаях можно покрутить
 туда-сюда разные параметры для тонкой настройки.</p>
 
+<!-- TODO: переделать в галерею -->
 <div style="text-align: center; margin: 10px auto;">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:250px;display:inline-block;"><a href="/img/pages/books/darktable/pg/1_base_processing.html/IMG_2686_hdr-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/1_base_processing.html/IMG_2686_hdr-250.webp" class="__image" alt="Множественная экспозиция" title="Множественная экспозиция"></a><figcaption>Множественная экспозиция</figcaption></figure>
-
-  <figure class="__figure __implicit_figure __center" style="max-width:250px;display:inline-block;"><a href="/img/pages/books/darktable/pg/1_base_processing.html/IMG_2686_exposure-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/1_base_processing.html/IMG_2686_exposure-250.webp" class="__image" alt="base curve + exposure" title="base curve + exposure"></a><figcaption>base curve + exposure</figcaption></figure>
-
-  <figure class="__figure __implicit_figure __center" style="max-width:250px;display:inline-block;"><a href="/img/pages/books/darktable/pg/1_base_processing.html/IMG_2686_levels-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/1_base_processing.html/IMG_2686_levels-250.webp" class="__image" alt="rgb levels + rgb curve" title="rgb levels + rgb curve"></a><figcaption>rgb levels + rgb curve</figcaption></figure>
-
+<figure id="fig-20" class="__is_images_figure __is_images_single __is_images_width_250" style="display:inline-block;--is-images-width:250px;" data-modes="grid,slides">
+<a href="/img/f8/13/c6e85301.avif" title="Множественная экспозиция" class="__is_images_wrapper"><img src="/img/8t/8e/7e578897.avif" alt="Множественная экспозиция" class="__is_images_image __is_images_single" style="--is-images-width:250px;--is-images-aspect-ratio:1/1;" data-scale="1" data-caption="Множественная экспозиция"></a>
+<figcaption>Множественная экспозиция</figcaption>
+</figure>
+<figure id="fig-21" class="__is_images_figure __is_images_single __is_images_width_250" style="display:inline-block;--is-images-width:250px;" data-modes="grid,slides">
+<a href="/img/fc/6o/753c7c51.avif" title="base curve + exposure" class="__is_images_wrapper"><img src="/img/3o/72/61539546.avif" alt="base curve + exposure" class="__is_images_image __is_images_single" style="--is-images-width:250px;--is-images-aspect-ratio:1/1;" data-scale="1" data-caption="base curve + exposure"></a>
+<figcaption>base curve + exposure</figcaption>
+</figure>
+<figure id="fig-22" class="__is_images_figure __is_images_single __is_images_width_250" style="display:inline-block;--is-images-width:250px;" data-modes="grid,slides">
+<a href="/img/6f/c9/682o80o3.avif" title="rgb levels + rgb curve" class="__is_images_wrapper"><img src="/img/0f/46/eo6tecft.avif" alt="rgb levels + rgb curve" class="__is_images_image __is_images_single" style="--is-images-width:250px;--is-images-aspect-ratio:1/1;" data-scale="1" data-caption="rgb levels + rgb curve"></a>
+<figcaption>rgb levels + rgb curve</figcaption>
+</figure>
 </div>
 
 <h3 id="fine">
 <a class="anchor" href="#fine" aria-hidden="true"><span class="octicon octicon-link"></span></a>Финальный штрих</h3>
 
-<figure class="__figure __implicit_figure __right" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/128_local_contrast-249-249x223-1651-428.webp" class="__image" alt="Модуль «local contrast»" title="Модуль «local contrast»"></figure>
-
+<figure id="fig-23" class="__is_images_figure __is_images_single __is_images_width_250 __is_images__right" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Модуль «local contrast»" class="__is_images_wrapper"><img src="/img/e7/b0/0t2940c7.webp" alt="Модуль «local contrast»" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:249/223;" data-scale="1"></span>
+</figure>
 <p>Основную задачу мы, в общем-то, выполнили, осталось чуть-чуть улучшить финальную картинку, подчеркнув детали. Для этого нам потребуется
 модуль <strong><a href="#mod-local-contrast">local contrast</a></strong> (локальный контраст), у которого есть очень подходящий пре­сет — <em>clarity</em> (четкость).</p>
 
@@ -830,8 +863,9 @@ for the ima­ge in­for­ma­ti­on li­ne».</p>
 
 <section class="module">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/118_base_curve-249-249x374-1651-429.webp" class="__image" alt="Модуль «base curve»" title="Модуль «base curve»"></figure>
-
+<figure id="fig-24" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Модуль «base curve»" class="__is_images_wrapper"><img src="/img/11/57/142o830c.webp" alt="Модуль «base curve»" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:249/374;" data-scale="1"></span>
+</figure>
   <p>Имитирует JPEG, созданный в камере, применяя к изображению характерную базовую кривую.</p>
 
   <p>darktable поставляется с набором пресетов базовых кривых, которые пытаются имитировать кривые различных производителей камер.
@@ -888,8 +922,9 @@ HDR-вхо­дом. Для лучших результатов использу�
 
 <section class="module">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/115_crop-249-249x262-1651-417.webp" class="__image" alt="Модуль «crop»" title="Модуль «crop»"></figure>
-
+<figure id="fig-25" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Модуль «crop»" class="__is_images_wrapper"><img src="/img/2b/37/9co5o6t0.webp" alt="Модуль «crop»" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:249/262;" data-scale="1"></span>
+</figure>
   <p>Кадрирование изображения с использованием экранных направляющих.</p>
 
   <p>Этот модуль находится в конвейере обработки позже, чем устаревший модуль
@@ -901,8 +936,9 @@ HDR-вхо­дом. Для лучших результатов использу�
 
   <p>Когда модуль находится в фокусе, отображается полное некадрированное изображение с наложенными рамками кадрирования и опциональными направляющими линиями.</p>
 
-  <figure class="__figure __implicit_figure __center" style="max-width:420px;"><a href="/img/pages/books/darktable/pg/1_base_processing.html/115_crop-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/1_base_processing.html/115_crop-420-1364x759-286-121.webp" class="__image"></a></figure>
-
+<figure id="fig-26" class="__is_images_figure __is_images_single __is_images_width_450" style="--is-images-width:420px;" data-modes="grid,slides">
+<a href="/img/f1/5b/9e8c3fe1.webp" class="__is_images_wrapper"><img src="/img/45/c0/6e6ec2t5.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:420px;--is-images-aspect-ratio:70/39;" data-scale="1"></a>
+</figure>
   <p>Изменяйте размер кадра, перетаскивая активные рамки кадрирования на гра­ни­цах и углах.</p>
 
   <p>Перемещайте прямоугольник кадрирования, кликая и перетаскивая внутри области кадра. Ограничивайте перемещение
@@ -1006,8 +1042,9 @@ HDR-вхо­дом. Для лучших результатов использу�
 
 <section class="module">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/125_demosaic-249-249x136-1651-561.webp" class="__image" alt="Модуль «demosaic»" title="Модуль «demosaic»"></figure>
-
+<figure id="fig-27" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Модуль «demosaic»" class="__is_images_wrapper"><img src="/img/7c/42/fc58b2bt.webp" alt="Модуль «demosaic»" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:249/136;" data-scale="1"></span>
+</figure>
   <p>Управляет процессом демозаики raw-файлов.</p>
 
   <h4 class="no_toc" id="section-5">Фильтры Байера</h4>
@@ -1177,8 +1214,9 @@ HDR-вхо­дом. Для лучших результатов использу�
     <dd>
       <p>Позволяет вручную установить значения <em>exposure</em> (экспозиция) и <em>black level</em> (уровень черного).</p>
 
-      <figure class="__figure __implicit_figure __center" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/119_exposure-249-249x207-1651-538.webp" class="__image" style="border-radius:0px;" alt="Модуль «exposure» / ручной режим" title="Модуль «exposure» / ручной режим"></figure>
-    </dd>
+<figure id="fig-28" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Модуль «exposure» / ручной режим" class="__is_images_wrapper"><img src="/img/ct/6e/0463414c.webp" alt="Модуль «exposure» / ручной режим" class="__is_images_image __is_images_single" style="border-radius:0px;--is-images-width:249px;--is-images-aspect-ratio:83/69;" data-scale="1"></span>
+</figure>    </dd>
     <dt>automatic (автоматический)</dt>
     <dd>
       <p><em>(только для raw-изображений)</em></p>
@@ -1188,8 +1226,9 @@ HDR-вхо­дом. Для лучших результатов использу�
 ниже). Этот режим особенно полезен для автоматического изменения экспозиции большого количества изображений, чтобы добиться одинаковой
 экспозиции. Типичный случай использования автоматического ре­жи­ма — устранение мерцания в тайм­лапс-фо­то­гра­фи­ях.</p>
 
-      <figure class="__figure __implicit_figure __center" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/120_exposure_auto-249-249x234-1651-511.webp" class="__image" style="border-radius:0px;" alt="Модуль «exposure» / автоматический режим" title="Модуль «exposure» / автоматический режим"></figure>
-    </dd>
+<figure id="fig-29" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Модуль «exposure» / автоматический режим" class="__is_images_wrapper"><img src="/img/e5/oc/e974432b.webp" alt="Модуль «exposure» / автоматический режим" class="__is_images_image __is_images_single" style="border-radius:0px;--is-images-width:249px;--is-images-aspect-ratio:83/78;" data-scale="1"></span>
+</figure>    </dd>
   </dl>
 
   <h4 class="no_toc" id="section-11">Элементы управления модуля</h4>
@@ -1346,8 +1385,9 @@ CIE Lab 1976 зависит от вход­но­го цветового про
 
 <section class="module">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/124_highlight_reconstruction-249-249x120-1651-594.webp" class="__image" alt="Модуль «highlight reconstruction»" title="Модуль «highlight reconstruction»"></figure>
-
+<figure id="fig-30" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Модуль «highlight reconstruction»" class="__is_images_wrapper"><img src="/img/3o/75/o94teec5.webp" alt="Модуль «highlight reconstruction»" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:83/40;" data-scale="1"></span>
+</figure>
   <p>Пытается восстановить информацию о цвете для пикселей, которые обрезаны в одном или нескольких каналах RGB.</p>
 
   <h4 class="no_toc" id="section-14">Клиппинг</h4>
@@ -1593,8 +1633,9 @@ RAW</a>,
 
 <section class="module">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:267px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/102_defaulthistory-267-267x279-19-387.webp" class="__image" alt="Модуль «history»" title="Модуль «history»"></figure>
-
+<figure id="fig-31" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:267px;" data-modes="grid,slides">
+<span title="Модуль «history»" class="__is_images_wrapper"><img src="/img/21/95/124obcf8.webp" alt="Модуль «history»" class="__is_images_image __is_images_single" style="--is-images-width:267px;--is-images-aspect-ratio:89/93;" data-scale="1"></span>
+</figure>
   <p>Позволяет просматривать и изменять <a href="https://docs.darktable.org/usermanual/development/en/darkroom/pixelpipe/history-stack/">стек истории</a>
 текущего снимка в представлении <em>darkroom</em>.</p>
 
@@ -1622,12 +1663,12 @@ RAW</a>,
   <p>Нажмите «compress history stack» с зажатой клавишей <code class="language-plaintext highlighter-rouge">Ctrl</code>, чтобы обрезать стек истории без сжатия, то есть удалить все модули выше текущего
 выбранного, оставив остальную часть стека без изменений.</p>
 
-  <p>Нажмите кнопку сброса параметров в заголовке модуля (<img src="/img/pages/books/darktable/pg/1_base_processing.html/102_defaulthistory-18-18x18-241-394.webp" class="__image">),
+  <p>Нажмите кнопку сброса параметров в заголовке модуля (<span class="__is_images_wrapper"><img src="/img/26/65/b33ce9b7.webp" alt="" class="__is_images_image" style="--is-images-width:18px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>,
 чтобы удалить весь стек истории и повторно активировать модули по умолчанию. Того же результата можно достичь, выбрав элемент стека «original»
 (исходное изображение) и нажав «compress history stack».</p>
 
-  <p>Кнопка справа от «compress history stack» — <img src="/img/pages/books/darktable/pg/1_base_processing.html/102_defaulthistory-20-20x23-257-639.webp" class="__image"> — позволяет
-создать новый стиль из стека истории текущего снимка, который затем можно применить к дру­гим снимкам. В первой строке всплывающего диалога
+  <p>Кнопка справа от «compress history stack» — <span class="__is_images_wrapper"><img src="/img/tc/73/2c8tt8et.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:20/23;" data-scale="1"></span> —
+позволяет создать новый стиль из стека истории текущего снимка, который затем можно применить к дру­гим снимкам. В первой строке всплывающего диалога
 укажите название стиля, а во второй — описание для поиска. Вам будет предложено выбрать, какие модули из текущего стека истории включить в стиль.</p>
 
   <p>Созданными стилями можно управлять и применять их к другим снимкам с по­мощью модуля
@@ -1650,8 +1691,9 @@ RAW</a>,
 
 <section class="module">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/126_input_color_profile-249-249x102-1651-429.webp" class="__image" alt="Модуль «input color profile»" title="Модуль «input color profile»"></figure>
-
+<figure id="fig-32" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Модуль «input color profile»" class="__is_images_wrapper"><img src="/img/f9/b0/o93348fb.webp" alt="Модуль «input color profile»" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:83/34;" data-scale="1"></span>
+</figure>
   <p>Определяет, как <strong>darktable</strong> будет интерпретировать цвета изображения.</p>
 
   <p>Этот модуль берёт цветовое пространство, используемое источником изображения (например, камерой, сканером), и преобразует кодировку
@@ -1726,8 +1768,9 @@ RAW</a>,
 
 <section class="module">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/127_lens_correction-249-249x326-1651-528.webp" class="__image" alt="Модуль «lens correction»" title="Модуль «lens correction»"></figure>
-
+<figure id="fig-33" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Модуль «lens correction»" class="__is_images_wrapper"><img src="/img/8b/90/4617c452.webp" alt="Модуль «lens correction»" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:249/326;" data-scale="1"></span>
+</figure>
   <p>Автоматически корректирует (или имитирует) искажения объектива, поперечные хроматические аберрации (TCA) и виньетирование.</p>
 
   <p>Вы можете выбрать использование данных коррекции объектива, встроенных в ваш raw-файл (если они присутствуют и поддерживаются),
@@ -1937,8 +1980,9 @@ Micro Four Thirds), вам нужно запустить инструмент <a
 
 <section class="module">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/128_local_contrast-249-249x223-1651-428.webp" class="__image" alt="Модуль «local contrast»" title="Модуль «local contrast»"></figure>
-
+<figure id="fig-34" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Модуль «local contrast»" class="__is_images_wrapper"><img src="/img/e7/b0/0t2940c7.webp" alt="Модуль «local contrast»" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:249/223;" data-scale="1"></span>
+</figure>
   <p>Усиливает локальный контраст изображения.</p>
 
   <p>Это достигается с использованием либо фильтра <em>local laplacian</em> (по умолчанию), либо <em>unnormalized bilateral</em>. Оба режима
@@ -1977,8 +2021,9 @@ Micro Four Thirds), вам нужно запустить инструмент <a
 
     <p>Чтобы понять параметры фильтра <em>local laplacian</em>, можно представить его как применение кривой к изображению, подобной следующему графику:</p>
 
-    <figure class="__figure __implicit_figure __center logo" style="max-width:320px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/local-laplacian-curve-320.webp" class="__image" alt="График local laplacian" title="График local laplacian"></figure>
-
+<figure id="fig-35" class="logo __is_images_figure __is_images_single __is_images_width_350" style="--is-images-width:320px;" data-modes="grid,slides">
+<span title="График local laplacian" class="__is_images_wrapper"><img src="/img/8o/47/e8b07787.webp" alt="График local laplacian" class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:64/63;" data-scale="1"></span>
+</figure>
     <p>Эта кривая применяется к изображению локально, избегая артефактов ореола.</p>
 
   </div>
@@ -2032,8 +2077,9 @@ HDR-сце­на­ри­ев это может лучше работать в с
 
 <section class="module">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:276px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/100_darkroom-276-276x200-10-92.webp" class="__image" alt="Модуль «navigation»" title="Модуль «navigation»"></figure>
-
+<figure id="fig-36" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:276px;" data-modes="grid,slides">
+<span title="Модуль «navigation»" class="__is_images_wrapper"><img src="/img/13/9e/8t639350.webp" alt="Модуль «navigation»" class="__is_images_image __is_images_single" style="--is-images-width:276px;--is-images-aspect-ratio:69/50;" data-scale="1"></span>
+</figure>
   <p>Позволяет увеличивать и перемещать текущее изображение.</p>
 
   <p>Панель навигации (расположена в верхнем левом углу представления «тёмная комната») показывает полный предварительный просмотр текущего снимка с прямоугольником, обозначающим область, видимую в центральной рабочей области. Вы можете взаимодействовать с этой панелью с помощью мыши так же, как с основным изображением: прокрутка колёсиком для увеличения/уменьшения, средний клик для переключения между уровнями масштаба, клик с перетаскиванием для перемещения. Кроме того, текущий уровень масштаба отображается в выпадающем списке в правом нижнем углу панели предварительного просмотра — кликните, чтобы выбрать один из стандартных уровней масштаба, или введите число вручную для установки произвольного значения.</p>
@@ -2054,8 +2100,9 @@ HDR-сце­на­ри­ев это может лучше работать в с
 
 <section class="module">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/117_orientation-249-249x89-1651-528.webp" class="__image" alt="Модуль «orientation»" title="Модуль «orientation»"></figure>
-
+<figure id="fig-37" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Модуль «orientation»" class="__is_images_wrapper"><img src="/img/3c/e4/55cott46.webp" alt="Модуль «orientation»" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:249/89;" data-scale="1"></span>
+</figure>
   <p>Поворачивает изображение на 90 градусов за раз или отражает изображение по горизонтали и/или вертикали.</p>
 
   <p>Модуль включен по умолчанию, и ориентация (поворот) автоматически устанавливается на основе EXIF-дан­ных изображения.</p>
@@ -2080,22 +2127,22 @@ HDR-сце­на­ри­ев это может лучше работать в с
 
   <dl>
     <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/117_orientation-20-20x20-1745-564.webp" class="__image"> — поворот против часовой стрелки</dt>
+<span class="__is_images_wrapper"><img src="/img/0t/o8/7b163475.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> — поворот против часовой стрелки</dt>
     <dd>
       <p>Поворачивает изображение на 90 градусов против часовой стрелки.</p>
     </dd>
     <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/117_orientation-20-20x20-1785-564.webp" class="__image"> — поворот по часовой стрелке</dt>
+<span class="__is_images_wrapper"><img src="/img/77/e7/2399tbc3.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> — поворот по часовой стрелке</dt>
     <dd>
       <p>Поворачивает изображение на 90 градусов по часовой стрелке.</p>
     </dd>
     <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/117_orientation-20-20x20-1824-564.webp" class="__image"> — отражение по горизонтали</dt>
+<span class="__is_images_wrapper"><img src="/img/e9/74/12eb1c7e.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> — отражение по горизонтали</dt>
     <dd>
       <p>Отражает изображение (зеркально) по горизонтали.</p>
     </dd>
     <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/117_orientation-20-20x20-1863-564.webp" class="__image"> — отражение по вертикали</dt>
+<span class="__is_images_wrapper"><img src="/img/6e/78/2097617o.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> — отражение по вертикали</dt>
     <dd>
       <p>Отражает изображение (зеркально) по вертикали.</p>
     </dd>
@@ -2122,8 +2169,9 @@ HDR-сце­на­ри­ев это может лучше работать в с
 
 <section class="module">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/129_output_color_profile-249-249x60-1651-330.webp" class="__image" alt="Модуль «output color profile»" title="Модуль «output color profile»"></figure>
-
+<figure id="fig-38" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Модуль «output color profile»" class="__is_images_wrapper"><img src="/img/c5/37/9988e47t.webp" alt="Модуль «output color profile»" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:83/20;" data-scale="1"></span>
+</figure>
   <p>Управляет выходным профилем для экспорта и методом рендеринга, используемым при преобразовании между цветовыми пространствами.</p>
 
   <p>darktable поставляется с предустановленными профилями <em>sRGB</em>, <em>Adobe RGB</em>, <em>XYZ</em> и <em>linear RGB</em>. Вы можете добавить дополнительные
@@ -2174,8 +2222,9 @@ HDR-сце­на­ри­ев это может лучше работать в с
 
 <section class="module">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/121_rgb_curve-249-249x403-1651-330.webp" class="__image" alt="Модуль «rgb curve»" title="Модуль «rgb curve»"></figure>
-
+<figure id="fig-39" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Модуль «rgb curve»" class="__is_images_wrapper"><img src="/img/8f/ct/719o1te7.webp" alt="Модуль «rgb curve»" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:249/403;" data-scale="1"></span>
+</figure>
   <p>Классический инструмент цифровой фотографии для изменения тонов изображения с использованием кривых.</p>
 
   <p>Этот модуль очень похож на модуль <a href="#mod-tone-curve"><em>tone curve</em></a> (тоновая кривая), но работает в цветовом пространстве RGB.</p>
@@ -2234,8 +2283,9 @@ HDR-сце­на­ри­ев это может лучше работать в с
 
 <section class="module">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/132_rgb_levels-249-249x358-1651-363.webp" class="__image" alt="Модуль «rgb levels»" title="Модуль «rgb levels»"></figure>
-
+<figure id="fig-40" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Модуль «rgb levels»" class="__is_images_wrapper"><img src="/img/81/36/6o8f5843.webp" alt="Модуль «rgb levels»" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:249/358;" data-scale="1"></span>
+</figure>
   <p>Настраивайте чёрные, белые и средние серые точки в цветовом пространстве RGB. Этот модуль похож на модуль
 <a href="https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/levels/"><em>levels</em></a>,
 который работает в цветовом пространстве Lab.</p>
@@ -2294,8 +2344,9 @@ HDR-сце­на­ри­ев это может лучше работать в с
 
 <section class="module">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/116_rotate-perspective-249-249x217-1651-462.webp" class="__image" alt="Модуль «rotate and perspective»" title="Модуль «rotate and perspective»"></figure>
-
+<figure id="fig-41" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Модуль «rotate and perspective»" class="__is_images_wrapper"><img src="/img/eb/c9/8t185t5t.webp" alt="Модуль «rotate and perspective»" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:249/217;" data-scale="1"></span>
+</figure>
   <p>Автоматически корректирует сходящиеся линии, вид перспективного искажения. Механизм основан на программе <strong>ShiftN</strong><sup id="fnref:ShiftN"><a href="#fn:ShiftN" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>
 Маркуса Хебеля. Этот модуль также позволяет регулировать поворот изображения.</p>
 
@@ -2332,7 +2383,7 @@ HDR-сце­на­ри­ев это может лучше работать в с
 
   <h6 id="section-27">Ручное рисование структурных линий</h6>
 
-  <p>Кликните на значок <img src="/img/pages/books/darktable/pg/1_base_processing.html/116_rotate-perspective-20-20x20-1735-577.webp" class="__image">, чтобы
+  <p>Кликните на значок <span class="__is_images_wrapper"><img src="/img/8c/02/0bcb5b66.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>, чтобы
 включить режим рисования линий, затем кликните и перетаскивайте на изображении, чтобы нарисовать линии, которые вы хотите сделать
 горизонтальными или вертикальными. Модуль автоматически определит, являются ли линии горизонтальными или вертикальными, и окрасит
 их соответственно в зеленый или синий цвет. Рисуйте столько линий, сколько хотите (чем больше линий, тем лучше работает механизм
@@ -2343,7 +2394,7 @@ HDR-сце­на­ри­ев это может лучше работать в с
 
   <h6 id="section-28">Ручное задание прямоугольника перспективы</h6>
 
-  <p>Кликните на значок <img src="/img/pages/books/darktable/pg/1_base_processing.html/116_rotate-perspective-20-20x20-1796-577.webp" class="__image">, чтобы
+  <p>Кликните на значок <span class="__is_images_wrapper"><img src="/img/bo/8c/o3tb8f7o.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>, чтобы
 включить режим рисования прямоугольника перспективы. На экране появится прямоугольник, и вы можете захватывать и перемещать его углы так,
 чтобы левая и правая стороны совпадали с ли­ни­я­ми, которые вы хотите сделать вертикальными, а верхняя и нижняя — с ли­ни­я­ми,
 которые вы хотите сделать горизонтальными. Когда вы удовлетворены прямоугольником, кликните на один из значков подгонки, чтобы
@@ -2356,7 +2407,7 @@ HDR-сце­на­ри­ев это может лучше работать в с
 
   <h6 id="section-29">Автоматическое определение структуры</h6>
 
-  <p>Кликните на значок <img src="/img/pages/books/darktable/pg/1_base_processing.html/116_rotate-perspective-21-21x20-1856-577.webp" class="__image">, чтобы
+  <p>Кликните на значок <span class="__is_images_wrapper"><img src="/img/07/9c/c3837o54.webp" alt="" class="__is_images_image" style="--is-images-width:21px;--is-images-aspect-ratio:21/20;" data-scale="1"></span>, чтобы
 проанализировать изображение на наличие структурных эле­мен­тов — dark­tab­le автоматически обнаружит и оценит отрезки линий.
 <code class="language-plaintext highlighter-rouge">Shift</code>+клик применяет шаг усиления контраста перед дальнейшим анализом. <code class="language-plaintext highlighter-rouge">Ctrl</code>+клик применяет шаг усиления краев перед дальнейшим
 анализом. Обе вариации можно использовать по отдельности или в ком­би­на­ции, если стандартный анализ не может обнаружить достаточное
@@ -2411,9 +2462,9 @@ HDR-сце­на­ри­ев это может лучше работать в с
   </div>
 
   <p>Вы можете выбрать автоматическое применение только вертикальных коррекций
-<a href="/img/pages/books/darktable/pg/1_base_processing.html/116_rotate-perspective-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/1_base_processing.html/116_rotate-perspective-20-20x20-1735-597.webp" class="__image"></a>, только горизонтальных коррекций
-<a href="/img/pages/books/darktable/pg/1_base_processing.html/116_rotate-perspective-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/1_base_processing.html/116_rotate-perspective-20-20x20-1796-597.webp" class="__image"></a> или обеих вместе
-<a href="/img/pages/books/darktable/pg/1_base_processing.html/116_rotate-perspective-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/1_base_processing.html/116_rotate-perspective-20-20x20-1856-597.webp" class="__image"></a>. <code class="language-plaintext highlighter-rouge">Ctrl</code>+клик на любом из значков применяет
+<span class="__is_images_wrapper"><img src="/img/0t/6e/2423118f.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>, только горизонтальных коррекций
+<span class="__is_images_wrapper"><img src="/img/fe/85/c43f6eb2.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> или обеих вместе
+<span class="__is_images_wrapper"><img src="/img/2e/93/10bc85b6.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>. <code class="language-plaintext highlighter-rouge">Ctrl</code>+клик на любом из значков применяет
 поворот без сдвига объектива. <code class="language-plaintext highlighter-rouge">Shift</code>+клик на любом из значков применяет сдвиг объектива без поворота.</p>
 
   <h5 id="section-30">Поворот</h5>
@@ -2493,12 +2544,14 @@ HDR-сце­на­ри­ев это может лучше работать в с
 
   <p>Вот изображение с наклонным горизонтом и сходящимися линиями, вызванными направлением камеры вверх:</p>
 
-  <figure class="__figure __implicit_figure __center" style="max-width:420px;"><a href="/img/pages/books/darktable/pg/1_base_processing.html/perspective-correction-example-before-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/1_base_processing.html/perspective-correction-example-before-420.webp" class="__image"></a></figure>
-
+<figure id="fig-42" class="__is_images_figure __is_images_single __is_images_width_450" style="--is-images-width:420px;" data-modes="grid,slides">
+<a href="/img/fc/90/ot99c67e.webp" class="__is_images_wrapper"><img src="/img/95/9e/f60b4fto.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:420px;--is-images-aspect-ratio:420/281;" data-scale="1"></a>
+</figure>
   <p>Вот изображение после коррекции вертикальных и горизонтальных перспективных искажений с использованием автоматического определения структуры. Обратите внимание на корректировку кадрирования, выполненную функцией автоматического кадрирования, и все еще видимое наложение структурных линий:</p>
 
-  <figure class="__figure __implicit_figure __center" style="max-width:420px;"><a href="/img/pages/books/darktable/pg/1_base_processing.html/perspective-correction-example-after-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/1_base_processing.html/perspective-correction-example-after-420.webp" class="__image"></a></figure>
-
+<figure id="fig-43" class="__is_images_figure __is_images_single __is_images_width_450" style="--is-images-width:420px;" data-modes="grid,slides">
+<a href="/img/c0/c1/51t5eo8o.webp" class="__is_images_wrapper"><img src="/img/t6/98/f874f7ff.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:420px;--is-images-aspect-ratio:420/281;" data-scale="1"></a>
+</figure>
 </section>
 
 <hr>
@@ -2535,8 +2588,9 @@ of the scopes module</a>.</p>
   <h4 id="histogram">
 <a class="anchor" href="#histogram" aria-hidden="true"><span class="octicon octicon-link"></span></a>histogram (гистограмма)</h4>
 
-  <figure class="__figure __implicit_figure __center" style="max-width:259px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/100_darkroom-259-259x180-1651-92.webp" class="__image" alt="Модуль «scopes» / гистограмма" title="Модуль «scopes» / гистограмма"></figure>
-
+<figure id="fig-44" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Модуль «scopes» / гистограмма" class="__is_images_wrapper"><img src="/img/f2/3c/625c2938.webp" alt="Модуль «scopes» / гистограмма" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
   <p>Гистограмма показывает распределение пикселей по яркости для каждого цветового канала.</p>
 
   <p>Горизонтальная ось отображает яркость от 0% до 100% для каждого канала. Вертикальная ось показывает количество пикселей
@@ -2550,8 +2604,9 @@ of the scopes module</a>.</p>
   <h4 id="waveform">
 <a class="anchor" href="#waveform" aria-hidden="true"><span class="octicon octicon-link"></span></a>waveform (осциллограмма)</h4>
 
-  <figure class="__figure __implicit_figure __center" style="max-width:259px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/104_waveform-259-259x180-1651-92.webp" class="__image" alt="Модуль «scopes» / осциллограмма (горизонтальная)" title="Модуль «scopes» / осциллограмма (горизонтальная)"></figure>
-
+<figure id="fig-45" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Модуль «scopes» / осциллограмма (горизонтальная)" class="__is_images_wrapper"><img src="/img/70/6e/c5423ct7.webp" alt="Модуль «scopes» / осциллограмма (горизонтальная)" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
   <p>Осциллограмма показывает данные, аналогичные гистограмме, но позволяет рассматривать их в пространственном контексте.</p>
 
   <p>В «стандартной» горизонтальной осциллограмме горизонтальная ось соответствует горизонтальной оси снимка: правая сторона осциллограммы
@@ -2567,8 +2622,9 @@ of the scopes module</a>.</p>
 
   <p>Первая кнопка с правой стороны переключает между горизонтальным (вы­ше) и вертикальным (ниже) режимами:</p>
 
-  <figure class="__figure __implicit_figure __center" style="max-width:259px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/107_vertical_wave-259-259x180-1651-92.webp" class="__image" alt="Модуль «scopes» / осциллограмма (вертикальная)" title="Модуль «scopes» / осциллограмма (вертикальная)"></figure>
-
+<figure id="fig-46" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Модуль «scopes» / осциллограмма (вертикальная)" class="__is_images_wrapper"><img src="/img/9e/8b/846o9ob2.webp" alt="Модуль «scopes» / осциллограмма (вертикальная)" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
   <p>В вертикальной осциллограмме вертикальная ось графика соответствует вертикальной оси снимка, а горизонтальная ось отображает
 распределение пикселей по яркости. Вертикальная осциллограмма полезна для снимков в пор­т­рет­ном формате или для иного анализа изображения.</p>
 
@@ -2577,14 +2633,16 @@ of the scopes module</a>.</p>
   <h4 id="rgb-parade">
 <a class="anchor" href="#rgb-parade" aria-hidden="true"><span class="octicon octicon-link"></span></a>RGB parade (парад каналов RGB)</h4>
 
-  <figure class="__figure __implicit_figure __center" style="max-width:259px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/103_rgb_parade-259-259x180-1651-92.webp" class="__image" alt="Модуль «scopes» / парад каналов (горизонтальный)" title="Модуль «scopes» / парад каналов (горизонтальный)"></figure>
-
+<figure id="fig-47" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Модуль «scopes» / парад каналов (горизонтальный)" class="__is_images_wrapper"><img src="/img/68/f5/oet4et15.webp" alt="Модуль «scopes» / парад каналов (горизонтальный)" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
   <p>Парад каналов RGB показывает те же данные, что и осциллограмма, но с раз­де­ле­ни­ем красного, зелёного и синего каналов, отображаемых рядом.</p>
 
   <p>Как и в осциллограмме, нажатие кнопки с правой стороны модуля переключает между горизонтальным (выше) и вертикальным (ниже) режимами:</p>
 
-  <figure class="__figure __implicit_figure __center" style="max-width:259px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/106_vertical_scope-259-259x180-1651-92.webp" class="__image" alt="Модуль «scopes» / парад каналов (вертикальный)" title="Модуль «scopes» / парад каналов (вертикальный)"></figure>
-
+<figure id="fig-48" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Модуль «scopes» / парад каналов (вертикальный)" class="__is_images_wrapper"><img src="/img/b0/t4/2tb36835.webp" alt="Модуль «scopes» / парад каналов (вертикальный)" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
   <p>Парад каналов RGB полезен для выравнивания интенсивности красного, зелёного и синего каналов. Он также помогает понять различия
 между каналами и их индивидуальные характеристики.</p>
 
@@ -2593,8 +2651,9 @@ of the scopes module</a>.</p>
     <h4 id="vectorscope">
 <a class="anchor" href="#vectorscope" aria-hidden="true"><span class="octicon octicon-link"></span></a>vectorscope (вектороскоп)</h4>
 
-    <figure class="__figure __implicit_figure __center" style="max-width:259px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/105_vectorscope-259-259x180-1651-92.webp" class="__image" alt="Модуль «scopes» / вектороскоп" title="Модуль «scopes» / вектороскоп"></figure>
-
+<figure id="fig-49" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Модуль «scopes» / вектороскоп" class="__is_images_wrapper"><img src="/img/74/6e/t6ffbb4f.webp" alt="Модуль «scopes» / вектороскоп" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
     <p>Вектороскоп отображает <a href="https://en.wikipedia.org/wiki/Chromaticity">хроматичность</a> без учёта яркости или пространственных данных.</p>
 
   </div>
@@ -2610,8 +2669,9 @@ of the scopes module</a>.</p>
   <p>Вектороскоп предоставляет дополнительные элементы управления, которые заслуживают отдельного обсуждения. При наведении курсора на модуль
 в ре­жи­ме вектороскопа отображаются следующие дополнительные кнопки:</p>
 
-  <figure class="__figure __implicit_figure __center" style="max-width:259px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/108_vectorscope_buttons-259-259x180-1651-92.webp" class="__image" alt="Модуль «scopes» / вектороскоп (кнопки)" title="Модуль «scopes» / вектороскоп (кнопки)"></figure>
-
+<figure id="fig-50" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Модуль «scopes» / вектороскоп (кнопки)" class="__is_images_wrapper"><img src="/img/t9/be/t08cb4t5.webp" alt="Модуль «scopes» / вектороскоп (кнопки)" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
   <p>Нажмите самую правую кнопку, чтобы переключить шкалу насыщенности между линейным и логарифмическим режимами.</p>
 
   <p>Нажмите вторую справа кнопку, чтобы переключить цветовое пространство вектороскопа между <a href="https://en.wikipedia.org/wiki/CIELUV">CIELUV</a>,
@@ -2622,8 +2682,9 @@ of the scopes module</a>.</p>
   <p>Наконец, вдоль левого края модуля находятся кнопки, позволяющие наложить выбранный индикатор цветовой гармонии на график вектороскопа
 в цве­то­вом пространстве RYB. Например, ниже показана гармония «триада»:</p>
 
-  <figure class="__figure __implicit_figure __center" style="max-width:259px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/109_vectorscope_triad-259-259x180-1651-92.webp" class="__image" alt="Модуль «scopes» / вектороскоп (триада)" title="Модуль «scopes» / вектороскоп (триада)"></figure>
-
+<figure id="fig-51" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Модуль «scopes» / вектороскоп (триада)" class="__is_images_wrapper"><img src="/img/7e/04/t63c03o0.webp" alt="Модуль «scopes» / вектороскоп (триада)" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
   <p>Вращайте наложенные направляющие гармонии, наведя курсор на модуль и прокручивая колёсико мыши. Удерживайте <code class="language-plaintext highlighter-rouge">Ctrl</code> при прокрутке
 для более медленного вращения. Удерживайте <code class="language-plaintext highlighter-rouge">Shift</code> при прокрутке, чтобы изменить область, покрываемую направляющими.</p>
 
@@ -2733,8 +2794,9 @@ of the scopes module</a>.</p>
 
 <section class="module">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/122_tone_curve-249-249x415-1651-363.webp" class="__image" alt="Модуль «tone curve»" title="Модуль «tone curve»"></figure>
-
+<figure id="fig-52" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Модуль «tone curve»" class="__is_images_wrapper"><img src="/img/6o/e8/o2fe30bt.webp" alt="Модуль «tone curve»" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:3/5;" data-scale="1"></span>
+</figure>
   <p>Классический инструмент цифровой фотографии для изменения тонов изображения с использованием кривых.</p>
 
   <p>Этот модуль очень похож на модуль <a href="#mod-rgb-curve"><em>rgb curve</em></a> (RGB-кривая), но работает в цве­то­вом пространстве Lab.</p>
@@ -2828,8 +2890,9 @@ of the scopes module</a>.</p>
 
 <section class="module">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/123_white_balance-249-249x201-1651-627.webp" class="__image" alt="Модуль «white balance»" title="Модуль «white balance»"></figure>
-
+<figure id="fig-53" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Модуль «white balance»" class="__is_images_wrapper"><img src="/img/6c/cf/t7c97t25.webp" alt="Модуль «white balance»" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:83/67;" data-scale="1"></span>
+</figure>
   <p>Регулирует баланс белого изображения путем изменения температуры и оттенка, задания коэффициента для каждого RGB-канала или выбора
 из списка предопределенных настроек баланса белого.</p>
 
@@ -2952,9 +3015,9 @@ co­lors</a> или кликнув на метку раздела «scene illumi
   <p>Панель кнопок — это простое дополнение, обеспечивающее доступ к внутренним настройкам баланса белого одним кликом. Вы можете отключить ее,
 отредактировав файл <code class="language-plaintext highlighter-rouge">darktablerc</code>. Найдите строку:</p>
 
-  <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code>plugins/darkroom/temperature/button_bar=TRUE
-</code></pre></div>  </div>
+  <p><code class="language-plaintext highlighter-rouge">
+plugins/darkroom/temperature/button_bar=TRUE
+</code></p>
 
   <p>и измените <code class="language-plaintext highlighter-rouge">TRUE</code> на <code class="language-plaintext highlighter-rouge">FALSE</code>.</p>
 
@@ -2993,8 +3056,9 @@ co­lors</a> или кликнув на метку раздела «scene illumi
 
   <p>В верхней части каждого модуля обработки находится заголовок модуля.</p>
 
-  <figure class="__figure __implicit_figure __center" style="max-width:250px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/111_full_nodule_header-250-250x32-1651-594.webp" class="__image" alt="Заголовок модуля" title="Заголовок модуля"></figure>
-
+<figure id="fig-54" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:250px;" data-modes="grid,slides">
+<span title="Заголовок модуля" class="__is_images_wrapper"><img src="/img/29/f4/6c959971.webp" alt="Заголовок модуля" class="__is_images_image __is_images_single" style="--is-images-width:250px;--is-images-aspect-ratio:125/16;" data-scale="1"></span>
+</figure>
   <p>Кликните на название модуля), чтобы развернуть модуль и отобразить параметры, управляющие его работой.</p>
 
   <p>По умолчанию darktable позволяет развернуть только один модуль обработки за раз — если вы кликните на заголовок другого модуля, ранее
@@ -3012,7 +3076,7 @@ co­lors</a> или кликнув на метку раздела «scene illumi
 
   <dl>
     <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/111_full_nodule_header-18-18x18-1658-601.webp" class="__image"> — кнопка включения/выключения</dt>
+<span class="__is_images_wrapper"><img src="/img/0o/18/2b0b40f7.webp" alt="" class="__is_images_image" style="--is-images-width:18px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> — кнопка включения/выключения</dt>
     <dd>
       <p>Кликните, чтобы включить или выключить модуль. Некоторые модули являются обязательными для обработки изображения и не могут быть
 отключены (хотя их параметры можно изменить). Аналогично, некоторые модули неприменимы к определенным типам изображений и не могут быть включены.</p>
@@ -3030,7 +3094,7 @@ co­lors</a> или кликнув на метку раздела «scene illumi
       <p><code class="language-plaintext highlighter-rouge">Ctrl</code>+клик на названии модуля позволяет вручную изменить имя экземпляра.</p>
     </dd>
     <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/111_full_nodule_header-18-18x18-1815-601.webp" class="__image"> — переключатель маски</dt>
+<span class="__is_images_wrapper"><img src="/img/bb/9c/8f929ec9.webp" alt="" class="__is_images_image" style="--is-images-width:18px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> — переключатель маски</dt>
     <dd>
       <p>Этот значок появляется в заголовке, если в модуле активна
 <a href="https://docs.darktable.org/usermanual/development/en/darkroom/masking-and-blending/masks/">маска</a>. Наведите курсор на значок,
@@ -3040,21 +3104,21 @@ co­lors</a> или кликнув на метку раздела «scene illumi
 he­a­ders</a>.</p>
     </dd>
     <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/111_full_nodule_header-18-18x18-1835-601.webp" class="__image"> — меню нескольких экземпляров</dt>
+<span class="__is_images_wrapper"><img src="/img/37/33/1309e85t.webp" alt="" class="__is_images_image" style="--is-images-width:18px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> — меню нескольких экземпляров</dt>
     <dd>
       <p>Это меню позволяет создавать, удалять, перемещать и переименовывать экземпляры модулей. Щелкните правой кнопкой мыши на этом значке,
 чтобы напрямую создать новый экземпляр модуля. Подробности см. в раз­де­ле
 <em><a href="https://docs.darktable.org/usermanual/development/en/darkroom/processing-modules/multiple-instances/">mul­tip­le in­s­tan­ces</a></em>.</p>
     </dd>
     <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/111_full_nodule_header-18-18x18-1855-601.webp" class="__image"> — сброс</dt>
+<span class="__is_images_wrapper"><img src="/img/to/b6/01351fe1.webp" alt="" class="__is_images_image" style="--is-images-width:18px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> — сброс</dt>
     <dd>
       <p>Кликните, чтобы сбросить все параметры модуля на значения по умолчанию. <code class="language-plaintext highlighter-rouge">Ctrl</code>+клик повторно применяет любые автоматические <a href="#doc-presets">пре­се­ты</a>
 для мо­ду­ля — если автоматические пресеты для модуля отсутствуют, <code class="language-plaintext highlighter-rouge">Ctrl</code>+клик просто сбрасывает параметры на значения по умолчанию
 (аналогично обычному клику).</p>
     </dd>
     <dt>
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/111_full_nodule_header-18-18x18-1875-601.webp" class="__image"> — меню пресетов</dt>
+<span class="__is_images_wrapper"><img src="/img/99/t1/444e1e7c.webp" alt="" class="__is_images_image" style="--is-images-width:18px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> — меню пресетов</dt>
     <dd>
       <p>Это меню позволяет применять, создавать и редактировать пресеты модуля. Подробности см. в разделе <em><a href="#doc-presets">Пресеты</a></em>.</p>
     </dd>
@@ -3126,8 +3190,9 @@ EXIF-дан­ных изображения недоступны.</p>
 
     <p>При создании или редактировании пресетов отображается следующий диалог:</p>
 
-    <figure class="__figure __implicit_figure __center" style="max-width:420px;"><a href="/img/pages/books/darktable/pg/1_base_processing.html/112_store_preset-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/1_base_processing.html/112_store_preset-420.webp" class="__image" alt="Диалог сохранения пресета" title="Диалог сохранения пресета"></a></figure>
-
+<figure id="fig-55" class="__is_images_figure __is_images_single __is_images_width_450" style="--is-images-width:420px;" data-modes="grid,slides">
+<a href="/img/41/6f/c63bb6ft.webp" title="Диалог сохранения пресета" class="__is_images_wrapper"><img src="/img/58/3c/56731878.webp" alt="Диалог сохранения пресета" class="__is_images_image __is_images_single" style="--is-images-width:420px;--is-images-aspect-ratio:140/169;" data-scale="1"></a>
+</figure>
   </div>
 
   <h6 id="section-44">Элементы управления</h6>
@@ -3310,8 +3375,9 @@ na­me</a>.</p>
       <p>При наведении курсора на слайдер щелчок правой кнопкой мыши открывает многофункциональное всплывающее окно под слайдером
 для точной настройки с помощью мыши или ввода числового значения с клавиатуры.</p>
 
-      <figure class="__figure __implicit_figure __center" style="max-width:239px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/113_bauhaus-239-239x239-1653-408.webp" class="__image" style="border-radius:0px;"></figure>
-
+<figure id="fig-56" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:239px;" data-modes="grid,slides">
+<span class="__is_images_wrapper"><img src="/img/43/tt/eof4t5eo.webp" alt="" class="__is_images_image __is_images_single" style="border-radius:0px;--is-images-width:239px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>
+</figure>
       <p>Изогнутая линия, идущая от треугольного маркера, движется вместе с кур­со­ром мыши. Чем ближе курсор к треугольному маркеру, тем грубее
 уп­рав­ле­ние значением; чем дальше от маркера, тем точнее управление. Кликните левой кнопкой мыши, чтобы подтвердить новое значение и
 скрыть всплывающее окно.</p>
@@ -3365,7 +3431,7 @@ fallbacks/value.</p>
   <h5 id="doc-pickers">Пипетки</h5>
 
   <p>Многие модули позволяют задавать параметры с помощью пипеток (pickers), обозначенных значком
-<img src="/img/pages/books/darktable/pg/1_base_processing.html/109_vectorscope_triad-23-23x23-1825-681.webp" class="__image">. Пипетки позволяют выбирать области изображения
+<span class="__is_images_wrapper"><img src="/img/3f/94/fect4301.webp" alt="" class="__is_images_image" style="--is-images-width:23px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>. Пипетки позволяют выбирать области изображения
 для вычисления значений параметров модуля. Обычно вы можете вы­брать либо «po­int» (точ­ку — один пиксель), либо «area» (об­ласть — прямоугольный
 выбор пикселей) на изображении, хотя некоторые модули поддерживают только один режим.</p>
 
@@ -3405,8 +3471,9 @@ fallbacks/value.</p>
   <p>Модули <a href="#mod-base-curve">base curve</a> (базовая кривая), <a href="#mod-tone-curve">tone curve</a> (тоновая кривая) и <a href="#mod-rgb-curve">rgb curve</a>
 (RGB-кривая) используют кривые для управления тонами изображения. Эти модули имеют общие функции, которые заслуживают отдельного обсуждения.</p>
 
-  <figure class="__figure __implicit_figure __center" style="max-width:249px;"><img src="/img/pages/books/darktable/pg/1_base_processing.html/114_tone_curve-249-249x357-1651-363.webp" class="__image" alt="Кривая" title="Кривая"></figure>
-
+<figure id="fig-57" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Кривая" class="__is_images_wrapper"><img src="/img/oo/t8/4c7t3cec.webp" alt="Кривая" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:83/119;" data-scale="1"></span>
+</figure>
   <h5 id="section-51">Узлы</h5>
 
   <p>В исходном состоянии кривые представляют собой прямые линии, определенные двумя опорными узлами в правом верхнем и левом нижнем углах графика.

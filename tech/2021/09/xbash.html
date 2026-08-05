@@ -26,15 +26,15 @@
 <link rel="canonical" href="https://shikhalev.github.io/tech/2021/09/xbash.html" />
 <meta property="og:url" content="https://shikhalev.github.io/tech/2021/09/xbash.html" />
 <meta property="og:site_name" content="Иван Шихалев" />
-<meta property="og:image" content="https://shikhalev.github.io/img/2021/09/12/xbash/xbash-640x640-500-261-0-0.webp" />
+<meta property="og:image" content="https://shikhalev.github.io/img/c6/fe/12e0b3ob.webp" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-09-12T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-09-12T00:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://shikhalev.github.io/img/2021/09/12/xbash/xbash-640x640-500-261-0-0.webp" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/c6/fe/12e0b3ob.webp" />
 <meta name="twitter:title" content="xbash" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2021-09-12T00:00:00+00:00","datePublished":"2021-09-12T00:00:00+00:00","description":"bash-расширение для удобства кодинга","headline":"xbash","image":"https://shikhalev.github.io/img/2021/09/12/xbash/xbash-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2021/09/xbash.html"},"url":"https://shikhalev.github.io/tech/2021/09/xbash.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2021-09-12T00:00:00+00:00","datePublished":"2021-09-12T00:00:00+00:00","description":"bash-расширение для удобства кодинга","headline":"xbash","image":"https://shikhalev.github.io/img/c6/fe/12e0b3ob.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2021/09/xbash.html"},"url":"https://shikhalev.github.io/tech/2021/09/xbash.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
@@ -72,6 +72,11 @@
     })(window, document, "clarity", "script", "u2gczedmo7");
 </script>
 
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.4.css" />
+<script type="module" src="/js/is-images-0.8.0.4.js"></script>
+<!-- end of jekyll-is-images stuff -->
+
 </head>
 
 <body>
@@ -106,8 +111,9 @@
 <p class="meta">
   <time datetime="2021-09-12T00:00:00+00:00" itemprop="datePublished">2021.09.12
   </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#Linux">Linux</a>​<a class="tag" href="/tags#bash">bash</a>​<a class="tag" href="/tags#cargo">cargo</a>​<a class="tag" href="/tags#git">git</a>​<a class="tag" href="/tags#xbash">xbash</a>​<a class="tag" href="/tags#командная строка">командная строка</a>​<a class="tag" href="/tags#программирование">программирование</a>​<a class="tag" href="/tags#проекты">проекты</a></aside></header><div itemprop="articleBody">
-  <figure class="__figure __implicit_figure __center" style="max-width:578px;"><a href="/img/2021/09/12/xbash/xbash-fhd.webp" class="__image_link"><img src="/img/2021/09/12/xbash/xbash-578.webp" class="__image" alt="Скриншот командной строки с xbash" title="Скриншот командной строки с xbash"></a></figure>
-
+  <figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_600" style="--is-images-width:578px;" data-modes="grid,slides">
+<a href="/img/35/26/6e34o867.webp" title="Скриншот командной строки с xbash" class="__is_images_wrapper"><img src="/img/86/b9/6467e4cc.webp" alt="Скриншот командной строки с xbash" class="__is_images_image __is_images_single" style="--is-images-width:578px;--is-images-aspect-ratio:578/135;" data-scale="1"></a>
+</figure>
 <p>Давно собирался и таки стартанул пет-проект — <strong class="img-icon-github"><a href="https://github.com/shikhalev/xbash">https://github.com/shikhalev/xbash</a></strong>.</p>
 
 <p>Навеяно <strong><a href="https://github.com/thoughtbot/gitsh" class="img-icon-github">gitsh</a></strong>, который я когда-то активно использовал,
@@ -115,8 +121,8 @@
 да и использование Ruby, при всей моей любви к этому языку, тут лишнее. Посему я решил сделать что-то подобное, но попроще,
 на чистом bash, и более универсальное.</p>
 
-<h2 id="что-делает">
-<a class="anchor" href="#%D1%87%D1%82%D0%BE-%D0%B4%D0%B5%D0%BB%D0%B0%D0%B5%D1%82" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что делает?</h2>
+<h2 id="section">
+<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что делает?</h2>
 
 <p>Итак, что этот скрипт (набор скриптов) делает?</p>
 
@@ -141,8 +147,8 @@
 
 <!--more-->
 
-<h2 id="что-не-делает">
-<a class="anchor" href="#%D1%87%D1%82%D0%BE-%D0%BD%D0%B5-%D0%B4%D0%B5%D0%BB%D0%B0%D0%B5%D1%82" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что не делает?</h2>
+<h2 id="section-1">
+<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что не делает?</h2>
 
 <p>Вообще, список недоделок и планов имеется <a href="https://github.com/shikhalev/xbash#todo">в разделе TODO файла README.md репозитория</a>… Тут, пожалуй, напишу о проб­лем­ных моментах,
 а не прос­то недоделках:</p>
@@ -165,8 +171,8 @@
   </li>
 </ul>
 
-<h2 id="что-я-узнал">
-<a class="anchor" href="#%D1%87%D1%82%D0%BE-%D1%8F-%D1%83%D0%B7%D0%BD%D0%B0%D0%BB" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что я узнал?</h2>
+<h2 id="section-2">
+<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что я узнал?</h2>
 
 <p>Наверное, много чего, особенно относительно чистого bash… Из интересного:</p>
 
@@ -203,30 +209,30 @@
 <aside class="recommendations"><div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2023.10.03 |</span>
-            <a href="/life/2023/10/merlin.html" title="Приложение для рас­поз­на­ва­ния птиц по го­ло­су">Merlin Bird ID</a>
-          </dt>
-          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>
-</dd>
-        </dl>
-      </div>
-<div class="random-item">
-        <dl>
-          <dt>
-            <span class="meta">2013.06.19 |</span>
-            <a href="/life/2013/06/copyright-assignments.html" title="О неочевидных проблемах, связанных с передачей прав на свободный софт">Откуда ждать подлянки...</a>
-          </dt>
-          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
-</dd>
-        </dl>
-      </div>
-<div class="random-item">
-        <dl>
-          <dt>
-            <span class="meta">2016.03.09 |</span>
-            <a href="/tech/2016/03/introspection.html" title="Что программа может знать о самой себе?">Средства самопознания в Ruby</a>
+            <span class="meta">2016.01.27 |</span>
+            <a href="/tech/2016/01/metaprogramming.html" title="Добавление собственных абстракций в объектную модель — это просто. И интересно.">Мета­программи­ро­вание в Ruby: разбор примера</a>
           </dt>
           <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2022.10.23 |</span>
+            <a href="/tech/2022/10/conky-hwmon.html" title="Скрипт автоопределения номера устройства hwmon по имени">Conky: исправление проблемы с hwmon</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2020.01.11 |</span>
+            <a href="/tech/2020/01/rack.html" title="Библиотека Rack — простой объектный интерфейс для написания веб-приложений (статья в журнале «Системный администратор»)">Rack — основа веб-фреймворков в Ruby</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a>​<a class="fa-icon-globe" href="/tech/web/" title="HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.">Web</a>
 </dd>
         </dl>
       </div></aside>
@@ -246,9 +252,9 @@
 </aside><aside id="toc" class="toc toc-post">
   <h4>Содержание</h4>
   <ul id="toc_list" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#что-делает">Что делает?</a></li>
-<li class="toc-entry toc-h2"><a href="#что-не-делает">Что не делает?</a></li>
-<li class="toc-entry toc-h2"><a href="#что-я-узнал">Что я узнал?</a></li>
+<li class="toc-entry toc-h2"><a href="#section">Что делает?</a></li>
+<li class="toc-entry toc-h2"><a href="#section-1">Что не делает?</a></li>
+<li class="toc-entry toc-h2"><a href="#section-2">Что я узнал?</a></li>
 </ul>
 </aside><aside id="backs" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
 

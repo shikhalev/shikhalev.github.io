@@ -26,15 +26,15 @@
 <link rel="canonical" href="https://shikhalev.github.io/tech/2025/11/announcer.html" />
 <meta property="og:url" content="https://shikhalev.github.io/tech/2025/11/announcer.html" />
 <meta property="og:site_name" content="Иван Шихалев" />
-<meta property="og:image" content="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" />
+<meta property="og:image" content="https://shikhalev.github.io/img/24/e8/6613269e.webp" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-11-29T00:00:00+00:00" />
 <meta property="article:modified_time" content="2025-11-29T00:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/24/e8/6613269e.webp" />
 <meta name="twitter:title" content="Анонсер — техническая сторона" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2025-11-29T00:00:00+00:00","datePublished":"2025-11-29T00:00:00+00:00","description":"Как я сделал автоанонсирование постов на данном сайте в Telegram — логика, Jekyll-плагин и GitHub Actions","headline":"Анонсер — техническая сторона","image":"https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2025/11/announcer.html"},"url":"https://shikhalev.github.io/tech/2025/11/announcer.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2025-11-29T00:00:00+00:00","datePublished":"2025-11-29T00:00:00+00:00","description":"Как я сделал автоанонсирование постов на данном сайте в Telegram — логика, Jekyll-плагин и GitHub Actions","headline":"Анонсер — техническая сторона","image":"https://shikhalev.github.io/img/24/e8/6613269e.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2025/11/announcer.html"},"url":"https://shikhalev.github.io/tech/2025/11/announcer.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
@@ -72,6 +72,11 @@
     })(window, document, "clarity", "script", "u2gczedmo7");
 </script>
 
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.4.css" />
+<script type="module" src="/js/is-images-0.8.0.4.js"></script>
+<!-- end of jekyll-is-images stuff -->
+
 </head>
 
 <body>
@@ -106,8 +111,9 @@
 <p class="meta">
   <time datetime="2025-11-29T00:00:00+00:00" itemprop="datePublished">2025.11.29
   </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#GitHub">GitHub</a>​<a class="tag" href="/tags#GitHub Actions">GitHub Actions</a>​<a class="tag" href="/tags#Jekyll">Jekyll</a>​<a class="tag" href="/tags#Jekyll IS">Jekyll IS</a>​<a class="tag" href="/tags#Telegram">Telegram</a>​<a class="tag" href="/tags#планы">планы</a>​<a class="tag" href="/tags#сайт">сайт</a></aside></header><div itemprop="articleBody">
-  <figure class="__figure __implicit_figure __right logo" style="max-width:240px;margin-top:-5px;shape-outside:url(/img/2025/11/29/announcer/notification-240.webp);"><a href="/img/2025/11/29/announcer/notification-fhd.webp" class="__image_link"><img src="/img/2025/11/29/announcer/notification-240.webp" class="__image" style="filter: drop-shadow(0px 0px 5px silver);shape-outside:url(/img/2025/11/29/announcer/notification-240.webp);" alt="Скриншот уведомления о публикации" title="Скриншот уведомления о публикации"></a></figure>
-
+  <figure id="fig-1" class="logo __is_images_figure __is_images_single __is_images_shaped __is_images_width_250 __is_images__right" style="shape-outside:url(/img/t6/76/ot1f8856.webp);--is-images-width:240px;--is-images-up:5px;" data-modes="grid,slides">
+<a href="/img/65/5f/782of039.webp" title="Скриншот уведомления о публикации" class="__is_images_wrapper"><img src="/img/t6/76/ot1f8856.webp" alt="Скриншот уведомления о публикации" class="__is_images_image __is_images_single" style="filter: drop-shadow(0px 0px 5px silver);--is-images-width:240px;--is-images-aspect-ratio:16/21;--is-images-up:5px;" data-scale="1"></a>
+</figure>
 <p>В <a href="/about/2025/11/telegram.html">посте о подключении телеграм-канала</a> я уже предполагал, что напишу подробнее о технической стороне этого подключения.
 Вообще-то, я планировал этим заняться попозже, а пока переключиться на <a href="/pages/books/darktable/pg/">«Прак­ти­чес­кое руководство по dark­table»</a>… Но внезапно
 обнаружил, что толком переключиться не могу, пока не доведу эту задачу с анонсером до какой-то логической точки.</p>
@@ -115,8 +121,8 @@
 <p>Что ж, причесал Actions, отладил это хозяйство до более-менее стабильного со­сто­я­ния — хоть и далекого от завершения, но уже приемлемого для описания.
 Принципиальных изменений в ближайших версиях, скорее всего, не будет, а о плановых доделках я здесь еще скажу.</p>
 
-<h2 id="задача">
-<a class="anchor" href="#%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Задача</h2>
+<h2 id="section">
+<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Задача</h2>
 
 <p>Собственно, основная задача стояла в следующем:</p>
 
@@ -133,8 +139,8 @@
 
 <!--more-->
 
-<h2 id="текущее-состояние">
-<a class="anchor" href="#%D1%82%D0%B5%D0%BA%D1%83%D1%89%D0%B5%D0%B5-%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Текущее состояние</h2>
+<h2 id="section-1">
+<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Текущее состояние</h2>
 
 <ul class="check-list">
   <li>
@@ -180,11 +186,11 @@
   </li>
 </ul>
 
-<h2 id="что-и-как-работает">
-<a class="anchor" href="#%D1%87%D1%82%D0%BE-%D0%B8-%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что и как работает</h2>
+<h2 id="section-2">
+<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что и как работает</h2>
 
-<h3 id="общий-принцип">
-<a class="anchor" href="#%D0%BE%D0%B1%D1%89%D0%B8%D0%B9-%D0%BF%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF" aria-hidden="true"><span class="octicon octicon-link"></span></a>Общий принцип</h3>
+<h3 id="section-3">
+<a class="anchor" href="#section-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Общий принцип</h3>
 
 <p>Плагин при генерации сайта собирает список страниц с установленным флагом <code class="language-plaintext highlighter-rouge">announce</code> и загружает список уже анонсированных, хранящийся в каталоге
 <code class="language-plaintext highlighter-rouge">_data</code> jekyll-проекта. Сравнивает эти два списка и определяет новые анонсы, данные по которым записывает в отдельный файл <code class="language-plaintext highlighter-rouge">.announces.json</code>, вместе
@@ -202,8 +208,8 @@
 
 <p>Кроме того, файл с данными по уже анонсированным копируется также на сайт, откуда его и берет в дальнейшем JavaScript.</p>
 
-<h3 id="исходники">
-<a class="anchor" href="#%D0%B8%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Исходники</h3>
+<h3 id="section-4">
+<a class="anchor" href="#section-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Исходники</h3>
 
 <dl>
   <dt><strong><a href="https://github.com/jekyll-is/jekyll-is-announcer"><code class="language-plaintext highlighter-rouge">jekyll-is-announcer</code></a></strong></dt>
@@ -263,8 +269,8 @@
 
 <p>Телеграм-бот в моем случае используется один и тот же для анонсов и для уведомлений, что, конечно, совершенно необязательно.</p>
 
-<h2 id="вместо-итого">
-<a class="anchor" href="#%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%BE-%D0%B8%D1%82%D0%BE%D0%B3%D0%BE" aria-hidden="true"><span class="octicon octicon-link"></span></a>Вместо итого</h2>
+<h2 id="section-5">
+<a class="anchor" href="#section-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Вместо итого</h2>
 
 <p>Надеюсь, код достаточно понятный сам по себе. Но если что, готов ответить на вопросы в комментариях.</p>
 
@@ -278,30 +284,30 @@
 <aside class="recommendations"><div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2025.06.19 |</span>
-            <a href="/photo/2025/06/sigma-60-600.html" title="Мой новый объектив — Sigma AF 60-600mm f/4.5-6.3 DG OS HSM Sports">Объектив Sigma 60-600mm</a>
+            <span class="meta">2021.03.16 |</span>
+            <a href="/tech/2021/03/rust-small-stone.html" title="Нечастый случай, когда Rust (его стандартная библиотека) прямо-таки подталкивает сделать ошибку по невнимательности при чтении из файла в вектор.">Небольшой подводный камень в Rust</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a>​<a class="fa-icon-calendar-alt" href="/life/dybr/" title="Просто кусочки повседневности">Дыбр</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-rust" href="/tech/programming/rust/" title="Язык программирования Rust">Rust</a>
 </dd>
         </dl>
       </div>
 <div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2011.10.11 |</span>
-            <a href="/tech/2011/10/latex-marker.html" title="Выделение цветным фоном в тексте, аккуратный способ.">Выделение «маркером» в LaTeX</a>
+            <span class="meta">2025.10.05 |</span>
+            <a href="/tech/2025/10/darktable.html" title="Анонс «Практического руководства по darktable»">Этим стулом...</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a>​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>
 </dd>
         </dl>
       </div>
 <div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2023.11.13 |</span>
-            <a href="/tech/2023/11/inat-get.html" title="Набор инструментов для получения и обработки данных с iNaturalist">INat::Get — ранняя альфа</a>
+            <span class="meta">2015.03.31 |</span>
+            <a href="/tech/2015/03/druby.html" title="Введение в технологию dRuby. Прозрачный RPC для взаимодействия Ruby-программ.">Распределенный Ruby</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a>
 </dd>
         </dl>
       </div></aside>
@@ -321,15 +327,15 @@
 </aside><aside id="toc" class="toc toc-post">
   <h4>Содержание</h4>
   <ul id="toc_list" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#задача">Задача</a></li>
-<li class="toc-entry toc-h2"><a href="#текущее-состояние">Текущее состояние</a></li>
-<li class="toc-entry toc-h2"><a href="#что-и-как-работает">Что и как работает</a>
+<li class="toc-entry toc-h2"><a href="#section">Задача</a></li>
+<li class="toc-entry toc-h2"><a href="#section-1">Текущее состояние</a></li>
+<li class="toc-entry toc-h2"><a href="#section-2">Что и как работает</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#общий-принцип">Общий принцип</a></li>
-<li class="toc-entry toc-h3"><a href="#исходники">Исходники</a></li>
+<li class="toc-entry toc-h3"><a href="#section-3">Общий принцип</a></li>
+<li class="toc-entry toc-h3"><a href="#section-4">Исходники</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#вместо-итого">Вместо итого</a></li>
+<li class="toc-entry toc-h2"><a href="#section-5">Вместо итого</a></li>
 </ul>
 </aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/tech/2025/12/updates.html" title="Обновления двух гемов: inat-channel и jekyll-is-announcer">Пара апдейтов</a></li></ul>
     </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>

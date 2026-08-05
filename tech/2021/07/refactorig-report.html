@@ -26,15 +26,15 @@
 <link rel="canonical" href="https://shikhalev.github.io/tech/2021/07/refactorig-report.html" />
 <meta property="og:url" content="https://shikhalev.github.io/tech/2021/07/refactorig-report.html" />
 <meta property="og:site_name" content="Иван Шихалев" />
-<meta property="og:image" content="https://shikhalev.github.io/img/2021/07/09/refactorig-report/jekyll-screen-640x640-500-261-0-20.webp" />
+<meta property="og:image" content="https://shikhalev.github.io/img/88/59/44847ce6.webp" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-07-09T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-07-09T00:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://shikhalev.github.io/img/2021/07/09/refactorig-report/jekyll-screen-640x640-500-261-0-20.webp" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/88/59/44847ce6.webp" />
 <meta name="twitter:title" content="Отчет о рефакторинге" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2021-07-09T00:00:00+00:00","datePublished":"2021-07-09T00:00:00+00:00","description":"Как я рефакторил сайт, с чем столкнулся и о чем узнал","headline":"Отчет о рефакторинге","image":"https://shikhalev.github.io/img/2021/07/09/refactorig-report/jekyll-screen-640x640-500-261-0-20.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2021/07/refactorig-report.html"},"url":"https://shikhalev.github.io/tech/2021/07/refactorig-report.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2021-07-09T00:00:00+00:00","datePublished":"2021-07-09T00:00:00+00:00","description":"Как я рефакторил сайт, с чем столкнулся и о чем узнал","headline":"Отчет о рефакторинге","image":"https://shikhalev.github.io/img/88/59/44847ce6.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2021/07/refactorig-report.html"},"url":"https://shikhalev.github.io/tech/2021/07/refactorig-report.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
@@ -72,6 +72,11 @@
     })(window, document, "clarity", "script", "u2gczedmo7");
 </script>
 
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.4.css" />
+<script type="module" src="/js/is-images-0.8.0.4.js"></script>
+<!-- end of jekyll-is-images stuff -->
+
 </head>
 
 <body>
@@ -106,8 +111,10 @@
 <p class="meta">
   <time datetime="2021-07-09T00:00:00+00:00" itemprop="datePublished">2021.07.09
   </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#CSS">CSS</a>​<a class="tag" href="/tags#Font Awesome">Font Awesome</a>​<a class="tag" href="/tags#GitHub">GitHub</a>​<a class="tag" href="/tags#Google Fonts">Google Fonts</a>​<a class="tag" href="/tags#Google Maps">Google Maps</a>​<a class="tag" href="/tags#HTML">HTML</a>​<a class="tag" href="/tags#JavaScript">JavaScript</a>​<a class="tag" href="/tags#Jekyll">Jekyll</a>​<a class="tag" href="/tags#Liquid">Liquid</a>​<a class="tag" href="/tags#PNG">PNG</a>​<a class="tag" href="/tags#SASS">SASS</a>​<a class="tag" href="/tags#SCSS">SCSS</a>​<a class="tag" href="/tags#SVG">SVG</a>​<a class="tag" href="/tags#aspect-ratio">aspect-ratio</a>​<a class="tag" href="/tags#display">display</a>​<a class="tag" href="/tags#flex">flex</a>​<a class="tag" href="/tags#grid">grid</a>​<a class="tag" href="/tags#kramdown">kramdown</a>​<a class="tag" href="/tags#markdown">markdown</a>​<a class="tag" href="/tags#shikhalev.org">shikhalev.org</a>​<a class="tag" href="/tags#sticky">sticky</a>​<a class="tag" href="/tags#блоги">блоги</a>​<a class="tag" href="/tags#веб-шрифты">веб-шрифты</a>​<a class="tag" href="/tags#верстка">верстка</a>​<a class="tag" href="/tags#грабли">грабли</a>​<a class="tag" href="/tags#иконки">иконки</a>​<a class="tag" href="/tags#медиа-селекторы">медиа-селекторы</a>​<a class="tag" href="/tags#пробелы">пробелы</a>​<a class="tag" href="/tags#рефакторинг">рефакторинг</a>​<a class="tag" href="/tags#сайты">сайты</a>​<a class="tag" href="/tags#статическая генерация">статическая генерация</a>​<a class="tag" href="/tags#шрифты">шрифты</a></aside></header><div itemprop="articleBody">
-  <figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2021/07/09/refactorig-report/jekyll-screen-fhd.webp" class="__image_link"><img src="/img/2021/07/09/refactorig-report/jekyll-screen-320.webp" class="__image" alt="Скриншот с [официального сайта Jekyll](https://jekyllrb.com/)" title="Скриншот с [официального сайта Jekyll](https://jekyllrb.com/)"></a><figcaption>Скриншот с <a href="https://jekyllrb.com/">официального сайта Jekyll</a></figcaption></figure>
-
+  <figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_350 __is_images__right" style="--is-images-width:320px;" data-modes="grid,slides">
+<a href="/img/cb/83/1cco1ob9.webp" title="Скриншот с [официального сайта Jekyll](https://jekyllrb.com/)" class="__is_images_wrapper"><img src="/img/7o/89/757711c1.webp" alt="Скриншот с [официального сайта Jekyll](https://jekyllrb.com/)" class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:320/237;" data-scale="1" data-caption="Скриншот с &lt;a href=" https:>официального сайта Jekyll</a>"&gt;
+<figcaption>Скриншот с <a href="https://jekyllrb.com/">официального сайта Jekyll</a></figcaption>
+</figure>
 <p>Итак, я таки отрефакторил и обновил данный сайт. Почему нельзя было сразу делать правильно? Ну, в основном потому,
 что я впервые имел дело с Jekyll, изрядно подзабыл (а что-то и не знал) базовые приемы верстки… И так далее,
 и тому подобное.</p>
@@ -124,11 +131,11 @@
 
 <!--more-->
 
-<h2 id="выбор-технологий">
-<a class="anchor" href="#%D0%B2%D1%8B%D0%B1%D0%BE%D1%80-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9" aria-hidden="true"><span class="octicon octicon-link"></span></a>Выбор технологий</h2>
+<h2 id="section">
+<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Выбор технологий</h2>
 
-<h3 id="бэкенд">
-<a class="anchor" href="#%D0%B1%D1%8D%D0%BA%D0%B5%D0%BD%D0%B4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Бэкенд</h3>
+<h3 id="section-1">
+<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Бэкенд</h3>
 
 <p>Сайт сделан на статическом генераторе <strong><a href="https://jekyllrb.com/" title="Официальный сайт Jekyll" class="img-icon-jekyll">Jekyll</a></strong> и размещен на <strong><a href="https://pages.github.com/" title="GitHub Pages" class="img-icon-github">GitHub Pages</a></strong>,
 чтобы не платить за хостинг. Комментарии — <strong><a href="https://staticman.net/" title="Официальный сайт Staticman" class="img-icon-staticman">Staticman</a></strong>, размещенный на <strong><a href="https://www.heroku.com/" title="Heroku" class="img-icon-heroku">Heroku</a></strong>
@@ -246,8 +253,8 @@ API этих сервисов, а не пуши Git. Если и там, и т
   </dd>
 </dl>
 
-<h3 id="фронтенд">
-<a class="anchor" href="#%D1%84%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D0%B4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Фронтенд</h3>
+<h3 id="section-2">
+<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Фронтенд</h3>
 
 <p>Тут все просто: никаких фреймворков, никаких динамически формирующихся страниц. Зато и никакой заботы об устаревших браузерах (учитывая
 отсутствие динамики, можно быть увереным, что информация будет доступна и на старинных браузерах, а вот верстка может и поехать, если
@@ -274,8 +281,8 @@ API этих сервисов, а не пуши Git. Если и там, и т
 <p>Мы пойдем третьим путем и будем использовать: <strong><a href="https://ru.wikipedia.org/wiki/HTML5" title="HyperText Markup Language версия 5" class="img-icon-html5">HTML5</a></strong> ради семантических тегов, <strong><a href="https://ru.wikipedia.org/wiki/CSS#%D0%A3%D1%80%D0%BE%D0%B2%D0%B5%D0%BD%D1%8C_3_(CSS3)" title="Cascading Style Sheets уровень 3" class="img-icon-css3">CSS3</a></strong>
 ради удобной верстки посредством <code class="language-plaintext highlighter-rouge">flex</code> и <code class="language-plaintext highlighter-rouge">grid</code>, а так­же <strong><a href="https://ru.wikipedia.org/wiki/JavaScript" title="Язык программирования JavaScript" class="img-icon-javascript">JavaScript</a></strong> по ми­ни­муму<sup id="fnref:js"><a href="#fn:js" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>.</p>
 
-<h4 id="внешние-ресурсы">
-<a class="anchor" href="#%D0%B2%D0%BD%D0%B5%D1%88%D0%BD%D0%B8%D0%B5-%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Внешние ресурсы</h4>
+<h4 id="section-3">
+<a class="anchor" href="#section-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Внешние ресурсы</h4>
 
 <p>Из таковых у меня подгружаются шрифты с <strong><a href="https://fonts.google.com/" title="Google Fonts" class="img-icon-gf">Google Fonts</a></strong> — это
 <a href="https://rus.paratype.ru/pt-sans-pt-serif" title="Шрифтовая система PT Sans, PT Serif и PT Mono">свободно распространяемые шрифты <strong class="img-icon-paratype">Paratype</strong></a> —
@@ -304,8 +311,8 @@ API этих сервисов, а не пуши Git. Если и там, и т
 
 <p>Они, конечно, тянут за собой много всякого, но все-таки полезные.</p>
 
-<h2 id="разработка">
-<a class="anchor" href="#%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Разработка</h2>
+<h2 id="section-4">
+<a class="anchor" href="#section-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Разработка</h2>
 
 <p>Совсем пошагово описывать процесс я не буду. Дело это достаточно скучное, пройдусь по тем моментам, которые чем-то интересны,
 или вызвали у меня затруднения.</p>
@@ -389,8 +396,8 @@ API этих сервисов, а не пуши Git. Если и там, и т
 в <code class="language-plaintext highlighter-rouge">&lt;figcaption&gt;</code> я выставил <code class="language-plaintext highlighter-rouge">markdown="span"</code> (то есть обрабатывать только inline-разметку, не добавляя никаких <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code>) и доволен,
 как слон<sup id="fnref:img"><a href="#fn:img" class="footnote" rel="footnote" role="doc-noteref">9</a></sup>.</p>
 
-<h4 id="оглавление">
-<a class="anchor" href="#%D0%BE%D0%B3%D0%BB%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Оглавление</h4>
+<h4 id="section-5">
+<a class="anchor" href="#section-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Оглавление</h4>
 
 <p>Очень полезный модуль <strong><a href="https://github.com/allejo/jekyll-toc" class="fa-icon-github">allejo/jekyll-toc</a></strong>, я даже в футере на него решил ссылку сделать, если
 вы читаете эту страницу на достаточно большом экране, обратите внимание на <a href="#toc">соответствующий блок</a> в правом верхнем углу
@@ -398,8 +405,8 @@ API этих сервисов, а не пуши Git. Если и там, и т
 и <code class="language-plaintext highlighter-rouge">skip_no_ids</code>. Последний позволяет игнорировать заголовки без атрибута <code class="language-plaintext highlighter-rouge">id</code> (или с пустым), чего можно добиться в mark­down
 указав <code class="language-plaintext highlighter-rouge">{: id=""}</code> непосредственно перед строкой заголовка.</p>
 
-<h3 id="верстка">
-<a class="anchor" href="#%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Верстка</h3>
+<h3 id="section-6">
+<a class="anchor" href="#section-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Верстка</h3>
 
 <h4 id="grid--flex">
 <a class="anchor" href="#grid--flex" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grid &amp; Flex</h4>
@@ -413,8 +420,8 @@ API этих сервисов, а не пуши Git. Если и там, и т
 пустая фиксированная колонка. Если бы я не изгалялся с забрасыванием на средней ширине блока поиска в заголовок, можно было б
 так не заморачиваться, наверное… А может быть, я че­го-то просто не знаю.</p>
 
-<h4 id="картинки-и-фреймы">
-<a class="anchor" href="#%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8-%D0%B8-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Картинки и фреймы</h4>
+<h4 id="section-7">
+<a class="anchor" href="#section-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>Картинки и фреймы</h4>
 
 <p>Когда мы заворачиваем <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> или <code class="language-plaintext highlighter-rouge">&lt;iframe&gt;</code> в <code class="language-plaintext highlighter-rouge">&lt;figure&gt;</code>, важно поставить им <code class="language-plaintext highlighter-rouge">dis­play:​block;​width:​100%;</code>, а фрейму еще и подходящее
 значение <code class="language-plaintext highlighter-rouge">as­pect-ra­tio</code>.</p>
@@ -434,8 +441,8 @@ API этих сервисов, а не пуши Git. Если и там, и т
 <p>Ну, а уж для фреймов, скажем, гуглокарт<sup id="fnref:gm"><a href="#fn:gm" class="footnote" rel="footnote" role="doc-noteref">10</a></sup> выставление <code class="language-plaintext highlighter-rouge">dis­play:​block;​width:​100%;​as­pect-ra­tio:​1/1;</code> просто единственный способ получить
 адекватную адаптивную верстку.</p>
 
-<h4 id="иконки">
-<a class="anchor" href="#%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Иконки</h4>
+<h4 id="section-8">
+<a class="anchor" href="#section-8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Иконки</h4>
 
 <p>Они у меня имеются в двух видах:</p>
 
@@ -472,8 +479,8 @@ API этих сервисов, а не пуши Git. Если и там, и т
 <strong><a href="https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_sass/nova/icons.scss" class="fa-icon-github">icons.scss</a></strong>.
 Вообще, я был раньше знаком с SASS/SCSS, но как-то недооценивал, насколько это удобно и экономит усилия, <em>особенно при рефакторинге</em>.</p>
 
-<h4 id="стихи">
-<a class="anchor" href="#%D1%81%D1%82%D0%B8%D1%85%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Стихи</h4>
+<h4 id="section-9">
+<a class="anchor" href="#section-9" aria-hidden="true"><span class="octicon octicon-link"></span></a>Стихи</h4>
 
 <p>Собственно, все, что относится к верстке стихов, расположено в одном файле
 <strong><a href="https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_sass/nova/content/verse.scss" class="fa-icon-github">verse.scss</a></strong>,
@@ -493,8 +500,8 @@ API этих сервисов, а не пуши Git. Если и там, и т
 <span class="p">}</span></code></pre>
 </figure>
 
-<h4 id="печать">
-<a class="anchor" href="#%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Печать</h4>
+<h4 id="section-10">
+<a class="anchor" href="#section-10" aria-hidden="true"><span class="octicon octicon-link"></span></a>Печать</h4>
 
 <p>Тут понадобилось обратное действие — разрешить переносы в фрагментах кода, тогда как на экране слишком широкий <code class="language-plaintext highlighter-rouge">&lt;pre&gt;</code> имеет
 горизонтальную прокрутку<sup id="fnref:pp"><a href="#fn:pp" class="footnote" rel="footnote" role="doc-noteref">11</a></sup>.</p>
@@ -515,8 +522,8 @@ API этих сервисов, а не пуши Git. Если и там, и т
 ей и не занимается… Так что, если печатными версиями статей заморачиваться всерьез, стоит генерировать из них PDF не через HTML,
 а через LaTeX посредством какого-нибудь <strong><a href="https://pandoc.org/" title="Pandoc — a universal document converter">pandoc</a></strong>.</p>
 
-<h3 id="разное">
-<a class="anchor" href="#%D1%80%D0%B0%D0%B7%D0%BD%D0%BE%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Разное</h3>
+<h3 id="section-11">
+<a class="anchor" href="#section-11" aria-hidden="true"><span class="octicon octicon-link"></span></a>Разное</h3>
 
 <p>Для адекватного отображения на устройствах с разной плотностью пикселей нужно не забывать про метатег <code class="language-plaintext highlighter-rouge">viewport</code>.</p>
 
@@ -605,10 +612,20 @@ API этих сервисов, а не пуши Git. Если и там, и т
 <aside class="recommendations"><div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2011.07.29 |</span>
-            <a href="/tech/2011/07/distributed-blogging.html" title="Система блогов должна быть отказоустойчивой. Единственный способ это сделать — сделать ее распределенной... Современные технологии вполне себе это позволяют.">Распределенная блогосфера</a>
+            <span class="meta">2013.07.21 |</span>
+            <a href="/tech/2013/07/git-server.html" title="Настраиваем git-сервер для малых групп с минимальными затратами.">Кратко: примитивный git-сервер</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-globe" href="/tech/web/" title="HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.">Web</a>​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2023.11.13 |</span>
+            <a href="/tech/2023/11/inat-get.html" title="Набор инструментов для получения и обработки данных с iNaturalist">INat::Get — ранняя альфа</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>
 </dd>
         </dl>
       </div>
@@ -619,16 +636,6 @@ API этих сервисов, а не пуши Git. Если и там, и т
             <a href="/tech/2021/03/typo-keyboard.html" title="Настройка клавиатуры в Linux для ввода различных символов, таких как, например, длинное тире, кавычки-ёлочки, знак копирайта и так далее. В редакции 2021 года.">Ввод «типографских» символов с клавиатуры (ed. 2021)</a>
           </dt>
           <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
-</dd>
-        </dl>
-      </div>
-<div class="random-item">
-        <dl>
-          <dt>
-            <span class="meta">2021.09.12 |</span>
-            <a href="/tech/2021/09/xbash.html" title="bash-расширение для удобства кодинга">xbash</a>
-          </dt>
-          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
 </dd>
         </dl>
       </div></aside>
@@ -648,34 +655,34 @@ API этих сервисов, а не пуши Git. Если и там, и т
 </aside><aside id="toc" class="toc toc-post">
   <h4>Содержание</h4>
   <ul id="toc_list" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#выбор-технологий">Выбор технологий</a>
+<li class="toc-entry toc-h2"><a href="#section">Выбор технологий</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#бэкенд">Бэкенд</a></li>
-<li class="toc-entry toc-h3"><a href="#фронтенд">Фронтенд</a>
+<li class="toc-entry toc-h3"><a href="#section-1">Бэкенд</a></li>
+<li class="toc-entry toc-h3"><a href="#section-2">Фронтенд</a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#внешние-ресурсы">Внешние ресурсы</a></li>
+<li class="toc-entry toc-h4"><a href="#section-3">Внешние ресурсы</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#разработка">Разработка</a>
+<li class="toc-entry toc-h2"><a href="#section-4">Разработка</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#jekyll">Jekyll</a>
 <ul>
 <li class="toc-entry toc-h4"><a href="#markdown">Markdown</a></li>
-<li class="toc-entry toc-h4"><a href="#оглавление">Оглавление</a></li>
+<li class="toc-entry toc-h4"><a href="#section-5">Оглавление</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h3"><a href="#верстка">Верстка</a>
+<li class="toc-entry toc-h3"><a href="#section-6">Верстка</a>
 <ul>
 <li class="toc-entry toc-h4"><a href="#grid--flex">Grid &amp; Flex</a></li>
-<li class="toc-entry toc-h4"><a href="#картинки-и-фреймы">Картинки и фреймы</a></li>
-<li class="toc-entry toc-h4"><a href="#иконки">Иконки</a></li>
-<li class="toc-entry toc-h4"><a href="#стихи">Стихи</a></li>
-<li class="toc-entry toc-h4"><a href="#печать">Печать</a></li>
+<li class="toc-entry toc-h4"><a href="#section-7">Картинки и фреймы</a></li>
+<li class="toc-entry toc-h4"><a href="#section-8">Иконки</a></li>
+<li class="toc-entry toc-h4"><a href="#section-9">Стихи</a></li>
+<li class="toc-entry toc-h4"><a href="#section-10">Печать</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h3"><a href="#разное">Разное</a></li>
+<li class="toc-entry toc-h3"><a href="#section-11">Разное</a></li>
 </ul>
 </li>
 </ul>

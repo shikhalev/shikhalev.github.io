@@ -26,15 +26,15 @@
 <link rel="canonical" href="https://shikhalev.github.io/tech/2015/03/decorator.html" />
 <meta property="og:url" content="https://shikhalev.github.io/tech/2015/03/decorator.html" />
 <meta property="og:site_name" content="Иван Шихалев" />
-<meta property="og:image" content="https://shikhalev.github.io/img/2015/03/30/decorator/screen-decos-640x640-500-261-0-0.webp" />
+<meta property="og:image" content="https://shikhalev.github.io/img/00/0t/15752c3e.webp" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-03-30T00:00:00+00:00" />
 <meta property="article:modified_time" content="2015-03-30T00:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://shikhalev.github.io/img/2015/03/30/decorator/screen-decos-640x640-500-261-0-0.webp" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/00/0t/15752c3e.webp" />
 <meta name="twitter:title" content="Декораторы в Ruby" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2015-03-30T00:00:00+00:00","datePublished":"2015-03-30T00:00:00+00:00","description":"Реализация паттерна «декоратор» на языке Ruby","headline":"Декораторы в Ruby","image":"https://shikhalev.github.io/img/2015/03/30/decorator/screen-decos-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2015/03/decorator.html"},"url":"https://shikhalev.github.io/tech/2015/03/decorator.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2015-03-30T00:00:00+00:00","datePublished":"2015-03-30T00:00:00+00:00","description":"Реализация паттерна «декоратор» на языке Ruby","headline":"Декораторы в Ruby","image":"https://shikhalev.github.io/img/00/0t/15752c3e.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2015/03/decorator.html"},"url":"https://shikhalev.github.io/tech/2015/03/decorator.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
@@ -71,6 +71,11 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "u2gczedmo7");
 </script>
+
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.4.css" />
+<script type="module" src="/js/is-images-0.8.0.4.js"></script>
+<!-- end of jekyll-is-images stuff -->
 
 </head>
 
@@ -110,8 +115,9 @@
 
 <hr>
 
-<figure class="__figure __implicit_figure __right" style="max-width:158px;padding: 5px;"><a href="http://samag.ru/archive/article/2520"><img src="/img/2015/03/30/decorator/130-158.webp" class="__image"></a></figure>
-
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_200 __is_images__right" style="padding:5px;--is-images-width:158px;" data-modes="grid,slides">
+<a href="http://samag.ru/archive/article/2520" class="__is_images_wrapper"><img src="/img/36/e9/o74fb29e.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:158px;--is-images-aspect-ratio:79/112;" data-scale="1"></a>
+</figure>
 <div class="note">
   <p>Как известно, в языке Python существует красивый механизм декораторов, расширяющих функционал объекта без изменения
 интерфейса. Это довольно мощное средство, попользоваться им удобно и приятно. Но вот проблема: наш язык
@@ -181,8 +187,8 @@
 третьими лицами. Поскольку исходный код имеющихся библиотек не модифицируется, мы не создаем себе никаких препятствий к установке
 обновлений и исправлений, что важно для проектов с длительным жизненным циклом.</p>
 
-<h2 id="блоки-методы-и-объекты-proc">
-<a class="anchor" href="#%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D1%8B-%D0%B8-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B-proc" aria-hidden="true"><span class="octicon octicon-link"></span></a>Блоки, методы и объекты Proc</h2>
+<h2 id="proc">
+<a class="anchor" href="#proc" aria-hidden="true"><span class="octicon octicon-link"></span></a>Блоки, методы и объекты Proc</h2>
 
 <p class="note"><em>Здесь и далее я описываю сложные, но хорошо документированные, особенности языка применительно к основной теме статьи, кратко,
 не всегда формально точно и, по возможности, просто. Для изучения языка лучше всего обратиться к более-менее официальным<sup id="fnref:ppg"><a href="#fn:ppg" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>
@@ -246,8 +252,8 @@
 
 <p>Теперь, определившись, что у нас есть, можно перейти к рассмотрению того, что можно из этого сделать…</p>
 
-<h2 id="шаг-первый--функция-обертка">
-<a class="anchor" href="#%D1%88%D0%B0%D0%B3-%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B9--%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8F-%D0%BE%D0%B1%D0%B5%D1%80%D1%82%D0%BA%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Шаг первый — функция-обертка</h2>
+<h2 id="section">
+<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Шаг первый — функция-обертка</h2>
 
 <p>Очевидно, что там, где в Python функция, принимающая и возвращающая функцию, у нас будет метод, принимающий объект класса
 <code class="language-plaintext highlighter-rouge">Proc</code>, а лучше — для универсальности — блок, и возвращающий объект класса <code class="language-plaintext highlighter-rouge">Proc</code>.</p>
@@ -319,8 +325,8 @@ deco2.rb:16:in `/': divided by 0 (ZeroDivisionError)
 <span class="n">alpha</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span></code></pre>
 </figure>
 
-<h2 id="шаг-второй--в-правильном-контексте">
-<a class="anchor" href="#%D1%88%D0%B0%D0%B3-%D0%B2%D1%82%D0%BE%D1%80%D0%BE%D0%B9--%D0%B2-%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C%D0%BD%D0%BE%D0%BC-%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Шаг второй — в правильном контексте</h2>
+<h2 id="section-1">
+<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Шаг второй — в правильном контексте</h2>
 
 <p>Примеры выше даны для глобального контекста, в котором, однако, на практике методы определяют редко. Нормальное
 расположение методов — в контексте класса или модуля. Или попросту модуля, поскольку класс в данном случае есть
@@ -484,8 +490,8 @@ OK: ♯‹Alpha:0x00000001e7c510›.gamma [] =› :gamma</span></code></pre>
 
 <p>Аналогично можно модифицировать и <code class="language-plaintext highlighter-rouge">wrap_singleton_method</code>, если очень хочется.</p>
 
-<h2 id="шаг-третий--фабрика-генераторов">
-<a class="anchor" href="#%D1%88%D0%B0%D0%B3-%D1%82%D1%80%D0%B5%D1%82%D0%B8%D0%B9--%D1%84%D0%B0%D0%B1%D1%80%D0%B8%D0%BA%D0%B0-%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BE%D0%B2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Шаг третий — фабрика генераторов</h2>
+<h2 id="section-2">
+<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Шаг третий — фабрика генераторов</h2>
 
 <p>Ну и наконец, давайте решим задачу в более-менее общем виде. Пусть у нас будет способ генерировать различные «декораторы»,
 задав имя и блок, возвращающий <code class="language-plaintext highlighter-rouge">proc</code>-обертку. Блок будет принимать <code class="language-plaintext highlighter-rouge">UnboundMethod</code> и произвольные именованные параметры.
@@ -587,8 +593,8 @@ echo: result = "BETA: 1"
 [*] result = 6</span></code></pre>
 </figure>
 
-<h2 id="идем-дальше">
-<a class="anchor" href="#%D0%B8%D0%B4%D0%B5%D0%BC-%D0%B4%D0%B0%D0%BB%D1%8C%D1%88%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Идем дальше?</h2>
+<h2 id="section-3">
+<a class="anchor" href="#section-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Идем дальше?</h2>
 
 <p>Как видим, все работает. Кроме того, определения декораторов прекрасно наследуются. Для дальнейшего развития можно
 поработать над тем, чтобы они еще и «включались» при добавлении mixin-модуля, предусмотреть отмену и/или переключение
@@ -641,31 +647,30 @@ echo: result = "BETA: 1"
 <aside class="recommendations"><div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2013.07.21 |</span>
-            <a href="/tech/2013/07/git-server.html" title="Настраиваем git-сервер для малых групп с минимальными затратами.">Кратко: примитивный git-сервер</a>
+            <span class="meta">2023.11.13 |</span>
+            <a href="/tech/2023/11/inat-get.html" title="Набор инструментов для получения и обработки данных с iNaturalist">INat::Get — ранняя альфа</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>
 </dd>
         </dl>
       </div>
 <div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2025.11.21 |</span>
-            <a href="/tech/2025/11/llm.html" title="За последнее время (особенно последний год) мне довелось довольно активно поработать с боль­ши­ми языковыми моделями (LLM), которые сейчас модно называть искусственным интеллектом. Захотелось кое-что сформулировать и подытожить.
-">Заметки об LLM и нейросетях вообще</a>
+            <span class="meta">2021.09.12 |</span>
+            <a href="/tech/2021/09/xbash.html" title="bash-расширение для удобства кодинга">xbash</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a>​<a class="fa-icon-yin-yang" href="/life/psi/" title="Заметки на психологические темы (не научные)">Психология</a>​<a class="fa-icon-brain" href="/life/psi/mind/" title="Заметки о том, как мы думаем">Мышление</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
 </dd>
         </dl>
       </div>
 <div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2025.12.12 |</span>
-            <a href="/tech/2025/12/inat-channel.html" title="Написал скрипт для автопостинга выборок из iNaturalist в tg-каналы">iNaturalist + Telegram</a>
+            <span class="meta">2022.10.23 |</span>
+            <a href="/tech/2022/10/conky-hwmon.html" title="Скрипт автоопределения номера устройства hwmon по имени">Conky: исправление проблемы с hwmon</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-globe" href="/tech/web/" title="HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.">Web</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a>
 </dd>
         </dl>
       </div></aside>
@@ -685,11 +690,11 @@ echo: result = "BETA: 1"
 </aside><aside id="toc" class="toc toc-post">
   <h4>Содержание</h4>
   <ul id="toc_list" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#блоки-методы-и-объекты-proc">Блоки, методы и объекты Proc</a></li>
-<li class="toc-entry toc-h2"><a href="#шаг-первый--функция-обертка">Шаг первый — функция-обертка</a></li>
-<li class="toc-entry toc-h2"><a href="#шаг-второй--в-правильном-контексте">Шаг второй — в правильном контексте</a></li>
-<li class="toc-entry toc-h2"><a href="#шаг-третий--фабрика-генераторов">Шаг третий — фабрика генераторов</a></li>
-<li class="toc-entry toc-h2"><a href="#идем-дальше">Идем дальше?</a></li>
+<li class="toc-entry toc-h2"><a href="#proc">Блоки, методы и объекты Proc</a></li>
+<li class="toc-entry toc-h2"><a href="#section">Шаг первый — функция-обертка</a></li>
+<li class="toc-entry toc-h2"><a href="#section-1">Шаг второй — в правильном контексте</a></li>
+<li class="toc-entry toc-h2"><a href="#section-2">Шаг третий — фабрика генераторов</a></li>
+<li class="toc-entry toc-h2"><a href="#section-3">Идем дальше?</a></li>
 </ul>
 </aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/tech/2016/01/metaprogramming.html" title="Добавление собственных абстракций в объектную модель — это просто. И интересно.">Мета­программи­ро­вание в Ruby: разбор примера</a></li></ul>
     </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>

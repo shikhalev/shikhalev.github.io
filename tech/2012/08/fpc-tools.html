@@ -26,15 +26,15 @@
 <link rel="canonical" href="https://shikhalev.github.io/tech/2012/08/fpc-tools.html" />
 <meta property="og:url" content="https://shikhalev.github.io/tech/2012/08/fpc-tools.html" />
 <meta property="og:site_name" content="Иван Шихалев" />
-<meta property="og:image" content="https://shikhalev.github.io/img/2012/08/24/fpc-tools/editors-640x640-500-261-0-0.webp" />
+<meta property="og:image" content="https://shikhalev.github.io/img/27/72/eb435190.webp" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2012-08-24T00:00:00+00:00" />
 <meta property="article:modified_time" content="2012-08-24T00:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://shikhalev.github.io/img/2012/08/24/fpc-tools/editors-640x640-500-261-0-0.webp" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/27/72/eb435190.webp" />
 <meta name="twitter:title" content="FPC-Notes: И с чем его едят…" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2012-08-24T00:00:00+00:00","datePublished":"2012-08-24T00:00:00+00:00","description":"Давайте рассмотрим различный софт, с которым нам, возможно, придется взаимодействовать при программировании на Free Pascal.","headline":"FPC-Notes: И с чем его едят…","image":"https://shikhalev.github.io/img/2012/08/24/fpc-tools/editors-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2012/08/fpc-tools.html"},"url":"https://shikhalev.github.io/tech/2012/08/fpc-tools.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2012-08-24T00:00:00+00:00","datePublished":"2012-08-24T00:00:00+00:00","description":"Давайте рассмотрим различный софт, с которым нам, возможно, придется взаимодействовать при программировании на Free Pascal.","headline":"FPC-Notes: И с чем его едят…","image":"https://shikhalev.github.io/img/27/72/eb435190.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2012/08/fpc-tools.html"},"url":"https://shikhalev.github.io/tech/2012/08/fpc-tools.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
@@ -72,6 +72,11 @@
     })(window, document, "clarity", "script", "u2gczedmo7");
 </script>
 
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.4.css" />
+<script type="module" src="/js/is-images-0.8.0.4.js"></script>
+<!-- end of jekyll-is-images stuff -->
+
 </head>
 
 <body>
@@ -106,8 +111,9 @@
 <p class="meta">
   <time datetime="2012-08-24T00:00:00+00:00" itemprop="datePublished">2012.08.24
   </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#IDE">IDE</a>​<a class="tag" href="/tags#Pascal">Pascal</a>​<a class="tag" href="/tags#binutils">binutils</a>​<a class="tag" href="/tags#редакторы">редакторы</a>​<a class="tag" href="/tags#свободное ПО">свободное ПО</a></aside></header><div itemprop="articleBody">
-  <figure class="__figure __implicit_figure __right logo" style="max-width:320px;"><a href="/img/2012/08/24/fpc-tools/editors-fhd.webp" class="__image_link"><img src="/img/2012/08/24/fpc-tools/editors-320.webp" class="__image"></a></figure>
-
+  <figure id="fig-1" class="logo __is_images_figure __is_images_single __is_images_width_350 __is_images__right" style="--is-images-width:320px;" data-modes="grid,slides">
+<a href="/img/ce/20/c2c0cbt1.webp" class="__is_images_wrapper"><img src="/img/01/4e/6c8733b1.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:80/57;" data-scale="1"></a>
+</figure>
 <p>Программное обеспечение используется нами не в вакууме, а в некотором окружении. Одни программы необходимы для работы других,
 третьи могут быть полезны для совместного использования, четвертые позволяют решать смежные задачи…</p>
 
@@ -115,8 +121,8 @@
 
 <!--more-->
 
-<h2 id="обязательная-программа">
-<a class="anchor" href="#%D0%BE%D0%B1%D1%8F%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Обязательная программа</h2>
+<h2 id="section">
+<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Обязательная программа</h2>
 
 <dl>
   <dt>GNU BinUtils <a href="#binutils">[1]</a>
@@ -168,8 +174,8 @@
   </dd>
 </dl>
 
-<h2 id="управление-версиями">
-<a class="anchor" href="#%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%D0%BC%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Управление версиями</h2>
+<h2 id="section-1">
+<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Управление версиями</h2>
 
 <div class="note">
   <p>Как уже говорилось ранее<sup id="fnref:see-src"><a href="#fn:see-src" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>, сами исходники Free Pascal и Lazarus находятся под управлением Subversion…
@@ -211,14 +217,16 @@ GitHub <a href="#gh">[14]</a>. Интеграция с Windows Explorer (см. 
   </dd>
 </dl>
 
-<h2 id="редакторы-кода">
-<a class="anchor" href="#%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D1%8B-%D0%BA%D0%BE%D0%B4%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Редакторы кода</h2>
+<h2 id="section-2">
+<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Редакторы кода</h2>
 
-<h3 id="собственные-средства">
-<a class="anchor" href="#%D1%81%D0%BE%D0%B1%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D1%81%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B2%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Собственные средства</h3>
+<h3 id="section-3">
+<a class="anchor" href="#section-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Собственные средства</h3>
 
-<figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2012/08/24/fpc-tools/tools-fp-fhd.webp" class="__image_link"><img src="/img/2012/08/24/fpc-tools/tools-fp-320.webp" class="__image" alt="Рис. 1: Среда разработки текстового режима — `fp`." title="Рис. 1: Среда разработки текстового режима — `fp`." id="fp-pic"></a><figcaption>Рис. 1: Среда разработки текстового режима — <code class="language-plaintext highlighter-rouge">fp</code>.</figcaption></figure>
-
+<figure id="fig-2" class="__is_images_figure __is_images_single __is_images_width_350 __is_images__right" style="--is-images-width:320px;" data-modes="grid,slides">
+<a href="/img/f5/o8/1b429t36.webp" title="Рис. 1: Среда разработки текстового режима — `fp`." class="__is_images_wrapper"><img id="fp-pic" src="/img/f8/f9/205e411f.webp" alt="Рис. 1: Среда разработки текстового режима — `fp`." class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:320/219;" data-scale="1" data-caption="Рис. 1: Среда разработки текстового режима — &lt;code class=" language-plaintext highlighter-rouge>fp."&gt;</a>
+<figcaption>Рис. 1: Среда разработки текстового режима — <code class="language-plaintext highlighter-rouge">fp</code>.</figcaption>
+</figure>
 <p>Для начала замечу, что Free Pascal уже в своем составе имеет IDE текстового режима — <code class="language-plaintext highlighter-rouge">fp</code>, скриншот которой (в окне консоли KDE)
 можно видеть на <a href="#fp-pic">рис. 1</a>.</p>
 
@@ -244,8 +252,10 @@ GitHub <a href="#gh">[14]</a>. Интеграция с Windows Explorer (см. 
 дистрибутивах Linux, которые по умолчанию задают кодировку консоли UTF-8. К счастью, Linux всегда можно отконфигурировать
 на однобайтную кодировку, такую как KOI8-r или CP866…</p>
 
-<figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2012/08/24/fpc-tools/tools-lazarus-fhd.webp" class="__image_link"><img src="/img/2012/08/24/fpc-tools/tools-lazarus-320.webp" class="__image" alt="Рис. 2. Lazarus IDE" title="Рис. 2. Lazarus IDE" id="lazarus-pic"></a><figcaption>Рис. 2. Lazarus IDE</figcaption></figure>
-
+<figure id="fig-3" class="__is_images_figure __is_images_single __is_images_width_350 __is_images__right" style="--is-images-width:320px;" data-modes="grid,slides">
+<a href="/img/c9/c5/141c2152.webp" title="Рис. 2. Lazarus IDE" class="__is_images_wrapper"><img id="lazarus-pic" src="/img/t9/o5/e16cbo8e.webp" alt="Рис. 2. Lazarus IDE" class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:320/231;" data-scale="1" data-caption="Рис. 2. Lazarus IDE"></a>
+<figcaption>Рис. 2. Lazarus IDE</figcaption>
+</figure>
 <p>Lazarus (<a href="#lazarus-pic">рис. 2</a>) — интегрированная среда разработки, о которой мы еще будем говорить много и подробно.
 И о преимуществах и об особенностях.</p>
 
@@ -257,19 +267,23 @@ GitHub <a href="#gh">[14]</a>. Интеграция с Windows Explorer (см. 
 делают Lazarus лучшим выбором для реальной разработки. Посему в дальнейшем мы будем рассматривать его как основной вариант.
 А сейчас я кратко приведу рекомендации, чем еще можно воспользоваться при программировании на Free Pascal.</p>
 
-<h3 id="другие-редакторы">
-<a class="anchor" href="#%D0%B4%D1%80%D1%83%D0%B3%D0%B8%D0%B5-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Другие редакторы</h3>
+<h3 id="section-4">
+<a class="anchor" href="#section-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Другие редакторы</h3>
 
-<figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2012/08/24/fpc-tools/tools-kate-fhd.webp" class="__image_link"><img src="/img/2012/08/24/fpc-tools/tools-kate-320.webp" class="__image" alt="Рис. 3. Kate" title="Рис. 3. Kate" id="kate-pic"></a><figcaption>Рис. 3. Kate</figcaption></figure>
-
+<figure id="fig-4" class="__is_images_figure __is_images_single __is_images_width_350 __is_images__right" style="--is-images-width:320px;" data-modes="grid,slides">
+<a href="/img/1e/26/fc951311.webp" title="Рис. 3. Kate" class="__is_images_wrapper"><img id="kate-pic" src="/img/2e/56/729t7026.webp" alt="Рис. 3. Kate" class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:320/231;" data-scale="1" data-caption="Рис. 3. Kate"></a>
+<figcaption>Рис. 3. Kate</figcaption>
+</figure>
 <p>В отличие от <code class="language-plaintext highlighter-rouge">fp</code> и Lazarus, перечисленные далее программы не кроссплатформенны. И это нормально — если мы ищем легковесный
 редактор с поддержкой множества языков, чем-то придется пожертвовать: или легковесностью (но тогда стоило ли отказываться
 от Lazarus’а?), или кросс­плат­фор­мен­нос­тью.</p>
 
 <p>На деле, выбор будет зависеть не только от используемой операционной системы, но и от графического окружения в ней.</p>
 
-<figure class="__figure __implicit_figure __left" style="max-width:320px;"><a href="/img/2012/08/24/fpc-tools/tools-gedit-fhd.webp" class="__image_link"><img src="/img/2012/08/24/fpc-tools/tools-gedit-320.webp" class="__image" alt="Рис. 4. gedit" title="Рис. 4. gedit" id="gedit-pic"></a><figcaption>Рис. 4. gedit</figcaption></figure>
-
+<figure id="fig-5" class="__is_images_figure __is_images_single __is_images_width_350 __is_images__left" style="--is-images-width:320px;" data-modes="grid,slides">
+<a href="/img/f2/32/64637t2e.webp" title="Рис. 4. gedit" class="__is_images_wrapper"><img id="gedit-pic" src="/img/bf/f9/41cf58c2.webp" alt="Рис. 4. gedit" class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:320/253;" data-scale="1" data-caption="Рис. 4. gedit"></a>
+<figcaption>Рис. 4. gedit</figcaption>
+</figure>
 <p>Так, для Linux я бы рекомендовал использовать Kate <a href="#kate">[17]</a> (<a href="#kate-pic">рис. 3</a>), если работа ведется в окружении KDE,
 и gedit <a href="#gedit">[18]</a> (<a href="#gedit-pic">рис. 4</a>), если вы предпочитаете Gnome или Xfce<sup id="fnref:native"><a href="#fn:native" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>. Это наиболее развитые редакторы
 для своих оболочек. Хотя, безусловно, можно использовать и любой другой… Пожалуй, главное — обратить внимание на две вещи:
@@ -284,8 +298,10 @@ GitHub <a href="#gh">[14]</a>. Интеграция с Windows Explorer (см. 
 <p class="note">Вообще, как нетрудно заметить, я вообще предпочитаю KDE и особенно люблю редактор Kate. Если для разработки на Free Pascal
 он и уступает Lazarus, в качестве универсального программистского редактора у него практически нет конкурентов.</p>
 
-<figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2012/08/24/fpc-tools/tools-npp-fhd.webp" class="__image_link"><img src="/img/2012/08/24/fpc-tools/tools-npp-320.webp" class="__image" alt="Рис. 5. Notepad++" title="Рис. 5. Notepad++" id="npp-pic"></a><figcaption>Рис. 5. Notepad++</figcaption></figure>
-
+<figure id="fig-6" class="__is_images_figure __is_images_single __is_images_width_350 __is_images__right" style="--is-images-width:320px;" data-modes="grid,slides">
+<a href="/img/43/o8/5t6tt333.webp" title="Рис. 5. Notepad++" class="__is_images_wrapper"><img id="npp-pic" src="/img/8o/c3/417495e2.webp" alt="Рис. 5. Notepad++" class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:160/127;" data-scale="1" data-caption="Рис. 5. Notepad++"></a>
+<figcaption>Рис. 5. Notepad++</figcaption>
+</figure>
 <p>Что касается Windows, стоит в первую очередь обратить внимание на Note­pad++ <a href="#npp">[19]</a> — отличный универсальный расширяемый
 редактор с поддержкой Unicode, множества языков программирования, русского интерфейса и т.д. Его скриншот — на <a href="#npp-pic">рис. 5</a>.</p>
 
@@ -315,8 +331,8 @@ GitHub <a href="#gh">[14]</a>. Интеграция с Windows Explorer (см. 
   </li>
 </ul>
 
-<h2 id="что-еще">
-<a class="anchor" href="#%D1%87%D1%82%D0%BE-%D0%B5%D1%89%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что еще?..</h2>
+<h2 id="section-5">
+<a class="anchor" href="#section-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что еще?..</h2>
 
 <p>Теоретически, много о чем еще можно поговорить, поскольку разработка программ предполагает не только программирование,
 но и работу с графикой для интерфейса, формирование справочной системы и так далее. Для всего этого существуют программы,
@@ -334,8 +350,8 @@ GitHub <a href="#gh">[14]</a>. Интеграция с Windows Explorer (см. 
 того, что описывается. Какой из них выбрать, зависит от масштабов проекта и требований к документации. Ну, и от личных
 предпочтений, конечно же.</p>
 
-<h2 id="ссылки">
-<a class="anchor" href="#%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ссылки</h2>
+<h2 id="section-6">
+<a class="anchor" href="#section-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ссылки</h2>
 
 <div class="links-box">
 
@@ -436,30 +452,30 @@ GitHub <a href="#gh">[14]</a>. Интеграция с Windows Explorer (см. 
 <aside class="recommendations"><div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2016.06.23 |</span>
-            <a href="/photo/2016/06/stacking.html" title="Приемы стекинга фотографий под Linux с использованием пакета enfuse">Пингвин-фотолюбитель: 5. Стекинг</a>
+            <span class="meta">2025.10.05 |</span>
+            <a href="/tech/2025/10/darktable.html" title="Анонс «Практического руководства по darktable»">Этим стулом...</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-linux" href="/photo/processing/penguin/" title="Цикл постов 2016 года об обработке фотографий под Linux">Пингвин-фотолюбитель</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a>​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>
 </dd>
         </dl>
       </div>
 <div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2011.10.11 |</span>
-            <a href="/tech/2011/10/latex-marker.html" title="Выделение цветным фоном в тексте, аккуратный способ.">Выделение «маркером» в LaTeX</a>
+            <span class="meta">2022.11.01 |</span>
+            <a href="/tech/2022/11/storages.html" title="Тест носителей информации на новой платформе">Очередной тест носителей</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a>​<a class="fa-icon-calendar-alt" href="/life/dybr/" title="Просто кусочки повседневности">Дыбр</a>
 </dd>
         </dl>
       </div>
 <div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2020.01.11 |</span>
-            <a href="/tech/2020/01/rack.html" title="Библиотека Rack — простой объектный интерфейс для написания веб-приложений (статья в журнале «Системный администратор»)">Rack — основа веб-фреймворков в Ruby</a>
+            <span class="meta">2023.01.04 |</span>
+            <a href="/tech/2023/01/chatgpt.html" title="Об очередных страданиях на тему искусственного интеллекта">Отставить панику...</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a>​<a class="fa-icon-globe" href="/tech/web/" title="HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.">Web</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-brain" href="/life/psi/mind/" title="Заметки о том, как мы думаем">Мышление</a>
 </dd>
         </dl>
       </div></aside>
@@ -479,16 +495,16 @@ GitHub <a href="#gh">[14]</a>. Интеграция с Windows Explorer (см. 
 </aside><aside id="toc" class="toc toc-post">
   <h4>Содержание</h4>
   <ul id="toc_list" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#обязательная-программа">Обязательная программа</a></li>
-<li class="toc-entry toc-h2"><a href="#управление-версиями">Управление версиями</a></li>
-<li class="toc-entry toc-h2"><a href="#редакторы-кода">Редакторы кода</a>
+<li class="toc-entry toc-h2"><a href="#section">Обязательная программа</a></li>
+<li class="toc-entry toc-h2"><a href="#section-1">Управление версиями</a></li>
+<li class="toc-entry toc-h2"><a href="#section-2">Редакторы кода</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#собственные-средства">Собственные средства</a></li>
-<li class="toc-entry toc-h3"><a href="#другие-редакторы">Другие редакторы</a></li>
+<li class="toc-entry toc-h3"><a href="#section-3">Собственные средства</a></li>
+<li class="toc-entry toc-h3"><a href="#section-4">Другие редакторы</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#что-еще">Что еще?..</a></li>
-<li class="toc-entry toc-h2"><a href="#ссылки">Ссылки</a></li>
+<li class="toc-entry toc-h2"><a href="#section-5">Что еще?..</a></li>
+<li class="toc-entry toc-h2"><a href="#section-6">Ссылки</a></li>
 </ul>
 </aside><aside id="backs" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
 

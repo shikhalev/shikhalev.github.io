@@ -70,6 +70,11 @@
     })(window, document, "clarity", "script", "u2gczedmo7");
 </script>
 
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.4.css" />
+<script type="module" src="/js/is-images-0.8.0.4.js"></script>
+<!-- end of jekyll-is-images stuff -->
+
 </head>
 
 <body>
@@ -139,16 +144,18 @@
 там содержится версия 4.6.1, а для установки свежей версии нужно добавить PPA в менеджере приложений или посредством
 командной строки:</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>add-apt-repository ppa:ubuntuhandbook1/darktable
-<span class="nv">$ </span><span class="nb">sudo </span>apt update
-<span class="nv">$ </span><span class="nb">sudo </span>apt <span class="nb">install </span>darktable
-</code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">shell
+$ sudo add-apt-repository ppa:ubuntuhandbook1/darktable
+$ sudo apt update
+$ sudo apt install darktable
+</code></p>
 
 <p>Другой вариант — включить в менеджере приложений непроверенные flatpak-пакеты и установить <strong>darktable</strong> с FlatHub.
 Опять же это можно сделать как через менеджер приложений, так и в командной строке:</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>flatpak <span class="nb">install </span>org.darktable.Darktable
-</code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">shell
+$ sudo flatpak install org.darktable.Darktable
+</code></p>
 
 <p>Если у вас Gentoo, рекомендуется перед установкой добавить USE-флаг <code class="language-plaintext highlighter-rouge">opencl</code>, чтобы можно было задействовать GPU, что
 дает существенное ускорение многих операций обработки.</p>
@@ -156,8 +163,10 @@
 <h3 id="interface">
 <a class="anchor" href="#interface" aria-hidden="true"><span class="octicon octicon-link"></span></a>Интерфейс</h3>
 
-<figure class="__figure __implicit_figure __center" style="max-width:890px;"><a href="/img/pages/books/darktable/pg/0_intro.html/000_empty_init-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/0_intro.html/000_empty_init-890.webp" class="__image" alt="Скриншот первого запуска — пустое рабочее пространство" title="Скриншот первого запуска — пустое рабочее пространство"></a><figcaption>Скриншот первого запуска — пустое рабочее пространство</figcaption></figure>
-
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_900" style="--is-images-width:890px;" data-modes="grid,slides">
+<a href="/img/8f/47/3b91e57c.webp" title="Скриншот первого запуска — пустое рабочее пространство" class="__is_images_wrapper"><img src="/img/3b/0o/9o1c5808.webp" alt="Скриншот первого запуска — пустое рабочее пространство" class="__is_images_image __is_images_single" style="--is-images-width:890px;--is-images-aspect-ratio:445/241;" data-scale="1" data-caption="Скриншот первого запуска — пустое рабочее пространство"></a>
+<figcaption>Скриншот первого запуска — пустое рабочее пространство</figcaption>
+</figure>
 <p>Интерфейс <strong>darktable</strong> в целом традиционен для такого рода софта. На скриншоте мы можем видеть следующие блоки:</p>
 
 <ul>
@@ -218,26 +227,32 @@
 <h2 id="start">
 <a class="anchor" href="#start" aria-hidden="true"><span class="octicon octicon-link"></span></a>Начало работы</h2>
 
-<figure class="__figure __implicit_figure __center" style="max-width:640px;"><a href="/img/pages/books/darktable/pg/0_intro.html/001_init_preferences-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/0_intro.html/001_init_preferences-640.webp" class="__image" alt="Скриншот диалога настроек" title="Скриншот диалога настроек"></a><figcaption>Скриншот диалога настроек</figcaption></figure>
+<!-- TODO: перенести картинки в _src — сейчас оригиналы копируются на сайт -->
 
+<figure id="fig-2" class="__is_images_figure __is_images_single __is_images_width_650" style="--is-images-width:640px;" data-modes="grid,slides">
+<a href="/img/43/bc/083c87o5.webp" title="Скриншот диалога настроек" class="__is_images_wrapper"><img src="/img/e8/4t/7eb77167.webp" alt="Скриншот диалога настроек" class="__is_images_image __is_images_single" style="--is-images-width:640px;--is-images-aspect-ratio:80/53;" data-scale="1" data-caption="Скриншот диалога настроек"></a>
+<figcaption>Скриншот диалога настроек</figcaption>
+</figure>
 <p>Прежде, чем начать что-то делать, зайдем в настройки, кликнув по значку шестеренки
-(<img src="/img/pages/books/darktable/pg/0_intro.html/002_preferences_icon-23.webp" class="__image">) в верхней панели, и выставим там в разделе «processing»
+(<span class="__is_images_wrapper"><img src="/img/b8/23/ft9b1834.webp" alt="" class="__is_images_image" style="--is-images-width:23px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>) в верхней панели, и выставим там в разделе «processing»
 параметр «auto-apply pixel workflow defaults» в значение «display-referred (legacy)». Это устаревший вариант рабочего процесса,
 но он самый простой и поэтому лучше подходит для первого знакомства.</p>
 
 <h3 id="start-import">
 <a class="anchor" href="#start-import" aria-hidden="true"><span class="octicon octicon-link"></span></a>Импорт</h3>
 
-<figure class="__figure __implicit_figure __right" style="max-width:264px;"><img src="/img/pages/books/darktable/pg/0_intro.html/003_import_module-264.webp" class="__image" alt="Модуль импорта" title="Модуль импорта"></figure>
-
+<figure id="fig-3" class="__is_images_figure __is_images_single __is_images_width_300 __is_images__right" style="--is-images-width:264px;" data-modes="grid,slides">
+<span title="Модуль импорта" class="__is_images_wrapper"><img src="/img/84/04/49716916.webp" alt="Модуль импорта" class="__is_images_image __is_images_single" style="--is-images-width:264px;--is-images-aspect-ratio:264/91;" data-scale="1"></span>
+</figure>
 <p>Чтобы начать работать в raw-файлами, необходимо <em>импортировать</em> их в <strong>darktable</strong>. <a href="#mod-import">Модуль импорта</a> находится в представлении
 lighttable в левой панели в самом верху. Как можно видеть на скриншоте, там имеются две кнопки: «add to library…»
 и «copy &amp; import…» — в первом случае мы добавляем файлы по их текущему расположению, а во втором копируем их в каталог,
 прописанный в настройках. Чтобы не заморачиваться сейчас с настройками мы пойдем по первому пути. После нажатия на «add to library…»
 откроется окно диалога:</p>
 
-<figure class="__figure __implicit_figure __center" style="max-width:640px;"><a href="/img/pages/books/darktable/pg/0_intro.html/004_import_dialog-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/0_intro.html/004_import_dialog-640.webp" class="__image" alt="Диалог импорта" title="Диалог импорта"></a></figure>
-
+<figure id="fig-4" class="__is_images_figure __is_images_single __is_images_width_650" style="--is-images-width:640px;" data-modes="grid,slides">
+<a href="/img/12/37/o54c0b5t.webp" title="Диалог импорта" class="__is_images_wrapper"><img src="/img/25/b1/c154f471.webp" alt="Диалог импорта" class="__is_images_image __is_images_single" style="--is-images-width:640px;--is-images-aspect-ratio:320/253;" data-scale="1"></a>
+</figure>
 <p>Выбираем нужный каталог, новые (для <strong>darktable</strong>) файлы будут выбраны автоматически, но можно выбирать и отдельные файлы вручную,
 после чего нажимаем «add to library», диалог будет закрыт и начнется импорт. Что при этом происходит? Во-пер­вых, метаданные выбранных
 файлов записываются в базу данных, а во-вторых, рядом с исходными файлами создаются связанные файлы с расширением <code class="language-plaintext highlighter-rouge">.xmp</code>.</p>
@@ -258,22 +273,25 @@ lighttable в левой панели в самом верху. Как можн�
 <h3 id="lighttable">
 <a class="anchor" href="#lighttable" aria-hidden="true"><span class="octicon octicon-link"></span></a>Световой стол</h3>
 
-<figure class="__figure __implicit_figure __center" style="max-width:890px;"><a href="/img/pages/books/darktable/pg/0_intro.html/005_lighttable4-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/0_intro.html/005_lighttable4-890.webp" class="__image" alt="Скриншот светового стола после импорта" title="Скриншот светового стола после импорта"></a><figcaption>Скриншот светового стола после импорта</figcaption></figure>
-
+<figure id="fig-5" class="__is_images_figure __is_images_single __is_images_width_900" style="--is-images-width:890px;" data-modes="grid,slides">
+<a href="/img/b9/c9/2c652992.webp" title="Скриншот светового стола после импорта" class="__is_images_wrapper"><img src="/img/b6/o1/88f05300.webp" alt="Скриншот светового стола после импорта" class="__is_images_image __is_images_single" style="--is-images-width:890px;--is-images-aspect-ratio:445/241;" data-scale="1" data-caption="Скриншот светового стола после импорта"></a>
+<figcaption>Скриншот светового стола после импорта</figcaption>
+</figure>
 <p>После импорта мы видим наши снимки в представлении lighttable в виде миниатюр, и можем обсудить данное представление поподробнее.</p>
 
 <h4 id="work-area">
 <a class="anchor" href="#work-area" aria-hidden="true"><span class="octicon octicon-link"></span></a>Рабочая область</h4>
 
-<figure class="__figure __implicit_figure __right" style="max-width:276px;"><img src="/img/pages/books/darktable/pg/0_intro.html/006_thumb_overlay-276.webp" class="__image" alt="Миниатюра кадра с наложенной информацией" title="Миниатюра кадра с наложенной информацией"></figure>
-
+<figure id="fig-6" class="__is_images_figure __is_images_single __is_images_width_300 __is_images__right" style="--is-images-width:276px;" data-modes="grid,slides">
+<span title="Миниатюра кадра с наложенной информацией" class="__is_images_wrapper"><img src="/img/08/01/e60b951e.webp" alt="Миниатюра кадра с наложенной информацией" class="__is_images_image __is_images_single" style="--is-images-width:276px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>
+</figure>
 <p>Основная рабочая область в центре в данном представлении предоставляет интерфейс управления снимками.</p>
 
 <p>Просмотр и выбор снимков может работать в пяти разных режимах (layouts), которые выбираются иконками в <a href="#bottom-panel">нижней панели</a>.</p>
 
 <dl>
   <dt>
-<img src="/img/pages/books/darktable/pg/0_intro.html/016_filemanager-28.webp" class="__image"> Файловый менеджер <em>(filemanager)</em>
+<span class="__is_images_wrapper"><img src="/img/f1/77/e90c4914.webp" alt="" class="__is_images_image" style="--is-images-width:28px;--is-images-aspect-ratio:28/25;" data-scale="1"></span> Файловый менеджер <em>(filemanager)</em>
 </dt>
   <dd>
     <p>В этом режиме мы получаем привычный по многим программам поток миниатюр, как в файловых менеджерах типа Dolphin<sup id="fnref:dolphin"><a href="#fn:dolphin" class="footnote" rel="footnote" role="doc-noteref">6</a></sup>, или программах
@@ -283,7 +301,7 @@ lighttable в левой панели в самом верху. Как можн�
     <p>Интуитивно понятный и предсказуемый режим. Удобен для последовательной работы.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/0_intro.html/017_zoomable-28.webp" class="__image"> Масштабируемый вид <em>(zoomable)</em>
+<span class="__is_images_wrapper"><img src="/img/ce/62/b09bcct6.webp" alt="" class="__is_images_image" style="--is-images-width:28px;--is-images-aspect-ratio:28/25;" data-scale="1"></span> Масштабируемый вид <em>(zoomable)</em>
 </dt>
   <dd>
     <p>В этом режиме колесиком мыши мы можем «приближать/отдалять световой стол, на котором разложены кадры», при этом взаимное положение
@@ -292,13 +310,13 @@ lighttable в левой панели в самом верху. Как можн�
     <p>Удобно для быстрых переходов из конца в конец большой коллекции.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/0_intro.html/018_culling-28.webp" class="__image"> Режим отбраковки <em>(culling)</em>
+<span class="__is_images_wrapper"><img src="/img/3f/c9/t41t6ft7.webp" alt="" class="__is_images_image" style="--is-images-width:28px;--is-images-aspect-ratio:28/25;" data-scale="1"></span> Режим отбраковки <em>(culling)</em>
 </dt>
   <dd>
     <p>Режим предназначен для просмотра нескольких снимков «бок о бок» для сравнения и отбраковки.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/0_intro.html/019_dynamic_culling-28.webp" class="__image"> Динамический режим отбраковки <em>(dynamic culling)</em>
+<span class="__is_images_wrapper"><img src="/img/03/21/c41t748c.webp" alt="" class="__is_images_image" style="--is-images-width:28px;--is-images-aspect-ratio:28/25;" data-scale="1"></span> Динамический режим отбраковки <em>(dynamic culling)</em>
 </dt>
   <dd>
     <p>Схож с предыдущим режимом, но одновременно показывается не фиксированное количество снимков, а выбранные в лен­те миниатюр.</p>
@@ -307,7 +325,7 @@ lighttable в левой панели в самом верху. Как можн�
 насколько возможно — распределенными по всему рабочему пространству.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/0_intro.html/020_full_preview-28.webp" class="__image"> Просмотр <em>(full preview)</em>
+<span class="__is_images_wrapper"><img src="/img/19/15/fb987e55.webp" alt="" class="__is_images_image" style="--is-images-width:28px;--is-images-aspect-ratio:28/25;" data-scale="1"></span> Просмотр <em>(full preview)</em>
 </dt>
   <dd>
     <p>Показывает текущий снимок во всё доступное пространство, скрыв все панели и элементы управления.</p>
@@ -321,8 +339,10 @@ lighttable в левой панели в самом верху. Как можн�
 
 <p class="note italic">Тут надо заметить, что эта панель используется в том же виде не только в lighttable, но и в большинстве других представлений.</p>
 
-<figure class="__figure __implicit_figure __center" style="max-width:890px;"><a href="/img/pages/books/darktable/pg/0_intro.html/007_top_panel-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/0_intro.html/007_top_panel-890.webp" class="__image" alt="Верхняя панель" title="Верхняя панель"></a><figcaption>Верхняя панель</figcaption></figure>
-
+<figure id="fig-7" class="__is_images_figure __is_images_single __is_images_width_900" style="--is-images-width:890px;" data-modes="grid,slides">
+<a href="/img/25/ee/5t390835.webp" title="Верхняя панель" class="__is_images_wrapper"><img src="/img/71/31/b2ob2t5f.webp" alt="Верхняя панель" class="__is_images_image __is_images_single" style="--is-images-width:890px;--is-images-aspect-ratio:445/8;" data-scale="1" data-caption="Верхняя панель"></a>
+<figcaption>Верхняя панель</figcaption>
+</figure>
 <p>Логически элементы верхней панели четко разделяются на три группы:</p>
 
 <ul>
@@ -335,54 +355,54 @@ lighttable в левой панели в самом верху. Как можн�
 
 <dl>
   <dt>
-<img src="/img/pages/books/darktable/pg/0_intro.html/008_filters-23.webp" class="__image"> Настройка фильтров</dt>
+<span class="__is_images_wrapper"><img src="/img/fb/32/oc354700.webp" alt="" class="__is_images_image" style="--is-images-width:23px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> Настройка фильтров</dt>
   <dd>
     <p>Выбор фильтров, помимо дефолтных (по цветовым меткам и звездам), можно добавить фильтры по камере, объективу, параметрам съемки и т.д.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/0_intro.html/009_filter_module_order-80.webp" class="__image"> Порядок модулей</dt>
+<span class="__is_images_wrapper"><img src="/img/o0/42/97701892.webp" alt="" class="__is_images_image" style="--is-images-width:80px;--is-images-aspect-ratio:80/23;" data-scale="1"></span> Порядок модулей</dt>
   <dd>
     <p>Фильтр по порядку модулей / рабочему процессу.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/0_intro.html/010_color_filter-166.webp" class="__image"> Цветовые метки</dt>
+<span class="__is_images_wrapper"><img src="/img/25/88/6c6072e5.webp" alt="" class="__is_images_image" style="--is-images-width:166px;--is-images-aspect-ratio:166/23;" data-scale="1"></span> Цветовые метки</dt>
   <dd>
     <p>Фильтр по цветовым меткам. Серый кружок (предпоследняя иконка) включает все цветовые метки одновременно, пересекающиеся кружки (последняя
 иконка) переключает режимы «ИЛИ» и «И», т.е. требование любой метки из выбранных, или же всех одновременно.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/0_intro.html/011_sort-195.webp" class="__image"> Сортировка</dt>
+<span class="__is_images_wrapper"><img src="/img/89/e2/5f80e50f.webp" alt="" class="__is_images_image" style="--is-images-width:195px;--is-images-aspect-ratio:195/23;" data-scale="1"></span> Сортировка</dt>
   <dd>
     <p>Выбор критерия и направления сортировки. Можно выбрать сортировку по имени файла, полному пути, времени съемки/импорта/изменения и так далее.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/0_intro.html/008_selected-160.webp" class="__image"> Информация о выделении</dt>
+<span class="__is_images_wrapper"><img src="/img/53/7c/7oo14e09.webp" alt="" class="__is_images_image" style="--is-images-width:160px;--is-images-aspect-ratio:160/23;" data-scale="1"></span> Информация о выделении</dt>
   <dd>
     <p>Показывает сколько снимков выбрано из общего количества. Если выбран один снимок, показывает его порядковый номер.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/0_intro.html/012_grouping-23.webp" class="__image"> Группы</dt>
+<span class="__is_images_wrapper"><img src="/img/f0/67/17o9t58t.webp" alt="" class="__is_images_image" style="--is-images-width:23px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> Группы</dt>
   <dd>
     <p>Сворачивает/разворачивает сгруппированные снимки.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/0_intro.html/013_overlays-23.webp" class="__image"> Наложения</dt>
+<span class="__is_images_wrapper"><img src="/img/9e/f7/58461ffe.webp" alt="" class="__is_images_image" style="--is-images-width:23px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> Наложения</dt>
   <dd>
     <p>Управляет тем, какая информация накладывается на миниатюры кадров (а также наличием всплывающей подсказки).</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/0_intro.html/014_question-23.webp" class="__image"> Справка</dt>
+<span class="__is_images_wrapper"><img src="/img/0o/71/414825e7.webp" alt="" class="__is_images_image" style="--is-images-width:23px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> Справка</dt>
   <dd>
     <p>Позволяет открыть контекстную справку по элементам интерфейса на <strong><a href="https://www.darktable.org/">darktable.org</a></strong>.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/0_intro.html/015_keyboard-23.webp" class="__image"> Настройка горячих клавиш</dt>
+<span class="__is_images_wrapper"><img src="/img/fb/71/bebt86f6.webp" alt="" class="__is_images_image" style="--is-images-width:23px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> Настройка горячих клавиш</dt>
   <dd>
     <p>Позволяет открыть редактор горячих клавиш в контекстном режиме — аналогично предыдущему пункту, после нажатия на кнопку мы нажимаем на какой-то
 элемент интерфейса и открывается раздел настройки клавиатурных сочетаний конкретно для него.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/0_intro.html/002_preferences_icon-23.webp" class="__image"> Настройки</dt>
+<span class="__is_images_wrapper"><img src="/img/b8/23/ft9b1834.webp" alt="" class="__is_images_image" style="--is-images-width:23px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> Настройки</dt>
   <dd>
     <p>Открывает диалог настроек.</p>
   </dd>
@@ -391,8 +411,10 @@ lighttable в левой панели в самом верху. Как можн�
 <h4 id="bottom-panel">
 <a class="anchor" href="#bottom-panel" aria-hidden="true"><span class="octicon octicon-link"></span></a>Нижняя панель</h4>
 
-<figure class="__figure __implicit_figure __center" style="max-width:890px;"><a href="/img/pages/books/darktable/pg/0_intro.html/021_bottom_panel-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/0_intro.html/021_bottom_panel-890.webp" class="__image" alt="Нижняя панель" title="Нижняя панель"></a><figcaption>Нижняя панель</figcaption></figure>
-
+<figure id="fig-8" class="__is_images_figure __is_images_single __is_images_width_900" style="--is-images-width:890px;" data-modes="grid,slides">
+<a href="/img/63/28/5b181486.webp" title="Нижняя панель" class="__is_images_wrapper"><img src="/img/3t/94/tb8eo5ft.webp" alt="Нижняя панель" class="__is_images_image __is_images_single" style="--is-images-width:890px;--is-images-aspect-ratio:890/19;" data-scale="1" data-caption="Нижняя панель"></a>
+<figcaption>Нижняя панель</figcaption>
+</figure>
 <p>Элементы нижней панели также разделяются на три группы:</p>
 
 <ul>
@@ -411,17 +433,17 @@ lighttable в левой панели в самом верху. Как можн�
 
 <dl>
   <dt>
-<img src="/img/pages/books/darktable/pg/0_intro.html/022_stars-126.webp" class="__image"> Звезды</dt>
+<span class="__is_images_wrapper"><img src="/img/32/c8/c2559ff6.webp" alt="" class="__is_images_image" style="--is-images-width:126px;--is-images-aspect-ratio:126/25;" data-scale="1"></span> Звезды</dt>
   <dd>
     <p>Позволяет установить оценку в звездах выбранным снимкам.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/0_intro.html/023_labels-160.webp" class="__image"> Цветовые метки</dt>
+<span class="__is_images_wrapper"><img src="/img/bo/3b/0814t818.webp" alt="" class="__is_images_image" style="--is-images-width:160px;--is-images-aspect-ratio:32/5;" data-scale="1"></span> Цветовые метки</dt>
   <dd>
     <p>Аналогично — позволяет установить/снять цветовые метки выбранным снимкам. Последняя иконка снимает все метки.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/0_intro.html/024_modes-266.webp" class="__image"> Управление режимом просмотра</dt>
+<span class="__is_images_wrapper"><img src="/img/e0/t3/153t6767.webp" alt="" class="__is_images_image" style="--is-images-width:266px;--is-images-aspect-ratio:266/25;" data-scale="1"></span> Управление режимом просмотра</dt>
   <dd>
     <p>Иконки переключают режимы рабочей области, далее идет поле для масштабирования:</p>
 
@@ -438,12 +460,12 @@ lighttable в левой панели в самом верху. Как можн�
     </ul>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/0_intro.html/025_focus-28.webp" class="__image"> Фокус-пикинг</dt>
+<span class="__is_images_wrapper"><img src="/img/cf/97/7eb01o9o.webp" alt="" class="__is_images_image" style="--is-images-width:28px;--is-images-aspect-ratio:28/25;" data-scale="1"></span> Фокус-пикинг</dt>
   <dd>
     <p>Включает отображение зон фокуса.</p>
   </dd>
   <dt>
-<img src="/img/pages/books/darktable/pg/0_intro.html/026_display-27.webp" class="__image"> Профиль дисплея</dt>
+<span class="__is_images_wrapper"><img src="/img/34/41/0oo32726.webp" alt="" class="__is_images_image" style="--is-images-width:27px;--is-images-aspect-ratio:27/25;" data-scale="1"></span> Профиль дисплея</dt>
   <dd>
     <p>Позволяет настроить профиль дисплея.</p>
   </dd>
@@ -535,10 +557,14 @@ lighttable в левой панели в самом верху. Как можн�
 <h4 id="timeline-filmstrip">
 <a class="anchor" href="#timeline-filmstrip" aria-hidden="true"><span class="octicon octicon-link"></span></a>Таймлайн и лента кадров</h4>
 
-<figure class="__figure __implicit_figure __center" style="max-width:890px;"><a href="/img/pages/books/darktable/pg/0_intro.html/027_timeline-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/0_intro.html/027_timeline-890.webp" class="__image" alt="Таймлайн (из режима файлового менеджера)" title="Таймлайн (из режима файлового менеджера)"></a><figcaption>Таймлайн (из режима файлового менеджера)</figcaption></figure>
-
-<figure class="__figure __implicit_figure __center" style="max-width:890px;"><a href="/img/pages/books/darktable/pg/0_intro.html/028_filmstrip-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/0_intro.html/028_filmstrip-890.webp" class="__image" alt="Лента кадров (из режима отбора)" title="Лента кадров (из режима отбора)"></a><figcaption>Лента кадров (из режима отбора)</figcaption></figure>
-
+<figure id="fig-9" class="__is_images_figure __is_images_single __is_images_width_900" style="--is-images-width:890px;" data-modes="grid,slides">
+<a href="/img/52/81/809f800b.webp" title="Таймлайн (из режима файлового менеджера)" class="__is_images_wrapper"><img src="/img/7f/0f/f64320fc.webp" alt="Таймлайн (из режима файлового менеджера)" class="__is_images_image __is_images_single" style="--is-images-width:890px;--is-images-aspect-ratio:445/28;" data-scale="1" data-caption="Таймлайн (из режима файлового менеджера)"></a>
+<figcaption>Таймлайн (из режима файлового менеджера)</figcaption>
+</figure>
+<figure id="fig-10" class="__is_images_figure __is_images_single __is_images_width_900" style="--is-images-width:890px;" data-modes="grid,slides">
+<a href="/img/11/43/6ftfb206.webp" title="Лента кадров (из режима отбора)" class="__is_images_wrapper"><img src="/img/oo/e7/1e4ob144.webp" alt="Лента кадров (из режима отбора)" class="__is_images_image __is_images_single" style="--is-images-width:890px;--is-images-aspect-ratio:445/28;" data-scale="1" data-caption="Лента кадров (из режима отбора)"></a>
+<figcaption>Лента кадров (из режима отбора)</figcaption>
+</figure>
 <p>В самом низу окна <strong>darktable</strong> находится, в зависимости от представления и режима, или панель <em><a href="#mod-timeline">таймлайна</a></em>,
 или панель <em><a href="#mod-filmstrip">ленты кадров</a></em>.</p>
 
@@ -555,8 +581,9 @@ lighttable в левой панели в самом верху. Как можн�
 <h3 id="start-export">
 <a class="anchor" href="#start-export" aria-hidden="true"><span class="octicon octicon-link"></span></a>Экспорт</h3>
 
-<figure class="__figure __implicit_figure __right" style="max-width:245px;margin-top:-30px;"><img src="/img/pages/books/darktable/pg/0_intro.html/029_export-245.webp" class="__image" alt="Модуль экспорта" title="Модуль экспорта"></figure>
-
+<figure id="fig-11" class="__is_images_figure __is_images_single __is_images_width_250 __is_images__right" style="--is-images-width:245px;--is-images-up:30px;" data-modes="grid,slides">
+<span title="Модуль экспорта" class="__is_images_wrapper"><img src="/img/28/14/82oe2963.webp" alt="Модуль экспорта" class="__is_images_image __is_images_single" style="--is-images-width:245px;--is-images-aspect-ratio:245/474;--is-images-up:30px;" data-scale="1"></span>
+</figure>
 <p>Остановимся на экспорте немного подробнее. <a href="#mod-export">Соответствующий модуль</a> находится в правой боковой панели в самом низу —
 довольно интуитивно, если вспомнить о том, что модуль импорта, с которого мы начинали, расположен в верхнем левом углу.</p>
 
@@ -631,8 +658,9 @@ lighttable в левой панели в самом верху. Как можн�
 
     <h5 class="no_toc" id="images">Вкладка «images»</h5>
 
-    <figure class="__figure __implicit_figure __center" style="max-width:245px;"><img src="/img/pages/books/darktable/pg/0_intro.html/030_actions_on_selection-245.webp" class="__image" alt="actions on selection / images" title="actions on selection / images"></figure>
-
+<figure id="fig-12" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:245px;" data-modes="grid,slides">
+<span title="actions on selection / images" class="__is_images_wrapper"><img src="/img/30/e1/66908135.webp" alt="actions on selection / images" class="__is_images_image __is_images_single" style="--is-images-width:245px;--is-images-aspect-ratio:49/47;" data-scale="1"></span>
+</figure>
     <dl>
       <dt>remove</dt>
       <dd>
@@ -709,7 +737,9 @@ lighttable в левой панели в самом верху. Как можн�
   <div class="unbreakable">
 
     <dl>
-      <dt>Повороты (<img src="/img/pages/books/darktable/pg/0_intro.html/032_rotate_left-19.webp" class="__image">/<img src="/img/pages/books/darktable/pg/0_intro.html/033_rotate_right-19.webp" class="__image">) и reset rotation</dt>
+      <dt>Повороты (<span class="__is_images_wrapper"><img src="/img/f1/60/4608o89b.webp" alt="" class="__is_images_image" style="--is-images-width:19px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> /</dt>
+      <dt>
+<span class="__is_images_wrapper"><img src="/img/f5/23/t174751f.webp" alt="" class="__is_images_image" style="--is-images-width:19px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>) и reset rotation</dt>
       <dd>
         <p>Выполняет поворот выбранных изображений по часовой стрелке или против часовой стрелки. Третья кнопка сбрасывает поворот до значения,
 указанного в EXIF-данных изображения. Эта функция напрямую связана с модулем обработки
@@ -768,8 +798,9 @@ lighttable в левой панели в самом верху. Как можн�
 
     <h5 class="no_toc" id="metadata">Вкладка «metadata»</h5>
 
-    <figure class="__figure __implicit_figure __center" style="max-width:245px;"><img src="/img/pages/books/darktable/pg/0_intro.html/031_actions_on_selection_metadata-245.webp" class="__image" alt="actions on selection / metadata" title="actions on selection / metadata"></figure>
-
+<figure id="fig-13" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:245px;" data-modes="grid,slides">
+<span title="actions on selection / metadata" class="__is_images_wrapper"><img src="/img/16/ee/o769ot6e.webp" alt="actions on selection / metadata" class="__is_images_image __is_images_single" style="--is-images-width:245px;--is-images-aspect-ratio:49/47;" data-scale="1"></span>
+</figure>
     <dl>
       <dt>Чекбоксы типов метаданных</dt>
       <dd>
@@ -870,8 +901,9 @@ lighttable в левой панели в самом верху. Как можн�
 
   <div class="unbreakable">
 
-    <figure class="__figure __implicit_figure __center" style="max-width:252px;"><img src="/img/pages/books/darktable/pg/0_intro.html/034_collections-252.webp" class="__image" alt="Модуль «collections»" title="Модуль «collections»"></figure>
-
+<figure id="fig-14" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:252px;" data-modes="grid,slides">
+<span title="Модуль «collections»" class="__is_images_wrapper"><img src="/img/ob/3f/91079621.webp" alt="Модуль «collections»" class="__is_images_image __is_images_single" style="--is-images-width:252px;--is-images-aspect-ratio:252/305;" data-scale="1"></span>
+</figure>
     <p>Фильтрует изображения, отображаемые в представлении «Световой стол» <em>(lighttable)</em>, панели «Лента миниатюр» <em>(filmstrip)</em>
 и представлении «Карта» <em>(map)</em>, используя атрибуты изображений. Этот набор отфильтрованных изображений называется <em>коллекцией</em>.</p>
 
@@ -883,7 +915,7 @@ lighttable в левой панели в самом верху. Как можн�
 или выбранной катушки пленки.</p>
 
     <p>Порядок сортировки коллекций (по возрастанию/убыванию) можно переключить, нажав на иконку
-<img src="/img/pages/books/darktable/pg/0_intro.html/035_collections_sort-22.webp" class="__image">.</p>
+<span class="__is_images_wrapper"><img src="/img/41/2o/363bc376.webp" alt="" class="__is_images_image" style="--is-images-width:22px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>.</p>
 
   </div>
   <div class="unbreakable">
@@ -1342,7 +1374,7 @@ lighttable в левой панели в самом верху. Как можн�
   </div>
   <div class="unbreakable">
 
-    <p>Нажмите на иконку <img src="/img/pages/books/darktable/pg/0_intro.html/036_expander-22.webp" class="__image"> (справа от поля поиска),
+    <p>Нажмите на иконку <span class="__is_images_wrapper"><img src="/img/3b/62/e5c2e02c.webp" alt="" class="__is_images_image" style="--is-images-width:22px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> (справа от поля поиска),
 чтобы открыть меню со следующими опциями:</p>
 
     <dl>
@@ -1389,9 +1421,9 @@ lighttable в левой панели в самом верху. Как можн�
   <div class="unbreakable">
 
     <p>Логические операторы, определяющие, как комбинируются правила, обозначены иконками справа от каждого правила:
-AND — <img src="/img/pages/books/darktable/pg/0_intro.html/036_and-20.webp" class="__image">,
-OR — <img src="/img/pages/books/darktable/pg/0_intro.html/037_or-20.webp" class="__image">,
-EXCEPT — <img src="/img/pages/books/darktable/pg/0_intro.html/038_except-20.webp" class="__image">.
+AND — <span class="__is_images_wrapper"><img src="/img/89/2o/bc8b08b0.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>,
+OR — <span class="__is_images_wrapper"><img src="/img/f1/10/ft44toot.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>,
+EXCEPT — <span class="__is_images_wrapper"><img src="/img/41/ee/51c41457.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>.
 Щёлкните на иконке, чтобы изменить логическую операцию для этого правила.</p>
 
   </div>
@@ -1411,7 +1443,7 @@ EXCEPT — <img src="/img/pages/books/darktable/pg/0_intro.html/038_except-20.we
         <p>Установите в выпадающем списке <em>image attribute</em> значение «folder» или «film roll».</p>
       </li>
       <li>
-        <p>Исходное имя катушки пленки или папки будет отображаться с <del>зачёркиванием</del>, указывая, что оно не найдено.</p>
+        <p>Исходное имя катушки пленки или папки будет отображаться с ~~зачёркиванием~~, указывая, что оно не найдено.</p>
       </li>
       <li>
         <p>Щёлкните правой кнопкой мыши на имени папки или катушки пленки, выберите «update path to files…», затем укажите новое расположение папки.</p>
@@ -1433,8 +1465,9 @@ col­lec­tions</a><sup id="fnref:recent"><a href="#fn:recent" class="footnote" 
 
     <h5 id="collections-settings" class="no_toc">Настройки</h5>
 
-    <figure class="__figure __implicit_figure __center" style="max-width:371px;"><img src="/img/pages/books/darktable/pg/0_intro.html/039_collections_settings-371.webp" class="__image" alt="Настройки коллекций" title="Настройки коллекций"></figure>
-
+<figure id="fig-15" class="__is_images_figure __is_images_single __is_images_width_400" style="--is-images-width:371px;" data-modes="grid,slides">
+<span title="Настройки коллекций" class="__is_images_wrapper"><img src="/img/t3/32/69oe721f.webp" alt="Настройки коллекций" class="__is_images_image __is_images_single" style="--is-images-width:371px;--is-images-aspect-ratio:371/204;" data-scale="1"></span>
+</figure>
     <p>Опция «preferences…» в меню пресетов позволяет настроить поведение модуля коллекций следующим образом:</p>
 
   </div>
@@ -1503,8 +1536,9 @@ col­lec­tions</a><sup id="fnref:recent"><a href="#fn:recent" class="footnote" 
 
 <section class="module">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:245px;"><img src="/img/pages/books/darktable/pg/0_intro.html/029_export-245.webp" class="__image" alt="Модуль «export»" title="Модуль «export»"></figure>
-
+<figure id="fig-16" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:245px;" data-modes="grid,slides">
+<span title="Модуль «export»" class="__is_images_wrapper"><img src="/img/28/14/82oe2963.webp" alt="Модуль «export»" class="__is_images_image __is_images_single" style="--is-images-width:245px;--is-images-aspect-ratio:245/474;" data-scale="1"></span>
+</figure>
   <div class="unbreakable">
 
     <p>Экспортирует выбранные изображения.</p>
@@ -1820,8 +1854,9 @@ mo­de</a>.
 
     <p>Опция «preferences…» в меню пресетов вызывает диалог, где можно настроить, какие метаданные включать в экспортированные файлы:</p>
 
-    <figure class="__figure __implicit_figure __center" style="max-width:500px;"><a href="/img/pages/books/darktable/pg/0_intro.html/040_export_preferences-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/0_intro.html/040_export_preferences-500.webp" class="__image" alt="Настройка метаданных при экспорте" title="Настройка метаданных при экспорте"></a></figure>
-
+<figure id="fig-17" class="__is_images_figure __is_images_single __is_images_width_500" style="--is-images-width:500px;" data-modes="grid,slides">
+<a href="/img/95/18/o4coobt6.webp" title="Настройка метаданных при экспорте" class="__is_images_wrapper"><img src="/img/o2/ce/2cf89026.webp" alt="Настройка метаданных при экспорте" class="__is_images_image __is_images_single" style="--is-images-width:500px;--is-images-aspect-ratio:500/353;" data-scale="1"></a>
+</figure>
     <p>Параметры, введённые в этот диалог, сохраняются вместе с другими параметрами экспорта в пользовательские пресеты, и последние введённые значения сохраняются при закрытии darktable.</p>
 
   </div>
@@ -2019,8 +2054,9 @@ mo­de</a>.
   <p>Лента миниатюр позволяет быстро переключаться между кадрами. Отображаемые кадры совпадают с теми, что показаны в представлении
 «Световой стол», и определяются текущей выбранной коллекцией.</p>
 
-  <figure class="__figure __implicit_figure __center" style="max-width:437px;"><a href="/img/pages/books/darktable/pg/0_intro.html/filmstrip-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/0_intro.html/filmstrip-437.webp" class="__image" alt="Модуль filmstrip" title="Модуль filmstrip"></a></figure>
-
+<figure id="fig-18" class="__is_images_figure __is_images_single __is_images_width_450" style="--is-images-width:437px;" data-modes="grid,slides">
+<a href="/img/f8/35/31f08910.webp" title="Модуль filmstrip" class="__is_images_wrapper"><img src="/img/60/2o/eboee1of.webp" alt="Модуль filmstrip" class="__is_images_image __is_images_single" style="--is-images-width:437px;--is-images-aspect-ratio:437/56;" data-scale="1"></a>
+</figure>
   <p>Ленту миниатюр можно включить или выключить с помощью горячей клавиши <code class="language-plaintext highlighter-rouge">Ctrl</code>+<code class="language-plaintext highlighter-rouge">F</code>. Высоту панели ленты миниатюр можно изменить,
 кликнув и перетащив её верхнюю границу.</p>
 
@@ -2098,8 +2134,9 @@ mo­de</a>.
 
 <section class="module">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:252px;"><img src="/img/pages/books/darktable/pg/0_intro.html/041_image_information-252.webp" class="__image" alt="Модуль «image information»" title="Модуль «image information»"></figure>
-
+<figure id="fig-19" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:252px;" data-modes="grid,slides">
+<span title="Модуль «image information»" class="__is_images_wrapper"><img src="/img/69/8e/6t466973.webp" alt="Модуль «image information»" class="__is_images_image __is_images_single" style="--is-images-width:252px;--is-images-aspect-ratio:3/7;" data-scale="1"></span>
+</figure>
   <p>Отображает информацию, встроенную в EXIF-данные изображения, а также ряд дополнительных полей данных, определённых в darktable.</p>
 
   <p>При наведении мыши на миниатюры изображений отображаемые данные автоматически обновляются, показывая информацию об изображении,
@@ -2140,8 +2177,9 @@ mo­de</a>.
 
 <section class="module">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:306px;"><img src="/img/pages/books/darktable/pg/0_intro.html/042_import_params-306.webp" class="__image" alt="Модуль «import» с параметрами" title="Модуль «import» с параметрами"></figure>
-
+<figure id="fig-20" class="__is_images_figure __is_images_single __is_images_width_350" style="--is-images-width:306px;" data-modes="grid,slides">
+<span title="Модуль «import» с параметрами" class="__is_images_wrapper"><img src="/img/32/9t/f1fe5bto.webp" alt="Модуль «import» с параметрами" class="__is_images_image __is_images_single" style="--is-images-width:306px;--is-images-aspect-ratio:17/24;" data-scale="1"></span>
+</figure>
   <p>Добавляет изображения в библиотеку darktable, при необходимости копируя их из другого места в файловой системе
 или с подключённой камеры.</p>
 
@@ -2308,8 +2346,9 @@ XMP files</a> установлено
 
     <p>Пример скриншота ниже взят для кнопки «add to library…»:</p>
 
-    <figure class="__figure __implicit_figure __center" style="max-width:640px;"><a href="/img/pages/books/darktable/pg/0_intro.html/004_import_dialog-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/0_intro.html/004_import_dialog-640.webp" class="__image" alt="Диалог импорта" title="Диалог импорта"></a></figure>
-
+<figure id="fig-21" class="__is_images_figure __is_images_single __is_images_width_650" style="--is-images-width:640px;" data-modes="grid,slides">
+<a href="/img/12/37/o54c0b5t.webp" title="Диалог импорта" class="__is_images_wrapper"><img src="/img/25/b1/c154f471.webp" alt="Диалог импорта" class="__is_images_image __is_images_single" style="--is-images-width:640px;--is-images-aspect-ratio:320/253;" data-scale="1"></a>
+</figure>
   </div>
   <div class="unbreakable">
 
@@ -2350,7 +2389,7 @@ XMP files</a> установлено
   <div class="unbreakable">
 
     <p>Вы можете просмотреть миниатюры изображений, нажав
-на значок <img src="/img/pages/books/darktable/pg/0_intro.html/043_eye_icon-21.webp" class="__image">. Также внизу экрана доступны кнопки
+на значок <span class="__is_images_wrapper"><img src="/img/43/0b/5fb3bt08.webp" alt="" class="__is_images_image" style="--is-images-width:21px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>. Также внизу экрана доступны кнопки
 для выбора всех файлов или ни одного.</p>
 
   </div>
@@ -2540,8 +2579,9 @@ XMP files</a> установлено
 
 <section class="module">
 
-  <figure class="__figure __implicit_figure __center" style="max-width:246px;"><img src="/img/pages/books/darktable/pg/0_intro.html/044_selection-246.webp" class="__image" alt="Модуль «selection»" title="Модуль «selection»"></figure>
-
+<figure id="fig-22" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:246px;" data-modes="grid,slides">
+<span title="Модуль «selection»" class="__is_images_wrapper"><img src="/img/7c/63/t717t57o.webp" alt="Модуль «selection»" class="__is_images_image __is_images_single" style="--is-images-width:246px;--is-images-aspect-ratio:246/113;" data-scale="1"></span>
+</figure>
   <p>Позволяет выбирать изображения в представлении <em>lighttable</em> (световой стол) на основе простых критериев.</p>
 
   <div class="unbreakable">
@@ -2613,8 +2653,9 @@ XMP files</a> установлено
 
     <p>Позволяет просматривать кадры по дате и времени съёмки.</p>
 
-    <figure class="__figure __implicit_figure __center" style="max-width:747px;"><a href="/img/pages/books/darktable/pg/0_intro.html/timeline-fhd.webp" class="__image_link"><img src="/img/pages/books/darktable/pg/0_intro.html/timeline-747.webp" class="__image" alt="Модуль «timeline»" title="Модуль «timeline»"></a></figure>
-
+<figure id="fig-23" class="__is_images_figure __is_images_single __is_images_width_750" style="--is-images-width:747px;" data-modes="grid,slides">
+<a href="/img/40/7o/t7307156.webp" title="Модуль «timeline»" class="__is_images_wrapper"><img src="/img/1f/67/e389c0tf.webp" alt="Модуль «timeline»" class="__is_images_image __is_images_single" style="--is-images-width:747px;--is-images-aspect-ratio:83/8;" data-scale="1"></a>
+</figure>
   </div>
 
   <p>В представлении «Световой стол» в режиме файлового менеджера вы можете показать или скрыть модуль таймлайна в нижней панели

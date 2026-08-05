@@ -26,15 +26,15 @@
 <link rel="canonical" href="https://shikhalev.github.io/tech/2015/04/ruby-context.html" />
 <meta property="og:url" content="https://shikhalev.github.io/tech/2015/04/ruby-context.html" />
 <meta property="og:site_name" content="Иван Шихалев" />
-<meta property="og:image" content="https://shikhalev.github.io/img/2015/04/01/ruby-context/screen-context-640x640-500-261-0-0.webp" />
+<meta property="og:image" content="https://shikhalev.github.io/img/e8/9t/70f8c23t.webp" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-04-01T00:00:00+00:00" />
 <meta property="article:modified_time" content="2015-04-01T00:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://shikhalev.github.io/img/2015/04/01/ruby-context/screen-context-640x640-500-261-0-0.webp" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/e8/9t/70f8c23t.webp" />
 <meta name="twitter:title" content="Блоки и контекст в Ruby" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2015-04-01T00:00:00+00:00","datePublished":"2015-04-01T00:00:00+00:00","description":"Статья рассказывает о программном контексте в Ruby: какие переменные и другие объекты доступны в конкретном месте программы, и как интерпретатор их ищет.","headline":"Блоки и контекст в Ruby","image":"https://shikhalev.github.io/img/2015/04/01/ruby-context/screen-context-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2015/04/ruby-context.html"},"url":"https://shikhalev.github.io/tech/2015/04/ruby-context.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2015-04-01T00:00:00+00:00","datePublished":"2015-04-01T00:00:00+00:00","description":"Статья рассказывает о программном контексте в Ruby: какие переменные и другие объекты доступны в конкретном месте программы, и как интерпретатор их ищет.","headline":"Блоки и контекст в Ruby","image":"https://shikhalev.github.io/img/e8/9t/70f8c23t.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2015/04/ruby-context.html"},"url":"https://shikhalev.github.io/tech/2015/04/ruby-context.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
@@ -71,6 +71,11 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "u2gczedmo7");
 </script>
+
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.4.css" />
+<script type="module" src="/js/is-images-0.8.0.4.js"></script>
+<!-- end of jekyll-is-images stuff -->
 
 </head>
 
@@ -110,8 +115,9 @@
 
 <hr>
 
-<figure class="__figure __implicit_figure __right" style="max-width:158px;padding: 5px;"><a href="http://samag.ru/archive/article/2622"><img src="/img/2015/04/01/ruby-context/134-5-158.webp" class="__image"></a></figure>
-
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_200 __is_images__right" style="padding:5px;--is-images-width:158px;" data-modes="grid,slides">
+<a href="http://samag.ru/archive/article/2622" class="__is_images_wrapper"><img src="/img/25/t0/b2b8e7c9.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:158px;--is-images-aspect-ratio:79/112;" data-scale="1"></a>
+</figure>
 <div class="note">
   <p><strong>Что стоит за конкретным идентификатором в данном окружении</strong></p>
 
@@ -139,8 +145,8 @@
 языках), а определяются в момент инициализации — первого присваивания значения. Все это может привести к недопониманию
 и кажущейся неоднозначности.</p>
 
-<h2 id="из-чего-состоит-контекст">
-<a class="anchor" href="#%D0%B8%D0%B7-%D1%87%D0%B5%D0%B3%D0%BE-%D1%81%D0%BE%D1%81%D1%82%D0%BE%D0%B8%D1%82-%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BA%D1%81%D1%82" aria-hidden="true"><span class="octicon octicon-link"></span></a>Из чего состоит контекст?</h2>
+<h2 id="section">
+<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Из чего состоит контекст?</h2>
 
 <p>В Ruby в любой точке программы мы имеем доступ к трем слоям контекста: локальный контекст, контекст объекта и глобальный.
 Рассмотрим их, так сказать, сверху вниз — от глобального к локальному.</p>
@@ -184,8 +190,8 @@
 
 <p>Атрибут после вызова <code class="language-plaintext highlighter-rouge">beta</code> будет равен единице, поскольку строчка без <code class="language-plaintext highlighter-rouge">self</code> к нему отношения не имеет.</p>
 
-<h2 id="блоки">
-<a class="anchor" href="#%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Блоки</h2>
+<h2 id="section-1">
+<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Блоки</h2>
 
 <p>Блоком в Ruby называется конструкция вида:</p>
 
@@ -324,8 +330,8 @@
 если метод, которому передан блок, не подразумевает иное (как, в частности, <code class="language-plaintext highlighter-rouge">define_singleton_method</code>). К методам, изменяющим
 контекст, мы еще вернемся, а сейчас рассмотрим подробнее контекст объекта как таковой.</p>
 
-<h2 id="контекст-объекта">
-<a class="anchor" href="#%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BA%D1%81%D1%82-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Контекст объекта</h2>
+<h2 id="section-2">
+<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Контекст объекта</h2>
 
 <p>Как уже говорилось выше, в Ruby мы всегда действуем в контексте некоего объекта, причем доступные методы полностью определяются
 его классом. Но, в общем случае, это не тот класс, который был использован при создании объекта и возвращается методом <code class="language-plaintext highlighter-rouge">class</code>,
@@ -423,8 +429,8 @@
 "B"</span></code></pre>
 </figure>
 
-<h2 id="константы-и-пространства-имен">
-<a class="anchor" href="#%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D1%8B-%D0%B8-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%B0-%D0%B8%D0%BC%D0%B5%D0%BD" aria-hidden="true"><span class="octicon octicon-link"></span></a>Константы и пространства имен</h2>
+<h2 id="section-3">
+<a class="anchor" href="#section-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Константы и пространства имен</h2>
 
 <p>Константы в Ruby отличаются от всего остального заглавной первой буквой. Имена классов и модулей — это тоже константы,
 значением которых является соответствующий объект класса <code class="language-plaintext highlighter-rouge">Class</code> или <code class="language-plaintext highlighter-rouge">Module</code>.</p>
@@ -498,8 +504,8 @@
 и переопределением уже использованных идентификаторов. Как и любыми другими возможностями языка: Ruby очень гибок и позволяет
 переопределить так много, что, образно выражаясь, вы можете выстрелить себе в ногу из самой этой ноги. Картечью.</p>
 
-<h2 id="замена-контекста">
-<a class="anchor" href="#%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD%D0%B0-%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Замена контекста</h2>
+<h2 id="section-4">
+<a class="anchor" href="#section-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Замена контекста</h2>
 
 <p>Локальный контекст, равно как и контекст объекта, может быть указан явно. Для этого существует несколько разнородных техник,
 о которых мы сейчас и поговорим.</p>
@@ -623,8 +629,8 @@
 (по сравнению с нормальным, предварительно разобранным кодом), использовать эту технику как-либо, кроме как в отладке,
 наверное, не стоит. С другой стороны, локальный контекст на то и локальный, чтобы не заботиться о нем снаружи.</p>
 
-<h2 id="замыкания-и-многозадачность">
-<a class="anchor" href="#%D0%B7%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B8-%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Замыкания и многозадачность</h2>
+<h2 id="section-5">
+<a class="anchor" href="#section-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Замыкания и многозадачность</h2>
 
 <p>Если мы пишем многопоточную программу, надо помнить, что замыкания содержат переменные, а не их значения. Т.е. значения
 могут поменяться со времени старта потока.</p>
@@ -669,8 +675,8 @@
 процессами как таковое, однако скриптовые языки, и Ruby в частности, нередко используют люди, в недавнем прошлом далекие
 от программирования… А задач, которые можно распараллелить — множество, тем более, что в Ruby это очень просто.</p>
 
-<h2 id="итого">
-<a class="anchor" href="#%D0%B8%D1%82%D0%BE%D0%B3%D0%BE" aria-hidden="true"><span class="octicon octicon-link"></span></a>Итого</h2>
+<h2 id="section-6">
+<a class="anchor" href="#section-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Итого</h2>
 
 <p>Надеюсь, понимание вышеизложенного поможет избегать ошибок при написании программ. Впрочем, еще важнее это понимание
 при чтении чужих исходников — чтобы не возникало вопросов: а что у нас тут обозначает этот идентификатор, откуда он берется?
@@ -700,30 +706,30 @@
 <aside class="recommendations"><div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2023.11.13 |</span>
-            <a href="/tech/2023/11/inat-get.html" title="Набор инструментов для получения и обработки данных с iNaturalist">INat::Get — ранняя альфа</a>
+            <span class="meta">2026.08.05 |</span>
+            <a href="/tech/2026/08/jekyll-is-images.html" title="Реализовал таки...">Плагин jekyll-is-images v0.8.0.2</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-globe" href="/tech/web/" title="HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.">Web</a>
 </dd>
         </dl>
       </div>
 <div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2025.06.19 |</span>
-            <a href="/photo/2025/06/sigma-60-600.html" title="Мой новый объектив — Sigma AF 60-600mm f/4.5-6.3 DG OS HSM Sports">Объектив Sigma 60-600mm</a>
+            <span class="meta">2022.10.31 |</span>
+            <a href="/tech/2022/10/harddybr.html" title="Некоторые заметки после обновления компьютера">Большой дыбр по железу</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a>​<a class="fa-icon-calendar-alt" href="/life/dybr/" title="Просто кусочки повседневности">Дыбр</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a>​<a class="fa-icon-calendar-alt" href="/life/dybr/" title="Просто кусочки повседневности">Дыбр</a>
 </dd>
         </dl>
       </div>
 <div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2021.07.17 |</span>
-            <a href="/photo/2021/07/gpx-exif-tools.html" title="Запись GPX и корректная его обработка">Как я ставлю геометки к фотографиям</a>
+            <span class="meta">2015.03.31 |</span>
+            <a href="/tech/2015/03/druby.html" title="Введение в технологию dRuby. Прозрачный RPC для взаимодействия Ruby-программ.">Распределенный Ruby</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a>
 </dd>
         </dl>
       </div></aside>
@@ -743,13 +749,13 @@
 </aside><aside id="toc" class="toc toc-post">
   <h4>Содержание</h4>
   <ul id="toc_list" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#из-чего-состоит-контекст">Из чего состоит контекст?</a></li>
-<li class="toc-entry toc-h2"><a href="#блоки">Блоки</a></li>
-<li class="toc-entry toc-h2"><a href="#контекст-объекта">Контекст объекта</a></li>
-<li class="toc-entry toc-h2"><a href="#константы-и-пространства-имен">Константы и пространства имен</a></li>
-<li class="toc-entry toc-h2"><a href="#замена-контекста">Замена контекста</a></li>
-<li class="toc-entry toc-h2"><a href="#замыкания-и-многозадачность">Замыкания и многозадачность</a></li>
-<li class="toc-entry toc-h2"><a href="#итого">Итого</a></li>
+<li class="toc-entry toc-h2"><a href="#section">Из чего состоит контекст?</a></li>
+<li class="toc-entry toc-h2"><a href="#section-1">Блоки</a></li>
+<li class="toc-entry toc-h2"><a href="#section-2">Контекст объекта</a></li>
+<li class="toc-entry toc-h2"><a href="#section-3">Константы и пространства имен</a></li>
+<li class="toc-entry toc-h2"><a href="#section-4">Замена контекста</a></li>
+<li class="toc-entry toc-h2"><a href="#section-5">Замыкания и многозадачность</a></li>
+<li class="toc-entry toc-h2"><a href="#section-6">Итого</a></li>
 </ul>
 </aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/tech/2016/03/introspection.html" title="Что программа может знать о самой себе?">Средства самопознания в Ruby</a></li><li class="fa-icon-li-file-alt"><a href="/tech/2016/01/metaprogramming.html" title="Добавление собственных абстракций в объектную модель — это просто. И интересно.">Мета­программи­ро­вание в Ruby: разбор примера</a></li><li class="fa-icon-li-file-alt"><a href="/tech/2015/04/ruby-multitasking.html" title="В статье рассматриваются основные средства работы с потоками (threads) и процессами в языке и стандартной библиотеке Ruby.">Ruby и многозадачность</a></li></ul>
     </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>

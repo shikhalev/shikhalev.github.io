@@ -26,15 +26,15 @@
 <link rel="canonical" href="https://shikhalev.github.io/tech/2016/01/metaprogramming.html" />
 <meta property="og:url" content="https://shikhalev.github.io/tech/2016/01/metaprogramming.html" />
 <meta property="og:site_name" content="Иван Шихалев" />
-<meta property="og:image" content="https://shikhalev.github.io/img/2016/01/27/metaprogramming/screen-meta-640x640-500-261-0-0.webp" />
+<meta property="og:image" content="https://shikhalev.github.io/img/65/3b/33o55c24.webp" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2016-01-27T00:00:00+00:00" />
 <meta property="article:modified_time" content="2016-01-27T00:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://shikhalev.github.io/img/2016/01/27/metaprogramming/screen-meta-640x640-500-261-0-0.webp" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/65/3b/33o55c24.webp" />
 <meta name="twitter:title" content="Мета­программи­ро­вание в Ruby: разбор примера" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2016-01-27T00:00:00+00:00","datePublished":"2016-01-27T00:00:00+00:00","description":"Добавление собственных абстракций в объектную модель — это просто. И интересно.","headline":"Мета­программи­ро­вание в Ruby: разбор примера","image":"https://shikhalev.github.io/img/2016/01/27/metaprogramming/screen-meta-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2016/01/metaprogramming.html"},"url":"https://shikhalev.github.io/tech/2016/01/metaprogramming.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2016-01-27T00:00:00+00:00","datePublished":"2016-01-27T00:00:00+00:00","description":"Добавление собственных абстракций в объектную модель — это просто. И интересно.","headline":"Мета­программи­ро­вание в Ruby: разбор примера","image":"https://shikhalev.github.io/img/65/3b/33o55c24.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2016/01/metaprogramming.html"},"url":"https://shikhalev.github.io/tech/2016/01/metaprogramming.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
@@ -71,6 +71,11 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "u2gczedmo7");
 </script>
+
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.4.css" />
+<script type="module" src="/js/is-images-0.8.0.4.js"></script>
+<!-- end of jekyll-is-images stuff -->
 
 </head>
 
@@ -110,8 +115,9 @@
 
 <hr>
 
-<figure class="__figure __implicit_figure __right" style="max-width:158px;padding: 5px;"><a href="http://samag.ru/archive/article/2842"><img src="/img/2016/01/27/metaprogramming/145-158.webp" class="__image"></a></figure>
-
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_200 __is_images__right" style="padding:5px;--is-images-width:158px;" data-modes="grid,slides">
+<a href="http://samag.ru/archive/article/2842" class="__is_images_wrapper"><img src="/img/f1/e0/f3ee1b22.avif" alt="" class="__is_images_image __is_images_single" style="--is-images-width:158px;--is-images-aspect-ratio:79/112;" data-scale="1"></a>
+</figure>
 <div class="note">
   <p><strong>Добавление собственных абстракций в объектную модель — это просто. И интересно.</strong></p>
 
@@ -126,8 +132,8 @@
 
 <!--more-->
 
-<h2 id="формулировка-задачи">
-<a class="anchor" href="#%D1%84%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0-%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Формулировка задачи</h2>
+<h2 id="section">
+<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Формулировка задачи</h2>
 
 <p>В объектно-ориентированных языках, как правило, имеются такие абстракции как методы и свойства. В Ruby свойства называются
 атрибутами, что, впрочем, сути не меняет. Однако в Ruby мы можем и сами определить аналогичные конструкции с нужной нам
@@ -162,8 +168,8 @@
 При этом благодаря необязательности скобок при вызове, такие методы, как <code class="language-plaintext highlighter-rouge">attr</code>, <code class="language-plaintext highlighter-rouge">include</code>, <code class="language-plaintext highlighter-rouge">private</code>, <code class="language-plaintext highlighter-rouge">module_function</code>, выглядят
 структурными элементами языка.</p>
 
-<h2 id="минимальный-вариант">
-<a class="anchor" href="#%D0%BC%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82" aria-hidden="true"><span class="octicon octicon-link"></span></a>Минимальный вариант</h2>
+<h2 id="section-1">
+<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Минимальный вариант</h2>
 
 <p>Начнем с самого простого — реализуем аналог <code class="language-plaintext highlighter-rouge">attr_accessor</code>. Заявленный выше функционал добавим после. Определение выглядит так<sup id="fnref:gist"><a href="#fn:gist" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>:</p>
 
@@ -231,8 +237,8 @@
 даст замедление за счет того, что эта строка будет разбираться и компилироваться при каждом вызове, тогда как в нашем случае разбор
 производится однократно, при первом проходе.</p>
 
-<h2 id="значения-по-умолчанию">
-<a class="anchor" href="#%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BF%D0%BE-%D1%83%D0%BC%D0%BE%D0%BB%D1%87%D0%B0%D0%BD%D0%B8%D1%8E" aria-hidden="true"><span class="octicon octicon-link"></span></a>Значения по умолчанию</h2>
+<h2 id="section-2">
+<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Значения по умолчанию</h2>
 
 <p>Если мы сейчас обратимся к определенному нами свойству, значение которого не установлено, то получим <code class="language-plaintext highlighter-rouge">nil</code>, так же как для стандартного
 атрибута. Это поведение можно переопределить. Введем два именованных параметра: <code class="language-plaintext highlighter-rouge">default</code> — значение по умолчанию; и <code class="language-plaintext highlighter-rouge">default_proc</code> — объект,
@@ -301,8 +307,8 @@
 параметров, если таковые присутствуют. При этом собственного метода <code class="language-plaintext highlighter-rouge">call</code> объекты класса <code class="language-plaintext highlighter-rouge">Symbol</code> не имеют — преобразование <code class="language-plaintext highlighter-rouge">to_proc</code>
 здесь обязательно.</p>
 
-<h2 id="вызов-события">
-<a class="anchor" href="#%D0%B2%D1%8B%D0%B7%D0%BE%D0%B2-%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>Вызов события</h2>
+<h2 id="section-3">
+<a class="anchor" href="#section-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Вызов события</h2>
 
 <p>Добавим к параметрам <code class="language-plaintext highlighter-rouge">prop</code> (и <code class="language-plaintext highlighter-rouge">property</code> соответственно) <code class="language-plaintext highlighter-rouge">&amp;block</code> — собственно обработчик, и преобразуем слегка определение сеттера
 из предыдущих примеров.</p>
@@ -339,8 +345,8 @@
 <span class="go">[♯‹Alpha:0x000000025d2e18 @alpha=100, @beta=200›, :beta, 200]</span></code></pre>
 </figure>
 
-<h2 id="проверка-значений">
-<a class="anchor" href="#%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D0%B9" aria-hidden="true"><span class="octicon octicon-link"></span></a>Проверка значений</h2>
+<h2 id="section-4">
+<a class="anchor" href="#section-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Проверка значений</h2>
 
 <p>Добавим к <code class="language-plaintext highlighter-rouge">prop</code> следующие именованные аргументы: <code class="language-plaintext highlighter-rouge">filter</code> — собственно фильтр, и <code class="language-plaintext highlighter-rouge">on_invalid</code> — параметр, определяющий,
 как будет обрабатываться попытка присвоить неподходящее значение. Вообще говоря, тут может быть множество вариантов поведения,
@@ -411,8 +417,8 @@ demo03.rb:24:in `‹main›': Invalid property (beta) value: -1! (StandardError)
 <p>Кроме того, мы можем определить этот оператор для каких-то своих классов условий, задав ему произвольное поведение. Или переопределить его
 для каких-либо стандартных классов, что, впрочем, может иметь непредсказуемые последствия.</p>
 
-<h2 id="что-дальше">
-<a class="anchor" href="#%D1%87%D1%82%D0%BE-%D0%B4%D0%B0%D0%BB%D1%8C%D1%88%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что дальше?</h2>
+<h2 id="section-5">
+<a class="anchor" href="#section-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что дальше?</h2>
 
 <p>В общем-то, задача, поставленная в начале статьи, решена. Замечу только, что совершенно необязательно формировать один большой
 метод с несколькими условными ветвлениями — можно, и даже нужно с точки зрения оптимизации, проверять <code class="language-plaintext highlighter-rouge">filter</code> снаружи, и уже
@@ -422,8 +428,8 @@ demo03.rb:24:in `‹main›': Invalid property (beta) value: -1! (StandardError)
 при его определении — азы оптимизации, и тут возможность задавать определения на ходу, доступная в динамических языках, очень
 нам на руку.</p>
 
-<h2 id="практический-смысл">
-<a class="anchor" href="#%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9-%D1%81%D0%BC%D1%8B%D1%81%D0%BB" aria-hidden="true"><span class="octicon octicon-link"></span></a>Практический смысл</h2>
+<h2 id="section-6">
+<a class="anchor" href="#section-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Практический смысл</h2>
 
 <p>Собственно, даже такая простая, взятая для примера, функциональность не бесполезна. А еще можно создавать свойства (поля)
 с внешним хранением данных, с дополнительными параметрами отображения и так далее и тому подобное. Можно привязать класс Ruby
@@ -461,30 +467,30 @@ demo03.rb:24:in `‹main›': Invalid property (beta) value: -1! (StandardError)
 <aside class="recommendations"><div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2015.03.30 |</span>
-            <a href="/tech/2015/03/decorator.html" title="Реализация паттерна «декоратор» на языке Ruby">Декораторы в Ruby</a>
+            <span class="meta">2010.10.29 |</span>
+            <a href="/life/2010/10/limits.html" title="">Про задачи</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a>
+          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-brain" href="/life/psi/mind/" title="Заметки о том, как мы думаем">Мышление</a>
 </dd>
         </dl>
       </div>
 <div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2021.09.12 |</span>
-            <a href="/tech/2021/09/xbash.html" title="bash-расширение для удобства кодинга">xbash</a>
+            <span class="meta">2020.01.11 |</span>
+            <a href="/tech/2020/01/rack.html" title="Библиотека Rack — простой объектный интерфейс для написания веб-приложений (статья в журнале «Системный администратор»)">Rack — основа веб-фреймворков в Ruby</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a>​<a class="fa-icon-globe" href="/tech/web/" title="HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.">Web</a>
 </dd>
         </dl>
       </div>
 <div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2011.10.11 |</span>
-            <a href="/tech/2011/10/latex-marker.html" title="Выделение цветным фоном в тексте, аккуратный способ.">Выделение «маркером» в LaTeX</a>
+            <span class="meta">2009.01.23 |</span>
+            <a href="/life/2009/01/manifest.html" title="">МанифестЪ</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
+          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>
 </dd>
         </dl>
       </div></aside>
@@ -504,13 +510,13 @@ demo03.rb:24:in `‹main›': Invalid property (beta) value: -1! (StandardError)
 </aside><aside id="toc" class="toc toc-post">
   <h4>Содержание</h4>
   <ul id="toc_list" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#формулировка-задачи">Формулировка задачи</a></li>
-<li class="toc-entry toc-h2"><a href="#минимальный-вариант">Минимальный вариант</a></li>
-<li class="toc-entry toc-h2"><a href="#значения-по-умолчанию">Значения по умолчанию</a></li>
-<li class="toc-entry toc-h2"><a href="#вызов-события">Вызов события</a></li>
-<li class="toc-entry toc-h2"><a href="#проверка-значений">Проверка значений</a></li>
-<li class="toc-entry toc-h2"><a href="#что-дальше">Что дальше?</a></li>
-<li class="toc-entry toc-h2"><a href="#практический-смысл">Практический смысл</a></li>
+<li class="toc-entry toc-h2"><a href="#section">Формулировка задачи</a></li>
+<li class="toc-entry toc-h2"><a href="#section-1">Минимальный вариант</a></li>
+<li class="toc-entry toc-h2"><a href="#section-2">Значения по умолчанию</a></li>
+<li class="toc-entry toc-h2"><a href="#section-3">Вызов события</a></li>
+<li class="toc-entry toc-h2"><a href="#section-4">Проверка значений</a></li>
+<li class="toc-entry toc-h2"><a href="#section-5">Что дальше?</a></li>
+<li class="toc-entry toc-h2"><a href="#section-6">Практический смысл</a></li>
 </ul>
 </aside><aside id="backs" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
 

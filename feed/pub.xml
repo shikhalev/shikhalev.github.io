@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed/pub.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-08-02T20:41:34+00:00</updated><id>https://shikhalev.github.io/feed/pub.xml</id><title type="html">Иван Шихалев | Pub</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Rack — основа веб-фреймворков в Ruby</title><link href="https://shikhalev.github.io/tech/2020/01/rack.html" rel="alternate" type="text/html" title="Rack — основа веб-фреймворков в Ruby" /><published>2020-01-11T00:00:00+00:00</published><updated>2020-01-11T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2020/01/rack</id><content type="html" xml:base="https://shikhalev.github.io/tech/2020/01/rack.html"><![CDATA[<p><a href="http://samag.ru/archive/article/2952" title="«Системный администратор» №5 (150) за май 2015">Оригинал этой статьи опубликован в журнале «Системный администратор» №5 (150) за май 2015</a>.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed/pub.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-08-05T13:47:57+00:00</updated><id>https://shikhalev.github.io/feed/pub.xml</id><title type="html">Иван Шихалев | Pub</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Rack — основа веб-фреймворков в Ruby</title><link href="https://shikhalev.github.io/tech/2020/01/rack.html" rel="alternate" type="text/html" title="Rack — основа веб-фреймворков в Ruby" /><published>2020-01-11T00:00:00+00:00</published><updated>2020-01-11T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2020/01/rack</id><content type="html" xml:base="https://shikhalev.github.io/tech/2020/01/rack.html"><![CDATA[<p><a href="http://samag.ru/archive/article/2952" title="«Системный администратор» №5 (150) за май 2015">Оригинал этой статьи опубликован в журнале «Системный администратор» №5 (150) за май 2015</a>.
 Прошу обратить внимание на год — какие-то моменты могут расходиться с современными версиями языка
 и библиотек…</p>
 
 <hr />
 
-<figure class="__figure __implicit_figure __right" style="max-width:158px;padding: 5px;"><a href="http://samag.ru/archive/article/2952"><img src="/img/2020/01/11/rack/150-158.webp" class="__image" /></a></figure>
-
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_200 __is_images__right" style="padding:5px;--is-images-width:158px;" data-modes="grid,slides">
+<a href="http://samag.ru/archive/article/2952" class="__is_images_wrapper"><img src="/img/e2/ot/8342261o.avif" alt="" class="__is_images_image __is_images_single" style="--is-images-width:158px;--is-images-aspect-ratio:158/223;" data-scale="1"></a>
+</figure>
 <div class="note">
   <p><strong>Библиотека Rack — простой объектный интерфейс для написания веб-приложений.</strong></p>
 
@@ -22,7 +23,7 @@
 
 <!--more-->
 
-<h2 id="зачем-знать-rack">Зачем знать Rack?</h2>
+<h2 id="rack">Зачем знать Rack?</h2>
 
 <p>Практически вся веб-разработка на Ruby использует Rack, как правило — посредством того или иного более
 высокоуровневого фреймворка. Но это не обязательно, задачи бывают разные: для каких-то те же Rails
@@ -39,7 +40,7 @@
 фреймворков. MVC<sup id="fnref:mvc"><a href="#fn:mvc" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> — хорошая и проверенная временем концепция, но все же не панацея и не «серебряная пуля».</li>
 </ul>
 
-<h2 id="как-это-работает">Как это работает</h2>
+<h2 id="section">Как это работает</h2>
 
 <p>Для начала установим соответствующий гем:</p>
 
@@ -135,7 +136,7 @@ Successfully installed rack-1.6.0
 <p>В целом, <code class="language-plaintext highlighter-rouge">rackup</code> продолжает доброе дело абстрагирования разработчика от каких-то вещей, которые должны быть скорее
 в ведении администратора.</p>
 
-<h2 id="rackrequest-и-разбор-параметров">Rack::Request и разбор параметров</h2>
+<h2 id="rackrequest---">Rack::Request и разбор параметров</h2>
 
 <p>Данные запроса приходят в параметре <code class="language-plaintext highlighter-rouge">env</code> в виде текстовых строк, как они собственно и определены протоколом HTTP.
 Однако некоторые из них на самом деле имеют свою внутреннюю структуру и для нормальной работы их еще предстоит
@@ -195,7 +196,7 @@ Successfully installed rack-1.6.0
 
 <p>Важно не забыть про метод <code class="language-plaintext highlighter-rouge">finish</code>, который собственно и формирует необходимый ответ.</p>
 
-<h2 id="декомпозиция">Декомпозиция</h2>
+<h2 id="section-1">Декомпозиция</h2>
 
 <p>Очевидно, более-менее сложное приложение в одной процедуре или методе не поместится. Поэтому, как правило,
 приложение все-таки представляет собой отдельный объект (модуль/класс), в котором метод <code class="language-plaintext highlighter-rouge">call</code> обращается
@@ -279,7 +280,7 @@ Successfully installed rack-1.6.0
 <span class="n">run</span> <span class="n">txt</span></code></pre>
 </figure>
 
-<h2 id="штатные-дополнения">Штатные дополнения</h2>
+<h2 id="section-2">Штатные дополнения</h2>
 
 <p>Некоторые задачи при создании веб-приложений встречаются регулярно — практически всегда требуется вести какое-то логирование,
 отдавать статические файлы и так далее. Гем <code class="language-plaintext highlighter-rouge">rack</code> содержит ряд классов для решения таких типовых задач, я не буду на них
@@ -311,7 +312,7 @@ Successfully installed rack-1.6.0
 <p>Дополнительно стоит упомянуть о модулях <code class="language-plaintext highlighter-rouge">Rack::Mime</code> и <code class="language-plaintext highlighter-rouge">Rack::Utils</code>, которые предоставляют различные вспомогательные средства
 для веб-разработки.</p>
 
-<h2 id="итого">Итого</h2>
+<h2 id="section-3">Итого</h2>
 
 <p>Rack представляет собой очень простой объектный интерфейс для взаимодействия с веб-сервером, с одной стороны — абстрагируя
 разработчика от мелких деталей, с другой — не навязывая какой-то определенной архитектуры приложения. Стоит ли его использовать
@@ -339,12 +340,13 @@ Successfully installed rack-1.6.0
       <p>За подробностями стоит обратиться к документации — <a href="http://www.rubydoc.info/gems/rack/">http://www.rubydoc.info/gems/rack/</a>. <a href="#fnref:gem" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;pub&quot;, &quot;samag&quot;, &quot;web&quot;]" /><category term="Rack" /><summary type="html"><![CDATA[Библиотека Rack — простой объектный интерфейс для написания веб-приложений (статья в журнале «Системный администратор»)]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2020/01/11/rack/screen-rack-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2020/01/11/rack/screen-rack-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Средства самопознания в Ruby</title><link href="https://shikhalev.github.io/tech/2016/03/introspection.html" rel="alternate" type="text/html" title="Средства самопознания в Ruby" /><published>2016-03-09T00:00:00+00:00</published><updated>2016-03-09T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2016/03/introspection</id><content type="html" xml:base="https://shikhalev.github.io/tech/2016/03/introspection.html"><![CDATA[<p><a href="http://samag.ru/archive/article/2874">Оригинал этой статьи опубликован в журнале «Системный администратор» №1-2 (146-147) за февраль 2015</a>.</p>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;pub&quot;, &quot;samag&quot;, &quot;web&quot;]" /><category term="Rack" /><summary type="html"><![CDATA[Библиотека Rack — простой объектный интерфейс для написания веб-приложений (статья в журнале «Системный администратор»)]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/56/59/0c646bo5.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/56/59/0c646bo5.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Средства самопознания в Ruby</title><link href="https://shikhalev.github.io/tech/2016/03/introspection.html" rel="alternate" type="text/html" title="Средства самопознания в Ruby" /><published>2016-03-09T00:00:00+00:00</published><updated>2016-03-09T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2016/03/introspection</id><content type="html" xml:base="https://shikhalev.github.io/tech/2016/03/introspection.html"><![CDATA[<p><a href="http://samag.ru/archive/article/2874">Оригинал этой статьи опубликован в журнале «Системный администратор» №1-2 (146-147) за февраль 2015</a>.</p>
 
 <hr />
 
-<figure class="__figure __implicit_figure __right" style="max-width:158px;padding: 5px;"><a href="http://samag.ru/archive/article/2874"><img src="/img/2016/03/09/introspection/146-7-158.webp" class="__image" /></a></figure>
-
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_200 __is_images__right" style="padding:5px;--is-images-width:158px;" data-modes="grid,slides">
+<a href="http://samag.ru/archive/article/2874" class="__is_images_wrapper"><img src="/img/ob/15/oc95c068.avif" alt="" class="__is_images_image __is_images_single" style="--is-images-width:158px;--is-images-aspect-ratio:79/112;" data-scale="1"></a>
+</figure>
 <div class="note">
 
   <p><strong>Что программа может знать о самой себе?</strong></p>
@@ -367,7 +369,7 @@ Successfully installed rack-1.6.0
 тоже). Такое функциональное деление удобно и для интерпретируемых языков, в которых, правда, к этим двум категориям
 можно добавить еще одну — состояние интерпретатора / виртуальной машины в целом.</p>
 
-<h2 id="отладочная-информация-доступная-программе">Отладочная информация, доступная программе</h2>
+<h2 id="section">Отладочная информация, доступная программе</h2>
 
 <p>Начнем с самого простого: специальные методы <code class="language-plaintext highlighter-rouge">__FILE__</code> и <code class="language-plaintext highlighter-rouge">__LINE__</code> позволят определить и, скажем, вывести текущую
 точку исполнения программы. Например, для логирования.</p>
@@ -640,7 +642,7 @@ puts(*arg0) [‹binary›]</span></code></pre>
 <p>К сожалению, конкретные значения, заданные для опциональных параметров по умолчанию, так просто выяснить не получится.
 Можно, правда, зная, где данный метод определен, распарсить текст программы, но это уже выходит за рамки нашей темы.</p>
 
-<h2 id="картина-в-целом">Картина в целом</h2>
+<h2 id="section-1">Картина в целом</h2>
 
 <p>Итак, мы можем посмотреть методы и константы для любого класса, модуля, да и произвольного объекта (хотя это и редко
 может потребоваться). Однако, при этом нам надо откуда-то знать о его существовании вообще. Неплохо было бы иметь
@@ -716,7 +718,7 @@ puts(*arg0) [‹binary›]</span></code></pre>
     alpha(a, b = &lt;..&gt;, *c) [intro06.rb:43]</code></pre>
 </figure>
 
-<h2 id="и-что-это-нам-дает">И что это нам дает?</h2>
+<h2 id="section-2">И что это нам дает?</h2>
 
 <p>Механизм интроспекции достаточно универсальный и «неприкладной», поэтому его, с одной стороны, трудно применить
 к чему-нибудь практическому «в лоб», а с другой — есть масса случаев, когда он в той или иной мере полезен. Я, пожалуй,
@@ -774,12 +776,13 @@ puts(*arg0) [‹binary›]</span></code></pre>
       <p>Данный вывод приведен вместе с исходниками на GitHub в файле list.txt. <a href="#fnref:out" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;pub&quot;, &quot;samag&quot;]" /><category term="интроспекция" /><category term="метапрограммирование" /><summary type="html"><![CDATA[Что программа может знать о самой себе?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2016/03/09/introspection/screen-introspection-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2016/03/09/introspection/screen-introspection-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Мета­программи­ро­вание в Ruby: разбор примера</title><link href="https://shikhalev.github.io/tech/2016/01/metaprogramming.html" rel="alternate" type="text/html" title="Мета­программи­ро­вание в Ruby: разбор примера" /><published>2016-01-27T00:00:00+00:00</published><updated>2016-01-27T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2016/01/metaprogramming</id><content type="html" xml:base="https://shikhalev.github.io/tech/2016/01/metaprogramming.html"><![CDATA[<p><a href="http://samag.ru/archive/article/2842">Оригинал этой статьи опубликован в журнале «Системный администратор» №12 (145) за декабрь 2014</a>.</p>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;pub&quot;, &quot;samag&quot;]" /><category term="интроспекция" /><category term="метапрограммирование" /><summary type="html"><![CDATA[Что программа может знать о самой себе?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/30/17/9cc71328.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/30/17/9cc71328.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Мета­программи­ро­вание в Ruby: разбор примера</title><link href="https://shikhalev.github.io/tech/2016/01/metaprogramming.html" rel="alternate" type="text/html" title="Мета­программи­ро­вание в Ruby: разбор примера" /><published>2016-01-27T00:00:00+00:00</published><updated>2016-01-27T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2016/01/metaprogramming</id><content type="html" xml:base="https://shikhalev.github.io/tech/2016/01/metaprogramming.html"><![CDATA[<p><a href="http://samag.ru/archive/article/2842">Оригинал этой статьи опубликован в журнале «Системный администратор» №12 (145) за декабрь 2014</a>.</p>
 
 <hr />
 
-<figure class="__figure __implicit_figure __right" style="max-width:158px;padding: 5px;"><a href="http://samag.ru/archive/article/2842"><img src="/img/2016/01/27/metaprogramming/145-158.webp" class="__image" /></a></figure>
-
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_200 __is_images__right" style="padding:5px;--is-images-width:158px;" data-modes="grid,slides">
+<a href="http://samag.ru/archive/article/2842" class="__is_images_wrapper"><img src="/img/f1/e0/f3ee1b22.avif" alt="" class="__is_images_image __is_images_single" style="--is-images-width:158px;--is-images-aspect-ratio:79/112;" data-scale="1"></a>
+</figure>
 <div class="note">
   <p><strong>Добавление собственных абстракций в объектную модель — это просто. И интересно.</strong></p>
 
@@ -794,7 +797,7 @@ puts(*arg0) [‹binary›]</span></code></pre>
 
 <!--more-->
 
-<h2 id="формулировка-задачи">Формулировка задачи</h2>
+<h2 id="section">Формулировка задачи</h2>
 
 <p>В объектно-ориентированных языках, как правило, имеются такие абстракции как методы и свойства. В Ruby свойства называются
 атрибутами, что, впрочем, сути не меняет. Однако в Ruby мы можем и сами определить аналогичные конструкции с нужной нам
@@ -829,7 +832,7 @@ puts(*arg0) [‹binary›]</span></code></pre>
 При этом благодаря необязательности скобок при вызове, такие методы, как <code class="language-plaintext highlighter-rouge">attr</code>, <code class="language-plaintext highlighter-rouge">include</code>, <code class="language-plaintext highlighter-rouge">private</code>, <code class="language-plaintext highlighter-rouge">module_function</code>, выглядят
 структурными элементами языка.</p>
 
-<h2 id="минимальный-вариант">Минимальный вариант</h2>
+<h2 id="section-1">Минимальный вариант</h2>
 
 <p>Начнем с самого простого — реализуем аналог <code class="language-plaintext highlighter-rouge">attr_accessor</code>. Заявленный выше функционал добавим после. Определение выглядит так<sup id="fnref:gist"><a href="#fn:gist" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>:</p>
 
@@ -897,7 +900,7 @@ puts(*arg0) [‹binary›]</span></code></pre>
 даст замедление за счет того, что эта строка будет разбираться и компилироваться при каждом вызове, тогда как в нашем случае разбор
 производится однократно, при первом проходе.</p>
 
-<h2 id="значения-по-умолчанию">Значения по умолчанию</h2>
+<h2 id="section-2">Значения по умолчанию</h2>
 
 <p>Если мы сейчас обратимся к определенному нами свойству, значение которого не установлено, то получим <code class="language-plaintext highlighter-rouge">nil</code>, так же как для стандартного
 атрибута. Это поведение можно переопределить. Введем два именованных параметра: <code class="language-plaintext highlighter-rouge">default</code> — значение по умолчанию; и <code class="language-plaintext highlighter-rouge">default_proc</code> — объект,
@@ -966,7 +969,7 @@ puts(*arg0) [‹binary›]</span></code></pre>
 параметров, если таковые присутствуют. При этом собственного метода <code class="language-plaintext highlighter-rouge">call</code> объекты класса <code class="language-plaintext highlighter-rouge">Symbol</code> не имеют — преобразование <code class="language-plaintext highlighter-rouge">to_proc</code>
 здесь обязательно.</p>
 
-<h2 id="вызов-события">Вызов события</h2>
+<h2 id="section-3">Вызов события</h2>
 
 <p>Добавим к параметрам <code class="language-plaintext highlighter-rouge">prop</code> (и <code class="language-plaintext highlighter-rouge">property</code> соответственно) <code class="language-plaintext highlighter-rouge">&amp;block</code> — собственно обработчик, и преобразуем слегка определение сеттера
 из предыдущих примеров.</p>
@@ -1003,7 +1006,7 @@ puts(*arg0) [‹binary›]</span></code></pre>
 <span class="go">[♯‹Alpha:0x000000025d2e18 @alpha=100, @beta=200›, :beta, 200]</span></code></pre>
 </figure>
 
-<h2 id="проверка-значений">Проверка значений</h2>
+<h2 id="section-4">Проверка значений</h2>
 
 <p>Добавим к <code class="language-plaintext highlighter-rouge">prop</code> следующие именованные аргументы: <code class="language-plaintext highlighter-rouge">filter</code> — собственно фильтр, и <code class="language-plaintext highlighter-rouge">on_invalid</code> — параметр, определяющий,
 как будет обрабатываться попытка присвоить неподходящее значение. Вообще говоря, тут может быть множество вариантов поведения,
@@ -1074,7 +1077,7 @@ demo03.rb:24:in `‹main›': Invalid property (beta) value: -1! (StandardError)
 <p>Кроме того, мы можем определить этот оператор для каких-то своих классов условий, задав ему произвольное поведение. Или переопределить его
 для каких-либо стандартных классов, что, впрочем, может иметь непредсказуемые последствия.</p>
 
-<h2 id="что-дальше">Что дальше?</h2>
+<h2 id="section-5">Что дальше?</h2>
 
 <p>В общем-то, задача, поставленная в начале статьи, решена. Замечу только, что совершенно необязательно формировать один большой
 метод с несколькими условными ветвлениями — можно, и даже нужно с точки зрения оптимизации, проверять <code class="language-plaintext highlighter-rouge">filter</code> снаружи, и уже
@@ -1084,7 +1087,7 @@ demo03.rb:24:in `‹main›': Invalid property (beta) value: -1! (StandardError)
 при его определении — азы оптимизации, и тут возможность задавать определения на ходу, доступная в динамических языках, очень
 нам на руку.</p>
 
-<h2 id="практический-смысл">Практический смысл</h2>
+<h2 id="section-6">Практический смысл</h2>
 
 <p>Собственно, даже такая простая, взятая для примера, функциональность не бесполезна. А еще можно создавать свойства (поля)
 с внешним хранением данных, с дополнительными параметрами отображения и так далее и тому подобное. Можно привязать класс Ruby
@@ -1111,12 +1114,13 @@ demo03.rb:24:in `‹main›': Invalid property (beta) value: -1! (StandardError)
       <p>Object-Relational Mapping — отображение реляционных баз данных в объектную модель. <a href="#fnref:orm" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;pub&quot;, &quot;samag&quot;]" /><category term="метапрограммирование" /><summary type="html"><![CDATA[Добавление собственных абстракций в объектную модель — это просто. И интересно.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2016/01/27/metaprogramming/screen-meta-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2016/01/27/metaprogramming/screen-meta-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ruby и многозадачность</title><link href="https://shikhalev.github.io/tech/2015/04/ruby-multitasking.html" rel="alternate" type="text/html" title="Ruby и многозадачность" /><published>2015-04-04T00:00:00+00:00</published><updated>2015-04-04T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2015/04/ruby-multitasking</id><content type="html" xml:base="https://shikhalev.github.io/tech/2015/04/ruby-multitasking.html"><![CDATA[<p><a href="http://samag.ru/archive/article/2645">Оригинал этой статьи опубликован в журнале «Системный администратор» №3 (136) за март 2014</a>.</p>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;pub&quot;, &quot;samag&quot;]" /><category term="метапрограммирование" /><summary type="html"><![CDATA[Добавление собственных абстракций в объектную модель — это просто. И интересно.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/65/3b/33o55c24.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/65/3b/33o55c24.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ruby и многозадачность</title><link href="https://shikhalev.github.io/tech/2015/04/ruby-multitasking.html" rel="alternate" type="text/html" title="Ruby и многозадачность" /><published>2015-04-04T00:00:00+00:00</published><updated>2015-04-04T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2015/04/ruby-multitasking</id><content type="html" xml:base="https://shikhalev.github.io/tech/2015/04/ruby-multitasking.html"><![CDATA[<p><a href="http://samag.ru/archive/article/2645">Оригинал этой статьи опубликован в журнале «Системный администратор» №3 (136) за март 2014</a>.</p>
 
 <hr />
 
-<figure class="__figure __implicit_figure __right" style="max-width:158px;padding: 5px;"><a href="http://samag.ru/archive/article/2645"><img src="/img/2015/04/04/ruby-multitasking/136-158.webp" class="__image" /></a></figure>
-
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_200 __is_images__right" style="padding:5px;--is-images-width:158px;" data-modes="grid,slides">
+<a href="http://samag.ru/archive/article/2645" class="__is_images_wrapper"><img src="/img/te/c5/6te1bb17.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:158px;--is-images-aspect-ratio:79/112;" data-scale="1"></a>
+</figure>
 <div class="note">
   <p><strong>В статье рассматриваются основные средства работы с потоками (threads) и процессами в языке и стандартной библиотеке Ruby</strong></p>
 
@@ -1133,7 +1137,7 @@ demo03.rb:24:in `‹main›': Invalid property (beta) value: -1! (StandardError)
 
 <!--more-->
 
-<h2 id="многопоточность">Многопоточность</h2>
+<h2 id="section">Многопоточность</h2>
 
 <p>Потоки позволяют программисту распараллелить выполнение задачи в рамках одного процесса. Это дает заметный выигрыш в двух основных
 случаях: во-первых, когда есть аппаратные ресурсы для параллельных вычислений, т.е. многоядерная или многопроцессорная архитектура
@@ -1216,7 +1220,7 @@ terminate</span></code></pre>
 
 <p>Причем, если мы закомментируем строку «<code class="language-plaintext highlighter-rouge">sleep 0</code>», то до «<code class="language-plaintext highlighter-rouge">continued</code>» дело может и не дойти.</p>
 
-<h3 id="обмен-данными-между-потоками">Обмен данными между потоками</h3>
+<h3 id="section-1">Обмен данными между потоками</h3>
 
 <p><em>Во-первых,</em> мы можем передавать блоку аргументы при создании потока:</p>
 
@@ -1329,7 +1333,7 @@ terminate</span></code></pre>
 
 <p>И, <em>в-пятых,</em> для потоков применимы описываемые ниже способы взаимодействия между процессами.</p>
 
-<h3 id="отступление-о-волокнах">Отступление о «волокнах»</h3>
+<h3 id="section-2">Отступление о «волокнах»</h3>
 
 <p>«Волокна» (fibers) имеют косвенное отношение к теме статьи, но не упомянуть их нельзя, хотя бы
 из-за вышеописанного обращения к fiber-local переменным. По сути это сопрограммы, переключение
@@ -1358,7 +1362,7 @@ terminate</span></code></pre>
 <p>В целом, это довольно экзотический инструмент, которому в явном виде не так-то просто найти
 практическое применение.</p>
 
-<h3 id="дополнительно-о-потоках">Дополнительно о потоках</h3>
+<h3 id="section-3">Дополнительно о потоках</h3>
 
 <p>Для группировки потоков существует класс <code class="language-plaintext highlighter-rouge">ThreadGroup</code>, который не предоставляет никакой особой функциональности,
 кроме контроля за тем, что каждый поток принадлежит одной и только одной группе. Не добавленный ни в какую группу
@@ -1372,7 +1376,7 @@ terminate</span></code></pre>
 <p>Еще одна полезная библиотека («<code class="language-plaintext highlighter-rouge">require 'thwait'</code>» и класс <code class="language-plaintext highlighter-rouge">ThreadsWait</code>) позволяет ожидать завершения некоего набора
 потоков, как всех вместе, так и по очереди.</p>
 
-<h2 id="процессы-в-ruby">Процессы в Ruby</h2>
+<h2 id="ruby">Процессы в Ruby</h2>
 
 <p>Собственно запуск программы на Ruby, как и на любом другом языке — есть запуск процесса. Который, в свою очередь,
 может порождать дочерние и общаться как с ними, так и с совершенно независимыми от него. Ключевое отличие дочернего
@@ -1447,7 +1451,7 @@ Child [9034]: 2</span></code></pre>
 правами доступа, текущим каталогом и, самое главное, перенаправлениями ввода-вывода. В самом же простом случае достаточно указать
 только команду.</p>
 
-<h3 id="сигналы">Сигналы</h3>
+<h3 id="section-4">Сигналы</h3>
 
 <p>Процессы могут посылать друг другу сигналы и как-то на них реагировать. Вообще говоря, сигналы — это скорее механизм
 для общения операционной системы с процессами, и большинство из них зарезервировано под специальные нужды, однако
@@ -1499,7 +1503,7 @@ Child died.</span></code></pre>
 <p>К сожалению, посредством сигналов мы можем сообщить процессу только о наступлении некоторого события, без подробной
 информации. А всю информацию между процессами нужно передавать средствами ввода-вывода.</p>
 
-<h3 id="каналы-ввода-вывода">Каналы ввода-вывода</h3>
+<h3 id="section-5">Каналы ввода-вывода</h3>
 
 <p>Общим способом для любых дочерних процессов будет перенаправление ввода-вывода посредством каналов (pipes).
 Для внутренних подпроцессов это выглядит так:</p>
@@ -1543,7 +1547,7 @@ Child died.</span></code></pre>
 <p>В приведенных примерах использовалась передача данных только в одну сторону, что, конечно, необязательно. Можно создавать
 произвольное количество каналов и назначать их как выводу, так и вводу.</p>
 
-<h3 id="сокеты">Сокеты</h3>
+<h3 id="section-6">Сокеты</h3>
 
 <p>Сокеты — это совсем универсальный механизм взаимодействия произвольных программ между собою, в том числе и по сети.
 Здесь уже не важно, как и где запускается процесс-собеседник, нужно только знать адрес и протокол обмена (формат данных).
@@ -1554,7 +1558,7 @@ Child died.</span></code></pre>
 о которой я писал в одной из предыдущих статей<sup id="fnref:druby"><a href="#fn:druby" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>. Здесь же стоит сказать, что dRuby позволяет обращаться к объекту
 в другом процессе (и, возможно, на другой машине) как к локальному объекту Ruby со всеми его методами, свойствами и т.д.</p>
 
-<h2 id="применение">Применение</h2>
+<h2 id="section-7">Применение</h2>
 
 <p>Подведем некоторые итоги.</p>
 
@@ -1589,12 +1593,13 @@ Child died.</span></code></pre>
       <p><a href="/tech/2015/03/druby.html">«Распределенный Ruby»</a> в декабрьском номере 2013 года. <a href="#fnref:druby" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;pub&quot;, &quot;samag&quot;]" /><category term="многопоточность" /><category term="оптимизация" /><category term="многозадачность" /><summary type="html"><![CDATA[В статье рассматриваются основные средства работы с потоками (threads) и процессами в языке и стандартной библиотеке Ruby.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2015/04/04/ruby-multitasking/screen-multitask-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2015/04/04/ruby-multitasking/screen-multitask-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Блоки и контекст в Ruby</title><link href="https://shikhalev.github.io/tech/2015/04/ruby-context.html" rel="alternate" type="text/html" title="Блоки и контекст в Ruby" /><published>2015-04-01T00:00:00+00:00</published><updated>2015-04-01T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2015/04/ruby-context</id><content type="html" xml:base="https://shikhalev.github.io/tech/2015/04/ruby-context.html"><![CDATA[<p><a href="http://samag.ru/archive/article/2622">Оригинал этой статьи опубликован в журнале «Системный администратор» №1–2 (134–135) за январь–февраль 2014</a>.</p>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;pub&quot;, &quot;samag&quot;]" /><category term="многопоточность" /><category term="оптимизация" /><category term="многозадачность" /><summary type="html"><![CDATA[В статье рассматриваются основные средства работы с потоками (threads) и процессами в языке и стандартной библиотеке Ruby.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/8f/07/0c077e71.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/8f/07/0c077e71.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Блоки и контекст в Ruby</title><link href="https://shikhalev.github.io/tech/2015/04/ruby-context.html" rel="alternate" type="text/html" title="Блоки и контекст в Ruby" /><published>2015-04-01T00:00:00+00:00</published><updated>2015-04-01T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2015/04/ruby-context</id><content type="html" xml:base="https://shikhalev.github.io/tech/2015/04/ruby-context.html"><![CDATA[<p><a href="http://samag.ru/archive/article/2622">Оригинал этой статьи опубликован в журнале «Системный администратор» №1–2 (134–135) за январь–февраль 2014</a>.</p>
 
 <hr />
 
-<figure class="__figure __implicit_figure __right" style="max-width:158px;padding: 5px;"><a href="http://samag.ru/archive/article/2622"><img src="/img/2015/04/01/ruby-context/134-5-158.webp" class="__image" /></a></figure>
-
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_200 __is_images__right" style="padding:5px;--is-images-width:158px;" data-modes="grid,slides">
+<a href="http://samag.ru/archive/article/2622" class="__is_images_wrapper"><img src="/img/25/t0/b2b8e7c9.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:158px;--is-images-aspect-ratio:79/112;" data-scale="1"></a>
+</figure>
 <div class="note">
   <p><strong>Что стоит за конкретным идентификатором в данном окружении</strong></p>
 
@@ -1622,7 +1627,7 @@ Child died.</span></code></pre>
 языках), а определяются в момент инициализации — первого присваивания значения. Все это может привести к недопониманию
 и кажущейся неоднозначности.</p>
 
-<h2 id="из-чего-состоит-контекст">Из чего состоит контекст?</h2>
+<h2 id="section">Из чего состоит контекст?</h2>
 
 <p>В Ruby в любой точке программы мы имеем доступ к трем слоям контекста: локальный контекст, контекст объекта и глобальный.
 Рассмотрим их, так сказать, сверху вниз — от глобального к локальному.</p>
@@ -1666,7 +1671,7 @@ Child died.</span></code></pre>
 
 <p>Атрибут после вызова <code class="language-plaintext highlighter-rouge">beta</code> будет равен единице, поскольку строчка без <code class="language-plaintext highlighter-rouge">self</code> к нему отношения не имеет.</p>
 
-<h2 id="блоки">Блоки</h2>
+<h2 id="section-1">Блоки</h2>
 
 <p>Блоком в Ruby называется конструкция вида:</p>
 
@@ -1805,7 +1810,7 @@ Child died.</span></code></pre>
 если метод, которому передан блок, не подразумевает иное (как, в частности, <code class="language-plaintext highlighter-rouge">define_singleton_method</code>). К методам, изменяющим
 контекст, мы еще вернемся, а сейчас рассмотрим подробнее контекст объекта как таковой.</p>
 
-<h2 id="контекст-объекта">Контекст объекта</h2>
+<h2 id="section-2">Контекст объекта</h2>
 
 <p>Как уже говорилось выше, в Ruby мы всегда действуем в контексте некоего объекта, причем доступные методы полностью определяются
 его классом. Но, в общем случае, это не тот класс, который был использован при создании объекта и возвращается методом <code class="language-plaintext highlighter-rouge">class</code>,
@@ -1903,7 +1908,7 @@ Child died.</span></code></pre>
 "B"</span></code></pre>
 </figure>
 
-<h2 id="константы-и-пространства-имен">Константы и пространства имен</h2>
+<h2 id="section-3">Константы и пространства имен</h2>
 
 <p>Константы в Ruby отличаются от всего остального заглавной первой буквой. Имена классов и модулей — это тоже константы,
 значением которых является соответствующий объект класса <code class="language-plaintext highlighter-rouge">Class</code> или <code class="language-plaintext highlighter-rouge">Module</code>.</p>
@@ -1977,7 +1982,7 @@ Child died.</span></code></pre>
 и переопределением уже использованных идентификаторов. Как и любыми другими возможностями языка: Ruby очень гибок и позволяет
 переопределить так много, что, образно выражаясь, вы можете выстрелить себе в ногу из самой этой ноги. Картечью.</p>
 
-<h2 id="замена-контекста">Замена контекста</h2>
+<h2 id="section-4">Замена контекста</h2>
 
 <p>Локальный контекст, равно как и контекст объекта, может быть указан явно. Для этого существует несколько разнородных техник,
 о которых мы сейчас и поговорим.</p>
@@ -2101,7 +2106,7 @@ Child died.</span></code></pre>
 (по сравнению с нормальным, предварительно разобранным кодом), использовать эту технику как-либо, кроме как в отладке,
 наверное, не стоит. С другой стороны, локальный контекст на то и локальный, чтобы не заботиться о нем снаружи.</p>
 
-<h2 id="замыкания-и-многозадачность">Замыкания и многозадачность</h2>
+<h2 id="section-5">Замыкания и многозадачность</h2>
 
 <p>Если мы пишем многопоточную программу, надо помнить, что замыкания содержат переменные, а не их значения. Т.е. значения
 могут поменяться со времени старта потока.</p>
@@ -2146,7 +2151,7 @@ Child died.</span></code></pre>
 процессами как таковое, однако скриптовые языки, и Ruby в частности, нередко используют люди, в недавнем прошлом далекие
 от программирования… А задач, которые можно распараллелить — множество, тем более, что в Ruby это очень просто.</p>
 
-<h2 id="итого">Итого</h2>
+<h2 id="section-6">Итого</h2>
 
 <p>Надеюсь, понимание вышеизложенного поможет избегать ошибок при написании программ. Впрочем, еще важнее это понимание
 при чтении чужих исходников — чтобы не возникало вопросов: а что у нас тут обозначает этот идентификатор, откуда он берется?
@@ -2165,12 +2170,13 @@ Child died.</span></code></pre>
       <p>Шихалев И. <a href="/tech/2015/03/druby.html">Распределенный Ruby</a>. Прозрачный RPC для взаимодействия Ruby-программ // Системный администратор, №12(133), 2013г., — С. 58—61 <a href="#fnref:druby" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;pub&quot;, &quot;samag&quot;]" /><category term="контекст" /><category term="замыкания" /><summary type="html"><![CDATA[Статья рассказывает о программном контексте в Ruby: какие переменные и другие объекты доступны в конкретном месте программы, и как интерпретатор их ищет.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2015/04/01/ruby-context/screen-context-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2015/04/01/ruby-context/screen-context-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Распределенный Ruby</title><link href="https://shikhalev.github.io/tech/2015/03/druby.html" rel="alternate" type="text/html" title="Распределенный Ruby" /><published>2015-03-31T00:00:00+00:00</published><updated>2015-03-31T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2015/03/druby</id><content type="html" xml:base="https://shikhalev.github.io/tech/2015/03/druby.html"><![CDATA[<p><a href="http://samag.ru/archive/article/2592">Оригинал этой статьи опубликован в журнале «Системный администратор» №12 (133) за декабрь 2013</a>.</p>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;pub&quot;, &quot;samag&quot;]" /><category term="контекст" /><category term="замыкания" /><summary type="html"><![CDATA[Статья рассказывает о программном контексте в Ruby: какие переменные и другие объекты доступны в конкретном месте программы, и как интерпретатор их ищет.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/e8/9t/70f8c23t.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/e8/9t/70f8c23t.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Распределенный Ruby</title><link href="https://shikhalev.github.io/tech/2015/03/druby.html" rel="alternate" type="text/html" title="Распределенный Ruby" /><published>2015-03-31T00:00:00+00:00</published><updated>2015-03-31T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2015/03/druby</id><content type="html" xml:base="https://shikhalev.github.io/tech/2015/03/druby.html"><![CDATA[<p><a href="http://samag.ru/archive/article/2592">Оригинал этой статьи опубликован в журнале «Системный администратор» №12 (133) за декабрь 2013</a>.</p>
 
 <hr />
 
-<figure class="__figure __implicit_figure __right" style="max-width:158px;padding: 5px;"><a href="http://samag.ru/archive/article/2592"><img src="/img/2015/03/31/druby/133-158.webp" class="__image" /></a></figure>
-
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_200 __is_images__right" style="padding:5px;--is-images-width:158px;" data-modes="grid,slides">
+<a href="http://samag.ru/archive/article/2592" class="__is_images_wrapper"><img src="/img/1f/11/748oo382.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:158px;--is-images-aspect-ratio:79/112;" data-scale="1"></a>
+</figure>
 <div class="note">
   <p>Технология распределенного Ruby, или <strong>dRuby</strong> (Dis­­t­­ri­­bu­­ted Ruby), позволяет вызывать методы объектов, находящихся
 в другом процессе и/или на другом компьютере. При этом установка соединения, передача необходимых данных и тому
@@ -2213,7 +2219,7 @@ CORBA не входит в стандартную библиотеку Ruby, с
 к совместимости версий и т.д.). В общем, если не требуется взаимодействие с программами, написанными на других языках,
 dRuby — очень хороший выбор, а с чем его едят и как правильно готовить, мы и рассмотрим в данной статье.</p>
 
-<h2 id="минимальный-пример">Минимальный пример</h2>
+<h2 id="section">Минимальный пример</h2>
 
 <p>Рассмотрим код<sup id="fnref:gist"><a href="#fn:gist" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> простейшего сервера:</p>
 
@@ -2274,7 +2280,7 @@ Alpha called with "beta"</span></code></pre>
 
 <p>Что свидетельствует о выполнении метода именно на той стороне.</p>
 
-<h2 id="передача-данных">Передача данных</h2>
+<h2 id="section-1">Передача данных</h2>
 
 <p>Уже из вышеприведенного можно видеть, что обмен данными простых стандартных классов происходит полностью прозрачно —
 мы использовали число, строку, <code class="language-plaintext highlighter-rouge">nil</code> и массив — все они выглядят на стороне клиента и сервера совершенно одинаково.
@@ -2369,7 +2375,7 @@ cln1.rb:11:in `‹main›': undefined method `dummy' for ♯‹DRb::DRbUnknown:0
 
 <p>И вызвав на клиенте <code class="language-plaintext highlighter-rouge">s.gamma.dummy</code>, мы увидим вывод строки «Dummy called» в серверной, а не клиентской консоли.</p>
 
-<h2 id="клиентская-часть">Клиентская часть</h2>
+<h2 id="section-2">Клиентская часть</h2>
 
 <p>Несмотря на то, что работа в целом идет по асимметричной схеме клиент-сервер, обмен данными вполне симметричен,
 и мы вполне можем передать серверу объект, методы которого будут выполняться на клиенте. Самый простой способ
@@ -2424,7 +2430,7 @@ cln1.rb:11:in `‹main›': undefined method `dummy' for ♯‹DRb::DRbUnknown:0
 <p>Первой строчкой мы удаляем метод <code class="language-plaintext highlighter-rouge">instance_eval</code> объекта-посредника, что заставляет его в дальнейшем передавать вызов серверу,
 ну а дальше выполняем произвольную строку… Что плавно подводит нас к следующей теме.</p>
 
-<h2 id="безопасность">Безопасность</h2>
+<h2 id="section-3">Безопасность</h2>
 
 <p>Очевидно, что сервер, работающий по приципу: «ходи, кто хочет, бери, что хочет» — это плохой сервер, и надо бы как-то
 это дело ограничить. Начнем со второй части — запретим выполнять произвольный код. Можно, например, поудалять у серверного
@@ -2518,7 +2524,7 @@ cln1.rb:11:in `‹main›': undefined method `dummy' for ♯‹DRb::DRbUnknown:0
 передать ключи шифрования и сертификаты, которыми эти ключи подписаны… А еще сами сертификаты должны быть подписаны удостоверяющим
 центром и т.д. — по большому счету, эта тема заслуживает отдельного рассмотрения<sup id="fnref:ssl"><a href="#fn:ssl" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>.</p>
 
-<h2 id="сценарии-использования">Сценарии использования</h2>
+<h2 id="section-4">Сценарии использования</h2>
 
 <p>Итак, с чем же его едят? Что полезного мы можем сделать, используя технологию dRuby?</p>
 
@@ -2563,12 +2569,13 @@ cln1.rb:11:in `‹main›': undefined method `dummy' for ♯‹DRb::DRbUnknown:0
     находится по адресу <a href="http://xgu.ru/wiki/OpenSSL">http://xgu.ru/wiki/OpenSSL</a>. <a href="#fnref:ssl" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;pub&quot;, &quot;samag&quot;]" /><category term="сериализация" /><category term="сети" /><category term="dRuby" /><category term="RPC" /><summary type="html"><![CDATA[Введение в технологию dRuby. Прозрачный RPC для взаимодействия Ruby-программ.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2015/03/31/druby/screen-druby-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2015/03/31/druby/screen-druby-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Декораторы в Ruby</title><link href="https://shikhalev.github.io/tech/2015/03/decorator.html" rel="alternate" type="text/html" title="Декораторы в Ruby" /><published>2015-03-30T00:00:00+00:00</published><updated>2015-03-30T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2015/03/decorator</id><content type="html" xml:base="https://shikhalev.github.io/tech/2015/03/decorator.html"><![CDATA[<p><a href="http://samag.ru/archive/article/2520">Оригинал этой статьи опубликован в журнале «Системный администратор» №9 (130) за сентябрь 2013</a>.</p>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;pub&quot;, &quot;samag&quot;]" /><category term="сериализация" /><category term="сети" /><category term="dRuby" /><category term="RPC" /><summary type="html"><![CDATA[Введение в технологию dRuby. Прозрачный RPC для взаимодействия Ruby-программ.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/7e/05/051te963.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/7e/05/051te963.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Декораторы в Ruby</title><link href="https://shikhalev.github.io/tech/2015/03/decorator.html" rel="alternate" type="text/html" title="Декораторы в Ruby" /><published>2015-03-30T00:00:00+00:00</published><updated>2015-03-30T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2015/03/decorator</id><content type="html" xml:base="https://shikhalev.github.io/tech/2015/03/decorator.html"><![CDATA[<p><a href="http://samag.ru/archive/article/2520">Оригинал этой статьи опубликован в журнале «Системный администратор» №9 (130) за сентябрь 2013</a>.</p>
 
 <hr />
 
-<figure class="__figure __implicit_figure __right" style="max-width:158px;padding: 5px;"><a href="http://samag.ru/archive/article/2520"><img src="/img/2015/03/30/decorator/130-158.webp" class="__image" /></a></figure>
-
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_200 __is_images__right" style="padding:5px;--is-images-width:158px;" data-modes="grid,slides">
+<a href="http://samag.ru/archive/article/2520" class="__is_images_wrapper"><img src="/img/36/e9/o74fb29e.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:158px;--is-images-aspect-ratio:79/112;" data-scale="1"></a>
+</figure>
 <div class="note">
   <p>Как известно, в языке Python существует красивый механизм декораторов, расширяющих функционал объекта без изменения
 интерфейса. Это довольно мощное средство, попользоваться им удобно и приятно. Но вот проблема: наш язык
@@ -2638,7 +2645,7 @@ cln1.rb:11:in `‹main›': undefined method `dummy' for ♯‹DRb::DRbUnknown:0
 третьими лицами. Поскольку исходный код имеющихся библиотек не модифицируется, мы не создаем себе никаких препятствий к установке
 обновлений и исправлений, что важно для проектов с длительным жизненным циклом.</p>
 
-<h2 id="блоки-методы-и-объекты-proc">Блоки, методы и объекты Proc</h2>
+<h2 id="proc">Блоки, методы и объекты Proc</h2>
 
 <p class="note"><em>Здесь и далее я описываю сложные, но хорошо документированные, особенности языка применительно к основной теме статьи, кратко,
 не всегда формально точно и, по возможности, просто. Для изучения языка лучше всего обратиться к более-менее официальным<sup id="fnref:ppg"><a href="#fn:ppg" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>
@@ -2702,7 +2709,7 @@ cln1.rb:11:in `‹main›': undefined method `dummy' for ♯‹DRb::DRbUnknown:0
 
 <p>Теперь, определившись, что у нас есть, можно перейти к рассмотрению того, что можно из этого сделать…</p>
 
-<h2 id="шаг-первый--функция-обертка">Шаг первый — функция-обертка</h2>
+<h2 id="section">Шаг первый — функция-обертка</h2>
 
 <p>Очевидно, что там, где в Python функция, принимающая и возвращающая функцию, у нас будет метод, принимающий объект класса
 <code class="language-plaintext highlighter-rouge">Proc</code>, а лучше — для универсальности — блок, и возвращающий объект класса <code class="language-plaintext highlighter-rouge">Proc</code>.</p>
@@ -2774,7 +2781,7 @@ deco2.rb:16:in `/': divided by 0 (ZeroDivisionError)
 <span class="n">alpha</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span></code></pre>
 </figure>
 
-<h2 id="шаг-второй--в-правильном-контексте">Шаг второй — в правильном контексте</h2>
+<h2 id="section-1">Шаг второй — в правильном контексте</h2>
 
 <p>Примеры выше даны для глобального контекста, в котором, однако, на практике методы определяют редко. Нормальное
 расположение методов — в контексте класса или модуля. Или попросту модуля, поскольку класс в данном случае есть
@@ -2938,7 +2945,7 @@ OK: ♯‹Alpha:0x00000001e7c510›.gamma [] =› :gamma</span></code></pre>
 
 <p>Аналогично можно модифицировать и <code class="language-plaintext highlighter-rouge">wrap_singleton_method</code>, если очень хочется.</p>
 
-<h2 id="шаг-третий--фабрика-генераторов">Шаг третий — фабрика генераторов</h2>
+<h2 id="section-2">Шаг третий — фабрика генераторов</h2>
 
 <p>Ну и наконец, давайте решим задачу в более-менее общем виде. Пусть у нас будет способ генерировать различные «декораторы»,
 задав имя и блок, возвращающий <code class="language-plaintext highlighter-rouge">proc</code>-обертку. Блок будет принимать <code class="language-plaintext highlighter-rouge">UnboundMethod</code> и произвольные именованные параметры.
@@ -3040,7 +3047,7 @@ echo: result = "BETA: 1"
 [*] result = 6</span></code></pre>
 </figure>
 
-<h2 id="идем-дальше">Идем дальше?</h2>
+<h2 id="section-3">Идем дальше?</h2>
 
 <p>Как видим, все работает. Кроме того, определения декораторов прекрасно наследуются. Для дальнейшего развития можно
 поработать над тем, чтобы они еще и «включались» при добавлении mixin-модуля, предусмотреть отмену и/или переключение
@@ -3082,4 +3089,4 @@ echo: result = "BETA: 1"
       <p>Полные тексты всех примеров можно взять на GitHub Gist: <a href="https://gist.github.com/shikhalev/6259566">https://gist.github.com/shikhalev/6259566</a>. <a href="#fnref:gist" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;pub&quot;, &quot;samag&quot;]" /><category term="метапрограммирование" /><summary type="html"><![CDATA[Реализация паттерна «декоратор» на языке Ruby]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2015/03/30/decorator/screen-decos-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2015/03/30/decorator/screen-decos-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;pub&quot;, &quot;samag&quot;]" /><category term="метапрограммирование" /><summary type="html"><![CDATA[Реализация паттерна «декоратор» на языке Ruby]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/00/0t/15752c3e.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/00/0t/15752c3e.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed/photo.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-08-02T20:41:34+00:00</updated><id>https://shikhalev.github.io/feed/photo.xml</id><title type="html">Иван Шихалев | Photo</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">AI-функции в Darktable 5.6</title><link href="https://shikhalev.github.io/photo/2026/07/ai-darktable.html" rel="alternate" type="text/html" title="AI-функции в Darktable 5.6" /><published>2026-07-25T00:00:00+00:00</published><updated>2026-07-25T00:00:00+00:00</updated><id>https://shikhalev.github.io/photo/2026/07/ai-darktable</id><content type="html" xml:base="https://shikhalev.github.io/photo/2026/07/ai-darktable.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:329px;"><img src="/img/2026/07/25/ai-darktable/20260724_211905-329.webp" class="__image" alt="Модуль neural restore" title="Модуль neural restore" /></figure>
-
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed/photo.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-08-05T13:47:57+00:00</updated><id>https://shikhalev.github.io/feed/photo.xml</id><title type="html">Иван Шихалев | Photo</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">AI-функции в Darktable 5.6</title><link href="https://shikhalev.github.io/photo/2026/07/ai-darktable.html" rel="alternate" type="text/html" title="AI-функции в Darktable 5.6" /><published>2026-07-25T00:00:00+00:00</published><updated>2026-07-25T00:00:00+00:00</updated><id>https://shikhalev.github.io/photo/2026/07/ai-darktable</id><content type="html" xml:base="https://shikhalev.github.io/photo/2026/07/ai-darktable.html"><![CDATA[<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_350 __is_images__right" style="--is-images-width:329px;" data-modes="grid,slides">
+<span title="Модуль «neural restore»" class="__is_images_wrapper"><img src="/img/55/bt/995t858c.webp" alt="Модуль «neural restore»" class="__is_images_image __is_images_single" style="--is-images-width:329px;--is-images-aspect-ratio:329/391;" data-scale="1"></span>
+</figure>
 <p>Недавно вышел <strong><a href="https://www.darktable.org/2026/06/darktable-5.6.0-released/" class="img-icon-darktable">Darktable 5.6.0</a></strong>. Там довольно много нового и интересного, но, конечно,
 главное, что обращает на себя внимание — это AI-функции. Имеются: шумоподавление в RAW, просто шумоподавление, апскейл (т.е.
 увеличение картинки) и маски. Маски я пока не смотрел — я ими как-то вообще не пользуюсь и не очень понимаю, что проверять.
 Шумодавами и апскейлом я, правда, тоже почти не пользуюсь, но куда смотреть — представляю.</p>
 
-<h2 id="что-дают">Что дают?</h2>
+<h2 id="section">Что дают?</h2>
 
 <p>Итак. «raw denoise», «denoise» и «upscale». Как можно видеть на скриншоте, они объединены в один модуль, и это <em>не модуль
 обработки</em>, он не участвует цепочке обработки и не попадает в историю, это <em>служебный модуль</em>, и находится он в <em>левой</em>
@@ -19,7 +20,7 @@
 должно быть внутри цепочки, ближе к началу… Я недоучел этот момент, когда делал свои тесты (о чем ниже), но переделывать
 не буду — «правильный» порядок действий слишком заморочный, чтобы реальный пользователь им занимался.</p>
 
-<h3 id="где-взять">Где взять?</h3>
+<h3 id="section-1">Где взять?</h3>
 
 <p>Тут есть засада: если вы как порядочный человек просто обновитесь из своего дистрибутива, не факт, что новые фичи у вас появятся.
 У меня в Gentoo, например, не появились. Требуется сборка с дополнительным флагом, и когда мейнтейнеры разберутся — неизвестно.
@@ -27,8 +28,9 @@
 
 <p>Затем нужно зайти в настройки.</p>
 
-<figure class="__figure __implicit_figure __center" style="max-width:900px;"><a href="/img/2026/07/25/ai-darktable/20260724_173940-fhd.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/20260724_173940-900-1221x560-64-52.webp" class="__image" alt="Скриншот настроек" title="Скриншот настроек" /></a></figure>
-
+<figure id="fig-2" class="__is_images_figure __is_images_single __is_images_width_800" style="--is-images-width:800px;" data-modes="grid,slides">
+<a href="/img/61/0b/284b2o0b.webp" title="Скриншот настроек" class="__is_images_wrapper"><img src="/img/4o/75/605e3o90.webp" alt="Скриншот настроек" class="__is_images_image __is_images_single" style="--is-images-width:800px;--is-images-aspect-ratio:800/367;" data-scale="1"></a>
+</figure>
 <ul>
   <li>
     <p>Включаем вверху галочку «enable AI features».</p>
@@ -45,7 +47,7 @@
 но он не цепляется. Для пробы это не критично, да и для использования — не так, чтобы очень — если нужно обработать небольшое количество
 фотографий, скорость на CPU вполне терпима.</p>
 
-<h2 id="что-получилось">Что получилось?</h2>
+<h2 id="section-2">Что получилось?</h2>
 
 <dl>
   <dt>TL;DR</dt>
@@ -71,7 +73,7 @@
 
 <!--more-->
 
-<h3 id="шумодавы">Шумодавы</h3>
+<h3 id="section-3">Шумодавы</h3>
 
 <p>Ниже на разных ISO показаны результаты работы шумоподавления. Порядок такой: без шумодава, AI raw denoise, AI denoise. стандартный модуль raw denoise,
 стандартный модуль denoise (profiled). В посте я показываю кроп, по клику откроется большая картинка, ужатая до 1800x1800px.</p>
@@ -81,52 +83,76 @@
 <p>Это то, что я на своей камере считаю максимальным условно рабочим ISO — шум заметен, но для информационных фото приемлем. Всё, что выше,
 я не использую — автоматика ограничена на этом значении.</p>
 
-<p style="text-align:center;"><a href="/img/2026/07/25/ai-darktable/ISO3200-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO3200-280-280x280-840-2220.webp" class="__image" style="margin: 5px;" alt="ISO3200, оригинал" title="ISO3200, оригинал" /></a>
-<a href="/img/2026/07/25/ai-darktable/ISO3200_ai_raw-denoise-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO3200_ai_raw-denoise-280-280x280-840-2220.webp" class="__image" style="margin: 5px;" alt="ISO3200, AI raw denoise" title="ISO3200, AI raw denoise" /></a>
-<a href="/img/2026/07/25/ai-darktable/ISO3200_ai_denoise-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO3200_ai_denoise-280-280x280-840-2220.webp" class="__image" style="margin: 5px;" alt="ISO3200, AI denoise" title="ISO3200, AI denoise" /></a>
-<a href="/img/2026/07/25/ai-darktable/ISO3200_std_raw-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO3200_std_raw-280-280x280-840-2220.webp" class="__image" style="margin: 5px;" alt="ISO3200, std raw denoise" title="ISO3200, std raw denoise" /></a>
-<a href="/img/2026/07/25/ai-darktable/ISO3200_std_denoised-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO3200_std_denoised-280-280x280-840-2220.webp" class="__image" style="margin: 5px;" alt="ISO3200, std denoise profiled" title="ISO3200, std denoise profiled" /></a></p>
+<!-- TODO: переделать под слайды (там нужно кропать иначе) -->
 
+<figure id="fig-3" class="__is_images_figure __is_images_gallery" data-modes="grid">
+<div class="__is_images_grid_container __is_images_tab_block __is_images_only" style="--is-images-cell-width:280px;--is-images-cell-height:280px;--is-images-display:grid;"><figure class="__is_images_cell_figure" id="fig-3-grid-1"><a href="/img/3b/92/173310ff.avif" title="ISO3200, оригинал" class="__is_images_wrapper"><img src="/img/b4/b0/41e1t1cf.avif" alt="ISO3200, оригинал" class="__is_images_image __is_images_cell" style="--is-images-width:280px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
+<figure class="__is_images_cell_figure" id="fig-3-grid-2"><a href="/img/ct/53/cec9f7e9.avif" title="ISO3200, AI raw denoise" class="__is_images_wrapper"><img src="/img/71/04/f448b6e5.avif" alt="ISO3200, AI raw denoise" class="__is_images_image __is_images_cell" style="--is-images-width:280px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
+<figure class="__is_images_cell_figure" id="fig-3-grid-3"><a href="/img/04/9o/7obbt607.avif" title="ISO3200, AI denoise" class="__is_images_wrapper"><img src="/img/87/b1/c463bbt9.avif" alt="ISO3200, AI denoise" class="__is_images_image __is_images_cell" style="--is-images-width:280px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
+<figure class="__is_images_cell_figure" id="fig-3-grid-4"><a href="/img/00/50/4f8818f5.avif" title="ISO3200, std raw denoise" class="__is_images_wrapper"><img src="/img/59/08/38897tb2.avif" alt="ISO3200, std raw denoise" class="__is_images_image __is_images_cell" style="--is-images-width:280px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
+<figure class="__is_images_cell_figure" id="fig-3-grid-5"><a href="/img/5t/9c/t129ot80.avif" title="ISO3200, std denoise profiled" class="__is_images_wrapper"><img src="/img/t6/27/e37eb6ff.avif" alt="ISO3200, std denoise profiled" class="__is_images_image __is_images_cell" style="--is-images-width:280px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure></div><nav class="__is_images_gallery_navbar __is_images_only"></nav>
+</figure>
 <h4 id="iso-12800">ISO 12800</h4>
 
-<p style="text-align:center;"><a href="/img/2026/07/25/ai-darktable/ISO12800-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO12800-280-280x280-1050-2250.webp" class="__image" style="margin: 5px;" alt="ISO12800, оригинал" title="ISO12800, оригинал" /></a>
-<a href="/img/2026/07/25/ai-darktable/ISO12800_ai_raw-denoise-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO12800_ai_raw-denoise-280-280x280-1050-2250.webp" class="__image" style="margin: 5px;" alt="ISO12800, AI raw denoise" title="ISO12800, AI raw denoise" /></a>
-<a href="/img/2026/07/25/ai-darktable/ISO12800_ai_denoise-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO12800_ai_denoise-280-280x280-1050-2250.webp" class="__image" style="margin: 5px;" alt="ISO12800, AI denoise" title="ISO12800, AI denoise" /></a>
-<a href="/img/2026/07/25/ai-darktable/ISO12800_std_raw_denoised-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO12800_std_raw_denoised-280-280x280-1050-2250.webp" class="__image" style="margin: 5px;" alt="ISO12800, std raw denoise" title="ISO12800, std raw denoise" /></a>
-<a href="/img/2026/07/25/ai-darktable/ISO12800_std_profiled-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO12800_std_profiled-280-280x280-1050-2250.webp" class="__image" style="margin: 5px;" alt="ISO12800, std denoise profiled" title="ISO12800, std denoise profiled" /></a></p>
-
+<figure id="fig-4" class="__is_images_figure __is_images_gallery" data-modes="grid">
+<div class="__is_images_grid_container __is_images_tab_block __is_images_only" style="--is-images-cell-width:280px;--is-images-cell-height:280px;--is-images-display:grid;"><figure class="__is_images_cell_figure" id="fig-4-grid-1"><a href="/img/t7/fe/9oc53c23.avif" title="ISO12800, оригинал" class="__is_images_wrapper"><img src="/img/f6/tc/bb50516f.avif" alt="ISO12800, оригинал" class="__is_images_image __is_images_cell" style="--is-images-width:280px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
+<figure class="__is_images_cell_figure" id="fig-4-grid-2"><a href="/img/50/b6/f3905818.avif" title="ISO12800, AI raw denoise" class="__is_images_wrapper"><img src="/img/t5/t4/6101254o.avif" alt="ISO12800, AI raw denoise" class="__is_images_image __is_images_cell" style="--is-images-width:280px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
+<figure class="__is_images_cell_figure" id="fig-4-grid-3"><a href="/img/t0/5o/698e49e9.avif" title="ISO12800, AI denoise" class="__is_images_wrapper"><img src="/img/e5/fb/b7o78cf3.avif" alt="ISO12800, AI denoise" class="__is_images_image __is_images_cell" style="--is-images-width:280px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
+<figure class="__is_images_cell_figure" id="fig-4-grid-4"><a href="/img/o7/bt/82f24296.avif" title="ISO12800, std raw denoise" class="__is_images_wrapper"><img src="/img/90/5t/9c3be943.avif" alt="ISO12800, std raw denoise" class="__is_images_image __is_images_cell" style="--is-images-width:280px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
+<figure class="__is_images_cell_figure" id="fig-4-grid-5"><a href="/img/9f/4c/901c16t8.avif" title="ISO12800, std denoise profiled" class="__is_images_wrapper"><img src="/img/t9/c3/36f442t2.avif" alt="ISO12800, std denoise profiled" class="__is_images_image __is_images_cell" style="--is-images-width:280px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure></div><nav class="__is_images_gallery_navbar __is_images_only"></nav>
+</figure>
 <h4 id="iso-51200">ISO 51200</h4>
 
-<p style="text-align:center;"><a href="/img/2026/07/25/ai-darktable/ISO51200-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO51200-280-280x280-1030-2180.webp" class="__image" style="margin: 5px;" alt="ISO51200, оригинал" title="ISO51200, оригинал" /></a>
-<a href="/img/2026/07/25/ai-darktable/ISO51200_ai_raw-denoise-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO51200_ai_raw-denoise-280-280x280-1030-2180.webp" class="__image" style="margin: 5px;" alt="ISO51200, AI raw denoise" title="ISO51200, AI raw denoise" /></a>
-<a href="/img/2026/07/25/ai-darktable/ISO51200_ai_denoise-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO51200_ai_denoise-280-280x280-1030-2180.webp" class="__image" style="margin: 5px;" alt="ISO51200, AI denoise" title="ISO51200, AI denoise" /></a>
-<a href="/img/2026/07/25/ai-darktable/ISO51200_std_raw-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO51200_std_raw-280-280x280-1030-2180.webp" class="__image" style="margin: 5px;" alt="ISO51200, std raw denoise" title="ISO51200, std raw denoise" /></a>
-<a href="/img/2026/07/25/ai-darktable/ISO51200_std_profiled-1800x1800.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO51200_std_profiled-280-280x280-1030-2180.webp" class="__image" style="margin: 5px;" alt="ISO51200, std denoise profiled" title="ISO51200, std denoise profiled" /></a></p>
-
+<figure id="fig-5" class="__is_images_figure __is_images_gallery" data-modes="grid">
+<div class="__is_images_grid_container __is_images_tab_block __is_images_only" style="--is-images-cell-width:280px;--is-images-cell-height:280px;--is-images-display:grid;"><figure class="__is_images_cell_figure" id="fig-5-grid-1"><a href="/img/1e/bt/tf11ebo7.avif" title="ISO51200, оригинал" class="__is_images_wrapper"><img src="/img/e2/71/t562tec6.avif" alt="ISO51200, оригинал" class="__is_images_image __is_images_cell" style="--is-images-width:280px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
+<figure class="__is_images_cell_figure" id="fig-5-grid-2"><a href="/img/29/f5/095t10c2.avif" title="ISO51200, AI raw denoise" class="__is_images_wrapper"><img src="/img/t8/3b/182eef4o.avif" alt="ISO51200, AI raw denoise" class="__is_images_image __is_images_cell" style="--is-images-width:280px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
+<figure class="__is_images_cell_figure" id="fig-5-grid-3"><a href="/img/fc/t8/c20t332f.avif" title="ISO51200, AI denoise" class="__is_images_wrapper"><img src="/img/16/b8/b1141bt9.avif" alt="ISO51200, AI denoise" class="__is_images_image __is_images_cell" style="--is-images-width:280px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
+<figure class="__is_images_cell_figure" id="fig-5-grid-4"><a href="/img/7e/7o/0157314o.avif" title="ISO51200, std raw denoise" class="__is_images_wrapper"><img src="/img/c6/96/bb19f15b.avif" alt="ISO51200, std raw denoise" class="__is_images_image __is_images_cell" style="--is-images-width:280px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
+<figure class="__is_images_cell_figure" id="fig-5-grid-5"><a href="/img/09/4o/c45oo27t.avif" title="ISO51200, std denoise profiled" class="__is_images_wrapper"><img src="/img/23/8f/ttttc7t8.avif" alt="ISO51200, std denoise profiled" class="__is_images_image __is_images_cell" style="--is-images-width:280px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure></div><nav class="__is_images_gallery_navbar __is_images_only"></nav>
+</figure>
 <h3 id="upscale">Upscale</h3>
 
 <p>Первая картинка — увеличение через стандартный экспорт, вторая — AI upscale.</p>
 
-<p style="text-align:center;"><a href="/img/2026/07/25/ai-darktable/ISO100_std_upscale-3200x3200.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO100_std_upscale-400-400x400-1900-2590.webp" class="__image" style="margin: 5px;" alt="Увеличение x2 стандартный экспорт" title="Увеличение x2 стандартный экспорт" /></a>
-<a href="/img/2026/07/25/ai-darktable/ISO100_ai_upscale-2x-3200x3200.webp" class="__image_link"><img src="/img/2026/07/25/ai-darktable/ISO100_ai_upscale-2x-400-400x400-1900-2590.webp" class="__image" style="margin: 5px;" alt="Увеличение x2 AI" title="Увеличение x2 AI" /></a></p>
-
+<figure id="fig-6" class="__is_images_figure __is_images_gallery" data-modes="grid">
+<div class="__is_images_grid_container __is_images_tab_block __is_images_only" style="--is-images-cell-width:400px;--is-images-cell-height:400px;--is-images-display:grid;"><figure class="__is_images_cell_figure" id="fig-6-grid-1"><a href="/img/92/e8/9ocbe980.avif" title="Увеличение x2 стандартный экспорт" class="__is_images_wrapper"><img src="/img/f1/bt/to72e091.avif" alt="Увеличение x2 стандартный экспорт" class="__is_images_image __is_images_cell" style="--is-images-width:400px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
+<figure class="__is_images_cell_figure" id="fig-6-grid-2"><a href="/img/9t/50/80304226.avif" title="Увеличение x2 AI" class="__is_images_wrapper"><img src="/img/4e/6b/o4e7o869.avif" alt="Увеличение x2 AI" class="__is_images_image __is_images_cell" style="--is-images-width:400px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure></div><nav class="__is_images_gallery_navbar __is_images_only"></nav>
+</figure>
 <p>Разница как бы есть… Но не особо понятна. Но учитывая, что я видел и такие ai-апскейлеры, которые делают <em>хуже</em>, чем простое увеличение…</p>
 
-<h2 id="итого">Итого</h2>
+<h2 id="section-4">Итого</h2>
 
 <p>В общем, неплохо. Хотя для себя интересным я вижу только <em>raw denoise</em>, да и тем буду пользоваться редко.</p>
 
 <p>С одной стороны, было бы неплохо встроить эти операции в цепочку обработки. С другой стороны — они медленные, точ­нее — вообще ресурсоемкие,
 а цепочка обработки в процессе вычисляется много-много раз…</p>
 
-<p>Посмотрим, к чему Darktable будет двигаться, мне почему-то кажется текущее состояние не окончательным.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;photo&quot;, &quot;processing&quot;, &quot;tech&quot;, &quot;soft&quot;, &quot;graphics&quot;]" /><category term="Darktable" /><category term="RAW" /><category term="AI" /><category term="нейросети" /><category term="шумоподавление" /><summary type="html"><![CDATA[В Darktable завезли нейросетевой шумодав и апскейлер (и не только).]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2026/07/25/ai-darktable/20260724_173940-640x640-1318x688-17-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2026/07/25/ai-darktable/20260724_173940-640x640-1318x688-17-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Принтшопы, первые опыты</title><link href="https://shikhalev.github.io/life/2026/06/merch.html" rel="alternate" type="text/html" title="Принтшопы, первые опыты" /><published>2026-06-05T00:00:00+00:00</published><updated>2026-06-05T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/06/merch</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/06/merch.html"><![CDATA[<blockquote>
+<p>Посмотрим, к чему Darktable будет двигаться, мне почему-то кажется текущее состояние не окончательным.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;photo&quot;, &quot;processing&quot;, &quot;tech&quot;, &quot;soft&quot;, &quot;graphics&quot;]" /><category term="Darktable" /><category term="RAW" /><category term="AI" /><category term="нейросети" /><category term="шумоподавление" /><summary type="html"><![CDATA[В Darktable завезли нейросетевой шумодав и апскейлер (и не только).]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/e1/2e/b69e9oo1.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/e1/2e/b69e9oo1.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Принтшопы, первые опыты</title><link href="https://shikhalev.github.io/life/2026/06/merch.html" rel="alternate" type="text/html" title="Принтшопы, первые опыты" /><published>2026-06-05T00:00:00+00:00</published><updated>2026-06-05T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/06/merch</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/06/merch.html"><![CDATA[<blockquote>
   <p><em>Шьём да порем — нитки портим…</em></p>
 </blockquote>
 
 <hr />
 
-<figure class="__figure __implicit_figure __right" style="max-width:360px;border-radius:10px;"><a href="https://shikhalev.vsemaykishop.ru/article/womens_dresses_t_shirts_fullprint/4095963"><img src="/img/2026/06/05/merch/screen-360.webp" class="__image" style="border-radius:10px;" alt="Скриншот со VseMayki.ru: Платье-футболка 3D" title="Скриншот со VseMayki.ru: Платье-футболка 3D" /></a></figure>
-
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_400 __is_images__right" style="border-radius:10px;--is-images-width:360px;" data-modes="grid,slides">
+<a href="https://shikhalev.vsemaykishop.ru/article/womens_dresses_t_shirts_fullprint/4095963" title="Скриншот со VseMayki.ru: Платье-футболка 3D" class="__is_images_wrapper"><img src="/img/cc/50/688ce934.webp" alt="Скриншот со VseMayki.ru: Платье-футболка 3D" class="__is_images_image __is_images_single" style="border-radius:10px;--is-images-width:360px;--is-images-aspect-ratio:360/229;" data-scale="1"></a>
+</figure>
 <p>Таки начали мои фо­точ­ки проходить модерацию уже и на <strong><a href="https://shikhalev.vsemaykishop.ru/" class="img-icon-vsemayki">Все­Май­ки</a></strong>. Наверное, теперь можно и поподробнее о мер­че написать.</p>
 
 <p>Кроме самого факта публикации, это еще и дало возможность посмотреть витринные рендеры. Это, конечно, не то же самое, что вживую, но все-таки дает
@@ -138,7 +164,7 @@
 я понимаю, это нор­маль­но — такие вещи раскручиваются медленно, нужно большое количество «дизайнов» (и, в мо­ем случае, нужно их дорабатывать: прохождение
 мо­де­ра­ции — это минимальная планка, а не гарантия успеха).</p>
 
-<h2 id="площадки-и-товары">Площадки и товары</h2>
+<h2 id="section">Площадки и товары</h2>
 
 <p>Погуглив, почитав отзывы и так далее, разместился я на трех площадках: <strong><a href="https://shikhalev.vsemaykishop.ru/" class="img-icon-vsemayki">Все­Май­ки</a></strong>,
 <strong><a href="https://shikhalev.printdirect.ru/" class="img-icon-printdirect">Print­Di­rect</a></strong> и <strong><a href="https://fun.ru/designer/shikhalev" class="img-icon-fun">FUN.ru</a></strong>. У них разный набор товаров, разные плюсы и минусы,
@@ -148,7 +174,7 @@
 
 <!--more-->
 
-<h3 id="всемайки"><a href="https://shikhalev.vsemaykishop.ru/" class="img-icon-vsemayki">Все­Май­ки</a></h3>
+<h3 id="vmimg-icon-vsemayki"><a href="https://shikhalev.vsemaykishop.ru/" class="img-icon-vsemayki">Все­Май­ки</a></h3>
 
 <p>Наверное, самый популярный в рунете принтшоп, активно рекламируется, множество людей пользуется… Ключевые особенности, которые мне хо­те­лось бы отметить:</p>
 
@@ -164,8 +190,9 @@
   </li>
 </ul>
 
-<figure class="__figure __implicit_figure __right logo" style="max-width:160px;margin-right:-50px;shape-outside:url(/img/2026/06/05/merch/backpack-160.webp);"><a href="https://shikhalev.vsemaykishop.ru/article/backpack_full/4095037"><img src="/img/2026/06/05/merch/backpack-160.webp" class="__image" style="shape-outside:url(/img/2026/06/05/merch/backpack-160.webp);" alt="Рюкзак с пеночкой-весничкой" title="Рюкзак с пеночкой-весничкой" /></a></figure>
-
+<figure id="fig-2" class="logo __is_images_figure __is_images_single __is_images_shaped __is_images_width_200 __is_images__right" style="shape-outside:url(/img/o3/o1/0c7207b6.webp);--is-images-width:160px;--is-images-shift:50px;" data-modes="grid,slides">
+<a href="https://shikhalev.vsemaykishop.ru/article/backpack_full/4095037" title="Рюкзак с пеночкой-весничкой" class="__is_images_wrapper"><img src="/img/o3/o1/0c7207b6.webp" alt="Рюкзак с пеночкой-весничкой" class="__is_images_image __is_images_single" style="--is-images-width:160px;--is-images-aspect-ratio:160/199;--is-images-shift:50px;" data-scale="1"></a>
+</figure>
 <ul>
   <li>
     <p><strong>Довольно широкий ассортимент.</strong> В первую очередь это касается разнообразия фасонов <a href="https://shikhalev.vsemaykishop.ru/catalogue/v/odezhda">одежды</a>, но не толь­ко. Я бы обратил внимание вот
@@ -198,8 +225,9 @@
   </li>
 </ul>
 
-<figure class="__figure __implicit_figure __right logo" style="max-width:160px;margin-right:-30px;shape-outside:url(/img/2026/06/05/merch/holder-160.webp);"><a href="https://shikhalev.vsemaykishop.ru/article/cardholder_print/4098789?color=blue"><img src="/img/2026/06/05/merch/holder-160.webp" class="__image" style="shape-outside:url(/img/2026/06/05/merch/holder-160.webp);" alt="Картхолдер с махаоном" title="Картхолдер с махаоном" /></a></figure>
-
+<figure id="fig-3" class="logo __is_images_figure __is_images_single __is_images_shaped __is_images_width_200 __is_images__right" style="shape-outside:url(/img/b2/83/0c35bcc6.webp);--is-images-width:160px;--is-images-shift:30px;" data-modes="grid,slides">
+<a href="https://shikhalev.vsemaykishop.ru/article/cardholder_print/4098789?color=blue" title="Картхолдер с махаоном" class="__is_images_wrapper"><img src="/img/b2/83/0c35bcc6.webp" alt="Картхолдер с махаоном" class="__is_images_image __is_images_single" style="--is-images-width:160px;--is-images-aspect-ratio:160/113;--is-images-shift:30px;" data-scale="1"></a>
+</figure>
 <ul>
   <li>
     <p><strong>Конструктор макетов.</strong></p>
@@ -234,7 +262,7 @@
 
 <p>В целом понятно, кто тут лидер рынка. Очевидный кандидат на основную площадку.</p>
 
-<h3 id="printdirect"><a href="https://shikhalev.printdirect.ru/" class="img-icon-printdirect">Print­Di­rect</a></h3>
+<h3 id="printdirectpdimg-icon-printdirect"><a href="https://shikhalev.printdirect.ru/" class="img-icon-printdirect">Print­Di­rect</a></h3>
 
 <p>Где-то встречал утверждение, что это старейший принт­шоп в ру­не­те. Возможно, во всяком слу­чае — дизайн навевает ностальгию… Не нулевые, конечно,
 но сейчас так не делают. <em>Рубрикация только по типам товаров</em>, в своей «витрине» можно категории настроить самостоятельно, но это одно дерево (и одна
@@ -242,8 +270,9 @@
 
 <p>Что можно отметить:</p>
 
-<figure class="__figure __implicit_figure __right logo" style="max-width:160px;margin-top:0px;shape-outside:url(/img/2026/06/05/merch/beer-160.webp);"><a href="https://shikhalev.printdirect.ru/index.php?action=addtocart&amp;product=9487710"><img src="/img/2026/06/05/merch/beer-160.webp" class="__image" style="shape-outside:url(/img/2026/06/05/merch/beer-160.webp);" alt="Пивная кружка с картинкой" title="Пивная кружка с картинкой" /></a></figure>
-
+<figure id="fig-4" class="logo __is_images_figure __is_images_single __is_images_shaped __is_images_width_200 __is_images__right" style="shape-outside:url(/img/ff/58/300b60t3.webp);--is-images-width:160px;" data-modes="grid,slides">
+<a href="https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487710" title="Пивная кружка с картинкой" class="__is_images_wrapper"><img src="/img/ff/58/300b60t3.webp" alt="Пивная кружка с картинкой" class="__is_images_image __is_images_single" style="--is-images-width:160px;--is-images-aspect-ratio:40/47;" data-scale="1"></a>
+</figure>
 <ul>
   <li>
     <p><strong>Ассортимент:</strong> в целом уступает предыдущему, но по некоторым категориям превосходит — большее разнообразие посуды и разные полиграфические
@@ -274,8 +303,9 @@
   </li>
 </ul>
 
-<figure class="__figure __implicit_figure __right logo" style="max-width:160px;margin-right:-40px; margin-top:-10px;shape-outside:url(/img/2026/06/05/merch/magnit-160.webp);"><a href="https://shikhalev.printdirect.ru/index.php?action=addtocart&amp;product=9483864"><img src="/img/2026/06/05/merch/magnit-160.webp" class="__image" style="shape-outside:url(/img/2026/06/05/merch/magnit-160.webp);" alt="Магнит-открывашка с косулей" title="Магнит-открывашка с косулей" /></a></figure>
-
+<figure id="fig-5" class="logo __is_images_figure __is_images_single __is_images_shaped __is_images_width_200 __is_images__right" style="shape-outside:url(/img/e1/95/9ot691o3.webp);--is-images-width:160px;--is-images-shift:40px;--is-images-up:10px;" data-modes="grid,slides">
+<a href="https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483864" title="Магнит-открывашка с косулей" class="__is_images_wrapper"><img src="/img/e1/95/9ot691o3.webp" alt="Магнит-открывашка с косулей" class="__is_images_image __is_images_single" style="--is-images-width:160px;--is-images-aspect-ratio:1/1;--is-images-shift:40px;--is-images-up:10px;" data-scale="1"></a>
+</figure>
 <ul>
   <li>
     <p><strong>Конструктор:</strong> каждую позицию нужно формировать индивидуально. Это и плюс в плане гибкости, и минус в плане количества работы. Впрочем,
@@ -301,10 +331,11 @@
 <p>В моем субъективном пред­став­ле­нии — пло­щад­ка №2, закрывающая лакуны основной, но некоторые такие лакуны важ­ные — большие форматы и пазлы.
 Неопределенность, конечно, смущает, да…</p>
 
-<h3 id="funru"><a href="https://fun.ru/designer/shikhalev" class="img-icon-fun">FUN.ru</a></h3>
+<h3 id="funrufnimg-icon-fun"><a href="https://fun.ru/designer/shikhalev" class="img-icon-fun">FUN.ru</a></h3>
 
-<figure class="__figure __implicit_figure __right logo" style="max-width:150px;margin-top:0px;shape-outside:url(/img/2026/06/05/merch/thermos-150.webp);"><a href="https://fun.ru/thermos/samets_sibirskoy_kosuli"><img src="/img/2026/06/05/merch/thermos-150.webp" class="__image" style="shape-outside:url(/img/2026/06/05/merch/thermos-150.webp);" alt="Термос с косулей" title="Термос с косулей" /></a></figure>
-
+<figure id="fig-6" class="logo __is_images_figure __is_images_single __is_images_shaped __is_images_width_150 __is_images__right" style="shape-outside:url(/img/86/2o/5e9209f8.webp);--is-images-width:150px;" data-modes="grid,slides">
+<a href="https://fun.ru/thermos/samets_sibirskoy_kosuli" title="Термос с косулей" class="__is_images_wrapper"><img src="/img/86/2o/5e9209f8.webp" alt="Термос с косулей" class="__is_images_image __is_images_single" style="--is-images-width:150px;--is-images-aspect-ratio:50/83;" data-scale="1"></a>
+</figure>
 <p>Мало вариантов товаров (вообще мало). Модно-молодежный дизайн сайта, и в данном случае это скорее плюс. А вот модно-молодежный запрет контекстного
 меню и всякая прочая «защита от ко­пи­ро­ва­ния» — жЫр­ный минус.</p>
 
@@ -335,9 +366,9 @@
 <p>Кстати, мне довелось пообщаться с поддержкой всех трех, и к поддержке всех трех претензий нет, там реальные люди, и есть реакция.
 Что в наше время уже круто. Хотя было бы еще лучше не сталкиваться с ситуациями, когда требуется обращение в поддержку…</p>
 
-<h2 id="картинки-и-макеты">Картинки и макеты</h2>
+<h2 id="section-1">Картинки и макеты</h2>
 
-<h3 id="фотографии">Фотографии</h3>
+<h3 id="section-2">Фотографии</h3>
 
 <p>Это мой основной исходный материал. Применять его получается в трех формах:</p>
 
@@ -386,7 +417,7 @@
 <p>На данный момент я клепаю всё, сколь-нибудь подходящее. Просто потому, что пока не знаю, что именно стоит делать, а что не стоит. Потом, думаю,
 устаканится какой-то ограниченный набор.</p>
 
-<h3 id="веселые-картинки">Веселые картинки</h3>
+<h3 id="section-3">Веселые картинки</h3>
 
 <p>Довольно случайно решил попробовать. Ниже всё, что есть, и я понятия не имею, будет ли продолжение.</p>
 
@@ -404,8 +435,9 @@
 
 <h3 id="guide">Винтажный «определитель»</h3>
 
-<figure class="__figure __implicit_figure __right logo" style="max-width:180px;margin-top:-20px;margin-bottom:0px;shape-outside:url(/img/2026/06/05/merch/zyablo-180.webp);"><a href="https://shikhalev.vsemaykishop.ru/article/flask/4096381?color=metal"><img src="/img/2026/06/05/merch/zyablo-180.webp" class="__image" style="shape-outside:url(/img/2026/06/05/merch/zyablo-180.webp);" alt="Фляжка с определителем зяблика" title="Фляжка с определителем зяблика" /></a></figure>
-
+<figure id="fig-7" class="logo __is_images_figure __is_images_single __is_images_shaped __is_images_width_200 __is_images__right" style="shape-outside:url(/img/32/t7/53cf2o88.webp);--is-images-width:180px;--is-images-up:20px;" data-modes="grid,slides">
+<a href="https://shikhalev.vsemaykishop.ru/article/flask/4096381?color=metal" title="Фляжка с определителем зяблика" class="__is_images_wrapper"><img src="/img/32/t7/53cf2o88.webp" alt="Фляжка с определителем зяблика" class="__is_images_image __is_images_single" style="--is-images-width:180px;--is-images-aspect-ratio:20/31;--is-images-up:20px;" data-scale="1"></a>
+</figure>
 <p>А вот это направление я развить хочу… Кажется, некоторые ИИшки научились генерировать адекватные картинки птиц, а заодно и стилизовать
 их под XIX век… Но в том <em><a href="https://shikhalev.vsemaykishop.ru/catalogue/styled/field_guide">виде, который есть</a></em>, меня оно не вполне устраивает. Нужно эту концепцию дорабатывать.</p>
 
@@ -420,14 +452,14 @@
 <p>В общем, следите за обновлениями. Эту идею я точно буду развивать, но не знаю пока, насколько быстро. Мне она кажется даже более
 перспективной, чем принты на ос­но­ве фотографий. И думаю, буду анонсировать «страницы определителя» здесь и в соц­се­тях.</p>
 
-<h2 id="техническое">Техническое</h2>
+<h2 id="section-4">Техническое</h2>
 
 <p>Понял, что сейчас стоит еще одна задача — сделать общий каталог (здесь, на сайте). Иначе я сам запутаюсь в том, где какую вариацию какой картинки
 уже выложил. Заодно можно будет подробные описания и комментарии к фотографиям здесь же разместить. Надеюсь, за пару недель управлюсь.</p>
 
 <hr />
 
-<h2 id="подытоги">Подытоги</h2>
+<h2 id="section-5">Подытоги</h2>
 
 <ul>
   <li>
@@ -452,8 +484,9 @@
       <p>Выяснилось, кстати, что с рамками и надписями удобнее работать в Ink­sca­pe, чем в GIMP. Хотя базовое изображение и растровое, его растровое редактирование не требуется, только «фигурная» обрезка. <a href="#fnref:frame" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="dybr" /><category term="photo" /><category term="мерч" /><category term="принтшопы" /><category term="ВсеМайки" /><category term="PrintDirect" /><category term="FUN" /><summary type="html"><![CDATA[О том, как я начал выкладывать фото на принтшопы: варианты и первые впечатления.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2026/06/05/merch/screen-640x640-1355x707-0-86.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2026/06/05/merch/screen-640x640-1355x707-0-86.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Выезд 18 мая</title><link href="https://shikhalev.github.io/life/2026/05/trip-18.html" rel="alternate" type="text/html" title="Выезд 18 мая" /><published>2026-05-20T00:00:00+00:00</published><updated>2026-05-20T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/05/trip-18</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/05/trip-18.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:420px;border-radius:25px;"><a href="/img/2026/05/20/trip-18/IMG_6080-fhd.webp" class="__image_link"><img src="/img/2026/05/20/trip-18/IMG_6080-420.webp" class="__image" style="border-radius:25px;" alt="Верхнебардымский пруд" title="Верхнебардымский пруд" /></a></figure>
-
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="dybr" /><category term="photo" /><category term="мерч" /><category term="принтшопы" /><category term="ВсеМайки" /><category term="PrintDirect" /><category term="FUN" /><summary type="html"><![CDATA[О том, как я начал выкладывать фото на принтшопы: варианты и первые впечатления.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/00/44/o3790f29.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/00/44/o3790f29.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Выезд 18 мая</title><link href="https://shikhalev.github.io/life/2026/05/trip-18.html" rel="alternate" type="text/html" title="Выезд 18 мая" /><published>2026-05-20T00:00:00+00:00</published><updated>2026-05-20T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/05/trip-18</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/05/trip-18.html"><![CDATA[<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_450 __is_images__right" style="border-radius:25px;--is-images-width:420px;" data-modes="grid,slides">
+<a href="/img/67/c6/3985f6ct.avif" title="Верхнебардымский пруд" class="__is_images_wrapper"><img src="/img/t5/oc/bbc4fc58.avif" alt="Верхнебардымский пруд" class="__is_images_image __is_images_single" style="border-radius:25px;--is-images-width:420px;--is-images-aspect-ratio:3/2;" data-scale="1"></a>
+</figure>
 <p>Впервые<sup id="fnref:first"><a href="#fn:first" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> отправился фотографировать всякое живое не на своих двоих, а на машине. Первый <strong><a href="https://www.inaturalist.org/calendar/shikhalev/2026/5/18">выезд</a></strong> получился несколько комом, хоть и не ужас-ужас…</p>
 
 <p>В целом все мои косяки можно списать на то, что слишком много внимания уходило на ма­ши­ну — как проехать, где запарковать, и так да­лее — вместо собственно
@@ -461,7 +494,7 @@
 
 <p>А начну все же с локаций.</p>
 
-<h2 id="куда-ездил">Куда ездил?</h2>
+<h2 id="section">Куда ездил?</h2>
 
 <p>Собственно локаций было две: <strong><a href="https://www.inaturalist.org/projects/verhnebardymskiy-prud">Верхнебардымский пруд</a></strong> и <strong><a href="https://www.inaturalist.org/projects/druzhino-bardymskiy-prud">Дру­жи­но-бардымский пруд</a></strong> (или, если ориентироваться на под­пи­си на картах,
 безымянные пруды рядом с на­се­лен­ны­ми пунктами Верхний Бардым и Дружино-Бардым). В пла­нах был еще <a href="https://www.inaturalist.org/projects/nizhnebardymskiy-prud">Нижнебардымский пруд</a>, но там были какие-то работы
@@ -472,13 +505,14 @@
 
 <!--more-->
 
-<h3 id="верхнебардымский-пруд">Верхнебардымский пруд</h3>
+<h3 id="section-1">Верхнебардымский пруд</h3>
 
 <p>Очень красивое место. Возможно, потому что я туда прибыл на самом рассвете (см. заглавную фотку поста). А возможно, потому что это довольно маленький
 пруд, расположенный между довольно крутых холмов. При этом еще и находится в стороне от ближайшего населенного пункта и проезжей дороги.</p>
 
-<figure class="__figure __implicit_figure __right" style="max-width:360px;border-radius:25px;"><a href="https://www.inaturalist.org/observations/362643614"><img src="/img/2026/05/20/trip-18/IMG_6234-360-1794x1435-1720-1294.webp" class="__image" style="border-radius:25px;" alt="Самец и самка хохлатой чернети" title="Самец и самка хохлатой чернети" /></a></figure>
-
+<figure id="fig-2" class="__is_images_figure __is_images_single __is_images_width_400 __is_images__right" style="border-radius:25px;--is-images-width:360px;" data-modes="grid,slides">
+<a href="https://www.inaturalist.org/observations/362643614" title="Самец и самка хохлатой чернети" class="__is_images_wrapper"><img src="/img/o5/5e/6842ote7.avif" alt="Самец и самка хохлатой чернети" class="__is_images_image __is_images_single" style="border-radius:25px;--is-images-width:360px;--is-images-aspect-ratio:5/4;" data-scale="1"></a>
+</figure>
 <p>А вот птичек снимать через этот романтичный утренний туман — дело довольно неблагодарное. Особенно, если, как я, забыть проверить режим камеры и оставить
 Av с f/8… То есть мало того, что диафрагма зажата, так еще и автоматика камеры выставляет на фокусном 600mm выдержку 1/1000s или еще меньше… В этом
 недостаток использования неродных объективов — камера отказывается признавать у них наличие стабилизации. Которая на самом-то деле у <a href="/photo/2025/06/sigma-60-600.html">Sigma 60-600mm</a>
@@ -500,10 +534,11 @@ Av с f/8… То есть мало того, что диафрагма зажа
 <p>Итого: место интересное, нужно будет еще съездить и вокруг походить. Неплохо бы поснимать с западного берега восточный на за­ка­те — горки
 на вос­ток поинтересней…</p>
 
-<h3 id="дружино-бардымский-пруд">Дружино-бардымский пруд</h3>
+<h3 id="section-2">Дружино-бардымский пруд</h3>
 
-<figure class="__figure __implicit_figure __right" style="max-width:420px;border-radius:25px;"><a href="/img/2026/05/20/trip-18/IMG_6731-fhd.webp" class="__image_link"><img src="/img/2026/05/20/trip-18/IMG_6731-420.webp" class="__image" style="border-radius:25px;" alt="Лебеди на Дружино-бардымском пруду" title="Лебеди на Дружино-бардымском пруду" /></a></figure>
-
+<figure id="fig-3" class="__is_images_figure __is_images_single __is_images_width_450 __is_images__right" style="border-radius:25px;--is-images-width:420px;" data-modes="grid,slides">
+<a href="/img/oc/bf/t97c3156.avif" title="Лебеди на Дружино-бардымском пруду" class="__is_images_wrapper"><img src="/img/1b/49/7c6c06cb.avif" alt="Лебеди на Дружино-бардымском пруду" class="__is_images_image __is_images_single" style="border-radius:25px;--is-images-width:420px;--is-images-aspect-ratio:105/59;" data-scale="1"></a>
+</figure>
 <p>Здесь плотина и, соответственно, самая нижняя часть пруда находятся в населенном пункте. Впрочем верхняя часть — самая ин­те­рес­ная — отделена от нижней
 изгибом по горке и островками. Но, как можно заметить по фото, лебеди активно тусуются как раз в нижней части, у самой плотины. Это не вся местная
 по­пу­ля­ция — лебедей на пруду вообще довольно много, что довольно интересно, равно как и то, что они кучкуются друг с дру­гом — я как-то привык к тому,
@@ -514,8 +549,9 @@ Av с f/8… То есть мало того, что диафрагма зажа
 <p>Я ожидал какого-то особого разнообразия видов, и был несколько разочарован. Но по здравому размышлению думаю, что винить нужно собственные
 невнимательность и неподготовленность.</p>
 
-<figure class="__figure __implicit_figure __right" style="max-width:320px;border-radius:25px;"><a href="https://www.inaturalist.org/observations/362652675"><img src="/img/2026/05/20/trip-18/IMG_6449-320-828x662-2445-1652.webp" class="__image" style="border-radius:25px;" alt="Самец и самка серой утки" title="Самец и самка серой утки" /></a></figure>
-
+<figure id="fig-4" class="__is_images_figure __is_images_single __is_images_width_350 __is_images__right" style="border-radius:25px;--is-images-width:320px;" data-modes="grid,slides">
+<a href="https://www.inaturalist.org/observations/362652675" title="Самец и самка серой утки" class="__is_images_wrapper"><img src="/img/f3/4c/o0oebe00.avif" alt="Самец и самка серой утки" class="__is_images_image __is_images_single" style="border-radius:25px;--is-images-width:320px;--is-images-aspect-ratio:5/4;" data-scale="1"></a>
+</figure>
 <p>Из интересного лично мне, пожалуй <strong><a href="https://www.inaturalist.org/observations?on=2026-05-18&amp;photos&amp;quality_grade=research&amp;taxon_id=558439&amp;user_id=shikhalev">серые утки</a></strong> (см. фото) и <strong><a href="https://www.inaturalist.org/observations/362652681">большой крохаль</a></strong>. Еще, пожалуй, <a href="https://www.inaturalist.org/observations/362652688">какие-то крачки</a>, но там так
 далеко и плохо снято… Если соберусь в те же края снова в этом сезоне, нужно будет к крач­ко­во­му островку подойти с другого берега и снять нормально.
 Чомги, ле­бе­ди-ши­пу­ны и даже красноголовые (и крас­но­книж­ные) нырки меня как-то уже не впечатляют…</p>
@@ -532,7 +568,7 @@ Av с f/8… То есть мало того, что диафрагма зажа
 Собственно, я поэтому и отправился сразу на восточный берег. Если попасть в более облачную погоду, или просто снимать днем, а не утром, можно будет
 зайти и с западного.</p>
 
-<h2 id="и-чо">И чо?</h2>
+<h2 id="section-3">И чо?</h2>
 
 <p>Если расценивать выезд как <em>разведочный</em>, то, на самом-то деле, всё не так уж плохо. Но хорошо бы научиться ездить так, чтобы в предварительной
 разведке не было нужды: тратить на каждое место, которое я хочу посетить, по два выезда — мне сезона не хватит.</p>
@@ -577,7 +613,7 @@ Av с f/8… То есть мало того, что диафрагма зажа
 
 <p>По итогу, вероятно, этот сезон у меня как раз и уйдет на то, чтобы научиться вот этому всему. Вряд ли новые привычки и подходы выработаются быстрее.</p>
 
-<h2 id="минутка-саморекламы">Минутка (само)рекламы</h2>
+<h2 id="section-4">Минутка (само)рекламы</h2>
 
 <p>Хороших кадров, которые можно было вытащить в мерч было мало, но кое-что наскреб:</p>
 
@@ -598,8 +634,9 @@ Av с f/8… То есть мало того, что диафрагма зажа
 
 <p>Зафиналю пейзажиком…</p>
 
-<figure class="__figure __implicit_figure __center" style="max-width:1000px;"><a href="/img/2026/05/20/trip-18/IMG_6387-fhd.webp" class="__image_link"><img src="/img/2026/05/20/trip-18/IMG_6387-1000-6016x1450-0-1000.webp" class="__image" alt="Завершающий пейзаж" title="Завершающий пейзаж" /></a></figure>
-
+<figure id="fig-5" class="__is_images_figure __is_images_single __is_images_width_1000" style="--is-images-width:1000px;" data-modes="grid,slides">
+<a href="/img/f7/f6/893f5cc7.avif" title="Завершающий пейзаж" class="__is_images_wrapper"><img src="/img/9o/61/301bc2t5.avif" alt="Завершающий пейзаж" class="__is_images_image __is_images_single" style="--is-images-width:1000px;--is-images-aspect-ratio:1000/241;" data-scale="1"></a>
+</figure>
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:first">
@@ -609,8 +646,9 @@ Av с f/8… То есть мало того, что диафрагма зажа
       <p>Во-первых, хороший полярик на ⌀105mm стоит дорого; а во-вторых, на таком большом объективе он категорически неудобен. По хо­ро­ше­му нужен фильтр за зад­ней линзой, а не спе­ре­ди… Если когда-нибудь сподоблюсь купить без­зер­кал­ку, заодно и эта проблема решится. <a href="#fnref:polar" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="dybr" /><category term="nature" /><category term="photo" /><category term="birdwatching" /><category term="iNaturalist" /><category term="натурадыбр" /><category term="лес" /><category term="животные" /><category term="птицы" /><category term="прогулки" /><category term="наблюдения" /><category term="мерч" /><summary type="html"><![CDATA[Впервые отправился снимать птичек за рулем: грабли и выводы]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2026/05/20/trip-18/IMG_6080-640x640-5414x2824-0-864.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2026/05/20/trip-18/IMG_6080-640x640-5414x2824-0-864.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Прогулка 11 мая</title><link href="https://shikhalev.github.io/life/2026/05/walk-11.html" rel="alternate" type="text/html" title="Прогулка 11 мая" /><published>2026-05-14T00:00:00+00:00</published><updated>2026-05-14T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/05/walk-11</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/05/walk-11.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:420px;border-radius:25px;"><a href="https://www.inaturalist.org/observations/360524506"><img src="/img/2026/05/14/walk-11/IMG_5115-420-4087x3524-1047-0.webp" class="__image" style="border-radius:25px;" alt="Лосиха с лосёнком" title="Лосиха с лосёнком" /></a></figure>
-
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="dybr" /><category term="nature" /><category term="photo" /><category term="birdwatching" /><category term="iNaturalist" /><category term="натурадыбр" /><category term="лес" /><category term="животные" /><category term="птицы" /><category term="прогулки" /><category term="наблюдения" /><category term="мерч" /><summary type="html"><![CDATA[Впервые отправился снимать птичек за рулем: грабли и выводы]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/84/ct/75teb177.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/84/ct/75teb177.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Прогулка 11 мая</title><link href="https://shikhalev.github.io/life/2026/05/walk-11.html" rel="alternate" type="text/html" title="Прогулка 11 мая" /><published>2026-05-14T00:00:00+00:00</published><updated>2026-05-14T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/05/walk-11</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/05/walk-11.html"><![CDATA[<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_450 __is_images__right" style="border-radius:25px;--is-images-width:420px;" data-modes="grid,slides">
+<a href="https://www.inaturalist.org/observations/360524506" title="Лосиха с лосёнком" class="__is_images_wrapper"><img src="/img/38/c1/c82ob31c.avif" alt="Лосиха с лосёнком" class="__is_images_image __is_images_single" style="border-radius:25px;--is-images-width:420px;--is-images-aspect-ratio:210/181;" data-scale="1"></a>
+</figure>
 <blockquote class="epigraph">
   <p>Что мы знаем о лосе? Ничего, и то не все.</p>
 </blockquote>
@@ -619,7 +657,7 @@ Av с f/8… То есть мало того, что диафрагма зажа
 нагулял всего лишь километров семь, вместо десяти-пятнадцати. Да и снял не так уж много, на самом деле лес еще не слишком-то
 и проснулся.</p>
 
-<h2 id="звери">Звери</h2>
+<h2 id="section">Звери</h2>
 
 <p>Самое примечательное <strong><a href="https://www.inaturalist.org/observations/360524506">наблюдение</a></strong>, конечно, то, которое я вынес на заглавную картинку. Появление этого семейства метрах
 в со­ро­ка от ме­ня было довольно-таки неожиданным… Вообще, я в этот момент стоял и размышлял, что как-то скучно гу­ляю — цвести
@@ -634,12 +672,14 @@ Av с f/8… То есть мало того, что диафрагма зажа
 
 <!--more-->
 
-<h2 id="птицы">Птицы</h2>
+<h2 id="section-1">Птицы</h2>
 
-<figure class="__figure __implicit_figure __right" style="max-width:270px;border-radius:25px;"><a href="https://www.inaturalist.org/observations/360533146"><img src="/img/2026/05/14/walk-11/IMG_4868-270-2550x1700-1180-654.webp" class="__image" style="border-radius:25px;" alt="Пеночка-весничка" title="Пеночка-весничка" /></a></figure>
-
-<figure class="__figure __implicit_figure __left" style="max-width:180px;border-radius:25px;"><img src="/img/2026/05/14/walk-11/IMG_4888-180-965x1448-2449-1053.webp" class="__image" style="border-radius:25px;" alt="Обыкновенная горихвостка (лысушка)" title="Обыкновенная горихвостка (лысушка)" /></figure>
-
+<figure id="fig-2" class="__is_images_figure __is_images_single __is_images_width_300 __is_images__right" style="border-radius:25px;--is-images-width:270px;" data-modes="grid,slides">
+<a href="https://www.inaturalist.org/observations/360533146" title="Пеночка-весничка" class="__is_images_wrapper"><img src="/img/51/3c/0eb14279.avif" alt="Пеночка-весничка" class="__is_images_image __is_images_single" style="border-radius:25px;--is-images-width:270px;--is-images-aspect-ratio:3/2;" data-scale="1"></a>
+</figure>
+<figure id="fig-3" class="__is_images_figure __is_images_single __is_images_width_200 __is_images__left" style="border-radius:25px;--is-images-width:180px;" data-modes="grid,slides">
+<a href="/img/6f/fc/b0tc3fff.avif" title="Обыкновенная горихвостка (лысушка)" class="__is_images_wrapper"><img src="/img/85/00/05c54405.avif" alt="Обыкновенная горихвостка (лысушка)" class="__is_images_image __is_images_single" style="border-radius:25px;--is-images-width:180px;--is-images-aspect-ratio:2/3;" data-scale="1"></a>
+</figure>
 <p>Птицы, как я уже сказал, попадались сплошь знакомые, но все равно, грех жаловаться. Поснимал <a href="https://www.inaturalist.org/observations?on=2026-05-11&amp;photos&amp;place_id=any&amp;taxon_id=117055&amp;user_id=shikhalev&amp;verifiable=any"><strong>пеночек-весничек</strong></a> с близ­ко­го расстояния,
 <a href="https://www.inaturalist.org/observations?on=2026-05-11&amp;photos&amp;place_id=any&amp;taxon_id=12992&amp;user_id=shikhalev&amp;verifiable=any"><strong>горихвосток</strong></a> с почти близкого… А от­дель­ной удачей считаю то, что мне дважды попались <a href="https://www.inaturalist.org/observations?on=2026-05-11&amp;photos&amp;place_id=any&amp;taxon_id=13094&amp;user_id=shikhalev&amp;verifiable=any"><strong>зарянки</strong></a> (второй раз — парочка), и дваж­ды же —
 <a href="https://www.inaturalist.org/observations?on=2026-05-11&amp;photos&amp;place_id=any&amp;taxon_id=144849&amp;user_id=shikhalev&amp;verifiable=any"><strong>лазоревки</strong></a>. Сейчас специально <a href="https://www.inaturalist.org/observations?month=5,6,7,8,9&amp;photos&amp;place_id=any&amp;taxon_id=144849&amp;user_id=shikhalev&amp;verifiable=any">про­ве­рил</a>: ранее мне удалось застать лазоревку в теплое время года, т.е. не на кор­муш­ке — только
@@ -667,8 +707,9 @@ Av с f/8… То есть мало того, что диафрагма зажа
   </li>
 </ul>
 
-<figure class="__figure __implicit_figure __center" style="max-width:800px;border-radius:5px;"><a href="/img/2026/05/14/walk-11/Chirpity-fhd.webp" class="__image_link"><img src="/img/2026/05/14/walk-11/Chirpity-800.webp" class="__image" style="border-radius:5px;" alt="Скриншот Chirpity" title="Скриншот Chirpity" /></a></figure>
-
+<figure id="fig-4" class="__is_images_figure __is_images_single __is_images_width_800" style="border-radius:5px;--is-images-width:800px;" data-modes="grid,slides">
+<a href="/img/2f/f8/7boc49ob.webp" title="Скриншот Chirpity" class="__is_images_wrapper"><img src="/img/79/o4/7b00t1f0.webp" alt="Скриншот Chirpity" class="__is_images_image __is_images_single" style="border-radius:5px;--is-images-width:800px;--is-images-aspect-ratio:100/63;" data-scale="1"></a>
+</figure>
 <p>Работает с моделью <strong><a href="https://birdnet.cornell.edu/">BirdNET</a></strong> по той же технологии, что и Мерлин. Правда, если последний использует отдельные модели
 по ре­ги­о­нам мира, то здесь модель одна, а геофильтрация делается поверх (насколько я понял). Точнее, модель-то не одна, но идущая
 в ком­п­лек­те модель Nocmig мне не интересна, а тренировка и импорт кастомных доступны только за деньги… В любом случае основная
@@ -688,10 +729,11 @@ Av с f/8… То есть мало того, что диафрагма зажа
 <p>Вполне юзабельно, особенно, если вдруг понадобится проанализировать звуковой файл с чужого компьютера, а на своем рекомендую
 держать все же Chirpity.</p>
 
-<h2 id="цветы">Цветы</h2>
+<h2 id="section-2">Цветы</h2>
 
-<figure class="__figure __implicit_figure __right" style="max-width:270px;border-radius:25px;"><a href="https://www.inaturalist.org/observations/360529232"><img src="/img/2026/05/14/walk-11/IMG_4684-270-1552x1034-2140-1444.webp" class="__image" style="border-radius:25px;margin-top:-10px;" alt="Земляника зелёная (клубника луговая)" title="Земляника зелёная (клубника луговая)" /></a></figure>
-
+<figure id="fig-5" class="__is_images_figure __is_images_single __is_images_width_300 __is_images__right" style="border-radius:25px;--is-images-width:270px;--is-images-up:10px;" data-modes="grid,slides">
+<a href="https://www.inaturalist.org/observations/360529232" class="__is_images_wrapper"><img src="/img/ft/20/1e4f731o.avif" alt="" class="__is_images_image __is_images_single" style="border-radius:25px;--is-images-width:270px;--is-images-aspect-ratio:3/2;--is-images-up:10px;" data-scale="1"></a>
+</figure>
 <p>Вернемся к прогулке.</p>
 
 <p>Цветов пока мало, но что интересно: помимо ожидаемых <strong><a href="https://www.inaturalist.org/observations?on=2026-05-11&amp;photos&amp;place_id=any&amp;taxon_id=361308&amp;user_id=shikhalev&amp;verifiable=any">медуницы</a></strong>, <strong><a href="https://www.inaturalist.org/observations?on=2026-05-11&amp;photos&amp;place_id=any&amp;taxon_id=126756&amp;user_id=shikhalev&amp;verifiable=any">чины</a></strong>, <strong><a href="https://www.inaturalist.org/observations?on=2026-05-11&amp;photos&amp;place_id=any&amp;taxon_id=55819&amp;user_id=shikhalev&amp;verifiable=any">первоцвета</a></strong> и двух видов
@@ -703,7 +745,7 @@ Av с f/8… То есть мало того, что диафрагма зажа
 
 <hr />
 
-<h2 id="минутка-саморекламы">Минутка (само)рекламы</h2>
+<h2 id="section-3">Минутка (само)рекламы</h2>
 
 <p>Я тут решил, что кому-то могут быть интересны мои фотографии в виде больших распечаток на стену, или на всяких кружках, брелках и так далее…
 Соответственно, зарегистрировался на паре-тройке сервисов и начал туда выкладывать «дизайны». О самих сервисах напишу как-нибудь попозже, когда освоюсь,
@@ -724,22 +766,24 @@ Av с f/8… То есть мало того, что диафрагма зажа
 
 <hr />
 
-<h2 id="итого">Итого</h2>
+<h2 id="section-4">Итого</h2>
 
 <p>В общем, неплохо прогулялся. Открыл сезон, а заодно и закрыл гештальт. Надеюсь, дальше будет только интересней.</p>
 
 <p>А завершу сей пост я весеннейшим пейзажиком…</p>
 
-<figure class="__figure __implicit_figure __center" style="max-width:1000px;"><a href="/img/2026/05/14/walk-11/IMG_5565-fhd.webp" class="__image_link"><img src="/img/2026/05/14/walk-11/IMG_5565-1000-6016x1524-0-1340.webp" class="__image" alt="Завершающий пейзаж" title="Завершающий пейзаж" /></a></figure>
-
+<figure id="fig-6" class="__is_images_figure __is_images_single __is_images_width_1000" style="--is-images-width:1000px;" data-modes="grid,slides">
+<a href="/img/82/ce/bc4e87o1.avif" title="Завершающий пейзаж" class="__is_images_wrapper"><img src="/img/9o/fe/53ec834b.avif" alt="Завершающий пейзаж" class="__is_images_image __is_images_single" style="--is-images-width:1000px;--is-images-aspect-ratio:1000/253;" data-scale="1"></a>
+</figure>
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:rec">
       <p>Zoom H1­es­sen­ti­al. Я о нем подробно не пи­сал, потому что не знаю, чего. <a href="#fnref:rec" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="dybr" /><category term="nature" /><category term="photo" /><category term="birdwatching" /><category term="iNaturalist" /><category term="натурадыбр" /><category term="лес" /><category term="животные" /><category term="птицы" /><category term="звери" /><category term="прогулки" /><category term="наблюдения" /><category term="лось" /><category term="Chirpity" /><category term="нейросети" /><category term="звук" /><category term="мерч" /><summary type="html"><![CDATA[Дыбр об открытии наблюдательного сезона]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2026/05/14/walk-11/IMG_5115-640x640-2354x1228-773-2201.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2026/05/14/walk-11/IMG_5115-640x640-2354x1228-773-2201.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Натурадыбр – 2025</title><link href="https://shikhalev.github.io/life/2025/12/naturadybr.html" rel="alternate" type="text/html" title="Натурадыбр – 2025" /><published>2025-12-25T00:00:00+00:00</published><updated>2025-12-25T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2025/12/naturadybr</id><content type="html" xml:base="https://shikhalev.github.io/life/2025/12/naturadybr.html"><![CDATA[<figure class="__figure __implicit_figure __right face" style="max-width:380px;"><a href="/img/2025/06/19/sigma-60-600/IMG_8552-fhd.webp" class="__image_link"><img src="/img/2025/12/25/naturadybr/IMG_8552-380-1599x1599-313-0.webp" class="__image" alt="Самец сибирской косули (Capreolus pygargus)" title="Самец сибирской косули (Capreolus pygargus)" /></a></figure>
-
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="dybr" /><category term="nature" /><category term="photo" /><category term="birdwatching" /><category term="iNaturalist" /><category term="натурадыбр" /><category term="лес" /><category term="животные" /><category term="птицы" /><category term="звери" /><category term="прогулки" /><category term="наблюдения" /><category term="лось" /><category term="Chirpity" /><category term="нейросети" /><category term="звук" /><category term="мерч" /><summary type="html"><![CDATA[Дыбр об открытии наблюдательного сезона]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/64/cb/53o16f18.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/64/cb/53o16f18.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Натурадыбр – 2025</title><link href="https://shikhalev.github.io/life/2025/12/naturadybr.html" rel="alternate" type="text/html" title="Натурадыбр – 2025" /><published>2025-12-25T00:00:00+00:00</published><updated>2025-12-25T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2025/12/naturadybr</id><content type="html" xml:base="https://shikhalev.github.io/life/2025/12/naturadybr.html"><![CDATA[<figure id="fig-1" class="face __is_images_figure __is_images_single __is_images_width_400 __is_images__right" style="--is-images-width:380px;" data-modes="grid,slides">
+<a href="/img/4t/12/oc63to06.avif" title="Самец сибирской косули (Capreolus pygargus)" class="__is_images_wrapper"><img src="/img/b0/e5/of9cofb4.avif" alt="Самец сибирской косули (Capreolus pygargus)" class="__is_images_image __is_images_single" style="--is-images-width:380px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
 <p>Что ж, год подходит к концу, я продолжаю снимать птичек на кормушке, но не думаю, что туда заявится кто-то новый и неожиданный.
 Так что можно подвести итоги наблюдательского года. Конечно, <strong><a href="https://www.inaturalist.org/" class="img-icon-inaturalist">iNaturalist</a></strong> предлагает
 <a href="https://www.inaturalist.org/stats/2025/shikhalev">свою <strong>инфографику</strong></a>, но это все же сухая цифра, хоть и приятно оформленная.</p>
@@ -760,7 +804,7 @@ Av с f/8… То есть мало того, что диафрагма зажа
 
 <!--more-->
 
-<h2 id="железо-истекло">Железо (и стекло)</h2>
+<h2 id="section">Железо (и стекло)</h2>
 
 <p>По технической части главная новина этого года, конечно, <a href="/photo/2025/06/sigma-60-600.html"><strong>объектив Sigma 60-600mm</strong>, о котором я писал довольно подробно</a>.
 Это действительно новый уровень съемки. Поснимав на него я как-то разок прогулялся со старым 18-300mm и понял, что тот меня больше
@@ -788,10 +832,11 @@ POCO X6) уже вполне приемлемо (для меня) справля
 Возможно, удастся что-то с него вытянуть, когда появятся свободные деньги и время свозить его в Екатеринбург. А возможно, и хрен с ним.
 Все существенное так или иначе было где-то выложено.</p>
 
-<h2 id="животные-и-растения">Животные (и растения)</h2>
+<h2 id="section-1">Животные (и растения)</h2>
 
-<figure class="__figure __implicit_figure __right face" style="max-width:270px;"><a href="/img/2025/12/25/naturadybr/owl-fhd.webp" class="__image_link"><img src="/img/2025/12/25/naturadybr/owl-270-1698x1698-143-128.webp" class="__image" alt="Совёнок длиннохвостой (уральской) неясыти (Strix uralensis)" title="Совёнок длиннохвостой (уральской) неясыти (Strix uralensis)" /></a></figure>
-
+<figure id="fig-2" class="face __is_images_figure __is_images_single __is_images_width_300 __is_images__right" style="--is-images-width:270px;" data-modes="grid,slides">
+<a href="/img/79/e5/522481o5.avif" title="Совёнок длиннохвостой (уральской) неясыти (Strix uralensis)" class="__is_images_wrapper"><img src="/img/24/c1/46bfe189.avif" alt="Совёнок длиннохвостой (уральской) неясыти (Strix uralensis)" class="__is_images_image __is_images_single" style="--is-images-width:270px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
 <p>Теперь, собственно, кого наблюдал.</p>
 
 <p>На самом деле, главными удачами мне кажутся не новые виды, а уже попадавшиеся мне ранее, но в этом сезоне получившие именно что качественные
@@ -805,15 +850,17 @@ POCO X6) уже вполне приемлемо (для меня) справля
 <a href="https://www.inaturalist.org/observations/82016420">луговой</a> и <a href="https://www.inaturalist.org/observations/87085976">болотный</a>), <a href="https://www.inaturalist.org/observations/288663831"><strong>болотной совы</strong> <em>(Asio flammeus)</em></a>, да <a href="https://www.inaturalist.org/observations/288665231"><strong>пустельги</strong> <em>(Falco tinnunculus)</em></a>.
 Ах да, еще наконец-то удалось кое-как записать голос <a href="https://www.inaturalist.org/observations/289768933"><strong>вяхиря</strong> <em>(Columba palumbus)</em></a> — тут, конечно, спасибо рекордеру.</p>
 
-<figure class="__figure __implicit_figure __left face" style="max-width:240px;"><a href="/img/2025/12/25/naturadybr/IMG_5690-fhd.webp" class="__image_link"><img src="/img/2025/12/25/naturadybr/IMG_5690-240-643x643-543-269.webp" class="__image" alt="Ветреница алтайская (Anemonoides altaica)" title="Ветреница алтайская (Anemonoides altaica)" /></a></figure>
-
+<figure id="fig-3" class="face __is_images_figure __is_images_single __is_images_width_250 __is_images__left" style="--is-images-width:240px;" data-modes="grid,slides">
+<a href="/img/c7/3e/5ce99b4t.avif" title="Ветреница алтайская (Anemonoides altaica)" class="__is_images_wrapper"><img src="/img/2b/3t/bto4f15t.avif" alt="Ветреница алтайская (Anemonoides altaica)" class="__is_images_image __is_images_single" style="--is-images-width:240px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
 <p>А из растений в первую очередь хотелось бы отметить <a href="https://www.inaturalist.org/observations/274648417"><strong>ветреницу алтайскую</strong> <em>(Anemonoides altaica)</em></a> (на фото слева). О ее существовании
 в наших краях я знал, но никак она мне не попадалась раньше. И не попалась бы, если б не пренебрег заветом классика не разговаривать с не­зна­ком­ца­ми.
 Место, где она цвела мне указал случайно встреченный чувак в лесу, причем место это было совсем близко к моему маршруту, но все же в стороне, там,
 где я обычно и не хожу, поскольку раньше не замечал ничего интересного.</p>
 
-<figure class="__figure __implicit_figure __right face" style="max-width:240px;margin-top: -5px;"><a href="/img/2025/12/25/naturadybr/IMG_8353-fhd.webp" class="__image_link"><img src="/img/2025/12/25/naturadybr/IMG_8353-240-1024x1024-282-23.webp" class="__image" alt="Адонис весенний (Adonis vernalis)" title="Адонис весенний (Adonis vernalis)" /></a></figure>
-
+<figure id="fig-4" class="face __is_images_figure __is_images_single __is_images_width_250 __is_images__right" style="--is-images-width:240px;--is-images-up:5px;" data-modes="grid,slides">
+<a href="/img/91/1f/72b60o61.avif" title="Адонис весенний (Adonis vernalis)" class="__is_images_wrapper"><img src="/img/05/71/2ee94549.avif" alt="Адонис весенний (Adonis vernalis)" class="__is_images_image __is_images_single" style="--is-images-width:240px;--is-images-aspect-ratio:1/1;--is-images-up:5px;" data-scale="1"></a>
+</figure>
 <p>Вторым же «долгожданным сюрпризом» стал <a href="https://www.inaturalist.org/observations/288703584"><strong>адонис весенний</strong> <em>(Ad­o­nis vernalis)</em></a>. Про него я правда не имел точных сведений,
 что он растет где-то неподалеку, но имел все основания такое предполагать. И вот обнаружил — без посторонней помощи, то есть случайно.
 Вообще, это была <a href="https://www.inaturalist.org/calendar/shikhalev/2025/6/11">самая интересная прогулка</a>, пожалуй — две косули (обоего пола), сова, пустельга, полевой лунь и всякого разного
@@ -824,13 +871,14 @@ POCO X6) уже вполне приемлемо (для меня) справля
 <p>Были, конечно, и другие новые для меня виды, общий список я, думаю, повешу где-то в ян­ва­ре <a href="https://www.inaturalist.org/journal/shikhalev">в своем журнале на iNaturalist</a>.
 Там вырисовывается 74 пун­к­та, но о большинстве из них мне сказать особо нечего.</p>
 
-<h2 id="итого">Итого</h2>
+<h2 id="section-2">Итого</h2>
 
 <p>В целом прошедший сезон вспомнить приятно. Хотелось бы больше, но что-то я стал привередлив к погоде и неохотно выхожу из зоны комфорта…
 При этом все еще могу спокойно отмотать 15–20 километров за шесть часов и не зажужжать, что немного успокаивает.</p>
 
-<p>Посмотрим, каков будет следующий сезон…</p>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="dybr" /><category term="nature" /><category term="photo" /><category term="birdwatching" /><category term="hard" /><category term="натурадыбр" /><category term="iNaturalist" /><category term="птицы" /><category term="звери" /><category term="прогулки" /><category term="наблюдения" /><category term="фототехника" /><category term="оптика" /><summary type="html"><![CDATA[Мои итоги года на iNaturalist]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/12/25/naturadybr/IMG_8552-640x640-2400x1252-0-156.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/12/25/naturadybr/IMG_8552-640x640-2400x1252-0-156.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Первая глава «Практического руководства…»</title><link href="https://shikhalev.github.io/tech/2025/10/darktable-base.html" rel="alternate" type="text/html" title="Первая глава «Практического руководства…»" /><published>2025-10-26T00:00:00+00:00</published><updated>2025-10-26T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/10/darktable-base</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/10/darktable-base.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:240px;"><a href="/img/2025/10/05/darktable/cover-fhd.webp" class="__image_link"><img src="/img/2025/10/05/darktable/cover-240.webp" class="__image" alt="Картинка для привлечения внимания" title="Картинка для привлечения внимания" /></a></figure>
-
+<p>Посмотрим, каков будет следующий сезон…</p>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="dybr" /><category term="nature" /><category term="photo" /><category term="birdwatching" /><category term="hard" /><category term="натурадыбр" /><category term="iNaturalist" /><category term="птицы" /><category term="звери" /><category term="прогулки" /><category term="наблюдения" /><category term="фототехника" /><category term="оптика" /><summary type="html"><![CDATA[Мои итоги года на iNaturalist]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/t2/74/ccf66toe.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/t2/74/ccf66toe.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Первая глава «Практического руководства…»</title><link href="https://shikhalev.github.io/tech/2025/10/darktable-base.html" rel="alternate" type="text/html" title="Первая глава «Практического руководства…»" /><published>2025-10-26T00:00:00+00:00</published><updated>2025-10-26T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/10/darktable-base</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/10/darktable-base.html"><![CDATA[<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_250 __is_images__right" style="--is-images-width:240px;" data-modes="grid,slides">
+<a href="/img/43/97/c01ct8t2.webp" title="Картинка для привлечения внимания" class="__is_images_wrapper"><img src="/img/85/57/55cb7e8f.webp" alt="Картинка для привлечения внимания" class="__is_images_image __is_images_single" style="--is-images-width:240px;--is-images-aspect-ratio:2/3;" data-scale="1"></a>
+</figure>
 <p>Выложил <a href="/pages/books/darktable/pg/1_base_processing.html">первую главу</a> «<a href="/pages/books/darktable/pg/">Практического руководства по <strong class="img-icon-darktable">darktable</strong></a>» — <strong><a href="/pages/books/darktable/pg/1_base_processing.html">«Базовая обработка»</a></strong>.</p>
 
 <p>Вместе с <a href="/pages/books/darktable/pg/0_intro.html">«Введением»</a> первая глава должна дать полноценный быстрый старт — основные вещи, которые необходимы, чтобы начать уже делать что-то полезное.</p>
@@ -861,8 +909,9 @@ POCO X6) уже вполне приемлемо (для меня) справля
 
 <p><strong>По прежнему жду замечаний и вопросов.</strong></p>
 
-<p>Следующая глава будет про организацию изображений — снова представление светового стола, но уже в максимально развернутом виде.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;soft&quot;, &quot;graphics&quot;, &quot;photo&quot;, &quot;processing&quot;]" /><category term="Darktable" /><category term="Linux" /><category term="RAW" /><summary type="html"><![CDATA[Первая глава «Практического руководства по darktable» — «Базовая обработка»]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/10/05/darktable/darktable-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/10/05/darktable/darktable-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Этим стулом…</title><link href="https://shikhalev.github.io/tech/2025/10/darktable.html" rel="alternate" type="text/html" title="Этим стулом…" /><published>2025-10-05T00:00:00+00:00</published><updated>2025-10-05T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/10/darktable</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/10/darktable.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:240px;"><a href="/img/2025/10/05/darktable/cover-fhd.webp" class="__image_link"><img src="/img/2025/10/05/darktable/cover-240.webp" class="__image" alt="Картинка для привлечения внимания" title="Картинка для привлечения внимания" /></a></figure>
-
+<p>Следующая глава будет про организацию изображений — снова представление светового стола, но уже в максимально развернутом виде.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;soft&quot;, &quot;graphics&quot;, &quot;photo&quot;, &quot;processing&quot;]" /><category term="Darktable" /><category term="Linux" /><category term="RAW" /><summary type="html"><![CDATA[Первая глава «Практического руководства по darktable» — «Базовая обработка»]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/7e/7c/101t24c2.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/7e/7c/101t24c2.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Этим стулом…</title><link href="https://shikhalev.github.io/tech/2025/10/darktable.html" rel="alternate" type="text/html" title="Этим стулом…" /><published>2025-10-05T00:00:00+00:00</published><updated>2025-10-05T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2025/10/darktable</id><content type="html" xml:base="https://shikhalev.github.io/tech/2025/10/darktable.html"><![CDATA[<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_250 __is_images__right" style="--is-images-width:240px;" data-modes="grid,slides">
+<a href="/img/43/97/c01ct8t2.webp" title="Картинка для привлечения внимания" class="__is_images_wrapper"><img src="/img/85/57/55cb7e8f.webp" alt="Картинка для привлечения внимания" class="__is_images_image __is_images_single" style="--is-images-width:240px;--is-images-aspect-ratio:2/3;" data-scale="1"></a>
+</figure>
 <p>Начал писать большое <a href="/pages/books/darktable/pg/">Практическое руководство по <strong class="img-icon-darktable">darktable</strong></a>. Выложил <a href="/pages/books/darktable/pg/0_intro.html">«Введение»</a>, где
 рассматриваю общий интерфейс и базовое управление снимками.</p>
 
@@ -880,8 +929,9 @@ POCO X6) уже вполне приемлемо (для меня) справля
 <hr />
 
 <p>Вообще, конечно, задумка масштабная, писать буду долго, тем более, что не могу этому посвятить все свое время… Но надеюсь где-то
-за полгода-год закончить. И опять же, рассчитываю на фидбэк по ходу дела, чтобы ничего не забыть и не схалтурить.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;soft&quot;, &quot;graphics&quot;, &quot;photo&quot;, &quot;processing&quot;]" /><category term="Darktable" /><category term="Linux" /><category term="RAW" /><summary type="html"><![CDATA[Анонс «Практического руководства по darktable»]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/10/05/darktable/darktable-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/10/05/darktable/darktable-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Объектив Sigma 60-600mm</title><link href="https://shikhalev.github.io/photo/2025/06/sigma-60-600.html" rel="alternate" type="text/html" title="Объектив Sigma 60-600mm" /><published>2025-06-19T00:00:00+00:00</published><updated>2025-06-19T00:00:00+00:00</updated><id>https://shikhalev.github.io/photo/2025/06/sigma-60-600</id><content type="html" xml:base="https://shikhalev.github.io/photo/2025/06/sigma-60-600.html"><![CDATA[<figure class="__figure __implicit_figure __right logo" style="max-width:200px;shape-outside:url(/img/2025/06/19/sigma-60-600/sigma-60-600mm-v-200.webp);"><a href="/img/2025/06/19/sigma-60-600/sigma-60-600mm-v-fhd.webp" class="__image_link"><img src="/img/2025/06/19/sigma-60-600/sigma-60-600mm-v-200.webp" class="__image" style="shape-outside:url(/img/2025/06/19/sigma-60-600/sigma-60-600mm-v-200.webp);" /></a></figure>
-
+за полгода-год закончить. И опять же, рассчитываю на фидбэк по ходу дела, чтобы ничего не забыть и не схалтурить.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;soft&quot;, &quot;graphics&quot;, &quot;photo&quot;, &quot;processing&quot;]" /><category term="Darktable" /><category term="Linux" /><category term="RAW" /><summary type="html"><![CDATA[Анонс «Практического руководства по darktable»]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/tb/33/952f4f06.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/tb/33/952f4f06.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Объектив Sigma 60-600mm</title><link href="https://shikhalev.github.io/photo/2025/06/sigma-60-600.html" rel="alternate" type="text/html" title="Объектив Sigma 60-600mm" /><published>2025-06-19T00:00:00+00:00</published><updated>2025-06-19T00:00:00+00:00</updated><id>https://shikhalev.github.io/photo/2025/06/sigma-60-600</id><content type="html" xml:base="https://shikhalev.github.io/photo/2025/06/sigma-60-600.html"><![CDATA[<figure id="fig-1" class="logo __is_images_figure __is_images_single __is_images_shaped __is_images_width_200 __is_images__right" style="shape-outside:url(/img/5t/0b/5c13tebf.webp);--is-images-width:200px;" data-modes="grid,slides">
+<a href="/img/21/6e/498b9b73.webp" class="__is_images_wrapper"><img src="/img/5t/0b/5c13tebf.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:200px;--is-images-aspect-ratio:50/93;" data-scale="1"></a>
+</figure>
 <p>Приобрел себе в апреле сабж. Сейчас уже довольно много на него поснимал и можно начинать рефлексировать…</p>
 
 <p>Итак, объектив <a href="https://www.sigma-global.com/en/lenses/s018_60_600_45_63/"><strong>Sigma AF 60-600mm f/4.5-6.3 DG OS HSM Sports</strong> с байонетом <strong>Canon EF</strong></a> (напомню, что
@@ -892,7 +942,7 @@ POCO X6) уже вполне приемлемо (для меня) справля
 
 <p>Это не единственный вариант с таким фокусным на дальнем конце, поэтому стоит, наверное, прояснить выбор.</p>
 
-<h2 id="альтернативы-и-выбор">Альтернативы и выбор</h2>
+<h2 id="section">Альтернативы и выбор</h2>
 
 <p>Поскольку менять систему в мои планы не входило (и в ближайшее время не входит), выбор ограничен системой Canon EF.
 Какие варианты тут доступны?</p>
@@ -925,16 +975,18 @@ POCO X6) уже вполне приемлемо (для меня) справля
 
 <!--more-->
 
-<figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2025/06/19/sigma-60-600/IMG_8552-fhd.webp" class="__image_link"><img src="/img/2025/06/19/sigma-60-600/IMG_8552-320-676x676-925-224.webp" class="__image" alt="Сибирская косуля (Capreolus pygargus), дистанция чуть более 40 метров" title="Сибирская косуля (Capreolus pygargus), дистанция чуть более 40 метров" /></a><figcaption>Сибирская косуля (Capreolus pygargus), дистанция чуть более 40 метров</figcaption></figure>
-
-<h2 id="опыт-использования">Опыт использования</h2>
+<figure id="fig-2" class="__is_images_figure __is_images_single __is_images_width_350 __is_images__right" style="--is-images-width:320px;" data-modes="grid,slides">
+<a href="/img/4t/12/oc63to06.avif" title="Сибирская косуля (Capreolus pygargus), дистанция чуть более 40 метров" class="__is_images_wrapper"><img src="/img/cf/83/f3t5cbo3.avif" alt="Сибирская косуля (Capreolus pygargus), дистанция чуть более 40 метров" class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
+<h2 id="section-1">Опыт использования</h2>
 
 <p>Впечатления я решил сгруппировать по характеристикам, не разбивая на плюсы и минусы. Тем более что не все плюсы и минусы так уж однозначны.</p>
 
-<h3 id="фокусные-расстояния-и-прочие-оптические-характеристики">Фокусные расстояния (и прочие оптические характеристики)</h3>
+<h3 id="section-2">Фокусные расстояния (и прочие оптические характеристики)</h3>
 
-<figure class="__figure __implicit_figure __left" style="max-width:200px;"><a href="/img/2025/06/19/sigma-60-600/IMG_8083-fhd.webp" class="__image_link"><img src="/img/2025/06/19/sigma-60-600/IMG_8083-200-932x932-665-278.webp" class="__image" alt="Лядвенец рогатый (Lotus corniculatus), дистанция около 67 сантиметров" title="Лядвенец рогатый (Lotus corniculatus), дистанция около 67 сантиметров" /></a><figcaption>Лядвенец рогатый (Lotus corniculatus), дистанция около 67 сантиметров</figcaption></figure>
-
+<figure id="fig-3" class="__is_images_figure __is_images_single __is_images_width_200 __is_images__left" style="--is-images-width:200px;" data-modes="grid,slides">
+<a href="/img/8e/tc/7626048b.avif" title="Лядвенец рогатый (Lotus corniculatus), дистанция около 67 сантиметров" class="__is_images_wrapper"><img src="/img/f6/56/1oee315c.avif" alt="Лядвенец рогатый (Lotus corniculatus), дистанция около 67 сантиметров" class="__is_images_image __is_images_single" style="--is-images-width:200px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
 <p>В этом отношении все соответствует ожиданиям. Если раньше я мог снимать более-менее разборчиво (т.е. пригодно
 для <a href="https://www.inaturalist.org/" class="img-icon-inaturalist">iNaturalist</a>) мелких птиц с расстояний до 25-30 метров (предел «разборчивости» зависит от освещения
 и самой птицы), то теперь 50-60 метров — рабочие дистанции. Что-то покрупнее можно и со 100 метров (см. ниже фотографию совы<sup id="fnref:obs-owl"><a href="#fn:obs-owl" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>,
@@ -955,7 +1007,7 @@ POCO X6) уже вполне приемлемо (для меня) справля
 <p>Если говорить об оптическом качестве, то на мой взгляд, оно прекрасное. И в плане резкости, и в плане отсутствия искажений. ХА можно
 увидеть, но только в специфических условиях и только если разглядывать по­пик­сель­но. В норме картинка практически идеальная.</p>
 
-<h3 id="вес-и-габариты">Вес и габариты</h3>
+<h3 id="section-3">Вес и габариты</h3>
 
 <p>Тут все тоже соответствует ожиданиям, но порадоваться нечему. Увы, этот пункт проходит по категории «необходимые издержки».
 Но не «ужас-ужас» — лично я достаточно спокойно снимаю с рук, попытался использовать монопод, но что-то у ме­ня с ним не заладилось…
@@ -974,7 +1026,7 @@ POCO X6) уже вполне приемлемо (для меня) справля
 <p class="i2">В общем, <em>объектив реально большой и тяжелый, подойдет не для всех</em>, по крайней мере, если носить его на себе и снимать с рук. Если возить
 на ма­ши­не и снимать со шта­ти­ва, то будет попроще.</p>
 
-<h3 id="стабилизация">Стабилизация</h3>
+<h3 id="section-4">Стабилизация</h3>
 
 <p>А вот в этом отношении у меня ноль нареканий. Правда, нужно заметить, что меня стабилизация интересует исключительно в раз­ре­зе съемки
 фото с рук, и я видел в обзорах некоторое недовольство ее работой при съемке видео вообще и со штатива в осо­бен­нос­ти…</p>
@@ -986,9 +1038,10 @@ POCO X6) уже вполне приемлемо (для меня) справля
 
 <p>Что касается режима стабилизации в проводке, только по вертикали — не знаю, не пробовал.</p>
 
-<figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2025/06/19/sigma-60-600/IMG_8304-fhd.webp" class="__image_link"><img src="/img/2025/06/19/sigma-60-600/IMG_8304-320-627x627-740-409.webp" class="__image" alt="Болотная сова (Asio flammeus), дистанция около 80 метров" title="Болотная сова (Asio flammeus), дистанция около 80 метров" /></a><figcaption>Болотная сова (Asio flammeus), дистанция около 80 метров</figcaption></figure>
-
-<h3 id="автофокус">Автофокус</h3>
+<figure id="fig-4" class="__is_images_figure __is_images_single __is_images_width_350 __is_images__right" style="--is-images-width:320px;" data-modes="grid,slides">
+<a href="/img/o3/o0/6etb0450.avif" title="Болотная сова (Asio flammeus), дистанция около 80 метров" class="__is_images_wrapper"><img src="/img/65/17/1ootc508.avif" alt="Болотная сова (Asio flammeus), дистанция около 80 метров" class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
+<h3 id="section-5">Автофокус</h3>
 
 <p>А вот тут меня поджидал небольшой неприятный сюрприз: автофокус оказался медленней, чем на 18-300, несмотря на то, что объектив классом
 выше. Тут можно снова посмотреть на фото совы — это один из лучших кадров, а идеально четких в серии не оказалось вовсе.</p>
@@ -1001,7 +1054,7 @@ POCO X6) уже вполне приемлемо (для меня) справля
 начинает фокусироваться, когда заряд аккумулятора подходит к концу. Все-таки линзы тяжелые и мощности может не хватать.
 Кстати, аккумулятор садится с этим объективом ощутимо быстрее, чем с обычными, включая 18-300.</p>
 
-<h2 id="итого">Итого</h2>
+<h2 id="section-6">Итого</h2>
 
 <p>Я однозначно не разочарован, и сейчас <strong>Sigma 60-600mm</strong> — мой основной объектив для лесных прогулок. С другой стороны, рекомендовать его
 кому-либо еще не рискну — это очень специфический объектив, к которому требуется привыкнуть, не говоря уж о том, что тягать такой вес
@@ -1033,8 +1086,9 @@ POCO X6) уже вполне приемлемо (для меня) справля
       <p><a href="https://www.inaturalist.org/observations/288683861" class="img-icon-inaturalist">#288683861</a>. <a href="#fnref:obs-flo" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;photo&quot;, &quot;birdwatching&quot;, &quot;tech&quot;, &quot;hard&quot;, &quot;dybr&quot;]" /><category term="Sigma" /><category term="Sigma AF 60-600mm f/4.5-6.3 DG OS HSM Sports" /><category term="iNaturalist" /><category term="объектив" /><category term="телеобъектив" /><summary type="html"><![CDATA[Мой новый объектив — Sigma AF 60-600mm f/4.5-6.3 DG OS HSM Sports]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2025/06/19/sigma-60-600/sigma-60-600mm-640x640-1992x1040-127-314.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2025/06/19/sigma-60-600/sigma-60-600mm-640x640-1992x1040-127-314.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Обработка фото наблюдений</title><link href="https://shikhalev.github.io/photo/2023/07/nature-photo.html" rel="alternate" type="text/html" title="Обработка фото наблюдений" /><published>2023-07-28T00:00:00+00:00</published><updated>2023-07-28T00:00:00+00:00</updated><id>https://shikhalev.github.io/photo/2023/07/nature-photo</id><content type="html" xml:base="https://shikhalev.github.io/photo/2023/07/nature-photo.html"><![CDATA[<figure class="__figure __implicit_figure __right" style="max-width:400px;"><a href="/img/2023/07/28/nature-photo/00094-2752207474-fhd.webp" class="__image_link"><img src="/img/2023/07/28/nature-photo/00094-2752207474-400.webp" class="__image" alt="Сгенерироованная нейросетью иллюстрация" title="Сгенерироованная нейросетью иллюстрация" /></a></figure>
-
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;photo&quot;, &quot;birdwatching&quot;, &quot;tech&quot;, &quot;hard&quot;, &quot;dybr&quot;]" /><category term="Sigma" /><category term="Sigma AF 60-600mm f/4.5-6.3 DG OS HSM Sports" /><category term="iNaturalist" /><category term="объектив" /><category term="телеобъектив" /><summary type="html"><![CDATA[Мой новый объектив — Sigma AF 60-600mm f/4.5-6.3 DG OS HSM Sports]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/oc/f9/2eetf31f.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/oc/f9/2eetf31f.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Обработка фото наблюдений</title><link href="https://shikhalev.github.io/photo/2023/07/nature-photo.html" rel="alternate" type="text/html" title="Обработка фото наблюдений" /><published>2023-07-28T00:00:00+00:00</published><updated>2023-07-28T00:00:00+00:00</updated><id>https://shikhalev.github.io/photo/2023/07/nature-photo</id><content type="html" xml:base="https://shikhalev.github.io/photo/2023/07/nature-photo.html"><![CDATA[<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_400 __is_images__right" style="--is-images-width:400px;" data-modes="grid,slides">
+<a href="/img/ft/71/fb16e43b.webp" title="Сгенерироованная нейросетью иллюстрация" class="__is_images_wrapper"><img src="/img/8o/2c/3358062f.webp" alt="Сгенерироованная нейросетью иллюстрация" class="__is_images_image __is_images_single" style="--is-images-width:400px;--is-images-aspect-ratio:400/267;" data-scale="1"></a>
+</figure>
 <p>В последнее время я просмотрел довольно много всяких разных <em>чужих</em> наблюдений на <strong><a href="https://www.inaturalist.org/" title="iNaturalist" class="img-icon-inaturalist">iNa­tu­ra­list</a></strong> и,
 пожалуй, имею что сказать по по­во­ду фотографий. Не толь­ко нецензурного.</p>
 
@@ -1056,22 +1110,24 @@ RAW (те самые сырые данные с мат­ри­цы) на ко�
 
 <!--more-->
 
-<h2 id="пример">Пример</h2>
+<h2 id="section">Пример</h2>
 
-<figure class="__figure __implicit_figure __left" style="max-width:320px;"><a href="/img/2023/07/28/nature-photo/IMG_5301-fhd.webp" class="__image_link"><img src="/img/2023/07/28/nature-photo/IMG_5301-320.webp" class="__image" alt="Проявка по умолчанию" title="Проявка по умолчанию" /></a></figure>
-
+<figure id="fig-2" class="__is_images_figure __is_images_single __is_images_width_350 __is_images__left" style="--is-images-width:320px;" data-modes="grid,slides">
+<a href="/img/o0/tf/1b7t8651.avif" title="Проявка по умолчанию" class="__is_images_wrapper"><img src="/img/23/cc/ff7f785b.avif" alt="Проявка по умолчанию" class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:4/3;" data-scale="1"></a>
+</figure>
 <p>Слева (или выше) мы можем видеть фотографию дрозда почти что в ви­де силуэта. Не то, чтобы определить по ней было совсем нельзя, но все же
 некоторые сомнения неизбежны. Справа же (или ниже) та же фотография, но скон­вер­ти­ро­ван­ная со сжа­ти­ем кон­т­рас­та — разница очень существенная,
 и именно в пла­не распознавания и определения.</p>
 
-<figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2023/07/28/nature-photo/IMG_5301_01-fhd.webp" class="__image_link"><img src="/img/2023/07/28/nature-photo/IMG_5301_01-320.webp" class="__image" alt="Проявка со сжатием контраста" title="Проявка со сжатием контраста" /></a></figure>
-
+<figure id="fig-3" class="__is_images_figure __is_images_single __is_images_width_350 __is_images__right" style="--is-images-width:320px;" data-modes="grid,slides">
+<a href="/img/6b/48/7030859o.avif" title="Проявка со сжатием контраста" class="__is_images_wrapper"><img src="/img/56/oo/e294b712.avif" alt="Проявка со сжатием контраста" class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:4/3;" data-scale="1"></a>
+</figure>
 <p>Если на ма­лень­ких картинках разница не оче­вид­на, можно по ним клик­нуть — там версия побольше.</p>
 
 <p>При этом не ис­ка­жа­ют­ся цвета, а тем более контуры объектов, рисунок пятен и т.д. и т.п. Да и общая картина меняется незначительно.
 По су­ти эффект та­кой же, как будто мы очень умеренно использовали мягкий заполняющий свет при съем­ке.</p>
 
-<h2 id="что-стоит-делать">Что стоит делать?</h2>
+<h2 id="section-1">Что стоит делать?</h2>
 
 <p><em>Во-первых</em>, естественно, но это имеет смысл проговорить, <strong>снимать нужно в RAW</strong> и по воз­мож­нос­ти на хо­ро­шую технику. Но да­же при съем­ке на те­ле­фон
 можно а) най­ти настройку или приложение, позволяющие снимать в RAW (не для всех моделей и производителей это возможно, но надо смотреть конкретно);
@@ -1081,8 +1137,9 @@ RAW (те самые сырые данные с мат­ри­цы) на ко�
 информации на вхо­де, могут повылазить шумы или даже искажения. В це­лом, если камера или телефон позволяют только JPEG, то нужно выставить <em>максимальные</em>
 качество и разрешение, но <em>без ка­ких-ли­бо улуч­шай­зе­ров</em>, о ко­то­рых я <a href="#ai">еще скажу</a> в сле­ду­ю­щем разделе.</p>
 
-<figure class="__figure __implicit_figure __right" style="max-width:240px;"><a href="/img/2023/07/28/nature-photo/tone-curve-fhd.webp" class="__image_link"><img src="/img/2023/07/28/nature-photo/tone-curve-240-393x393-5-83.webp" class="__image" alt="Модуль «Тональная кривая» с пресетом «Сжатие контраста»" title="Модуль «Тональная кривая» с пресетом «Сжатие контраста»" /></a></figure>
-
+<figure id="fig-4" class="__is_images_figure __is_images_single __is_images_width_250 __is_images__right" style="--is-images-width:240px;" data-modes="grid,slides">
+<a href="/img/cc/cb/f71t6f41.webp" title="Модуль «Тональная кривая» с пресетом «Сжатие контраста»" class="__is_images_wrapper"><img src="/img/55/20/2b2etfo9.webp" alt="Модуль «Тональная кривая» с пресетом «Сжатие контраста»" class="__is_images_image __is_images_single" style="--is-images-width:240px;--is-images-aspect-ratio:1/1;" data-scale="1"></a>
+</figure>
 <p><em>Во-вторых</em>, как выше уже сказано, можно использовать <strong>сжатие контраста</strong>. Так это называется в <strong class="img-icon-darktable">Dark­tab­le</strong> — это пре­сет
 в <a href="https://docs.darktable.org/usermanual/4.2/en/module-reference/processing-modules/tone-curve/" title="Модуль «Тональная кривая» [en]">мо­ду­ле «Тональная кривая»</a>, и собственно кривая выглядит, как показано на скрин­шо­те справа (или выше). Точно та­кую же кривую можно
 использовать и в дру­гих программах для об­ра­бот­ки фотографий.</p>
@@ -1107,7 +1164,7 @@ RAW (те самые сырые данные с мат­ри­цы) на ко�
 <p>Важный момент: уровни применяются <em>после</em> кро­па, чтобы растянуть гистограмму именно выбранного изображения, а не всей сцены, где у нас могут быть
 участки и более светлые, и более темные, чем в ин­те­ре­су­ю­щем нас фрагменте.</p>
 
-<h2 id="чего-делать-не-стоит">Чего делать не стоит?</h2>
+<h2 id="section-2">Чего делать не стоит?</h2>
 
 <ul>
   <li>
@@ -1139,7 +1196,7 @@ RAW (те самые сырые данные с мат­ри­цы) на ко�
   </li>
 </ul>
 
-<h2 id="под-вопросом">Под вопросом</h2>
+<h2 id="section-3">Под вопросом</h2>
 
 <p>Некоторые моменты съемки и обработки я бы отнес к спор­ным, от них, наверное, не сто­ит полностью отказываться, но использовать надо осторожно и внимательно.</p>
 
@@ -1175,7 +1232,7 @@ RAW (те самые сырые данные с мат­ри­цы) на ко�
   </li>
 </ul>
 
-<h2 id="итого">Итого</h2>
+<h2 id="section-4">Итого</h2>
 
 <p>Давайте все-таки исходить из то­го, что фотография в на­блю­де­ни­ях — это способ представления информации, и <strong>наша за­да­ча — вытянуть максимум имеющейся информации
 и представить ее в удо­бо­ва­ри­мом виде</strong>. Любые эстетические соображения не дол­ж­ны противоречить информативности.</p>
@@ -1223,8 +1280,9 @@ RAW (те самые сырые данные с мат­ри­цы) на ко�
       <p>См. мой пост <a href="/photo/2020/01/darktable-rgb-levels.html" title="Новый модуль Darktable — «Уровни RGB»">«Новый модуль Darktable — „Уровни RGB“» от 17.01.2020</a>. <a href="#fnref:rgb" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;photo&quot;, &quot;processing&quot;, &quot;birdwatching&quot;, &quot;nature&quot;]" /><category term="iNaturalist" /><category term="Darktable" /><category term="RAW" /><category term="JPEG" /><summary type="html"><![CDATA[Как стоит и как не стоит обрабатывать фотографии наблюдений живой природы]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2023/07/28/nature-photo/00094-2752207474-640x640-768x400-0-94.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2023/07/28/nature-photo/00094-2752207474-640x640-768x400-0-94.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Darktable 4.2.0</title><link href="https://shikhalev.github.io/photo/2022/12/darktable-4.2.html" rel="alternate" type="text/html" title="Darktable 4.2.0" /><published>2022-12-26T00:00:00+00:00</published><updated>2022-12-26T00:00:00+00:00</updated><id>https://shikhalev.github.io/photo/2022/12/darktable-4.2</id><content type="html" xml:base="https://shikhalev.github.io/photo/2022/12/darktable-4.2.html"><![CDATA[<figure class="__figure __implicit_figure __right logo" style="max-width:320px;shape-outside:url(/img/2022/12/26/darktable-4.2/dt-ny.svg);"><img src="/img/2022/12/26/darktable-4.2/dt-ny.svg" class="__image" style="shape-outside:url(/img/2022/12/26/darktable-4.2/dt-ny.svg);" alt="Новогодняя иконка-логотип, взятая из файлов установленного Darktable" title="Новогодняя иконка-логотип, взятая из файлов установленного Darktable" /></figure>
-
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;photo&quot;, &quot;processing&quot;, &quot;birdwatching&quot;, &quot;nature&quot;]" /><category term="iNaturalist" /><category term="Darktable" /><category term="RAW" /><category term="JPEG" /><summary type="html"><![CDATA[Как стоит и как не стоит обрабатывать фотографии наблюдений живой природы]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/6f/38/b30bf10o.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/6f/38/b30bf10o.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Darktable 4.2.0</title><link href="https://shikhalev.github.io/photo/2022/12/darktable-4.2.html" rel="alternate" type="text/html" title="Darktable 4.2.0" /><published>2022-12-26T00:00:00+00:00</published><updated>2022-12-26T00:00:00+00:00</updated><id>https://shikhalev.github.io/photo/2022/12/darktable-4.2</id><content type="html" xml:base="https://shikhalev.github.io/photo/2022/12/darktable-4.2.html"><![CDATA[<figure id="fig-1" class="logo __is_images_figure __is_images_single __is_images_shaped __is_images_width_350 __is_images__right" style="shape-outside:url(/img/2b/3b/7ee88932.svg);--is-images-width:320px;" data-modes="grid,slides">
+<span title="Новогодняя иконка-логотип, взятая из файлов установленного Darktable" class="__is_images_wrapper"><img src="/img/2b/3b/7ee88932.svg" alt="Новогодняя иконка-логотип, взятая из файлов установленного Darktable" class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:32/27;" data-scale="1"></span>
+</figure>
 <p>Недавно вышла очередная версия моего любимого софта для об­ра­бот­ки raw-файлов фотографий, и я решил, что это подходящий
 повод для то­го, чтобы посмотреть, а что же поменялось с то­го времени, когда я писал <strong><a href="/photo/2019/09/darktable-quickstart.html">«Darktable — (не очень) быстрый старт»</a></strong>.
 Речь там шла о вер­сии <strong>2.6.2</strong>, так что изменилось многое.</p>
@@ -1238,10 +1296,11 @@ RAW (те самые сырые данные с мат­ри­цы) на ко�
 
 <!--more-->
 
-<h2 id="управление-коллекции">Управление, коллекции</h2>
+<h2 id="section">Управление, коллекции</h2>
 
-<figure class="__figure __implicit_figure __center" style="max-width:800px;"><a href="/img/2022/12/26/darktable-4.2/management-fhd.webp" class="__image_link"><img src="/img/2022/12/26/darktable-4.2/management-800.webp" class="__image" alt="Скриншот основного окна в режиме обзора" title="Скриншот основного окна в режиме обзора" /></a></figure>
-
+<figure id="fig-2" class="__is_images_figure __is_images_single __is_images_width_800" style="--is-images-width:800px;" data-modes="grid,slides">
+<a href="/img/68/93/225t7774.webp" title="Скриншот основного окна в режиме обзора" class="__is_images_wrapper"><img src="/img/9o/ce/t1bct027.webp" alt="Скриншот основного окна в режиме обзора" class="__is_images_image __is_images_single" style="--is-images-width:800px;--is-images-aspect-ratio:400/219;" data-scale="1"></a>
+</figure>
 <p>На скрин­шо­те можно видеть внизу тайм­лайн<sup id="fnref:timeline"><a href="#fn:timeline" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> — и это очень удобное нововведение, когда нам надо пролистать какие-то старые снимки. А сле­ва
 имеется модуль «Коллекции»<sup id="fnref:collections"><a href="#fn:collections" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> с дре­во­вид­ной навигацией, где, однако, можно выбирать не толь­ко да­ту/пе­ри­од, но и ка­та­лог/съем­ку, а также
 использовать и другие критерии, при этом критерий выборки может быть не един­с­т­вен­ным — можно составлять сложные фильтры, объединенные логическими
@@ -1256,7 +1315,7 @@ RAW (те самые сырые данные с мат­ри­цы) на ко�
 
 <p>Но са­мо по се­бе наличие тайм­лай­на делает первый вариант наиболее обычным.</p>
 
-<h2 id="изменения-вмодулях">Изменения в модулях</h2>
+<h2 id="section-1">Изменения в модулях</h2>
 
 <p>Их много. Я остановлюсь только на тех модулях, которые упоминал в <a href="/photo/2019/09/darktable-quickstart.html">«Быс­т­ром старте»</a>.</p>
 
@@ -1280,12 +1339,13 @@ RAW (те самые сырые данные с мат­ри­цы) на ко�
   </dd>
 </dl>
 
-<h3 id="новые">Новые</h3>
+<h3 id="section-2">Новые</h3>
 
 <p>Вообще новых модулей много, ниже те, которые лично мне показались интересными.</p>
 
-<figure class="__figure __implicit_figure __right" style="max-width:284px;"><img src="/img/2022/12/26/darktable-4.2/rgb-levels-284.webp" class="__image" alt="Модуль «Уровни RGB»" title="Модуль «Уровни RGB»" /></figure>
-
+<figure id="fig-3" class="__is_images_figure __is_images_single __is_images_width_300 __is_images__right" style="--is-images-width:284px;" data-modes="grid,slides">
+<span title="Модуль «Уровни RGB»" class="__is_images_wrapper"><img src="/img/5b/87/c5tff7ob.webp" alt="Модуль «Уровни RGB»" class="__is_images_image __is_images_single" style="--is-images-width:284px;--is-images-aspect-ratio:284/313;" data-scale="1"></span>
+</figure>
 <dl>
   <dt>Уровни RGB<sup id="fnref:rgb_levels"><a href="#fn:rgb_levels" class="footnote" rel="footnote" role="doc-noteref">9</a></sup> и Тональная кривая RGB<sup id="fnref:rgb_tonecurve"><a href="#fn:rgb_tonecurve" class="footnote" rel="footnote" role="doc-noteref">10</a></sup></dt>
   <dd>
@@ -1306,7 +1366,7 @@ RAW (те самые сырые данные с мат­ри­цы) на ко�
   </dd>
 </dl>
 
-<h2 id="профили-и-умолчания">Профили и умолчания</h2>
+<h2 id="section-3">Профили и умолчания</h2>
 
 <p>И вот тут были сделаны очень важные и полезные изменения.
 Теперь в на­строй­ках<sup id="fnref:settings"><a href="#fn:settings" class="footnote" rel="footnote" role="doc-noteref">16</a></sup> можно <strong>выбрать</strong> набор модулей, автоматически включающийся по умол­ча­нию. Варианты следующие:</p>
@@ -1317,8 +1377,9 @@ RAW (те самые сырые данные с мат­ри­цы) на ко�
   <li><em>Нет</em>.</li>
 </ul>
 
-<figure class="__figure __implicit_figure __center" style="max-width:700px;"><a href="/img/2022/12/26/darktable-4.2/presets-fhd.webp" class="__image_link"><img src="/img/2022/12/26/darktable-4.2/presets-700.webp" class="__image" alt="Окно настроек с выбором умолчательного набора модулей" title="Окно настроек с выбором умолчательного набора модулей" /></a></figure>
-
+<figure id="fig-4" class="__is_images_figure __is_images_single __is_images_width_700" style="--is-images-width:700px;" data-modes="grid,slides">
+<a href="/img/bo/bo/12fc65t1.webp" title="Окно настроек с выбором умолчательного набора модулей" class="__is_images_wrapper"><img src="/img/57/1o/5e57tf2e.webp" alt="Окно настроек с выбором умолчательного набора модулей" class="__is_images_image __is_images_single" style="--is-images-width:700px;--is-images-aspect-ratio:700/289;" data-scale="1"></a>
+</figure>
 <p>Независимо от вы­б­ран­но­го варианта будут применены <em>неотключаемые</em> модули, плюс «Баланс белого», «Восстановление пересветов» и «Ориентация».
 Что отдельно приятно, вариант с «Ба­зо­вой кривой» добавляет только ее, без «Резкости» и прочего мусора.</p>
 
@@ -1377,4 +1438,4 @@ RAW (те самые сырые данные с мат­ри­цы) на ко�
       <p><a href="https://docs.darktable.org/usermanual/4.0/en/preferences-settings/processing/">https://docs.darktable.org/usermanual/4.0/en/preferences-settings/processing/</a> <a href="#fnref:settings" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;photo&quot;, &quot;processing&quot;, &quot;tech&quot;, &quot;soft&quot;, &quot;graphics&quot;]" /><category term="Darktable" /><category term="Linux" /><category term="RAW" /><category term="цвет" /><summary type="html"><![CDATA[Очередная версия Darktable, текущее состояние]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/2022/12/26/darktable-4.2/management-640x640-500-261-0-0.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/2022/12/26/darktable-4.2/management-640x640-500-261-0-0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;photo&quot;, &quot;processing&quot;, &quot;tech&quot;, &quot;soft&quot;, &quot;graphics&quot;]" /><category term="Darktable" /><category term="Linux" /><category term="RAW" /><category term="цвет" /><summary type="html"><![CDATA[Очередная версия Darktable, текущее состояние]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/82/eb/o3c26e3c.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/82/eb/o3c26e3c.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

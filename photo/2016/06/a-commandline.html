@@ -26,15 +26,15 @@
 <link rel="canonical" href="https://shikhalev.github.io/photo/2016/06/a-commandline.html" />
 <meta property="og:url" content="https://shikhalev.github.io/photo/2016/06/a-commandline.html" />
 <meta property="og:site_name" content="Иван Шихалев" />
-<meta property="og:image" content="https://shikhalev.github.io/img/2016/06/11/preamble/penguin-640x640-3989x2082-0-296.webp" />
+<meta property="og:image" content="https://shikhalev.github.io/img/f6/76/673b3ct0.webp" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2016-06-15T00:00:00+00:00" />
 <meta property="article:modified_time" content="2016-06-15T00:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://shikhalev.github.io/img/2016/06/11/preamble/penguin-640x640-3989x2082-0-296.webp" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/f6/76/673b3ct0.webp" />
 <meta name="twitter:title" content="Пингвин-фотолюбитель: 2. Командная строка и пакетная обработка" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2016-06-15T00:00:00+00:00","datePublished":"2016-06-15T00:00:00+00:00","description":"Работа с фотографиями из командной строки","headline":"Пингвин-фотолюбитель: 2. Командная строка и пакетная обработка","image":"https://shikhalev.github.io/img/2016/06/11/preamble/penguin-640x640-3989x2082-0-296.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/photo/2016/06/a-commandline.html"},"url":"https://shikhalev.github.io/photo/2016/06/a-commandline.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2016-06-15T00:00:00+00:00","datePublished":"2016-06-15T00:00:00+00:00","description":"Работа с фотографиями из командной строки","headline":"Пингвин-фотолюбитель: 2. Командная строка и пакетная обработка","image":"https://shikhalev.github.io/img/f6/76/673b3ct0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/photo/2016/06/a-commandline.html"},"url":"https://shikhalev.github.io/photo/2016/06/a-commandline.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
@@ -72,6 +72,11 @@
     })(window, document, "clarity", "script", "u2gczedmo7");
 </script>
 
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.4.css" />
+<script type="module" src="/js/is-images-0.8.0.4.js"></script>
+<!-- end of jekyll-is-images stuff -->
+
 </head>
 
 <body>
@@ -106,8 +111,9 @@
 <p class="meta">
   <time datetime="2016-06-15T00:00:00+00:00" itemprop="datePublished">2016.06.15
   </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#EXIF">EXIF</a>​<a class="tag" href="/tags#ImageMagick">ImageMagick</a>​<a class="tag" href="/tags#Linux">Linux</a>​<a class="tag" href="/tags#bash">bash</a>​<a class="tag" href="/tags#exiftool">exiftool</a>​<a class="tag" href="/tags#командная строка">командная строка</a></aside></header><div itemprop="articleBody">
-  <figure class="__figure __implicit_figure __right logo" style="max-width:320px;shape-outside:url(/img/2016/06/15/a-commandline/kdpv-320.webp);"><a href="/img/2016/06/15/a-commandline/kdpv-fhd.webp" class="__image_link"><img src="/img/2016/06/15/a-commandline/kdpv-320.webp" class="__image" style="shape-outside:url(/img/2016/06/15/a-commandline/kdpv-320.webp);" alt="Картинка стырена где-то в интернетах, найдена по ключевому слову „imagemagick“" title="Картинка стырена где-то в интернетах, найдена по ключевому слову „imagemagick“"></a></figure>
-
+  <figure id="fig-1" class="logo __is_images_figure __is_images_single __is_images_shaped __is_images_width_350 __is_images__right" style="shape-outside:url(/img/52/7e/f6c9bc0e.webp);--is-images-width:320px;" data-modes="grid,slides">
+<a href="/img/t6/o8/14f66141.webp" title="Картинка стырена где-то в интернетах, найдена по ключевому слову „imagemagick“" class="__is_images_wrapper"><img src="/img/52/7e/f6c9bc0e.webp" alt="Картинка стырена где-то в интернетах, найдена по ключевому слову „imagemagick“" class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:320/289;" data-scale="1"></a>
+</figure>
 <p>Коротко о главном: главный обработчик изображений из командной строки, равно как и в пакетном режиме, у нас
 по прежнему пакет <strong><a href="http://www.imagemagick.org/" class="img-icon-imagemagick">ImageMagick</a></strong>. КДПВ справа взята поиском по его названию в «картинках Google»,
 помимо демонстрации некоторых возможностей там и пингвин присутствует.</p>
@@ -221,8 +227,9 @@ mogrify <span class="nt">-border</span> 10 <span class="nt">-bordercolor</span> 
 
 <p>В итоге мы получаем возможность в пакетном режиме получать такое:</p>
 
-<figure class="__figure __implicit_figure __center" style="max-width:800px;"><a href="/img/2016/06/15/a-commandline/IMG_8638-fhd.webp" class="__image_link"><img src="/img/2016/06/15/a-commandline/IMG_8638-800.webp" class="__image"></a></figure>
-
+<figure id="fig-2" class="__is_images_figure __is_images_single __is_images_width_800" style="--is-images-width:800px;" data-modes="grid,slides">
+<a href="/img/b3/12/f4207f3b.avif" class="__is_images_wrapper"><img src="/img/fo/0e/9665c11b.avif" alt="" class="__is_images_image __is_images_single" style="--is-images-width:800px;--is-images-aspect-ratio:400/267;" data-scale="1"></a>
+</figure>
 <p>Тонирование и кадрирование я до того сделал в Darktable, см. <a href="/photo/2016/06/raw.html">предыдущий пост</a>. Почему-то ImageMagick на моих TIFF, полученных
 из Darktable, выдает кучу предупреждений типа «Unknown field…», но на результат они не влияют.</p>
 
@@ -243,16 +250,6 @@ mogrify <span class="nt">-border</span> 10 <span class="nt">-bordercolor</span> 
 <aside class="recommendations"><div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2021.06.17 |</span>
-            <a href="/life/2021/06/walk.html" title="Немного о том, как я снимаю птиц и не только, на примере одного дня.">Мини-экспедиция</a>
-          </dt>
-          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-calendar-alt" href="/life/dybr/" title="Просто кусочки повседневности">Дыбр</a>
-</dd>
-        </dl>
-      </div>
-<div class="random-item">
-        <dl>
-          <dt>
             <span class="meta">2022.12.15 |</span>
             <a href="/life/2022/12/naturadybr-2022.html" title="Наблюдательские итоги 2022 года">Натурадыбр –​ 2022</a>
           </dt>
@@ -263,10 +260,20 @@ mogrify <span class="nt">-border</span> 10 <span class="nt">-bordercolor</span> 
 <div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2023.07.28 |</span>
-            <a href="/photo/2023/07/nature-photo.html" title="Как стоит и как не стоит обрабатывать фотографии наблюдений живой природы">Обработка фото наблюдений</a>
+            <span class="meta">2016.06.17 |</span>
+            <a href="/photo/2016/06/hugin.html" title="Склейка панорам под Linux — программа Hugin">Пингвин-фотолюбитель: 3. Панорамы</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>
+          <dd class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-linux" href="/photo/processing/penguin/" title="Цикл постов 2016 года об обработке фотографий под Linux">Пингвин-фотолюбитель</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a>
+</dd>
+        </dl>
+      </div>
+<div class="random-item">
+        <dl>
+          <dt>
+            <span class="meta">2021.07.17 |</span>
+            <a href="/photo/2021/07/gpx-exif-tools.html" title="Запись GPX и корректная его обработка">Как я ставлю геометки к фотографиям</a>
+          </dt>
+          <dd class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>
 </dd>
         </dl>
       </div></aside>

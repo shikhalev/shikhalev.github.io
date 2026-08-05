@@ -26,15 +26,15 @@
 <link rel="canonical" href="https://shikhalev.github.io/tech/2015/04/ruby-multitasking.html" />
 <meta property="og:url" content="https://shikhalev.github.io/tech/2015/04/ruby-multitasking.html" />
 <meta property="og:site_name" content="Иван Шихалев" />
-<meta property="og:image" content="https://shikhalev.github.io/img/2015/04/04/ruby-multitasking/screen-multitask-640x640-500-261-0-0.webp" />
+<meta property="og:image" content="https://shikhalev.github.io/img/8f/07/0c077e71.webp" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-04-04T00:00:00+00:00" />
 <meta property="article:modified_time" content="2015-04-04T00:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://shikhalev.github.io/img/2015/04/04/ruby-multitasking/screen-multitask-640x640-500-261-0-0.webp" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/8f/07/0c077e71.webp" />
 <meta name="twitter:title" content="Ruby и многозадачность" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2015-04-04T00:00:00+00:00","datePublished":"2015-04-04T00:00:00+00:00","description":"В статье рассматриваются основные средства работы с потоками (threads) и процессами в языке и стандартной библиотеке Ruby.","headline":"Ruby и многозадачность","image":"https://shikhalev.github.io/img/2015/04/04/ruby-multitasking/screen-multitask-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2015/04/ruby-multitasking.html"},"url":"https://shikhalev.github.io/tech/2015/04/ruby-multitasking.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2015-04-04T00:00:00+00:00","datePublished":"2015-04-04T00:00:00+00:00","description":"В статье рассматриваются основные средства работы с потоками (threads) и процессами в языке и стандартной библиотеке Ruby.","headline":"Ruby и многозадачность","image":"https://shikhalev.github.io/img/8f/07/0c077e71.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2015/04/ruby-multitasking.html"},"url":"https://shikhalev.github.io/tech/2015/04/ruby-multitasking.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
@@ -71,6 +71,11 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "u2gczedmo7");
 </script>
+
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.4.css" />
+<script type="module" src="/js/is-images-0.8.0.4.js"></script>
+<!-- end of jekyll-is-images stuff -->
 
 </head>
 
@@ -110,8 +115,9 @@
 
 <hr>
 
-<figure class="__figure __implicit_figure __right" style="max-width:158px;padding: 5px;"><a href="http://samag.ru/archive/article/2645"><img src="/img/2015/04/04/ruby-multitasking/136-158.webp" class="__image"></a></figure>
-
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_200 __is_images__right" style="padding:5px;--is-images-width:158px;" data-modes="grid,slides">
+<a href="http://samag.ru/archive/article/2645" class="__is_images_wrapper"><img src="/img/te/c5/6te1bb17.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:158px;--is-images-aspect-ratio:79/112;" data-scale="1"></a>
+</figure>
 <div class="note">
   <p><strong>В статье рассматриваются основные средства работы с потоками (threads) и процессами в языке и стандартной библиотеке Ruby</strong></p>
 
@@ -128,8 +134,8 @@
 
 <!--more-->
 
-<h2 id="многопоточность">
-<a class="anchor" href="#%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%D0%BF%D0%BE%D1%82%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Многопоточность</h2>
+<h2 id="section">
+<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Многопоточность</h2>
 
 <p>Потоки позволяют программисту распараллелить выполнение задачи в рамках одного процесса. Это дает заметный выигрыш в двух основных
 случаях: во-первых, когда есть аппаратные ресурсы для параллельных вычислений, т.е. многоядерная или многопроцессорная архитектура
@@ -212,8 +218,8 @@ terminate</span></code></pre>
 
 <p>Причем, если мы закомментируем строку «<code class="language-plaintext highlighter-rouge">sleep 0</code>», то до «<code class="language-plaintext highlighter-rouge">continued</code>» дело может и не дойти.</p>
 
-<h3 id="обмен-данными-между-потоками">
-<a class="anchor" href="#%D0%BE%D0%B1%D0%BC%D0%B5%D0%BD-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-%D0%BF%D0%BE%D1%82%D0%BE%D0%BA%D0%B0%D0%BC%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Обмен данными между потоками</h3>
+<h3 id="section-1">
+<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Обмен данными между потоками</h3>
 
 <p><em>Во-первых,</em> мы можем передавать блоку аргументы при создании потока:</p>
 
@@ -326,8 +332,8 @@ terminate</span></code></pre>
 
 <p>И, <em>в-пятых,</em> для потоков применимы описываемые ниже способы взаимодействия между процессами.</p>
 
-<h3 id="отступление-о-волокнах">
-<a class="anchor" href="#%D0%BE%D1%82%D1%81%D1%82%D1%83%D0%BF%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BE-%D0%B2%D0%BE%D0%BB%D0%BE%D0%BA%D0%BD%D0%B0%D1%85" aria-hidden="true"><span class="octicon octicon-link"></span></a>Отступление о «волокнах»</h3>
+<h3 id="section-2">
+<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Отступление о «волокнах»</h3>
 
 <p>«Волокна» (fibers) имеют косвенное отношение к теме статьи, но не упомянуть их нельзя, хотя бы
 из-за вышеописанного обращения к fiber-local переменным. По сути это сопрограммы, переключение
@@ -356,8 +362,8 @@ terminate</span></code></pre>
 <p>В целом, это довольно экзотический инструмент, которому в явном виде не так-то просто найти
 практическое применение.</p>
 
-<h3 id="дополнительно-о-потоках">
-<a class="anchor" href="#%D0%B4%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE-%D0%BE-%D0%BF%D0%BE%D1%82%D0%BE%D0%BA%D0%B0%D1%85" aria-hidden="true"><span class="octicon octicon-link"></span></a>Дополнительно о потоках</h3>
+<h3 id="section-3">
+<a class="anchor" href="#section-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Дополнительно о потоках</h3>
 
 <p>Для группировки потоков существует класс <code class="language-plaintext highlighter-rouge">ThreadGroup</code>, который не предоставляет никакой особой функциональности,
 кроме контроля за тем, что каждый поток принадлежит одной и только одной группе. Не добавленный ни в какую группу
@@ -371,8 +377,8 @@ terminate</span></code></pre>
 <p>Еще одна полезная библиотека («<code class="language-plaintext highlighter-rouge">require 'thwait'</code>» и класс <code class="language-plaintext highlighter-rouge">ThreadsWait</code>) позволяет ожидать завершения некоего набора
 потоков, как всех вместе, так и по очереди.</p>
 
-<h2 id="процессы-в-ruby">
-<a class="anchor" href="#%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D1%8B-%D0%B2-ruby" aria-hidden="true"><span class="octicon octicon-link"></span></a>Процессы в Ruby</h2>
+<h2 id="ruby">
+<a class="anchor" href="#ruby" aria-hidden="true"><span class="octicon octicon-link"></span></a>Процессы в Ruby</h2>
 
 <p>Собственно запуск программы на Ruby, как и на любом другом языке — есть запуск процесса. Который, в свою очередь,
 может порождать дочерние и общаться как с ними, так и с совершенно независимыми от него. Ключевое отличие дочернего
@@ -447,8 +453,8 @@ Child [9034]: 2</span></code></pre>
 правами доступа, текущим каталогом и, самое главное, перенаправлениями ввода-вывода. В самом же простом случае достаточно указать
 только команду.</p>
 
-<h3 id="сигналы">
-<a class="anchor" href="#%D1%81%D0%B8%D0%B3%D0%BD%D0%B0%D0%BB%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Сигналы</h3>
+<h3 id="section-4">
+<a class="anchor" href="#section-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Сигналы</h3>
 
 <p>Процессы могут посылать друг другу сигналы и как-то на них реагировать. Вообще говоря, сигналы — это скорее механизм
 для общения операционной системы с процессами, и большинство из них зарезервировано под специальные нужды, однако
@@ -500,8 +506,8 @@ Child died.</span></code></pre>
 <p>К сожалению, посредством сигналов мы можем сообщить процессу только о наступлении некоторого события, без подробной
 информации. А всю информацию между процессами нужно передавать средствами ввода-вывода.</p>
 
-<h3 id="каналы-ввода-вывода">
-<a class="anchor" href="#%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D1%8B-%D0%B2%D0%B2%D0%BE%D0%B4%D0%B0-%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Каналы ввода-вывода</h3>
+<h3 id="section-5">
+<a class="anchor" href="#section-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Каналы ввода-вывода</h3>
 
 <p>Общим способом для любых дочерних процессов будет перенаправление ввода-вывода посредством каналов (pipes).
 Для внутренних подпроцессов это выглядит так:</p>
@@ -545,8 +551,8 @@ Child died.</span></code></pre>
 <p>В приведенных примерах использовалась передача данных только в одну сторону, что, конечно, необязательно. Можно создавать
 произвольное количество каналов и назначать их как выводу, так и вводу.</p>
 
-<h3 id="сокеты">
-<a class="anchor" href="#%D1%81%D0%BE%D0%BA%D0%B5%D1%82%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Сокеты</h3>
+<h3 id="section-6">
+<a class="anchor" href="#section-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Сокеты</h3>
 
 <p>Сокеты — это совсем универсальный механизм взаимодействия произвольных программ между собою, в том числе и по сети.
 Здесь уже не важно, как и где запускается процесс-собеседник, нужно только знать адрес и протокол обмена (формат данных).
@@ -557,8 +563,8 @@ Child died.</span></code></pre>
 о которой я писал в одной из предыдущих статей<sup id="fnref:druby"><a href="#fn:druby" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>. Здесь же стоит сказать, что dRuby позволяет обращаться к объекту
 в другом процессе (и, возможно, на другой машине) как к локальному объекту Ruby со всеми его методами, свойствами и т.д.</p>
 
-<h2 id="применение">
-<a class="anchor" href="#%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Применение</h2>
+<h2 id="section-7">
+<a class="anchor" href="#section-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>Применение</h2>
 
 <p>Подведем некоторые итоги.</p>
 
@@ -604,30 +610,30 @@ Child died.</span></code></pre>
 <aside class="recommendations"><div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2023.10.03 |</span>
-            <a href="/life/2023/10/merlin.html" title="Приложение для рас­поз­на­ва­ния птиц по го­ло­су">Merlin Bird ID</a>
+            <span class="meta">2016.03.09 |</span>
+            <a href="/tech/2016/03/introspection.html" title="Что программа может знать о самой себе?">Средства самопознания в Ruby</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a>
 </dd>
         </dl>
       </div>
 <div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2021.07.17 |</span>
-            <a href="/photo/2021/07/gpx-exif-tools.html" title="Запись GPX и корректная его обработка">Как я ставлю геометки к фотографиям</a>
+            <span class="meta">2013.10.09 |</span>
+            <a href="/tech/2013/10/eval-vs-exec-2.html" title="Или снова об оптимизации скриптовых языков.">Возвращаясь к размышлизму...</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-biohazard" href="/tech/programming/abs/" title="Абстрактные размышления о программировании в целом">Абстракции</a>
 </dd>
         </dl>
       </div>
 <div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2013.07.02 |</span>
-            <a href="/tech/2013/07/fonts.html" title="Внезапно понял, почему кириллические шрифты все, как бы это помягче... в лучшем случае — никакие.">О шриф­тах, или Без­бла­го­дат­ность кар­го-куль­та</a>
+            <span class="meta">2010.10.29 |</span>
+            <a href="/life/2010/10/limits.html" title="">Про задачи</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>
+          <dd class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-brain" href="/life/psi/mind/" title="Заметки о том, как мы думаем">Мышление</a>
 </dd>
         </dl>
       </div></aside>
@@ -647,21 +653,21 @@ Child died.</span></code></pre>
 </aside><aside id="toc" class="toc toc-post">
   <h4>Содержание</h4>
   <ul id="toc_list" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#многопоточность">Многопоточность</a>
+<li class="toc-entry toc-h2"><a href="#section">Многопоточность</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#обмен-данными-между-потоками">Обмен данными между потоками</a></li>
-<li class="toc-entry toc-h3"><a href="#отступление-о-волокнах">Отступление о «волокнах»</a></li>
-<li class="toc-entry toc-h3"><a href="#дополнительно-о-потоках">Дополнительно о потоках</a></li>
+<li class="toc-entry toc-h3"><a href="#section-1">Обмен данными между потоками</a></li>
+<li class="toc-entry toc-h3"><a href="#section-2">Отступление о «волокнах»</a></li>
+<li class="toc-entry toc-h3"><a href="#section-3">Дополнительно о потоках</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#процессы-в-ruby">Процессы в Ruby</a>
+<li class="toc-entry toc-h2"><a href="#ruby">Процессы в Ruby</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#сигналы">Сигналы</a></li>
-<li class="toc-entry toc-h3"><a href="#каналы-ввода-вывода">Каналы ввода-вывода</a></li>
-<li class="toc-entry toc-h3"><a href="#сокеты">Сокеты</a></li>
+<li class="toc-entry toc-h3"><a href="#section-4">Сигналы</a></li>
+<li class="toc-entry toc-h3"><a href="#section-5">Каналы ввода-вывода</a></li>
+<li class="toc-entry toc-h3"><a href="#section-6">Сокеты</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#применение">Применение</a></li>
+<li class="toc-entry toc-h2"><a href="#section-7">Применение</a></li>
 </ul>
 </aside><aside id="backs" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
 

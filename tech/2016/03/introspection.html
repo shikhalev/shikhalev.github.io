@@ -26,15 +26,15 @@
 <link rel="canonical" href="https://shikhalev.github.io/tech/2016/03/introspection.html" />
 <meta property="og:url" content="https://shikhalev.github.io/tech/2016/03/introspection.html" />
 <meta property="og:site_name" content="Иван Шихалев" />
-<meta property="og:image" content="https://shikhalev.github.io/img/2016/03/09/introspection/screen-introspection-640x640-500-261-0-0.webp" />
+<meta property="og:image" content="https://shikhalev.github.io/img/30/17/9cc71328.webp" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2016-03-09T00:00:00+00:00" />
 <meta property="article:modified_time" content="2016-03-09T00:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://shikhalev.github.io/img/2016/03/09/introspection/screen-introspection-640x640-500-261-0-0.webp" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/30/17/9cc71328.webp" />
 <meta name="twitter:title" content="Средства самопознания в Ruby" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2016-03-09T00:00:00+00:00","datePublished":"2016-03-09T00:00:00+00:00","description":"Что программа может знать о самой себе?","headline":"Средства самопознания в Ruby","image":"https://shikhalev.github.io/img/2016/03/09/introspection/screen-introspection-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2016/03/introspection.html"},"url":"https://shikhalev.github.io/tech/2016/03/introspection.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2016-03-09T00:00:00+00:00","datePublished":"2016-03-09T00:00:00+00:00","description":"Что программа может знать о самой себе?","headline":"Средства самопознания в Ruby","image":"https://shikhalev.github.io/img/30/17/9cc71328.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2016/03/introspection.html"},"url":"https://shikhalev.github.io/tech/2016/03/introspection.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
@@ -71,6 +71,11 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "u2gczedmo7");
 </script>
+
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.4.css" />
+<script type="module" src="/js/is-images-0.8.0.4.js"></script>
+<!-- end of jekyll-is-images stuff -->
 
 </head>
 
@@ -110,8 +115,9 @@
 
 <hr>
 
-<figure class="__figure __implicit_figure __right" style="max-width:158px;padding: 5px;"><a href="http://samag.ru/archive/article/2874"><img src="/img/2016/03/09/introspection/146-7-158.webp" class="__image"></a></figure>
-
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_200 __is_images__right" style="padding:5px;--is-images-width:158px;" data-modes="grid,slides">
+<a href="http://samag.ru/archive/article/2874" class="__is_images_wrapper"><img src="/img/ob/15/oc95c068.avif" alt="" class="__is_images_image __is_images_single" style="--is-images-width:158px;--is-images-aspect-ratio:79/112;" data-scale="1"></a>
+</figure>
 <div class="note">
 
   <p><strong>Что программа может знать о самой себе?</strong></p>
@@ -134,8 +140,8 @@
 тоже). Такое функциональное деление удобно и для интерпретируемых языков, в которых, правда, к этим двум категориям
 можно добавить еще одну — состояние интерпретатора / виртуальной машины в целом.</p>
 
-<h2 id="отладочная-информация-доступная-программе">
-<a class="anchor" href="#%D0%BE%D1%82%D0%BB%D0%B0%D0%B4%D0%BE%D1%87%D0%BD%D0%B0%D1%8F-%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8F-%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BD%D0%B0%D1%8F-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Отладочная информация, доступная программе</h2>
+<h2 id="section">
+<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Отладочная информация, доступная программе</h2>
 
 <p>Начнем с самого простого: специальные методы <code class="language-plaintext highlighter-rouge">__FILE__</code> и <code class="language-plaintext highlighter-rouge">__LINE__</code> позволят определить и, скажем, вывести текущую
 точку исполнения программы. Например, для логирования.</p>
@@ -417,8 +423,8 @@ puts(*arg0) [‹binary›]</span></code></pre>
 <p>К сожалению, конкретные значения, заданные для опциональных параметров по умолчанию, так просто выяснить не получится.
 Можно, правда, зная, где данный метод определен, распарсить текст программы, но это уже выходит за рамки нашей темы.</p>
 
-<h2 id="картина-в-целом">
-<a class="anchor" href="#%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%B0-%D0%B2-%D1%86%D0%B5%D0%BB%D0%BE%D0%BC" aria-hidden="true"><span class="octicon octicon-link"></span></a>Картина в целом</h2>
+<h2 id="section-1">
+<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Картина в целом</h2>
 
 <p>Итак, мы можем посмотреть методы и константы для любого класса, модуля, да и произвольного объекта (хотя это и редко
 может потребоваться). Однако, при этом нам надо откуда-то знать о его существовании вообще. Неплохо было бы иметь
@@ -494,8 +500,8 @@ puts(*arg0) [‹binary›]</span></code></pre>
     alpha(a, b = &lt;..&gt;, *c) [intro06.rb:43]</code></pre>
 </figure>
 
-<h2 id="и-что-это-нам-дает">
-<a class="anchor" href="#%D0%B8-%D1%87%D1%82%D0%BE-%D1%8D%D1%82%D0%BE-%D0%BD%D0%B0%D0%BC-%D0%B4%D0%B0%D0%B5%D1%82" aria-hidden="true"><span class="octicon octicon-link"></span></a>И что это нам дает?</h2>
+<h2 id="section-2">
+<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>И что это нам дает?</h2>
 
 <p>Механизм интроспекции достаточно универсальный и «неприкладной», поэтому его, с одной стороны, трудно применить
 к чему-нибудь практическому «в лоб», а с другой — есть масса случаев, когда он в той или иной мере полезен. Я, пожалуй,
@@ -564,30 +570,30 @@ puts(*arg0) [‹binary›]</span></code></pre>
 <aside class="recommendations"><div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2022.10.23 |</span>
-            <a href="/tech/2022/10/conky-hwmon.html" title="Скрипт автоопределения номера устройства hwmon по имени">Conky: исправление проблемы с hwmon</a>
+            <span class="meta">2016.06.23 |</span>
+            <a href="/photo/2016/06/stacking.html" title="Приемы стекинга фотографий под Linux с использованием пакета enfuse">Пингвин-фотолюбитель: 5. Стекинг</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a>
+          <dd class="meta">​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-linux" href="/photo/processing/penguin/" title="Цикл постов 2016 года об обработке фотографий под Linux">Пингвин-фотолюбитель</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-photo-video" href="/tech/soft/graphics/" title="Программы работы с графикой">Графика</a>
 </dd>
         </dl>
       </div>
 <div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2022.10.31 |</span>
-            <a href="/tech/2022/10/harddybr.html" title="Некоторые заметки после обновления компьютера">Большой дыбр по железу</a>
+            <span class="meta">2025.12.12 |</span>
+            <a href="/tech/2025/12/inat-channel.html" title="Написал скрипт для автопостинга выборок из iNaturalist в tg-каналы">iNaturalist + Telegram</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a>​<a class="fa-icon-calendar-alt" href="/life/dybr/" title="Просто кусочки повседневности">Дыбр</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-globe" href="/tech/web/" title="HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.">Web</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a>
 </dd>
         </dl>
       </div>
 <div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2013.07.02 |</span>
-            <a href="/tech/2013/07/fonts.html" title="Внезапно понял, почему кириллические шрифты все, как бы это помягче... в лучшем случае — никакие.">О шриф­тах, или Без­бла­го­дат­ность кар­го-куль­та</a>
+            <span class="meta">2015.04.01 |</span>
+            <a href="/tech/2015/04/ruby-context.html" title="Статья рассказывает о программном контексте в Ruby: какие переменные и другие объекты доступны в конкретном месте программы, и как интерпретатор их ищет.">Блоки и контекст в Ruby</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a>
 </dd>
         </dl>
       </div></aside>
@@ -607,10 +613,10 @@ puts(*arg0) [‹binary›]</span></code></pre>
 </aside><aside id="toc" class="toc toc-post">
   <h4>Содержание</h4>
   <ul id="toc_list" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#отладочная-информация-доступная-программе">Отладочная информация, доступная программе</a></li>
+<li class="toc-entry toc-h2"><a href="#section">Отладочная информация, доступная программе</a></li>
 <li class="toc-entry toc-h2"><a href="#rtti">RTTI</a></li>
-<li class="toc-entry toc-h2"><a href="#картина-в-целом">Картина в целом</a></li>
-<li class="toc-entry toc-h2"><a href="#и-что-это-нам-дает">И что это нам дает?</a></li>
+<li class="toc-entry toc-h2"><a href="#section-1">Картина в целом</a></li>
+<li class="toc-entry toc-h2"><a href="#section-2">И что это нам дает?</a></li>
 </ul>
 </aside><aside id="backs" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
 

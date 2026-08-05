@@ -75,6 +75,29 @@ ul.check-list li::marker {
   vertical-align: baseline;
 }
 
+figure.__is_images_figure {
+  display: flex;
+  margin: 10px auto;
+}
+figure.__is_images_figure.__is_images__right, figure.__is_images_figure.__is_images__left {
+  margin: 0px 10px;
+}
+figure.__is_images_figure.__is_images_gallery {
+  box-shadow: none;
+  border: none;
+}
+
+figure.__is_images_cell_figure {
+  display: flex;
+  padding: 5px;
+  box-shadow: none;
+  border: none;
+}
+
+figure.__is_images_viewbox {
+  display: flex;
+}
+
 @media screen and (min-width: 779px) {
   .twocolumns {
     columns: 2;

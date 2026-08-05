@@ -26,15 +26,15 @@
 <link rel="canonical" href="https://shikhalev.github.io/tech/2015/03/druby.html" />
 <meta property="og:url" content="https://shikhalev.github.io/tech/2015/03/druby.html" />
 <meta property="og:site_name" content="Иван Шихалев" />
-<meta property="og:image" content="https://shikhalev.github.io/img/2015/03/31/druby/screen-druby-640x640-500-261-0-0.webp" />
+<meta property="og:image" content="https://shikhalev.github.io/img/7e/05/051te963.webp" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-03-31T00:00:00+00:00" />
 <meta property="article:modified_time" content="2015-03-31T00:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://shikhalev.github.io/img/2015/03/31/druby/screen-druby-640x640-500-261-0-0.webp" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/7e/05/051te963.webp" />
 <meta name="twitter:title" content="Распределенный Ruby" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2015-03-31T00:00:00+00:00","datePublished":"2015-03-31T00:00:00+00:00","description":"Введение в технологию dRuby. Прозрачный RPC для взаимодействия Ruby-программ.","headline":"Распределенный Ruby","image":"https://shikhalev.github.io/img/2015/03/31/druby/screen-druby-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2015/03/druby.html"},"url":"https://shikhalev.github.io/tech/2015/03/druby.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2015-03-31T00:00:00+00:00","datePublished":"2015-03-31T00:00:00+00:00","description":"Введение в технологию dRuby. Прозрачный RPC для взаимодействия Ruby-программ.","headline":"Распределенный Ruby","image":"https://shikhalev.github.io/img/7e/05/051te963.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2015/03/druby.html"},"url":"https://shikhalev.github.io/tech/2015/03/druby.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
@@ -71,6 +71,11 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "u2gczedmo7");
 </script>
+
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.4.css" />
+<script type="module" src="/js/is-images-0.8.0.4.js"></script>
+<!-- end of jekyll-is-images stuff -->
 
 </head>
 
@@ -110,8 +115,9 @@
 
 <hr>
 
-<figure class="__figure __implicit_figure __right" style="max-width:158px;padding: 5px;"><a href="http://samag.ru/archive/article/2592"><img src="/img/2015/03/31/druby/133-158.webp" class="__image"></a></figure>
-
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_200 __is_images__right" style="padding:5px;--is-images-width:158px;" data-modes="grid,slides">
+<a href="http://samag.ru/archive/article/2592" class="__is_images_wrapper"><img src="/img/1f/11/748oo382.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:158px;--is-images-aspect-ratio:79/112;" data-scale="1"></a>
+</figure>
 <div class="note">
   <p>Технология распределенного Ruby, или <strong>dRuby</strong> (Dis­­t­­ri­­bu­­ted Ruby), позволяет вызывать методы объектов, находящихся
 в другом процессе и/или на другом компьютере. При этом установка соединения, передача необходимых данных и тому
@@ -154,8 +160,8 @@ CORBA не входит в стандартную библиотеку Ruby, с
 к совместимости версий и т.д.). В общем, если не требуется взаимодействие с программами, написанными на других языках,
 dRuby — очень хороший выбор, а с чем его едят и как правильно готовить, мы и рассмотрим в данной статье.</p>
 
-<h2 id="минимальный-пример">
-<a class="anchor" href="#%D0%BC%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>Минимальный пример</h2>
+<h2 id="section">
+<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Минимальный пример</h2>
 
 <p>Рассмотрим код<sup id="fnref:gist"><a href="#fn:gist" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> простейшего сервера:</p>
 
@@ -216,8 +222,8 @@ Alpha called with "beta"</span></code></pre>
 
 <p>Что свидетельствует о выполнении метода именно на той стороне.</p>
 
-<h2 id="передача-данных">
-<a class="anchor" href="#%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B0%D1%87%D0%B0-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85" aria-hidden="true"><span class="octicon octicon-link"></span></a>Передача данных</h2>
+<h2 id="section-1">
+<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Передача данных</h2>
 
 <p>Уже из вышеприведенного можно видеть, что обмен данными простых стандартных классов происходит полностью прозрачно —
 мы использовали число, строку, <code class="language-plaintext highlighter-rouge">nil</code> и массив — все они выглядят на стороне клиента и сервера совершенно одинаково.
@@ -312,8 +318,8 @@ cln1.rb:11:in `‹main›': undefined method `dummy' for ♯‹DRb::DRbUnknown:0
 
 <p>И вызвав на клиенте <code class="language-plaintext highlighter-rouge">s.gamma.dummy</code>, мы увидим вывод строки «Dummy called» в серверной, а не клиентской консоли.</p>
 
-<h2 id="клиентская-часть">
-<a class="anchor" href="#%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B0%D1%8F-%D1%87%D0%B0%D1%81%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Клиентская часть</h2>
+<h2 id="section-2">
+<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Клиентская часть</h2>
 
 <p>Несмотря на то, что работа в целом идет по асимметричной схеме клиент-сервер, обмен данными вполне симметричен,
 и мы вполне можем передать серверу объект, методы которого будут выполняться на клиенте. Самый простой способ
@@ -368,8 +374,8 @@ cln1.rb:11:in `‹main›': undefined method `dummy' for ♯‹DRb::DRbUnknown:0
 <p>Первой строчкой мы удаляем метод <code class="language-plaintext highlighter-rouge">instance_eval</code> объекта-посредника, что заставляет его в дальнейшем передавать вызов серверу,
 ну а дальше выполняем произвольную строку… Что плавно подводит нас к следующей теме.</p>
 
-<h2 id="безопасность">
-<a class="anchor" href="#%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Безопасность</h2>
+<h2 id="section-3">
+<a class="anchor" href="#section-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Безопасность</h2>
 
 <p>Очевидно, что сервер, работающий по приципу: «ходи, кто хочет, бери, что хочет» — это плохой сервер, и надо бы как-то
 это дело ограничить. Начнем со второй части — запретим выполнять произвольный код. Можно, например, поудалять у серверного
@@ -463,8 +469,8 @@ cln1.rb:11:in `‹main›': undefined method `dummy' for ♯‹DRb::DRbUnknown:0
 передать ключи шифрования и сертификаты, которыми эти ключи подписаны… А еще сами сертификаты должны быть подписаны удостоверяющим
 центром и т.д. — по большому счету, эта тема заслуживает отдельного рассмотрения<sup id="fnref:ssl"><a href="#fn:ssl" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>.</p>
 
-<h2 id="сценарии-использования">
-<a class="anchor" href="#%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B8-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>Сценарии использования</h2>
+<h2 id="section-4">
+<a class="anchor" href="#section-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Сценарии использования</h2>
 
 <p>Итак, с чем же его едят? Что полезного мы можем сделать, используя технологию dRuby?</p>
 
@@ -520,30 +526,30 @@ cln1.rb:11:in `‹main›': undefined method `dummy' for ♯‹DRb::DRbUnknown:0
 <aside class="recommendations"><div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2015.04.01 |</span>
-            <a href="/tech/2015/04/ruby-context.html" title="Статья рассказывает о программном контексте в Ruby: какие переменные и другие объекты доступны в конкретном месте программы, и как интерпретатор их ищет.">Блоки и контекст в Ruby</a>
+            <span class="meta">2011.07.29 |</span>
+            <a href="/tech/2011/07/distributed-blogging.html" title="Система блогов должна быть отказоустойчивой. Единственный способ это сделать — сделать ее распределенной... Современные технологии вполне себе это позволяют.">Распределенная блогосфера</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-university" href="/pub/" title="Публикации в СМИ">Публикации</a>​<a class="fa-icon-university" href="/pub/samag/" title="Публикации в журнале «Системный администратор»">«Системный администратор»</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-globe" href="/tech/web/" title="HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.">Web</a>​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a>
 </dd>
         </dl>
       </div>
 <div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2025.12.12 |</span>
-            <a href="/tech/2025/12/inat-channel.html" title="Написал скрипт для автопостинга выборок из iNaturalist в tg-каналы">iNaturalist + Telegram</a>
+            <span class="meta">2013.04.26 |</span>
+            <a href="/tech/2013/04/tdd.html" title="TDD — выдаем нужду за добродетель. Убедительно.">Слоган</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-globe" href="/tech/web/" title="HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.">Web</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-biohazard" href="/tech/programming/abs/" title="Абстрактные размышления о программировании в целом">Абстракции</a>​<a class="fa-icon-brain" href="/life/psi/mind/" title="Заметки о том, как мы думаем">Мышление</a>
 </dd>
         </dl>
       </div>
 <div class="random-item">
         <dl>
           <dt>
-            <span class="meta">2013.07.21 |</span>
-            <a href="/tech/2013/07/git-server.html" title="Настраиваем git-сервер для малых групп с минимальными затратами.">Кратко: примитивный git-сервер</a>
+            <span class="meta">2022.10.31 |</span>
+            <a href="/tech/2022/10/harddybr.html" title="Некоторые заметки после обновления компьютера">Большой дыбр по железу</a>
           </dt>
-          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>
+          <dd class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-microchip" href="/tech/hard/" title="Всякие разные интересные или не очень устройства">Железо</a>​<a class="fa-icon-calendar-alt" href="/life/dybr/" title="Просто кусочки повседневности">Дыбр</a>
 </dd>
         </dl>
       </div></aside>
@@ -563,11 +569,11 @@ cln1.rb:11:in `‹main›': undefined method `dummy' for ♯‹DRb::DRbUnknown:0
 </aside><aside id="toc" class="toc toc-post">
   <h4>Содержание</h4>
   <ul id="toc_list" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#минимальный-пример">Минимальный пример</a></li>
-<li class="toc-entry toc-h2"><a href="#передача-данных">Передача данных</a></li>
-<li class="toc-entry toc-h2"><a href="#клиентская-часть">Клиентская часть</a></li>
-<li class="toc-entry toc-h2"><a href="#безопасность">Безопасность</a></li>
-<li class="toc-entry toc-h2"><a href="#сценарии-использования">Сценарии использования</a></li>
+<li class="toc-entry toc-h2"><a href="#section">Минимальный пример</a></li>
+<li class="toc-entry toc-h2"><a href="#section-1">Передача данных</a></li>
+<li class="toc-entry toc-h2"><a href="#section-2">Клиентская часть</a></li>
+<li class="toc-entry toc-h2"><a href="#section-3">Безопасность</a></li>
+<li class="toc-entry toc-h2"><a href="#section-4">Сценарии использования</a></li>
 </ul>
 </aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/tech/2015/04/ruby-multitasking.html" title="В статье рассматриваются основные средства работы с потоками (threads) и процессами в языке и стандартной библиотеке Ruby.">Ruby и многозадачность</a></li><li class="fa-icon-li-file-alt"><a href="/tech/2015/04/ruby-context.html" title="Статья рассказывает о программном контексте в Ruby: какие переменные и другие объекты доступны в конкретном месте программы, и как интерпретатор их ищет.">Блоки и контекст в Ruby</a></li></ul>
     </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>

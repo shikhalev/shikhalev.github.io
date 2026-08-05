@@ -12,6 +12,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="/assets/styles.css" type="text/css">
   
+  <link rel="stylesheet" href="/assets/local.css" type="text/css">
+  
 
   <!-- Begin Jekyll SEO tag v2.9.0 -->
 <title>Free Pascal | Иван Шихалев</title>
@@ -24,15 +26,15 @@
 <link rel="canonical" href="https://shikhalev.github.io/tech/programming/fpc/" />
 <meta property="og:url" content="https://shikhalev.github.io/tech/programming/fpc/" />
 <meta property="og:site_name" content="Иван Шихалев" />
-<meta property="og:image" content="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" />
+<meta property="og:image" content="https://shikhalev.github.io/img/bo/t1/40637o40.webp" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-08-02T20:41:34+00:00" />
-<meta property="article:modified_time" content="2026-08-02T20:41:34+00:00" />
+<meta property="article:published_time" content="2026-08-05T13:47:57+00:00" />
+<meta property="article:modified_time" content="2026-08-05T13:47:57+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/bo/t1/40637o40.webp" />
 <meta name="twitter:title" content="Free Pascal" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2026-08-02T20:41:34+00:00","datePublished":"2026-08-02T20:41:34+00:00","description":"Free Pascal Compiler, Lazarus и все, что с ними связано","headline":"Free Pascal","image":"https://shikhalev.github.io/img/1993/06/01/velo/IMG_2774-640x640-500-261-0-0.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/programming/fpc/"},"url":"https://shikhalev.github.io/tech/programming/fpc/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2026-08-05T13:47:57+00:00","datePublished":"2026-08-05T13:47:57+00:00","description":"Free Pascal Compiler, Lazarus и все, что с ними связано","headline":"Free Pascal","image":"https://shikhalev.github.io/img/bo/t1/40637o40.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/programming/fpc/"},"url":"https://shikhalev.github.io/tech/programming/fpc/"}</script>
 <!-- End Jekyll SEO tag -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
@@ -69,6 +71,11 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "u2gczedmo7");
 </script>
+
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.4.css" />
+<script type="module" src="/js/is-images-0.8.0.4.js"></script>
+<!-- end of jekyll-is-images stuff -->
 
 </head>
 
@@ -125,8 +132,9 @@
 
       <div class="no_toc_section">
 
-      <figure class="__figure __implicit_figure __right logo" style="max-width:256px;shape-outside:url(/img/2013/11/14/wrapped/fpc-256.webp);"><img src="/img/2013/11/14/wrapped/fpc-256.webp" class="__image" style="shape-outside:url(/img/2013/11/14/wrapped/fpc-256.webp);"></figure>
-
+      <figure id="fig-1" class="logo __is_images_figure __is_images_single __is_images_shaped __is_images_width_300 __is_images__right" style="shape-outside:url(/img/58/7f/23eb82f2.webp);--is-images-width:256px;" data-modes="grid,slides">
+<span class="__is_images_wrapper"><img src="/img/58/7f/23eb82f2.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:256px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>
+</figure>
 <p>Бывает, требуется множество подпрограмм единообразно обернуть — добавить им всем одинаковое начало и завершение или,
 что более интересно, выполнить их в блоке „<code class="language-plaintext highlighter-rouge">try ... except</code>“ с каким-нибудь фильтром на исключения… Вообще, понятно,
 что FPC поддерживает процедурные типы, но как раз типы тут могут быть самые разные, а нетипизированный вызов с руч­ной
@@ -164,8 +172,9 @@
 
       <div class="no_toc_section">
 
-      <figure class="__figure __implicit_figure __right logo" style="max-width:320px;"><a href="/img/2012/08/24/fpc-tools/editors-fhd.webp" class="__image_link"><img src="/img/2012/08/24/fpc-tools/editors-320.webp" class="__image"></a></figure>
-
+      <figure id="fig-2" class="logo __is_images_figure __is_images_single __is_images_width_350 __is_images__right" style="--is-images-width:320px;" data-modes="grid,slides">
+<a href="/img/ce/20/c2c0cbt1.webp" class="__is_images_wrapper"><img src="/img/01/4e/6c8733b1.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:80/57;" data-scale="1"></a>
+</figure>
 <p>Программное обеспечение используется нами не в вакууме, а в некотором окружении. Одни программы необходимы для работы других,
 третьи могут быть полезны для совместного использования, четвертые позволяют решать смежные задачи…</p>
 
@@ -197,8 +206,9 @@
 
       <div class="no_toc_section">
 
-      <figure class="__figure __implicit_figure __right" style="max-width:320px;"><a href="/img/2011/11/01/fpc-start/fpc-win32-setup-fhd.webp" class="__image_link"><img src="/img/2011/11/01/fpc-start/fpc-win32-setup-320.webp" class="__image" alt="Окно установщика FPC для Win32" title="Окно установщика FPC для Win32"></a></figure>
-
+      <figure id="fig-3" class="__is_images_figure __is_images_single __is_images_width_350 __is_images__right" style="--is-images-width:320px;" data-modes="grid,slides">
+<a href="/img/33/c4/6854ttcf.webp" title="Окно установщика FPC для Win32" class="__is_images_wrapper"><img src="/img/2c/fb/024t8794.webp" alt="Окно установщика FPC для Win32" class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:160/123;" data-scale="1"></a>
+</figure>
 <p class="note italic">Предварительно хочу сказать, что данная заметка является непосредственным продолжением <strong><a href="/tech/2011/10/what-is-free-pascal.html">«Что такое Free Pascal?»</a></strong>,
 а не <strong><a href="/tech/2011/10/fpc-hello-world.html">«Hello, World!»</a></strong></p>
 
@@ -315,8 +325,9 @@ Linking hello
 
       <div class="no_toc_section">
 
-      <figure class="__figure __implicit_figure __right" style="max-width:300px;"><a href="/img/2011/10/11/what-is-free-pascal/lazarus-over-fhd.webp" class="__image_link"><img src="/img/2011/10/11/what-is-free-pascal/lazarus-over-300.webp" class="__image" alt="Скриншот IDE Lazarus" title="Скриншот IDE Lazarus"></a></figure>
-
+      <figure id="fig-4" class="__is_images_figure __is_images_single __is_images_width_300 __is_images__right" style="--is-images-width:300px;" data-modes="grid,slides">
+<a href="/img/6t/tt/1etc1te3.webp" title="Скриншот IDE Lazarus" class="__is_images_wrapper"><img src="/img/co/f0/0ctbeco3.webp" alt="Скриншот IDE Lazarus" class="__is_images_image __is_images_single" style="--is-images-width:300px;--is-images-aspect-ratio:4/3;" data-scale="1"></a>
+</figure>
 <p><strong>Free Pascal</strong> <a href="#site-fpc">[1]</a>, точнее Free Pascal Compiler aka FPC — это свободный<sup id="fnref:fpc-free"><a href="#fn:fpc-free" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> кроссплатформенный компилятор
 языка программирования Pascal. В отличие от другой свободной реализации этого языка — GNU Pascal, FPC ориентирован
 не на стандарт, а на популярные диалекты — то, что когда-то называлось Object Pascal, а теперь Delphi Language.</p>
