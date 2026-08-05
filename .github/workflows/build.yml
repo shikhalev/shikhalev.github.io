@@ -21,7 +21,7 @@ jobs:
           bundler-cache: true
       - name: Setup ImageMagick
         run: |
-          sudo apt-get update && sudo apt-get install -y imagemagick libheif-plugins-all heif-gdk-pixbuf
+          sudo apt-get update && sudo apt-get install -y imagemagick libheif-plugin-aomenc heif-gdk-pixbuf
       - name: Cache images
         uses: actions/cache@v4
         with:
