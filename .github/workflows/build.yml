@@ -22,17 +22,23 @@ jobs:
       - name: Setup ImageMagick
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick libheif-plugin-aomenc heif-gdk-pixbuf
-      - name: Cache images
-        uses: actions/cache@v4
+      - name: Images from Cache
+        uses: actions/cache/restore@v4
         with:
           path: .is-images-cache
           key: ${{ runner.os }}-jekyll-images-${{ github.run_id }}
           restore-keys: |
-            ${{ runner.os }}-jekyll-images
+            ${{ runner.os }}-jekyll-images-
       - name: Build
         run: |
           echo "Build..."
           JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build
+      - name: Images to Cache
+        uses: action/cache/save@v4
+        if: always()
+        with:
+          path: .is-images-cache
+          key: ${{ runner.os }}-jekyll-images-${{ github.run_id }}
       - name: Back push
         uses: jekyll-is/action-jekyll-is-backpush@v1
         with:
