@@ -93,18 +93,30 @@ defaults:
       path: "_posts/blog"
     values:
       permalink: /life/:year/:month/:title:output_ext
+      is_images:
+        seo_image:
+          site: "Иван Шихалев / Блог"
   - scope:
       path: "_posts/photo"
     values:
       permalink: /photo/:year/:month/:title:output_ext
+      is_images:
+        seo_image:
+          site: "Иван Шихалев / О фото"
   - scope:
       path: "_posts/tech"
     values:
       permalink: /tech/:year/:month/:title:output_ext
+      is_images:
+        seo_image:
+          site: "Иван Шихалев / Технологии"
   - scope:
       path: "_posts/text"
     values:
       permalink: /text/:year/:month/:title:output_ext
+      is_images:
+        seo_image:
+          site: "Иван Шихалев / Тексты"
   - scope:
       path: "_drafts"
     values:
@@ -118,7 +130,7 @@ defaults:
   - scope:
       path: "_streams"
     values:
-      layout: nova/stream
+      layout: stream
       type: website
       author: Иван Шихалев
   - scope:
@@ -187,6 +199,7 @@ date_format: "%Y.%m.%d"
 exclude:
   - .vscode/
   - .announces.json
+  - .is-images-cache
   - tmp/
   - flatten.log
 
@@ -240,3 +253,8 @@ is_images:
   view:
     width: 1800
     height: 1200
+  seo_image:
+    font:
+      caption: _src/fonts/PTC55F.ttf
+      date: _src/fonts/PTC55F.ttf
+    date_format: '%Y / %m / %d'

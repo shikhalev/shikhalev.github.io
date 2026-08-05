@@ -18,15 +18,13 @@ last_modified_at: 2025-10-26
 {:#tasks}
 ### Задачи
 
-{% image @_src/2025/10/IMG_2686_02.jpg figure left width=320px
-   title="Снимок синиц, проявленный по умолчанию" %}
+![Снимок синиц, проявленный по умолчанию](_src/2025/10/IMG_2686_02.jpg){: left width="320" }
 
 Если мы посмотрим на пример во Введении, то можем заметить, что первый снимок выглядит не очень — светлое небо заставило камеру
 занизить экспозицию и детали в тенях совершенно неразборчивы. Именно из-за таких случаев мы и снимаем в RAW, а не в JPEG, и
 используем программы типа **darktable** для «проявки» снимков.
 
-{% image @_src/2025/10/dpg1/IMG_2686_levels.jpg figure right width=320px
-   title="Снимок синиц с базовой обработкой" %}
+![Снимок синиц с базовой обработкой](_src/2025/10/dpg1/IMG_2686_levels.jpg){: right width="320" }
 
 Слева (выше) этот снимок, проявленный по умолчанию, справа (ни­же) — выполнена базовая об­ра­бот­ка с rgb-кривой (и не толь­ко).
 Даже на миниатюрах можно видеть (а по клику открываются версии в большем разрешении), что птицы стали вполне узнаваемы, да
@@ -78,8 +76,7 @@ last_modified_at: 2025-10-26
 {:#darkroom}
 ## Интерфейс тёмной комнаты
 
-{% image @_src/2025/10/dpg1/100_darkroom.png figure center width=890px
-   caption="Скриншот представления darkroom" %}
+![Скриншот представления darkroom](_src/2025/10/dpg1/100_darkroom.png){: width="890" }
 
 Давайте для начала рассмотрим представление *darkroom* в целом. Общая структура всех представлений схожа и ее мы уже рассмотрели
 [во «Вве­де­нии»][lighttable], поэтому сосредоточимся на том, что данное представление отличает.
@@ -95,66 +92,65 @@ last_modified_at: 2025-10-26
 
 Рассмотрим их по порядку слева направо:
 
-{% image @_src/2025/10/dpg1/100_darkroom.png width=25px crop=25x25+290+883 link=false %} quick access to presets
+![](_src/2025/10/dpg1/100_darkroom.png){: width=25px crop="25x25+290+883" href="none" } quick access to presets
 
 : *Быстрый доступ к [пресетам](#presets).* Позволяет из одного меню включать пресеты различных модулей — те, которые были для этого специально
   отмечены пользователем. Собственно отметка и формирование списка делаются через пункт «manage quick presets list...» в том же
   меню, которое открывается по этой кнопке.
 
-{% image @_src/2025/10/dpg1/100_darkroom.png width=25px crop=25x25+317+883 link=false %} quick access for applying any of your styles
+![](_src/2025/10/dpg1/100_darkroom.png){: width="25" crop="25x25+317+883" } quick access for applying any of your styles
 
 : *Быстрый доступ к [стилям](#styles).*
 
   О стилях, как и о пресетах, подробно еще поговорим ниже.
 
-{% image @_src/2025/10/dpg1/101_second_window.png figure right width=360px crop=1920x1040+0+0
-   caption="Скриншот darktable c дополнительным окном просмотра" %}
+![Скриншот darktable c дополнительным окном просмотра](_src/2025/10/dpg1/101_second_window.png){: right width="360" crop="1920x1040+0+0" caption }
 
-{% image @_src/2025/10/dpg1/100_darkroom.png width=25px crop=25x25+346+883 link=false %} display a second darkroom image window
+![](_src/2025/10/dpg1/100_darkroom.png){: width="25" crop="25x25+346+883" href="none" } display a second darkroom image window
 
 : Открывает *дополнительное окно просмотра*. Это дополнительное ок­но позволяет параллельно с обработкой видеть изображение
   в дру­гом масштабе. На скрин­шо­те выглядит не осо­бо удобным, однако если у вас два мо­ни­то­ра — может стать очень полезным.
 
-{% image @_src/2025/10/dpg1/100_darkroom.png width=254px crop=254x25+758+883 link=false %} Строка информации
+![](_src/2025/10/dpg1/100_darkroom.png){: width="254" crop="254x25+758+883" href="false" } Строка информации
 
 : *Строка информации о снимке.* Нетрудно видеть, что отображаются: выдержка, диафрагма, фокусное расстояние и значение ISO, а значок
   кнопки означает, что у снимка есть геопривязка. Впрочем, состав информации в данной строке настраивается
   в «[pre­fe­ren­ces > dark­room](https://docs.darktable.org/usermanual/development/en/preferences-settings/darkroom/) > pat­tern
   for the ima­ge in­for­ma­ti­on li­ne».
 
-{% image @_src/2025/10/dpg1/100_darkroom.png width=26px crop=26x25+1403+883 link=false %} toggle focus-peaking mode
+![](_src/2025/10/dpg1/100_darkroom.png){: width="26" crop="26x25+1403+883" href="none" } toggle focus-peaking mode
 
 : Включает *режим фокус-пикинга*. Таким образом мы можем видеть, какие именно части снимка в фокусе.
 
-{% image @_src/2025/10/dpg1/100_darkroom.png width=26px crop=26x25+1434+883 link=false %} toggle color assessment conditions
+![](_src/2025/10/dpg1/100_darkroom.png){: width="26" crop="26x25+1434+883" href="none" } toggle color assessment conditions
 
 : Включает *режим оценки цвета*, окружая изображение широкой белой рамкой.
 
-{% image @_src/2025/10/dpg1/100_darkroom.png width=26px crop=26x25+1465+883 link=false %} toggle color high quality processing
+![](_src/2025/10/dpg1/100_darkroom.png){: width="26" crop="26x25+1465+883" href="none" } toggle color high quality processing
 
 : Включает *высокое качество обработки*. В этом режиме отображение на экране формируется так же, как и финальное изображение
   при экспорте, тогда как по умолчанию для этого используются более быстрые и менее точные алгоритмы.
 
-{% image @_src/2025/10/dpg1/100_darkroom.png width=26px crop=26x25+1496+883 link=false %} toggle indication of raw overexposure
+![](_src/2025/10/dpg1/100_darkroom.png){: width="26" crop="26x25+1496+883" href="none" } toggle indication of raw overexposure
 
 : Включает *показ пересветов в raw*.
 
-{% image @_src/2025/10/dpg1/100_darkroom.png width=26px crop=26x25+1527+883 link=false %} toggle clipping indication
+![](_src/2025/10/dpg1/100_darkroom.png){: width="26" crop="26x25+1527+883" href="none" } toggle clipping indication
 
 : Включает *отображение клиппинга*. Таким образом мы можем увидеть, где у нас теряется информация в светах или тенях, или же
   значение цвета выходит за рамки цветового пространства.
 
-{% image @_src/2025/10/dpg1/100_darkroom.png width=26px crop=26x25+1558+883 link=false %} toggle softproofing
+![](_src/2025/10/dpg1/100_darkroom.png){: width="26" crop="26x25+1558+883" href="none" } toggle softproofing
 
 : *Программная цветопроба.* Позволяет увидеть, как будет выглядеть фотография на устройствах с другим цветовым профилем.
   Сами профили выбираются по правой кнопке.
 
-{% image @_src/2025/10/dpg1/100_darkroom.png width=26px crop=26x25+1589+883 link=false %} toggle gamut checking
+![](_src/2025/10/dpg1/100_darkroom.png){: width="26" crop="26x25+1589+883" href="none" } toggle gamut checking
 
 : *Контроль цветового пространства.* Включает показ зон, где значение цвета выходит за рамки выбранного цветового пространства.
   По правой кнопке выбираются профили так же, как в предыдущем случае.
 
-{% image @_src/2025/10/dpg1/100_darkroom.png width=26px crop=26x25+1620+883 link=false %} toggle guide lines
+![](_src/2025/10/dpg1/100_darkroom.png){: width="26" crop="26x25+1620+883" href="none" } toggle guide lines
 
 : Включает *направляющие линии* для удобства выстраивания композиции, по правой кнопке можно выбрать разные варианты, такие как
   правило третей, золотое сечение и так далее, включая настраиваемую сетку.
@@ -168,8 +164,7 @@ last_modified_at: 2025-10-26
 {:#navigation}
 #### [navigation](#mod-navigation)
 
-{% image @_src/2025/10/dpg1/100_darkroom.png figure right width=276px crop=276x200+10+92 link=false
-   title="Модуль «navigation»" %}
+![Модуль «navigation»](_src/2025/10/dpg1/100_darkroom.png){: right width="276" crop="276x200+10+92" href="none" }
 
 В левом верхнем углу мы можем видеть уменьшенное изображение текущего снимка, на котором выделена текущая рабочая об­ласть —
 своего рода ми­ни­кар­та.
@@ -232,8 +227,7 @@ mask manager
 {:#scopes}
 #### scopes
 
-{% image @_src/2025/10/dpg1/100_darkroom.png figure right width=259px crop=259x180+1651+92 link=false
-   title="Модуль «scopes» / гистограмма" %}
+![Модуль «scopes» / гистограмма](_src/2025/10/dpg1/100_darkroom.png){: right width="259" crop="259x180+1651+92" }
 
 В самом верху левой панели находится специальный модуль *[scopes](#mod-scopes)*. Он не имеет отношения к английскому слову «scopes» как таковому,
 в действительности здесь использована составная часть таких слов, как «vectorscope», «oscilloscope» и так далее — в общем, речь идет о своего
@@ -246,25 +240,23 @@ mask manager
 {:#module-control}
 #### Управление модулями
 
-{% image @_src/2025/10/dpg1/110_fullbar.png figure right width=259px crop=259x58+1651+272 link=false
-   title="Кнопки группировки и поиска модулей" %}
+![Кнопки группировки и поиска модулей](_src/2025/10/dpg1/110_fullbar.png){: right width="259" crop="259x58+1651+272" href="none" }
 
 Оставшаяся часть правой панели посвящена модулям обработки. Их много, и при этом работа с ни­ми — основное, что мы делаем в dark­tab­le, поэтому
 то, как они сгруппированы и вообще ото­б­ра­жа­ют­ся, имеет существенное значение для удоб­с­т­ва использования.
 
-Для начала давайте обратим внимание на ме­ню — {% image @_src/2025/10/dpg1/110_fullbar.png width=25px crop=25x25+1883+277 link=false %} — этого блока.
+Для начала давайте обратим внимание на ме­ню — ![](_src/2025/10/dpg1/110_fullbar.png){: width="25" crop="25x25+1883+277" href="none" } — этого блока.
 Там мы увидим список предопределенных пресетов, затем (если есть) список пользовательских пресетов, затем пункт «manage presets...».
 Чтобы все, используемые в этой главе, модули были доступны, нужно выбрать «modules: all», или «workflow: display-referred». Впрочем,
-все модули остаются доступны через по­иск — {% image @_src/2025/10/dpg1/110_fullbar.png width=255px crop=255x23+1653+307 link=false %}.
+все модули остаются доступны через по­иск — ![](_src/2025/10/dpg1/110_fullbar.png){: width="255" crop="255x23+1653+307" }.
 
 Слева от меню находятся кнопки групп. Вообще, их состав зависит от выбранного пресета, где они могут произвольно настраиваться,
-кроме двух первых: {% image @_src/2025/10/dpg1/110_fullbar.png width=25px crop=25x25+1655+277 link=false %} — *quick access pa­nel* —
+кроме двух первых: ![](_src/2025/10/dpg1/110_fullbar.png){: width="25" crop="25x25+1655+277" href="none" } — *quick access pa­nel* —
 здесь не просто избранные модули, а избранные элементы управления мо­ду­лей — довольно интересное, но неоднозначное решение;
-а {% image @_src/2025/10/dpg1/110_fullbar.png width=25px crop=25x25+1688+277 link=false %} — *ак­тив­ные* — показывает модули, уже
+а ![](_src/2025/10/dpg1/110_fullbar.png){: width="25" crop="25x25+1688+277" href="none" } — *ак­тив­ные* — показывает модули, уже
 задействованные в об­ра­бот­ке текущего снимка.
 
-{% image @_src/2025/10/dpg1/110_fullbar.png figure right width=259px crop=259x24+1651+881 link=false
-   title="Управление порядком модулей" %}
+![Управление порядком модулей](_src/2025/10/dpg1/110_fullbar.png){: right width="259" crop="259x24+1651+881" href="none" }
 
 Внизу же правой панели находится управление порядком модулей. Поскольку мы пока работаем с ле­га­си-пред­ус­та­нов­ка­ми в целом, здесь
 будем подразумевать вариант *legacy* (хотя разница и не слишком существенна). На самом деле, в некоторых рамках этот порядок можно менять,
@@ -278,7 +270,7 @@ mask manager
 части этой главы он [описан подробно](#doc-presets), пока отметим главное:
 
 + Меню пресетов имеется у каждого модуля в правой части за­го­лов­ка —
-  {% image @_src/2025/10/dpg1/111_full_nodule_header.png width=18px crop=18x18+1875+601 link=false %}. В этом меню сначала идет список
+  ![](_src/2025/10/dpg1/111_full_nodule_header.png){: width="18" crop="18x18+1875+601" href="none" }. В этом меню сначала идет список
   предустановленных пресетов, зашитых в сам darktable; затем список пользовательских пресетов (если заданы); затем пункты управления ими.
 
 + Предустановленными пресетами мы будем активно пользоваться в этой главе.
@@ -299,14 +291,13 @@ mask manager
 Находясь в режиме *lighttable* мы можем открыть выбранный снимок двойным кликом по нему, или же нажав клавишу `d` (от названия режима *darkroom*,
 в который мы таким образом переходим).
 
-{% image @_src/2025/10/dpg1/102_defaulthistory.png figure right width=267px crop=267x279+19+387 link=false
-   title="Модуль «history»" %}
+![Модуль «history»](_src/2025/10/dpg1/102_defaulthistory.png){: right width="267" crop="267x279+19+387" href="none" }
 
 Сразу обратим внимание на то, что нам показывает модуль *[history](#mod-history)* — там мы обнаружим сразу десять строк, которые
 возникают по умолчанию, без нашего вмешательства. Часть из них помечена иконкой
-{% image @_src/2025/10/dpg1/102_defaulthistory.png width=19px crop=19x19+261+508 link=false %} — эти модули абсолютно обязательны,
+![](_src/2025/10/dpg1/102_defaulthistory.png){: width="19" crop="19x19+261+508" href="none" } — эти модули абсолютно обязательны,
 и отключить их мы никак не можем; другая часть — иконкой
-{% image @_src/2025/10/dpg1/102_defaulthistory.png width=19px crop=19x19+261+487 link=false %} — эти мы отключить можем, но не будем.
+![](_src/2025/10/dpg1/102_defaulthistory.png){: width="19" crop="19x19+261+487" href="none" } — эти мы отключить можем, но не будем.
 
 Пробежимся снизу вверх по этим пунктам.
 
@@ -450,8 +441,7 @@ display encoding
 
 : Кадрирование — вырезаем нужную область.
 
-  {% image @_src/2025/10/dpg1/115_crop.png figure center width=720px style="border-radius:0px;"
-     title="darktable в режиме кадрирования" %}
+  ![darktable в режиме кадрирования](_src/2025/10/dpg1/115_crop.png){: width="720" style="border-radius:0px;" }
 
   Выбор области производится вручную — тянем туда-сюда края выделения. Если нам нужна конкретная пропорция кадра, выбираем ее в комбобоксе
   модуля (на при­ме­ре — квад­рат 1:1).
@@ -467,10 +457,9 @@ display encoding
 разными способами, но в этой главе мы рассмотрим только три. На данном примере они практически равнозначны — результаты
 выглядят похоже — но в более сложных случаях ка­кой-то из них может оказаться предпочтительней, чем другие.
 
-{% image @_src/2025/10/dpg1/134_pre-histogram.png figure left width=259px crop=259x180+1651+92 link=false title="Гистограмма до коррекции" %}
+![Гистограмма до коррекции](_src/2025/10/dpg1/134_pre-histogram.png){: left width="259" crop="259x180+1651+92" href="none" }
 
-{% image @_src/2025/10/dpg1/132_rgb_levels.png figure right width=259px crop=259x180+1651+92 link=false
-   title="Гистограмма после коррекции «RGB-уровни + RGB-кривая»" %}
+![Гистограмма после коррекции «RGB-уровни + RGB-кривая»](_src/2025/10/dpg1/132_rgb_levels.png){: right width="259" crop="259x180+1651+92" href="none" }
 
 Ключевой момент для всех способов — *обращаем внимание на гис­то­грам­му* — в результате она должна быть растянута от ле­во­го до пра­во­го
 края, не выходя (почти) за них. Более того, в иде­а­ле гистограмма должна быть максимально ровной, но это уже сложнодостижимо и обычно не требуется.
@@ -481,14 +470,13 @@ display encoding
 {:#multiexpo}
 #### Множественная экспозиция в модуле базовой кривой
 
-{% image @_src/2025/10/dpg1/130_hdr.png figure left width=249px crop=249x441+1651+332 link=false %}
+![](_src/2025/10/dpg1/130_hdr.png){: left width="249" crop="249x441+1651+332" href="none" }
 
 С одной стороны, этот способ позволяет ограничиться одним, уже подключенным по умол­ча­нию модулем. С другой стороны — это немного нарушает
 логику этого самого модуля — *[base curve](#mod-base-curve)* — добавляет в его функциональность за рамками имитации камерного JPEG. Можно,
 впрочем, сказать, что он имитирует камерный HDR...
 
-{% image @_src/2025/10/dpg1/130_hdr.png figure right width=259px crop=259x180+1651+92 link=false
-   title="Гистограмма после коррекции методом множественной экспозиции" %}
+![Гистограмма после коррекции методом множественной экспозиции](_src/2025/10/dpg1/130_hdr.png){: right width="259" crop="259x180+1651+92" href="none" }
 
 То есть, darktable «под капотом» делает две или три вспомогательных копии снимка, проявленные с разным значением экспозиции, а затем сводит их в один,
 как это обычно делается при работе с HDR из не­с­коль­ких снимков.
@@ -511,13 +499,12 @@ display encoding
 {:#expo}
 #### Базовая кривая + модуль экспозиции
 
-{% image @_src/2025/10/dpg1/131_exposure.png figure left width=249px crop=249x206+1651+539 link=false %}
+![](_src/2025/10/dpg1/131_exposure.png){: left width="249" crop="249x206+1651+539" href="none" }
 
 Это самый, наверное, классический способ и наименее интересный, но тем не менее рабочий. К счастью, [модуль экспозиции](#mod-exposure)
 в darktable не просто сдвигает, а позволяет «растянуть» экспозицию.
 
-{% image @_src/2025/10/dpg1/131_exposure.png figure right width=259px crop=259x180+1651+92 link=false
-   title="Гистограмма после коррекции модулем экспозиции" %}
+![Гистограмма после коррекции модулем экспозиции](_src/2025/10/dpg1/131_exposure.png){: right width="259" crop="259x180+1651+92" href="none" }
 
 Что мы делаем в этом случае?
 
@@ -539,9 +526,9 @@ display encoding
 {:#rgbs}
 #### RGB-уровни + RGB-кривая
 
-{% image @_src/2025/10/dpg1/132_rgb_levels.png figure left width=249px crop=249x358+1651+363 link=false %}
+![](_src/2025/10/dpg1/132_rgb_levels.png){: left width="249" crop="249x358+1651+363" href="none" }
 
-{% image @_src/2025/10/dpg1/133_rgb_curve.png figure left width=249px crop=249x403+1651+330 link=false %}
+![](_src/2025/10/dpg1/133_rgb_curve.png){: left width="249" crop="249x403+1651+330" href="none" }
 
 Третий способ, наверное, наиболее гибкий из тех, которые мы рассмотрим в этой главе, за счет того, что мы разделяем два действия:
 растягивание гистограммы модулем *[rgb levels](#mod-rgb-levels)* (RGB-уровни) и подъем теней модулем *[rgb curve](#mod-rgb-curve)*
@@ -556,8 +543,7 @@ display encoding
 
 Итак, что мы делаем в этом случае?
 
-{% image @_src/2025/10/dpg1/132_rgb_levels.png figure right width=259px crop=259x180+1651+92 link=false
-   title="Гистограмма после коррекции «RGB-уровни + RGB-кривая»" %}
+![Гистограмма после коррекции «RGB-уровни + RGB-кривая»](_src/2025/10/dpg1/132_rgb_levels.png){: right width="259" crop="259x180+1651+92" href="none" }
 
 <u>Во-первых:</u> отключаем базовую кривую. Это не принципиально, но в целом использование одновременно *base curve* и *rgb curve*
 может дать некоторый перебор с тенями.
@@ -597,21 +583,24 @@ display encoding
 существенным преимуществом, если у нас сложная обработка из большого количества шагов... И конечно, во всех случаях можно покрутить
 туда-сюда разные параметры для тонкой настройки.
 
+<!-- TODO: переделать в галерею -->
 <div style="text-align: center; margin: 10px auto;">
 
-{% image @_src/2025/10/dpg1/IMG_2686_hdr.jpg figure width=250px fig_style="display:inline-block;" caption="Множественная экспозиция" %}
+{: style="display:inline-block;" }
+![Множественная экспозиция](_src/2025/10/dpg1/IMG_2686_hdr.jpg){: width="250" caption }
 
-{% image @_src/2025/10/dpg1/IMG_2686_exposure.jpg figure width=250px fig_style="display:inline-block;" caption="base curve + exposure" %}
+{: style="display:inline-block;" }
+![base curve + exposure](_src/2025/10/dpg1/IMG_2686_exposure.jpg){: width="250" caption }
 
-{% image @_src/2025/10/dpg1/IMG_2686_levels.jpg figure width=250px fig_style="display:inline-block;" caption="rgb levels + rgb curve" %}
+{: style="display:inline-block;" }
+![rgb levels + rgb curve](_src/2025/10/dpg1/IMG_2686_levels.jpg){: width="250" caption }
 
 </div>
 
 {:#fine}
 ### Финальный штрих
 
-{% image @_src/2025/10/dpg1/128_local_contrast.png figure right width=249px crop=249x223+1651+428 link=false
-   title="Модуль «local contrast»" %}
+![Модуль «local contrast»](_src/2025/10/dpg1/128_local_contrast.png){: right width="249" crop="249x223+1651+428" href="none" }
 
 Основную задачу мы, в общем-то, выполнили, осталось чуть-чуть улучшить финальную картинку, подчеркнув детали. Для этого нам потребуется
 модуль **[local contrast](#mod-local-contrast)** (локальный контраст), у которого есть очень подходящий пре­сет — *clarity* (четкость).
@@ -673,8 +662,7 @@ display encoding
 
 <section class="module">
 
-{% image @_src/2025/10/dpg1/118_base_curve.png figure center width=249px crop=249x374+1651+429 link=false
-   title="Модуль «base curve»" %}
+![Модуль «base curve»](_src/2025/10/dpg1/118_base_curve.png){: width="249" crop="249x374+1651+429" href="none" }
 
 Имитирует JPEG, созданный в камере, применяя к изображению характерную базовую кривую.
 
@@ -728,8 +716,7 @@ exposure bias (fusion)
 
 <section class="module">
 
-{% image @_src/2025/10/dpg1/115_crop.png figure center width=249px crop=249x262+1651+417 link=false
-   title="Модуль «crop»" %}
+![Модуль «crop»](_src/2025/10/dpg1/115_crop.png){: width="249" crop="249x262+1651+417" href="none" }
 
 Кадрирование изображения с использованием экранных направляющих.
 
@@ -742,7 +729,7 @@ exposure bias (fusion)
 
 Когда модуль находится в фокусе, отображается полное некадрированное изображение с наложенными рамками кадрирования и опциональными направляющими линиями.
 
-{% image @_src/2025/10/dpg1/115_crop.png figure center width=420px crop=1364x759+286+121 %}
+![](_src/2025/10/dpg1/115_crop.png){: width="420" crop="1364x759+286+121" }
 
 Изменяйте размер кадра, перетаскивая активные рамки кадрирования на гра­ни­цах и углах.
 
@@ -833,8 +820,7 @@ bottom
 
 <section class="module">
 
-{% image @_src/2025/10/dpg1/125_demosaic.png figure center width=249px crop=249x136+1651+561 link=false
-   title="Модуль «demosaic»" %}
+![Модуль «demosaic»](_src/2025/10/dpg1/125_demosaic.png){: width="249" crop="249x136+1651+561" href="none" }
 
 Управляет процессом демозаики raw-файлов.
 
@@ -997,8 +983,7 @@ manual (ручной)
 
 : Позволяет вручную установить значения *exposure* (экспозиция) и *black level* (уровень черного).
 
-  {% image @_src/2025/10/dpg1/119_exposure.png figure center width=249px crop=249x207+1651+538 link=false
-     title="Модуль «exposure» / ручной режим" style="border-radius:0px;" %}
+  ![Модуль «exposure» / ручной режим](_src/2025/10/dpg1/119_exposure.png){: width="249" crop="249x207+1651+538" href="none" style="border-radius:0px;" }
 
 automatic (автоматический)
 
@@ -1009,8 +994,7 @@ automatic (автоматический)
   ниже). Этот режим особенно полезен для автоматического изменения экспозиции большого количества изображений, чтобы добиться одинаковой
   экспозиции. Типичный случай использования автоматического ре­жи­ма — устранение мерцания в тайм­лапс-фо­то­гра­фи­ях.
 
-  {% image @_src/2025/10/dpg1/120_exposure_auto.png figure center width=249px crop=249x234+1651+511 link=false
-     title="Модуль «exposure» / автоматический режим" style="border-radius:0px;" %}
+  ![Модуль «exposure» / автоматический режим](_src/2025/10/dpg1/120_exposure_auto.png){: width="249" crop="249x234+1651+511" href="none" style="border-radius:0px;" }
 
 {:.no_toc}
 #### Элементы управления модуля
@@ -1155,8 +1139,7 @@ CIE Lab 1976 зависит от вход­но­го цветового про
 
 <section class="module">
 
-{% image @_src/2025/10/dpg1/124_highlight_reconstruction.png figure center width=249px crop=249x120+1651+594 link=false
-   title="Модуль «highlight reconstruction»" %}
+![Модуль «highlight reconstruction»](_src/2025/10/dpg1/124_highlight_reconstruction.png){: width="249" crop="249x120+1651+594" href="none" }
 
 Пытается восстановить информацию о цвете для пикселей, которые обрезаны в одном или нескольких каналах RGB.
 
@@ -1387,8 +1370,7 @@ rebuild
 
 <section class="module">
 
-{% image @_src/2025/10/dpg1/102_defaulthistory.png figure center width=267px crop=267x279+19+387 link=false
-   title="Модуль «history»" %}
+![Модуль «history»](_src/2025/10/dpg1/102_defaulthistory.png){: width="267" crop="267x279+19+387" href="none" }
 
 Позволяет просматривать и изменять [стек истории](https://docs.darktable.org/usermanual/development/en/darkroom/pixelpipe/history-stack/)
 текущего снимка в представлении *darkroom*.
@@ -1417,12 +1399,12 @@ rebuild
 Нажмите «compress history stack» с зажатой клавишей `Ctrl`, чтобы обрезать стек истории без сжатия, то есть удалить все модули выше текущего
 выбранного, оставив остальную часть стека без изменений.
 
-Нажмите кнопку сброса параметров в заголовке модуля ({% image @_src/2025/10/dpg1/102_defaulthistory.png width=18px crop=18x18+241+394 link=false %}),
+Нажмите кнопку сброса параметров в заголовке модуля (![](_src/2025/10/dpg1/102_defaulthistory.png){: width="18" crop="18x18+241+394" href="none" },
 чтобы удалить весь стек истории и повторно активировать модули по умолчанию. Того же результата можно достичь, выбрав элемент стека «original»
 (исходное изображение) и нажав «compress history stack».
 
-Кнопка справа от «compress history stack» — {% image @_src/2025/10/dpg1/102_defaulthistory.png width=20px crop=20x23+257+639 link=false %} — позволяет
-создать новый стиль из стека истории текущего снимка, который затем можно применить к дру­гим снимкам. В первой строке всплывающего диалога
+Кнопка справа от «compress history stack» — ![](_src/2025/10/dpg1/102_defaulthistory.png){: width="20" crop="20x23+257+639" href="none" } —
+позволяет создать новый стиль из стека истории текущего снимка, который затем можно применить к дру­гим снимкам. В первой строке всплывающего диалога
 укажите название стиля, а во второй — описание для поиска. Вам будет предложено выбрать, какие модули из текущего стека истории включить в стиль.
 
 Созданными стилями можно управлять и применять их к другим снимкам с по­мощью модуля
@@ -1443,8 +1425,7 @@ rebuild
 
 <section class="module">
 
-{% image @_src/2025/10/dpg1/126_input_color_profile.png figure center width=249px crop=249x102+1651+429 link=false
-   title="Модуль «input color profile»" %}
+![Модуль «input color profile»](_src/2025/10/dpg1/126_input_color_profile.png){: width="249" crop="249x102+1651+429" href="none" }
 
 Определяет, как **darktable** будет интерпретировать цвета изображения.
 
@@ -1516,8 +1497,7 @@ gamut clipping
 
 <section class="module">
 
-{% image @_src/2025/10/dpg1/127_lens_correction.png figure center width=249px crop=249x326+1651+528 link=false
-   title="Модуль «lens correction»" %}
+![Модуль «lens correction»](_src/2025/10/dpg1/127_lens_correction.png){: width="249" crop="249x326+1651+528" href="none" }
 
 Автоматически корректирует (или имитирует) искажения объектива, поперечные хроматические аберрации (TCA) и виньетирование.
 
@@ -1710,8 +1690,7 @@ steepness
 
 <section class="module">
 
-{% image @_src/2025/10/dpg1/128_local_contrast.png figure center width=249px crop=249x223+1651+428 link=false
-   title="Модуль «local contrast»" %}
+![Модуль «local contrast»](_src/2025/10/dpg1/128_local_contrast.png){: width="249" crop="249x223+1651+428" href="none" }
 
 Усиливает локальный контраст изображения.
 
@@ -1746,8 +1725,7 @@ detail
 
 Чтобы понять параметры фильтра _local laplacian_, можно представить его как применение кривой к изображению, подобной следующему графику:
 
-{% image @_src/2025/10/dpg1/local-laplacian-curve.png figure center width=320px fig_class=logo link=false
-   title="График local laplacian" %}
+![График local laplacian](_src/2025/10/dpg1/local-laplacian-curve.png){: width="320" .logo href="none" }
 
 Эта кривая применяется к изображению локально, избегая артефактов ореола.
 
@@ -1797,8 +1775,7 @@ midtone range
 
 <section class="module">
 
-{% image @_src/2025/10/dpg1/100_darkroom.png figure center width=276px crop=276x200+10+92 link=false
-   title="Модуль «navigation»" %}
+![Модуль «navigation»](_src/2025/10/dpg1/100_darkroom.png){: width="276" crop="276x200+10+92" href="none" }
 
 Позволяет увеличивать и перемещать текущее изображение.
 
@@ -1818,8 +1795,7 @@ midtone range
 
 <section class="module">
 
-{% image @_src/2025/10/dpg1/117_orientation.png figure center width=249px crop=249x89+1651+528 link=false
-   title="Модуль «orientation»" %}
+![Модуль «orientation»](_src/2025/10/dpg1/117_orientation.png){: width="249" crop="249x89+1651+528" href="none" }
 
 Поворачивает изображение на 90 градусов за раз или отражает изображение по горизонтали и/или вертикали.
 
@@ -1841,19 +1817,19 @@ transform
 
 </div>
 
-{% image @_src/2025/10/dpg1/117_orientation.png width=20px crop=20x20+1745+564 link=false %} — поворот против часовой стрелки
+![](_src/2025/10/dpg1/117_orientation.png){: width="20" crop="20x20+1745+564" href="none" } — поворот против часовой стрелки
 
 : Поворачивает изображение на 90 градусов против часовой стрелки.
 
-{% image @_src/2025/10/dpg1/117_orientation.png width=20px crop=20x20+1785+564 link=false %} — поворот по часовой стрелке
+![](_src/2025/10/dpg1/117_orientation.png){: width="20" crop="20x20+1785+564" href="none" } — поворот по часовой стрелке
 
 : Поворачивает изображение на 90 градусов по часовой стрелке.
 
-{% image @_src/2025/10/dpg1/117_orientation.png width=20px crop=20x20+1824+564 link=false %} — отражение по горизонтали
+![](_src/2025/10/dpg1/117_orientation.png){: width="20" crop="20x20+1824+564" href="none" } — отражение по горизонтали
 
 : Отражает изображение (зеркально) по горизонтали.
 
-{% image @_src/2025/10/dpg1/117_orientation.png width=20px crop=20x20+1863+564 link=false %} — отражение по вертикали
+![](_src/2025/10/dpg1/117_orientation.png){: width="20" crop="20x20+1863+564" href="none" } — отражение по вертикали
 
 : Отражает изображение (зеркально) по вертикали.
 
@@ -1876,8 +1852,7 @@ show guides
 
 <section class="module">
 
-{% image @_src/2025/10/dpg1/129_output_color_profile.png figure center width=249px crop=249x60+1651+330 link=false
-   title="Модуль «output color profile»" %}
+![Модуль «output color profile»](_src/2025/10/dpg1/129_output_color_profile.png){: width="249" crop="249x60+1651+330" href="none" }
 
 Управляет выходным профилем для экспорта и методом рендеринга, используемым при преобразовании между цветовыми пространствами.
 
@@ -1924,8 +1899,7 @@ output profile
 
 <section class="module">
 
-{% image @_src/2025/10/dpg1/121_rgb_curve.png figure center width=249px crop=249x403+1651+330 link=false
-   title="Модуль «rgb curve»" %}
+![Модуль «rgb curve»](_src/2025/10/dpg1/121_rgb_curve.png){: width="249" crop="249x403+1651+330" href="none" }
 
 Классический инструмент цифровой фотографии для изменения тонов изображения с использованием кривых.
 
@@ -1976,8 +1950,7 @@ compensate middle gray
 
 <section class="module">
 
-{% image @_src/2025/10/dpg1/132_rgb_levels.png figure center width=249px crop=249x358+1651+363 link=false
-   title="Модуль «rgb levels»" %}
+![Модуль «rgb levels»](_src/2025/10/dpg1/132_rgb_levels.png){: width="249" crop="249x358+1651+363" href="none" }
 
 Настраивайте чёрные, белые и средние серые точки в цветовом пространстве RGB. Этот модуль похож на модуль
 [_levels_](https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/levels/),
@@ -2033,8 +2006,7 @@ preserve colors
 
 <section class="module">
 
-{% image @_src/2025/10/dpg1/116_rotate-perspective.png figure center width=249px crop=249x217+1651+462 link=false
-   title="Модуль «rotate and perspective»" %}
+![Модуль «rotate and perspective»](_src/2025/10/dpg1/116_rotate-perspective.png){: width="249" crop="249x217+1651+462" href="none" }
 
 Автоматически корректирует сходящиеся линии, вид перспективного искажения. Механизм основан на программе **ShiftN**[^ShiftN]
 Маркуса Хебеля. Этот модуль также позволяет регулировать поворот изображения.
@@ -2074,7 +2046,7 @@ preserve colors
 
 ###### Ручное рисование структурных линий
 
-Кликните на значок {% image @_src/2025/10/dpg1/116_rotate-perspective.png width=20px crop=20x20+1735+577 link=false %}, чтобы
+Кликните на значок ![](_src/2025/10/dpg1/116_rotate-perspective.png){: width="20" crop="20x20+1735+577" href="none" }, чтобы
 включить режим рисования линий, затем кликните и перетаскивайте на изображении, чтобы нарисовать линии, которые вы хотите сделать
 горизонтальными или вертикальными. Модуль автоматически определит, являются ли линии горизонтальными или вертикальными, и окрасит
 их соответственно в зеленый или синий цвет. Рисуйте столько линий, сколько хотите (чем больше линий, тем лучше работает механизм
@@ -2085,7 +2057,7 @@ preserve colors
 
 ###### Ручное задание прямоугольника перспективы
 
-Кликните на значок {% image @_src/2025/10/dpg1/116_rotate-perspective.png width=20px crop=20x20+1796+577 link=false %}, чтобы
+Кликните на значок ![](_src/2025/10/dpg1/116_rotate-perspective.png){: width="20" crop="20x20+1796+577" href="none" }, чтобы
 включить режим рисования прямоугольника перспективы. На экране появится прямоугольник, и вы можете захватывать и перемещать его углы так,
 чтобы левая и правая стороны совпадали с ли­ни­я­ми, которые вы хотите сделать вертикальными, а верхняя и нижняя — с ли­ни­я­ми,
 которые вы хотите сделать горизонтальными. Когда вы удовлетворены прямоугольником, кликните на один из значков подгонки, чтобы
@@ -2098,7 +2070,7 @@ preserve colors
 
 ###### Автоматическое определение структуры
 
-Кликните на значок {% image @_src/2025/10/dpg1/116_rotate-perspective.png width=21px crop=21x20+1856+577 link=false %}, чтобы
+Кликните на значок ![](_src/2025/10/dpg1/116_rotate-perspective.png){: width="21" crop="21x20+1856+577" href="none" }, чтобы
 проанализировать изображение на наличие структурных эле­мен­тов — dark­tab­le автоматически обнаружит и оценит отрезки линий.
 `Shift`+клик применяет шаг усиления контраста перед дальнейшим анализом. `Ctrl`+клик применяет шаг усиления краев перед дальнейшим
 анализом. Обе вариации можно использовать по отдельности или в ком­би­на­ции, если стандартный анализ не может обнаружить достаточное
@@ -2151,9 +2123,9 @@ preserve colors
 </div>
 
 Вы можете выбрать автоматическое применение только вертикальных коррекций
-{% image @_src/2025/10/dpg1/116_rotate-perspective.png width=20px crop=20x20+1735+597 %}, только горизонтальных коррекций
-{% image @_src/2025/10/dpg1/116_rotate-perspective.png width=20px crop=20x20+1796+597 %} или обеих вместе
-{% image @_src/2025/10/dpg1/116_rotate-perspective.png width=20px crop=20x20+1856+597 %}. `Ctrl`+клик на любом из значков применяет
+![](_src/2025/10/dpg1/116_rotate-perspective.png){: width="20" crop="20x20+1735+597" href="none" }, только горизонтальных коррекций
+![](_src/2025/10/dpg1/116_rotate-perspective.png){: width="20" crop="20x20+1796+597" href="none" } или обеих вместе
+![](_src/2025/10/dpg1/116_rotate-perspective.png){: width="20" crop="20x20+1856+597" href="none" }. `Ctrl`+клик на любом из значков применяет
 поворот без сдвига объектива. `Shift`+клик на любом из значков применяет сдвиг объектива без поворота.
 
 ##### Поворот
@@ -2232,11 +2204,11 @@ show guides
 
 Вот изображение с наклонным горизонтом и сходящимися линиями, вызванными направлением камеры вверх:
 
-{% image @_src/2025/10/dpg1/perspective-correction-example-before.png figure center width=420px %}
+![](_src/2025/10/dpg1/perspective-correction-example-before.png){: width="420" }
 
 Вот изображение после коррекции вертикальных и горизонтальных перспективных искажений с использованием автоматического определения структуры. Обратите внимание на корректировку кадрирования, выполненную функцией автоматического кадрирования, и все еще видимое наложение структурных линий:
 
-{% image @_src/2025/10/dpg1/perspective-correction-example-after.png figure center width=420px %}
+![](_src/2025/10/dpg1/perspective-correction-example-after.png){: width="420" }
 
 </section>
 
@@ -2274,8 +2246,7 @@ of the scopes module](https://docs.darktable.org/usermanual/development/en/prefe
 {:#histogram}
 #### histogram (гистограмма)
 
-{% image @_src/2025/10/dpg1/100_darkroom.png figure center width=259px crop=259x180+1651+92 link=false
-   title="Модуль «scopes» / гистограмма" %}
+![Модуль «scopes» / гистограмма](_src/2025/10/dpg1/100_darkroom.png){: width="259" crop="259x180+1651+92" href="none" }
 
 Гистограмма показывает распределение пикселей по яркости для каждого цветового канала.
 
@@ -2290,8 +2261,7 @@ of the scopes module](https://docs.darktable.org/usermanual/development/en/prefe
 {:#waveform}
 #### waveform (осциллограмма)
 
-{% image @_src/2025/10/dpg1/104_waveform.png figure center width=259px crop=259x180+1651+92 link=false
-   title="Модуль «scopes» / осциллограмма (горизонтальная)" %}
+![Модуль «scopes» / осциллограмма (горизонтальная)](_src/2025/10/dpg1/104_waveform.png){: width="259" crop="259x180+1651+92" href="none" }
 
 Осциллограмма показывает данные, аналогичные гистограмме, но позволяет рассматривать их в пространственном контексте.
 
@@ -2308,8 +2278,7 @@ of the scopes module](https://docs.darktable.org/usermanual/development/en/prefe
 
 Первая кнопка с правой стороны переключает между горизонтальным (вы­ше) и вертикальным (ниже) режимами:
 
-{% image @_src/2025/10/dpg1/107_vertical_wave.png figure center width=259px crop=259x180+1651+92 link=false
-   title="Модуль «scopes» / осциллограмма (вертикальная)" %}
+![Модуль «scopes» / осциллограмма (вертикальная)](_src/2025/10/dpg1/107_vertical_wave.png){: width="259" crop="259x180+1651+92" href="none" }
 
 В вертикальной осциллограмме вертикальная ось графика соответствует вертикальной оси снимка, а горизонтальная ось отображает
 распределение пикселей по яркости. Вертикальная осциллограмма полезна для снимков в пор­т­рет­ном формате или для иного анализа изображения.
@@ -2319,15 +2288,13 @@ of the scopes module](https://docs.darktable.org/usermanual/development/en/prefe
 {:#rgb-parade}
 #### RGB parade (парад каналов RGB)
 
-{% image @_src/2025/10/dpg1/103_rgb_parade.png figure center width=259px crop=259x180+1651+92 link=false
-   title="Модуль «scopes» / парад каналов (горизонтальный)" %}
+![Модуль «scopes» / парад каналов (горизонтальный)](_src/2025/10/dpg1/103_rgb_parade.png){: width="259" crop="259x180+1651+92" href="none" }
 
 Парад каналов RGB показывает те же данные, что и осциллограмма, но с раз­де­ле­ни­ем красного, зелёного и синего каналов, отображаемых рядом.
 
 Как и в осциллограмме, нажатие кнопки с правой стороны модуля переключает между горизонтальным (выше) и вертикальным (ниже) режимами:
 
-{% image @_src/2025/10/dpg1/106_vertical_scope.png figure center width=259px crop=259x180+1651+92 link=false
-   title="Модуль «scopes» / парад каналов (вертикальный)" %}
+![Модуль «scopes» / парад каналов (вертикальный)](_src/2025/10/dpg1/106_vertical_scope.png){: width="259" crop="259x180+1651+92" href="none" }
 
 Парад каналов RGB полезен для выравнивания интенсивности красного, зелёного и синего каналов. Он также помогает понять различия
 между каналами и их индивидуальные характеристики.
@@ -2337,8 +2304,7 @@ of the scopes module](https://docs.darktable.org/usermanual/development/en/prefe
 {:#vectorscope}
 #### vectorscope (вектороскоп)
 
-{% image @_src/2025/10/dpg1/105_vectorscope.png figure center width=259px crop=259x180+1651+92 link=false
-   title="Модуль «scopes» / вектороскоп" %}
+![Модуль «scopes» / вектороскоп](_src/2025/10/dpg1/105_vectorscope.png){: width="259" crop="259x180+1651+92" href="none" }
 
 Вектороскоп отображает [хроматичность](https://en.wikipedia.org/wiki/Chromaticity) без учёта яркости или пространственных данных.
 
@@ -2355,8 +2321,7 @@ of the scopes module](https://docs.darktable.org/usermanual/development/en/prefe
 Вектороскоп предоставляет дополнительные элементы управления, которые заслуживают отдельного обсуждения. При наведении курсора на модуль
 в ре­жи­ме вектороскопа отображаются следующие дополнительные кнопки:
 
-{% image @_src/2025/10/dpg1/108_vectorscope_buttons.png figure center width=259px crop=259x180+1651+92 link=false
-   title="Модуль «scopes» / вектороскоп (кнопки)" %}
+![Модуль «scopes» / вектороскоп (кнопки)](_src/2025/10/dpg1/108_vectorscope_buttons.png){: width="259" crop="259x180+1651+92" href="none" }
 
 Нажмите самую правую кнопку, чтобы переключить шкалу насыщенности между линейным и логарифмическим режимами.
 
@@ -2368,8 +2333,7 @@ of the scopes module](https://docs.darktable.org/usermanual/development/en/prefe
 Наконец, вдоль левого края модуля находятся кнопки, позволяющие наложить выбранный индикатор цветовой гармонии на график вектороскопа
 в цве­то­вом пространстве RYB. Например, ниже показана гармония «триада»:
 
-{% image @_src/2025/10/dpg1/109_vectorscope_triad.png figure center width=259px crop=259x180+1651+92 link=false
-   title="Модуль «scopes» / вектороскоп (триада)" %}
+![Модуль «scopes» / вектороскоп (триада)](_src/2025/10/dpg1/109_vectorscope_triad.png){: width="259" crop="259x180+1651+92" href="none" }
 
 Вращайте наложенные направляющие гармонии, наведя курсор на модуль и прокручивая колёсико мыши. Удерживайте `Ctrl` при прокрутке
 для более медленного вращения. Удерживайте `Shift` при прокрутке, чтобы изменить область, покрываемую направляющими.
@@ -2462,8 +2426,7 @@ of the scopes module](https://docs.darktable.org/usermanual/development/en/prefe
 
 <section class="module">
 
-{% image @_src/2025/10/dpg1/122_tone_curve.png figure center width=249px crop=249x415+1651+363 link=false
-   title="Модуль «tone curve»" %}
+![Модуль «tone curve»](_src/2025/10/dpg1/122_tone_curve.png){: width="249" crop="249x415+1651+363" href="none" }
 
 Классический инструмент цифровой фотографии для изменения тонов изображения с использованием кривых.
 
@@ -2548,8 +2511,7 @@ a/b-channel curves
 
 <section class="module">
 
-{% image @_src/2025/10/dpg1/123_white_balance.png figure center width=249px crop=249x201+1651+627 link=false
-   title="Модуль «white balance»" %}
+![Модуль «white balance»](_src/2025/10/dpg1/123_white_balance.png){: width="249" crop="249x201+1651+627" href="none" }
 
 Регулирует баланс белого изображения путем изменения температуры и оттенка, задания коэффициента для каждого RGB-канала или выбора
 из списка предопределенных настроек баланса белого.
@@ -2700,8 +2662,7 @@ plugins/darkroom/temperature/button_bar=TRUE
 
 В верхней части каждого модуля обработки находится заголовок модуля.
 
-{% image @_src/2025/10/dpg1/111_full_nodule_header.png figure center width=250px crop=250x32+1651+594 link=false
-   title="Заголовок модуля" %}
+![Заголовок модуля](_src/2025/10/dpg1/111_full_nodule_header.png){: width="250" crop="250x32+1651+594" href="none" }
 
 Кликните на название модуля), чтобы развернуть модуль и отобразить параметры, управляющие его работой.
 
@@ -2718,7 +2679,7 @@ plugins/darkroom/temperature/button_bar=TRUE
 
 Заголовок модуля содержит следующие элементы управления (слева направо):
 
-{% image @_src/2025/10/dpg1/111_full_nodule_header.png width=18px crop=18x18+1658+601 link=false %} — кнопка включения/выключения
+![](_src/2025/10/dpg1/111_full_nodule_header.png){: width="18" crop="18x18+1658+601" href="none" } — кнопка включения/выключения
 
 : Кликните, чтобы включить или выключить модуль. Некоторые модули являются обязательными для обработки изображения и не могут быть
   отключены (хотя их параметры можно изменить). Аналогично, некоторые модули неприменимы к определенным типам изображений и не могут быть включены.
@@ -2735,7 +2696,7 @@ plugins/darkroom/temperature/button_bar=TRUE
 
   `Ctrl`+клик на названии модуля позволяет вручную изменить имя экземпляра.
 
-{% image @_src/2025/10/dpg1/111_full_nodule_header.png width=18px crop=18x18+1815+601 link=false %} — переключатель маски
+![](_src/2025/10/dpg1/111_full_nodule_header.png){: width="18" crop="18x18+1815+601" href="none" } — переключатель маски
 
 : Этот значок появляется в заголовке, если в модуле активна
   [маска](https://docs.darktable.org/usermanual/development/en/darkroom/masking-and-blending/masks/). Наведите курсор на значок,
@@ -2744,19 +2705,19 @@ plugins/darkroom/temperature/button_bar=TRUE
   непрозрачность 0%. Эта кнопка-переключатель может быть отключена в настройках [pre­fe­ren­ces > dark­room > show mask indicator in mo­du­le
   he­a­ders](https://docs.darktable.org/usermanual/development/en/preferences-settings/darkroom/#modules).
 
-{% image @_src/2025/10/dpg1/111_full_nodule_header.png width=18px crop=18x18+1835+601 link=false %} — меню нескольких экземпляров
+![](_src/2025/10/dpg1/111_full_nodule_header.png){: width="18" crop="18x18+1835+601" href="none" } — меню нескольких экземпляров
 
 : Это меню позволяет создавать, удалять, перемещать и переименовывать экземпляры модулей. Щелкните правой кнопкой мыши на этом значке,
   чтобы напрямую создать новый экземпляр модуля. Подробности см. в раз­де­ле
   *[mul­tip­le in­s­tan­ces](https://docs.darktable.org/usermanual/development/en/darkroom/processing-modules/multiple-instances/)*.
 
-{% image @_src/2025/10/dpg1/111_full_nodule_header.png width=18px crop=18x18+1855+601 link=false %} — сброс
+![](_src/2025/10/dpg1/111_full_nodule_header.png){: width="18" crop="18x18+1855+601" href="none" } — сброс
 
 : Кликните, чтобы сбросить все параметры модуля на значения по умолчанию. `Ctrl`+клик повторно применяет любые автоматические [пре­се­ты](#doc-presets)
   для мо­ду­ля — если автоматические пресеты для модуля отсутствуют, `Ctrl`+клик просто сбрасывает параметры на значения по умолчанию
   (аналогично обычному клику).
 
-{% image @_src/2025/10/dpg1/111_full_nodule_header.png width=18px crop=18x18+1875+601 link=false %} — меню пресетов
+![](_src/2025/10/dpg1/111_full_nodule_header.png){: width="18" crop="18x18+1875+601" href="none" } — меню пресетов
 
 : Это меню позволяет применять, создавать и редактировать пресеты модуля. Подробности см. в разделе *[Пресеты](#doc-presets)*.
 
@@ -2822,8 +2783,7 @@ store new preset... (сохранить новый пресет)
 
 При создании или редактировании пресетов отображается следующий диалог:
 
-{% image @_src/2025/10/dpg1/112_store_preset.png figure center width=420px
-   title="Диалог сохранения пресета" %}
+![Диалог сохранения пресета](_src/2025/10/dpg1/112_store_preset.png){: width="420" }
 
 </div>
 
@@ -2987,7 +2947,7 @@ na­me](https://docs.darktable.org/usermanual/development/en/preferences-setting
 : При наведении курсора на слайдер щелчок правой кнопкой мыши открывает многофункциональное всплывающее окно под слайдером
   для точной настройки с помощью мыши или ввода числового значения с клавиатуры.
 
-  {% image @_src/2025/10/dpg1/113_bauhaus.png figure center width=239px crop=239x239+1653+408 style="border-radius:0px;" link=false %}
+  ![](_src/2025/10/dpg1/113_bauhaus.png){: width="239" crop="239x239+1653+408" style="border-radius:0px;" href="none" }
 
   Изогнутая линия, идущая от треугольного маркера, движется вместе с кур­со­ром мыши. Чем ближе курсор к треугольному маркеру, тем грубее
   уп­рав­ле­ние значением; чем дальше от маркера, тем точнее управление. Кликните левой кнопкой мыши, чтобы подтвердить новое значение и
@@ -3036,7 +2996,7 @@ fallbacks/value.
 ##### Пипетки
 
 Многие модули позволяют задавать параметры с помощью пипеток (pickers), обозначенных значком
-{% image @_src/2025/10/dpg1/109_vectorscope_triad.png width=23px crop=23x23+1825+681 link=false %}. Пипетки позволяют выбирать области изображения
+![](_src/2025/10/dpg1/109_vectorscope_triad.png){: width="23" crop="23x23+1825+681" href="none" }. Пипетки позволяют выбирать области изображения
 для вычисления значений параметров модуля. Обычно вы можете вы­брать либо «po­int» (точ­ку — один пиксель), либо «area» (об­ласть — прямоугольный
 выбор пикселей) на изображении, хотя некоторые модули поддерживают только один режим.
 
@@ -3075,8 +3035,7 @@ fallbacks/value.
 Модули [base curve](#mod-base-curve) (базовая кривая), [tone curve](#mod-tone-curve) (тоновая кривая) и [rgb curve](#mod-rgb-curve)
 (RGB-кривая) используют кривые для управления тонами изображения. Эти модули имеют общие функции, которые заслуживают отдельного обсуждения.
 
-{% image @_src/2025/10/dpg1/114_tone_curve.png figure center width=249px crop=249x357+1651+363 link=false
-   title="Кривая" %}
+![Кривая](_src/2025/10/dpg1/114_tone_curve.png){: width="249" crop="249x357+1651+363" href="none" }
 
 ##### Узлы
 

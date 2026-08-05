@@ -12,7 +12,7 @@ date: 2021-01-01
 ---
 ## Био
 
-{% image @_src/IMG_2399.jpg figure right width=256px crop="2626x2626+467+259" bounds="1280x1280" title="Я" fig_class="face" %}
+![Я](_src/IMG_2399.jpg){: right width="256" crop="2626x2626+467+259" .face }
 
 Родился **25 мая 1979 года**.
 

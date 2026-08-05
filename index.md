@@ -1,5 +1,5 @@
 ---
-layout: nova/stream
+layout: stream
 description: Блог. Склад текстов. И прочее городу и миру...
 recommendations: all
 category_id: home

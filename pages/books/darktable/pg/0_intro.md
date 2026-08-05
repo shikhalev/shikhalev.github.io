@@ -58,8 +58,7 @@ $ sudo flatpak install org.darktable.Darktable
 {:#interface}
 ### Интерфейс
 
-{% image @pages/books/darktable/pg/img/000_empty_init.png figure center width=890px
-   caption="Скриншот первого запуска — пустое рабочее пространство" %}
+![Скриншот первого запуска — пустое рабочее пространство](pages/books/darktable/pg/img/000_empty_init.png){: width="890" caption }
 
 Интерфейс **darktable** в целом традиционен для такого рода софта. На скриншоте мы можем видеть следующие блоки:
 
@@ -104,19 +103,19 @@ $ sudo flatpak install org.darktable.Darktable
 {:#start}
 ## Начало работы
 
-{% image @pages/books/darktable/pg/img/001_init_preferences.png figure center width=640px
-   caption="Скриншот диалога настроек" %}
+<!-- TODO: перенести картинки в _src — сейчас оригиналы копируются на сайт -->
+
+![Скриншот диалога настроек](pages/books/darktable/pg/img/001_init_preferences.png){: width="640" caption }
 
 Прежде, чем начать что-то делать, зайдем в настройки, кликнув по значку шестеренки
-({% image @pages/books/darktable/pg/img/002_preferences_icon.png width=23px link=false %}) в верхней панели, и выставим там в разделе «processing»
+(![](pages/books/darktable/pg/img/002_preferences_icon.png){: width="23" href="none" }) в верхней панели, и выставим там в разделе «processing»
 параметр «auto-apply pixel workflow defaults» в значение «display-referred (legacy)». Это устаревший вариант рабочего процесса,
 но он самый простой и поэтому лучше подходит для первого знакомства.
 
 {:#start-import}
 ### Импорт
 
-{% image @pages/books/darktable/pg/img/003_import_module.png figure right width=264px link=false
-   title="Модуль импорта" %}
+![Модуль импорта](pages/books/darktable/pg/img/003_import_module.png){: right width="264" href="none" }
 
 Чтобы начать работать в raw-файлами, необходимо *импортировать* их в **darktable**. [Модуль импорта](#mod-import) находится в представлении
 lighttable в левой панели в самом верху. Как можно видеть на скриншоте, там имеются две кнопки: «add to library...»
@@ -124,8 +123,7 @@ lighttable в левой панели в самом верху. Как можн�
 прописанный в настройках. Чтобы не заморачиваться сейчас с настройками мы пойдем по первому пути. После нажатия на «add to library...»
 откроется окно диалога:
 
-{% image @pages/books/darktable/pg/img/004_import_dialog.png figure center width=640px
-   title="Диалог импорта" %}
+![Диалог импорта](pages/books/darktable/pg/img/004_import_dialog.png){: width="640" }
 
 Выбираем нужный каталог, новые (для **darktable**) файлы будут выбраны автоматически, но можно выбирать и отдельные файлы вручную,
 после чего нажимаем «add to library», диалог будет закрыт и начнется импорт. Что при этом происходит? Во-пер­вых, метаданные выбранных
@@ -147,22 +145,20 @@ XMP-файлы могут содержать дополнительные мет
 {:#lighttable}
 ### Световой стол
 
-{% image @pages/books/darktable/pg/img/005_lighttable4.png figure center width=890px
-   caption="Скриншот светового стола после импорта" %}
+![Скриншот светового стола после импорта](pages/books/darktable/pg/img/005_lighttable4.png){: width="890" caption }
 
 После импорта мы видим наши снимки в представлении lighttable в виде миниатюр, и можем обсудить данное представление поподробнее.
 
 {:#work-area}
 #### Рабочая область
 
-{% image @pages/books/darktable/pg/img/006_thumb_overlay.png figure right width=276px link=false
-   title="Миниатюра кадра с наложенной информацией" %}
+![Миниатюра кадра с наложенной информацией](pages/books/darktable/pg/img/006_thumb_overlay.png){: right width="276" href="none" }
 
 Основная рабочая область в центре в данном представлении предоставляет интерфейс управления снимками.
 
 Просмотр и выбор снимков может работать в пяти разных режимах (layouts), которые выбираются иконками в [нижней панели](#bottom-panel).
 
-{% image @pages/books/darktable/pg/img/016_filemanager.png width=28px link=false %} Файловый менеджер *(filemanager)*
+![](pages/books/darktable/pg/img/016_filemanager.png){: width="28" href="none" } Файловый менеджер *(filemanager)*
 
 : В этом режиме мы получаем привычный по многим программам поток миниатюр, как в файловых менеджерах типа Dolphin[^dolphin], или программах
   работы с из­о­б­ра­же­ни­я­ми типа Gwenview[^gwenview] (или того же digiKam[^digikam]). Размер миниатюр (масштаб) можно менять колесиком мыши
@@ -170,25 +166,25 @@ XMP-файлы могут содержать дополнительные мет
 
   Интуитивно понятный и предсказуемый режим. Удобен для последовательной работы.
 
-{% image @pages/books/darktable/pg/img/017_zoomable.png width=28px link=false %} Масштабируемый вид *(zoomable)*
+![](pages/books/darktable/pg/img/017_zoomable.png){: width="28" href="none" } Масштабируемый вид *(zoomable)*
 
 : В этом режиме колесиком мыши мы можем «приближать/отдалять световой стол, на котором разложены кадры», при этом взаимное положение
   снимков при изменении масштаба не перестраивается.
 
   Удобно для быстрых переходов из конца в конец большой коллекции.
 
-{% image @pages/books/darktable/pg/img/018_culling.png width=28px link=false %} Режим отбраковки *(culling)*
+![](pages/books/darktable/pg/img/018_culling.png){: width="28" href="none" } Режим отбраковки *(culling)*
 
 : Режим предназначен для просмотра нескольких снимков «бок о бок» для сравнения и отбраковки.
 
-{% image @pages/books/darktable/pg/img/019_dynamic_culling.png width=28px link=false %} Динамический режим отбраковки *(dynamic culling)*
+![](pages/books/darktable/pg/img/019_dynamic_culling.png){: width="28" href="none" } Динамический режим отбраковки *(dynamic culling)*
 
 : Схож с предыдущим режимом, но одновременно показывается не фиксированное количество снимков, а выбранные в лен­те миниатюр.
 
   То есть, если у нас есть серия почти одинаковых снимков, мы можем перейти в этот режим, выделить эту серию и увидеть их настолько крупно,
   насколько возможно — распределенными по всему рабочему пространству.
 
-{% image @pages/books/darktable/pg/img/020_full_preview.png width=28px link=false %} Просмотр *(full preview)*
+![](pages/books/darktable/pg/img/020_full_preview.png){: width="28" href="none" } Просмотр *(full preview)*
 
 : Показывает текущий снимок во всё доступное пространство, скрыв все панели и элементы управления.
 
@@ -200,8 +196,7 @@ XMP-файлы могут содержать дополнительные мет
 {:.note.italic}
 Тут надо заметить, что эта панель используется в том же виде не только в lighttable, но и в большинстве других представлений.
 
-{% image @pages/books/darktable/pg/img/007_top_panel.png figure center width=890px
-   caption="Верхняя панель" %}
+![Верхняя панель](pages/books/darktable/pg/img/007_top_panel.png){: width="890" caption }
 
 Логически элементы верхней панели четко разделяются на три группы:
 
@@ -211,53 +206,52 @@ XMP-файлы могут содержать дополнительные мет
 
 Рассмотрим все элементы слева направо.
 
-{% image @pages/books/darktable/pg/img/008_filters.png width=23px link=false %} Настройка фильтров
+![](pages/books/darktable/pg/img/008_filters.png){: width="23" href="none" } Настройка фильтров
 
 : Выбор фильтров, помимо дефолтных (по цветовым меткам и звездам), можно добавить фильтры по камере, объективу, параметрам съемки и т.д.
 
-{% image @pages/books/darktable/pg/img/009_filter_module_order.png width=80px link=false %} Порядок модулей
+![](pages/books/darktable/pg/img/009_filter_module_order.png){: width="80" href="none" } Порядок модулей
 
 : Фильтр по порядку модулей / рабочему процессу.
 
-{% image @pages/books/darktable/pg/img/010_color_filter.png width=166px link=false %} Цветовые метки
+![](pages/books/darktable/pg/img/010_color_filter.png){: width="166" href="none" } Цветовые метки
 
 : Фильтр по цветовым меткам. Серый кружок (предпоследняя иконка) включает все цветовые метки одновременно, пересекающиеся кружки (последняя
   иконка) переключает режимы «ИЛИ» и «И», т.е. требование любой метки из выбранных, или же всех одновременно.
 
-{% image @pages/books/darktable/pg/img/011_sort.png width=195px link=false %} Сортировка
+![](pages/books/darktable/pg/img/011_sort.png){: width="195" href="none" } Сортировка
 
 : Выбор критерия и направления сортировки. Можно выбрать сортировку по имени файла, полному пути, времени съемки/импорта/изменения и так далее.
 
-{% image @pages/books/darktable/pg/img/008_selected.png width=160px link=false %} Информация о выделении
+![](pages/books/darktable/pg/img/008_selected.png){: width="160" href="none" } Информация о выделении
 
 : Показывает сколько снимков выбрано из общего количества. Если выбран один снимок, показывает его порядковый номер.
 
-{% image @pages/books/darktable/pg/img/012_grouping.png width=23px link=false %} Группы
+![](pages/books/darktable/pg/img/012_grouping.png){: width="23" href="none" } Группы
 
 : Сворачивает/разворачивает сгруппированные снимки.
 
-{% image @pages/books/darktable/pg/img/013_overlays.png width=23px link=false %} Наложения
+![](pages/books/darktable/pg/img/013_overlays.png){: width="23" href="none" } Наложения
 
 : Управляет тем, какая информация накладывается на миниатюры кадров (а также наличием всплывающей подсказки).
 
-{% image @pages/books/darktable/pg/img/014_question.png width=23px link=false %} Справка
+![](pages/books/darktable/pg/img/014_question.png){: width="23" href="none" } Справка
 
 : Позволяет открыть контекстную справку по элементам интерфейса на **[darktable.org](https://www.darktable.org/)**.
 
-{% image @pages/books/darktable/pg/img/015_keyboard.png width=23px link=false %} Настройка горячих клавиш
+![](pages/books/darktable/pg/img/015_keyboard.png){: width="23" href="none" } Настройка горячих клавиш
 
 : Позволяет открыть редактор горячих клавиш в контекстном режиме — аналогично предыдущему пункту, после нажатия на кнопку мы нажимаем на какой-то
   элемент интерфейса и открывается раздел настройки клавиатурных сочетаний конкретно для него.
 
-{% image @pages/books/darktable/pg/img/002_preferences_icon.png width=23px link=false %} Настройки
+![](pages/books/darktable/pg/img/002_preferences_icon.png){: width="23" href="none" } Настройки
 
 : Открывает диалог настроек.
 
 {:#bottom-panel}
 #### Нижняя панель
 
-{% image @pages/books/darktable/pg/img/021_bottom_panel.png figure center width=890px
-   caption="Нижняя панель" %}
+![Нижняя панель](pages/books/darktable/pg/img/021_bottom_panel.png){: width="890" caption }
 
 Элементы нижней панели также разделяются на три группы:
 
@@ -269,15 +263,15 @@ XMP-файлы могут содержать дополнительные мет
 
 Слева направо:
 
-{% image @pages/books/darktable/pg/img/022_stars.png width=126px link=false %} Звезды
+![](pages/books/darktable/pg/img/022_stars.png){: width="126" href="none" } Звезды
 
 : Позволяет установить оценку в звездах выбранным снимкам.
 
-{% image @pages/books/darktable/pg/img/023_labels.png width=160px link=false %} Цветовые метки
+![](pages/books/darktable/pg/img/023_labels.png){: width="160" href="none" } Цветовые метки
 
 : Аналогично — позволяет установить/снять цветовые метки выбранным снимкам. Последняя иконка снимает все метки.
 
-{% image @pages/books/darktable/pg/img/024_modes.png width=266px link=false %} Управление режимом просмотра
+![](pages/books/darktable/pg/img/024_modes.png){: width="266" href="none" } Управление режимом просмотра
 
 : Иконки переключают режимы рабочей области, далее идет поле для масштабирования:
 
@@ -287,11 +281,11 @@ XMP-файлы могут содержать дополнительные мет
 
   + Для режима отбраковки это количество снимков одновременно на экране.
 
-{% image @pages/books/darktable/pg/img/025_focus.png width=28px link=false %} Фокус-пикинг
+![](pages/books/darktable/pg/img/025_focus.png){: width="28" href="none" } Фокус-пикинг
 
 : Включает отображение зон фокуса.
 
-{% image @pages/books/darktable/pg/img/026_display.png width=27px link=false %} Профиль дисплея
+![](pages/books/darktable/pg/img/026_display.png){: width="27" href="none" } Профиль дисплея
 
 : Позволяет настроить профиль дисплея.
 
@@ -376,11 +370,9 @@ geotagging
 {:#timeline-filmstrip}
 #### Таймлайн и лента кадров
 
-{% image @pages/books/darktable/pg/img/027_timeline.png figure center width=890px
-   caption="Таймлайн (из режима файлового менеджера)" %}
+![Таймлайн (из режима файлового менеджера)](pages/books/darktable/pg/img/027_timeline.png){: width="890" caption }
 
-{% image @pages/books/darktable/pg/img/028_filmstrip.png figure center width=890px
-   caption="Лента кадров (из режима отбора)" %}
+![Лента кадров (из режима отбора)](pages/books/darktable/pg/img/028_filmstrip.png){: width="890" caption }
 
 В самом низу окна **darktable** находится, в зависимости от представления и режима, или панель *[таймлайна](#mod-timeline)*,
 или панель *[ленты кадров](#mod-filmstrip)*.
@@ -399,8 +391,7 @@ geotagging
 {:#start-export}
 ### Экспорт
 
-{% image @pages/books/darktable/pg/img/029_export.png figure right width=245px link=false
-   title="Модуль экспорта" fig_style="margin-top:-30px;" %}
+![Модуль экспорта](pages/books/darktable/pg/img/029_export.png){: right width="245" up="30" href="none" }
 
 Остановимся на экспорте немного подробнее. [Соответствующий модуль](#mod-export) находится в правой боковой панели в самом низу —
 довольно интуитивно, если вспомнить о том, что модуль импорта, с которого мы начинали, расположен в верхнем левом углу.
@@ -470,8 +461,7 @@ geotagging
 {:.no_toc}
 ##### Вкладка «images»
 
-{% image @pages/books/darktable/pg/img/030_actions_on_selection.png figure center width=245px link=false
-   title="actions on selection / images" %}
+![actions on selection / images](pages/books/darktable/pg/img/030_actions_on_selection.png){: width="245" href="none" }
 
 remove
 
@@ -530,8 +520,8 @@ duplicate
 </div>
 <div class="unbreakable">
 
-Повороты ({%- image @pages/books/darktable/pg/img/032_rotate_left.png width=19px link=false -%} /
-{%- image @pages/books/darktable/pg/img/033_rotate_right.png width=19px link=false -%}) и reset rotation
+Повороты (![](pages/books/darktable/pg/img/032_rotate_left.png){: width="19" href="none" } /
+![](pages/books/darktable/pg/img/033_rotate_right.png){: width="19" href="none" }) и reset rotation
 
 : Выполняет поворот выбранных изображений по часовой стрелке или против часовой стрелки. Третья кнопка сбрасывает поворот до значения,
   указанного в EXIF-данных изображения. Эта функция напрямую связана с модулем обработки
@@ -577,8 +567,7 @@ ungroup
 {:.no_toc}
 ##### Вкладка «metadata»
 
-{% image @pages/books/darktable/pg/img/031_actions_on_selection_metadata.png figure center width=245px link=false
-   title="actions on selection / metadata" %}
+![actions on selection / metadata](pages/books/darktable/pg/img/031_actions_on_selection_metadata.png){: width="245" href="none" }
 
 Чекбоксы типов метаданных
 
@@ -654,8 +643,7 @@ color
 
 <div class="unbreakable">
 
-{% image @pages/books/darktable/pg/img/034_collections.png figure center width=252px link=false
-   title="Модуль «collections»" %}
+![Модуль «collections»](pages/books/darktable/pg/img/034_collections.png){: width="252" href="none" }
 
 Фильтрует изображения, отображаемые в представлении «Световой стол» *(lighttable)*, панели «Лента миниатюр» *(filmstrip)*
 и представлении «Карта» *(map)*, используя атрибуты изображений. Этот набор отфильтрованных изображений называется *коллекцией*.
@@ -668,7 +656,7 @@ color
 или выбранной катушки пленки.
 
 Порядок сортировки коллекций (по возрастанию/убыванию) можно переключить, нажав на иконку
-{% image @pages/books/darktable/pg/img/035_collections_sort.png width=22px link=false %}.
+![](pages/books/darktable/pg/img/035_collections_sort.png){: width="22" href="none" }.
 
 </div>
 <div class="unbreakable">
@@ -1017,7 +1005,7 @@ select by value
 </div>
 <div class="unbreakable">
 
-Нажмите на иконку {% image @pages/books/darktable/pg/img/036_expander.png width=22px link=false %} (справа от поля поиска),
+Нажмите на иконку ![](pages/books/darktable/pg/img/036_expander.png){: width="22" href="none" } (справа от поля поиска),
 чтобы открыть меню со следующими опциями:
 
 clear this rule
@@ -1052,9 +1040,9 @@ exclude images
 <div class="unbreakable">
 
 Логические операторы, определяющие, как комбинируются правила, обозначены иконками справа от каждого правила:
-AND — {% image @pages/books/darktable/pg/img/036_and.png width=20px link=false %},
-OR — {% image @pages/books/darktable/pg/img/037_or.png width=20px link=false %},
-EXCEPT — {% image @pages/books/darktable/pg/img/038_except.png width=20px link=false %}.
+AND — ![](pages/books/darktable/pg/img/036_and.png){: width="20" href="none" },
+OR — ![](pages/books/darktable/pg/img/037_or.png){: width="20" href="none" },
+EXCEPT — ![](pages/books/darktable/pg/img/038_except.png){: width="20" href="none" }.
 Щёлкните на иконке, чтобы изменить логическую операцию для этого правила.
 
 </div>
@@ -1094,8 +1082,7 @@ col­lec­tions](https://docs.darktable.org/usermanual/development/en/module-ref
 {:.no_toc}
 ##### Настройки
 
-{% image @pages/books/darktable/pg/img/039_collections_settings.png figure center width=371px link=false
-   title="Настройки коллекций" %}
+![Настройки коллекций](pages/books/darktable/pg/img/039_collections_settings.png){: width="371" href="none" }
 
 Опция «preferences...» в меню пресетов позволяет настроить поведение модуля коллекций следующим образом:
 
@@ -1148,8 +1135,7 @@ sort film rolls by
 
 <section class="module">
 
-{% image @pages/books/darktable/pg/img/029_export.png figure center width=245px link=false
-   title="Модуль «export»" %}
+![Модуль «export»](pages/books/darktable/pg/img/029_export.png){: width="245" href="none" }
 
 <div class="unbreakable">
 
@@ -1391,8 +1377,7 @@ multi-preset export
 
 Опция «preferences...» в меню пресетов вызывает диалог, где можно настроить, какие метаданные включать в экспортированные файлы:
 
-{% image @pages/books/darktable/pg/img/040_export_preferences.png figure center width=500px
-   title="Настройка метаданных при экспорте" %}
+![Настройка метаданных при экспорте](pages/books/darktable/pg/img/040_export_preferences.png){: width="500" }
 
 Параметры, введённые в этот диалог, сохраняются вместе с другими параметрами экспорта в пользовательские пресеты, и последние введённые значения сохраняются при закрытии darktable.
 
@@ -1559,8 +1544,7 @@ _Помните, что тег, установленный как категор
 Лента миниатюр позволяет быстро переключаться между кадрами. Отображаемые кадры совпадают с теми, что показаны в представлении
 «Световой стол», и определяются текущей выбранной коллекцией.
 
-{% image @_src/2025/10/dpg0/filmstrip.png figure center width=437px
-   title="Модуль filmstrip" %}
+![Модуль filmstrip](_src/2025/10/dpg0/filmstrip.png){: width="437" }
 
 Ленту миниатюр можно включить или выключить с помощью горячей клавиши `Ctrl`+`F`. Высоту панели ленты миниатюр можно изменить,
 кликнув и перетащив её верхнюю границу.
@@ -1619,8 +1603,7 @@ _Помните, что тег, установленный как категор
 
 <section class="module">
 
-{% image @pages/books/darktable/pg/img/041_image_information.png figure center width=252px link=false
-   title="Модуль «image information»" %}
+![Модуль «image information»](pages/books/darktable/pg/img/041_image_information.png){: width="252" href="none" }
 
 Отображает информацию, встроенную в EXIF-данные изображения, а также ряд дополнительных полей данных, определённых в darktable.
 
@@ -1663,8 +1646,7 @@ _Помните, что тег, установленный как категор
 
 <section class="module">
 
-{% image @pages/books/darktable/pg/img/042_import_params.png figure center width=306px link=false
-   title="Модуль «import» с параметрами" %}
+![Модуль «import» с параметрами](pages/books/darktable/pg/img/042_import_params.png){: width="306" href="none" }
 
 Добавляет изображения в библиотеку darktable, при необходимости копируя их из другого места в файловой системе
 или с подключённой камеры.
@@ -1802,8 +1784,7 @@ tags
 
 Пример скриншота ниже взят для кнопки «add to library...»:
 
-{% image @pages/books/darktable/pg/img/004_import_dialog.png figure center width=640px
-   title="Диалог импорта" %}
+![Диалог импорта](pages/books/darktable/pg/img/004_import_dialog.png){: width="640" }
 
 </div>
 <div class="unbreakable">
@@ -1848,7 +1829,7 @@ tags
 <div class="unbreakable">
 
 Вы можете просмотреть миниатюры изображений, нажав
-на значок {% image @pages/books/darktable/pg/img/043_eye_icon.png width=21px link=false %}. Также внизу экрана доступны кнопки
+на значок ![](pages/books/darktable/pg/img/043_eye_icon.png){: width="21" href="none" }. Также внизу экрана доступны кнопки
 для выбора всех файлов или ни одного.
 
 </div>
@@ -2013,8 +1994,7 @@ keep this window open
 
 <section class="module">
 
-{% image @pages/books/darktable/pg/img/044_selection.png figure center width=246px link=false
-   title="Модуль «selection»" %}
+![Модуль «selection»](pages/books/darktable/pg/img/044_selection.png){: width="246" href="none" }
 
 Позволяет выбирать изображения в представлении *lighttable* (световой стол) на основе простых критериев.
 
@@ -2071,7 +2051,7 @@ select untouched
 
 Позволяет просматривать кадры по дате и времени съёмки.
 
-{% image @_src/2025/10/dpg0/timeline.png figure center width=747px title="Модуль «timeline»" %}
+![Модуль «timeline»](_src/2025/10/dpg0/timeline.png){: width="747" }
 
 </div>
 

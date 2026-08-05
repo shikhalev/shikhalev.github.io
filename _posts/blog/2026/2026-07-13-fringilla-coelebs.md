@@ -13,7 +13,9 @@ tags:
   - Fringilla coelebs
 announce: true
 image: _src/goods/fringilla_coelebs.jpg
-seo_image_crop: 2271x1185+0+0
+is_images:
+  seo_image:
+    crop: 2271x1185+0+0
 recommend: true
 ---
 

@@ -93,7 +93,7 @@ TL;DR
 
 <!-- TODO: переделать под слайды (там нужно кропать иначе) -->
 
-{: modes="grid" cell-width="280" cell-crop="280x280+840+2220" }
+{: modes="grid" cell-width="280" cell-height="280" cell-crop="280x280+840+2220" }
 ![ISO3200, оригинал](_src/2026/07/ai-darktable/ISO3200.jpg)
 ![ISO3200, AI raw denoise](_src/2026/07/ai-darktable/ISO3200_ai_raw-denoise.jpg)
 ![ISO3200, AI denoise](_src/2026/07/ai-darktable/ISO3200_ai_denoise.jpg)
@@ -102,7 +102,7 @@ TL;DR
 
 #### ISO 12800
 
-{: modes="grid" cell-width="280" cell-crop="280x280+1050+2250" }
+{: modes="grid" cell-width="280" cell-height="280" cell-crop="280x280+1050+2250" }
 ![ISO12800, оригинал](_src/2026/07/ai-darktable/ISO12800.jpg)
 ![ISO12800, AI raw denoise](_src/2026/07/ai-darktable/ISO12800_ai_raw-denoise.jpg)
 ![ISO12800, AI denoise](_src/2026/07/ai-darktable/ISO12800_ai_denoise.jpg)
@@ -111,7 +111,7 @@ TL;DR
 
 #### ISO 51200
 
-{: modes="grid" cell-width="280" cell-crop="280x280+1030+2180" }
+{: modes="grid" cell-width="280" cell-height="280" cell-crop="280x280+1030+2180" }
 ![ISO51200, оригинал](_src/2026/07/ai-darktable/ISO51200.jpg)
 ![ISO51200, AI raw denoise](_src/2026/07/ai-darktable/ISO51200_ai_raw-denoise.jpg)
 ![ISO51200, AI denoise](_src/2026/07/ai-darktable/ISO51200_ai_denoise.jpg)
@@ -122,7 +122,7 @@ TL;DR
 
 Первая картинка — увеличение через стандартный экспорт, вторая — AI upscale.
 
-{: modes="grid" cell-width="400" cell-crop="400x400+1900+2590" }
+{: modes="grid" cell-width="400" cell-height="400" cell-crop="400x400+1900+2590" }
 ![Увеличение x2 стандартный экспорт](_src/2026/07/ai-darktable/ISO100_std_upscale.jpg)
 ![Увеличение x2 AI](_src/2026/07/ai-darktable/ISO100_ai_upscale-2x.jpg)
 

@@ -13,8 +13,7 @@ seo_image_crop: 3989x2082+0+296
 ---
 ## Содержание
 
-{% image @_src/penguin-photo/penguin.jpg figure center width=800px crop="3989x1616+0+312" caption="Картинка взята с WikiMedia Commons"
-   link="https://commons.wikimedia.org/wiki/File:Penguin_in_Antarctica_jumping_out_of_the_water.jpg" %}
+![Картинка взята с WikiMedia Commons](_src/penguin-photo/penguin.jpg){: width="800" crop="3989x1616+0+312" caption href="https://commons.wikimedia.org/wiki/File:Penguin_in_Antarctica_jumping_out_of_the_water.jpg" }
 
 Пожалуй, теперь, когда этот цикл постов немного устарел, его можно считать законченным. Он остается вполне полезным,
 но с учетом значительного обновления, как использованного софта, так и моих знаний о нем, дорабатывать я его не буду —

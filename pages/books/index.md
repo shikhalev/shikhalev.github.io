@@ -11,7 +11,7 @@ last_modified_at: 2025-10-26
 
 ### [Практическое руководство по darktable]({%- link pages/books/darktable/pg/index.md -%})
 
-{% image @_src/2025/10/cover.png figure right width=240px title="КДПВ" %}
+![КДПВ](_src/2025/10/cover.png){: right width="240" }
 
 <!-- TODO: Написать аннотацию -->
 
