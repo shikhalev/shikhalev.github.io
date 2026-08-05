@@ -13,6 +13,9 @@ tags:
 image: _src/2026/08/05/plugin-cover.png
 recommend: true
 announce: true
+is_images:
+  seo_image:
+    salt: 3
 ---
 
 {: style="border-radius:15px;" }
