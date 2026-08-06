@@ -171,4 +171,8 @@ document.addEventListener('DOMContentLoaded', () => {
       createFilter(0, root, null);
     }
   }
+
+  document.querySelectorAll('.product-min-card').forEach((elem) => {
+    elem.style.order = Math.floor(Math.random() * 1000) - elem.dataset.order;
+  });
 });

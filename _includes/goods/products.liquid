@@ -5,7 +5,7 @@
     {%- assign product_good = site.goods | where: 'path', product.good | first -%}
     {%- assign product_type = product_good.title -%}
     {%- assign product_shop = product_good.shop -%}
-    <div class="product-min-card" data-kind="{{ product.good }}" data-design="{{ product.design }}">
+    <div class="product-min-card" data-kind="{{ product.good }}" data-design="{{ product.design }}" data-order="{{ product.order }}" >
     <a href="{{ product.url }}">
       {%- if product.img -%}
         <img src="{{ product.img }}" alt="{{ product_title | escape }}" loading="lazy">

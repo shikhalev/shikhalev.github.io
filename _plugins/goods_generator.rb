@@ -1,3 +1,5 @@
+require 'date'
+
 class DataMaker
 
   attr_reader :page, :site
@@ -10,6 +12,7 @@ class DataMaker
 
   def add_design design
     selected = @flat.select { |good| design.relative_path == good['design'] }
+    selected.each { |good| good['order'] = ((good['date']&.to_date&.ld || 0) % 5000) * 1000 }
     @goods += selected
     @goods.uniq! { |g| g['url'] }
     if design.data['children']
@@ -18,7 +21,7 @@ class DataMaker
         add_design child_design if child_design
       end
     end
-    @goods.shuffle!
+    # @goods.shuffle!
   end
 
   def add_design_kind kind
@@ -90,7 +93,7 @@ class DataMaker
         add_kind link_kind if link_kind
       end
     end
-    @goods.shuffle!
+    # @goods.shuffle!
   end
 
   def add_kind_design design
