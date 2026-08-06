@@ -98,6 +98,93 @@ figure.__is_images_viewbox {
   display: flex;
 }
 
+.__new_recommends {
+  width: 100%;
+  margin: 2em auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.__new_recommends .__new_recommends_article, .__new_recommends .__new_recommends_good {
+  position: relative;
+  flex-shrink: 0;
+}
+.__new_recommends .__new_recommends_article {
+  width: 340px;
+  height: 180px;
+}
+.__new_recommends .__new_recommends_good {
+  width: 180px;
+  height: 180px;
+}
+.__new_recommends .__new_recommends_image {
+  width: 340px;
+  height: 180px;
+  object-fit: cover;
+  background-color: aliceblue;
+}
+.__new_recommends .__new_recommends_good_image {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  background-color: antiquewhite;
+}
+.__new_recommends .__new_recommends_date {
+  position: absolute;
+  padding: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: rgba(102, 102, 102, 0.6666666667);
+  color: white;
+  font-size: 80%;
+  font-weight: bold;
+}
+.__new_recommends .__new_recommends_caption {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(102, 102, 102, 0.6666666667);
+  color: white;
+  font-size: 90%;
+  font-weight: bold;
+}
+.__new_recommends a, .__new_recommends a:link, .__new_recommends a:visited, .__new_recommends a:hover {
+  color: rgba(238, 238, 238, 0.9333333333);
+  text-decoration: none !important;
+  font-style: normal;
+  display: inline-block;
+  font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+}
+.__new_recommends figure {
+  border-radius: 5px;
+  box-shadow: 0 0 10px 10px rgba(102, 102, 102, 0.4);
+  z-index: 0;
+}
+.__new_recommends figure img {
+  border-radius: 5px;
+  opacity: 0.8;
+}
+.__new_recommends figure:hover {
+  z-index: 1;
+  box-shadow: 0 0 5px 10px rgba(85, 170, 255, 0.4);
+}
+.__new_recommends figure:hover img {
+  opacity: 1;
+}
+.__new_recommends .__new_recommends_date_place, .__new_recommends .__new_recommends_title_place {
+  padding: 0 1em;
+}
+.__new_recommends .__new_recommends_good .__new_recommends_date {
+  text-align: center;
+}
+
 /* Адаптивная сетка */
 .goods-min-grid {
   display: grid;
