@@ -10,7 +10,9 @@ tags:
   - FUN
 announce: true
 image: _src/goods/IMG_5565.jpg
-seo_image_crop: 6016x3139+0+191
+is_images:
+  seo_image:
+    crop: 6016x3139+0+191
 ---
 
 Добавил в каталог еще три коллекции.

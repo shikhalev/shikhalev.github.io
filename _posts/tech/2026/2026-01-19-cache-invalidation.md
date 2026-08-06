@@ -6,7 +6,9 @@ tags:
   - iNaturalist
   - inat-get
 image: _src/2026/01/cache/cache-invalidation.jpg
-seo_image_crop: 1856x968+0+179
+is_images:
+  seo_image:
+    crop: 1856x968+0+179
 announce: true
 ---
 

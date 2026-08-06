@@ -4,6 +4,7 @@ items:
   - good: _goods/type/home/wall/foam/pd-foam-60x90.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9495095
     img: https://cdn99.printdirect.ru/cache/product/f4/be/9495095/tov/all/400z400_front_2863_0_0_0_c10e6969766829b65ae3e661ed38.jpg
+    recommend: true
   - good: _goods/type/home/wall/canvas/pd-holst-60x60.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9493068
     img: https://cdn99.printdirect.ru/cache/product/1b/d1/9493068/tov/3d/400z400_front_1187_0_0_0_4db6e4317a6a6cdb5de33b475d07.jpg

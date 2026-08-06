@@ -8,6 +8,7 @@ items:
   - good: _goods/type/home/wall/foam/pd-foam-90x60.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483338
     img: https://cdn99.printdirect.ru/cache/product/69/78/9483338/tov/all/400z400_front_2864_0_0_0_42d45f7c1c1ea4881e8bf568fb8e.jpg
+    recommend: true
   - good: _goods/type/home/wall/canvas/pd-holst-30x30.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483356
     img: https://cdn99.printdirect.ru/cache/product/67/d8/9483356/tov/3d/400z400_front_1178_0_0_0_cdbd714ea25639cde3898139fe31.jpg
@@ -29,6 +30,7 @@ items:
   - good: _goods/type/home/puzzle/carton/pd-puzzle-a3.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483345
     img: https://cdn99.printdirect.ru/cache/product/87/3f/9483345/tov/all/480z480_front_719_0_0_0_4ed3489395e1c4b6298d78083785.jpg
+    recommend: true
   - good: _goods/type/home/puzzle/carton/pd-puzzle-a4.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483346
     img: https://cdn99.printdirect.ru/cache/product/d6/7b/9483346/tov/all/480z480_front_718_0_0_0_b092c83c11c953547999a222c692.jpg

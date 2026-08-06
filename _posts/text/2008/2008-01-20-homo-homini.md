@@ -1,5 +1,5 @@
 ---
-layout: nova/verse
+layout: verse
 title: Homo homini
 category: [ text, verses, best ]
 ---

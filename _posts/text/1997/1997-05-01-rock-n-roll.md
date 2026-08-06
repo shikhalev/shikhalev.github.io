@@ -1,5 +1,5 @@
 ---
-layout: nova/verse
+layout: verse
 title: Рок-н-ролл
 write_date: предположительно весна 1997
 category: [ text, verses, best ]

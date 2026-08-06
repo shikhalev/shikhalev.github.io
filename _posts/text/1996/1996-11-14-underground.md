@@ -1,5 +1,5 @@
 ---
-layout: nova/verse
+layout: verse
 title: Мы строим подземный город
 category: [ text, verses, best ]
 tags:

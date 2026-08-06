@@ -17,7 +17,9 @@ tags:
   - культура отмены
   - этика
 image: _src/2021/07/2021-07-17/benjfrank.jpg
-seo_image_crop: "500:261+0+472"
+is_images:
+  seo_image:
+    crop: "500:261+0+472"
 recommend: true
 announce: true
 ---

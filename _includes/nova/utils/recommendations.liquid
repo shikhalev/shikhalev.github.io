@@ -1,0 +1,35 @@
+{%- if page.recommendations == 'best' or page.categories contains 'text' -%}
+    {%- assign main_data = site.bests_json_filename -%}
+    {%- assign data_flag = 'all' -%}
+    {%- assign data_cats = '' -%}
+{%- elsif page.recommendations == 'all' -%}
+    {%- assign main_data = site.recommends_json_filename -%}
+    {%- assign data_flag = 'all' -%}
+    {%- assign data_cats = '' -%}
+{%- else -%}
+    {%- assign main_data = site.recommends_json_filename -%}
+    {%- assign data_flag = 'categories' -%}
+    {%- if page.category_id -%}
+        {%- assign data_cats = page.category_id -%}
+    {%- else -%}
+        {%- assign data_cats = page.categories | join: ',' -%}
+    {%- endif -%}
+{%- endif -%}
+<div class="__new_recommends" data-main="{{ main_data }}" data-categories="{{ data_cats }}" data-goods="{{ site.recommended_goods_filename }}" data-flag="{{ data_flag }}">
+    <figure class="__new_recommends_article">
+        <a href="" class="__new_recommends_image_link"><img class="__new_recommends_image"></a>
+        <aside class="__new_recommends_date"><a href="" class="__new_recommends_date_place"> </a></aside>
+        <figcaption class="__new_recommends_caption"><a href="" class="__new_recommends_title_place"> </a></figcaption>
+    </figure>
+    <figure class="__new_recommends_article">
+        <a href="" class="__new_recommends_image_link"><img class="__new_recommends_image"></a>
+        <aside class="__new_recommends_date"><a href="" class="__new_recommends_date_place"> </a></aside>
+        <figcaption class="__new_recommends_caption"><a href="" class="__new_recommends_title_place"> </a></figcaption>
+    </figure>
+    <figure class="__new_recommends_good">
+        <a href="" class="__new_recommends_image_link" target="_blank"><img class="__new_recommends_good_image"></a>
+        <aside class="__new_recommends_date"><a href="" target="_blank" class="__new_recommends_date_place"> </a></aside>
+        <figcaption class="__new_recommends_caption"><a href="" target="_blank" class="__new_recommends_title_place"> </a></figcaption>
+    </figure>
+</div>
+<script src="/assets/js/recommends.js"></script>

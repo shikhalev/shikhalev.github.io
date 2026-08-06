@@ -12,7 +12,9 @@ tags:
   - RAW
   - JPEG
 image: _src/2023/07/26/00094-2752207474.png
-seo_image_crop: "768x400+0+94"
+is_images:
+  seo_image:
+    crop: "768x400+0+94"
 recommend: true
 announce: true
 ---

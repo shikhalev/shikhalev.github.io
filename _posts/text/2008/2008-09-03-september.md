@@ -1,5 +1,5 @@
 ---
-layout: nova/verse
+layout: verse
 title: Сентябрь...
 caption: "* * *"
 category: [ text, verses, best ]

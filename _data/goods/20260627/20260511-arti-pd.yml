@@ -7,6 +7,7 @@ items:
   - good: _goods/type/home/puzzle/carton/pd-puzzle-a3.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9484705
     img: https://cdn99.printdirect.ru/cache/product/7f/5b/9484705/tov/all/480z480_front_719_0_0_0_d3d59af47a68fa7e7dce30c09868.jpg
+    recommend: true
   - good: _goods/type/home/puzzle/carton/pd-puzzle-a4.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9484707
     img: https://cdn99.printdirect.ru/cache/product/37/d9/9484707/tov/all/480z480_front_711_0_0_0_be4272abd7feef1857145da6653b.jpg

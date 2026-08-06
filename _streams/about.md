@@ -7,7 +7,9 @@ icon: id-card
 order_no: 6
 recommendations: all
 image: _src/IMG_2399.jpg
-seo_image_crop: "500:261+0+600"
+is_images:
+  seo_image:
+    crop: "500:261+0+600"
 date: 2021-01-01
 ---
 ## Био

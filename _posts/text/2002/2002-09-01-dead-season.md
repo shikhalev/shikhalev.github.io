@@ -1,5 +1,5 @@
 ---
-layout: nova/verse
+layout: verse
 title: Мертвый сезон
 write_date: лето-осень 2002
 category: [ text, verses, best ]

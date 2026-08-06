@@ -12,7 +12,9 @@ tags:
   - Canon EF 50mm f/1.8 STM
   - AliExpress
 image: _src/2021/12/2021-12-04/front.jpg
-seo_image_crop: "500:261+0+500"
+is_images:
+  seo_image:
+    crop: "500:261+0+500"
 ---
 
 ![Синица на кормушке](_src/2021/12/2021-12-04/IMG_3554.jpg){: right width="240" .face }

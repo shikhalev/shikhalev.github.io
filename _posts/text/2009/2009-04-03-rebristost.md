@@ -1,5 +1,5 @@
 ---
-layout: nova/verse
+layout: verse
 title: Выбрось из головы, на дальнюю полку спрячь...
 caption: "* * *"
 category: [ text, verses ]

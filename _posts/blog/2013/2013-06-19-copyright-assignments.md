@@ -8,6 +8,7 @@ tags:
   - FSF
 recommend: true
 last_modified_at: 2021-04-09 12:00 +0500
+image: _src/covers/copy13.png
 ---
 ... или Знаете ли вы что...
 

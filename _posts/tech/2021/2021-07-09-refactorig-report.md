@@ -7,7 +7,9 @@ category:
   - programming
   - about
 image: _src/2021/07/2021-07-09/jekyll-screen.png
-seo_image_crop: "500:261+0+20"
+is_images:
+  seo_image:
+    crop: "500:261+0+20"
 tags:
   - shikhalev.org
   - сайты

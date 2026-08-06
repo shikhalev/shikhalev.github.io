@@ -12,7 +12,9 @@ tags:
   - фототехника
   - оптика
 image: _src/2025/06/sigma/IMG_8552.jpg
-seo_image_crop: 2400x1252+0+156
+is_images:
+  seo_image:
+    crop: 2400x1252+0+156
 announce: true
 ---
 

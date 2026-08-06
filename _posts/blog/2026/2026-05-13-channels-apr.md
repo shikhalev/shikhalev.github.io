@@ -15,7 +15,9 @@ tags:
   - змеи
 announce: true
 image: _src/2026/05/digest.jpg
-seo_image_crop: 1422x741+0+260
+is_images:
+  seo_image:
+    crop: 1422x741+0+260
 ---
 
 Затянул я немного, но таки выкладываю очередную подборку. См. также посты [за январь][jan], [за февраль][feb] и [за март][mar].

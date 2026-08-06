@@ -9,7 +9,9 @@ icon: linux
 small: true
 date: 2016-06-11
 image: _src/penguin-photo/penguin.jpg
-seo_image_crop: 3989x2082+0+296
+is_images:
+  seo_image:
+    crop: 3989x2082+0+296
 ---
 ## Содержание
 

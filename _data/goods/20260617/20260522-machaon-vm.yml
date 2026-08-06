@@ -140,12 +140,14 @@ items:
   - good: _goods/type/home/textile/plaid/vm-plaid.md
     url: https://shikhalev.vsemaykishop.ru/article/plaid/4098789?color=3D_wellsoft
     img: https://storage.vsemayki.ru/images/0/4/4098/4098789/previews/people_1000_plaid_front_3D_wellsoft_700.jpg
+    recommend: true
   - good: _goods/type/home/dish/mug/ceramics/latte/vm-mug_latte.md
     url: https://shikhalev.vsemaykishop.ru/article/mug_latte/4098789?color=white
     img: https://storage.vsemayki.ru/images/0/4/4098/4098789/previews/people_5_mug_latte_front_white_700.jpg
   - good: _goods/type/home/dish/flask/vm-flask.md
     url: https://shikhalev.vsemaykishop.ru/article/flask/4098789?color=metal
     img: https://storage.vsemayki.ru/images/0/4/4098/4098789/previews/people_11_flask_front_metal_700.jpg
+    recommend: true
   - good: _goods/type/home/dish/mug/ceramics/circle/vm-mug_fullprint.md
     url: https://shikhalev.vsemaykishop.ru/article/mug_fullprint/4098789?size=one_size&color=whiteblue
     img: https://storage.vsemayki.ru/images/0/4/4098/4098789/previews/people_22_mug_fullprint_front_whiteblue_700.jpg

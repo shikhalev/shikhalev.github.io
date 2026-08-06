@@ -14,7 +14,9 @@ tags:
   - насекомые
 announce: true
 image: _src/2026/04/digest/klesch.jpg
-seo_image_crop: 1935x1009+0+257
+is_images:
+  seo_image:
+    crop: 1935x1009+0+257
 ---
 
 Что ж, пришло время для очередной подборки. См. также посты [за январь][jan] и [за февраль][feb].

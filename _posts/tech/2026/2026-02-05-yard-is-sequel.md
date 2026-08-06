@@ -9,7 +9,9 @@ tags:
   - Sequel
 announce: true
 image: _src/2026/02/yard-is-sequel.jpg
-seo_image_crop: 1856x968+0+223
+is_images:
+  seo_image:
+    crop: 1856x968+0+223
 ---
 
 {: style="border-radius:25px;" }

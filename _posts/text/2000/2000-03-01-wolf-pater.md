@@ -1,5 +1,5 @@
 ---
-layout: nova/verse
+layout: verse
 title: Волчий пастух
 write_date: зима-весна 2000
 category: [ text, verses, best ]
