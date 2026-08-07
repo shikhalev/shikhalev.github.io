@@ -185,6 +185,28 @@ figure.__is_images_viewbox {
   text-align: center;
 }
 
+div.verse {
+  min-width: 480px;
+}
+
+.suno_details summary {
+  color: #333;
+  font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+  cursor: default;
+}
+.suno_details summary a, .suno_details summary a:link, .suno_details summary a:visited, .suno_details summary a:active {
+  text-decoration: none;
+}
+.suno_details summary a::before, .suno_details summary a:link::before, .suno_details summary a:visited::before, .suno_details summary a:active::before {
+  display: inline-block;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  content: "";
+  width: 1em;
+  height: 1em;
+  background-image: url(/assets/img/suno-192x192.png);
+}
+
 /* Адаптивная сетка */
 .goods-min-grid {
   display: grid;
