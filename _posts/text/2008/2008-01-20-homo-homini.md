@@ -7,6 +7,8 @@ tags:
 suno:
   - id: 81f8aa1e-db22-434c-bb4b-7d34ee56d849
     title: Homo homini (29.11.2024)
+  - id: 0137f1e6-ccd4-435c-bb58-5b03385b28db
+    title: Homo homini (05.01.2025)
 ---
 Человек человеку —
     необитаемый остров.
