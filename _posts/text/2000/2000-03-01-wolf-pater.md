@@ -3,6 +3,11 @@ layout: verse
 title: Волчий пастух
 write_date: зима-весна 2000
 category: [ text, verses, best ]
+tags:
+  - suno
+suno:
+  - id: ccc20005-f60b-4113-a5fe-9ad8759c5a97
+    title: Волчий пастух (v1, 30.09.2024)
 ---
 Тишина,
 Ночь в лесу,
