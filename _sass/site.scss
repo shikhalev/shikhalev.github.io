@@ -222,3 +222,30 @@ figure.__is_images_viewbox {
   }
 
 }
+
+div.verse {
+  min-width: 480px;
+}
+
+.suno_details {
+  summary {
+    // background-color: gray;
+    color: #333;
+    font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+    cursor: default;
+
+    a, a:link, a:visited, a:active {
+      text-decoration: none;
+
+      &::before {
+        display: inline-block;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        content: '';
+        width: 1em;
+        height: 1em;
+        background-image: url(/assets/img/suno-192x192.png);
+      }
+    }
+  }
+}

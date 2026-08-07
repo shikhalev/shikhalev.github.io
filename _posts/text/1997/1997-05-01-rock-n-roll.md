@@ -6,6 +6,10 @@ category: [ text, verses, best ]
 tags:
   - песенка
   - соавторство
+  - suno
+suno:
+  - id: 75a96d9b-1b4d-4f56-b67a-ac0046baa118
+    title: Рок-н-ролл (панк-рок)
 ---
 {:.epigraph}
 В соавторстве с Дъяком

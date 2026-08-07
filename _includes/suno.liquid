@@ -1,0 +1,19 @@
+{% if page.suno %}
+  <hr>
+  <h2 class="no_toc">Слушать</h2>
+  {% for song in page.suno %}
+    <details name="suno" class="suno_details">
+      <summary>{{ song.title | default: page.title }} <a href="https://suno.com/song/{{ song.id }}" target="_blank"></a></summary>
+      <iframe src="https://suno.com/embed/{{ song.id }}" width="480" height="120" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </details>
+  {% endfor %}
+{% endif %}
+{% if page.suno_en %}
+  <hr>
+  {% for song in page.suno_en %}
+    <details name="suno" class="suno_details">
+      <summary>{{ song.title | default: page.title }} <a href="https://suno.com/song/{{ song.id }}" target="_blank"></a></summary>
+      <iframe src="https://suno.com/embed/{{ song.id }}" width="480" height="120" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </details>
+  {% endfor %}
+{% endif %}
