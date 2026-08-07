@@ -2,6 +2,11 @@
 layout: verse
 title: Homo homini
 category: [ text, verses, best ]
+tags:
+  - suno
+suno:
+  - id: 81f8aa1e-db22-434c-bb4b-7d34ee56d849
+    title: Homo homini (29.11.2024)
 ---
 Человек человеку —
     необитаемый остров.
