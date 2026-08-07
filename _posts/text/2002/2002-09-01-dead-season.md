@@ -3,6 +3,11 @@ layout: verse
 title: Мертвый сезон
 write_date: лето-осень 2002
 category: [ text, verses, best ]
+tags:
+  - suno
+suno:
+  - id: c9febd33-c7ab-4db8-84ef-7549e4a6c5ed
+    title: Мёртвый сезон (24.10.2024)
 ---
 За окном матом ругается,
 Рассыпает дешевый звон,
