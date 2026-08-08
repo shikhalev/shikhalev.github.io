@@ -1,0 +1,21 @@
+design: _designs/merch/photo/landscapes/20250921-september.md
+date: 2026-08-08
+items:
+  - good: _goods/type/home/dish/thermos/fn-thermos.md
+    url: https://fun.ru/thermos/sentyabrskiy_peyzazh
+    img: https://fun.ru/upload/20/df/20dfefad40.jpg
+  - good: _goods/type/home/dish/bottle/plastic/fn-bottle.md
+    url: https://fun.ru/bottle/sentyabrskiy_peyzazh
+    img: https://fun.ru/upload/52/8c/528cbb7950.jpg
+  - good: _goods/type/home/dish/mug/ceramics/circle/fn-mug.md
+    url: https://fun.ru/mugs/sentyabrskiy_peyzazh
+    img: https://fun.ru/upload/1a/31/1a31bcfd33.jpg
+  - good: _goods/type/office/diary/fn-diary.md
+    url: https://fun.ru/diary/sentyabrskiy_peyzazh
+    img: https://fun.ru/upload/ec/0a/ec0a46351e.jpg
+  - good: _goods/type/accessories/bag/shopper/fn-bags.md
+    url: https://fun.ru/bags/sentyabrskiy_peyzazh
+    img: https://fun.ru/upload/58/a3/58a3afcb05.jpg
+  - good: _goods/type/home/dish/bottle/plastic/fn-bottle-speedy.md
+    url: https://fun.ru/bottle-speedy/sentyabrskiy_peyzazh
+    img: https://fun.ru/upload/29/be/29be7302a5.jpg
