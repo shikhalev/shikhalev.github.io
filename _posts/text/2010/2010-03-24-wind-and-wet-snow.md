@@ -3,6 +3,7 @@ layout: verse
 title: Ветер и мокрый снег
 caption: "* * *"
 category: [ text, verses, best ]
+image: _src/covers/snow10.png
 tags:
   - suno
 suno:
