@@ -33,5 +33,5 @@ recommend: true
 за полгода-год закончить. И опять же, рассчитываю на фидбэк по ходу дела, чтобы ничего не забыть и не схалтурить.
 
 
-[guide]: {% link _matters/darktable/pg/index.md %}
-[intro]: {% link _matters/darktable/pg/0_intro.md %}
+[guide]: {% link _matters/lib/darktable/pg.md %}
+[intro]: {% link _matters/lib/darktable/pg/0_intro.md %}

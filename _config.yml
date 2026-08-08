@@ -145,7 +145,7 @@ defaults:
     values:
       layout: book/page
   - scope:
-      path: "pages/books/darktable"
+      path: "_matters/lib/darktable"
     values:
       image: _src/2025/10/darktable.png
   - scope:
@@ -192,7 +192,7 @@ collections:
     permalink: /merch/:path/
   matters:
     output: true
-    permalink: /lib/:path/
+    permalink: /:path/
   src:
     output: false
 

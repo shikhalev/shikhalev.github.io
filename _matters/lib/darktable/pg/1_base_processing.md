@@ -619,7 +619,7 @@ display encoding
 
 -----
 
-Здесь будет уместно вспомнить, что модуль **[export]({%- link _matters/darktable/pg/0_intro.md -%} #mod-export)** доступен и в режиме
+Здесь будет уместно вспомнить, что модуль **[export]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-export)** доступен и в режиме
 *darkroom*, т.е. если нам нужно экспортировать один снимок, над которым мы сейчас работаем, переходить в *lighttable* необязательно.
 
 {:#done}
@@ -1801,7 +1801,7 @@ midtone range
 
 Модуль включен по умолчанию, и ориентация (поворот) автоматически устанавливается на основе EXIF-дан­ных изображения.
 
-Ориентацию также можно задать с помощью модуля [actions on selection]({%- link _matters/darktable/pg/0_intro.md -%} #mod-actions-on-selection)
+Ориентацию также можно задать с помощью модуля [actions on selection]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-actions-on-selection)
 (действия над выбранными) в представлении *[lighttable](https://docs.darktable.org/usermanual/development/en/lighttable/)* (световой стол).
 
 **Примечание:** Область кадрирования модуля [_crop_](#mod-crop) (кадрирование) сохраняется при изменении ориентации.
@@ -1861,7 +1861,7 @@ darktable поставляется с предустановленными пр�
 это каталог установки darktable, а `$HOME` — ваш домашний каталог). Обратите внимание, что эти каталоги `color/out` не создаются
 при установке darktable; если вам нужно их использовать, вы должны создать их самостоятельно.
 
-Выходной цветовой профиль также может быть определён в модуле [export]({%- link _matters/darktable/pg/0_intro.md -%} #mod-export).
+Выходной цветовой профиль также может быть определён в модуле [export]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-export).
 
 <div class="unbreakable">
 
@@ -2823,7 +2823,7 @@ auto apply this preset to matching images
   Диалог на скриншоте выше задает следующие правила: если название объектива совпадает, диафрагма больше или равна f/8, а фокусное расстояние
   находится в диапазоне от 24 до 35 мм, пресет будет автоматически применен.
 
-  _Модуль [image information]({%- link _matters/darktable/pg/0_intro.md -%} #mod-image-information) (информация об изображении)
+  _Модуль [image information]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-image-information) (информация об изображении)
   отображает модель камеры и название объектива для каждого изображения. Ис­поль­зуй­те его, чтобы убедиться в правильности написания._
 
 </div>
@@ -3116,9 +3116,9 @@ scale for graph (масштаб графика)
 {% include book/gpl.html %}
 
 [darktable]: https://www.darktable.org/
-[intro]: {% link _matters/darktable/pg/0_intro.md %}
-[xmp-files]: {% link _matters/darktable/pg/0_intro.md %}#xmp-files
-[start]: {% link _matters/darktable/pg/0_intro.md %}#start
-[lighttable]: {% link _matters/darktable/pg/0_intro.md %}#lighttable
-[image-information]: {% link _matters/darktable/pg/0_intro.md %}#mod-image-information
-[export]: {% link _matters/darktable/pg/0_intro.md %}#mod-export
+[intro]: {% link _matters/lib/darktable/pg/0_intro.md %}
+[xmp-files]: {% link _matters/lib/darktable/pg/0_intro.md %}#xmp-files
+[start]: {% link _matters/lib/darktable/pg/0_intro.md %}#start
+[lighttable]: {% link _matters/lib/darktable/pg/0_intro.md %}#lighttable
+[image-information]: {% link _matters/lib/darktable/pg/0_intro.md %}#mod-image-information
+[export]: {% link _matters/lib/darktable/pg/0_intro.md %}#mod-export
