@@ -280,6 +280,9 @@ pre code {
   text-align: center;
 }
 
+.booktoc {
+  width: 100%;
+}
 .booktoc h3::before, .booktoc h4::before {
   content: "\f07c";
   font-family: "Font Awesome 5 Free";
