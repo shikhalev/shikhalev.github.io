@@ -141,7 +141,7 @@ defaults:
       hide_last_comments: true
       toc: true
   - scope:
-      path: "pages/books"
+      path: "_matters"
     values:
       layout: book/page
   - scope:
@@ -190,6 +190,9 @@ collections:
   goods:
     output: true
     permalink: /merch/:path/
+  matters:
+    output: true
+    permalink: /lib/:path/
   src:
     output: false
 

@@ -128,7 +128,7 @@ announce: true
 Надеюсь, код достаточно понятный сам по себе. Но если что, готов ответить на вопросы в комментариях.
 
 [telepost]: {% link _posts/about/2025-11-26-telegram.md %}
-[darktable]: {% link pages/books/darktable/pg/index.md %}
+[darktable]: {% link _matters/darktable/pg/index.md %}
 [indexnow]: https://www.indexnow.org/ru_ru/index
 [issues]: https://github.com/jekyll-is/jekyll-is-announcer/issues
 [discussions]: https://github.com/shikhalev/shikhalev.github.io/issues/18

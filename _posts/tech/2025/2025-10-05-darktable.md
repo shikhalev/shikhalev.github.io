@@ -13,7 +13,7 @@ recommend: true
 
 ![Картинка для привлечения внимания](_src/2025/10/cover.png){: right width="240" }
 
-Начал писать большое [Практическое руководство по **darktable**{:.img-icon-darktable}][guide]. Выложил [«Введение»][intro], где
+Начал писать большое [Практическое руководство по **darktable**{:.img-icon-darktable}][guide]. Выложил **[«Введение»][intro]**, где
 рассматриваю общий интерфейс и базовое управление снимками.
 
 *Это всё пока черновик, который будет правиться и дорабатываться, поэтому замечания и вопросы крайне приветствуются.*
@@ -33,5 +33,5 @@ recommend: true
 за полгода-год закончить. И опять же, рассчитываю на фидбэк по ходу дела, чтобы ничего не забыть и не схалтурить.
 
 
-[guide]: {% link pages/books/darktable/pg/index.md %}
-[intro]: {% link pages/books/darktable/pg/0_intro.md %}
+[guide]: {% link _matters/darktable/pg/index.md %}
+[intro]: {% link _matters/darktable/pg/0_intro.md %}
