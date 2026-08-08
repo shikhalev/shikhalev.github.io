@@ -1,0 +1,2824 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+  <link rel="stylesheet" href="/assets/book.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Введение | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Введение" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Материал распространяется под лицензией GPL 3.0. darktable представляет собой свободное программное обеспечение для обработки RAW-фото с неразрушающим редактированием, распространяемое под лицензией GPL v3. Программа ориентирована на сохранение оригиналов изображений и пре­до­став­ле­ние инструментов для их обработки. darktable поддерживает множество форматов RAW-файлов, полный список совместимых камер доступен1 на официальном сайте darktable.org. Актуальная версия на момент составления настоящего руководства — 5.2.1 (август 2025). darktable является альтернативой таким коммерческим продуктам как Adobe Lightroom, Capture One и DxO PhotoLab, но не пы­та­ет­ся их копировать, продвигая собственный рабочий процесс, позволяющий решать те же задачи. С другой стороны, существуют и другие свободные альтернативы для этих целей, например: RawTherapee2…" />
+<meta name="twitter:description" property="og:description" content="Материал распространяется под лицензией GPL 3.0. darktable представляет собой свободное программное обеспечение для обработки RAW-фото с неразрушающим редактированием, распространяемое под лицензией GPL v3. Программа ориентирована на сохранение оригиналов изображений и пре­до­став­ле­ние инструментов для их обработки. darktable поддерживает множество форматов RAW-файлов, полный список совместимых камер доступен1 на официальном сайте darktable.org. Актуальная версия на момент составления настоящего руководства — 5.2.1 (август 2025). darktable является альтернативой таким коммерческим продуктам как Adobe Lightroom, Capture One и DxO PhotoLab, но не пы­та­ет­ся их копировать, продвигая собственный рабочий процесс, позволяющий решать те же задачи. С другой стороны, существуют и другие свободные альтернативы для этих целей, например: RawTherapee2…" />
+<link rel="canonical" href="https://shikhalev.github.io/lib/darktable/pg/0_intro/" />
+<meta property="og:url" content="https://shikhalev.github.io/lib/darktable/pg/0_intro/" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/3c/33/37b0c980.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-08T10:32:44+00:00" />
+<meta property="article:modified_time" content="2025-10-26T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/3c/33/37b0c980.webp" />
+<meta name="twitter:title" content="Введение" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2025-10-26T00:00:00+00:00","datePublished":"2026-08-08T10:32:44+00:00","description":"Материал распространяется под лицензией GPL 3.0. darktable представляет собой свободное программное обеспечение для обработки RAW-фото с неразрушающим редактированием, распространяемое под лицензией GPL v3. Программа ориентирована на сохранение оригиналов изображений и пре­до­став­ле­ние инструментов для их обработки. darktable поддерживает множество форматов RAW-файлов, полный список совместимых камер доступен1 на официальном сайте darktable.org. Актуальная версия на момент составления настоящего руководства — 5.2.1 (август 2025). darktable является альтернативой таким коммерческим продуктам как Adobe Lightroom, Capture One и DxO PhotoLab, но не пы­та­ет­ся их копировать, продвигая собственный рабочий процесс, позволяющий решать те же задачи. С другой стороны, существуют и другие свободные альтернативы для этих целей, например: RawTherapee2…","headline":"Введение","image":"https://shikhalev.github.io/img/3c/33/37b0c980.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/lib/darktable/pg/0_intro/"},"url":"https://shikhalev.github.io/lib/darktable/pg/0_intro/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "u2gczedmo7");
+</script>
+
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.8.css" />
+<script type="module" src="/js/is-images-0.8.0.8.js"></script>
+<!-- end of jekyll-is-images stuff -->
+
+</head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.*</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-credit-card" href="/merch/">Мерч</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a></aside>
+<article class="layout-page"><header class="page-header"><h1 class="title-page" itemprop="name headline">Введение</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2Flib%2Fdarktable%2Fpg%2F0_intro%2F">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2Flib%2Fdarktable%2Fpg%2F0_intro%2F">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2Flib%2Fdarktable%2Fpg%2F0_intro%2F">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2Flib%2Fdarktable%2Fpg%2F0_intro%2F&text=%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5&url=https%3A%2F%2Fshikhalev.github.io%2Flib%2Fdarktable%2Fpg%2F0_intro%2F">&#xf839;</a>
+</aside>
+</header><hr style="border: 2px; margin: 20px auto; width: 40%;">
+
+<p class="note sticker copy">Материал распространяется под лицензией <em><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL 3.0</a></em>.</p>
+
+<hr>
+
+<p><strong>darktable</strong> представляет собой <em>свободное</em> программное обеспечение для обработки RAW-фото с неразрушающим
+редактированием, распространяемое под лицензией <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL v3</a>. Программа
+ориентирована на сохранение оригиналов изображений и пре­до­став­ле­ние инструментов для их обработки. <strong>darktable</strong>
+поддерживает множество форматов RAW-файлов, полный список совместимых камер доступен<sup id="fnref:camera-support"><a href="#fn:camera-support" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>
+на официальном сайте <strong><a href="https://www.darktable.org/">darktable.org</a></strong>.</p>
+
+<p>Актуальная версия на момент составления настоящего руководства — <strong>5.2.1</strong> (август 2025).</p>
+
+<p><strong>darktable</strong> является альтернативой таким коммерческим продуктам как Adobe Lightroom, Capture One и DxO PhotoLab,
+но не пы­та­ет­ся их копировать, продвигая собственный рабочий процесс, позволяющий решать те же задачи.
+С другой стороны, существуют и другие свободные альтернативы для этих целей, например:</p>
+
+<ul>
+  <li>RawTherapee<sup id="fnref:rawtherapee"><a href="#fn:rawtherapee" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> (наиболее близкий аналог, но с другим рабочим процессом);</li>
+  <li>GIMP с плагином UFRaw<sup id="fnref:ufraw"><a href="#fn:ufraw" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>, а также digiKam<sup id="fnref:digikam"><a href="#fn:digikam" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> тоже реализуют часть функций по «проявке» RAW-файлов.</li>
+</ul>
+
+<p><strong>darktable</strong> доступен для различных дистрибутивов Linux, а также для Windows и macOS. В данном руководстве
+мы будем использовать дистрибутив Linux Mint 22.2 “Zara”, впрочем, использование программы от OS и дистрибутива практически
+не зависит.</p>
+
+<h2 id="overview">
+<a class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Обзор</h2>
+
+<h3 id="install">
+<a class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Установка</h3>
+
+<p>А вот процесс установки зависит… Подробности для вашего дистрибутива можно поискать на официальном сайте<sup id="fnref:install"><a href="#fn:install" class="footnote" rel="footnote" role="doc-noteref">5</a></sup>,
+отдельно замечу, что официальные репозитории дистрибутива могут содержать устаревшие версии: например, в Linux Mint
+там содержится версия 4.6.1, а для установки свежей версии нужно добавить PPA в менеджере приложений или посредством
+командной строки:</p>
+
+<p><code class="language-plaintext highlighter-rouge">shell
+$ sudo add-apt-repository ppa:ubuntuhandbook1/darktable
+$ sudo apt update
+$ sudo apt install darktable
+</code></p>
+
+<p>Другой вариант — включить в менеджере приложений непроверенные flatpak-пакеты и установить <strong>darktable</strong> с FlatHub.
+Опять же это можно сделать как через менеджер приложений, так и в командной строке:</p>
+
+<p><code class="language-plaintext highlighter-rouge">shell
+$ sudo flatpak install org.darktable.Darktable
+</code></p>
+
+<p>Если у вас Gentoo, рекомендуется перед установкой добавить USE-флаг <code class="language-plaintext highlighter-rouge">opencl</code>, чтобы можно было задействовать GPU, что
+дает существенное ускорение многих операций обработки.</p>
+
+<h3 id="interface">
+<a class="anchor" href="#interface" aria-hidden="true"><span class="octicon octicon-link"></span></a>Интерфейс</h3>
+
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_900" style="--is-images-width:890px;" data-modes="grid,slides">
+<a href="/img/11/90/75fo2b90.webp" title="Скриншот первого запуска — пустое рабочее пространство" class="__is_images_wrapper"><img src="/img/7f/b7/8tb31992.webp" alt="Скриншот первого запуска — пустое рабочее пространство" class="__is_images_image __is_images_single" style="--is-images-width:890px;--is-images-aspect-ratio:445/241;" data-scale="1" data-caption="Скриншот первого запуска — пустое рабочее пространство"></a>
+<figcaption>Скриншот первого запуска — пустое рабочее пространство</figcaption>
+</figure>
+<p>Интерфейс <strong>darktable</strong> в целом традиционен для такого рода софта. На скриншоте мы можем видеть следующие блоки:</p>
+
+<ul>
+  <li>
+    <p>Сверху <strong>шапка</strong> с логотипом и версией слева и переключателем режимов (или <em>представлений</em>) справа — конкретно на этом
+скриншоте включен режим lighttable (световой стол);</p>
+  </li>
+  <li>
+    <p>Слева и справа <strong>панели модулей</strong>, набор модулей зависит от текущего представления;</p>
+  </li>
+  <li>
+    <p>В самом низу большая (пустая на данном скриншоте) панель, которая будет содержать <strong>таймлайн</strong> в представлении светового
+стола, и <strong>ленту миниатюр</strong> («кадров»), она же filmstrip — в других режимах.</p>
+  </li>
+  <li>
+    <p>В центре находится большая <strong>рабочая область</strong> со своими узкими панелями, содержащими пиктограммы действий, снизу и сверху,
+которые в дальнейшем мы будем называть <em>верней</em> и <em>нижней панелями</em>.</p>
+  </li>
+  <li>
+    <p>На скриншоте можно видеть белые треугольники по <strong>краям окна</strong> darktable. Они позволяют скрыть соответствующие панели.
+Это может быть полезно на небольших экранах, а также может обескураживать, если кликнете на край окна случайно… Пугаться не надо,
+повторный клик открывает обратно (точнее, продолжает циклическое переключение — в случае верхнего и нижнего края имеется по два
+скрываемых элемента: шапка и верхняя панель, или панель таймлайна / ленты миниатюр и нижняя панель
+соответственно, которые включаются и выключаются последовательно).</p>
+  </li>
+</ul>
+
+<p>Что касается представлений, то всего их шесть: два основных, видимых на скриншоте, и четыре вспомогательных, скрытых в вы­па­да­ю­щем
+списке за меткой «other»:</p>
+
+<ul>
+  <li>
+    <p><strong>lighttable</strong> — световой стол — предоставляет обзор текущего набора снимков и групповые действия над ними (пока у нас
+не импортированы никакие снимки, и в рабочей области отображаются стартовые подсказки);</p>
+  </li>
+  <li>
+    <p><strong>darkroom</strong> — темная комната — в этом режиме отображается один выбранный снимок и производится вся его обработка;</p>
+  </li>
+  <li>
+    <p><strong>map</strong> — карта — позволяет увидеть и изменить привязку фотографий к географическим точкам;</p>
+  </li>
+  <li>
+    <p><strong>print</strong> — печать — управление настройками печати и собственно выполнение таковой;</p>
+  </li>
+  <li>
+    <p><strong>slideshow</strong> — слайдшоу — позволяет демонстрировать кадр за кадром с настраиваемыми интервалами;</p>
+  </li>
+  <li>
+    <p><strong>tethering</strong> — управление камерой — для поддерживаемых камер обеспечивает управление с компьютера по USB, например, для
+студийной съемки с предпросмотром на большом экране, съемки таймлапсов и других сценариев.</p>
+  </li>
+</ul>
+
+<p>Нетрудно видеть, что на скриншоте показана английская локализация (дефолтная). Русская локализация имеется, но она такого
+ужасающего качества, что я решил на нее не ориентироваться, чтобы не путать читателя и не запутаться самому. Тут будет уместно
+напомнить, что разработка <strong>darktable</strong> открыта, и любой может внести свой вклад, в том числе — и в локализацию.</p>
+
+<h2 id="start">
+<a class="anchor" href="#start" aria-hidden="true"><span class="octicon octicon-link"></span></a>Начало работы</h2>
+
+<!-- TODO: перенести картинки в _src — сейчас оригиналы копируются на сайт -->
+
+<figure id="fig-2" class="__is_images_figure __is_images_single __is_images_width_650" style="--is-images-width:640px;" data-modes="grid,slides">
+<a href="/img/f7/c5/boo0f361.webp" title="Скриншот диалога настроек" class="__is_images_wrapper"><img src="/img/44/cc/22c99e91.webp" alt="Скриншот диалога настроек" class="__is_images_image __is_images_single" style="--is-images-width:640px;--is-images-aspect-ratio:80/53;" data-scale="1" data-caption="Скриншот диалога настроек"></a>
+<figcaption>Скриншот диалога настроек</figcaption>
+</figure>
+<p>Прежде, чем начать что-то делать, зайдем в настройки, кликнув по значку шестеренки
+(<span class="__is_images_wrapper"><img src="/img/86/bc/97f6t459.webp" alt="" class="__is_images_image" style="--is-images-width:23px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>) в верхней панели, и выставим там в разделе «processing»
+параметр «auto-apply pixel workflow defaults» в значение «display-referred (legacy)». Это устаревший вариант рабочего процесса,
+но он самый простой и поэтому лучше подходит для первого знакомства.</p>
+
+<h3 id="start-import">
+<a class="anchor" href="#start-import" aria-hidden="true"><span class="octicon octicon-link"></span></a>Импорт</h3>
+
+<figure id="fig-3" class="__is_images_figure __is_images_single __is_images_width_300 __is_images__right" style="--is-images-width:264px;" data-modes="grid,slides">
+<span title="Модуль импорта" class="__is_images_wrapper"><img src="/img/42/c2/5tftte8o.webp" alt="Модуль импорта" class="__is_images_image __is_images_single" style="--is-images-width:264px;--is-images-aspect-ratio:264/91;" data-scale="1"></span>
+</figure>
+<p>Чтобы начать работать в raw-файлами, необходимо <em>импортировать</em> их в <strong>darktable</strong>. <a href="#mod-import">Модуль импорта</a> находится в представлении
+lighttable в левой панели в самом верху. Как можно видеть на скриншоте, там имеются две кнопки: «add to library…»
+и «copy &amp; import…» — в первом случае мы добавляем файлы по их текущему расположению, а во втором копируем их в каталог,
+прописанный в настройках. Чтобы не заморачиваться сейчас с настройками мы пойдем по первому пути. После нажатия на «add to library…»
+откроется окно диалога:</p>
+
+<figure id="fig-4" class="__is_images_figure __is_images_single __is_images_width_650" style="--is-images-width:640px;" data-modes="grid,slides">
+<a href="/img/40/fo/c1bb6445.webp" title="Диалог импорта" class="__is_images_wrapper"><img src="/img/50/72/941o1652.webp" alt="Диалог импорта" class="__is_images_image __is_images_single" style="--is-images-width:640px;--is-images-aspect-ratio:320/253;" data-scale="1"></a>
+</figure>
+<p>Выбираем нужный каталог, новые (для <strong>darktable</strong>) файлы будут выбраны автоматически, но можно выбирать и отдельные файлы вручную,
+после чего нажимаем «add to library», диалог будет закрыт и начнется импорт. Что при этом происходит? Во-пер­вых, метаданные выбранных
+файлов записываются в базу данных, а во-вторых, рядом с исходными файлами создаются связанные файлы с расширением <code class="language-plaintext highlighter-rouge">.xmp</code>.</p>
+
+<h4 id="xmp-files">
+<a class="anchor" href="#xmp-files" aria-hidden="true"><span class="octicon octicon-link"></span></a>Связанные XMP-файлы</h4>
+
+<p>XMP-файлы могут содержать дополнительные метаданные, а также, и это их ключевая роль — последовательность обработки. Именно таким образом
+реализуется <em>неразрушающее редактирование</em> — модифицируются только связанные файлы, а исходные RAW остаются неизменными, соответственно
+никакие данные из них в процессе работы не будут потеряны.</p>
+
+<p>Если во время импорта xmp-файлы уже существуют, метаданные из них также попадают в базу. Таким образом, если, например, вы хотите
+скопировать уже обработанные файлы на другой компьютер, чтобы там продолжить работать с ними в <strong>dark­table</strong>, достаточно просто
+скопировать исходные RAW <em>вместе</em> со связанными XMP. Аналогично следует поступать и при архивации. При копировании или перемещении файлов
+средствами самого <strong>darktable</strong> (см. ниже <a href="#mod-actions-on-selection">описание модуля «actions on se­lec­ti­on»</a>) связанные файлы всегда
+копируются/перемещаются вместе с исходниками.</p>
+
+<h3 id="lighttable">
+<a class="anchor" href="#lighttable" aria-hidden="true"><span class="octicon octicon-link"></span></a>Световой стол</h3>
+
+<figure id="fig-5" class="__is_images_figure __is_images_single __is_images_width_900" style="--is-images-width:890px;" data-modes="grid,slides">
+<a href="/img/bo/71/6fbt638f.webp" title="Скриншот светового стола после импорта" class="__is_images_wrapper"><img src="/img/t3/30/80cfoc21.webp" alt="Скриншот светового стола после импорта" class="__is_images_image __is_images_single" style="--is-images-width:890px;--is-images-aspect-ratio:445/241;" data-scale="1" data-caption="Скриншот светового стола после импорта"></a>
+<figcaption>Скриншот светового стола после импорта</figcaption>
+</figure>
+<p>После импорта мы видим наши снимки в представлении lighttable в виде миниатюр, и можем обсудить данное представление поподробнее.</p>
+
+<h4 id="work-area">
+<a class="anchor" href="#work-area" aria-hidden="true"><span class="octicon octicon-link"></span></a>Рабочая область</h4>
+
+<figure id="fig-6" class="__is_images_figure __is_images_single __is_images_width_300 __is_images__right" style="--is-images-width:276px;" data-modes="grid,slides">
+<span title="Миниатюра кадра с наложенной информацией" class="__is_images_wrapper"><img src="/img/e8/55/2b770e64.webp" alt="Миниатюра кадра с наложенной информацией" class="__is_images_image __is_images_single" style="--is-images-width:276px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>
+</figure>
+<p>Основная рабочая область в центре в данном представлении предоставляет интерфейс управления снимками.</p>
+
+<p>Просмотр и выбор снимков может работать в пяти разных режимах (layouts), которые выбираются иконками в <a href="#bottom-panel">нижней панели</a>.</p>
+
+<dl>
+  <dt>
+<span class="__is_images_wrapper"><img src="/img/5e/6f/205305fc.webp" alt="" class="__is_images_image" style="--is-images-width:28px;--is-images-aspect-ratio:28/25;" data-scale="1"></span> Файловый менеджер <em>(filemanager)</em>
+</dt>
+  <dd>
+    <p>В этом режиме мы получаем привычный по многим программам поток миниатюр, как в файловых менеджерах типа Dolphin<sup id="fnref:dolphin"><a href="#fn:dolphin" class="footnote" rel="footnote" role="doc-noteref">6</a></sup>, или программах
+работы с из­о­б­ра­же­ни­я­ми типа Gwenview<sup id="fnref:gwenview"><a href="#fn:gwenview" class="footnote" rel="footnote" role="doc-noteref">7</a></sup> (или того же digiKam<sup id="fnref:digikam:1"><a href="#fn:digikam" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>). Размер миниатюр (масштаб) можно менять колесиком мыши
+с зажатым <code class="language-plaintext highlighter-rouge">Ctrl</code>.</p>
+
+    <p>Интуитивно понятный и предсказуемый режим. Удобен для последовательной работы.</p>
+  </dd>
+  <dt>
+<span class="__is_images_wrapper"><img src="/img/81/6c/8t3310bc.webp" alt="" class="__is_images_image" style="--is-images-width:28px;--is-images-aspect-ratio:28/25;" data-scale="1"></span> Масштабируемый вид <em>(zoomable)</em>
+</dt>
+  <dd>
+    <p>В этом режиме колесиком мыши мы можем «приближать/отдалять световой стол, на котором разложены кадры», при этом взаимное положение
+снимков при изменении масштаба не перестраивается.</p>
+
+    <p>Удобно для быстрых переходов из конца в конец большой коллекции.</p>
+  </dd>
+  <dt>
+<span class="__is_images_wrapper"><img src="/img/4t/1f/4f03o12o.webp" alt="" class="__is_images_image" style="--is-images-width:28px;--is-images-aspect-ratio:28/25;" data-scale="1"></span> Режим отбраковки <em>(culling)</em>
+</dt>
+  <dd>
+    <p>Режим предназначен для просмотра нескольких снимков «бок о бок» для сравнения и отбраковки.</p>
+  </dd>
+  <dt>
+<span class="__is_images_wrapper"><img src="/img/ot/53/99222t66.webp" alt="" class="__is_images_image" style="--is-images-width:28px;--is-images-aspect-ratio:28/25;" data-scale="1"></span> Динамический режим отбраковки <em>(dynamic culling)</em>
+</dt>
+  <dd>
+    <p>Схож с предыдущим режимом, но одновременно показывается не фиксированное количество снимков, а выбранные в лен­те миниатюр.</p>
+
+    <p>То есть, если у нас есть серия почти одинаковых снимков, мы можем перейти в этот режим, выделить эту серию и увидеть их настолько крупно,
+насколько возможно — распределенными по всему рабочему пространству.</p>
+  </dd>
+  <dt>
+<span class="__is_images_wrapper"><img src="/img/47/2c/855t914t.webp" alt="" class="__is_images_image" style="--is-images-width:28px;--is-images-aspect-ratio:28/25;" data-scale="1"></span> Просмотр <em>(full preview)</em>
+</dt>
+  <dd>
+    <p>Показывает текущий снимок во всё доступное пространство, скрыв все панели и элементы управления.</p>
+
+    <p>Выход из этого режима — по клавише <code class="language-plaintext highlighter-rouge">ESC</code>. Колесико мыши листает кадры, а вместе с <code class="language-plaintext highlighter-rouge">Ctrl</code> позволяет приблизить/отдалить изображение.</p>
+  </dd>
+</dl>
+
+<h4 id="top-panel">
+<a class="anchor" href="#top-panel" aria-hidden="true"><span class="octicon octicon-link"></span></a>Верхняя панель</h4>
+
+<p class="note italic">Тут надо заметить, что эта панель используется в том же виде не только в lighttable, но и в большинстве других представлений.</p>
+
+<figure id="fig-7" class="__is_images_figure __is_images_single __is_images_width_900" style="--is-images-width:890px;" data-modes="grid,slides">
+<a href="/img/o7/3o/255733b1.webp" title="Верхняя панель" class="__is_images_wrapper"><img src="/img/b2/50/2eo05156.webp" alt="Верхняя панель" class="__is_images_image __is_images_single" style="--is-images-width:890px;--is-images-aspect-ratio:445/8;" data-scale="1" data-caption="Верхняя панель"></a>
+<figcaption>Верхняя панель</figcaption>
+</figure>
+<p>Логически элементы верхней панели четко разделяются на три группы:</p>
+
+<ul>
+  <li>Слева представлено управления фильтрацией и сортировкой;</li>
+  <li>Справа — переход к разным настройкам и вызов справки;</li>
+  <li>Между ними информационная строчка, сообщающая о текущем выделении.</li>
+</ul>
+
+<p>Рассмотрим все элементы слева направо.</p>
+
+<dl>
+  <dt>
+<span class="__is_images_wrapper"><img src="/img/86/e5/1fe581ef.webp" alt="" class="__is_images_image" style="--is-images-width:23px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> Настройка фильтров</dt>
+  <dd>
+    <p>Выбор фильтров, помимо дефолтных (по цветовым меткам и звездам), можно добавить фильтры по камере, объективу, параметрам съемки и т.д.</p>
+  </dd>
+  <dt>
+<span class="__is_images_wrapper"><img src="/img/3e/38/ocfce6b6.webp" alt="" class="__is_images_image" style="--is-images-width:80px;--is-images-aspect-ratio:80/23;" data-scale="1"></span> Порядок модулей</dt>
+  <dd>
+    <p>Фильтр по порядку модулей / рабочему процессу.</p>
+  </dd>
+  <dt>
+<span class="__is_images_wrapper"><img src="/img/36/27/3t590o7e.webp" alt="" class="__is_images_image" style="--is-images-width:166px;--is-images-aspect-ratio:166/23;" data-scale="1"></span> Цветовые метки</dt>
+  <dd>
+    <p>Фильтр по цветовым меткам. Серый кружок (предпоследняя иконка) включает все цветовые метки одновременно, пересекающиеся кружки (последняя
+иконка) переключает режимы «ИЛИ» и «И», т.е. требование любой метки из выбранных, или же всех одновременно.</p>
+  </dd>
+  <dt>
+<span class="__is_images_wrapper"><img src="/img/3b/8o/b75652cc.webp" alt="" class="__is_images_image" style="--is-images-width:195px;--is-images-aspect-ratio:195/23;" data-scale="1"></span> Сортировка</dt>
+  <dd>
+    <p>Выбор критерия и направления сортировки. Можно выбрать сортировку по имени файла, полному пути, времени съемки/импорта/изменения и так далее.</p>
+  </dd>
+  <dt>
+<span class="__is_images_wrapper"><img src="/img/03/4b/8o06o381.webp" alt="" class="__is_images_image" style="--is-images-width:160px;--is-images-aspect-ratio:160/23;" data-scale="1"></span> Информация о выделении</dt>
+  <dd>
+    <p>Показывает сколько снимков выбрано из общего количества. Если выбран один снимок, показывает его порядковый номер.</p>
+  </dd>
+  <dt>
+<span class="__is_images_wrapper"><img src="/img/t0/7o/c60o2991.webp" alt="" class="__is_images_image" style="--is-images-width:23px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> Группы</dt>
+  <dd>
+    <p>Сворачивает/разворачивает сгруппированные снимки.</p>
+  </dd>
+  <dt>
+<span class="__is_images_wrapper"><img src="/img/f4/72/7o959cf9.webp" alt="" class="__is_images_image" style="--is-images-width:23px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> Наложения</dt>
+  <dd>
+    <p>Управляет тем, какая информация накладывается на миниатюры кадров (а также наличием всплывающей подсказки).</p>
+  </dd>
+  <dt>
+<span class="__is_images_wrapper"><img src="/img/29/91/5e5to52o.webp" alt="" class="__is_images_image" style="--is-images-width:23px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> Справка</dt>
+  <dd>
+    <p>Позволяет открыть контекстную справку по элементам интерфейса на <strong><a href="https://www.darktable.org/">darktable.org</a></strong>.</p>
+  </dd>
+  <dt>
+<span class="__is_images_wrapper"><img src="/img/41/7t/1830bo81.webp" alt="" class="__is_images_image" style="--is-images-width:23px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> Настройка горячих клавиш</dt>
+  <dd>
+    <p>Позволяет открыть редактор горячих клавиш в контекстном режиме — аналогично предыдущему пункту, после нажатия на кнопку мы нажимаем на какой-то
+элемент интерфейса и открывается раздел настройки клавиатурных сочетаний конкретно для него.</p>
+  </dd>
+  <dt>
+<span class="__is_images_wrapper"><img src="/img/86/bc/97f6t459.webp" alt="" class="__is_images_image" style="--is-images-width:23px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> Настройки</dt>
+  <dd>
+    <p>Открывает диалог настроек.</p>
+  </dd>
+</dl>
+
+<h4 id="bottom-panel">
+<a class="anchor" href="#bottom-panel" aria-hidden="true"><span class="octicon octicon-link"></span></a>Нижняя панель</h4>
+
+<figure id="fig-8" class="__is_images_figure __is_images_single __is_images_width_900" style="--is-images-width:890px;" data-modes="grid,slides">
+<a href="/img/of/ob/efb422oo.webp" title="Нижняя панель" class="__is_images_wrapper"><img src="/img/6b/79/03b76ff1.webp" alt="Нижняя панель" class="__is_images_image __is_images_single" style="--is-images-width:890px;--is-images-aspect-ratio:890/19;" data-scale="1" data-caption="Нижняя панель"></a>
+<figcaption>Нижняя панель</figcaption>
+</figure>
+<p>Элементы нижней панели также разделяются на три группы:</p>
+
+<ul>
+  <li>
+    <p>Слева — управление оценкой и метками;</p>
+  </li>
+  <li>
+    <p>По центру переключение режимов рабочей области;</p>
+  </li>
+  <li>
+    <p>Справа — специальные функции.</p>
+  </li>
+</ul>
+
+<p>Слева направо:</p>
+
+<dl>
+  <dt>
+<span class="__is_images_wrapper"><img src="/img/e8/3f/t68cc7o6.webp" alt="" class="__is_images_image" style="--is-images-width:126px;--is-images-aspect-ratio:126/25;" data-scale="1"></span> Звезды</dt>
+  <dd>
+    <p>Позволяет установить оценку в звездах выбранным снимкам.</p>
+  </dd>
+  <dt>
+<span class="__is_images_wrapper"><img src="/img/15/t9/5focoo7e.webp" alt="" class="__is_images_image" style="--is-images-width:160px;--is-images-aspect-ratio:32/5;" data-scale="1"></span> Цветовые метки</dt>
+  <dd>
+    <p>Аналогично — позволяет установить/снять цветовые метки выбранным снимкам. Последняя иконка снимает все метки.</p>
+  </dd>
+  <dt>
+<span class="__is_images_wrapper"><img src="/img/22/t8/6f5e2294.webp" alt="" class="__is_images_image" style="--is-images-width:266px;--is-images-aspect-ratio:266/25;" data-scale="1"></span> Управление режимом просмотра</dt>
+  <dd>
+    <p>Иконки переключают режимы рабочей области, далее идет поле для масштабирования:</p>
+
+    <ul>
+      <li>
+        <p>Для файлового менеджера это количество миниатюр в ряду;</p>
+      </li>
+      <li>
+        <p>Для масштабируемого просмотра это масштаб — сколько было бы миниатюр того же размера в ряду файлового менеджера;</p>
+      </li>
+      <li>
+        <p>Для режима отбраковки это количество снимков одновременно на экране.</p>
+      </li>
+    </ul>
+  </dd>
+  <dt>
+<span class="__is_images_wrapper"><img src="/img/cf/86/t7o3o34o.webp" alt="" class="__is_images_image" style="--is-images-width:28px;--is-images-aspect-ratio:28/25;" data-scale="1"></span> Фокус-пикинг</dt>
+  <dd>
+    <p>Включает отображение зон фокуса.</p>
+  </dd>
+  <dt>
+<span class="__is_images_wrapper"><img src="/img/o3/0f/9oe3471c.webp" alt="" class="__is_images_image" style="--is-images-width:27px;--is-images-aspect-ratio:27/25;" data-scale="1"></span> Профиль дисплея</dt>
+  <dd>
+    <p>Позволяет настроить профиль дисплея.</p>
+  </dd>
+</dl>
+
+<h4 id="side-panels">
+<a class="anchor" href="#side-panels" aria-hidden="true"><span class="octicon octicon-link"></span></a>Боковые панели</h4>
+
+<p>Боковые панели в представлении светового стола, как и в других случаях, содержат модули. А вот набор этих модулей уже специфичен
+для данного представления.</p>
+
+<p>Мы не будем сейчас подробно останавливаться на каждом модуле, просто упомянем, какие есть. Наиболее важные будут описаны позднее.</p>
+
+<div style="columns: 2; margin-top: 12px;">
+
+  <section class="unbreakable">
+
+    <h5 style="margin-top:0px;" id="section">Модули левой панели</h5>
+
+    <dl>
+      <dt><a href="#mod-import">import</a></dt>
+      <dd>
+        <p>Добавление снимков в базу данных darktable.</p>
+      </dd>
+      <dt><a href="#mod-collections">collections</a></dt>
+      <dd>
+        <p>Навигация по <em>коллекциям</em>, они же «катушки пленки» <em>(film rolls)</em>, они же каталоги на физическом уровне. Это основная единица организации
+всего архива снимков, о чем мы еще поговорим поподробнее.</p>
+      </dd>
+      <dt>collection filters</dt>
+      <dd>
+        <p>Дополнительные фильтры коллекций.</p>
+      </dd>
+      <dt><a href="#mod-image-information">image information</a></dt>
+      <dd>
+        <p>Данные EXIF текущего снимка.</p>
+      </dd>
+      <dt>lua scripts installer</dt>
+      <dd>
+        <p>darktable поддерживает скрипты на языке Lua. Данный модуль предназначен для управления такими скриптами.</p>
+      </dd>
+    </dl>
+
+  </section>
+
+  <section class="unbreakable">
+
+    <h5 id="section-1">Модули правой панели</h5>
+
+    <dl>
+      <dt><a href="#mod-selection">selection</a></dt>
+      <dd>
+        <p>Управление выделением.</p>
+      </dd>
+      <dt><a href="#mod-actions-on-selection">actions on selection</a></dt>
+      <dd>
+        <p>Групповые действия над выбранными снимками.</p>
+      </dd>
+      <dt>history stack</dt>
+      <dd>
+        <p>Позволяет копировать между снимками наборы произведенных действий.</p>
+      </dd>
+      <dt>styles</dt>
+      <dd>
+        <p>Позволяет применять к снимкам <em>предопределенные</em> наборы действий, создавать свои такие наборы и управлять ими.</p>
+      </dd>
+      <dt>metadata editor</dt>
+      <dd>
+        <p>Позволяет редактировать <em>некоторые</em> метаданные снимков.</p>
+      </dd>
+      <dt>tagging</dt>
+      <dd>
+        <p>Управление тегами — текстовыми метками снимков.</p>
+      </dd>
+      <dt>geotagging</dt>
+      <dd>
+        <p>Управление геопривязкой файлов.</p>
+      </dd>
+      <dt><a href="#mod-export">export</a></dt>
+      <dd>
+        <p>Модуль экспорта позволяет сформировать выходные файлы различных форматов. О чем мы также еще поговорим подробнее.</p>
+      </dd>
+    </dl>
+
+  </section>
+
+</div>
+
+<h4 id="timeline-filmstrip">
+<a class="anchor" href="#timeline-filmstrip" aria-hidden="true"><span class="octicon octicon-link"></span></a>Таймлайн и лента кадров</h4>
+
+<figure id="fig-9" class="__is_images_figure __is_images_single __is_images_width_900" style="--is-images-width:890px;" data-modes="grid,slides">
+<a href="/img/eb/43/4fe31262.webp" title="Таймлайн (из режима файлового менеджера)" class="__is_images_wrapper"><img src="/img/e2/f0/9t0920f1.webp" alt="Таймлайн (из режима файлового менеджера)" class="__is_images_image __is_images_single" style="--is-images-width:890px;--is-images-aspect-ratio:445/28;" data-scale="1" data-caption="Таймлайн (из режима файлового менеджера)"></a>
+<figcaption>Таймлайн (из режима файлового менеджера)</figcaption>
+</figure>
+<figure id="fig-10" class="__is_images_figure __is_images_single __is_images_width_900" style="--is-images-width:890px;" data-modes="grid,slides">
+<a href="/img/c4/70/00597t97.webp" title="Лента кадров (из режима отбора)" class="__is_images_wrapper"><img src="/img/73/99/bt423048.webp" alt="Лента кадров (из режима отбора)" class="__is_images_image __is_images_single" style="--is-images-width:890px;--is-images-aspect-ratio:445/28;" data-scale="1" data-caption="Лента кадров (из режима отбора)"></a>
+<figcaption>Лента кадров (из режима отбора)</figcaption>
+</figure>
+<p>В самом низу окна <strong>darktable</strong> находится, в зависимости от представления и режима, или панель <em><a href="#mod-timeline">таймлайна</a></em>,
+или панель <em><a href="#mod-filmstrip">ленты кадров</a></em>.</p>
+
+<p>Первая позволяет быстро переключаться по истории вашего архива с точностью до месяца. Вторая — это выбор кадра(-ов)
+для просмотра / обработки / позиционирования на карте (в соответствующем представлении) и так далее — своего рода элемент
+файлового менеджера в других режимах и представлениях.</p>
+
+<hr>
+
+<p class="note italic">Получается, в представлении <strong>светового стола</strong> мы можем просмотреть в разных масштабах фотографии, по одной или в сравнении друг с другом,
+выбрать нужные, удалить или пометить как удаленные ненужные и, наконец, экспортировать выбранные в разные форматы. Иногда этого даже бывает
+достаточно, если обработка не требуется.</p>
+
+<h3 id="start-export">
+<a class="anchor" href="#start-export" aria-hidden="true"><span class="octicon octicon-link"></span></a>Экспорт</h3>
+
+<figure id="fig-11" class="__is_images_figure __is_images_single __is_images_width_250 __is_images__right" style="--is-images-width:245px;--is-images-up:30px;" data-modes="grid,slides">
+<span title="Модуль экспорта" class="__is_images_wrapper"><img src="/img/3b/5o/93c34169.webp" alt="Модуль экспорта" class="__is_images_image __is_images_single" style="--is-images-width:245px;--is-images-aspect-ratio:245/474;--is-images-up:30px;" data-scale="1"></span>
+</figure>
+<p>Остановимся на экспорте немного подробнее. <a href="#mod-export">Соответствующий модуль</a> находится в правой боковой панели в самом низу —
+довольно интуитивно, если вспомнить о том, что модуль импорта, с которого мы начинали, расположен в верхнем левом углу.</p>
+
+<p>Первым делом нам нужно выбрать снимки, которые мы хотим экспортировать. Будут экспортированы только выбранные снимки, а не все, принадлежащие
+текущей коллекции и подходящие по фильтрам.</p>
+
+<p>Затем убедимся, что целевое хранилище <em>(target storage)</em> у нас «file on disk», другие варианты («LaTeX book template», «Piwigo<sup id="fnref:piwigo"><a href="#fn:piwigo" class="footnote" rel="footnote" role="doc-noteref">8</a></sup>»,
+«send as email» и «website gallery») нас пока не интересуют.</p>
+
+<p>Обратим внимание на каталог экспорта, по умолчанию это <code class="language-plaintext highlighter-rouge">$(FILE_FOLDER)/dark­tab­le_exported/$(FILE_NAME)</code>, то есть файлы записываются в подкаталог
+того каталога, где находятся исходники, шаблон каталога, естественно, настраивается.</p>
+
+<p>Выберем формат — «JPEG (8-bit)» нас пока устраивает.</p>
+
+<p>Ну и ниже обратим внимание на установки размера, «0x0px» означает исходный размер фотографий.</p>
+
+<p>Наконец, нажимаем кнопку «export» и ждем, пока операция завершится.</p>
+
+<hr>
+
+<p>Готово — мы получили фотографии в формате, который можем запостить в соцсети, отправить родственникам в чате и т.д. и т.п.</p>
+
+<hr class="clearfix">
+
+<h2 id="done">
+<a class="anchor" href="#done" aria-hidden="true"><span class="octicon octicon-link"></span></a>Итог</h2>
+
+<p>В данном Введении мы очень поверхностно познакомились с <strong>darktable</strong>, не касаясь пока главного — обработки и редактирования снимков,
+а также продвинутых вопросов управления снимками и коллекциями.</p>
+
+<p>Рассмотрены <em>базовые</em> функции:</p>
+
+<ul>
+  <li>
+    <p>Импорт снимков;</p>
+  </li>
+  <li>
+    <p>Просмотр и отбор;</p>
+  </li>
+  <li>
+    <p>Экспорт выбранного в форматы, пригодные для дальнейшего использования.</p>
+  </li>
+</ul>
+
+<h2 id="refs">
+<a class="anchor" href="#refs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Справочная информация</h2>
+
+<p>Ниже приведен перевод документации по тем моментам, которые мы использовали. Рядом со ссылкой на оригинал указывается версия darktable,
+для которой он был написан. Как правило, это версия, в которой модуль (или что-то другое) был добавлен или существенно изменен, и документация
+остается актуальной для последующих версий, хотя изредка может быть так, что документация не успевает за актуальными изменениями, что некритично,
+но стоит иметь в виду.</p>
+
+<hr>
+
+<h3 id="mod-actions-on-selection">
+<a class="anchor" href="#mod-actions-on-selection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Модуль actions on selection (действия над выбранными)</h3>
+
+<ul class="origlink">
+  <li>
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/selected-image/">docs.darktable.org/user­manual/de­ve­lop­ment/en/mo­du­le-re­fe­ren­ce/uti­li­ty-mo­du­les/light­tab­le/se­lec­ted-image/</a> (v3.6)</li>
+</ul>
+
+<section class="module">
+
+  <p>Модуль позволяет выполнять действия над изображениями, выбранными в пред­став­ле­нии «Световой стол» <em>(lighttable)</em>.</p>
+
+  <h4 class="no_toc" id="section-2">Элементы управления модулем</h4>
+
+  <p>Элементы управления модуля разделены на две вкладки: для работы с файлами изображений и связанными метаданными.</p>
+
+  <div class="unbreakable">
+
+    <h5 class="no_toc" id="images">Вкладка «images»</h5>
+
+<figure id="fig-12" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:245px;" data-modes="grid,slides">
+<span title="actions on selection / images" class="__is_images_wrapper"><img src="/img/5f/o9/06e4toe6.webp" alt="actions on selection / images" class="__is_images_image __is_images_single" style="--is-images-width:245px;--is-images-aspect-ratio:49/47;" data-scale="1"></span>
+</figure>
+    <dl>
+      <dt>remove</dt>
+      <dd>
+        <p>Удаляет выбранные изо­бра­же­ния из библиотеки darktable, не удаляя их с файловой системы. Удаленные изображения больше
+не отображаются и не редактируются в darktable, но са­ми файлы изображений и связанные XMP-фай­лы остаются на диске.
+Поскольку darktable обновляет XMP-фай­лы с по­с­лед­ней историей обработки, вы можете полностью восстановить работу,
+повторно импортировав изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>delete / delete (trash)</dt>
+      <dd>
+        <p>Удаляет выбранные изображения из библиотеки darktable и связанные XMP-файлы с файловой системы. Если в библиотеке darktable
+нет дубликатов удаленного изображения, сам файл изображения также удаляется.
+Настройка в <a href="https://docs.darktable.org/usermanual/development/en/preferences-settings/security/">preferences &gt; security</a> определяет,
+удаляются ли файлы безвозвратно или перемещаются в корзину системы. Другая настройка в той же вкладке позволяет включить или
+отключить запрос подтверждения перед удалением.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>move</dt>
+      <dd>
+        <p>Физически перемещает выбранные изображения (файлы изображений и связанные XMP-файлы) в другую папку на файловой системе.
+Если в целевой папке уже существует изображение с таким же именем файла, исходное изображение не будет перемещено.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>copy</dt>
+      <dd>
+        <p>Физически копирует выбранные изображения (файлы изображений и связанные XMP-файлы) в другую папку на файловой системе.
+Если в целевой папке уже существует изображение с таким же именем файла, оно не будет перезаписано — вместо этого создается
+новый дубликат с той же историей обработки, что и у исходного изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>create HDR</dt>
+      <dd>
+        <p>Создает изображение с высоким динамическим диапазоном (HDR) из выбранных изображений и добавляет результат в библиотеку
+как новое изображение в формате DNG. Изображения должны быть правильно выровнены, что предполагает съемку с надежного штатива.
+Также можно создавать HDR в программах вроде Luminance HDR и затем импортировать их в darktable для дальнейшей обработки.
+Обратите внимание, что darktable создает HDR только из RAW-файлов.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>duplicate</dt>
+      <dd>
+        <p>Создает дубликаты выбранных изображений внутри darktable. Дубликаты используют тот же файл изображения, но каждый имеет
+собственный XMP-файл и отдельную запись в базе данных библиотеки darktable. Это позволяет тестировать разные варианты обработки
+одного изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>Повороты (<span class="__is_images_wrapper"><img src="/img/o8/c5/3e3t01ce.webp" alt="" class="__is_images_image" style="--is-images-width:19px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> /</dt>
+      <dt>
+<span class="__is_images_wrapper"><img src="/img/05/2o/8t81f82b.webp" alt="" class="__is_images_image" style="--is-images-width:19px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>) и reset rotation</dt>
+      <dd>
+        <p>Выполняет поворот выбранных изображений по часовой стрелке или против часовой стрелки. Третья кнопка сбрасывает поворот до значения,
+указанного в EXIF-данных изображения. Эта функция напрямую связана с модулем обработки
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/orientation/"><em>orientation</em></a> —
+изменения автоматически преобразуются в элемент истории обработки для этого модуля.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>copy locally</dt>
+      <dd>
+        <p>Создает локальные копии выбранных изображений на локальном диске. Эти копии используются, когда исходные изображения недоступны
+(см. <a href="https://docs.darktable.org/usermanual/development/en/overview/sidecar-files/local-copies/">local copies</a>).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>resync local copy</dt>
+      <dd>
+        <p>Синхронизирует XMP-файлы локальных копий выбранных изображений с копиями во внешнем хранилище и удаляет локальные копии.
+Если локальная копия была изменена, а внешнее хранилище недоступно, локальная копия не удаляется
+(см. <a href="https://docs.darktable.org/usermanual/development/en/overview/sidecar-files/local-copies/">local copies</a>).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>group</dt>
+      <dd>
+        <p>Создает новую группу из выбранных изображений
+(см. <a href="https://docs.darktable.org/usermanual/development/en/lighttable/digital-asset-management/grouping/">image gro­u­ping</a>).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>ungroup</dt>
+      <dd>
+        <p>Удаляет выбранные изображения из их группы
+(см. <a href="https://docs.darktable.org/usermanual/development/en/lighttable/digital-asset-management/grouping/">image grouping</a>).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <h5 class="no_toc" id="metadata">Вкладка «metadata»</h5>
+
+<figure id="fig-13" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:245px;" data-modes="grid,slides">
+<span title="actions on selection / metadata" class="__is_images_wrapper"><img src="/img/98/7e/oe8c6444.webp" alt="actions on selection / metadata" class="__is_images_image __is_images_single" style="--is-images-width:245px;--is-images-aspect-ratio:49/47;" data-scale="1"></span>
+</figure>
+    <dl>
+      <dt>Чекбоксы типов метаданных</dt>
+      <dd>
+        <p>Позволяет выбрать типы метаданных (ratings, tags, metadata, colors, geo­tags), над которыми вы хотите работать.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>copy</dt>
+      <dd>
+        <p>Копирует выбранные ти­пы метаданных с выбранного изображения в бу­фер обмена. Если выбрано более одного изображения или ни одного,
+кнопка недоступна.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>paste</dt>
+      <dd>
+        <p>Вставляет метаданные из буфера обмена на выбранные изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>clear</dt>
+      <dd>
+        <p>Очищает выбранные типы метаданных с выбранных изображений.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>mode</dt>
+      <dd>
+        <p>При вставке метаданных определяет, будут ли метаданные из буфера обмена объединены с существующими (<em>merge</em>)
+или полностью заменят их (<em>overwrite</em>).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>refresh EXIF</dt>
+      <dd>
+        <p>Обновляет EXIF-данные из исходного файла. Внимание: это может перезаписать некоторые теги и метаданные, измененные в darktable
+(например, оценки в звездах).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>monochrome</dt>
+      <dd>
+        <p>Помечает изображение как монохромное, что активирует специфическую обработку для монохромных изображений в модулях обработки.
+Подробности см. в разделе справки
+<a href="https://docs.darktable.org/usermanual/development/en/guides-tutorials/monochrome/">developing monochrome images</a>.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>color</dt>
+      <dd>
+        <p>Снимает пометку монохромного изображения, возвращая его к стандартной обработке, используемой для цветных фотографий.</p>
+      </dd>
+    </dl>
+
+  </div>
+
+</section>
+
+<hr>
+
+<h3 id="mod-collections">
+<a class="anchor" href="#mod-collections" aria-hidden="true"><span class="octicon octicon-link"></span></a>Модуль collections (коллекции)</h3>
+
+<ul class="origlink">
+  <li>
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/collections/">docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/collections/</a> (v4.6)</li>
+</ul>
+
+<section class="module">
+
+  <div class="unbreakable">
+
+<figure id="fig-14" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:252px;" data-modes="grid,slides">
+<span title="Модуль «collections»" class="__is_images_wrapper"><img src="/img/5t/4e/eb7f62of.webp" alt="Модуль «collections»" class="__is_images_image __is_images_single" style="--is-images-width:252px;--is-images-aspect-ratio:252/305;" data-scale="1"></span>
+</figure>
+    <p>Фильтрует изображения, отображаемые в представлении «Световой стол» <em>(lighttable)</em>, панели «Лента миниатюр» <em>(filmstrip)</em>
+и представлении «Карта» <em>(map)</em>, используя атрибуты изображений. Этот набор отфильтрованных изображений называется <em>коллекцией</em>.</p>
+
+    <p>Импорт изображений в darktable сохраняет информацию о них (имя файла, путь, данные EXIF, данные из XMP-файлов и т.д.) в базе данных
+библиотеки darktable. Коллекция может быть определена путём применения правил фильтрации к этим атрибутам, создавая подмножество
+изображений для отображения в представлении «Световой стол» <em>(lighttable)</em> и модуле «Лента миниатюр» <em>(filmstrip)</em>.</p>
+
+    <p>Коллекция по умолчанию основана на атрибуте «катушка пленки» <em>(film roll)</em> и отображает все изображения последней импортированной
+или выбранной катушки пленки.</p>
+
+    <p>Порядок сортировки коллекций (по возрастанию/убыванию) можно переключить, нажав на иконку
+<span class="__is_images_wrapper"><img src="/img/0t/5e/5cft903c.webp" alt="" class="__is_images_image" style="--is-images-width:22px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <h4 id="filtering-attributes" class="no_toc">Атрибуты фильтрации</h4>
+
+    <p>Изображения в коллекции могут быть отфильтрованы по следующим атрибутам:</p>
+
+    <h5 class="no_toc" id="section-3">Файлы</h5>
+
+    <dl>
+      <dt>film roll</dt>
+      <dd>
+        <p>Имя «катушки пленки» (каталога изображений), к которой принадлежит изображение. <code class="language-plaintext highlighter-rouge">Ctrl</code>+<code class="language-plaintext highlighter-rouge">Shift</code>+щелчок на катушке пленки переключает
+на соответствующую папку. Правый щелчок позволяет удалить содержимое катушки пленки из библиотеки darktable или указать darktable,
+что её расположение изменилось в файловой системе.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>folder</dt>
+      <dd>
+        <p>Каталог (путь к файлу), где находится файл изображения. Щелчок на каталоге включает содержимое этого каталога и всех подкаталогов
+ в коллекцию; <code class="language-plaintext highlighter-rouge">Shift</code>+щелчок — только изображения в выбранном каталоге; <code class="language-plaintext highlighter-rouge">Ctrl</code>+щелчок — только изображения из подкаталогов;
+ <code class="language-plaintext highlighter-rouge">Ctrl</code>+<code class="language-plaintext highlighter-rouge">Shift</code>+щелчок — переход к соответствующей катушке пленки. Правый щелчок на имени каталога позволяет удалить её содержимое
+ из библиотеки darktable или указать darktable, что её расположение изменилось в файловой системе.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>filename</dt>
+      <dd>
+        <p>Имя файла изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <h5 class="no_toc" id="section-4">Метаданные</h5>
+
+    <dl>
+      <dt>tag</dt>
+      <dd>
+        <p>Любой тег, прикреплённый к изображению. Изображения без тегов группируются под записью «not tagged». При активации отображается
+иерархический список известных тегов.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>title</dt>
+      <dd>
+        <p>Поле метаданных «title» изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>description</dt>
+      <dd>
+        <p>Поле метаданных «description» изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>creator</dt>
+      <dd>
+        <p>Поле метаданных «creator» изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>publisher</dt>
+      <dd>
+        <p>Поле метаданных «publisher» изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>rights</dt>
+      <dd>
+        <p>Поле метаданных «rights» изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>notes</dt>
+      <dd>
+        <p>Поле метаданных «notes» изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>version name</dt>
+      <dd>
+        <p>Поле метаданных «version name» изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>rating</dt>
+      <dd>
+        <p>Оценка изображения в звездах.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>color label</dt>
+      <dd>
+        <p>Любая цветовая метка, прикреплённая к изображению («red», «yellow», «green», «blue», «purple»).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>geotagging</dt>
+      <dd>
+        <p>Геолокация изображения (см. <a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/map/locations/">locations</a>).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <h5 class="no_toc" id="section-5">Временные метки</h5>
+
+    <p>Для даты и даты со временем используются форматы <code class="language-plaintext highlighter-rouge">YYYY:MM:DD</code> и <code class="language-plaintext highlighter-rouge">YYYY:MM:DD hh:mm:ss</code> соответственно.</p>
+
+    <dl>
+      <dt>capture date</dt>
+      <dd>
+        <p>Дата съёмки фото.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>capture time</dt>
+      <dd>
+        <p>Дата и время съёмки фото.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>import time</dt>
+      <dd>
+        <p>Дата/время импорта файла.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>modification time</dt>
+      <dd>
+        <p>Дата/время последнего изменения файла.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>export time</dt>
+      <dd>
+        <p>Дата/время последнего экспорта файла.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>print time</dt>
+      <dd>
+        <p>Дата/время последней печати файла.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <h5 class="no_toc" id="section-6">Детали съёмки</h5>
+
+    <dl>
+      <dt>camera</dt>
+      <dd>
+        <p>Запись EXIF, описывающая марку и модель камеры.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>lens</dt>
+      <dd>
+        <p>Описание объектива, полученное из данных EXIF.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>aperture</dt>
+      <dd>
+        <p>Диафрагма, полученная из данных EXIF.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>exposure</dt>
+      <dd>
+        <p>Выдержка, полученная из данных EXIF.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>exposure bias</dt>
+      <dd>
+        <p>Компенсация экспозиции, полученная из данных EXIF.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>focal length</dt>
+      <dd>
+        <p>Фокусное расстояние, полученное из данных EXIF.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>ISO</dt>
+      <dd>
+        <p>ISO, полученное из данных EXIF.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>aspect ratio</dt>
+      <dd>
+        <p>Соотношение сторон изображения, включая кадрирование в dark­table.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>white balance</dt>
+      <dd>
+        <p>Баланс белого, полученный из данных EXIF.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>flash</dt>
+      <dd>
+        <p>Использование вспышки, полученное из данных EXIF.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>exposure program</dt>
+      <dd>
+        <p>Программа экспозиции, полученная из данных EXIF.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>metering mode</dt>
+      <dd>
+        <p>Режим замера экспозиции, полученный из данных EXIF.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <h5 class="no_toc" id="darktable">darktable</h5>
+
+    <dl>
+      <dt>group</dt>
+      <dd>
+        <p>Выбор конкретной группы изображений.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>local copy</dt>
+      <dd>
+        <p>Показ файлов, которые скопированы локально или нет.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>history</dt>
+      <dd>
+        <p>Выбор изображений, чьи стеки истории обработки были изменены или нет.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>module</dt>
+      <dd>
+        <p>Фильтр на основе модулей обработки, применённых к изображению.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>module order</dt>
+      <dd>
+        <p>Выбор изображений с порядком модулей «v5.0», «v3.0», «legacy» или «custom».</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <h4 class="no_toc" id="section-7">Элементы управления модулем</h4>
+
+    <h5 class="no_toc" id="section-8">Определение критериев фильтрации</h5>
+
+    <p>Верхняя строка модуля используется для задания критериев фильтрации коллекции следующим образом:</p>
+
+    <dl>
+      <dt>image attribute</dt>
+      <dd>
+        <p>Выпадающий список слева позволяет выбрать атрибут для фильтрации коллекции (см. <a href="#filtering-attributes">Атрибуты фильтрации</a>).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>search pattern</dt>
+      <dd>
+        <p>В текстовом поле справа от выпадающего списка атрибутов можно указать шаблон соответствия. Этот шаблон сравнивается со всеми
+записями базы данных для выбранного атрибута. Фильтр определяет совпадение, если атрибут изображения содержит указанный шаблон
+в полном тексте. Можно использовать <code class="language-plaintext highlighter-rouge">%</code> как символ-заместитель. Коллекция будет ограничена только совпадающими изображениями.
+Оставьте поле пустым, чтобы включить все изображения с данным атрибутом. При необходимости при наведении на атрибут или шаблон
+появится всплывающая подсказка с дополнительной информацией.</p>
+
+        <p>Атрибуты с числовыми или временными значениями могут использоваться с операторами сравнения и диапазона.
+Используйте <code class="language-plaintext highlighter-rouge">&lt;</code>, <code class="language-plaintext highlighter-rouge">&lt;=</code>, <code class="language-plaintext highlighter-rouge">&gt;</code>, <code class="language-plaintext highlighter-rouge">&gt;=</code>, <code class="language-plaintext highlighter-rouge">&lt;&gt;</code>, или <code class="language-plaintext highlighter-rouge">=</code> для выбора изображений с атрибутами, меньшими, меньшими или равными, большими,
+большими или равными, не равными или равными заданному значению соответственно. Выражение вида <code class="language-plaintext highlighter-rouge">[from;to]</code> позволяет выбрать
+диапазон значений.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>select by value</dt>
+      <dd>
+        <p>Помимо задания критериев через шаблон, можно вручную выбрать значения из списка (для выбранного атрибута), взятого из текущего
+набора совпадающих изображений. Выбор автоматически заполняет поле «search pattern».</p>
+
+        <p>Поле под <em>search pattern</em> отображает значения выбранного атрибута для текущих изображений. Список обновляется по мере ввода текста.
+Вы также можете выбрать критерий сортировки, прокручивая список и дважды щёлкнув по нему.</p>
+
+        <p>Если включён режим одиночного щелчка
+(см. <a href="https://docs.darktable.org/usermanual/development/en/preferences-settings/lighttable/">preferences &gt; light­table</a>),
+можно выбирать значения одним щелчком вместо двойного. Этот режим также позволяет выделять диапазон значений мышью. Работает только
+для числовых и временных атрибутов.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <h5 class="no_toc" id="section-9">Комбинирование нескольких фильтров</h5>
+
+    <p>Можно комбинировать несколько фильтров для создания сложных коллекций с помощью набора правил. Правило — это комбинация критерия
+фильтрации и логической операции, определяющей, как этот критерий сочетается с предыдущими правилами.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <p>Нажмите на иконку <span class="__is_images_wrapper"><img src="/img/0b/39/f5t2cb5t.webp" alt="" class="__is_images_image" style="--is-images-width:22px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> (справа от поля поиска),
+чтобы открыть меню со следующими опциями:</p>
+
+    <dl>
+      <dt>clear this rule</dt>
+      <dd>
+        <p>Удаляет текущее правило или сбрасывает его, если это единственное правило.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>narrow down search</dt>
+      <dd>
+        <p>Добавляет новое правило, которое комбинируется с предыдущими через логическую операцию AND. Изображение остаётся в коллекции,
+только если оно соответствует новому критерию.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>add more images</dt>
+      <dd>
+        <p>Добавляет новое правило, которое комбинируется с предыдущими через логическую операцию OR. Изображения, соответствующие новому
+критерию, добавляются в коллекцию.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>exclude images</dt>
+      <dd>
+        <p>Добавляет новое правило, которое комбинируется с предыдущими через логическую операцию EXCEPT. Изображения, соответствующие
+новому критерию, исключаются из коллекции.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <p>Логические операторы, определяющие, как комбинируются правила, обозначены иконками справа от каждого правила:
+AND — <span class="__is_images_wrapper"><img src="/img/97/71/b792t0bb.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>,
+OR — <span class="__is_images_wrapper"><img src="/img/19/84/eo88tb01.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>,
+EXCEPT — <span class="__is_images_wrapper"><img src="/img/o5/28/e5t6ctoo.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>.
+Щёлкните на иконке, чтобы изменить логическую операцию для этого правила.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <h5 class="no_toc" id="section-10">Обновление пути к перемещённым изображениям</h5>
+
+    <p>Хотя лучше не изменять импортированные файлы за спиной darktable, этот модуль помогает восстановить данные, если папки изображений
+были перемещены или переименованы после импорта. Модуль коллекций позволяет обновить базу данных библиотеки darktable с новым
+расположением папки. Процесс следующий:</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <ol>
+      <li>
+        <p>Установите в выпадающем списке <em>image attribute</em> значение «folder» или «film roll».</p>
+      </li>
+      <li>
+        <p>Исходное имя катушки пленки или папки будет отображаться с ~~зачёркиванием~~, указывая, что оно не найдено.</p>
+      </li>
+      <li>
+        <p>Щёлкните правой кнопкой мыши на имени папки или катушки пленки, выберите «update path to files…», затем укажите новое расположение папки.</p>
+      </li>
+    </ol>
+
+  </div>
+  <div class="unbreakable">
+
+    <h5 class="no_toc" id="section-11">Возврат к предыдущей коллекции</h5>
+
+    <p>Вы можете вернуться к ранее определённой коллекции, нажав на кнопку истории в нижней части модуля или используя модуль
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/recent-collections/">recently used
+col­lec­tions</a><sup id="fnref:recent"><a href="#fn:recent" class="footnote" rel="footnote" role="doc-noteref">9</a></sup> —
+см. раздел <a href="#collections-settings">Настройки</a> для деталей.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <h5 id="collections-settings" class="no_toc">Настройки</h5>
+
+<figure id="fig-15" class="__is_images_figure __is_images_single __is_images_width_400" style="--is-images-width:371px;" data-modes="grid,slides">
+<span title="Настройки коллекций" class="__is_images_wrapper"><img src="/img/51/15/t1obf598.webp" alt="Настройки коллекций" class="__is_images_image __is_images_single" style="--is-images-width:371px;--is-images-aspect-ratio:371/204;" data-scale="1"></span>
+</figure>
+    <p>Опция «preferences…» в меню пресетов позволяет настроить поведение модуля коллекций следующим образом:</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>do not set the ‘uncategorized’ entry for tags</dt>
+      <dd>
+        <p>Не устанавливать категорию «uncategorized» для тегов без дочерних элементов (по умолчанию выключено).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>tag case sensitivity</dt>
+      <dd>
+        <p>Устанавливает, учитывать ли регистр тегов — без расширения <code class="language-plaintext highlighter-rouge">sqlite</code> ICU это применимо только к 26 латинским буквам (по умолчанию нечувствительно).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>number of collections to be stored</dt>
+      <dd>
+        <p>Устанавливает количество недавних коллекций, отображаемых во всплы­ва­ю­щем окне истории (если оно есть).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>number of folder levels to show in lists</dt>
+      <dd>
+        <p>Количество уровней папок, отображаемых в именах катушек пленки, начиная справа (по умол­ча­нию 1).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>sort film rolls by</dt>
+      <dd>
+        <p>Сортировка катушек пленки по «folder name» (путь) или «import time» (дата первого импорта катушки) (по умолчанию «import time»).</p>
+      </dd>
+    </dl>
+
+  </div>
+
+</section>
+
+<hr>
+
+<h3 id="mod-export">
+<a class="anchor" href="#mod-export" aria-hidden="true"><span class="octicon octicon-link"></span></a>Модуль export (экспорт)</h3>
+
+<ul class="origlink">
+  <li>
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/export/">docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/export/</a> (v5.2)</li>
+</ul>
+
+<section class="module">
+
+<figure id="fig-16" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:245px;" data-modes="grid,slides">
+<span title="Модуль «export»" class="__is_images_wrapper"><img src="/img/3b/5o/93c34169.webp" alt="Модуль «export»" class="__is_images_image __is_images_single" style="--is-images-width:245px;--is-images-aspect-ratio:245/474;" data-scale="1"></span>
+</figure>
+  <div class="unbreakable">
+
+    <p>Экспортирует выбранные изображения.</p>
+
+    <p>При использовании в представлении «Темная комната» <em>(darkroom)</em> будет экспортировано текущее редактируемое изображение,
+если в ленте миниатюр <em>(filmstrip)</em> не выбраны другие изображения.</p>
+
+    <p>Файлы могут быть экспортированы в файл на диске, email, различные онлайн-хранилища, веб-альбом или шаблон книги.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <h4 class="no_toc" id="section-12">Элементы управления модулем</h4>
+
+    <h5 class="no_toc" id="section-13">Параметры хранилища</h5>
+
+    <dl>
+      <dt>target storage</dt>
+      <dd>
+        <p>Тип места хранения для выбранных изображений. Реализовано несколько вариантов, включая файл на диске, шаблон книги LaTeX
+и различные веб-альбомы. В зависимости от выбранного целевого места вам будет предложено предоставить дополнительную информацию,
+такую как имена файлов или имя аккаунта и пароль.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>filename template</dt>
+      <dd>
+        <p>Определяет каталог и имя файла, в который будет экспортировано изображение. Это может быть автоматически сгенерировано
+с использованием нескольких предопределенных переменных.
+См. раздел <a href="https://docs.darktable.org/usermanual/development/en/special-topics/variables/">variables</a> для деталей.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>output directory selector</dt>
+      <dd>
+        <p>Кнопка рядом с полем шаблона имени файла открывает диалог для выбора родительской директории для экспорта.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>on conflict</dt>
+      <dd>
+        <p>Выберите, что делать, если сгенерированное имя файла конфликтует с существующим файлом при экспорте:</p>
+
+        <ul>
+          <li>
+            <p><em>create unique filename</em>: Автоматически выбрать уникальное новое имя файла, добавив целое число к имени конфликтующего файла.</p>
+          </li>
+          <li>
+            <p><em>overwrite</em>: Автоматически перезаписывать существующие файлы. Эта опция покажет вам диалог подтверждения для защиты
+от случайной потери данных — вы можете отключить это
+в <a href="https://docs.darktable.org/usermanual/development/en/preferences-settings/security/">pre­fe­ren­ces &gt; security &gt; ask before exporting in overwrite
+mo­de</a>.
+<strong>Примечание:</strong> Этот диалог показывается не для каждого файла, а как однократное подтверждение перед началом задачи экспорта.</p>
+          </li>
+          <li>
+            <p><em>overwrite if changed</em>: Автоматически перезаписывать существующие файлы, если последняя временная метка экспорта, сохраненная
+в базе данных darktable, не соответствует последней дате/времени изменения существующего файла.</p>
+          </li>
+          <li>
+            <p><em>skip</em>: Не экспортировать изображения, где имя файла назначения уже существует.</p>
+          </li>
+        </ul>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <h5 class="no_toc" id="section-14">Параметры формата</h5>
+
+    <dl>
+      <dt>file format</dt>
+      <dd>
+        <p>Выберите формат файла для экспортированного изображения. Дополнительные опции появятся (ниже) в зависимости от выбранного формата.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>quality</dt>
+      <dd>
+        <p>Качество экспортированного файла. Более высокие значения приводят к большим размерам файлов. Значение по умолчанию (95) — хорошая
+настройка для очень высокого качества экспорта (например, для архивирования или печати). Если вам нужен хороший компромисс
+между размером и качеством (например, для отображения изображений онлайн или загрузок), рассмотрите значение «90».</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>bit depth</dt>
+      <dd>
+        <p>Количество бит, используемых для каждого цветового канала. Больше бит означает меньше постеризации/полос цвета.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>compression</dt>
+      <dd>
+        <p>Тип сжатия.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>compression level</dt>
+      <dd>
+        <p>Для форматов экспорта, где <em>compression</em> можно указать, уровень сжатия определяет, насколько сильно применять сжатие.
+Чем выше уровень, тем больше данные будут сжаты, за счет большего количества циклов CPU.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>b&amp;w image</dt>
+      <dd>
+        <p>Для формата экспорта TIFF можно сохранить монохромное изображение. Эта настройка контролирует, будут ли оттенки серого
+кодированы как отдельные каналы RGB или как один канал оттенков серого. Последний вариант приведет к меньшим файлам.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <h5 class="no_toc" id="section-15">Глобальные опции</h5>
+
+    <dl>
+      <dt>set size</dt>
+      <dd>
+        <p>Выберите, как измерять максимальный размер экспортированного изображения</p>
+
+        <ul>
+          <li>
+            <p><em>in pixels (for file)</em>: Введите максимальную ширину и высоту в пик­се­лях.</p>
+          </li>
+          <li>
+            <p><em>in cm (for print)</em>: Введите максимальную ширину и высоту в см и определите dpi изображения. Эквивалентный размер
+в пикселях будет рассчитан автоматически.</p>
+          </li>
+          <li>
+            <p><em>in inch (for print)</em>: Введите максимальную ширину и высоту в дюй­мах и определите dpi изображения. Эквивалентный размер
+в пикселях будет рассчитан автоматически.</p>
+          </li>
+          <li>
+            <p><em>by scale (for file)</em>: Введите множитель, чтобы указать, насколько экспортированное изображение должно быть масштабировано
+по сравнению с входным изображением. Например, введение значения 0.5 приведет к выходному изображению с половиной ширины
+и высоты (в пикселях) исходного изображения.</p>
+          </li>
+        </ul>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>dpi</dt>
+      <dd>
+        <p>Если выбраны единицы см или дюймы, установите dpi выходного изображения. dpi также будет сохранено в данных EXIF экспортированного
+изображения. Оно будет автоматически установлено в 300, если выбрано «in pixels» или «by scale».</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>max size</dt>
+      <dd>
+        <p>Установите максимальную ширину и высоту экспортированного изображения(ий) в пикселях, см или дюймах (в зависимости от выбранной
+единицы) — ноль означает, что никакого ограничения не будет установлено на это измерение. Экспортированные изображения будут
+ограничены, чтобы не превышать ни одно из этих значений, сохраняя правильное соотношение сторон. Установите оба в ноль
+для экспорта с исходными размерами (после кадрирования). Если введенные значения превышают исходные размеры, darktable
+либо экспортирует с ис­ход­ны­ми размерами, либо увеличит изображение, в зависимости от настройки «allow upscaling» ниже.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>allow upscaling</dt>
+      <dd>
+        <p>Установите «yes», чтобы выполнить шаг увеличения, если заданные максимальные ширина и высота превышают исходные размеры
+изображения. Если установлено «no», размеры экспортированного изображения не превысят размеры исходного изображения (после кадрирования).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>high quality resampling</dt>
+      <dd>
+        <p>Установите «yes», чтобы выполнить высококачественное resampling изображения. Изображение будет обработано в полном разрешении
+и уменьшено только в конце. Это иногда может привести к лучшему качеству, но всегда будет медленнее.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>store masks</dt>
+      <dd>
+        <p>Хранить маски как дополнительные слои (для формата TIFF) или каналы (для форматов EXR и XCF) в экспортированном изображении.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>profile</dt>
+      <dd>
+        <p>Профиль цвета вывода. Выберите «image settings», если хотите, чтобы настройки в модуле
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/output-color-profile/"><em>output color profile</em></a>
+отдельных изображений соблюдались.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>intent</dt>
+      <dd>
+        <p>Эта опция позволяет определить <em>intent</em> — способ обработки цветов за пределами гаммы выходного профиля.
+См. <a href="https://docs.darktable.org/usermanual/development/en/special-topics/color-management/rendering-intent/">rendering intent</a>
+для более подробного описания.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>style</dt>
+      <dd>
+        <p>Выбор <a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/styles/">стиля</a>,
+который darktable объединяет с существующим стеком истории для создания выходного изображения. Эти элементы добавляются временно,
+не перезаписывая оригинальный стек истории. Функция позволяет добавить шаги обработки, специфичные для экспорта, например,
+усиление резкости для уменьшенных JPEG или компенсацию экспозиции для всех выходных изображений.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>mode</dt>
+      <dd>
+        <p>Определяет, заменяют ли элементы стека истории стиля оригинальный стек истории или добавляются к нему. В режиме append элементы
+стиля создают отдельные экземпляры модулей поверх существующих
+(см. <a href="https://docs.darktable.org/usermanual/development/en/darkroom/processing-modules/multiple-instances/">multiple instances</a>).
+Это позволяет сохранить оригинальный стек истории, добавляя новые настройки.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>start export</dt>
+      <dd>
+        <p>Запускает фоновое задание экспорта всех выбранных изображений. Прогресс отображается в нижней части левой панели.
+Уведомления о за­вер­ше­нии каждого экспорта появляются в виде всплывающих сообщений, которые можно закрыть кликом.
+Задание экспорта можно прервать, нажав на значок “x” рядом с индикатором прогресса.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>multi-preset export</dt>
+      <dd>
+        <p>Развертывание этого раздела позволяет экспортировать каждое выбранное изображение с несколькими пресетами за один запуск.
+Например, можно экспортировать изображения в разных размерах для веб-сайта. Создайте пресет для каждого типа экспорта,
+обеспечив уникальность путей к файлам, чтобы избежать перезаписи. Выберите нужные пресеты и нажмите «start export».</p>
+      </dd>
+    </dl>
+
+    <p><strong>Примечание:</strong> Изображения, которые выбраны, но в настоящее время скрыты (потому что они являются членами свёрнутой группы),
+не будут экспортированы.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <h5 class="no_toc" id="section-16">Настройки метаданных</h5>
+
+    <p>Опция «preferences…» в меню пресетов вызывает диалог, где можно настроить, какие метаданные включать в экспортированные файлы:</p>
+
+<figure id="fig-17" class="__is_images_figure __is_images_single __is_images_width_500" style="--is-images-width:500px;" data-modes="grid,slides">
+<a href="/img/oo/45/132b0o1c.webp" title="Настройка метаданных при экспорте" class="__is_images_wrapper"><img src="/img/6t/tc/94330to2.webp" alt="Настройка метаданных при экспорте" class="__is_images_image __is_images_single" style="--is-images-width:500px;--is-images-aspect-ratio:500/353;" data-scale="1"></a>
+</figure>
+    <p>Параметры, введённые в этот диалог, сохраняются вместе с другими параметрами экспорта в пользовательские пресеты, и последние введённые значения сохраняются при закрытии darktable.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <h5 class="no_toc" id="section-17">Общие настройки</h5>
+
+    <p>Левая сторона диалога позволяет выбрать, какие группы метаданных экспортировать с изображением. Доступны следующие опции:</p>
+
+    <dl>
+      <dt>EXIF data</dt>
+      <dd>
+        <p>Экспортировать данные EXIF исходного изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>metadata</dt>
+      <dd>
+        <p>Экспортировать метаданные, определённые в модуле
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/metadata-editor/">metadata edi­tor</a>.
+Экспортируются только поля метаданных, помеченные как <em>visible</em> и не помеченные как <em>private</em>.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>geo tags</dt>
+      <dd>
+        <p>Экспортировать геотеги.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>tags</dt>
+      <dd>
+        <p>Экспортировать теги, созданные в модуле
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/tagging/">tagging</a> (в <code class="language-plaintext highlighter-rouge">Xmp.​dc.​Sub­ject</code>).
+Также можно выбрать три дополнительные опции:</p>
+
+        <ul>
+          <li>
+            <p><em>private tags</em>: Экспортировать приватные теги.</p>
+          </li>
+          <li>
+            <p><em>synonyms</em>: Экспортировать синонимы тегов.</p>
+          </li>
+          <li>
+            <p><em>omit hierarchy</em>: Экспортировать только последнюю часть ие­рар­хи­чес­ких тегов.</p>
+          </li>
+        </ul>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>hierarchical tags</dt>
+      <dd>
+        <p>Экспортировать иерархические теги (в <code class="language-plaintext highlighter-rouge">Xmp.​lr.​Hie­rar­chi­cal Sub­ject</code>).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>develop history</dt>
+      <dd>
+        <p>Экспортировать всю историю обработки (стек истории и формы), где это поддерживается (например, JPEG, JPEG2000, TIFF).
+История обработки будет сохранена как теги XMP в выходном файле. Эта информация может позже быть использована для реконструкции
+параметров и настроек, использованных для создания экспортированного изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <hr>
+
+    <p><strong>Предупреждение:</strong> По разным причинам встраивание тегов XMP в выходные файлы может завершиться неудачей без уведомления, например,
+если превышены определённые ограничения размера. Пользователям рекомендуется не полагаться на эту функцию для стратегии резервного
+копирования. Для резервного копирования всегда сохраняйте исходный (raw) файл, а также все XMP-файлы darktable.</p>
+
+    <hr>
+
+  </div>
+  <div class="unbreakable">
+
+    <h5 class="no_toc" id="section-18">Настройки по отдельным метаданным</h5>
+
+    <p>Правая сторона диалога позволяет определить формулы для заполнения метаданных изображения. Формулы, определённые здесь,
+имеют приоритет над настройками в левой стороне диалога. Первый столбец определяет запись для редактирования.
+Второй столбец позволяет определить, как рассчитать значение для этой записи метаданных с помощью формулы.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <p>См. раздел <a href="https://docs.darktable.org/usermanual/development/en/special-topics/variables/">variables</a> для деталей переменных,
+которые можно использовать в формуле метаданных. Нажмите Enter для проверки формулы. Оставьте формулу пустой, чтобы предотвратить
+экспорт данной записи метаданных (<code class="language-plaintext highlighter-rouge">Exif.GPSInfo.GPSVersionID</code> в примере выше).</p>
+
+    <p>Используйте иконку «–» для удаления записи метаданных из списка и «+» для добавления новой из предопределённого
+списка доступных тегов метаданных.</p>
+
+    <p>Нажмите кнопку «add», чтобы добавить запись метаданных в список.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <p>Формулы позволяют виртуально определить все метаданные, необходимые для квалификации изображений в тегах, и экспортировать
+значения в теги XMP или IPTC по выбору. Экспортируемые теги могут отличаться от одного экспорта к следующему в зависимости
+от назначения изображений. Теги и категории отображаются отдельно в информации об изображении.</p>
+
+    <p><em>Помните, что тег, установленный как категория, никогда не экспортируется.</em></p>
+
+  </div>
+  <div class="unbreakable">
+
+    <h5 class="no_toc" id="section-19">Советы</h5>
+
+    <ul>
+      <li>
+        <p>Чтобы предотвратить экспорт конкретного поля метаданных, добавьте его в список и оставьте формулу пустой.</p>
+      </li>
+      <li>
+        <p>Чтобы принудительно экспортировать конкретное поле EXIF, когда экспорт EXIF отключён, добавьте его в список и введите <code class="language-plaintext highlighter-rouge">=</code> в формулу.</p>
+      </li>
+    </ul>
+
+  </div>
+  <div class="unbreakable">
+
+    <h5 class="no_toc" id="section-20">Примеры</h5>
+
+    <dl>
+      <dt>Пример 1</dt>
+      <dd>
+        <p>Тег первого уровня под названием places устанавливается как категория, за ним следуют четыре уровня информации (или ключевых слов):
+страна, регион, город и местоположение (например, <code class="language-plaintext highlighter-rouge">pla­ces|​Fran­ce|​Nord|​Lil­le|​rue Na­ti­o­na­le</code>). Каждый уровень может быть извлечён
+(если он определён) одной из переменных <code class="language-plaintext highlighter-rouge">$(CA­TE­GO­RY0​(pla­ces))</code>, <code class="language-plaintext highlighter-rouge">$(CA­TE­GO­RY1​(pla­ces))</code>, <code class="language-plaintext highlighter-rouge">$(CA​TE​GO​RY2​(pla­ces))</code>
+и <code class="language-plaintext highlighter-rouge">$(CA­TE­GO­RY3​(pla­ces))</code>.
+В этом примере возвращаемые значения — «Fran­ce», «Nord», «Lil­le» и «rue Na­ti­o­na­le» соответственно. Эти ключевые слова также могут
+быть извлечены как простые теги с помощью переменной <code class="language-plaintext highlighter-rouge">$(TAGS)</code>. Последний уровень ключевого слова (лист) отображается в
+<a href="#mod-image-information">image information</a>, здесь «rue Nationale».</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>Пример 2</dt>
+      <dd>
+        <p>Тег первого уровня под названием creator за которым следует имя фотографа, оба установлены как категории: <code class="language-plaintext highlighter-rouge">cre­a­tor|first­na­me last­na­me</code>.
+Формула co­py­rights (<code class="language-plaintext highlighter-rouge">$(YEAR) $(CA­TE­GO­RY0​(cre­a­tor))</code>) строит текст, связанный с правами на изображение.
+Здесь <a href="#mod-image-information">image information</a> отображает «cre­a­tor: first­na­me last­na­me» как категории. Ни creator,
+ни «firstname lastname» не появляются в списке тегов, и они не экспортируются как простые теги.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <hr>
+
+    <p><strong>Примечание:</strong> Тегирование не подходит для определения свободного текста метаданных, такого как заголовок или описание,
+которые могут быть специфичными для каждого изображения. Используйте
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/metadata-editor/">metadata editor</a>
+для такого типа информации.</p>
+
+  </div>
+
+</section>
+
+<h3 id="mod-filmstrip">
+<a class="anchor" href="#mod-filmstrip" aria-hidden="true"><span class="octicon octicon-link"></span></a>Модуль filmstrip (лента миниатюр)</h3>
+
+<ul class="origlink">
+  <li>
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/filmstrip/">docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/filmstrip/</a> (v4.6)</li>
+</ul>
+
+<section class="module">
+
+  <p>Лента миниатюр позволяет быстро переключаться между кадрами. Отображаемые кадры совпадают с теми, что показаны в представлении
+«Световой стол», и определяются текущей выбранной коллекцией.</p>
+
+<figure id="fig-18" class="__is_images_figure __is_images_single __is_images_width_450" style="--is-images-width:437px;" data-modes="grid,slides">
+<a href="/img/f8/35/31f08910.webp" title="Модуль filmstrip" class="__is_images_wrapper"><img src="/img/60/2o/eboee1of.webp" alt="Модуль filmstrip" class="__is_images_image __is_images_single" style="--is-images-width:437px;--is-images-aspect-ratio:437/56;" data-scale="1"></a>
+</figure>
+  <p>Ленту миниатюр можно включить или выключить с помощью горячей клавиши <code class="language-plaintext highlighter-rouge">Ctrl</code>+<code class="language-plaintext highlighter-rouge">F</code>. Высоту панели ленты миниатюр можно изменить,
+кликнув и перетащив её верхнюю границу.</p>
+
+  <p>Для быстрого перемещения по кадрам в ленте миниатюр прокручивайте колёсико мыши. Ускорьте прокрутку с помощью <code class="language-plaintext highlighter-rouge">Shift</code>+прокрутка.
+Из­ме­няй­те высоту ленты миниатюр с помощью <code class="language-plaintext highlighter-rouge">Ctrl</code>+прокрутка или кликнув и перетащив верхнюю границу панели. В тёмной комнате
+вы можете сменить обрабатываемый кадр, кликнув на другой кадр в ленте миниатюр.</p>
+
+  <p>В тёмной комнате текущий обрабатываемый кадр выделен и подсвечен. Кликните на кадр в ленте миниатюр или наведите на него курсор мыши,
+чтобы выбрать его (для выполнения действий с помощью горячих клавиш) без смены текущего обрабатываемого кадра. Дважды кликните на кадр,
+чтобы открыть его для редактирования.</p>
+
+  <p>Чтобы выбрать несколько кадров в ленте миниатюр, кликните на первый кадр, затем используйте <code class="language-plaintext highlighter-rouge">Ctrl</code>+клик для выбора или снятия выбора
+дополнительных кадров либо <code class="language-plaintext highlighter-rouge">Shift</code>+клик для выбора диапазона кадров.</p>
+
+  <p>Следующие горячие клавиши можно использовать для выбора кадров в ленте миниатюр:</p>
+
+  <ul>
+    <li>
+      <p><code class="language-plaintext highlighter-rouge">Ctrl</code>+<code class="language-plaintext highlighter-rouge">A</code> — выбирает все кадры в ленте миниатюр.</p>
+    </li>
+    <li>
+      <p><code class="language-plaintext highlighter-rouge">Ctrl</code>+<code class="language-plaintext highlighter-rouge">Shift</code>+<code class="language-plaintext highlighter-rouge">A</code> — снимает выбор со всех кадров.</p>
+    </li>
+    <li>
+      <p><code class="language-plaintext highlighter-rouge">Ctrl</code>+<code class="language-plaintext highlighter-rouge">I</code> — инвертирует текущий выбор.</p>
+    </li>
+  </ul>
+
+  <p>Следующие горячие клавиши можно использовать для выполнения операций над выбранными кадрами:</p>
+
+  <ul>
+    <li>
+      <p><code class="language-plaintext highlighter-rouge">F1</code>, <code class="language-plaintext highlighter-rouge">F2</code>, <code class="language-plaintext highlighter-rouge">F3</code>, <code class="language-plaintext highlighter-rouge">F4</code>, <code class="language-plaintext highlighter-rouge">F5</code> — добавляет или убирает цветовую метку (красная, жёлтая, зелёная, синяя, фиолетовая соответственно).
+Метка добавляется, если хотя бы у одного из выбранных кадров её нет; в про­тив­ном случае метка убирается.</p>
+    </li>
+    <li>
+      <p><code class="language-plaintext highlighter-rouge">0</code>, <code class="language-plaintext highlighter-rouge">1</code>, <code class="language-plaintext highlighter-rouge">2</code>, <code class="language-plaintext highlighter-rouge">3</code>, <code class="language-plaintext highlighter-rouge">4</code>, <code class="language-plaintext highlighter-rouge">5</code> — устанавливает рейтинг в звёздах.</p>
+    </li>
+    <li>
+      <p><code class="language-plaintext highlighter-rouge">R</code> — отклоняет кадр(ы).</p>
+    </li>
+    <li>
+      <p><code class="language-plaintext highlighter-rouge">Ctrl</code>+<code class="language-plaintext highlighter-rouge">D</code> — дублирует кадр(ы).</p>
+    </li>
+    <li>
+      <p><code class="language-plaintext highlighter-rouge">Ctrl</code>+<code class="language-plaintext highlighter-rouge">C</code> — копирует полный стек истории.</p>
+    </li>
+    <li>
+      <p><code class="language-plaintext highlighter-rouge">Ctrl</code>+<code class="language-plaintext highlighter-rouge">V</code> — вставляет весь скопированный стек истории.</p>
+    </li>
+    <li>
+      <p><code class="language-plaintext highlighter-rouge">Ctrl</code>+<code class="language-plaintext highlighter-rouge">X</code> — копирует настройки последнего изменённого модуля для всех выбранных кадров.</p>
+    </li>
+    <li>
+      <p><code class="language-plaintext highlighter-rouge">Ctrl</code>+<code class="language-plaintext highlighter-rouge">Shift</code>+<code class="language-plaintext highlighter-rouge">C</code> — выборочно копирует стек истории.</p>
+    </li>
+    <li>
+      <p><code class="language-plaintext highlighter-rouge">Ctrl</code>+<code class="language-plaintext highlighter-rouge">Shift</code>+<code class="language-plaintext highlighter-rouge">V</code> — выборочно вставляет из скопированного стека истории.</p>
+    </li>
+  </ul>
+
+  <p>Подробности о функциях копирования и вставки см. в до­ку­мен­та­ции модуля
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/history-stack/">his­to­ry stack</a>
+для представления «световой стол».</p>
+
+</section>
+
+<h3 id="mod-image-information">
+<a class="anchor" href="#mod-image-information" aria-hidden="true"><span class="octicon octicon-link"></span></a>Модуль image information (информация об изображении)</h3>
+
+<ul class="origlink">
+  <li>
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/image-information/">docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/image-information/</a> (v3.6)</li>
+</ul>
+
+<section class="module">
+
+<figure id="fig-19" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:252px;" data-modes="grid,slides">
+<span title="Модуль «image information»" class="__is_images_wrapper"><img src="/img/74/ot/85b54o3t.webp" alt="Модуль «image information»" class="__is_images_image __is_images_single" style="--is-images-width:252px;--is-images-aspect-ratio:3/7;" data-scale="1"></span>
+</figure>
+  <p>Отображает информацию, встроенную в EXIF-данные изображения, а также ряд дополнительных полей данных, определённых в darktable.</p>
+
+  <p>При наведении мыши на миниатюры изображений отображаемые данные автоматически обновляются, показывая информацию об изображении,
+над которым в данный момент находится курсор мыши.</p>
+
+  <p>Если выбрано несколько изображений и фокус не находится на одном изображении, модуль отображает только информацию,
+которая одинакова для всех изображений. Если какие-либо поля различаются между изображениями, вместо этого отображается
+текст «_<various values="">_».</various></p>
+
+  <p class="unbreakable">Находясь в представлении lighttable (световой стол), вы можете дважды кликнуть на поле <em>filmroll</em> для данного изображения,
+чтобы показать все кадры в «катушке» этого изображения.</p>
+
+  <div class="unbreakable">
+
+    <h4 class="no_toc" id="section-21">Настройки</h4>
+
+    <p>Опция «preferences…» в меню пресетов вызывает диалог со списком всех полей, доступных для отображения.</p>
+
+  </div>
+
+  <p>Флажок <em>visible</em> позволяет выбрать, какие поля отображать. Вы также можете перетаскивать строки по одной,
+чтобы изменить порядок отображения.</p>
+
+  <p class="unbreakable">Эти настройки можно сохранить как пресеты модуля. Нажмите кнопку сброса модуля, чтобы сделать всю доступную
+информацию видимой и отобразить её в порядке по умолчанию.</p>
+
+</section>
+
+<hr>
+
+<h3 id="mod-import">
+<a class="anchor" href="#mod-import" aria-hidden="true"><span class="octicon octicon-link"></span></a>Модуль import (импорт)</h3>
+
+<ul class="origlink">
+  <li>
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/import/">docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/import/</a> (v5.0)</li>
+</ul>
+
+<section class="module">
+
+<figure id="fig-20" class="__is_images_figure __is_images_single __is_images_width_350" style="--is-images-width:306px;" data-modes="grid,slides">
+<span title="Модуль «import» с параметрами" class="__is_images_wrapper"><img src="/img/47/t5/056658c5.webp" alt="Модуль «import» с параметрами" class="__is_images_image __is_images_single" style="--is-images-width:306px;--is-images-aspect-ratio:17/24;" data-scale="1"></span>
+</figure>
+  <p>Добавляет изображения в библиотеку darktable, при необходимости копируя их из другого места в файловой системе
+или с подключённой камеры.</p>
+
+  <p>Подробности о поддерживаемых форматах файлов см. в раз­де­ле
+<a href="https://docs.darktable.org/usermanual/development/en/overview/supported-file-formats/">Под­дер­жи­ва­е­мые форматы файлов</a>.</p>
+
+  <div class="unbreakable">
+
+    <h4 class="no_toc" id="section-22">Элементы управления модуля</h4>
+
+    <p>По умолчанию в интерфейсе модуля отображаются следующие кнопки:</p>
+
+    <dl>
+      <dt><a href="#add-to-library">add to library</a></dt>
+      <dd>
+        <p>Добавляет существующие изображения в библиотеку darktable без копирования или перемещения файлов. Если в библиотеку
+добавляется только одно изображение, оно автоматически открывается в режиме darkroom.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt><a href="#copy-and-import">copy &amp; import</a></dt>
+      <dd>
+        <p>Создаёт копии изображений из файловой системы и добавляет эти копии в библиотеку darktable.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <p>При обнаружении камеры в модуле появляется новая секция для этого устройства. Если навести курсор мыши на название камеры,
+всплывающая подсказка покажет информацию о камере (модель, версия прошивки и т.д.).</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <p>В зависимости от возможностей камеры могут отображаться следующие дополнительные кнопки:</p>
+
+    <dl>
+      <dt>mount camera</dt>
+      <dd>
+        <p>Монтирует камеру для эксклюзивного использования в darktable. Эта кнопка отображается, только если камера не смонтирована
+и не заблокирована другим процессом.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt><a href="#copy-and-import-from-camera">copy &amp; import from camera</a></dt>
+      <dd>
+        <p>Создаёт копии изображений с подключённой камеры и добавляет их в библиотеку darktable.
+Эта кнопка отображается, только если камера смонтирована.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt><a href="https://docs.darktable.org/usermanual/development/en/tethering/">tethered shoot</a></dt>
+      <dd>
+        <p>Открывает режим управления камерой, позволяющий снимать с подключённой камеры через darktable.
+Эта кнопка отображается, только если камера смонтирована.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>unmount camera</dt>
+      <dd>
+        <p>Размонтирует камеру, освобождая её для использования другими приложениями. Эта кнопка отображается, только если камера смонтирована.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <h4 class="no_toc" id="section-23">Параметры модуля</h4>
+
+    <p>Нажмите на метку «parameters» или на кнопку-стрелку рядом с ней, чтобы отобразить следующие дополнительные параметры.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <p>Все параметры сохраняются между сеансами и могут быть сохранены как пресеты модуля.</p>
+
+    <dl>
+      <dt>ignore EXIF rating</dt>
+      <dd>
+        <p>Включите эту опцию, чтобы игнорировать рейтинг, сохранённый в EXIF-данных изображения, и вместо этого использовать
+фиксированное значение (указано ниже).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>initial rating</dt>
+      <dd>
+        <p>Начальный звёздный рейтинг (от 0 до 5) для всех вновь импортированных изображений (по умолчанию 1).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>apply metadata</dt>
+      <dd>
+        <p>Включите эту опцию, чтобы автоматически задавать поля метаданных и/или теги во время импорта (см. ниже).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>metadata</dt>
+      <dd>
+        <p>Если включена опция «apply metadata», отображается список <em>видимых</em> полей метаданных для заполнения (подробности
+см. модуль
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/metadata-editor/">me­ta­da­ta editor</a>).
+Все заполненные строки автоматически добавляются к им­пор­ти­ро­ван­ным изображениям. Также можно выбрать пресеты, со­хра­нён­ные
+в модуле редактора метаданных.</p>
+
+        <p>Двойной клик по метке сбрасывает соответствующее поле. Двойной клик по метке «metadata presets» сбрасывает все поля.</p>
+
+        <p>Если в настройках <a href="https://docs.darktable.org/usermanual/development/en/preferences-settings/storage/#xmp-sidecar-files">preferences &gt; storage &gt; create
+XMP files</a> установлено
+значение «never», добавляется столбец «from XMP», позволяющий запретить импорт метаданных из XMP-файлов.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>tags</dt>
+      <dd>
+        <p>Если вы хотите добавлять дополнительные теги по умолчанию при импорте изображений, укажите их здесь в виде списка,
+разделённого запятыми. Как и в случае с метаданными, можно выбрать пресеты, сохранённые
+в модуле <a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/tagging/">tagging</a>.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <h4 class="no_toc" id="section-24">Диалог импорта</h4>
+
+    <p>Каждая из трёх кнопок импорта («add to library…», «copy &amp; import…», «copy &amp; import from camera…») открывает похожий диалог
+для процесса импорта, описанный в этом разделе.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <p>Пример скриншота ниже взят для кнопки «add to library…»:</p>
+
+<figure id="fig-21" class="__is_images_figure __is_images_single __is_images_width_650" style="--is-images-width:640px;" data-modes="grid,slides">
+<a href="/img/40/fo/c1bb6445.webp" title="Диалог импорта" class="__is_images_wrapper"><img src="/img/50/72/941o1652.webp" alt="Диалог импорта" class="__is_images_image __is_images_single" style="--is-images-width:640px;--is-images-aspect-ratio:320/253;" data-scale="1"></a>
+</figure>
+  </div>
+  <div class="unbreakable">
+
+  </div>
+  <div class="unbreakable">
+
+    <h5 class="no_toc" id="section-25">Общие функции</h5>
+
+    <h6 class="no_toc" id="section-26">Места и папки</h6>
+
+    <p>Диалог импорта предназначен для настройки часто используемых мест импорта, чтобы упростить последующие импорты.
+При первом открытии диалога darktable автоматически добавляет в панель «места» несколько стандартных расположений
+(домашняя папка, папка изображений, смонтированные устройства). Новые места можно добавить, нажав на кнопку «+»,
+а удалить — нажав на кнопку «–». Если вы удалили стандартное место, его можно восстановить с помощью кнопки сброса.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <p>При выборе места в панели «папки» автоматически отображается дерево папок, начиная с корневой директории выбранного места.
+Вы можете перемещаться по дереву папок и выбрать папку для импорта. Последнее выбранное место/папка автоматически загружается
+при следующем открытии диалога.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <p>На скриншоте выше видно, что выбрано «место» home, то есть домашний каталог пользователя, и выбран подкаталог с исходными файлами.
+Это рекомендуемый рабочий процесс для импорта — вам редко придётся создавать новые места.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <h6 class="no_toc" id="section-27">Файлы</h6>
+
+    <p>После выбора папки панель файлов автоматически заполняется списком файлов, найденных в этой папке.
+По умолчанию выбраны все файлы в выбранной папке.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <p>Вы можете просмотреть миниатюры изображений, нажав
+на значок <span class="__is_images_wrapper"><img src="/img/2b/4b/8o11o12c.webp" alt="" class="__is_images_image" style="--is-images-width:21px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>. Также внизу экрана доступны кнопки
+для выбора всех файлов или ни одного.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <p>Когда выбор завершён, нажмите <code class="language-plaintext highlighter-rouge">Enter</code> или кнопку в правом нижнем углу экрана для импорта (название кнопки зависит
+от типа выполняемого импорта).</p>
+
+    <p>Нажмите <code class="language-plaintext highlighter-rouge">ESC</code> или кнопку «cancel», чтобы выйти без импорта.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <h6 class="no_toc" id="section-28">Общие параметры</h6>
+
+    <p>Следующие дополнительные параметры общие для всех диалогов импорта:</p>
+
+    <dl>
+      <dt>recursive directory</dt>
+      <dd>
+        <p>Включите эту опцию, чтобы импортировать изображения из выбранной папки <em>и всех её подпапок</em>. Не рекомендуется использовать
+эту опцию для импорта большого количества изображений одновременно. Процесс импорта заставляет darktable генерировать
+миниатюры для всех импортированных изображений, но в итоге в кэше останутся только последние. Поэтому лучше импортировать
+изображения небольшими партиями, чтобы избежать снижения производительности.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>ignore non-raw images</dt>
+      <dd>
+        <p>Включите эту опцию, если в папке есть изображения, не являющиеся RAW, которые вы не хотите импортировать. Обычно используется,
+когда камера сохраняет RAW+JPEG, а вы хотите работать только с RAW-файлами, не трогая JPEG.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <h5 id="add-to-library" class="no_toc">add to library</h5>
+
+    <p>Кнопка «add to library» позволяет добавить одно или несколько существующих изображений в библиотеку darktable из локальной
+файловой системы. Этот процесс не копирует и не перемещает изображения, а лишь добавляет их данные в базу библиотеки и создаёт
+для них XMP-файлы.</p>
+
+    <dl>
+      <dt>select new</dt>
+      <dd>
+        <p>Включите эту опцию, чтобы при загрузке диалога <em>изначально</em> выбирались только те изображения, которые ещё не добавлены
+в библиотеку darktable. Если вы попытаетесь повторно загрузить уже существующие изображения, их данные будут перезагружены
+из XMP-файлов. Также внизу диалога доступна кнопка для выбора только «новых» изображений в текущей выбранной папке.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <hr>
+
+    <p><strong>Примечание:</strong> «add to library» не создаёт дубликаты файлов изображений в отдельной структуре папок, а обрабатывает их на месте.
+Процесс «add to library» просто добавляет данные об этих изображениях в базу данных библиотеки darktable (и создаёт XMP-файл,
+если применимо), позволяя просматривать и обрабатывать изображения.</p>
+
+    <p>Это означает, что если вы удалите изображения с диска после их добавления, darktable больше не сможет к ним получить доступ.
+Кроме того, darktable не отслеживает изменения в файловой системе. Новые изображения не появятся, пока не будут явно импортированы.</p>
+
+    <hr>
+
+  </div>
+  <div class="unbreakable">
+
+    <h5 id="copy-and-import" class="no_toc">copy &amp; import</h5>
+
+    <p>Эта опция копирует изображения из другого места в файловой системе (включая смонтированные устройства хранения) и добавляет
+скопированные изображения в библиотеку darktable. Если для изображения доступен существующий XMP-файл, он <em>не</em> будет прочитан
+или скопирован, а будет создан новый XMP-файл.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <p>Для управления именованием файлов и папок доступны следующие дополнительные параметры. По умолчанию отображается только опция
+«import job» — нажмите на метку «naming rules» или на значок-стрелку рядом с ней, чтобы показать дополнительные параметры:</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>import job</dt>
+      <dd>
+        <p>Название задачи импорта (заполняется в переменную <code class="language-plaintext highlighter-rouge">$(JOB­CO­DE)</code>).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>override today’s date</dt>
+      <dd>
+        <p>Введите действительную дату/время в формате <code class="language-plaintext highlighter-rouge">YYYY-​MM-​DD​[Thh:​mm:​ss]</code>, если хотите переопределить текущую дату/время, используемые
+при раскрытии переменных <code class="language-plaintext highlighter-rouge">$(YEAR)</code>, <code class="language-plaintext highlighter-rouge">$(MONTH)</code>, <code class="language-plaintext highlighter-rouge">$(DAY)</code>, <code class="language-plaintext highlighter-rouge">$(HOUR)</code>, <code class="language-plaintext highlighter-rouge">$(MINUTE)</code> и <code class="language-plaintext highlighter-rouge">$(SE­CONDS)</code>. В противном случае оставьте поле пустым.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>base filmroll’s directory</dt>
+      <dd>
+        <p>Базовая директория для шаблона именования (по умолчанию <code class="language-plaintext highlighter-rouge">$(PIC­TU­RES_FOLDER)/Darktable</code>). Нажмите на значок рядом с полем ввода,
+чтобы выбрать директорию вручную.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>filmroll name</dt>
+      <dd>
+        <p>Поддиректория для шаблона именования (по умолчанию <code class="language-plaintext highlighter-rouge">$(YEAR)​$(MONTH)​$(DAY)_​$(JOBCODE)</code>).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>keep original filename</dt>
+      <dd>
+        <p>Включите эту опцию, чтобы сохранить оригинальное имя файла вместо использования шаблона ниже при импорте.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>file naming pattern</dt>
+      <dd>
+        <p>Шаблон имени файла (по умолчанию <code class="language-plaintext highlighter-rouge">$(YEAR)​$(MONTH)​$(DAY)_​$(SEQUENCE).​$(FI­LE_EX­TEN­SI­ON)</code>).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>keep this window open</dt>
+      <dd>
+        <p>Оставляет окно открытым после завершения импорта, позволяя выполнять несколько импортов с разными параметрами именования.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <p>Большинство этих параметров также можно настроить в разделе
+<a href="https://docs.darktable.org/usermanual/development/en/preferences-settings/import/">pre­fe­ren­ces &gt; import</a>. Подробности о доступных
+переменных см. в этом разделе.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <h5 id="copy-and-import-from-camera" class="no_toc">copy &amp; import from camera</h5>
+
+    <p>Эта опция копирует файлы с подключённой камеры на локальную файловую систему и добавляет скопированные изображения
+в библиотеку darktable. Она предоставляет те же параметры именования, что и диалог «co­py &amp; im­port», но не позволяет
+выбирать места или папки.</p>
+
+  </div>
+
+</section>
+
+<hr>
+
+<h3 id="mod-selection">
+<a class="anchor" href="#mod-selection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Модуль selection (выбор)</h3>
+
+<ul class="origlink">
+  <li>
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/select/">docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/select/</a> (v3.2.1)</li>
+</ul>
+
+<section class="module">
+
+<figure id="fig-22" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:246px;" data-modes="grid,slides">
+<span title="Модуль «selection»" class="__is_images_wrapper"><img src="/img/6b/cc/b45e10tf.webp" alt="Модуль «selection»" class="__is_images_image __is_images_single" style="--is-images-width:246px;--is-images-aspect-ratio:246/113;" data-scale="1"></span>
+</figure>
+  <p>Позволяет выбирать изображения в представлении <em>lighttable</em> (световой стол) на основе простых критериев.</p>
+
+  <div class="unbreakable">
+
+    <h4 class="no_toc" id="section-29">Элементы управления модуля</h4>
+
+    <dl>
+      <dt>select all</dt>
+      <dd>
+        <p>Выбирает все изображения в текущей коллекции.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>select none</dt>
+      <dd>
+        <p>Снимает выделение со всех изображений.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>invert selection</dt>
+      <dd>
+        <p>Выбирает все изображения в текущей коллекции, которые в данный момент не выделены.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>select film roll</dt>
+      <dd>
+        <p>Выбирает все изображения в текущей коллекции, которые находятся в той же плёнке, что и текущие выделенные изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>select untouched</dt>
+      <dd>
+        <p>Выбирает все изображения в текущей коллекции, которые ещё не были обработаны.</p>
+      </dd>
+    </dl>
+
+  </div>
+
+</section>
+
+<h3 id="mod-timeline">
+<a class="anchor" href="#mod-timeline" aria-hidden="true"><span class="octicon octicon-link"></span></a>Модуль timeline (таймлайн)</h3>
+
+<ul class="origlink">
+  <li>
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/timeline/">docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/timeline/</a> (v3.2.1)</li>
+</ul>
+
+<section class="module">
+
+  <div class="unbreakable">
+
+    <p>Позволяет просматривать кадры по дате и времени съёмки.</p>
+
+<figure id="fig-23" class="__is_images_figure __is_images_single __is_images_width_750" style="--is-images-width:747px;" data-modes="grid,slides">
+<a href="/img/40/7o/t7307156.webp" title="Модуль «timeline»" class="__is_images_wrapper"><img src="/img/1f/67/e389c0tf.webp" alt="Модуль «timeline»" class="__is_images_image __is_images_single" style="--is-images-width:747px;--is-images-aspect-ratio:83/8;" data-scale="1"></a>
+</figure>
+  </div>
+
+  <p>В представлении «Световой стол» в режиме файлового менеджера вы можете показать или скрыть модуль таймлайна в нижней панели
+с помощью горячей клавиши <code class="language-plaintext highlighter-rouge">Ctrl</code>+<code class="language-plaintext highlighter-rouge">F</code>.</p>
+
+  <p>В таймлайне прокрутка колёсика мыши позволяет переключаться между предыдущей и следующей датами; используйте <code class="language-plaintext highlighter-rouge">Ctrl</code>+прокрутка
+для увеличения или уменьшения масштаба.</p>
+
+  <p>Также вы можете использовать таймлайн для выбора кадров по диапазону дат, кликнув и перетащив мышь.</p>
+
+</section>
+
+<hr>
+
+<p class="note sticker copy">Материал распространяется под лицензией <em><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL 3.0</a></em>.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:camera-support">
+      <p><a href="https://www.darktable.org/resources/camera-support/">https://www.darktable.org/resources/camera-support/</a> <a href="#fnref:camera-support" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:rawtherapee">
+      <p><a href="https://rawtherapee.com/">https://rawtherapee.com/</a> <a href="#fnref:rawtherapee" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:ufraw">
+      <p><a href="https://ufraw.sourceforge.net/">https://ufraw.sourceforge.net/</a> <a href="#fnref:ufraw" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:digikam">
+      <p><a href="https://www.digikam.org/">https://www.digikam.org/</a> <a href="#fnref:digikam" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:digikam:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a></p>
+    </li>
+    <li id="fn:install">
+      <p><a href="https://www.darktable.org/install/">https://www.darktable.org/install/</a> <a href="#fnref:install" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:dolphin">
+      <p><a href="https://apps.kde.org/ru/dolphin/">https://apps.kde.org/ru/dolphin/</a> <a href="#fnref:dolphin" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:gwenview">
+      <p><a href="https://apps.kde.org/ru/gwenview/">https://apps.kde.org/ru/gwenview/</a> <a href="#fnref:gwenview" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:piwigo">
+      <p><a href="https://ru.piwigo.org/">https://ru.piwigo.org/</a> <a href="#fnref:piwigo" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:recent">
+      <p>В версии 5.2.1 (возможно, и в более ранних) отдельный модуль для истории коллекций отсутствует, только кнопка в модуле collections. А документация обновляется с некоторым запозданием. <a href="#fnref:recent" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+
+<hr style="border: 2px; margin: 20px auto; width: 40%;">
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-page">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#overview">Обзор</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#install">Установка</a></li>
+<li class="toc-entry toc-h3"><a href="#interface">Интерфейс</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#start">Начало работы</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#start-import">Импорт</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#xmp-files">Связанные XMP-файлы</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#lighttable">Световой стол</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#work-area">Рабочая область</a></li>
+<li class="toc-entry toc-h4"><a href="#top-panel">Верхняя панель</a></li>
+<li class="toc-entry toc-h4"><a href="#bottom-panel">Нижняя панель</a></li>
+<li class="toc-entry toc-h4"><a href="#side-panels">Боковые панели</a></li>
+<li class="toc-entry toc-h4"><a href="#timeline-filmstrip">Таймлайн и лента кадров</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#start-export">Экспорт</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#done">Итог</a></li>
+<li class="toc-entry toc-h2"><a href="#refs">Справочная информация</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#mod-actions-on-selection">Модуль actions on selection (действия над выбранными)</a></li>
+<li class="toc-entry toc-h3"><a href="#mod-collections">Модуль collections (коллекции)</a></li>
+<li class="toc-entry toc-h3"><a href="#mod-export">Модуль export (экспорт)</a></li>
+<li class="toc-entry toc-h3"><a href="#mod-filmstrip">Модуль filmstrip (лента миниатюр)</a></li>
+<li class="toc-entry toc-h3"><a href="#mod-image-information">Модуль image information (информация об изображении)</a></li>
+<li class="toc-entry toc-h3"><a href="#mod-import">Модуль import (импорт)</a></li>
+<li class="toc-entry toc-h3"><a href="#mod-selection">Модуль selection (выбор)</a></li>
+<li class="toc-entry toc-h3"><a href="#mod-timeline">Модуль timeline (таймлайн)</a></li>
+</ul>
+</li>
+</ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/tech/2025/10/darktable-base.html" title="Первая глава «Практического руководства по darktable» — «Базовая обработка»">Первая глава «Практического руководства...»</a></li><li class="fa-icon-li-file-alt"><a href="/tech/2025/10/darktable.html" title="Анонс «Практического руководства по darktable»">Этим стулом...</a></li><li class="fa-icon-li-camera"><a href="/lib/darktable/index/" title="darktable">darktable</a></li><li class="fa-icon-li-file"><a href="/lib/darktable/pg/1_base_processing/" title="Глава 1: Базовая обработка">Глава 1: Базовая обработка</a></li><li class="fa-icon-li-book-open"><a href="/lib/darktable/pg/index/" title="Практическое руководство по darktable">Практическое руководство по darktable</a></li><li class="fa-icon-li-university"><a href="/lib/index/" title="«Книги» (большие тексты)">«Книги» (большие тексты)</a></li></ul>
+    </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li><li><a href="/feed/pub.xml" title="Публикации в СМИ">Публикации</a></li><li><a href="/feed/photo.xml" title="Тексты о фотографии">О фото</a></li><li><a href="/feed/life.xml" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a></li><li><a href="/feed/text.xml" title="Попытки литературного творчества">Тексты</a></li><li><a href="/feed/best.xml" title="«Самому себе он наиболее симпатичен» ©">Избранное</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <!-- <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a> -->
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <!-- <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a> -->
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2026 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>
