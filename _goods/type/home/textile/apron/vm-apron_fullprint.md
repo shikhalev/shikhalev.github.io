@@ -1,6 +1,7 @@
 ---
 title: Фартук 3D
 shop: vsemayki
+recommend: true
 ---
 
 ## Описание

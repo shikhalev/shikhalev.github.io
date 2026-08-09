@@ -328,4 +328,15 @@ figure.__is_images_slide_figure {
       }
     }
   }
+
+  opacity: 1;
+
+  &.disabled {
+    opacity: 0.5;
+  }
+
+  &.recommended {
+    box-shadow: 0 0 10px 10px #f1ba0599;
+  }
+
 }

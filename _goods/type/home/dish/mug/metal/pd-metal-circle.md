@@ -1,6 +1,7 @@
 ---
 title: Эмалированная кружка (круговая запечатка)
 shop: printdirect
+recommend: true
 ---
 
 ## Описание

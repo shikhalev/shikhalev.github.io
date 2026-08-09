@@ -74,7 +74,7 @@ class Jekyll::RecommendsGenerator < Jekyll::Generator
   end
 
   def generate_goods_json site
-    data = site.data['flat_goods'].select { it['recommend'] } || []
+    data = site.data['flat_goods'] || []
     if data.size < 10
       data += site.data['flat_goods'].last(10 - data.size)
     end
@@ -88,8 +88,10 @@ class Jekyll::RecommendsGenerator < Jekyll::Generator
       item['design_link'] = dg_page.url + "\##{ good['digest'] }" if dg_page
       item['image'] = transform_good_image(site, good['img'])
       item['url'] = good['url']
+      item['recommend'] ||= gd_page&.data['recommend'] || dg_page&.data['recommend']
+      item['disabled'] ||= gd_page&.data['disabled'] || dg_page&.data['disabled']
       item
-    end.to_json
+    end.reject { it['disabled'] || !it['recommend'] }.to_json
   end
 
   def make_filename prefix, json

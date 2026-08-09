@@ -1,6 +1,7 @@
 ---
 title: Термос
 shop: fun
+recommend: true
 ---
 
 ## Описание

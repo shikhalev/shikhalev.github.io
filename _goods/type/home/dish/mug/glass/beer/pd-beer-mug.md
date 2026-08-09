@@ -1,6 +1,7 @@
 ---
 title: Пивная кружка
 shop: printdirect
+recommend: true
 ---
 
 ## Описание

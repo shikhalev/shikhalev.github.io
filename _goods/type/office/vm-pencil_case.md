@@ -1,6 +1,7 @@
 ---
 title: Пенал школьный 3D
 shop: vsemayki
+recommend: true
 ---
 
 ## Описание

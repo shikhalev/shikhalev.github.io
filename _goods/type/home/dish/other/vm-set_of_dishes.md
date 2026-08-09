@@ -1,6 +1,7 @@
 ---
-title: "Набор: тарелка + кружка"
+title: "Набор: тарелка + кружка"
 shop: vsemayki
+recommend: true
 ---
 
 ## Описание

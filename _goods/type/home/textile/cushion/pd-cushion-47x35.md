@@ -1,6 +1,7 @@
 ---
 title:  Подушка 47×35 см
 shop: printdirect
+recommend: true
 ---
 
 ## Описание
