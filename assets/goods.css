@@ -207,6 +207,12 @@ div.verse {
   background-image: url(/assets/img/suno-192x192.png);
 }
 
+figure.__is_images_slide_figure {
+  display: flex;
+  border: none;
+  box-shadow: none;
+}
+
 /* Адаптивная сетка */
 .goods-min-grid {
   display: grid;
