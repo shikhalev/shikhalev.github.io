@@ -271,5 +271,14 @@ figure.__is_images_slide_figure {
   color: white !important;
   text-decoration: none !important;
 }
+.product-min-card {
+  opacity: 1;
+}
+.product-min-card.disabled {
+  opacity: 0.5;
+}
+.product-min-card.recommended {
+  box-shadow: 0 0 10px 10px rgba(241, 186, 5, 0.6);
+}
 
 /*# sourceMappingURL=local.css.map */
