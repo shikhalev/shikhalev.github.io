@@ -76,7 +76,7 @@ GEM
       is-static-files (~> 0.8)
       jekyll (~> 4.3)
       liquid (~> 4.0)
-    jekyll-is-images (0.8.0.8)
+    jekyll-is-images (0.8.0.10)
       is-kramdown-hooked (~> 0.8.6)
       is-static-files (~> 0.8.0)
       kramdown (~> 2.5)
@@ -116,7 +116,7 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.7.0)
     mercenary (0.4.0)
-    mini_magick (5.3.2)
+    mini_magick (5.3.3)
       logger
     nokogiri (1.19.4-aarch64-linux-gnu)
       racc (~> 1.4)
@@ -186,7 +186,7 @@ DEPENDENCIES
   jekyll (~> 4.4.1)
   jekyll-feed
   jekyll-is-announcer (~> 0.8.3)
-  jekyll-is-images (~> 0.8.0.8)
+  jekyll-is-images (~> 0.8.0.10)
   jekyll-redirect-from
   jekyll-remote-theme
   jekyll-seo-tag
@@ -229,7 +229,7 @@ CHECKSUMS
   jekyll (4.4.1) sha256=4c1144d857a5b2b80d45b8cf5138289579a9f8136aadfa6dd684b31fe2bc18c1
   jekyll-feed (0.17.0) sha256=689aab16c877949bb9e7a5c436de6278318a51ecb974792232fd94d8b3acfcc3
   jekyll-is-announcer (0.8.3) sha256=4b1d2c1f4630e77cf21a28d11603d900ed642d837899c3d5a51e75a1149ac34d
-  jekyll-is-images (0.8.0.8) sha256=f202b2a9819cef29a04fac831c4ba3509ee240227ecbd9c711878934936afa52
+  jekyll-is-images (0.8.0.10) sha256=8e843e98b07f336e0200b288fca671ab1307adbbc6c71412d512988ed9a7511b
   jekyll-redirect-from (0.16.0) sha256=6635cae569ef9b0f90ffb71ec014ba977177fafb44d32a2b0526288d4d9be6db
   jekyll-remote-theme (0.5.2) sha256=d41ba7358b7baa7c8f8f4ee03112bbae8dba90235e97d88c25b90a032abb6f55
   jekyll-sass-converter (3.1.0) sha256=83925d84f1d134410c11d0c6643b0093e82e3a3cf127e90757a85294a3862443
@@ -245,7 +245,7 @@ CHECKSUMS
   listen (3.10.0) sha256=c6e182db62143aeccc2e1960033bebe7445309c7272061979bb098d03760c9d2
   logger (1.7.0) sha256=196edec7cc44b66cfb40f9755ce11b392f21f7967696af15d274dde7edff0203
   mercenary (0.4.0) sha256=b25a1e4a59adca88665e08e24acf0af30da5b5d859f7d8f38fba52c28f405138
-  mini_magick (5.3.2) sha256=a7ef54b480b15283c396eb8343d9e088471f54b31d9974cb7e523cc57598609f
+  mini_magick (5.3.3) sha256=b3beed8a8cef36bd03666365f14b89cd344da0ecd373af53e617c71bfd426aab
   nokogiri (1.19.4-aarch64-linux-gnu) sha256=1269fb644a6de405057a53dd5c762b1209b43ca7424f839454d3dbc677c31a8f
   nokogiri (1.19.4-aarch64-linux-musl) sha256=35c65b9ce72b3bb03207bdbe7067915019dc18c1b9b59139684bd6690fdd01af
   nokogiri (1.19.4-arm-linux-gnu) sha256=a301313e38bb065d68239e79734bcd6f56fb6efaacebde29e9abf2a4735340ca

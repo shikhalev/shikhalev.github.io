@@ -1,0 +1,22 @@
+design: _designs/merch/photo/insecta/20250730-spider.md
+date: 2026-08-08
+items:
+  - good: _goods/type/home/dish/thermos/fn-thermos.md
+    url: https://fun.ru/thermos/obyknovennyy_krestovik
+    img: https://fun.ru/upload/75/cf/75cfee21f2.jpg
+    recommend: true
+  - good: _goods/type/home/dish/bottle/plastic/fn-bottle.md
+    url: https://fun.ru/bottle/obyknovennyy_krestovik
+    img: https://fun.ru/upload/45/93/4593604f00.jpg
+  - good: _goods/type/home/dish/mug/ceramics/circle/fn-mug.md
+    url: https://fun.ru/mugs/obyknovennyy_krestovik
+    img: https://fun.ru/upload/19/cd/19cddfa2de.jpg
+  - good: _goods/type/office/diary/fn-diary.md
+    url: https://fun.ru/diary/obyknovennyy_krestovik
+    img: https://fun.ru/upload/f5/fc/f5fc328f46.jpg
+  - good: _goods/type/accessories/bag/shopper/fn-bags.md
+    url: https://fun.ru/bags/obyknovennyy_krestovik
+    img: https://fun.ru/upload/5a/c6/5ac66eb75c.jpg
+  - good: _goods/type/home/dish/bottle/plastic/fn-bottle-speedy.md
+    url: https://fun.ru/bottle-speedy/obyknovennyy_krestovik
+    img: https://fun.ru/upload/d7/28/d728e65427.jpg

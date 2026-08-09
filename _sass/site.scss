@@ -249,3 +249,9 @@ div.verse {
     }
   }
 }
+
+figure.__is_images_slide_figure {
+  display: flex;
+  border: none;
+  box-shadow: none;
+}
