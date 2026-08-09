@@ -185,6 +185,10 @@ figure.__is_images_viewbox {
   text-align: center;
 }
 
+.product-min-card:target {
+  box-shadow: 0 0 10px 10px rgba(14, 236, 25, 0.6);
+}
+
 div.verse {
   min-width: 480px;
 }
@@ -211,6 +215,61 @@ figure.__is_images_slide_figure {
   display: flex;
   border: none;
   box-shadow: none;
+}
+
+.product-min-card {
+  z-index: 0;
+  position: relative;
+  width: 210px !important;
+  height: 240px !important;
+  padding: 0;
+  margin: 0;
+}
+.product-min-card.card-back-vsemayki img {
+  background-color: #eaeaea !important;
+}
+.product-min-card:hover {
+  z-index: 1;
+  box-shadow: 0 0 5px 10px rgba(85, 170, 255, 0.4);
+}
+.product-min-card:hover .product-design, .product-min-card:hover .product-kind {
+  background-color: rgba(85, 170, 255, 0.6) !important;
+}
+.product-min-card img {
+  width: 210px !important;
+  height: 240px !important;
+  object-fit: contain;
+}
+.product-min-card .product-kind {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(102, 102, 102, 0.4) !important;
+}
+.product-min-card .product-design {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+  font-weight: bold !important;
+  text-align: center;
+  background-color: rgba(102, 102, 102, 0.4) !important;
+}
+.product-min-card .product-design a {
+  text-align: center;
+}
+.product-min-card .product-kind a, .product-min-card .product-kind a:link, .product-min-card .product-kind a:visited, .product-min-card .product-design a, .product-min-card .product-design a:link, .product-min-card .product-design a:visited {
+  background-color: transparent !important;
+  color: rgba(238, 238, 238, 0.9333333333) !important;
+  text-decoration: none !important;
+}
+.product-min-card .product-kind a:hover, .product-min-card .product-kind a:link:hover, .product-min-card .product-kind a:visited:hover, .product-min-card .product-design a:hover, .product-min-card .product-design a:link:hover, .product-min-card .product-design a:visited:hover {
+  color: white !important;
+  text-decoration: none !important;
 }
 
 @media screen and (min-width: 779px) {
