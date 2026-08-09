@@ -175,4 +175,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.product-min-card').forEach((elem) => {
     elem.style.order = Math.floor(Math.random() * 1000) - elem.dataset.order;
   });
+  targetId = window.location.hash;
+  target = document.querySelector(targetId);
+  if (target) {
+    target.scrollIntoView({block: 'start'});
+  }
 });

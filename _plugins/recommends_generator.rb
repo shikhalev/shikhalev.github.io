@@ -83,9 +83,9 @@ class Jekyll::RecommendsGenerator < Jekyll::Generator
       gd_page = site.documents.find { it.relative_path == good['good'] }
       dg_page = site.documents.find { it.relative_path == good['design'] }
       item['good'] = gd_page&.data['title']
-      item['good_link'] = gd_page&.url
+      item['good_link'] = gd_page.url + "\##{ good['digest'] }" if gd_page
       item['design'] = dg_page&.data['title']
-      item['design_link'] = dg_page&.url
+      item['design_link'] = dg_page.url + "\##{ good['digest'] }" if dg_page
       item['image'] = transform_good_image(site, good['img'])
       item['url'] = good['url']
       item

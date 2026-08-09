@@ -5,16 +5,16 @@
     {%- assign product_good = site.goods | where: 'path', product.good | first -%}
     {%- assign product_type = product_good.title -%}
     {%- assign product_shop = product_good.shop -%}
-    <div class="product-min-card" data-kind="{{ product.good }}" data-design="{{ product.design }}" data-order="{{ product.order }}" >
-    <a href="{{ product.url }}">
+    <div class="product-min-card card-back-{{ product_shop }}" id="{{ product.digest }}" data-kind="{{ product.good }}" data-design="{{ product.design }}" data-order="{{ product.order }}" >
+    <a href="{{ product.url }}" title="Перейти в магазин">
       {%- if product.img -%}
         <img src="{{ product.img }}" alt="{{ product_title | escape }}" loading="lazy">
       {%- else -%}
         <div class="no-photo">Нет фото</div>
       {%- endif -%}
     </a>
-    <span class="product-kind {{ product_shop }}"><a href="{{ product_good.url | relative_url }}">{{ product_type }}</a></span>
-    <span class="product-design"><a href="{{ product_design.url | relative_url }}">{{ product_title }}</a></span>
+    <span class="product-kind {{ product_shop }}"><a title="Перейти к виду товара" href="{{ product_good.url | relative_url }}">{{ product_type }}</a></span>
+    <span class="product-design"><a title="Перейти к коллекции" href="{{ product_design.url | relative_url }}">{{ product_title }}</a></span>
     </div>
   {%- endfor -%}
 </div>
