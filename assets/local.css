@@ -98,6 +98,11 @@ figure.__is_images_viewbox {
   display: flex;
 }
 
+@media print {
+  .__new_recommends {
+    display: none;
+  }
+}
 .__new_recommends {
   width: 100%;
   margin: 2em auto;
@@ -277,6 +282,10 @@ figure.__is_images_slide_figure {
 }
 .product-min-card.recommended {
   box-shadow: 0 0 10px 10px rgba(241, 186, 5, 0.6);
+}
+
+.gsc-search-box {
+  margin: 0 !important;
 }
 
 /*# sourceMappingURL=local.css.map */
