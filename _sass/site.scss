@@ -119,6 +119,10 @@ figure.__is_images_viewbox {
 
 .__new_recommends {
 
+  @media print {
+    display: none;
+  }
+
   width: 100%;
   margin: 2em auto;
   display: flex;
@@ -339,4 +343,8 @@ figure.__is_images_slide_figure {
     box-shadow: 0 0 10px 10px #f1ba0599;
   }
 
+}
+
+.gsc-search-box {
+  margin: 0 !important;
 }
