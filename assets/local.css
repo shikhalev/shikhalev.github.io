@@ -124,13 +124,11 @@ figure.__is_images_viewbox {
   width: 340px;
   height: 180px;
   object-fit: cover;
-  background-color: aliceblue;
 }
 .__new_recommends .__new_recommends_good_image {
   width: 180px;
   height: 180px;
   object-fit: contain;
-  background-color: antiquewhite;
 }
 .__new_recommends .__new_recommends_date {
   position: absolute;
