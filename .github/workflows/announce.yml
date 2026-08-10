@@ -33,7 +33,7 @@ jobs:
           mkdir -p tmp/data
           cp -f _data/announced.json tmp/data/announced.json
       - name: Publish
-        uses: jekyll-is/action-jekyll-is-publish@v1
+        uses: jekyll-is/action-jekyll-is-publish@v2
         with:
           label: 'Jekyll Announce'
           copy-dir: 'tmp'

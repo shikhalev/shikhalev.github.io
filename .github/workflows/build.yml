@@ -27,7 +27,7 @@ jobs:
         with:
           install-libfuse2: true
       - name: Images from Cache
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v6
         with:
           path: .is-images-cache
           key: ${{ runner.os }}-jekyll-images-${{ github.run_id }}
@@ -38,7 +38,7 @@ jobs:
           echo "Build..."
           JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build
       - name: Images to Cache
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v6
         with:
           path: .is-images-cache
           key: ${{ runner.os }}-jekyll-images-${{ github.run_id }}
