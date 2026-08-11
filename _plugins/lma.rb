@@ -22,11 +22,11 @@ class Jekyll::LastModifiedCats < Jekyll::Generator
     end
     @cats.each do |cat, date|
       stream = site.collections['streams'].docs.select { it.data['category_id'] == cat }.first
-      stream.data['last_modified_at'] = date.xmlschema if stream
-      stream.data['date'] = date.xmlschema if stream
+      stream.data['last_modified_at'] = date if stream
+      stream.data['date'] = date if stream
       calendar = site.collections['calendars'].docs.select { it.data['category_id'] == cat }.first
-      calendar.data['last_modified_at'] = date.xmlschema if calendar
-      calendar.data['date'] = date.xmlschema if calendar
+      calendar.data['last_modified_at'] = date if calendar
+      calendar.data['date'] = date if calendar
     end
   end
 
