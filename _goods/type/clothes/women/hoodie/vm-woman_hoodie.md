@@ -1,6 +1,7 @@
 ---
 title: Женская толстовка хлопок
 shop: vsemayki
+recommend: true
 ---
 
 ## Описание

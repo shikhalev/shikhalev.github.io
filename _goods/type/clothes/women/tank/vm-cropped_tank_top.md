@@ -1,6 +1,7 @@
 ---
 title: Женская укороченная майка-топ хлопок
 shop: vsemayki
+recommend: true
 ---
 
 ## Описание

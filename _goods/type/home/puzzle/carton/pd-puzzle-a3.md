@@ -1,6 +1,7 @@
 ---
 title: Пазл прямоугольник А3
 shop: printdirect
+recommend: true
 ---
 
 ## Описание

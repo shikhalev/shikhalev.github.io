@@ -74,34 +74,27 @@ class Jekyll::RecommendsGenerator < Jekyll::Generator
   end
 
   def generate_goods_json site
-    data = site.data['flat_goods'].select { it['recommend'] } || []
+    data = site.data['flat_goods'] || []
     if data.size < 10
       data += site.data['flat_goods'].last(10 - data.size)
     end
     data.map do |good|
       item = {}
-      item['good'] = page_title(site, good['good'])
-      item['design'] = page_title(site, good['design'])
+      gd_page = site.documents.find { it.relative_path == good['good'] }
+      dg_page = site.documents.find { it.relative_path == good['design'] }
+      item['good'] = gd_page&.data['title']
+      item['good_link'] = gd_page.url + "\##{ good['digest'] }" if gd_page
+      item['design'] = dg_page&.data['title']
+      item['design_link'] = dg_page.url + "\##{ good['digest'] }" if dg_page
       item['image'] = transform_good_image(site, good['img'])
       item['url'] = good['url']
+      item['recommend'] ||= gd_page&.data['recommend'] || dg_page&.data['recommend']
+      item['disabled'] ||= gd_page&.data['disabled'] || dg_page&.data['disabled']
       item
-    end.to_json
-  end
-
-  def page_title site, path
-    page = site.documents.find { it.relative_path == path }
-    if page
-      page.data['title']
-    else
-      nil
-    end
+    end.reject { it['disabled'] || !it['recommend'] }.to_json
   end
 
   def make_filename prefix, json
-    # sha256 = Digest::SHA256::new
-    # sha256.update json
-    # digest = sha256.hexdigest.tr('ad', 'ot')
-    # "/data/#{ prefix }-#{ digest[0..7] }.json"
     "/data/#{ prefix }.json"
   end
 

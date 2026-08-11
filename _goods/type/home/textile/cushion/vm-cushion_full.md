@@ -1,6 +1,7 @@
 ---
 title: Подушка 3D
 shop: vsemayki
+recommend: true
 ---
 
 ## Описание

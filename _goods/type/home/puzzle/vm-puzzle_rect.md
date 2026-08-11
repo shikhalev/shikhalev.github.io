@@ -1,6 +1,7 @@
 ---
 title: Пазл магнитный 126 элементов
 shop: vsemayki
+recommend: true
 ---
 
 ## Описание

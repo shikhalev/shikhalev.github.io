@@ -1,6 +1,7 @@
 ---
 title: Женская футболка 3D
 shop: vsemayki
+recommend: true
 ---
 
 ## Описание

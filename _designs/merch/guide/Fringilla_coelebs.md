@@ -1,6 +1,7 @@
 ---
-title: Зяблик (Fringilla coelebs)
+title: Зяблик (Fringilla coelebs)
 description: Лист псевдо-определителя для Fringilla coelebs
+recommend: true
 ---
 
 ## Описание

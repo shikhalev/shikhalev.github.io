@@ -43,10 +43,6 @@
   // border-radius: 10px;
   border-top: solid 10px #DDD;
 
-  &:hover {
-    // box-shadow: 0px 0px 5px #987;
-  }
-
   a {
     font-size: 24px;
     color: #DDD;
@@ -119,6 +115,10 @@ figure.__is_images_viewbox {
 
 .__new_recommends {
 
+  @media print {
+    display: none;
+  }
+
   width: 100%;
   margin: 2em auto;
   display: flex;
@@ -147,14 +147,14 @@ figure.__is_images_viewbox {
     width: 340px;
     height: 180px;
     object-fit: cover;
-    background-color: aliceblue;
+    // background-color: aliceblue;
   }
 
   .__new_recommends_good_image {
     width: 180px;
     height: 180px;
     object-fit: contain;
-    background-color: antiquewhite;
+    // background-color: antiquewhite;
   }
 
   .__new_recommends_date {
@@ -223,6 +223,10 @@ figure.__is_images_viewbox {
 
 }
 
+.product-min-card:target {
+  box-shadow: 0 0 10px 10px #0eec1999;
+}
+
 div.verse {
   min-width: 480px;
 }
@@ -254,4 +258,89 @@ figure.__is_images_slide_figure {
   display: flex;
   border: none;
   box-shadow: none;
+}
+
+
+.product-min-card {
+  z-index: 0;
+  position: relative;
+  width: 210px !important;
+  height: 240px !important;
+  padding: 0;
+  margin: 0;
+
+  &.card-back-vsemayki img {
+    background-color: #eaeaea !important;
+  }
+
+  &:hover {
+    z-index: 1;
+    box-shadow: 0 0 5px 10px #55aaff66;
+
+    .product-design, .product-kind {
+      background-color: #55aaff99 !important;
+    }
+  }
+
+  img {
+    width: 210px !important;
+    height: 240px !important;
+    object-fit: contain;
+  }
+
+  .product-kind {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background-color: #66666666 !important;
+
+  }
+
+  .product-design {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+    font-weight: bold !important;
+
+    text-align: center;
+    background-color: #66666666 !important;
+
+    a {
+      text-align: center;
+    }
+  }
+
+  .product-kind, .product-design {
+    a, a:link, a:visited {
+      background-color: transparent !important;
+      color: #EEEEEEEE !important;
+      text-decoration: none !important;
+
+      &:hover {
+        color: #FFFFFFFF !important;
+        text-decoration: none !important;
+      }
+    }
+  }
+
+  opacity: 1;
+
+  &.disabled {
+    opacity: 0.5;
+  }
+
+  &.recommended {
+    box-shadow: 0 0 10px 10px #f1ba0599;
+  }
+
+}
+
+.gsc-search-box {
+  margin: 0 !important;
 }

@@ -1,6 +1,7 @@
 ---
 title: Брелок-открывашка 50 мм
 shop: printdirect
+recommend: true
 ---
 
 ## Описание

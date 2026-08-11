@@ -30,9 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
     element.querySelector(".__new_recommends_date_place").innerHTML = data.good;
     element.querySelector(".__new_recommends_title_place").innerHTML =
       data.design;
-    element.querySelectorAll("a").forEach((elem) => {
-      elem.href = data.url;
-    });
+    // element.querySelectorAll("a").forEach((elem) => {
+    //   elem.href = data.url;
+    // });
+    element.querySelector('.__new_recommends_image_link').href = data.url;
+    element.querySelector('.__new_recommends_date_place').href = data.good_link;
+    element.querySelector('.__new_recommends_title_place').href = data.design_link;
   };
 
   const filter_data = (data, flag, categories) => {

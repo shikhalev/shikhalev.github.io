@@ -203,6 +203,7 @@ exclude:
   - .vscode/
   - .announces.json
   - .is-images-cache
+  - _plugins
   - tmp/
   - flatten.log
 

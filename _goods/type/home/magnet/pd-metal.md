@@ -2,6 +2,7 @@
 title:  Магнит-открывашка 58 мм
 short: Металл
 shop: printdirect
+recommend: true
 ---
 
 ## Описание

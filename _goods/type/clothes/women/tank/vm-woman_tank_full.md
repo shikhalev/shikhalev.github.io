@@ -1,6 +1,7 @@
 ---
 title: Женская майка 3D
 shop: vsemayki
+recommend: true
 ---
 
 ## Описание

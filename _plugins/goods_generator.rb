@@ -1,4 +1,5 @@
 require 'date'
+require 'digest'
 
 class DataMaker
 
@@ -67,6 +68,12 @@ class DataMaker
     @goods = []
     @kinds = {}
     add_design @page
+    @goods.each do |good|
+      source_image = good['img']
+      unless source_image.nil? || source_image.start_with?('/')
+        good['img'] = transform_image source_image
+      end
+    end
     @page.data['goods'] = @goods.sort_by { it['date'] }.reverse
     @goods.sort_by { it['good'] }.each do |good|
       kind_path = good['good']
@@ -75,6 +82,15 @@ class DataMaker
       add_design_kind kind
     end
     @page.data['kinds'] = @kinds
+  end
+
+  def transform_image source
+    @context ||= JekyllIS::Images::Context[@site, @page]
+    width = @context.config('goods', 'width') || 210
+    height = @context.config('goods', 'height') || 210
+    params = { width:, height:, format: 'webp', fit: 'contain' }
+    result = JekyllIS::Images::Image::Transform::transform @context, source, **params
+    result.url
   end
 
   def add_kind kind
@@ -129,6 +145,12 @@ class DataMaker
     @goods = []
     @designs = {}
     add_kind @page
+    @goods.each do |good|
+      source_image = good['img']
+      unless source_image.nil? || source_image.start_with?('/')
+        good['img'] = transform_image source_image
+      end
+    end
     @page.data['goods'] = @goods.sort_by { it['date'] }.reverse
     @goods.sort_by { it['design'] }.each do |good|
       design_path = good['design']
@@ -172,6 +194,9 @@ module Jekyll
       flattened = []
       source = site.data[SOURCE]
       process_data_node source, flattened if source
+      flattened.each do |good|
+        good['digest'] = Digest::SHA256::hexdigest(good['url'])[0..7]
+      end
       site.data['flat_goods'] = flattened
     end
 

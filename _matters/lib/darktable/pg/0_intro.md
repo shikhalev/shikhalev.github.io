@@ -1,6 +1,7 @@
 ---
 title: "Введение"
 last_modified_at: 2025-10-26
+redirect_from: pages/books/darktable/pg/0_intro.html
 ---
 
 <hr style="border: 2px; margin: 20px auto; width: 40%;">

@@ -1,6 +1,7 @@
 ---
 title: Картхолдер с принтом
 shop: vsemayki
+recommend: true
 ---
 
 ## Описание

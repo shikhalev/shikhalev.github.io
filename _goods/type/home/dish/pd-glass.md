@@ -1,6 +1,7 @@
 ---
 title: Рюмка
 shop: printdirect
+recommend: true
 ---
 
 ## Описание

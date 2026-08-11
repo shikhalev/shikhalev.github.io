@@ -1,6 +1,7 @@
 ---
 title: Фляга
 shop: vsemayki
+recommend: true
 ---
 
 ## Описание

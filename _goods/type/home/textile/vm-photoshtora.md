@@ -1,6 +1,7 @@
 ---
 title: Фотошторы
 shop: vsemayki
+recommend: true
 ---
 
 ## Описание
