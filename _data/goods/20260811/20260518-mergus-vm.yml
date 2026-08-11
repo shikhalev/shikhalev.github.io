@@ -1,0 +1,51 @@
+design: _designs/merch/photo/birds/20260518-mergus.md
+date: 2026-08-11
+items:
+  - good: _goods/type/clothes/men/t-shirt/vm-manshort.md
+    url: https://shikhalev.vsemaykishop.ru/article/manshort/4101047?size=xs_42-44&color=melange
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101047/previews/people_1000_manshort_front_melange_936.webp
+  - good: _goods/type/clothes/men/longsleeve/vm-manlong.md
+    url: https://shikhalev.vsemaykishop.ru/article/manlong/4101047?size=s_44-46&color=melange
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101047/previews/people_1000_manlong_front_melange_936.webp
+  - good: _goods/type/clothes/men/tank/vm-man_tshirt.md
+    url: https://shikhalev.vsemaykishop.ru/article/man_tshirt/4101047?color=melange
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101047/previews/people_1000_man_tshirt_front_melange_936.webp
+  - good: _goods/type/clothes/men/sweatshirt/vm-smock.md
+    url: https://shikhalev.vsemaykishop.ru/article/smock/4101047?size=xxs_42&color=melange
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101047/previews/people_1001_smock_front_melange_936.webp
+  - good: _goods/type/clothes/men/t-shirt/vm-man_tshirt_premium.md
+    url: https://shikhalev.vsemaykishop.ru/article/man_tshirt_premium/4101047?size=xs_42-44&color=melange
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101047/previews/people_1010_man_tshirt_premium_front_melange_936.webp
+  - good: _goods/type/clothes/men/t-shirt/vm-tshirt_oversize.md
+    url: https://shikhalev.vsemaykishop.ru/article/tshirt_oversize/4101047?color=melange
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101047/previews/people_1000_tshirt_oversize_front_melange_936.webp
+  - good: _goods/type/clothes/men/pajamas/vm-man_pajamas.md
+    url: https://shikhalev.vsemaykishop.ru/article/man_pajamas/4101047?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101047/previews/people_1001_man_pajamas_front_white_936.webp
+  - good: _goods/type/clothes/men/suit/vm-man_knit_suit.md
+    url: https://shikhalev.vsemaykishop.ru/article/man_knit_suit/4101047?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101047/previews/people_1000_man_knit_suit_front_white_936.webp
+  - good: _goods/type/clothes/men/hoodie/vm-man_hoodie_oversize.md
+    url: https://shikhalev.vsemaykishop.ru/article/man_hoodie_oversize/4101047?size=oversizeM&color=melange
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101047/previews/people_1039_man_hoodie_oversize_front_melange_936.webp
+  - good: _goods/type/clothes/men/suit/vm-man_knit_suit_over.md
+    url: https://shikhalev.vsemaykishop.ru/article/man_knit_suit_over/4101047?size=xxxl_56&color=melange
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101047/previews/people_1004_man_knit_suit_over_front_melange_936.webp
+  - good: _goods/type/clothes/men/pajamas/vm-mens_pajamas_longsleeve.md
+    url: https://shikhalev.vsemaykishop.ru/article/mens_pajamas_longsleeve/4101047?size=7xl&color=beige
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101047/previews/people_1000_mens_pajamas_longsleeve_front_beige_936.webp
+  - good: _goods/type/clothes/men/hoodie/vm-mens_hoodies_zip.md
+    url: https://shikhalev.vsemaykishop.ru/article/mens_hoodies_zip/4101047?color=melange
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101047/previews/people_20_mens_hoodies_zip_front_melange_936.webp
+  - good: _goods/type/clothes/men/longsleeve/vm-men_longsleeves_oversize.md
+    url: https://shikhalev.vsemaykishop.ru/article/men_longsleeves_oversize/4101047?color=melange
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101047/previews/people_1000_men_longsleeves_oversize_front_melange_936.webp
+  - good: _goods/type/clothes/men/t-shirt/vm-tshirt_oversize_man_premium.md
+    url: https://shikhalev.vsemaykishop.ru/article/tshirt_oversize_man_premium/4101047?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101047/previews/people_1001_tshirt_oversize_man_premium_front_white_936.webp
+  - good: _goods/type/clothes/men/sweatshirt/vm-sweatshirt_without_fleece_man.md
+    url: https://shikhalev.vsemaykishop.ru/article/sweatshirt_without_fleece_man/4101047?size=xxs_42&color=lightlightblue
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101047/previews/people_1000_sweatshirt_without_fleece_man_front_lightlightblue_936.webp
+  - good: _goods/type/clothes/men/pajamas/vm-men_pajamas_whitetshirt.md
+    url: https://shikhalev.vsemaykishop.ru/article/men_pajamas_whitetshirt/4101047?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101047/previews/people_1001_men_pajamas_whitetshirt_front_white_936.webp
