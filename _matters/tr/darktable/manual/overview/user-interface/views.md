@@ -2,6 +2,7 @@
 title: Представления
 id: views
 last_modified_at: 2026-08-11T08:30:00+0500
+source: https://darktable-org.github.io/dtdocs/en/overview/user-interface/views/
 ---
 
 Функциональность darktable разделена на шесть различных представлений:

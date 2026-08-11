@@ -5,10 +5,11 @@ id: user-manual
 children:
   - _matters/tr/darktable/manual/overview.md
 last_modified_at: 2026-08-11T08:30:00+0500
+source: https://darktable-org.github.io/dtdocs/en/
 ---
 
 {: .webonly }
-![](_src/tr/darktable-manual/darktable-logo.png){: shape .logo width="440" style="filter:drop-shadow(0 0 10px silver);" }
+![](_src/tr/darktable-manual/darktable-logo.png){: shape .logo width="440" style="filter:drop-shadow(0 0 10px silver);" href="none" }
 
 darktable — приложение с открытым исходным кодом для организации рабочего процесса фотографа и проявки RAW — виртуальные световой стол и тёмная комната для фотографов. Оно управляет вашими цифровыми негативами в базе данных, позволяет просматривать их на масштабируемом световом столе, а также проявлять и обрабатывать ваши RAW-снимки.
 

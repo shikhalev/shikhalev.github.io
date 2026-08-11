@@ -1,13 +1,13 @@
-
 {%- if include.depth > 0 and include.matter.children and include.matter.children.size > 0 -%}
   {%- for child_path in include.matter.children -%}
     {%- assign child_page = site.matters | where: 'path', child_path | first -%}
     {%- if child_page -%}
-    ` {%- assign child_title = child_page.title -%}
+      {%- assign child_title = child_page.title -%}
       {%- assign child_desc = child_page.description | default: '' -%}
       {%- assign child_url = child_page.url -%}
       {%- if include.start -%}
         <h3 id="{{ child_url | slugify }}"><a href="{{ child_url }}" title="{{ child_desc }}">{{ child_title }}</a></h3>
+        {{ child_desc | markdownify }}
         {%- assign subdepth = include.depth | minus: 1 -%}
         {%- include matter/subs.liquid matter=child_page depth=subdepth start=false -%}
       {%- else -%}
@@ -22,7 +22,6 @@
     {%- endif -%}
   {%- endfor -%}
 {%- endif -%}
-
 {%- if include.start and include.depth > 0 and include.matter.also and include.matter.also.size > 0 -%}
   <h3>См. также</h3>
   {%- for also_path in include.matter.also -%}
