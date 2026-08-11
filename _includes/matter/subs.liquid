@@ -11,7 +11,7 @@
         {%- assign subdepth = include.depth | minus: 1 -%}
         {%- include matter/subs.liquid matter=child_page depth=subdepth start=false -%}
       {%- else -%}
-        {%- if forloop.first -%}<ul>{%- endif -%}
+        {%- if forloop.first -%}<ul class="submatters submatters-{{ include.depth }}">{%- endif -%}
         <li id="{{ child_url | slugify }}">
           <a href="{{ child_url }}" title="{{ child_desc }}">{{ child_title }}</a>
           {%- assign subdepth = include.depth | minus: 1 -%}

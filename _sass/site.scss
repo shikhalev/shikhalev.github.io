@@ -344,3 +344,51 @@ figure.__is_images_slide_figure {
 .gsc-search-box {
   margin: 0 !important;
 }
+
+.submatters {
+  font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+  font-size: 1.6rem;
+  margin-top: 0.6rem;
+
+  .submatters {
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+  }
+
+    list-style-position: outside;
+
+    li {
+      font-family: 'PT Sans Caption', sans-serif;
+      padding-left: 0.5em;
+
+      &::marker {
+        content: "\f15b";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 400;
+        color: silver;
+      }
+
+      ul {
+
+        li {
+          &::marker {
+            content: "\f02e";
+          }
+        }
+
+      }
+
+    }
+
+
+}
+
+.toc-matter {
+
+  li {
+    &::marker {
+      content: "\f02e";
+    }
+  }
+
+}
