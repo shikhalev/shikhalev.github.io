@@ -1,4 +1,4 @@
-import { initSlidesWheel, initSlidesNavBar, initViewBox } from '/js/plugins/is-images-0.8.0.12.js';
+import { initSlidesWheel, initSlidesNavBar, initViewBox } from '/js/plugins/is-images-0.8.0.14.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initSlidesWheel();
