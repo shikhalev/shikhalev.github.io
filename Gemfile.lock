@@ -76,7 +76,7 @@ GEM
       is-static-files (~> 0.8)
       jekyll (~> 4.3)
       liquid (~> 4.0)
-    jekyll-is-images (0.8.0.12)
+    jekyll-is-images (0.8.0.14)
       is-kramdown-hooked (~> 0.8.6)
       is-static-files (~> 0.8.0)
       kramdown (~> 2.5)
@@ -186,7 +186,7 @@ DEPENDENCIES
   jekyll (~> 4.4.1)
   jekyll-feed
   jekyll-is-announcer (~> 0.8.3)
-  jekyll-is-images (~> 0.8.0.12)
+  jekyll-is-images (~> 0.8.0.14)
   jekyll-redirect-from
   jekyll-remote-theme
   jekyll-seo-tag
@@ -229,7 +229,7 @@ CHECKSUMS
   jekyll (4.4.1) sha256=4c1144d857a5b2b80d45b8cf5138289579a9f8136aadfa6dd684b31fe2bc18c1
   jekyll-feed (0.17.0) sha256=689aab16c877949bb9e7a5c436de6278318a51ecb974792232fd94d8b3acfcc3
   jekyll-is-announcer (0.8.3) sha256=4b1d2c1f4630e77cf21a28d11603d900ed642d837899c3d5a51e75a1149ac34d
-  jekyll-is-images (0.8.0.12) sha256=b02f2f772c52952430cc97f579d9a14377cd27361cc42a09316cca7ac5a9464a
+  jekyll-is-images (0.8.0.14) sha256=b55a1a8106022529e184b1fb7cd40cb46751cfeb211a6902fe79a45cb714d455
   jekyll-redirect-from (0.16.0) sha256=6635cae569ef9b0f90ffb71ec014ba977177fafb44d32a2b0526288d4d9be6db
   jekyll-remote-theme (0.5.2) sha256=d41ba7358b7baa7c8f8f4ee03112bbae8dba90235e97d88c25b90a032abb6f55
   jekyll-sass-converter (3.1.0) sha256=83925d84f1d134410c11d0c6643b0093e82e3a3cf127e90757a85294a3862443
