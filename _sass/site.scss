@@ -392,3 +392,15 @@ figure.__is_images_slide_figure {
   }
 
 }
+
+:has(> section.module) {
+  container-type: inline-size;
+}
+
+@container (width >= 600px) {
+  section.module {
+    column-count: 2;
+    column-gap: 1rem;
+    column-fill: balance;
+  }
+}

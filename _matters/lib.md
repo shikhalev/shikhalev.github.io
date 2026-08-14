@@ -2,7 +2,7 @@
 title: Книжная полка (большие тексты)
 short: Библиотека
 icon: university
-last_modified_at: 2025-10-26
+date: 2025-10-26
 ---
 
 ## [darktable]({%- link _matters/lib/darktable.md -%}){:.img-icon-darktable}
