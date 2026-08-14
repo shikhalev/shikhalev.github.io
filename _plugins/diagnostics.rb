@@ -23,14 +23,20 @@ class DiagnosticReport < Jekyll::Generator
         'layout' => 'nova/page',
         'title' => 'Диагностический отчет'
       }
+      recs, recs_count = recommendations
+      bsts, bsts_count = bests
       self.content = <<~MD
         ## Рекомендации без картинки
 
-        #{ recommendations }
+        #{ recs }
+
+        + **Всего: #{ recs_count }**
 
         ## Избранное без картинки
 
-        #{ bests }
+        #{ bsts }
+
+        + **Всего: #{ bsts_count }**
 
       MD
     end
@@ -43,15 +49,17 @@ class DiagnosticReport < Jekyll::Generator
     end
 
     def recommendations
-      @site.posts.docs.select { it.data['recommend'] }.select { no_image(it) }.map do |post|
+      vals = @site.posts.docs.select { it.data['recommend'] }.select { no_image(it) }.map do |post|
         "+ [#{ post.data['title'] }](#{ post.url })"
-      end.join "\n\n"
+      end.to_a
+      [ vals.join("\n\n"), vals.size ]
     end
 
     def bests
-      @site.categories['best'].select { no_image(it) }.map do |post|
+      vals = @site.categories['best'].select { no_image(it) }.map do |post|
         "+ [#{ post.data['title'] }](#{ post.url })"
-      end.join "\n\n"
+      end.to_a
+      [ vals.join("\n\n"), vals.size ]
     end
 
   end
