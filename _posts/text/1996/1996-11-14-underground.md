@@ -2,6 +2,7 @@
 layout: verse
 title: Мы строим подземный город
 category: [ text, verses, best ]
+image: _src/covers/underground96.png
 tags:
   - песенка
   - suno
