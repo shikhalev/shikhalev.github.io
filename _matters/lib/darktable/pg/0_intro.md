@@ -140,7 +140,7 @@ XMP-файлы могут содержать дополнительные мет
 Если во время импорта xmp-файлы уже существуют, метаданные из них также попадают в базу. Таким образом, если, например, вы хотите
 скопировать уже обработанные файлы на другой компьютер, чтобы там продолжить работать с ними в **dark­table**, достаточно просто
 скопировать исходные RAW *вместе* со связанными XMP. Аналогично следует поступать и при архивации. При копировании или перемещении файлов
-средствами самого **darktable** (см. ниже [описание модуля «actions on se­lec­ti­on»](#mod-actions-on-selection)) связанные файлы всегда
+средствами самого **darktable** (см. ниже [описание модуля «actions on se­lec­ti­on»]({% link _matters/tr/darktable/manual/module-reference/utility-modules/lighttable/actions-on-selection.md %})) связанные файлы всегда
 копируются/перемещаются вместе с исходниками.
 
 {:#lighttable}
@@ -336,7 +336,7 @@ lua scripts installer
 
 : Управление выделением.
 
-[actions on selection](#mod-actions-on-selection)
+[actions on selection]({% link _matters/tr/darktable/manual/module-reference/utility-modules/lighttable/actions-on-selection.md %})
 
 : Групповые действия над выбранными снимками.
 

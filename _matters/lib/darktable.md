@@ -26,7 +26,7 @@ last_modified_at: 2025-10-26
   + [Итог]({%- link _matters/lib/darktable/pg/0_intro.md -%} #done)
 
   + [Справочная информация]({%- link _matters/lib/darktable/pg/0_intro.md -%} #refs)
-    + [Модуль actions on selection]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-actions-on-selection)
+    + [Модуль actions on selection]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/lighttable/actions-on-selection.md -%})
     + [Модуль collections]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-collections)
     + [Модуль export]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-export)
     + [Модуль filmstrip]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-filmstrip)

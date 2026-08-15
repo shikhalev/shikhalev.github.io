@@ -46,7 +46,7 @@ redirect_from: pages/books/darktable/pg/
 
 + **[Справочная информация]({%- link _matters/lib/darktable/pg/0_intro.md -%} #refs)**
 
-  + [Модуль actions on selection (действия над выбранными)]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-actions-on-selection)
+  + [Модуль actions on selection (действия над выбранными)]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/lighttable/actions-on-selection.md -%})
 
   + [Модуль collections (коллекции)]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-collections)
 

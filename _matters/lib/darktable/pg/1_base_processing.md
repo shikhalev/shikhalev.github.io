@@ -1802,7 +1802,7 @@ midtone range
 
 Модуль включен по умолчанию, и ориентация (поворот) автоматически устанавливается на основе EXIF-дан­ных изображения.
 
-Ориентацию также можно задать с помощью модуля [actions on selection]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-actions-on-selection)
+Ориентацию также можно задать с помощью модуля [actions on selection]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/lighttable/actions-on-selection.md -%})
 (действия над выбранными) в представлении *[lighttable](https://docs.darktable.org/usermanual/development/en/lighttable/)* (световой стол).
 
 **Примечание:** Область кадрирования модуля [_crop_](#mod-crop) (кадрирование) сохраняется при изменении ориентации.

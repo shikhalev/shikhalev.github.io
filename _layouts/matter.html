@@ -7,7 +7,7 @@ sharing: false
 {{ content }}
 
 {% if page.children and page.children.size > 0 %}
-  <h2>Содержание</h2>
+  <h2 id="matter-contents">Содержание</h2>
   {% assign toc_depth = page.toc_depth | default: 6 %}
   {% include matter/subs.liquid matter=page depth=toc_depth start=true %}
 {% endif %}
