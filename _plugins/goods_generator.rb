@@ -68,6 +68,7 @@ class DataMaker
     @goods = []
     @kinds = {}
     add_design @page
+    @page.data['date'] = @page.data['last_modified_at'] = @goods.map { it['date'] }.select { it }.max
     @goods.each do |good|
       source_image = good['img']
       unless source_image.nil? || source_image.start_with?('/')
@@ -145,6 +146,7 @@ class DataMaker
     @goods = []
     @designs = {}
     add_kind @page
+    @page.data['date'] = @page.data['last_modified_at'] = @goods.map { it['date'] }.select { it }.max
     @goods.each do |good|
       source_image = good['img']
       unless source_image.nil? || source_image.start_with?('/')
