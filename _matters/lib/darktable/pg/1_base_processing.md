@@ -1,6 +1,6 @@
 ---
 title: "Глава 1: Базовая обработка"
-last_modified_at: 2025-10-26
+date: 2025-10-26
 redirect_from: pages/books/darktable/pg/1_base_processing.html
 ---
 
@@ -620,7 +620,7 @@ display encoding
 
 -----
 
-Здесь будет уместно вспомнить, что модуль **[export]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-export)** доступен и в режиме
+Здесь будет уместно вспомнить, что модуль **[export]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/shared/export.md -%})** доступен и в режиме
 *darkroom*, т.е. если нам нужно экспортировать один снимок, над которым мы сейчас работаем, переходить в *lighttable* необязательно.
 
 {:#done}
@@ -1862,7 +1862,7 @@ darktable поставляется с предустановленными пр�
 это каталог установки darktable, а `$HOME` — ваш домашний каталог). Обратите внимание, что эти каталоги `color/out` не создаются
 при установке darktable; если вам нужно их использовать, вы должны создать их самостоятельно.
 
-Выходной цветовой профиль также может быть определён в модуле [export]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-export).
+Выходной цветовой профиль также может быть определён в модуле [export]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/shared/export.md -%}).
 
 <div class="unbreakable">
 
@@ -3122,4 +3122,4 @@ scale for graph (масштаб графика)
 [start]: {% link _matters/lib/darktable/pg/0_intro.md %}#start
 [lighttable]: {% link _matters/lib/darktable/pg/0_intro.md %}#lighttable
 [image-information]: {% link _matters/lib/darktable/pg/0_intro.md %}#mod-image-information
-[export]: {% link _matters/lib/darktable/pg/0_intro.md %}#mod-export
+[export]: {% link _matters/tr/darktable/manual/module-reference/utility-modules/shared/export.md %}

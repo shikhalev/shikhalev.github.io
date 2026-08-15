@@ -1,7 +1,7 @@
 ---
 title: darktable
 icon: camera
-last_modified_at: 2025-10-26
+date: 2025-10-26
 ---
 
 <section class="booktoc">
@@ -27,9 +27,9 @@ last_modified_at: 2025-10-26
 
   + [Справочная информация]({%- link _matters/lib/darktable/pg/0_intro.md -%} #refs)
     + [Модуль actions on selection]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/lighttable/actions-on-selection.md -%})
-    + [Модуль collections]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-collections)
-    + [Модуль export]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-export)
-    + [Модуль filmstrip]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-filmstrip)
+    + [Модуль collections]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/shared/collections.md -%})
+    + [Модуль export]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/shared/export.md -%})
+    + [Модуль filmstrip]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/shared/filmstrip.md -%})
     + [Модуль image information]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-image-information)
     + [Модуль import]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-import)
     + [Модуль selection]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-selection)

@@ -2,7 +2,7 @@
 title: Практическое руководство по darktable
 short: Практическое руководство
 icon: book-open
-last_modified_at: 2025-10-26
+date: 2025-10-26
 redirect_from: pages/books/darktable/pg/
 ---
 
@@ -48,11 +48,11 @@ redirect_from: pages/books/darktable/pg/
 
   + [Модуль actions on selection (действия над выбранными)]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/lighttable/actions-on-selection.md -%})
 
-  + [Модуль collections (коллекции)]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-collections)
+  + [Модуль collections (коллекции)]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/shared/collections.md -%})
 
-  + [Модуль export (экспорт)]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-export)
+  + [Модуль export (экспорт)]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/shared/export.md -%})
 
-  + [Модуль filmstrip (лента миниатюр)]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-filmstrip)
+  + [Модуль filmstrip (лента миниатюр)]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/shared/filmstrip.md -%})
 
   + [Модуль image information (информация об изображении)]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-image-information)
 
