@@ -8,4 +8,5 @@ children:
   - _matters/tr/darktable/manual/module-reference/utility-modules/shared/export.md
   - _matters/tr/darktable/manual/module-reference/utility-modules/shared/filmstrip.md
   - _matters/tr/darktable/manual/module-reference/utility-modules/shared/image-information.md
+  - _matters/tr/darktable/manual/module-reference/utility-modules/shared/scopes.md
 ---

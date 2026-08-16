@@ -405,3 +405,7 @@ figure.__is_images_slide_figure {
     column-fill: balance;
   }
 }
+
+.module .unbreakable {
+  break-inside: avoid-column;
+}

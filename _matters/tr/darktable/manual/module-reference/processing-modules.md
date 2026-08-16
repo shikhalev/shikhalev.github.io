@@ -11,4 +11,10 @@ children:
   - _matters/tr/darktable/manual/module-reference/processing-modules/highlight-reconstruction.md
   - _matters/tr/darktable/manual/module-reference/processing-modules/input-color-profile.md
   - _matters/tr/darktable/manual/module-reference/processing-modules/lens-correction.md
+  - _matters/tr/darktable/manual/module-reference/processing-modules/local-contrast.md
+  - _matters/tr/darktable/manual/module-reference/processing-modules/orientation.md
+  - _matters/tr/darktable/manual/module-reference/processing-modules/output-color-profile.md
+  - _matters/tr/darktable/manual/module-reference/processing-modules/rgb-curve.md
+  - _matters/tr/darktable/manual/module-reference/processing-modules/rgb-levels.md
+  - _matters/tr/darktable/manual/module-reference/processing-modules/rotate-perspective.md
 ---
