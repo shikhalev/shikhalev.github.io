@@ -2824,7 +2824,7 @@ auto apply this preset to matching images
   Диалог на скриншоте выше задает следующие правила: если название объектива совпадает, диафрагма больше или равна f/8, а фокусное расстояние
   находится в диапазоне от 24 до 35 мм, пресет будет автоматически применен.
 
-  _Модуль [image information]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-image-information) (информация об изображении)
+  _Модуль [image information]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/shared/image-information.md -%}) (информация об изображении)
   отображает модель камеры и название объектива для каждого изображения. Ис­поль­зуй­те его, чтобы убедиться в правильности написания._
 
 </div>
@@ -3121,5 +3121,5 @@ scale for graph (масштаб графика)
 [xmp-files]: {% link _matters/lib/darktable/pg/0_intro.md %}#xmp-files
 [start]: {% link _matters/lib/darktable/pg/0_intro.md %}#start
 [lighttable]: {% link _matters/lib/darktable/pg/0_intro.md %}#lighttable
-[image-information]: {% link _matters/lib/darktable/pg/0_intro.md %}#mod-image-information
+[image-information]: {% link _matters/tr/darktable/manual/module-reference/utility-modules/shared/image-information.md %}
 [export]: {% link _matters/tr/darktable/manual/module-reference/utility-modules/shared/export.md %}

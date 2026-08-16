@@ -44,24 +44,6 @@ redirect_from: pages/books/darktable/pg/
 
 + **[Итог]({%- link _matters/lib/darktable/pg/0_intro.md -%} #done)**
 
-+ **[Справочная информация]({%- link _matters/lib/darktable/pg/0_intro.md -%} #refs)**
-
-  + [Модуль actions on selection (действия над выбранными)]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/lighttable/actions-on-selection.md -%})
-
-  + [Модуль collections (коллекции)]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/shared/collections.md -%})
-
-  + [Модуль export (экспорт)]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/shared/export.md -%})
-
-  + [Модуль filmstrip (лента миниатюр)]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/shared/filmstrip.md -%})
-
-  + [Модуль image information (информация об изображении)]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-image-information)
-
-  + [Модуль import (импорт)]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-import)
-
-  + [Модуль selection (выбор)]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-selection)
-
-  + [Модуль timeline (таймлайн)]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-timeline)
-
 </section>
 
 <section class="booktoc">

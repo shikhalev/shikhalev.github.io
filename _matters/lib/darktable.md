@@ -25,16 +25,6 @@ date: 2025-10-26
 
   + [Итог]({%- link _matters/lib/darktable/pg/0_intro.md -%} #done)
 
-  + [Справочная информация]({%- link _matters/lib/darktable/pg/0_intro.md -%} #refs)
-    + [Модуль actions on selection]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/lighttable/actions-on-selection.md -%})
-    + [Модуль collections]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/shared/collections.md -%})
-    + [Модуль export]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/shared/export.md -%})
-    + [Модуль filmstrip]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/shared/filmstrip.md -%})
-    + [Модуль image information]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-image-information)
-    + [Модуль import]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-import)
-    + [Модуль selection]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-selection)
-    + [Модуль timeline]({%- link _matters/lib/darktable/pg/0_intro.md -%} #mod-timeline)
-
 + **[Глава 1: Базовая обработка]({%- link _matters/lib/darktable/pg/1_base_processing.md -%})**
 
   + [О чем эта глава?]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #about)
