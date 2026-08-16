@@ -5,6 +5,7 @@ icon: book-open
 id: user-manual
 children:
   - _matters/tr/darktable/manual/overview.md
+  - _matters/tr/darktable/manual/darkroom.md
   - _matters/tr/darktable/manual/module-reference.md
 date: 2026-08-11T08:30:00+0500
 source: https://darktable-org.github.io/dtdocs/en/

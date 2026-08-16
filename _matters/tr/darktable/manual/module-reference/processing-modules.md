@@ -17,4 +17,6 @@ children:
   - _matters/tr/darktable/manual/module-reference/processing-modules/rgb-curve.md
   - _matters/tr/darktable/manual/module-reference/processing-modules/rgb-levels.md
   - _matters/tr/darktable/manual/module-reference/processing-modules/rotate-perspective.md
+  - _matters/tr/darktable/manual/module-reference/processing-modules/tone-curve.md
+  - _matters/tr/darktable/manual/module-reference/processing-modules/white-balance.md
 ---
