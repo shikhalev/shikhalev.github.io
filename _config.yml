@@ -143,7 +143,7 @@ defaults:
   - scope:
       path: "_matters"
     values:
-      layout: book/page
+      layout: matter
   - scope:
       path: "_matters/lib/darktable"
     values:

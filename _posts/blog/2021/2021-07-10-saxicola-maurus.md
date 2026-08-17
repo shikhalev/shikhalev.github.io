@@ -32,7 +32,7 @@ is_images:
 считался подвидом просто [черноголового чекана *(Saxicola rubicola)*][wiki-old], от которого он крайне слабо отличается. А еще до сегодняшнего
 дня в википедии его не было в [списке чеканов][saxi] — я, раз уж начал тут писать и бегать по ссылкам, наконец-то не поленился и внес.
 
-[walk]: {% include link.liquid post="_posts/blog/2021/2021-06-17-walk.md" sub="невстреченные" md_ref=true %}
+[walk]: {% include link.liquid post="_posts/blog/2021/2021-06-17-walk.md" sub="unfinded" md_ref=true %}
 [nat]: https://www.inaturalist.org/observations/86365551 "Наблюдение 2021.07.10"
 [wiki]: https://ru.wikipedia.org/wiki/Сибирский_черноголовый_чекан
 [wiki-old]: https://ru.wikipedia.org/wiki/Черноголовый_чекан

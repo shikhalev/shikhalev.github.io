@@ -35,4 +35,4 @@ group :jekyll_plugins do
   gem 'jekyll-is-images', '~> 0.8.0.14'
 end
 
-gem 'jekyll-theme-shikhalev', '>= 0.1.0.18'
+gem 'jekyll-theme-shikhalev', '>= 0.1.0.20'
