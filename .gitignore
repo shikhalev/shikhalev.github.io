@@ -7,3 +7,4 @@ vendor
 .bundle/
 tmp/
 .is-images-cache/
+*_struct.md
