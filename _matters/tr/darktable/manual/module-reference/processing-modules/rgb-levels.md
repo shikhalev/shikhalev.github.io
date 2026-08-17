@@ -25,12 +25,12 @@ source: https://docs.darktable.org/usermanual/development/en/module-reference/pr
 Перемещение средней полосы изменяет средние тона. Переместите её влево, чтобы изображение стало светлее, и вправо — чтобы затемнить.
 Это часто называется изменением гаммы изображения.
 
-Доступны три [пипетки](#doc-pickers) для выборки черной, белой и серой точек с изображения.
+Доступны три [пипетки]({%- link _matters/tr/darktable/manual/darkroom/processing-modules/module-controls.md -%} #doc-pickers) для выборки черной, белой и серой точек с изображения.
 
 ---
 
 **Примечание:** При определённых условиях, особенно при сильно насыщенных источниках синего света, модуль _levels_ может создавать
-артефакты в виде чёрных пикселей. Смотрите параметр «gamut clipping» модуля [_input color profile_](#mod-input-color-profile)
+артефакты в виде чёрных пикселей. Смотрите параметр «gamut clipping» модуля [_input color profile_]({% link _matters/tr/darktable/manual/module-reference/processing-modules/input-color-profile.md %})
 для информации о том, как снизить влияние этой проблемы.
 
 ---
@@ -45,7 +45,7 @@ mode
 
 auto
 
-: Автоматически настраивает чёрную и белую точки и ставит серую точку ровно посередине между ними. Используйте [пипетку](#doc-pickers)
+: Автоматически настраивает чёрную и белую точки и ставит серую точку ровно посередине между ними. Используйте [пипетку]({%- link _matters/tr/darktable/manual/darkroom/processing-modules/module-controls.md -%} #doc-pickers)
   для автоматической настройки на основании выбранного региона изображения.
 
 preserve colors

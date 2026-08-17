@@ -32,7 +32,7 @@ source: https://docs.darktable.org/usermanual/development/en/module-reference/pr
 по умолчанию для новых изображений, если в [pre­fe­ren­ces > pro­ces­sing > auto-ap­ply pixel workflow
 de­fa­ults](https://docs.darktable.org/usermanual/development/en/preferences-settings/processing/) выбрано значение «scene-referred»
 (filmic или sigmoid). Некоторые базовые настройки все еще требуются (и применяются автоматически) в модуле *white ba­lan­ce*, чтобы
-модуль [_demosaic_](#mod-demosaic) (демозаика) работал корректно.
+модуль [_demosaic_]({% link _matters/tr/darktable/manual/module-reference/processing-modules/demosaic.md %}) (демозаика) работал корректно.
 
 ---
 

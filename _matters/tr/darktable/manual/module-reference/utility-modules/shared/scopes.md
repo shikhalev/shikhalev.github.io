@@ -24,7 +24,7 @@ source: https://docs.darktable.org/usermanual/development/en/module-reference/ut
 of the scopes module](https://docs.darktable.org/usermanual/development/en/preferences-settings/miscellaneous/).
 
 По причинам производительности анализаторы используют данные предварительного просмотра снимка (изображение, отображаемое в модуле
-[na­vi­ga­ti­on](#mod-navigation)), а не изображение высокого качества, показанное в центральной рабочей области. Предпросмотр рассчитывается
+[na­vi­ga­ti­on]({% link _matters/tr/darktable/manual/module-reference/utility-modules/darkroom/navigation.md %})), а не изображение высокого качества, показанное в центральной рабочей области. Предпросмотр рассчитывается
 в более низком разрешении и может использовать упрощённые методы, обходящие более ресурсоёмкие этапы обработки. Поэтому отображение
 может не точно передавать мелкие детали снимка и в некоторых аспектах отличаться от окончательно обработанного изображения.
 

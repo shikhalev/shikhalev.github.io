@@ -18,7 +18,7 @@ source: https://docs.darktable.org/usermanual/development/en/module-reference/pr
 Ориентацию также можно задать с помощью модуля [actions on selection]({%- link _matters/tr/darktable/manual/module-reference/utility-modules/lighttable/actions-on-selection.md -%})
 (действия над выбранными) в представлении *[lighttable](https://docs.darktable.org/usermanual/development/en/lighttable/)* (световой стол).
 
-**Примечание:** Область кадрирования модуля [_crop_](#mod-crop) (кадрирование) сохраняется при изменении ориентации.
+**Примечание:** Область кадрирования модуля [_crop_]({% link _matters/tr/darktable/manual/module-reference/processing-modules/crop.md %}) (кадрирование) сохраняется при изменении ориентации.
 
 <div class="unbreakable">
 

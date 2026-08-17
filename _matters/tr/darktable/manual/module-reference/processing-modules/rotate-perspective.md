@@ -140,7 +140,7 @@ source: https://docs.darktable.org/usermanual/development/en/module-reference/pr
 rotation
 
 : Управляет поворотом изображения вокруг его центра для коррекции наклонного горизонта. Чтобы повернуть более чем на мягкий предел
-  в де­сять градусов, щелкните правой кнопкой мыши и введите желаемое значение до 180 гра­ду­сов (см. [mo­du­le cont­rols](#doc-module-controls)).
+  в де­сять градусов, щелкните правой кнопкой мыши и введите желаемое значение до 180 гра­ду­сов (см. [mo­du­le cont­rols]({% link _matters/tr/darktable/manual/darkroom/processing-modules/module-controls.md %})).
 
 automatic cropping
 

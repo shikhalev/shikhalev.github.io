@@ -102,7 +102,7 @@ target geometry
 
 : В дополнение к исправлению дефектов объектива этот модуль может изменять тип проекции вашего изображения. Установите этот комбобокс
   в желаемый тип проекции (например, «rectilinear», «fisheye», «pa­no­ra­mic», «equirectangular», «orthographic», «stereographic», «equ­i­so­lid angle»,
-  «Thoby fisheye»). Для коррекции соотношения сторон анаморфотного объектива используйте модуль [_rotate and perspective_](#mod-rotate-perspective).
+  «Thoby fisheye»). Для коррекции соотношения сторон анаморфотного объектива используйте модуль [_rotate and perspective_]({% link _matters/tr/darktable/manual/module-reference/processing-modules/rotate-perspective.md %}).
 
 scale
 

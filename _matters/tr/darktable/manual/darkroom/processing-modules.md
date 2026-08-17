@@ -5,4 +5,6 @@ source: https://docs.darktable.org/usermanual/development/en/darkroom/processing
 children:
   - _matters/tr/darktable/manual/darkroom/processing-modules/module-header.md
   - _matters/tr/darktable/manual/darkroom/processing-modules/presets.md
+  - _matters/tr/darktable/manual/darkroom/processing-modules/module-controls.md
+  - _matters/tr/darktable/manual/darkroom/processing-modules/curves.md
 ---

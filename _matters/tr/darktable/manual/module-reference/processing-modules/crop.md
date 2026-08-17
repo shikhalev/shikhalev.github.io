@@ -17,7 +17,7 @@ source: https://docs.darktable.org/usermanual/development/en/module-reference/pr
 [_crop and rotate_](https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/crop-rotate/) (кадрирование и поворот),
 что позволяет сохранять доступ к полному изображению для исходных пятен в модуле
 [_retouch_](https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/retouch/) (ретушь).
-Для достижения наилучших результатов рекомендуется использовать модуль [_rotate and perspective_](#mod-rotate-perspective) (поворот и перспектива)
+Для достижения наилучших результатов рекомендуется использовать модуль [_rotate and perspective_]({% link _matters/tr/darktable/manual/module-reference/processing-modules/rotate-perspective.md %}) (поворот и перспектива)
 для выполнения поворота и коррекции перспективы (при необходимости), а затем выполнять финальное творческое кадрирование с помощью этого модуля.
 
 Когда модуль находится в фокусе, отображается полное некадрированное изображение с наложенными рамками кадрирования и опциональными направляющими линиями.
@@ -66,7 +66,7 @@ aspect
 **Примечание:** При изменении размера изображения в режиме *freehand* вы можете сохранить текущее соотношение сторон,
 удерживая `Shift` при перетаскивании любых элементов управления размером.
 
-**Примечание 2:** Область кадрирования сохраняется при изменении модуля [_orientation_](#mod-orientation) (ориентация).
+**Примечание 2:** Область кадрирования сохраняется при изменении модуля [_orientation_]({% link _matters/tr/darktable/manual/module-reference/processing-modules/orientation.md %}) (ориентация).
 
 ---
 

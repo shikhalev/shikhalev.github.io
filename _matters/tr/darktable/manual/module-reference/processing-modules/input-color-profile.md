@@ -28,7 +28,7 @@ source: https://docs.darktable.org/usermanual/development/en/module-reference/pr
 влияет выбранный [метод рендеринга](https://docs.darktable.org/usermanual/development/en/special-topics/color-management/rendering-intent/).
 
 Обратите внимание, что итоговый цветовой профиль, который будет использоваться при экспорте изображения, контролируется модулем
-[_выходного цве­то­во­го профиля_](#mod-output-color-profile).
+[_выходного цве­то­во­го профиля_]({% link _matters/tr/darktable/manual/module-reference/processing-modules/output-color-profile.md %}).
 
 ## Элементы управления модуля
 

@@ -88,54 +88,6 @@ redirect_from: pages/books/darktable/pg/
 
 + **[Итог]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #done)**
 
-+ **[Справочная информация]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #refs)**
-
-  + [Модуль base curve (базовая кривая)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #mod-base-curve)
-
-  + [Модуль crop (кадрирование)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #mod-crop)
-
-  + [Модуль demosaic (демозаика/дебайеризация)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #mod-demosaic)
-
-  + [Модуль exposure (экспозиция)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #mod-exposure)
-
-  + [Модуль highlight reconstruction (восстановление пересветов)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #mod-highlight-reconstruction)
-
-  + [Модуль history (история изменений)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #mod-history)
-
-  + [Модуль input color profile (входной цветовой профиль)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #mod-input-color-profile)
-
-  + [Модуль lens correction (исправление искажений объектива)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #mod-lens-correction)
-
-  + [Модуль local contrast (локальный контраст)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #mod-local-contrast)
-
-  + [Модуль navigation (навигация)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #mod-navigation)
-
-  + [Модуль orientation (ориентация)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #mod-orientation)
-
-  + [Модуль output color profile (выходной цветовой профиль)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #mod-output-color-profile)
-
-  + [Модуль rgb curve (RGB-кривая)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #mod-rgb-curve)
-
-  + [Модуль rgb levels (RGB-уровни)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #mod-rgb-levels)
-
-  + [Модуль rotate and perspective (поворот и перспектива)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #mod-rotate-perspective)
-
-  + [Модуль scopes (приборы)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #mod-scopes)
-    + [histogram (гистограмма)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #histogram)
-    + [waveform (осциллограмма)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #waveform)
-    + [RGB parade (парад каналов RGB)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #rgb-parade)
-    + [vectorscope (вектороскоп)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #vectorscope)
-
-  + [Модуль tone curve (тоновая кривая)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #mod-tone-curve)
-
-  + [Модуль white balance (баланс белого)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #mod-white-balance)
-
-  + [Устройство модулей обработки (I)]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #doc-processing-modules)
-    + [Заголовок модуля]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #doc-module-header)
-    + [Пресеты]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #doc-presets)
-    + [Элементы управления модулями]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #doc-module-controls)
-    + [Кривые]({%- link _matters/lib/darktable/pg/1_base_processing.md -%} #doc-curves)
-
 </section>
 
 <section class="booktoc">
