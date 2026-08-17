@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+  <link rel="stylesheet" href="/assets/local.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Модуль lens correction (исправление искажений объектива) | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Модуль lens correction (исправление искажений объектива)" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="docs.darktable.org/usermanual/development/en/module-reference/processing-modules/lens-correction/ v4.6 Автоматически корректирует (или имитирует) искажения объектива, поперечные хроматические аберрации (TCA) и виньетирование. Вы можете выбрать использование данных коррекции объектива, встроенных в ваш raw-файл (если они присутствуют и поддерживаются), или данных коррекции, предоставленных внешней библиотекой Lensfun1. Также предоставляются дополнительные элементы управления для ручной коррекции виньетирования на случай, если профили для вашего объектива недостаточны или отсутствуют. Обратите внимание, что если в этом модуле включена коррекция TCA, использование модуля raw chromatic aberrations может вызвать артефакты из-за чрезмерной коррекции. Данные коррекции Lensfun Если библиотека Lensfun на вашей системе не имеет профиля коррекции для автоматически определённой комбинации камеры и объектива, элементы управления для…" />
+<meta name="twitter:description" property="og:description" content="docs.darktable.org/usermanual/development/en/module-reference/processing-modules/lens-correction/ v4.6 Автоматически корректирует (или имитирует) искажения объектива, поперечные хроматические аберрации (TCA) и виньетирование. Вы можете выбрать использование данных коррекции объектива, встроенных в ваш raw-файл (если они присутствуют и поддерживаются), или данных коррекции, предоставленных внешней библиотекой Lensfun1. Также предоставляются дополнительные элементы управления для ручной коррекции виньетирования на случай, если профили для вашего объектива недостаточны или отсутствуют. Обратите внимание, что если в этом модуле включена коррекция TCA, использование модуля raw chromatic aberrations может вызвать артефакты из-за чрезмерной коррекции. Данные коррекции Lensfun Если библиотека Lensfun на вашей системе не имеет профиля коррекции для автоматически определённой комбинации камеры и объектива, элементы управления для…" />
+<link rel="canonical" href="https://shikhalev.github.io/tr/darktable/manual/module-reference/processing-modules/lens-correction/" />
+<meta property="og:url" content="https://shikhalev.github.io/tr/darktable/manual/module-reference/processing-modules/lens-correction/" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/6c/67/ce4t972f.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/6c/67/ce4t972f.webp" />
+<meta name="twitter:title" content="Модуль lens correction (исправление искажений объектива)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2026-08-16T00:00:00+00:00","datePublished":"2026-08-16T00:00:00+00:00","description":"docs.darktable.org/usermanual/development/en/module-reference/processing-modules/lens-correction/ v4.6 Автоматически корректирует (или имитирует) искажения объектива, поперечные хроматические аберрации (TCA) и виньетирование. Вы можете выбрать использование данных коррекции объектива, встроенных в ваш raw-файл (если они присутствуют и поддерживаются), или данных коррекции, предоставленных внешней библиотекой Lensfun1. Также предоставляются дополнительные элементы управления для ручной коррекции виньетирования на случай, если профили для вашего объектива недостаточны или отсутствуют. Обратите внимание, что если в этом модуле включена коррекция TCA, использование модуля raw chromatic aberrations может вызвать артефакты из-за чрезмерной коррекции. Данные коррекции Lensfun Если библиотека Lensfun на вашей системе не имеет профиля коррекции для автоматически определённой комбинации камеры и объектива, элементы управления для…","headline":"Модуль lens correction (исправление искажений объектива)","image":"https://shikhalev.github.io/img/6c/67/ce4t972f.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tr/darktable/manual/module-reference/processing-modules/lens-correction/"},"url":"https://shikhalev.github.io/tr/darktable/manual/module-reference/processing-modules/lens-correction/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "u2gczedmo7");
+</script>
+
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.14.css" />
+<script type="module" src="/js/is-images-0.8.0.14.js"></script>
+<!-- end of jekyll-is-images stuff -->
+
+</head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.*</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-credit-card" href="/merch/">Мерч</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-folder-open-black" href="/tr/" title="Переводы">Переводы</a>​<a class="fa-icon-camera" href="/tr/darktable/" title="darktable">darktable</a>​<a class="fa-icon-book-open" href="/tr/darktable/manual/" title="Darktable: Руководство пользователя">Руководство</a>​<a class="fa-icon-folder-open-black" href="/tr/darktable/manual/module-reference/" title="Справочник модулей">Модули</a>​<a class="fa-icon-folder-open-black" href="/tr/darktable/manual/module-reference/processing-modules/" title="Модули обработки">Обработка</a></aside>
+<article class="layout-matter"><header class="page-header"><h1 class="title-matter" itemprop="name headline">Модуль lens correction (исправление искажений объектива)</h1></header><ul class="origlink">
+  <li>
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/lens-correction/">docs.darktable.org/usermanual/development/en/module-reference/processing-modules/lens-correction/</a> v4.6</li>
+</ul>
+
+<section class="module">
+
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Модуль «lens correction»" class="__is_images_wrapper"><img src="/img/8b/90/4617c452.webp" alt="Модуль «lens correction»" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:249/326;" data-scale="1"></span>
+</figure>
+  <p>Автоматически корректирует (или имитирует) искажения объектива, поперечные хроматические аберрации (TCA) и виньетирование.</p>
+
+  <p>Вы можете выбрать использование данных коррекции объектива, встроенных в ваш raw-файл (если они присутствуют и поддерживаются),
+или данных коррекции, предоставленных внешней библиотекой <strong><a href="https://lensfun.github.io/">Lensfun</a></strong><sup id="fnref:lensfun"><a href="#fn:lensfun" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>.</p>
+
+  <p>Также предоставляются дополнительные элементы управления для ручной коррекции виньетирования на случай, если профили
+для вашего объектива недостаточны или отсутствуют.</p>
+
+  <p>Обратите внимание, что если в этом модуле включена коррекция TCA, использование модуля
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/raw-chromatic-aberrations/"><em>raw chromatic aberrations</em></a>
+может вызвать артефакты из-за чрезмерной коррекции.</p>
+
+  <h2 id="lensfun">
+<a class="anchor" href="#lensfun" aria-hidden="true"><span class="octicon octicon-link"></span></a>Данные коррекции Lensfun</h2>
+
+  <p>Если библиотека Lensfun на вашей системе не имеет профиля коррекции для автоматически определённой комбинации камеры и объектива,
+элементы управления для трёх фотометрических параметров (ниже) заменяются предупреждающим сообщением. Вы можете попытаться найти
+подходящий профиль самостоятельно, выполнив поиск в меню.</p>
+
+  <p>Если ваш объектив присутствует в списке, но не был правильно определён, может потребоваться некоторая настройка в программе
+<strong><a href="https://exiv2.org/">exiv2</a></strong><sup id="fnref:exiv2"><a href="#fn:exiv2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>
+(подробности см. в <a href="https://dev.exiv2.org/boards/3/topics/2854">этом посте</a>). Обратите внимание, что после таких изменений может
+потребоваться повторный импорт изображений, так как имя объектива извлекается в процессе импорта.</p>
+
+  <p>По умолчанию отображаются и автоматически определяются только объективы, непосредственно совместимые с байонетом вашей камеры.
+Если вы используете объективы для другого байонета с адаптером (например, объектив Four Thirds, адаптированный для корпуса
+Micro Four Thirds), вам нужно запустить инструмент <a href="https://lensfun.github.io/manual/v0.3.2/lensfun-add-adapter.html"><code class="language-plaintext highlighter-rouge">lensfun-add-adapter</code></a>,
+чтобы включить эти объективы.</p>
+
+  <p>Если вы не можете найти свой объектив, проверьте, есть ли он в списке <a href="https://lensfun.github.io/lenslist/">поддерживаемых объективов</a>,
+и попробуйте запустить инструмент <a href="https://lensfun.github.io/manual/v0.3.2/lensfun-update-data.html"><code class="language-plaintext highlighter-rouge">lensfun-update-data</code></a>.
+Если подходящего профиля для вашего объектива всё ещё нет, пользователь darktable Торстен Бронгер предлагает
+<a href="https://www.darktable.org/2013/07/have-your-lens-calibrated/">услугу калибровки объектива</a>. Также вы можете посетить
+<a href="https://lensfun.github.io/lenslist/">проект Lensfun</a>, чтобы узнать, как создать собственный набор параметров коррекции.
+Не забудьте поделиться своим профилем с командой Lensfun!</p>
+
+  <h2 id="section">
+<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Элементы управления модуля</h2>
+
+  <dl>
+    <dt>correction method</dt>
+    <dd>
+      <p>Выберите метод коррекции искажений. В зависимости от выбранной опции будут предоставлены дополнительные элементы управления:</p>
+
+      <ul>
+        <li>
+          <p>«Lensfun database»: Использовать коррекции, предоставленные проектом Lensfun.</p>
+        </li>
+        <li>
+          <p>«embedded metadata»: Использовать коррекции, встроенные в ме­та­дан­ные raw-фай­ла. Доступно только при наличии поддерживаемых метаданных.</p>
+        </li>
+        <li>
+          <p>«only manual vignette»: Не выполнять автоматическую коррекцию, но предоставить ручную коррекцию виньетирования.</p>
+        </li>
+      </ul>
+    </dd>
+    <dt>corrections</dt>
+    <dd>
+      <p>Выберите, какие коррекции применять (искажения, TCA, виньетирование). Измените значение с установленного по умолчанию «all»,
+ес­ли ваша камера уже выполнила некоторые внутренние коррекции (например, виньетирование) или если вы планируете выполнять
+не­ко­то­рые коррекции в отдельной программе.</p>
+    </dd>
+    <dt>corrections done</dt>
+    <dd>
+      <p>Иногда для данной комбинации камеры и объектива поддерживаются только некоторые из возможных коррекций. В нижней части модуля
+появляется информационное сообщение, указывающее, какие кор­рек­ции были фактически применены к изображению.</p>
+    </dd>
+    <dt>show guides</dt>
+    <dd>
+      <p>Установите флажок в нижней части модуля, чтобы отображать направляющие оверлеи при активации модуля. Нажмите на значок справа,
+чтобы управлять свойствами направляющих. Подробности см. в раз­де­ле
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/darkroom/guides-overlays/">gui­des &amp; over­lays</a>.</p>
+    </dd>
+  </dl>
+
+  <h3 id="lensfun-1">
+<a class="anchor" href="#lensfun-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Элементы управления метода «Lensfun»</h3>
+
+  <p>Следующие элементы управления предоставляются только для метода коррекции «Lensfun»:</p>
+
+  <dl>
+    <dt>camera</dt>
+    <dd>
+      <p>Марка и модель камеры, определённые по EXIF-данным изображения. Вы можете вручную переопределить это и выбрать камеру
+из ие­рар­хи­чес­ко­го меню. Будут отображаться только объективы с про­фи­ля­ми коррекции, соответствующими выбранной камере.</p>
+    </dd>
+    <dt>lens</dt>
+    <dd>
+      <p>Марка и модель объектива, определённые по EXIF-данным изображения. Вы можете вручную переопределить это и выбрать объектив
+из ие­рар­хи­чес­ко­го меню. Это в основном требуется для чисто механических объективов, но также может понадобиться для сторонних объективов.</p>
+    </dd>
+    <dt>photometric parameters (focal length, aperture, focal distance)</dt>
+    <dd>
+      <p>Коррекции объектива зависят от определённых фотометрических параметров, считываемых из EXIF-данных изображения:
+фокусное расстояние (для искажений, TCA, виньетирования), диафрагма (для TCA, виньетирования) и фокусное расстояние (для виньетирования).
+Мно­гие камеры не записывают фокусное расстояние в свои EXIF-дан­ные, в этом случае вам нужно будет установить его вручную.</p>
+
+      <p>Вы можете вручную переопределить все автоматически выбранные параметры. Выберите одно из предопределённых значений в выпадающем меню или,
+оставив меню открытым, просто введите своё значение.</p>
+    </dd>
+    <dt>target geometry</dt>
+    <dd>
+      <p>В дополнение к исправлению дефектов объектива этот модуль может изменять тип проекции вашего изображения. Установите этот комбобокс
+в желаемый тип проекции (например, «rectilinear», «fisheye», «pa­no­ra­mic», «equirectangular», «orthographic», «stereographic», «equ­i­so­lid angle»,
+«Thoby fisheye»). Для коррекции соотношения сторон анаморфотного объектива используйте модуль <a href="/tr/darktable/manual/module-reference/processing-modules/rotate-perspective/"><em>rotate and perspective</em></a>.</p>
+    </dd>
+    <dt>scale</dt>
+    <dd>
+      <p>Настройте коэффициент масштабирования вашего изображения, чтобы избежать чёрных углов. Нажмите кнопку автоматического масштабирования
+(справа от слайдера), чтобы darktable автоматически нашёл оптимальное значение.</p>
+    </dd>
+    <dt>mode</dt>
+    <dd>
+      <p>По умолчанию поведение этого модуля — <em>корректировать</em> дефекты объектива. Переключите этот комбобокс на «distort», чтобы вместо этого
+<em>имитировать</em> дефекты/искажения конкретного объектива (обратный эффект).</p>
+    </dd>
+    <dt>TCA override</dt>
+    <dd>
+      <p>Установите этот флажок, чтобы переопределить автоматические параметры коррекции TCA. Это откроет параметры TCA red и TCA blue ниже.
+Снимите флажок, чтобы вернуться к автоматическим коррекциям.</p>
+    </dd>
+    <dt>TCA red; TCA blue</dt>
+    <dd>
+      <p>Переопределите параметры коррекции TCA. Вы также можете использовать эти слайдеры для ручной настройки параметров, если профиль
+объектива не включает коррекцию TCA. Обратите внимание на цветные швы на элементах с высококонтрастными краями и настройте параметры TCA,
+чтобы минимизировать эти швы.</p>
+    </dd>
+  </dl>
+
+  <hr>
+
+  <p><strong>Примечание:</strong> Коррекции TCA не будут применяться к изображениям, которые определены как монохромные (подробности см. в разделе
+<a href="https://docs.darktable.org/usermanual/development/en/guides-tutorials/monochrome/">Разработка монохромных изображений</a>).</p>
+
+  <p><strong>Примечание:</strong> Модуль коррекции объектива заполняет отсутствующие данные на краях, повторяя пиксели границ. При сильных коррекциях
+это заполнение может быть заметным (особенно на шумных изображениях). При не­о­б­хо­ди­мос­ти обрежьте изображение.</p>
+
+  <hr>
+
+  <h3 id="embeddedmetadata">
+<a class="anchor" href="#embeddedmetadata" aria-hidden="true"><span class="octicon octicon-link"></span></a>Элементы управления метода «embedded metadata»</h3>
+
+  <p>Следующие элементы управления предоставляются только для метода коррекции «embedded metadata»:</p>
+
+  <dl>
+    <dt>use latest algorithm</dt>
+    <dd>
+      <p>Этот элемент управления появляется для изображений, использующих более старую версию алгоритма коррекции «embedded me­ta­da­ta».
+Установите этот флажок, чтобы необратимо перейти на бо­лее новый алгоритм.</p>
+    </dd>
+  </dl>
+
+  <p>Следующие элементы управления могут быть открыты нажатием кнопки «fine-tuning»:</p>
+
+  <dl>
+    <dt>distortion</dt>
+    <dd>
+      <p>Точная настройка коррекции искажений / хроматических аберраций.</p>
+    </dd>
+    <dt>vignetting</dt>
+    <dd>
+      <p>Точная настройка коррекции виньетирования.</p>
+    </dd>
+    <dt>TCA red</dt>
+    <dd>
+      <p>Точная настройка коррекции красных хроматических аберраций.</p>
+    </dd>
+    <dt>TCA blue</dt>
+    <dd>
+      <p>Точная настройка коррекции синих хроматических аберраций.</p>
+    </dd>
+    <dt>image scale</dt>
+    <dd>
+      <p>Переопределение масштабирования изображения.</p>
+    </dd>
+  </dl>
+
+  <h3 id="section-1">
+<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ручная коррекция виньетирования</h3>
+
+  <p>Полная коррекция виньетирования недоступна или недостаточна для многих объективов, независимо от использования встроенных метаданных
+или базы данных Lensfun. Нажмите кнопку «manual vignetting correction», чтобы получить дополнительные настройки через следующие элементы управления:</p>
+
+  <dl>
+    <dt>strength</dt>
+    <dd>
+      <p>Общая сила эффекта.</p>
+    </dd>
+    <dt>radius</dt>
+    <dd>
+      <p>Размер области изображения, не изменяемой коррекцией.</p>
+    </dd>
+    <dt>steepness</dt>
+    <dd>
+      <p>Крутизна эффекта коррекции вне радиуса.</p>
+    </dd>
+  </dl>
+
+  <p>Эффект коррекции можно визуализировать, нажав на кнопку маски рядом со слайдером strength.</p>
+
+</section>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:lensfun">
+      <p><a href="https://lensfun.github.io/">https://lensfun.github.io/</a> <a href="#fnref:lensfun" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:exiv2">
+      <p><a href="https://exiv2.org/">https://exiv2.org/</a> <a href="#fnref:exiv2" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+
+
+
+<hr style="border: 2px; margin: 20px auto; width: 40%;">
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-matter">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#lensfun">Данные коррекции Lensfun</a></li>
+<li class="toc-entry toc-h2"><a href="#section">Элементы управления модуля</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#lensfun-1">Элементы управления метода «Lensfun»</a></li>
+<li class="toc-entry toc-h3"><a href="#embeddedmetadata">Элементы управления метода «embedded metadata»</a></li>
+<li class="toc-entry toc-h3"><a href="#section-1">Ручная коррекция виньетирования</a></li>
+</ul>
+</li>
+</ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file"><a href="/lib/darktable/pg/1_base_processing/" title="Глава 1: Базовая обработка">Глава 1: Базовая обработка</a></li></ul>
+    </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li><li><a href="/feed/pub.xml" title="Публикации в СМИ">Публикации</a></li><li><a href="/feed/photo.xml" title="Тексты о фотографии">О фото</a></li><li><a href="/feed/life.xml" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a></li><li><a href="/feed/text.xml" title="Попытки литературного творчества">Тексты</a></li><li><a href="/feed/best.xml" title="«Самому себе он наиболее симпатичен» ©">Избранное</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <!-- <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a> -->
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <!-- <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a> -->
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2026 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

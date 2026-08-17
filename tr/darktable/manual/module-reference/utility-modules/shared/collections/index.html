@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+  <link rel="stylesheet" href="/assets/local.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Модуль collections (коллекции) | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Модуль collections (коллекции)" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/collections/ (v4.6) &lt;p&gt;Фильтрует изображения, отображаемые в представлении «Световой стол» &lt;em&gt;(lighttable)&lt;/em&gt;, панели «Лента миниатюр» &lt;em&gt;(filmstrip)&lt;/em&gt; и представлении «Карта» &lt;em&gt;(map)&lt;/em&gt;, используя атрибуты изображений. Этот набор отфильтрованных изображений называется &lt;em&gt;коллекцией&lt;/em&gt;.&lt;/p&gt; &lt;p&gt;Импорт изображений в darktable сохраняет информацию о них (имя файла, путь, данные EXIF, данные из XMP-файлов и т.д.) в базе данных библиотеки darktable. Коллекция может быть определена путём применения правил фильтрации к этим атрибутам, создавая подмножество изображений для отображения в представлении «Световой стол» &lt;em&gt;(lighttable)&lt;/em&gt; и модуле «Лента миниатюр» &lt;em&gt;(filmstrip)&lt;/em&gt;.&lt;/p&gt; &lt;p&gt;Коллекция по умолчанию основана на атрибуте «катушка пленки» &lt;em&gt;(film roll)&lt;/em&gt; и отображает все изображения последней импортированной или выбранной катушки пленки.&lt;/p&gt; &lt;p&gt;Порядок сортировки коллекций (по…" />
+<meta name="twitter:description" property="og:description" content="docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/collections/ (v4.6) &lt;p&gt;Фильтрует изображения, отображаемые в представлении «Световой стол» &lt;em&gt;(lighttable)&lt;/em&gt;, панели «Лента миниатюр» &lt;em&gt;(filmstrip)&lt;/em&gt; и представлении «Карта» &lt;em&gt;(map)&lt;/em&gt;, используя атрибуты изображений. Этот набор отфильтрованных изображений называется &lt;em&gt;коллекцией&lt;/em&gt;.&lt;/p&gt; &lt;p&gt;Импорт изображений в darktable сохраняет информацию о них (имя файла, путь, данные EXIF, данные из XMP-файлов и т.д.) в базе данных библиотеки darktable. Коллекция может быть определена путём применения правил фильтрации к этим атрибутам, создавая подмножество изображений для отображения в представлении «Световой стол» &lt;em&gt;(lighttable)&lt;/em&gt; и модуле «Лента миниатюр» &lt;em&gt;(filmstrip)&lt;/em&gt;.&lt;/p&gt; &lt;p&gt;Коллекция по умолчанию основана на атрибуте «катушка пленки» &lt;em&gt;(film roll)&lt;/em&gt; и отображает все изображения последней импортированной или выбранной катушки пленки.&lt;/p&gt; &lt;p&gt;Порядок сортировки коллекций (по…" />
+<link rel="canonical" href="https://shikhalev.github.io/tr/darktable/manual/module-reference/utility-modules/shared/collections/" />
+<meta property="og:url" content="https://shikhalev.github.io/tr/darktable/manual/module-reference/utility-modules/shared/collections/" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/5t/bc/fto042eb.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-15T20:11:05+00:00" />
+<meta property="article:modified_time" content="2026-08-15T20:11:05+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/5t/bc/fto042eb.webp" />
+<meta name="twitter:title" content="Модуль collections (коллекции)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2026-08-15T20:11:05+00:00","datePublished":"2026-08-15T20:11:05+00:00","description":"docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/collections/ (v4.6) &lt;p&gt;Фильтрует изображения, отображаемые в представлении «Световой стол» &lt;em&gt;(lighttable)&lt;/em&gt;, панели «Лента миниатюр» &lt;em&gt;(filmstrip)&lt;/em&gt; и представлении «Карта» &lt;em&gt;(map)&lt;/em&gt;, используя атрибуты изображений. Этот набор отфильтрованных изображений называется &lt;em&gt;коллекцией&lt;/em&gt;.&lt;/p&gt; &lt;p&gt;Импорт изображений в darktable сохраняет информацию о них (имя файла, путь, данные EXIF, данные из XMP-файлов и т.д.) в базе данных библиотеки darktable. Коллекция может быть определена путём применения правил фильтрации к этим атрибутам, создавая подмножество изображений для отображения в представлении «Световой стол» &lt;em&gt;(lighttable)&lt;/em&gt; и модуле «Лента миниатюр» &lt;em&gt;(filmstrip)&lt;/em&gt;.&lt;/p&gt; &lt;p&gt;Коллекция по умолчанию основана на атрибуте «катушка пленки» &lt;em&gt;(film roll)&lt;/em&gt; и отображает все изображения последней импортированной или выбранной катушки пленки.&lt;/p&gt; &lt;p&gt;Порядок сортировки коллекций (по…","headline":"Модуль collections (коллекции)","image":"https://shikhalev.github.io/img/5t/bc/fto042eb.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tr/darktable/manual/module-reference/utility-modules/shared/collections/"},"url":"https://shikhalev.github.io/tr/darktable/manual/module-reference/utility-modules/shared/collections/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "u2gczedmo7");
+</script>
+
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.14.css" />
+<script type="module" src="/js/is-images-0.8.0.14.js"></script>
+<!-- end of jekyll-is-images stuff -->
+
+</head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.*</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-credit-card" href="/merch/">Мерч</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-folder-open-black" href="/tr/" title="Переводы">Переводы</a>​<a class="fa-icon-camera" href="/tr/darktable/" title="darktable">darktable</a>​<a class="fa-icon-book-open" href="/tr/darktable/manual/" title="Darktable: Руководство пользователя">Руководство</a>​<a class="fa-icon-folder-open-black" href="/tr/darktable/manual/module-reference/" title="Справочник модулей">Модули</a>​<a class="fa-icon-folder-open-black" href="/tr/darktable/manual/module-reference/utility-modules/" title="Служебные модули">Служебные</a>​<a class="fa-icon-folder-open-black" href="/tr/darktable/manual/module-reference/utility-modules/shared/" title="Общие модули">Общие</a></aside>
+<article class="layout-matter"><header class="page-header"><h1 class="title-matter" itemprop="name headline">Модуль collections (коллекции)</h1></header><ul class="origlink">
+  <li>
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/collections/">docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/collections/</a> (v4.6)</li>
+</ul>
+
+<section class="module">
+
+  <div class="unbreakable">
+
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:252px;" data-modes="grid,slides">
+<span title="Модуль «collections»" class="__is_images_wrapper"><img src="/img/5t/4e/eb7f62of.webp" alt="Модуль «collections»" class="__is_images_image __is_images_single" style="--is-images-width:252px;--is-images-aspect-ratio:252/305;" data-scale="1"></span>
+</figure>
+    <p>Фильтрует изображения, отображаемые в представлении «Световой стол» <em>(lighttable)</em>, панели «Лента миниатюр» <em>(filmstrip)</em>
+и представлении «Карта» <em>(map)</em>, используя атрибуты изображений. Этот набор отфильтрованных изображений называется <em>коллекцией</em>.</p>
+
+    <p>Импорт изображений в darktable сохраняет информацию о них (имя файла, путь, данные EXIF, данные из XMP-файлов и т.д.) в базе данных
+библиотеки darktable. Коллекция может быть определена путём применения правил фильтрации к этим атрибутам, создавая подмножество
+изображений для отображения в представлении «Световой стол» <em>(lighttable)</em> и модуле «Лента миниатюр» <em>(filmstrip)</em>.</p>
+
+    <p>Коллекция по умолчанию основана на атрибуте «катушка пленки» <em>(film roll)</em> и отображает все изображения последней импортированной
+или выбранной катушки пленки.</p>
+
+    <p>Порядок сортировки коллекций (по возрастанию/убыванию) можно переключить, нажав на иконку
+<span class="__is_images_wrapper"><img src="/img/0t/5e/5cft903c.webp" alt="" class="__is_images_image" style="--is-images-width:22px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <h2 id="filtering-attributes">
+<a class="anchor" href="#filtering-attributes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Атрибуты фильтрации</h2>
+
+    <p>Изображения в коллекции могут быть отфильтрованы по следующим атрибутам:</p>
+
+    <h3 id="section">
+<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Файлы</h3>
+
+    <dl>
+      <dt>film roll</dt>
+      <dd>
+        <p>Имя «катушки пленки» (каталога изображений), к которой принадлежит изображение. <code class="language-plaintext highlighter-rouge">Ctrl</code>+<code class="language-plaintext highlighter-rouge">Shift</code>+щелчок на катушке пленки переключает
+на соответствующую папку. Правый щелчок позволяет удалить содержимое катушки пленки из библиотеки darktable или указать darktable,
+что её расположение изменилось в файловой системе.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>folder</dt>
+      <dd>
+        <p>Каталог (путь к файлу), где находится файл изображения. Щелчок на каталоге включает содержимое этого каталога и всех подкаталогов
+ в коллекцию; <code class="language-plaintext highlighter-rouge">Shift</code>+щелчок — только изображения в выбранном каталоге; <code class="language-plaintext highlighter-rouge">Ctrl</code>+щелчок — только изображения из подкаталогов;
+ <code class="language-plaintext highlighter-rouge">Ctrl</code>+<code class="language-plaintext highlighter-rouge">Shift</code>+щелчок — переход к соответствующей катушке пленки. Правый щелчок на имени каталога позволяет удалить её содержимое
+ из библиотеки darktable или указать darktable, что её расположение изменилось в файловой системе.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>filename</dt>
+      <dd>
+        <p>Имя файла изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <h3 id="section-1">
+<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Метаданные</h3>
+
+    <dl>
+      <dt>tag</dt>
+      <dd>
+        <p>Любой тег, прикреплённый к изображению. Изображения без тегов группируются под записью «not tagged». При активации отображается
+иерархический список известных тегов.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>title</dt>
+      <dd>
+        <p>Поле метаданных «title» изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>description</dt>
+      <dd>
+        <p>Поле метаданных «description» изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>creator</dt>
+      <dd>
+        <p>Поле метаданных «creator» изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>publisher</dt>
+      <dd>
+        <p>Поле метаданных «publisher» изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>rights</dt>
+      <dd>
+        <p>Поле метаданных «rights» изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>notes</dt>
+      <dd>
+        <p>Поле метаданных «notes» изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>version name</dt>
+      <dd>
+        <p>Поле метаданных «version name» изображения.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>rating</dt>
+      <dd>
+        <p>Оценка изображения в звездах.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>color label</dt>
+      <dd>
+        <p>Любая цветовая метка, прикреплённая к изображению («red», «yellow», «green», «blue», «purple»).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>geotagging</dt>
+      <dd>
+        <p>Геолокация изображения (см. <a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/map/locations/">locations</a>).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <h3 id="section-2">
+<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Временные метки</h3>
+
+    <p>Для даты и даты со временем используются форматы <code class="language-plaintext highlighter-rouge">YYYY:MM:DD</code> и <code class="language-plaintext highlighter-rouge">YYYY:MM:DD hh:mm:ss</code> соответственно.</p>
+
+    <dl>
+      <dt>capture date</dt>
+      <dd>
+        <p>Дата съёмки фото.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>capture time</dt>
+      <dd>
+        <p>Дата и время съёмки фото.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>import time</dt>
+      <dd>
+        <p>Дата/время импорта файла.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>modification time</dt>
+      <dd>
+        <p>Дата/время последнего изменения файла.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>export time</dt>
+      <dd>
+        <p>Дата/время последнего экспорта файла.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>print time</dt>
+      <dd>
+        <p>Дата/время последней печати файла.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <h3 id="section-3">
+<a class="anchor" href="#section-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Детали съёмки</h3>
+
+    <dl>
+      <dt>camera</dt>
+      <dd>
+        <p>Запись EXIF, описывающая марку и модель камеры.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>lens</dt>
+      <dd>
+        <p>Описание объектива, полученное из данных EXIF.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>aperture</dt>
+      <dd>
+        <p>Диафрагма, полученная из данных EXIF.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>exposure</dt>
+      <dd>
+        <p>Выдержка, полученная из данных EXIF.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>exposure bias</dt>
+      <dd>
+        <p>Компенсация экспозиции, полученная из данных EXIF.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>focal length</dt>
+      <dd>
+        <p>Фокусное расстояние, полученное из данных EXIF.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>ISO</dt>
+      <dd>
+        <p>ISO, полученное из данных EXIF.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>aspect ratio</dt>
+      <dd>
+        <p>Соотношение сторон изображения, включая кадрирование в dark­table.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>white balance</dt>
+      <dd>
+        <p>Баланс белого, полученный из данных EXIF.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>flash</dt>
+      <dd>
+        <p>Использование вспышки, полученное из данных EXIF.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>exposure program</dt>
+      <dd>
+        <p>Программа экспозиции, полученная из данных EXIF.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>metering mode</dt>
+      <dd>
+        <p>Режим замера экспозиции, полученный из данных EXIF.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <h3 id="darktable">
+<a class="anchor" href="#darktable" aria-hidden="true"><span class="octicon octicon-link"></span></a>darktable</h3>
+
+    <dl>
+      <dt>group</dt>
+      <dd>
+        <p>Выбор конкретной группы изображений.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>local copy</dt>
+      <dd>
+        <p>Показ файлов, которые скопированы локально или нет.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>history</dt>
+      <dd>
+        <p>Выбор изображений, чьи стеки истории обработки были изменены или нет.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>module</dt>
+      <dd>
+        <p>Фильтр на основе модулей обработки, применённых к изображению.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>module order</dt>
+      <dd>
+        <p>Выбор изображений с порядком модулей «v5.0», «v3.0», «legacy» или «custom».</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <h2 id="section-4">
+<a class="anchor" href="#section-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Элементы управления модулем</h2>
+
+    <h3 id="section-5">
+<a class="anchor" href="#section-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Определение критериев фильтрации</h3>
+
+    <p>Верхняя строка модуля используется для задания критериев фильтрации коллекции следующим образом:</p>
+
+    <dl>
+      <dt>image attribute</dt>
+      <dd>
+        <p>Выпадающий список слева позволяет выбрать атрибут для фильтрации коллекции (см. <a href="#filtering-attributes">Атрибуты фильтрации</a>).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>search pattern</dt>
+      <dd>
+        <p>В текстовом поле справа от выпадающего списка атрибутов можно указать шаблон соответствия. Этот шаблон сравнивается со всеми
+записями базы данных для выбранного атрибута. Фильтр определяет совпадение, если атрибут изображения содержит указанный шаблон
+в полном тексте. Можно использовать <code class="language-plaintext highlighter-rouge">%</code> как символ-заместитель. Коллекция будет ограничена только совпадающими изображениями.
+Оставьте поле пустым, чтобы включить все изображения с данным атрибутом. При необходимости при наведении на атрибут или шаблон
+появится всплывающая подсказка с дополнительной информацией.</p>
+
+        <p>Атрибуты с числовыми или временными значениями могут использоваться с операторами сравнения и диапазона.
+Используйте <code class="language-plaintext highlighter-rouge">&lt;</code>, <code class="language-plaintext highlighter-rouge">&lt;=</code>, <code class="language-plaintext highlighter-rouge">&gt;</code>, <code class="language-plaintext highlighter-rouge">&gt;=</code>, <code class="language-plaintext highlighter-rouge">&lt;&gt;</code>, или <code class="language-plaintext highlighter-rouge">=</code> для выбора изображений с атрибутами, меньшими, меньшими или равными, большими,
+большими или равными, не равными или равными заданному значению соответственно. Выражение вида <code class="language-plaintext highlighter-rouge">[from;to]</code> позволяет выбрать
+диапазон значений.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>select by value</dt>
+      <dd>
+        <p>Помимо задания критериев через шаблон, можно вручную выбрать значения из списка (для выбранного атрибута), взятого из текущего
+набора совпадающих изображений. Выбор автоматически заполняет поле «search pattern».</p>
+
+        <p>Поле под <em>search pattern</em> отображает значения выбранного атрибута для текущих изображений. Список обновляется по мере ввода текста.
+Вы также можете выбрать критерий сортировки, прокручивая список и дважды щёлкнув по нему.</p>
+
+        <p>Если включён режим одиночного щелчка
+(см. <a href="https://docs.darktable.org/usermanual/development/en/preferences-settings/lighttable/">preferences &gt; light­table</a>),
+можно выбирать значения одним щелчком вместо двойного. Этот режим также позволяет выделять диапазон значений мышью. Работает только
+для числовых и временных атрибутов.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <h3 id="section-6">
+<a class="anchor" href="#section-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Комбинирование нескольких фильтров</h3>
+
+    <p>Можно комбинировать несколько фильтров для создания сложных коллекций с помощью набора правил. Правило — это комбинация критерия
+фильтрации и логической операции, определяющей, как этот критерий сочетается с предыдущими правилами.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <p>Нажмите на иконку <span class="__is_images_wrapper"><img src="/img/0b/39/f5t2cb5t.webp" alt="" class="__is_images_image" style="--is-images-width:22px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> (справа от поля поиска),
+чтобы открыть меню со следующими опциями:</p>
+
+    <dl>
+      <dt>clear this rule</dt>
+      <dd>
+        <p>Удаляет текущее правило или сбрасывает его, если это единственное правило.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>narrow down search</dt>
+      <dd>
+        <p>Добавляет новое правило, которое комбинируется с предыдущими через логическую операцию AND. Изображение остаётся в коллекции,
+только если оно соответствует новому критерию.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>add more images</dt>
+      <dd>
+        <p>Добавляет новое правило, которое комбинируется с предыдущими через логическую операцию OR. Изображения, соответствующие новому
+критерию, добавляются в коллекцию.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>exclude images</dt>
+      <dd>
+        <p>Добавляет новое правило, которое комбинируется с предыдущими через логическую операцию EXCEPT. Изображения, соответствующие
+новому критерию, исключаются из коллекции.</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <p>Логические операторы, определяющие, как комбинируются правила, обозначены иконками справа от каждого правила:
+AND — <span class="__is_images_wrapper"><img src="/img/97/71/b792t0bb.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>,
+OR — <span class="__is_images_wrapper"><img src="/img/19/84/eo88tb01.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>,
+EXCEPT — <span class="__is_images_wrapper"><img src="/img/o5/28/e5t6ctoo.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>.
+Щёлкните на иконке, чтобы изменить логическую операцию для этого правила.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <h3 id="section-7">
+<a class="anchor" href="#section-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>Обновление пути к перемещённым изображениям</h3>
+
+    <p>Хотя лучше не изменять импортированные файлы за спиной darktable, этот модуль помогает восстановить данные, если папки изображений
+были перемещены или переименованы после импорта. Модуль коллекций позволяет обновить базу данных библиотеки darktable с новым
+расположением папки. Процесс следующий:</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <ol>
+      <li>
+        <p>Установите в выпадающем списке <em>image attribute</em> значение «folder» или «film roll».</p>
+      </li>
+      <li>
+        <p>Исходное имя катушки пленки или папки будет отображаться с ~~зачёркиванием~~, указывая, что оно не найдено.</p>
+      </li>
+      <li>
+        <p>Щёлкните правой кнопкой мыши на имени папки или катушки пленки, выберите «update path to files…», затем укажите новое расположение папки.</p>
+      </li>
+    </ol>
+
+  </div>
+  <div class="unbreakable">
+
+    <h3 id="section-8">
+<a class="anchor" href="#section-8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Возврат к предыдущей коллекции</h3>
+
+    <p>Вы можете вернуться к ранее определённой коллекции, нажав на кнопку истории в нижней части модуля или используя модуль
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/recent-collections/">recently used
+col­lec­tions</a>[^recent] —
+см. раздел <a href="#collections-settings">Настройки</a> для деталей.</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <h3 id="collections-settings">
+<a class="anchor" href="#collections-settings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Настройки</h3>
+
+<figure id="fig-2" class="__is_images_figure __is_images_single __is_images_width_400" style="--is-images-width:371px;" data-modes="grid,slides">
+<span title="Настройки коллекций" class="__is_images_wrapper"><img src="/img/51/15/t1obf598.webp" alt="Настройки коллекций" class="__is_images_image __is_images_single" style="--is-images-width:371px;--is-images-aspect-ratio:371/204;" data-scale="1"></span>
+</figure>
+    <p>Опция «preferences…» в меню пресетов позволяет настроить поведение модуля коллекций следующим образом:</p>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>do not set the ‘uncategorized’ entry for tags</dt>
+      <dd>
+        <p>Не устанавливать категорию «uncategorized» для тегов без дочерних элементов (по умолчанию выключено).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>tag case sensitivity</dt>
+      <dd>
+        <p>Устанавливает, учитывать ли регистр тегов — без расширения <code class="language-plaintext highlighter-rouge">sqlite</code> ICU это применимо только к 26 латинским буквам (по умолчанию нечувствительно).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>number of collections to be stored</dt>
+      <dd>
+        <p>Устанавливает количество недавних коллекций, отображаемых во всплы­ва­ю­щем окне истории (если оно есть).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>number of folder levels to show in lists</dt>
+      <dd>
+        <p>Количество уровней папок, отображаемых в именах катушек пленки, начиная справа (по умол­ча­нию 1).</p>
+      </dd>
+    </dl>
+
+  </div>
+  <div class="unbreakable">
+
+    <dl>
+      <dt>sort film rolls by</dt>
+      <dd>
+        <p>Сортировка катушек пленки по «folder name» (путь) или «import time» (дата первого импорта катушки) (по умолчанию «import time»).</p>
+      </dd>
+    </dl>
+
+  </div>
+
+</section>
+
+
+
+
+<hr style="border: 2px; margin: 20px auto; width: 40%;">
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-matter">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#filtering-attributes">Атрибуты фильтрации</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#section">Файлы</a></li>
+<li class="toc-entry toc-h3"><a href="#section-1">Метаданные</a></li>
+<li class="toc-entry toc-h3"><a href="#section-2">Временные метки</a></li>
+<li class="toc-entry toc-h3"><a href="#section-3">Детали съёмки</a></li>
+<li class="toc-entry toc-h3"><a href="#darktable">darktable</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#section-4">Элементы управления модулем</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#section-5">Определение критериев фильтрации</a></li>
+<li class="toc-entry toc-h3"><a href="#section-6">Комбинирование нескольких фильтров</a></li>
+<li class="toc-entry toc-h3"><a href="#section-7">Обновление пути к перемещённым изображениям</a></li>
+<li class="toc-entry toc-h3"><a href="#section-8">Возврат к предыдущей коллекции</a></li>
+<li class="toc-entry toc-h3"><a href="#collections-settings">Настройки</a></li>
+</ul>
+</li>
+</ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file"><a href="/lib/darktable/pg/0_intro/" title="Введение">Введение</a></li></ul>
+    </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li><li><a href="/feed/pub.xml" title="Публикации в СМИ">Публикации</a></li><li><a href="/feed/photo.xml" title="Тексты о фотографии">О фото</a></li><li><a href="/feed/life.xml" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a></li><li><a href="/feed/text.xml" title="Попытки литературного творчества">Тексты</a></li><li><a href="/feed/best.xml" title="«Самому себе он наиболее симпатичен» ©">Избранное</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <!-- <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a> -->
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <!-- <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a> -->
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2026 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

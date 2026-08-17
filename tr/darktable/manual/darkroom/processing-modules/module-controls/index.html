@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+  <link rel="stylesheet" href="/assets/local.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Элементы управления модулями | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Элементы управления модулями" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Этот раздел описывает, как взаимодействовать с элементами управления модулей обработки. Слайдеры Слайдеры предлагают пять различных способов взаимодействия в зависимости от требуемого уровня контроля. &lt;dt&gt;Левый клик (установка)&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;Кликните в любом месте области слайдера, чтобы установить значение. Вы также можете кликнуть и перетаскивать для изменения значения. Не нужно целиться в треугольник или линию — вы можете кликнуть в любом месте по всей высоте слайдера, включая метку.&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;Колесико мыши (регулировка)&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;Наведите курсор на слайдер и используйте колесо мыши для регулировки значения. Вы можете изменить скорость, с которой колесо мы­ши регулирует слайдер, прокручивая его в ре­жи­ме &lt;a href=&quot;https://docs.darktable.org/usermanual/development/en/preferences-settings/shortcuts/#visual-shortcut-mapping&quot;&gt;vi­su­al shortcut map­ping mo­de&lt;/a&gt;.&lt;/p&gt; &lt;/dd&gt;…" />
+<meta name="twitter:description" property="og:description" content="Этот раздел описывает, как взаимодействовать с элементами управления модулей обработки. Слайдеры Слайдеры предлагают пять различных способов взаимодействия в зависимости от требуемого уровня контроля. &lt;dt&gt;Левый клик (установка)&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;Кликните в любом месте области слайдера, чтобы установить значение. Вы также можете кликнуть и перетаскивать для изменения значения. Не нужно целиться в треугольник или линию — вы можете кликнуть в любом месте по всей высоте слайдера, включая метку.&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;Колесико мыши (регулировка)&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;Наведите курсор на слайдер и используйте колесо мыши для регулировки значения. Вы можете изменить скорость, с которой колесо мы­ши регулирует слайдер, прокручивая его в ре­жи­ме &lt;a href=&quot;https://docs.darktable.org/usermanual/development/en/preferences-settings/shortcuts/#visual-shortcut-mapping&quot;&gt;vi­su­al shortcut map­ping mo­de&lt;/a&gt;.&lt;/p&gt; &lt;/dd&gt;…" />
+<link rel="canonical" href="https://shikhalev.github.io/tr/darktable/manual/darkroom/processing-modules/module-controls/" />
+<meta property="og:url" content="https://shikhalev.github.io/tr/darktable/manual/darkroom/processing-modules/module-controls/" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/e6/1c/c2c71btb.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/e6/1c/c2c71btb.webp" />
+<meta name="twitter:title" content="Элементы управления модулями" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2026-08-17T00:00:00+00:00","datePublished":"2026-08-17T00:00:00+00:00","description":"Этот раздел описывает, как взаимодействовать с элементами управления модулей обработки. Слайдеры Слайдеры предлагают пять различных способов взаимодействия в зависимости от требуемого уровня контроля. &lt;dt&gt;Левый клик (установка)&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;Кликните в любом месте области слайдера, чтобы установить значение. Вы также можете кликнуть и перетаскивать для изменения значения. Не нужно целиться в треугольник или линию — вы можете кликнуть в любом месте по всей высоте слайдера, включая метку.&lt;/p&gt; &lt;/dd&gt; &lt;dt&gt;Колесико мыши (регулировка)&lt;/dt&gt; &lt;dd&gt; &lt;p&gt;Наведите курсор на слайдер и используйте колесо мыши для регулировки значения. Вы можете изменить скорость, с которой колесо мы­ши регулирует слайдер, прокручивая его в ре­жи­ме &lt;a href=&quot;https://docs.darktable.org/usermanual/development/en/preferences-settings/shortcuts/#visual-shortcut-mapping&quot;&gt;vi­su­al shortcut map­ping mo­de&lt;/a&gt;.&lt;/p&gt; &lt;/dd&gt;…","headline":"Элементы управления модулями","image":"https://shikhalev.github.io/img/e6/1c/c2c71btb.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tr/darktable/manual/darkroom/processing-modules/module-controls/"},"url":"https://shikhalev.github.io/tr/darktable/manual/darkroom/processing-modules/module-controls/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "u2gczedmo7");
+</script>
+
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.14.css" />
+<script type="module" src="/js/is-images-0.8.0.14.js"></script>
+<!-- end of jekyll-is-images stuff -->
+
+</head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.*</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-credit-card" href="/merch/">Мерч</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-folder-open-black" href="/tr/" title="Переводы">Переводы</a>​<a class="fa-icon-camera" href="/tr/darktable/" title="darktable">darktable</a>​<a class="fa-icon-book-open" href="/tr/darktable/manual/" title="Darktable: Руководство пользователя">Руководство</a>​<a class="fa-icon-folder-open-black" href="/tr/darktable/manual/darkroom/" title="Тёмная комната">DR</a>​<a class="fa-icon-folder-open-black" href="/tr/darktable/manual/darkroom/processing-modules/" title="Устройство модулей обработки">Устройство модулей обработки</a></aside>
+<article class="layout-matter"><header class="page-header"><h1 class="title-matter" itemprop="name headline">Элементы управления модулями</h1></header><section class="module">
+
+  <p>Этот раздел описывает, как взаимодействовать с элементами управления модулей обработки.</p>
+
+  <h2 id="section">
+<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Слайдеры</h2>
+
+  <p>Слайдеры предлагают пять различных способов взаимодействия в зависимости от требуемого уровня контроля.</p>
+
+  <dl>
+    <dt>Левый клик (установка)</dt>
+    <dd>
+      <p>Кликните в любом месте области слайдера, чтобы установить значение. Вы также можете кликнуть и перетаскивать для изменения значения.
+Не нужно целиться в треугольник или линию — вы можете кликнуть в любом месте по всей высоте слайдера, включая метку.</p>
+    </dd>
+    <dt>Колесико мыши (регулировка)</dt>
+    <dd>
+      <p>Наведите курсор на слайдер и используйте колесо мыши для регулировки значения. Вы можете изменить скорость, с которой колесо мы­ши
+регулирует слайдер, прокручивая его в ре­жи­ме
+<a href="https://docs.darktable.org/usermanual/development/en/preferences-settings/shortcuts/#visual-shortcut-mapping">vi­su­al shortcut map­ping mo­de</a>.</p>
+    </dd>
+    <dt>Клавиши стрелок (регулировка)</dt>
+    <dd>
+      <p>Когда слайдер находится в фокусе, наведите курсор на слайдер и ис­поль­зуй­те клавиши со стрелками на клавиатуре (<code class="language-plaintext highlighter-rouge">←</code>/<code class="language-plaintext highlighter-rouge">↓</code> и <code class="language-plaintext highlighter-rouge">→</code>/<code class="language-plaintext highlighter-rouge">↑</code>)
+для ре­гу­ли­ров­ки значения. Чтобы передать фокус слайдеру без изменения текущего значения, кликните правой кнопкой мыши,
+затем снова кликните правой кнопкой.</p>
+    </dd>
+    <dt>Правый клик (всплывающее редактирование)</dt>
+    <dd>
+      <p>При наведении курсора на слайдер щелчок правой кнопкой мыши открывает многофункциональное всплывающее окно под слайдером
+для точной настройки с помощью мыши или ввода числового значения с клавиатуры.</p>
+
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:239px;" data-modes="grid,slides">
+<span class="__is_images_wrapper"><img src="/img/43/tt/eof4t5eo.webp" alt="" class="__is_images_image __is_images_single" style="border-radius:0px;--is-images-width:239px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>
+</figure>
+      <p>Изогнутая линия, идущая от треугольного маркера, движется вместе с кур­со­ром мыши. Чем ближе курсор к треугольному маркеру, тем грубее
+уп­рав­ле­ние значением; чем дальше от маркера, тем точнее управление. Кликните левой кнопкой мыши, чтобы подтвердить новое значение и
+скрыть всплывающее окно.</p>
+
+      <p>Альтернативно, вы можете ввести новое значение с клавиатуры и под­твер­дить его нажатием клавиши <code class="language-plaintext highlighter-rouge">Enter</code>. Вы также можете указать новое
+значение в виде арифметического выражения, которое dark­table вычислит за вас — предыдущее значение обозначается как «x».</p>
+
+      <p>Для большинства слайдеров минимальные и максимальные значения, отображаемые на слайдере, являются «мягкими пределами» (soft li­mits) —
+они не представляют минимальные/максимальные значения, которые можно ввести, а лишь рекомендуемый диапазон «но­р­маль­ных» значений,
+которые большинству пользователей не при­дет­ся превышать. Помимо мягких пределов, каждый слайдер имеет «жесткие пределы» (hard li­mits),
+которые нельзя превысить.</p>
+
+      <p>Вы можете щелкнуть правой кнопкой и ввести любое значение до жестких пределов для данного слайдера. Например, в мо­ду­ле
+<a href="/tr/darktable/manual/module-reference/processing-modules/rotate-perspective/"><em>ro­ta­te and per­s­pec­ti­ve</em></a> (поворот и перспектива) мягкие пределы для угла составляют от -10 до +10 гра­ду­сов,
+а жесткие пре­де­лы — от -180 до +180 гра­ду­сов; в мо­ду­ле <a href="/tr/darktable/manual/module-reference/processing-modules/exposure/"><em>ex­po­su­re</em></a> (экспозиция) мягкие пределы для слайдера экспозиции
+составляют от -3 до +4 EV, а жесткие пре­де­лы — от -18 до +18 EV. Если вы попытаетесь ввести значение вне жестких пределов,
+оно автоматически будет скорректировано до минимального/максимального допустимого значения.</p>
+    </dd>
+    <dt>Двойной клик (сброс)</dt>
+    <dd>
+      <p>Двойной клик на слайдере или его метке сбрасывает значение на значение по умолчанию. <code class="language-plaintext highlighter-rouge">Ctrl</code>+двойной клик сбрасывает значение на любой
+автоматически примененный пресет (если такой применяется для текущего изображения). Если элементы управления сгруппированы в интерфейсе
+с вкладками, вы можете дважды кликнуть на заголовке вкладки, чтобы сбросить все настройки в этой вкладке.</p>
+    </dd>
+  </dl>
+
+  <p>Кроме того, скорость регулировки с помощью колеса мыши, клавиш со стрел­ка­ми и перетаскивания можно изменить:</p>
+
+  <ul>
+    <li>
+      <p>Удерживайте клавишу <code class="language-plaintext highlighter-rouge">Shift</code> при регулировке, чтобы <em>увеличить</em> раз­мер шага в 10 раз.</p>
+    </li>
+    <li>
+      <p>Удерживайте клавишу <code class="language-plaintext highlighter-rouge">Ctrl</code> при регулировке, чтобы <em>уменьшить</em> раз­мер шага в 10 раз.</p>
+    </li>
+  </ul>
+
+  <p>Оба этих множителя можно настроить
+в <a href="https://docs.darktable.org/usermanual/development/en/preferences-settings/shortcuts/">pre­fe­ren­ces &gt; short­cuts</a>, изменив скорость действий
+fallbacks/value.</p>
+
+  <h2 id="section-1">
+<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Комбобоксы</h2>
+
+  <p>Кликните на комбобокс, чтобы открыть список доступных опций, которые можно выбрать кликом. Иногда список открывается близко к нижней или верхней
+части экрана, из-за чего видны не все элементы — просто прокрутите колесом мыши, чтобы отобразить полный список. Альтернативно,
+вы можете использовать колесо мыши и клавиши со стрелками для выбора опции или начать вводить текст, чтобы отфильтровать элементы комбобокса.</p>
+
+  <p>Как и в случае со слайдерами, вы можете дважды кликнуть на комбобокс или его метку, чтобы сбросить значение на значение по умолчанию,
+или использовать <code class="language-plaintext highlighter-rouge">Ctrl</code>+двойной клик, чтобы сбросить на любой автоматически примененный пресет.</p>
+
+  <h2 id="doc-pickers">
+<a class="anchor" href="#doc-pickers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Пипетки</h2>
+
+  <p>Многие модули позволяют задавать параметры с помощью пипеток (pickers), обозначенных значком
+<span class="__is_images_wrapper"><img src="/img/3f/94/fect4301.webp" alt="" class="__is_images_image" style="--is-images-width:23px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>. Пипетки позволяют выбирать области изображения
+для вычисления значений параметров модуля. Обычно вы можете вы­брать либо «po­int» (точ­ку — один пиксель), либо «area» (об­ласть — прямоугольный
+выбор пикселей) на изображении, хотя некоторые модули поддерживают только один режим.</p>
+
+  <p>Выбор пикселя(-ей) приводит к обновлению соответствующих значений модуля и может вызывать дополнительную визуальную обратную связь (например,
+наложение диапазона выбранных пикселей на тоновую кривую).</p>
+
+  <p>Активируйте режим точки (point mode), кликнув левой кнопкой мыши на зна­чок пипетки, затем кликните левой кнопкой в любом месте изображения,
+чтобы выбрать пиксель для вычисления значений. Выбранная точка будет отображена на экране (с помощью значка крестика), которую можно скорректировать,
+кликнув левой кнопкой на другой пиксель. Деактивируйте пипетку, повторно кликнув левой кнопкой на значок пипетки.</p>
+
+  <p>Активируйте режим области (area mode), кликнув правой кнопкой или используя <code class="language-plaintext highlighter-rouge">Ctrl</code>+клик на значок пипетки, затем кликните левой кнопкой
+и перетаскивайте, чтобы выбрать прямоугольную область изображения для вычисления значений. Выбранная область будет отображена на экране
+в ви­де наложенного прямоугольника, который можно переместить, либо нарисовав другой прямоугольник в другом месте, либо кликнув левой кнопкой
+и перетаскивая углы нарисованного прямоугольника. Сбросьте прямоугольник (чтобы выбрать всё изображение), кликнув правой кнопкой
+в любом месте изображения. Деактивируйте пипетку, повторно кликнув правой кнопкой (или используя Ctrl+клик) на значок пипетки.</p>
+
+  <p>В модулях, где доступен только один режим, клик левой кнопкой на значке обычно включает или выключает этот режим.</p>
+
+  <h2 id="section-2">
+<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Сочетания клавиш</h2>
+
+  <p>Параметры модуля также можно регулировать с помощью сочетаний клавиш. Подробности
+см. в <a href="https://docs.darktable.org/usermanual/development/en/preferences-settings/shortcuts/">pre­fe­ren­ces &gt; short­cuts</a>.</p>
+
+</section>
+
+
+
+
+<hr style="border: 2px; margin: 20px auto; width: 40%;">
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-matter">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#section">Слайдеры</a></li>
+<li class="toc-entry toc-h2"><a href="#section-1">Комбобоксы</a></li>
+<li class="toc-entry toc-h2"><a href="#doc-pickers">Пипетки</a></li>
+<li class="toc-entry toc-h2"><a href="#section-2">Сочетания клавиш</a></li>
+</ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file"><a href="/lib/darktable/pg/1_base_processing/" title="Глава 1: Базовая обработка">Глава 1: Базовая обработка</a></li><li class="fa-icon-li-file"><a href="/tr/darktable/manual/module-reference/processing-modules/exposure/" title="Модуль exposure (экспозиция)">Модуль exposure (экспозиция)</a></li><li class="fa-icon-li-file"><a href="/tr/darktable/manual/module-reference/processing-modules/rgb-curve/" title="Модуль rgb curve (RGB-кривая)">Модуль rgb curve (RGB-кривая)</a></li><li class="fa-icon-li-file"><a href="/tr/darktable/manual/module-reference/processing-modules/rgb-levels/" title="Модуль rgb levels (RGB-уровни)">Модуль rgb levels (RGB-уровни)</a></li><li class="fa-icon-li-file"><a href="/tr/darktable/manual/module-reference/processing-modules/rotate-perspective/" title="Модуль rotate and perspective (поворот и перспектива)">Модуль rotate and perspective (поворот и перспектива)</a></li><li class="fa-icon-li-file"><a href="/tr/darktable/manual/module-reference/processing-modules/tone-curve/" title="Модуль tone curve (тоновая кривая)">Модуль tone curve (тоновая кривая)</a></li></ul>
+    </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li><li><a href="/feed/pub.xml" title="Публикации в СМИ">Публикации</a></li><li><a href="/feed/photo.xml" title="Тексты о фотографии">О фото</a></li><li><a href="/feed/life.xml" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a></li><li><a href="/feed/text.xml" title="Попытки литературного творчества">Тексты</a></li><li><a href="/feed/best.xml" title="«Самому себе он наиболее симпатичен» ©">Избранное</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <!-- <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a> -->
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <!-- <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a> -->
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2026 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

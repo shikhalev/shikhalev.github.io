@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+  <link rel="stylesheet" href="/assets/local.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Модуль rotate and perspective (поворот и перспектива) | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Модуль rotate and perspective (поворот и перспектива)" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/rotate-perspective/ v4.6 Автоматически корректирует сходящиеся линии, вид перспективного искажения. Механизм основан на программе ShiftN1 Маркуса Хебеля. Этот модуль также позволяет регулировать поворот изображения. Перспективные искажения — это естественный эффект при проецировании трехмерной сцены на двумерную плоскость, из-за чего объекты, близкие к зри­те­лю, кажутся крупнее, чем объекты, расположенные дальше. Схо­дя­щи­е­ся ли­нии — частный случай перспективных искажений, часто встречающийся в архитектурной фотографии: параллельные линии, снятые под углом, превращаются в сходящиеся линии, которые пересекаются в некоторой точке обзора внутри или вне кадра изображения. Этот модуль способен корректировать сходящиеся линии, деформируя изображение так, чтобы указанные линии стали параллельными рамке изображения. Коррекция может применяться в вертикальном и…" />
+<meta name="twitter:description" property="og:description" content="https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/rotate-perspective/ v4.6 Автоматически корректирует сходящиеся линии, вид перспективного искажения. Механизм основан на программе ShiftN1 Маркуса Хебеля. Этот модуль также позволяет регулировать поворот изображения. Перспективные искажения — это естественный эффект при проецировании трехмерной сцены на двумерную плоскость, из-за чего объекты, близкие к зри­те­лю, кажутся крупнее, чем объекты, расположенные дальше. Схо­дя­щи­е­ся ли­нии — частный случай перспективных искажений, часто встречающийся в архитектурной фотографии: параллельные линии, снятые под углом, превращаются в сходящиеся линии, которые пересекаются в некоторой точке обзора внутри или вне кадра изображения. Этот модуль способен корректировать сходящиеся линии, деформируя изображение так, чтобы указанные линии стали параллельными рамке изображения. Коррекция может применяться в вертикальном и…" />
+<link rel="canonical" href="https://shikhalev.github.io/tr/darktable/manual/module-reference/processing-modules/rotate-perspective/" />
+<meta property="og:url" content="https://shikhalev.github.io/tr/darktable/manual/module-reference/processing-modules/rotate-perspective/" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/fe/c8/963bo469.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/fe/c8/963bo469.webp" />
+<meta name="twitter:title" content="Модуль rotate and perspective (поворот и перспектива)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2026-08-16T00:00:00+00:00","datePublished":"2026-08-16T00:00:00+00:00","description":"https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/rotate-perspective/ v4.6 Автоматически корректирует сходящиеся линии, вид перспективного искажения. Механизм основан на программе ShiftN1 Маркуса Хебеля. Этот модуль также позволяет регулировать поворот изображения. Перспективные искажения — это естественный эффект при проецировании трехмерной сцены на двумерную плоскость, из-за чего объекты, близкие к зри­те­лю, кажутся крупнее, чем объекты, расположенные дальше. Схо­дя­щи­е­ся ли­нии — частный случай перспективных искажений, часто встречающийся в архитектурной фотографии: параллельные линии, снятые под углом, превращаются в сходящиеся линии, которые пересекаются в некоторой точке обзора внутри или вне кадра изображения. Этот модуль способен корректировать сходящиеся линии, деформируя изображение так, чтобы указанные линии стали параллельными рамке изображения. Коррекция может применяться в вертикальном и…","headline":"Модуль rotate and perspective (поворот и перспектива)","image":"https://shikhalev.github.io/img/fe/c8/963bo469.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tr/darktable/manual/module-reference/processing-modules/rotate-perspective/"},"url":"https://shikhalev.github.io/tr/darktable/manual/module-reference/processing-modules/rotate-perspective/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "u2gczedmo7");
+</script>
+
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.14.css" />
+<script type="module" src="/js/is-images-0.8.0.14.js"></script>
+<!-- end of jekyll-is-images stuff -->
+
+</head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.*</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-credit-card" href="/merch/">Мерч</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-folder-open-black" href="/tr/" title="Переводы">Переводы</a>​<a class="fa-icon-camera" href="/tr/darktable/" title="darktable">darktable</a>​<a class="fa-icon-book-open" href="/tr/darktable/manual/" title="Darktable: Руководство пользователя">Руководство</a>​<a class="fa-icon-folder-open-black" href="/tr/darktable/manual/module-reference/" title="Справочник модулей">Модули</a>​<a class="fa-icon-folder-open-black" href="/tr/darktable/manual/module-reference/processing-modules/" title="Модули обработки">Обработка</a></aside>
+<article class="layout-matter"><header class="page-header"><h1 class="title-matter" itemprop="name headline">Модуль rotate and perspective (поворот и перспектива)</h1></header><ul class="origlink">
+  <li>
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/rotate-perspective/">https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/rotate-perspective/</a> v4.6</li>
+</ul>
+
+<section class="module">
+
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Модуль «rotate and perspective»" class="__is_images_wrapper"><img src="/img/eb/c9/8t185t5t.webp" alt="Модуль «rotate and perspective»" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:249/217;" data-scale="1"></span>
+</figure>
+  <p>Автоматически корректирует сходящиеся линии, вид перспективного искажения. Механизм основан на программе <strong>ShiftN</strong><sup id="fnref:ShiftN"><a href="#fn:ShiftN" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>
+Маркуса Хебеля. Этот модуль также позволяет регулировать поворот изображения.</p>
+
+  <p>Перспективные искажения — это естественный эффект при проецировании трехмерной сцены на двумерную плоскость, из-за чего объекты,
+близкие к зри­те­лю, кажутся крупнее, чем объекты, расположенные дальше. Схо­дя­щи­е­ся ли­нии — частный случай перспективных искажений,
+часто встречающийся в архитектурной фотографии: параллельные линии, снятые под углом, превращаются в сходящиеся линии, которые
+пересекаются в некоторой точке обзора внутри или вне кадра изображения.</p>
+
+  <p>Этот модуль способен корректировать сходящиеся линии, деформируя изображение так, чтобы указанные линии стали параллельными рамке изображения.
+Коррекция может применяться в вертикальном и горизонтальном направлениях по отдельности или в комбинации. Для автоматической коррекции модуль
+может анализировать изображение на наличие подходящих структурных элементов, состоящих из отрезков линий. Вы также можете вручную задать
+структуру линий, нарисовав «прямоугольник перспективы» или несколько горизонтальных и вертикальных линий на изображении. На ос­но­ве этих
+(автоматически или вручную заданных) отрезков линий запускается процесс подгонки, который определяет оптимальные значения параметров модуля.</p>
+
+  <p>Поскольку наиболее частый случай использования этого модуля — поворот, элементы управления коррекцией перспективы по умолчанию скрыты.
+Клик­ни­те на заголовок <strong>perspective</strong>, чтобы развернуть элементы управления.</p>
+
+  <p>Пока модуль активен (и ни одна из кнопок структуры не выбрана), вы можете щелкнуть правой кнопкой мыши и перетаскивать в любом месте изображения,
+чтобы задать горизонтальную или вертикальную линию. Это автоматически скорректирует параметр поворота, чтобы нарисованная линия стала
+го­ри­зон­таль­ной/вер­ти­каль­ной относительно рамки изображения.</p>
+
+  <hr>
+
+  <p><strong>Примечание</strong>: Эта функция (щелчок правой кнопкой мыши и перетаскивание для задания горизонтальной/вертикальной линии) доступна,
+даже если модуль неактивен, при условии, что никакая другая функция (например, создание нарисованной маски) не использует правую кнопку мыши.</p>
+
+  <hr>
+
+  <h2 id="perspective-process">
+<a class="anchor" href="#perspective-process" aria-hidden="true"><span class="octicon octicon-link"></span></a>Рабочий процесс коррекции перспективы</h2>
+
+  <h3 id="section">
+<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Структура</h3>
+
+  <p>Первый шаг — получение информации о горизонтальных и/или вертикальных структурах в изображении. Доступны три альтернативных метода:</p>
+
+  <h4 id="section-1">
+<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ручное рисование структурных линий</h4>
+
+  <p>Кликните на значок <span class="__is_images_wrapper"><img src="/img/8c/02/0bcb5b66.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>, чтобы
+включить режим рисования линий, затем кликните и перетаскивайте на изображении, чтобы нарисовать линии, которые вы хотите сделать
+горизонтальными или вертикальными. Модуль автоматически определит, являются ли линии горизонтальными или вертикальными, и окрасит
+их соответственно в зеленый или синий цвет. Рисуйте столько линий, сколько хотите (чем больше линий, тем лучше работает механизм
+подгонки), а затем кликните на один из <em>знач­ков <a href="#perspective-fit">под­гон­ки</a></em>, чтобы завершить процесс. Вы можете вернуться в этот
+режим для редактирования нарисованных линий в любое время. Редактируйте линию, кликая и перетаскивая саму линию или ее конечные узлы,
+и щелкните правой кнопкой мыши на линии, чтобы удалить ее. Когда вы удовлетворены изменениями, повторно выберите значок подгонки,
+чтобы завершить процесс.</p>
+
+  <h4 id="section-2">
+<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ручное задание прямоугольника перспективы</h4>
+
+  <p>Кликните на значок <span class="__is_images_wrapper"><img src="/img/bo/8c/o3tb8f7o.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>, чтобы
+включить режим рисования прямоугольника перспективы. На экране появится прямоугольник, и вы можете захватывать и перемещать его углы так,
+чтобы левая и правая стороны совпадали с ли­ни­я­ми, которые вы хотите сделать вертикальными, а верхняя и нижняя — с ли­ни­я­ми,
+которые вы хотите сделать горизонтальными. Когда вы удовлетворены прямоугольником, кликните на один из значков подгонки, чтобы
+завершить процесс. Вы можете вернуться в этот режим для редактирования нарисованного прямоугольника в любое время. Когда вы удовлетворены
+изменениями, повторно выберите значок подгонки, чтобы завершить процесс.</p>
+
+  <p>Этот метод аналогичен тому, как работает коррекция «трапецеидального искажения» (keystone) в мо­ду­ле
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/crop-rotate/"><em>crop and ro­ta­te</em></a>
+(кадрирование и поворот).</p>
+
+  <h4 id="section-3">
+<a class="anchor" href="#section-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Автоматическое определение структуры</h4>
+
+  <p>Кликните на значок <span class="__is_images_wrapper"><img src="/img/07/9c/c3837o54.webp" alt="" class="__is_images_image" style="--is-images-width:21px;--is-images-aspect-ratio:21/20;" data-scale="1"></span>, чтобы
+проанализировать изображение на наличие структурных эле­мен­тов — dark­tab­le автоматически обнаружит и оценит отрезки линий.
+<code class="language-plaintext highlighter-rouge">Shift</code>+клик применяет шаг усиления контраста перед дальнейшим анализом. <code class="language-plaintext highlighter-rouge">Ctrl</code>+клик применяет шаг усиления краев перед дальнейшим
+анализом. Обе вариации можно использовать по отдельности или в ком­би­на­ции, если стандартный анализ не может обнаружить достаточное
+количество линий.</p>
+
+  <p>Для последующих шагов обработки используются только линии, образующие набор сходящихся вертикальных или горизонтальных линий.
+Отрезки линий отображаются в виде наложений на холсте изображения, причем тип линии обозначается цветом следующим образом:</p>
+
+  <dl>
+    <dt>Зеленый</dt>
+    <dd>
+      <p>Сходящиеся вертикальные линии</p>
+    </dd>
+    <dt>Красный</dt>
+    <dd>
+      <p>Вертикальные линии, которые не сходятся</p>
+    </dd>
+    <dt>Синий</dt>
+    <dd>
+      <p>Сходящиеся горизонтальные линии</p>
+    </dd>
+    <dt>Желтый</dt>
+    <dd>
+      <p>Горизонтальные линии, которые не сходятся</p>
+    </dd>
+    <dt>Серый</dt>
+    <dd>
+      <p>Другие линии, не представляющие интереса для этого модуля</p>
+    </dd>
+  </dl>
+
+  <p>Линии, отмеченные красным или желтым, считаются выбросами и не учитываются на этапе автоматической подгонки. Устранение выбросов включает
+статистический процесс с использованием случайной выборки, что означает, что каждый раз при нажатии кнопки <em>get structure</em> (получить
+структуру) цветовой узор линий будет немного отличаться.</p>
+
+  <p>Вы можете вручную изменить статус отрезков линий: кликните левой кнопкой мыши на линии, чтобы выбрать ее (цвет изменится на зеленый
+или синий), и щелкните правой кнопкой, чтобы отменить выбор (цвет изменится на красный или желтый). Если удерживать кнопку мыши нажатой,
+можно использовать размашистое движение для выбора/отмены выбора нескольких линий подряд. Размер кисти выбора/отмены выбора можно
+изменить с помощью колеса мыши. Удерживайте клавишу <code class="language-plaintext highlighter-rouge">Shift</code> и держите нажатой левую или правую кнопку мыши при перетаскивании, чтобы
+выбрать или отменить выбор всех линий в выбранной прямоугольной области.</p>
+
+  <p>Когда вы удовлетворены обнаруженными линиями, выберите значок подгонки, чтобы завершить процесс.</p>
+
+  <div class="unbreakable">
+
+    <h3 id="perspective-fit">
+<a class="anchor" href="#perspective-fit" aria-hidden="true"><span class="octicon octicon-link"></span></a>Подгонка</h3>
+
+    <p>Когда вы удовлетворены определенными горизонтальными и вертикальными линиями, используя один из методов выше, кликните на один
+из знач­ков подгонки, чтобы автоматически установить параметры модуля на основе заданной структуры. Изображение и наложенные линии
+затем отображаются с при­ме­нен­ны­ми коррекциями перспективы.</p>
+
+  </div>
+
+  <p>Вы можете выбрать автоматическое применение только вертикальных коррекций
+<span class="__is_images_wrapper"><img src="/img/0t/6e/2423118f.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>, только горизонтальных коррекций
+<span class="__is_images_wrapper"><img src="/img/fe/85/c43f6eb2.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span> или обеих вместе
+<span class="__is_images_wrapper"><img src="/img/2e/93/10bc85b6.webp" alt="" class="__is_images_image" style="--is-images-width:20px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>. <code class="language-plaintext highlighter-rouge">Ctrl</code>+клик на любом из значков применяет
+поворот без сдвига объектива. <code class="language-plaintext highlighter-rouge">Shift</code>+клик на любом из значков применяет сдвиг объектива без поворота.</p>
+
+  <h3 id="section-4">
+<a class="anchor" href="#section-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Поворот</h3>
+
+  <p>После того как вы удовлетворены примененными коррекциями перспективы, вы можете выполнить финальную коррекцию поворота, либо регулируя
+параметр <em>rotation</em> (поворот), либо щелкнув правой кнопкой мыши и перетаскивая изображение, чтобы задать го­ри­зон­таль­ную/вер­ти­каль­ную линию.</p>
+
+  <h2 id="section-5">
+<a class="anchor" href="#section-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Элементы управления модуля</h2>
+
+  <dl>
+    <dt>rotation</dt>
+    <dd>
+      <p>Управляет поворотом изображения вокруг его центра для коррекции наклонного горизонта. Чтобы повернуть более чем на мягкий предел
+в де­сять градусов, щелкните правой кнопкой мыши и введите желаемое значение до 180 гра­ду­сов (см. <a href="/tr/darktable/manual/darkroom/processing-modules/module-controls/">mo­du­le cont­rols</a>).</p>
+    </dd>
+    <dt>automatic cropping</dt>
+    <dd>
+      <p>При активации эта функция обрезает изображение, чтобы удалить черные области по краям, вызванные коррекцией искажений. Вы можете обрезать
+до «наибольшей области» или до наибольшего прямоугольника, сохраняющего исходное соотношение сторон («original for­mat» — исходный формат).
+В по­с­лед­нем случае вы можете вручную скорректировать результат автоматического кадрирования, клик­нув в области обрезки и перемещая ее.
+Размер области автоматически изменяется, чтобы исключить черные области.</p>
+    </dd>
+    <dt>lens shift (vertical)</dt>
+    <dd>
+      <p>Корректирует сходящиеся вертикальные линии (т.е. делает <em>зеленые</em> линии параллельными). В некоторых случаях более естественное
+из­о­б­ра­же­ние можно получить, корректируя вертикальные искажения на 80–90% вместо максимальной коррекции. Для этого уменьшите слайдер
+коррекции после выполнения автоматической коррекции.</p>
+    </dd>
+    <dt>lens shift (horizontal)</dt>
+    <dd>
+      <p>Корректирует сходящиеся горизонтальные линии (т.е. делает <em>синие</em> линии параллельными).</p>
+    </dd>
+    <dt>shear</dt>
+    <dd>
+      <p>Сдвигает изображение по одной из его диагоналей. Это требуется при одновременной коррекции вертикальных и горизонтальных перспективных искажений.</p>
+    </dd>
+    <dt>lens model</dt>
+    <dd>
+      <p>Этот параметр управляет фокусным расстоянием объектива, кроп-фак­то­ром камеры и соотношением сторон, используемыми алгоритмом
+коррекции. Если установлено значение «generic» (общее), предполагается фокусное расстояние объектива 28 мм на пол­но­кад­ро­вой камере
+35 мм. Если установлено значение «specific» (специфичес­кое), фокусное расстояние и кроп-фак­тор можно задать вручную с по­мо­щью слайдеров.</p>
+    </dd>
+    <dt>focal length</dt>
+    <dd>
+      <p>Если <em>lens model</em> установлена в «specific», задайте фокусное расстояние объектива. Значение по умолчанию берется из EXIF-данных изображения
+и может быть переопределено ручной регулировкой слайдера.</p>
+    </dd>
+    <dt>crop factor</dt>
+    <dd>
+      <p>Если <em>lens model</em> установлена в «specific», задайте кроп-фактор камеры. Обычно это значение нужно устанавливать вручную.</p>
+    </dd>
+    <dt>aspect adjust</dt>
+    <dd>
+      <p>Если <em>lens model</em> установлена в «specific», этот параметр позволяет свободно регулировать соотношение сторон изображения вручную.
+Это полезно для «распаковки» изображений, снятых с анаморфотным объективом (который изменяет соотношение высоты и ширины изображения).</p>
+    </dd>
+    <dt>structure</dt>
+    <dd>
+      <p>Определяет горизонтальные и вертикальные линии в изображении с помощью ручного или автоматического метода (см. раз­дел рабочего процесса
+для подробностей).</p>
+    </dd>
+    <dt>fit</dt>
+    <dd>
+      <p>Автоматически устанавливает слайдеры коррекции искажений на основе определенной структуры
+(см. <a href="#perspective-process">раз­дел рабочего процесса</a> для подробностей).</p>
+    </dd>
+    <dt>show guides</dt>
+    <dd>
+      <p>Установите флажок, чтобы отображать наложение направляющих, когда модуль активирован. Кликните на значок справа, чтобы настроить
+свойства направляющих. Подробности
+см. в <a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/darkroom/guides-overlays/">gui­des &amp; over­lays</a>
+(направляющие и наложения).</p>
+    </dd>
+  </dl>
+
+  <h2 id="section-6">
+<a class="anchor" href="#section-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Примеры</h2>
+
+  <p>Вот изображение с наклонным горизонтом и сходящимися линиями, вызванными направлением камеры вверх:</p>
+
+<figure id="fig-2" class="__is_images_figure __is_images_single __is_images_width_450" style="--is-images-width:420px;" data-modes="grid,slides">
+<a href="/img/fc/90/ot99c67e.webp" class="__is_images_wrapper"><img src="/img/95/9e/f60b4fto.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:420px;--is-images-aspect-ratio:420/281;" data-scale="1"></a>
+</figure>
+  <p>Вот изображение после коррекции вертикальных и горизонтальных перспективных искажений с использованием автоматического определения структуры. Обратите внимание на корректировку кадрирования, выполненную функцией автоматического кадрирования, и все еще видимое наложение структурных линий:</p>
+
+<figure id="fig-3" class="__is_images_figure __is_images_single __is_images_width_450" style="--is-images-width:420px;" data-modes="grid,slides">
+<a href="/img/c0/c1/51t5eo8o.webp" class="__is_images_wrapper"><img src="/img/t6/98/f874f7ff.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:420px;--is-images-aspect-ratio:420/281;" data-scale="1"></a>
+</figure>
+</section>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:ShiftN">
+      <p><a href="https://www.shiftn.de/">https://www.shiftn.de/</a> <a href="#fnref:ShiftN" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+
+
+
+<hr style="border: 2px; margin: 20px auto; width: 40%;">
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-matter">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#perspective-process">Рабочий процесс коррекции перспективы</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#section">Структура</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#section-1">Ручное рисование структурных линий</a></li>
+<li class="toc-entry toc-h4"><a href="#section-2">Ручное задание прямоугольника перспективы</a></li>
+<li class="toc-entry toc-h4"><a href="#section-3">Автоматическое определение структуры</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#perspective-fit">Подгонка</a></li>
+<li class="toc-entry toc-h3"><a href="#section-4">Поворот</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#section-5">Элементы управления модуля</a></li>
+<li class="toc-entry toc-h2"><a href="#section-6">Примеры</a></li>
+</ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file"><a href="/lib/darktable/pg/1_base_processing/" title="Глава 1: Базовая обработка">Глава 1: Базовая обработка</a></li><li class="fa-icon-li-file"><a href="/tr/darktable/manual/darkroom/processing-modules/module-controls/" title="Элементы управления модулями">Элементы управления модулями</a></li><li class="fa-icon-li-file"><a href="/tr/darktable/manual/module-reference/processing-modules/crop/" title="Модуль crop (кадрирование)">Модуль crop (кадрирование)</a></li><li class="fa-icon-li-file"><a href="/tr/darktable/manual/module-reference/processing-modules/lens-correction/" title="Модуль lens correction (исправление искажений объектива)">Модуль lens correction (исправление искажений объектива)</a></li></ul>
+    </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li><li><a href="/feed/pub.xml" title="Публикации в СМИ">Публикации</a></li><li><a href="/feed/photo.xml" title="Тексты о фотографии">О фото</a></li><li><a href="/feed/life.xml" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a></li><li><a href="/feed/text.xml" title="Попытки литературного творчества">Тексты</a></li><li><a href="/feed/best.xml" title="«Самому себе он наиболее симпатичен» ©">Избранное</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <!-- <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a> -->
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <!-- <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a> -->
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2026 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

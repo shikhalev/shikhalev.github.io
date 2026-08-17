@@ -151,6 +151,7 @@
 
       <div class="no_toc_section">
 
+      
       <figure id="fig-1" class="logo __is_images_figure __is_images_single __is_images_width_300 __is_images__right" style="--is-images-width:256px;" data-modes="grid,slides">
 <span title="Логотип Rust" class="__is_images_wrapper"><img src="/img/7o/e0/3t7e859c.webp" alt="Логотип Rust" class="__is_images_image __is_images_single" style="--is-images-width:256px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>
 </figure>
@@ -158,8 +159,8 @@
 просто такой момент, где можно по собственной невнимательности наступить на грабли и не сразу это заметить, что
 нехарактерно для Rust.</p>
 
-<p>Опасность подстерегает нас, когда мы читаем данные из файла посредством <code class="language-plaintext highlighter-rouge">std::​fs::​File.read()</code><sup id="fnref:read"><a href="#fn:read" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>, <em>не используя</em>
-при этом <code class="language-plaintext highlighter-rouge">std::io::BufReader</code><sup id="fnref:bufreader"><a href="#fn:bufreader" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>, а самостоятельно выделяя блок памяти и читая в него.</p>
+<p>Опасность подстерегает нас, когда мы читаем данные из файла посредством <code class="language-plaintext highlighter-rouge">std::​fs::​File.read()</code><sup id="fnref:read"><a href="/tech/2021/03/rust-small-stone.html#fn:read" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>, <em>не используя</em>
+при этом <code class="language-plaintext highlighter-rouge">std::io::BufReader</code><sup id="fnref:bufreader"><a href="/tech/2021/03/rust-small-stone.html#fn:bufreader" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>, а самостоятельно выделяя блок памяти и читая в него.</p>
 
 <p>Подводный камень тут вот в чем, цитирую документацию:</p>
 
@@ -179,10 +180,10 @@ does not mean that the reader will always no longer be able to produce bytes.</l
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:read">
-      <p><a href="https://doc.rust-lang.org/std/io/trait.Read.html#tymethod.read">https://doc.rust-lang.org/std/io/trait.Read.html#tymethod.read</a> <a href="#fnref:read" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p><a href="https://doc.rust-lang.org/std/io/trait.Read.html#tymethod.read">https://doc.rust-lang.org/std/io/trait.Read.html#tymethod.read</a> <a href="/tech/2021/03/rust-small-stone.html#fnref:read" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:bufreader">
-      <p><a href="https://doc.rust-lang.org/std/io/struct.BufReader.html">https://doc.rust-lang.org/std/io/struct.BufReader.html</a> <a href="#fnref:bufreader" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p><a href="https://doc.rust-lang.org/std/io/struct.BufReader.html">https://doc.rust-lang.org/std/io/struct.BufReader.html</a> <a href="/tech/2021/03/rust-small-stone.html#fnref:bufreader" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>

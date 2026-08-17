@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+  <link rel="stylesheet" href="/assets/local.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Модуль white balance (баланс белого) | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Модуль white balance (баланс белого)" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="docs.darktable.org/usermanual/development/en/module-reference/processing-modules/white-balance/ v3.4 Регулирует баланс белого изображения путем изменения температуры и оттенка, задания коэффициента для каждого RGB-канала или выбора из списка предопределенных настроек баланса белого. Настройки по умолчанию для этого модуля берутся из данных баланса белого камеры, сохраненных в EXIF-данных изображения. Модуль white balance не предназначен для «творческой» обработки — его основная цель заключается в технической коррекции баланса белого изображения, чтобы нейтральные цвета объектов в сцене отображались как нейтральные цвета на изображении. Для творческих операций с цветом лучше использовать другие модули, такие как co­lor ca­lib­ra­ti­on (цветовая калибровка) или co­lor balance rgb (цветовой баланс RGB). Примечание: Модуль color calibration теперь предоставляет более…" />
+<meta name="twitter:description" property="og:description" content="docs.darktable.org/usermanual/development/en/module-reference/processing-modules/white-balance/ v3.4 Регулирует баланс белого изображения путем изменения температуры и оттенка, задания коэффициента для каждого RGB-канала или выбора из списка предопределенных настроек баланса белого. Настройки по умолчанию для этого модуля берутся из данных баланса белого камеры, сохраненных в EXIF-данных изображения. Модуль white balance не предназначен для «творческой» обработки — его основная цель заключается в технической коррекции баланса белого изображения, чтобы нейтральные цвета объектов в сцене отображались как нейтральные цвета на изображении. Для творческих операций с цветом лучше использовать другие модули, такие как co­lor ca­lib­ra­ti­on (цветовая калибровка) или co­lor balance rgb (цветовой баланс RGB). Примечание: Модуль color calibration теперь предоставляет более…" />
+<link rel="canonical" href="https://shikhalev.github.io/tr/darktable/manual/module-reference/processing-modules/white-balance/" />
+<meta property="og:url" content="https://shikhalev.github.io/tr/darktable/manual/module-reference/processing-modules/white-balance/" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/53/21/cto7c827.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/53/21/cto7c827.webp" />
+<meta name="twitter:title" content="Модуль white balance (баланс белого)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2026-08-17T00:00:00+00:00","datePublished":"2026-08-17T00:00:00+00:00","description":"docs.darktable.org/usermanual/development/en/module-reference/processing-modules/white-balance/ v3.4 Регулирует баланс белого изображения путем изменения температуры и оттенка, задания коэффициента для каждого RGB-канала или выбора из списка предопределенных настроек баланса белого. Настройки по умолчанию для этого модуля берутся из данных баланса белого камеры, сохраненных в EXIF-данных изображения. Модуль white balance не предназначен для «творческой» обработки — его основная цель заключается в технической коррекции баланса белого изображения, чтобы нейтральные цвета объектов в сцене отображались как нейтральные цвета на изображении. Для творческих операций с цветом лучше использовать другие модули, такие как co­lor ca­lib­ra­ti­on (цветовая калибровка) или co­lor balance rgb (цветовой баланс RGB). Примечание: Модуль color calibration теперь предоставляет более…","headline":"Модуль white balance (баланс белого)","image":"https://shikhalev.github.io/img/53/21/cto7c827.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tr/darktable/manual/module-reference/processing-modules/white-balance/"},"url":"https://shikhalev.github.io/tr/darktable/manual/module-reference/processing-modules/white-balance/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "u2gczedmo7");
+</script>
+
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.14.css" />
+<script type="module" src="/js/is-images-0.8.0.14.js"></script>
+<!-- end of jekyll-is-images stuff -->
+
+</head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.*</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-credit-card" href="/merch/">Мерч</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-folder-open-black" href="/tr/" title="Переводы">Переводы</a>​<a class="fa-icon-camera" href="/tr/darktable/" title="darktable">darktable</a>​<a class="fa-icon-book-open" href="/tr/darktable/manual/" title="Darktable: Руководство пользователя">Руководство</a>​<a class="fa-icon-folder-open-black" href="/tr/darktable/manual/module-reference/" title="Справочник модулей">Модули</a>​<a class="fa-icon-folder-open-black" href="/tr/darktable/manual/module-reference/processing-modules/" title="Модули обработки">Обработка</a></aside>
+<article class="layout-matter"><header class="page-header"><h1 class="title-matter" itemprop="name headline">Модуль white balance (баланс белого)</h1></header><ul class="origlink">
+  <li>
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/white-balance/">docs.darktable.org/usermanual/development/en/module-reference/processing-modules/white-balance/</a> v3.4</li>
+</ul>
+
+<section class="module">
+
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_250" style="--is-images-width:249px;" data-modes="grid,slides">
+<span title="Модуль «white balance»" class="__is_images_wrapper"><img src="/img/6c/cf/t7c97t25.webp" alt="Модуль «white balance»" class="__is_images_image __is_images_single" style="--is-images-width:249px;--is-images-aspect-ratio:83/67;" data-scale="1"></span>
+</figure>
+  <p>Регулирует баланс белого изображения путем изменения температуры и оттенка, задания коэффициента для каждого RGB-канала или выбора
+из списка предопределенных настроек баланса белого.</p>
+
+  <p>Настройки по умолчанию для этого модуля берутся из данных баланса белого камеры, сохраненных в EXIF-данных изображения.</p>
+
+  <p>Модуль <strong>white balance</strong> не предназначен для «творческой» обработки — его основная цель заключается в технической коррекции
+баланса белого изображения, чтобы нейтральные цвета объектов в сцене отображались как нейтральные цвета на изображении.
+Для творческих операций с цветом лучше использовать другие модули, такие как
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/color-calibration/"><em>co­lor ca­lib­ra­ti­on</em></a>
+(цветовая калибровка) или
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/color-balance-rgb/"><em>co­lor balance rgb</em></a>
+(цветовой баланс RGB).</p>
+
+  <hr>
+
+  <p><strong>Примечание:</strong> Модуль
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/color-calibration/"><em>color calibration</em></a>
+теперь предоставляет более современный и гибкий способ управления балансом белого. Модуль <em>co­lor ca­lib­ra­ti­on</em> может быть включен
+по умолчанию для новых изображений, если в <a href="https://docs.darktable.org/usermanual/development/en/preferences-settings/processing/">pre­fe­ren­ces &gt; pro­ces­sing &gt; auto-ap­ply pixel workflow
+de­fa­ults</a> выбрано значение «scene-referred»
+(filmic или sigmoid). Некоторые базовые настройки все еще требуются (и применяются автоматически) в модуле <em>white ba­lan­ce</em>, чтобы
+модуль <a href="/tr/darktable/manual/module-reference/processing-modules/demosaic/"><em>demosaic</em></a> (демозаика) работал корректно.</p>
+
+  <hr>
+
+  <h2 id="section">
+<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Элементы управления модуля</h2>
+
+  <h3 id="scene-illuminant-temp">
+<a class="anchor" href="#scene-illuminant-temp" aria-hidden="true"><span class="octicon octicon-link"></span></a>scene illuminant temp</h3>
+
+  <p>Этот раздел предоставляет элементы управления <em>temperature</em> (температура) и <em>tint</em> (оттенок) для регулировки баланса белого изображения.
+Кликните на мет­ку раздела <em>scene illuminant temp</em>, чтобы переключаться между тремя различными <a href="#colored-sliders">цветовыми режимами</a>
+для слайдеров температуры и оттенка.</p>
+
+  <dl>
+    <dt>temperature</dt>
+    <dd>
+      <p>Устанавливает цветовую температуру в кельвинах.</p>
+    </dd>
+    <dt>tint</dt>
+    <dd>
+      <p>Изменяет цветовой оттенок изображения, от пурпурного (tint &lt; 1) до зеленого (tint &gt; 1).</p>
+    </dd>
+  </dl>
+
+  <h3 id="section-1">
+<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Пресеты баланса белого</h3>
+
+  <dl>
+    <dt>setting</dt>
+    <dd>
+      <p>Выберите из предопределенного списка настроек баланса белого. Доступные настройки основаны на пресетах, предоставленных камерой,
+использованной для съемки фотографии. Помимо пресетов, оп­ре­де­лен­ных камерой, предоставляются следующие опции:</p>
+
+      <ul>
+        <li>
+          <p><em>as shot</em> (по умолчанию): Баланс белого, указанный камерой.</p>
+        </li>
+        <li>
+          <p><em>from image area</em>: Нарисуйте прямоугольник над нейтральным цветом на изображении, чтобы вычислить
+баланс белого на ос­но­ве этой области.</p>
+        </li>
+        <li>
+          <p><em>user modified</em>: Наиболее недавно измененная настройка. Руч­ная регулировка температуры, оттенка или
+коэффициентов ка­на­лов r/g/b автоматически выбирает эту опцию. Выберите эту настройку после выбора любого другого пресета,
+чтобы вернуть параметры к последнему измененному пользователем состоянию.</p>
+        </li>
+        <li>
+          <p><em>camera reference</em>: Устанавливает температуру на эталонную белую точку камеры, которая предполагается как D65
+(или ~6502K). Коэффициенты каналов баланса белого вычисляются так, чтобы чистый белый цвет в цветовом пространстве камеры
+преобразовывался в чистый белый в sRGB D65 (где чистый белый означает, что каждый цветовой канал имеет одинаковое значение).</p>
+        </li>
+      </ul>
+
+      <p>Для удобства последние четыре режима также можно установить, кликнув на одну из кнопок в <a href="#wb-button-bar">панели кнопок</a> над выпадающим
+списком <em>setting</em>.</p>
+    </dd>
+    <dt>finetune</dt>
+    <dd>
+      <p>Позволяет точно настроить пресет баланса белого, специфичный для камеры. Эта опция отображается только если доступна для данной камеры.
+Направление настройки зависит от предоставленных пресетов. Если для вашей камеры нет доступных пресетов баланса белого, ознакомьтесь
+с <a href="https://github.com/darktable-org/darktable/wiki/White-balance-presets">этим ру­ко­вод­с­т­вом</a>, чтобы узнать, как вы можете добавить свои собственные.</p>
+    </dd>
+  </dl>
+
+  <h3 id="channel-coefficients">
+<a class="anchor" href="#channel-coefficients" aria-hidden="true"><span class="octicon octicon-link"></span></a>channel coefficients</h3>
+
+  <p>Коэффициенты RGB-каналов автоматически вычисляются на основе указанных выше параметров и по умолчанию скрыты. Вы можете развернуть/свернуть раздел коэффициентов каналов, кликнув на метку «channel co­ef­fi­ci­ents» или на соседнюю треугольную кнопку.</p>
+
+  <dl>
+    <dt>red/green/blue</dt>
+    <dd>
+      <p>Устанавливает значение коэффициента каждого RGB-канала в диапазоне от 0 до 8.</p>
+    </dd>
+  </dl>
+
+  <h2 id="section-2">
+<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Дополнительные функции</h2>
+
+  <h3 id="colored-sliders">
+<a class="anchor" href="#colored-sliders" aria-hidden="true"><span class="octicon octicon-link"></span></a>Цветные слайдеры</h3>
+
+  <p>По умолчанию слайдеры модуля монохромные. Однако два варианта цветных слайдеров можно включить в <a href="https://docs.darktable.org/usermanual/development/en/preferences-settings/darkroom/">pre­fe­ren­ces &gt; dark­room &gt; white balance sli­der
+co­lors</a> или кликнув на метку раздела «scene illuminant temp».</p>
+
+  <dl>
+    <dt>no color (по умолчанию)</dt>
+    <dd>
+      <p>Фон слайдеров не окрашен.</p>
+    </dd>
+    <dt>illuminant color</dt>
+    <dd>
+      <p>Цвета слайдеров представляют цвет источника света (цвет, к которому вы настраиваете для достижения нейтрального белого).</p>
+    </dd>
+    <dt>effect emulation</dt>
+    <dd>
+      <p>Цвета слайдеров представляют эффект, который настройка оказала бы на сцену. Так отображают цвета слайдеров температуры/оттенка
+большинство других RAW-процессоров.</p>
+    </dd>
+  </dl>
+
+  <h3 id="wb-button-bar">
+<a class="anchor" href="#wb-button-bar" aria-hidden="true"><span class="octicon octicon-link"></span></a>Панель кнопок</h3>
+
+  <p>Панель кнопок — это простое дополнение, обеспечивающее доступ к внутренним настройкам баланса белого одним кликом. Вы можете отключить ее,
+отредактировав файл <code class="language-plaintext highlighter-rouge">darktablerc</code>. Найдите строку:</p>
+
+  <p><code class="language-plaintext highlighter-rouge">
+plugins/darkroom/temperature/button_bar=TRUE
+</code></p>
+
+  <p>и измените <code class="language-plaintext highlighter-rouge">TRUE</code> на <code class="language-plaintext highlighter-rouge">FALSE</code>.</p>
+
+  <h2 id="section-3">
+<a class="anchor" href="#section-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Предупреждение об использовании</h2>
+
+  <p>Единственные параметры, которые используются внутренне для работы этого модуля, — это <em>rgb channel coefficients</em> (коэффициенты RGB-каналов).
+Слайдеры <em>temperature</em> и <em>tint</em> предоставлены как более удобный способ регулировки этих параметров. Связь между коэффициентами каналов
+и слайдерами температуры/оттенка зависит от характеристик, специфичных для камеры, использованной для съемки фотографии. Это означает, что
+применение настроек баланса белого с изображения, снятого одной камерой, к из­о­б­ра­же­нию, снятому другой камерой, в общем случае не даст
+согласованных результатов.</p>
+
+  <p>Математическая связь между двумя наборами значений не является простой. Возможно установить коэффициенты каналов так, что не будет
+существовать эквивалентных значений температуры и оттенка (в основном, когда из слайдеров вычисляются очень высокие значения температуры).
+Поэтому редактирование баланса белого с использованием температуры и оттенка на изображении, ранее отредактированном с использованием
+коэффициентов каналов, может дать странные результаты, по крайней мере, в слу­ча­ях с высокими значениями температуры.</p>
+
+</section>
+
+
+
+
+<hr style="border: 2px; margin: 20px auto; width: 40%;">
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-matter">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#section">Элементы управления модуля</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#scene-illuminant-temp">scene illuminant temp</a></li>
+<li class="toc-entry toc-h3"><a href="#section-1">Пресеты баланса белого</a></li>
+<li class="toc-entry toc-h3"><a href="#channel-coefficients">channel coefficients</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#section-2">Дополнительные функции</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#colored-sliders">Цветные слайдеры</a></li>
+<li class="toc-entry toc-h3"><a href="#wb-button-bar">Панель кнопок</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#section-3">Предупреждение об использовании</a></li>
+</ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file"><a href="/lib/darktable/pg/1_base_processing/" title="Глава 1: Базовая обработка">Глава 1: Базовая обработка</a></li></ul>
+    </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li><li><a href="/feed/pub.xml" title="Публикации в СМИ">Публикации</a></li><li><a href="/feed/photo.xml" title="Тексты о фотографии">О фото</a></li><li><a href="/feed/life.xml" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a></li><li><a href="/feed/text.xml" title="Попытки литературного творчества">Тексты</a></li><li><a href="/feed/best.xml" title="«Самому себе он наиболее симпатичен» ©">Избранное</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <!-- <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a> -->
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <!-- <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a> -->
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2026 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

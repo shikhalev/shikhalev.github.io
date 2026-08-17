@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+  <link rel="stylesheet" href="/assets/local.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Модуль scopes (приборы) | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Модуль scopes (приборы)" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/scopes/ v4.6 Этот модуль предоставляет различные графические представления уровней яркости или хроматичности обработанного снимка. Наведите курсор мыши на модуль, чтобы отобразить кнопки для настройки отображения. Кнопки с левой стороны используются для выбора режима отображения, слева направо: вектороскоп, осциллограмма, парад каналов RGB и гистограмма. Кнопки с правой стороны управляют способом отрисовки графика для текущего анализатора. Высоту модуля scopes можно изменить, кликнув и перетащив нижнюю границу или удерживая Shift+Alt при прокрутке колёсика мыши. Ви­ди­мость модуля можно переключать с помощью горячей клавиши (по умолчанию Ctrl+Shift+H). По умолчанию модуль scopes находится в верхней части правой панели, но его можно переместить на левую панель в pre­fe­ren­ces &gt;…" />
+<meta name="twitter:description" property="og:description" content="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/scopes/ v4.6 Этот модуль предоставляет различные графические представления уровней яркости или хроматичности обработанного снимка. Наведите курсор мыши на модуль, чтобы отобразить кнопки для настройки отображения. Кнопки с левой стороны используются для выбора режима отображения, слева направо: вектороскоп, осциллограмма, парад каналов RGB и гистограмма. Кнопки с правой стороны управляют способом отрисовки графика для текущего анализатора. Высоту модуля scopes можно изменить, кликнув и перетащив нижнюю границу или удерживая Shift+Alt при прокрутке колёсика мыши. Ви­ди­мость модуля можно переключать с помощью горячей клавиши (по умолчанию Ctrl+Shift+H). По умолчанию модуль scopes находится в верхней части правой панели, но его можно переместить на левую панель в pre­fe­ren­ces &gt;…" />
+<link rel="canonical" href="https://shikhalev.github.io/tr/darktable/manual/module-reference/utility-modules/shared/scopes/" />
+<meta property="og:url" content="https://shikhalev.github.io/tr/darktable/manual/module-reference/utility-modules/shared/scopes/" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/64/ce/c7o1b66f.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/64/ce/c7o1b66f.webp" />
+<meta name="twitter:title" content="Модуль scopes (приборы)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2026-08-16T00:00:00+00:00","datePublished":"2026-08-16T00:00:00+00:00","description":"https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/scopes/ v4.6 Этот модуль предоставляет различные графические представления уровней яркости или хроматичности обработанного снимка. Наведите курсор мыши на модуль, чтобы отобразить кнопки для настройки отображения. Кнопки с левой стороны используются для выбора режима отображения, слева направо: вектороскоп, осциллограмма, парад каналов RGB и гистограмма. Кнопки с правой стороны управляют способом отрисовки графика для текущего анализатора. Высоту модуля scopes можно изменить, кликнув и перетащив нижнюю границу или удерживая Shift+Alt при прокрутке колёсика мыши. Ви­ди­мость модуля можно переключать с помощью горячей клавиши (по умолчанию Ctrl+Shift+H). По умолчанию модуль scopes находится в верхней части правой панели, но его можно переместить на левую панель в pre­fe­ren­ces &gt;…","headline":"Модуль scopes (приборы)","image":"https://shikhalev.github.io/img/64/ce/c7o1b66f.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tr/darktable/manual/module-reference/utility-modules/shared/scopes/"},"url":"https://shikhalev.github.io/tr/darktable/manual/module-reference/utility-modules/shared/scopes/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "u2gczedmo7");
+</script>
+
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.14.css" />
+<script type="module" src="/js/is-images-0.8.0.14.js"></script>
+<!-- end of jekyll-is-images stuff -->
+
+</head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.*</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-credit-card" href="/merch/">Мерч</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-folder-open-black" href="/tr/" title="Переводы">Переводы</a>​<a class="fa-icon-camera" href="/tr/darktable/" title="darktable">darktable</a>​<a class="fa-icon-book-open" href="/tr/darktable/manual/" title="Darktable: Руководство пользователя">Руководство</a>​<a class="fa-icon-folder-open-black" href="/tr/darktable/manual/module-reference/" title="Справочник модулей">Модули</a>​<a class="fa-icon-folder-open-black" href="/tr/darktable/manual/module-reference/utility-modules/" title="Служебные модули">Служебные</a>​<a class="fa-icon-folder-open-black" href="/tr/darktable/manual/module-reference/utility-modules/shared/" title="Общие модули">Общие</a></aside>
+<article class="layout-matter"><header class="page-header"><h1 class="title-matter" itemprop="name headline">Модуль scopes (приборы)</h1></header><ul class="origlink">
+  <li>
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/scopes/">https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/scopes/</a> v4.6</li>
+</ul>
+
+<section class="module">
+
+  <p>Этот модуль предоставляет различные графические представления уровней яркости или
+<a href="https://docs.darktable.org/usermanual/development/en/special-topics/color-management/color-dimensions/#definitions">хроматичности</a> обработанного снимка.</p>
+
+  <p>Наведите курсор мыши на модуль, чтобы отобразить кнопки для настройки отображения. Кнопки с левой стороны используются
+для выбора режима отображения, слева направо: вектороскоп, осциллограмма, парад каналов RGB и гистограмма. Кнопки с правой
+стороны управляют способом отрисовки графика для текущего анализатора.</p>
+
+  <p>Высоту модуля scopes можно изменить, кликнув и перетащив нижнюю границу или удерживая <code class="language-plaintext highlighter-rouge">Shift</code>+<code class="language-plaintext highlighter-rouge">Alt</code> при прокрутке колёсика мыши.
+Ви­ди­мость модуля можно переключать с помощью горячей клавиши (по умолчанию <code class="language-plaintext highlighter-rouge">Ctrl</code>+<code class="language-plaintext highlighter-rouge">Shift</code>+<code class="language-plaintext highlighter-rouge">H</code>).</p>
+
+  <p>По умолчанию модуль scopes находится в верхней части правой панели, но его можно переместить на левую панель
+в <a href="https://docs.darktable.org/usermanual/development/en/preferences-settings/miscellaneous/">pre­fe­ren­ces &gt; mi­s­cel­la­ne­o­us &gt; po­si­ti­on
+of the scopes module</a>.</p>
+
+  <p>По причинам производительности анализаторы используют данные предварительного просмотра снимка (изображение, отображаемое в модуле
+<a href="/tr/darktable/manual/module-reference/utility-modules/darkroom/navigation/">na­vi­ga­ti­on</a>), а не изображение высокого качества, показанное в центральной рабочей области. Предпросмотр рассчитывается
+в более низком разрешении и может использовать упрощённые методы, обходящие более ресурсоёмкие этапы обработки. Поэтому отображение
+может не точно передавать мелкие детали снимка и в некоторых аспектах отличаться от окончательно обработанного изображения.</p>
+
+  <h2 id="histogram">
+<a class="anchor" href="#histogram" aria-hidden="true"><span class="octicon octicon-link"></span></a>histogram (гистограмма)</h2>
+
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Модуль «scopes» / гистограмма" class="__is_images_wrapper"><img src="/img/f2/3c/625c2938.webp" alt="Модуль «scopes» / гистограмма" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
+  <p>Гистограмма показывает распределение пикселей по яркости для каждого цветового канала.</p>
+
+  <p>Горизонтальная ось отображает яркость от 0% до 100% для каждого канала. Вертикальная ось показывает количество пикселей
+с за­дан­ной яркостью.</p>
+
+  <p>По умолчанию отображаются данные для всех трёх цветовых каналов RGB. Кнопки красного, зелёного и синего цвета с правой стороны позволяют
+включать или выключать отображение каждого канала.</p>
+
+  <p>Первая кнопка с правой стороны переключает между логарифмическим и линейным отображением данных вертикальной оси (количества пикселей).</p>
+
+  <h2 id="waveform">
+<a class="anchor" href="#waveform" aria-hidden="true"><span class="octicon octicon-link"></span></a>waveform (осциллограмма)</h2>
+
+<figure id="fig-2" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Модуль «scopes» / осциллограмма (горизонтальная)" class="__is_images_wrapper"><img src="/img/70/6e/c5423ct7.webp" alt="Модуль «scopes» / осциллограмма (горизонтальная)" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
+  <p>Осциллограмма показывает данные, аналогичные гистограмме, но позволяет рассматривать их в пространственном контексте.</p>
+
+  <p>В «стандартной» горизонтальной осциллограмме горизонтальная ось соответствует горизонтальной оси снимка: правая сторона осциллограммы
+представляет правую часть снимка, а левая — левую.</p>
+
+  <p>Вертикальная ось отображает распределение пикселей по яркости для каждого канала: пунктирная линия вверху обозначает 100% яркость
+(значения выше могут быть обрезаны), пунктирная линия посередине — 50% яркости, а низ осциллограммы — 0% яркости.</p>
+
+  <p>Яркость каждой точки на осциллограмме отражает количество пикселей в дан­ной позиции (по горизонтальной оси), имеющих заданную яркость
+(по вер­ти­каль­ной оси). Чем ярче точка, тем больше пикселей с такой яркостью в этой позиции.</p>
+
+  <p>Как и в гистограмме, можно выборочно отображать красный, зелёный и синий каналы, нажимая соответствующие кнопки.</p>
+
+  <p>Первая кнопка с правой стороны переключает между горизонтальным (вы­ше) и вертикальным (ниже) режимами:</p>
+
+<figure id="fig-3" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Модуль «scopes» / осциллограмма (вертикальная)" class="__is_images_wrapper"><img src="/img/9e/8b/846o9ob2.webp" alt="Модуль «scopes» / осциллограмма (вертикальная)" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
+  <p>В вертикальной осциллограмме вертикальная ось графика соответствует вертикальной оси снимка, а горизонтальная ось отображает
+распределение пикселей по яркости. Вертикальная осциллограмма полезна для снимков в пор­т­рет­ном формате или для иного анализа изображения.</p>
+
+  <p>Подробности об осциллограмме darktable см. в статье <a href="https://www.darktable.org/2013/12/of-histograms-and-waveforms/">«Of Histograms and Waveforms»</a>.</p>
+
+  <h2 id="rgb-parade">
+<a class="anchor" href="#rgb-parade" aria-hidden="true"><span class="octicon octicon-link"></span></a>RGB parade (парад каналов RGB)</h2>
+
+<figure id="fig-4" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Модуль «scopes» / парад каналов (горизонтальный)" class="__is_images_wrapper"><img src="/img/68/f5/oet4et15.webp" alt="Модуль «scopes» / парад каналов (горизонтальный)" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
+  <p>Парад каналов RGB показывает те же данные, что и осциллограмма, но с раз­де­ле­ни­ем красного, зелёного и синего каналов, отображаемых рядом.</p>
+
+  <p>Как и в осциллограмме, нажатие кнопки с правой стороны модуля переключает между горизонтальным (выше) и вертикальным (ниже) режимами:</p>
+
+<figure id="fig-5" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Модуль «scopes» / парад каналов (вертикальный)" class="__is_images_wrapper"><img src="/img/b0/t4/2tb36835.webp" alt="Модуль «scopes» / парад каналов (вертикальный)" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
+  <p>Парад каналов RGB полезен для выравнивания интенсивности красного, зелёного и синего каналов. Он также помогает понять различия
+между каналами и их индивидуальные характеристики.</p>
+
+  <div class="unbreakable">
+
+    <h2 id="vectorscope">
+<a class="anchor" href="#vectorscope" aria-hidden="true"><span class="octicon octicon-link"></span></a>vectorscope (вектороскоп)</h2>
+
+<figure id="fig-6" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Модуль «scopes» / вектороскоп" class="__is_images_wrapper"><img src="/img/74/6e/t6ffbb4f.webp" alt="Модуль «scopes» / вектороскоп" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
+    <p>Вектороскоп отображает <a href="https://en.wikipedia.org/wiki/Chromaticity">хроматичность</a> без учёта яркости или пространственных данных.</p>
+
+  </div>
+
+  <p>Расстояние от центра графика обозначает насыщенность, а угол — оттенок. Области графика окрашены в зависимости от хроматичности цвета,
+которому они соответствуют в снимке. График отражает «объём» цвета, отображая более часто используемые цвета в более светлых тонах.</p>
+
+  <p>График включает «кольцо оттенков», представляющее максимальную насыщенность каждого оттенка (в ограниченном RGB) текущего профиля гистограммы.
+Основные и вторичные цвета RGB отмечены кружками по краю кольца оттенков.</p>
+
+  <h3 id="section">
+<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Цветовая гармония и дополнительные элементы управления вектороскопом</h3>
+
+  <p>Вектороскоп предоставляет дополнительные элементы управления, которые заслуживают отдельного обсуждения. При наведении курсора на модуль
+в ре­жи­ме вектороскопа отображаются следующие дополнительные кнопки:</p>
+
+<figure id="fig-7" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Модуль «scopes» / вектороскоп (кнопки)" class="__is_images_wrapper"><img src="/img/t9/be/t08cb4t5.webp" alt="Модуль «scopes» / вектороскоп (кнопки)" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
+  <p>Нажмите самую правую кнопку, чтобы переключить шкалу насыщенности между линейным и логарифмическим режимами.</p>
+
+  <p>Нажмите вторую справа кнопку, чтобы переключить цветовое пространство вектороскопа между <a href="https://en.wikipedia.org/wiki/CIELUV">CIELUV</a>,
+<a href="https://www.osapublishing.org/oe/fulltext.cfm?uri=oe-25-13-15131&amp;id=368272">JzAzBz</a> или <a href="https://en.wikipedia.org/wiki/RYB_color_model">RYB</a> —
+как упомянуто ранее, эти цветовые пространства исключают компонент яркости в этом модуле. График CIELUV рассчитывается быстрее и является
+известным стандартом, хотя JzAzBz может быть более точным с точки зрения восприятия.</p>
+
+  <p>Наконец, вдоль левого края модуля находятся кнопки, позволяющие наложить выбранный индикатор цветовой гармонии на график вектороскопа
+в цве­то­вом пространстве RYB. Например, ниже показана гармония «триада»:</p>
+
+<figure id="fig-8" class="__is_images_figure __is_images_single __is_images_width_300" style="--is-images-width:259px;" data-modes="grid,slides">
+<span title="Модуль «scopes» / вектороскоп (триада)" class="__is_images_wrapper"><img src="/img/7e/04/t63c03o0.webp" alt="Модуль «scopes» / вектороскоп (триада)" class="__is_images_image __is_images_single" style="--is-images-width:259px;--is-images-aspect-ratio:259/180;" data-scale="1"></span>
+</figure>
+  <p>Вращайте наложенные направляющие гармонии, наведя курсор на модуль и прокручивая колёсико мыши. Удерживайте <code class="language-plaintext highlighter-rouge">Ctrl</code> при прокрутке
+для более медленного вращения. Удерживайте <code class="language-plaintext highlighter-rouge">Shift</code> при прокрутке, чтобы изменить область, покрываемую направляющими.</p>
+
+  <p>Тип и положение выбранных направляющих гармонии сохраняются вместе с дан­ны­ми обработки снимка (в файле XMP и базе данных), поэтому их
+можно восстановить при возвращении к снимку для дальнейшей обработки.</p>
+
+  <p>Полное описание использования этой функциональности выходит за рамки данного справочного раздела, однако следующий обзор даёт базовое
+руководство по улучшению цветовой гармонии в снимке:</p>
+
+  <ol>
+    <li>
+      <p>С помощью модуля
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/darkroom/global-color-picker/">color picker</a>
+возьмите живые образцы ключевых цветных областей снимка.
+Выбор этих областей зависит от художественного замысла и желаемого настроения. В модуле глобального выбора цвета настройте отображение
+выбранных образцов на вектороскопе RYB.</p>
+    </li>
+    <li>
+      <p>Выберите тип цветовой гармонии, который вы хотите реализовать (или ближайший к фактическому распределению выбранных образцов).
+Вращайте направляющие (с помощью <code class="language-plaintext highlighter-rouge">Ctrl</code>+прокрутка), пока выбранные образцы не окажутся примерно внутри или рядом с направляющими гармонии.</p>
+    </li>
+    <li>
+      <p>Если некоторые выбранные образцы находятся за пределами направляющих, изменяйте цвета снимка, пока они не попадут в направляющие.
+Для этого можно использовать любой модуль обработки, но наилучшие результаты обычно достигаются с несколькими замаскированными
+экземплярами модуля <a href="https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/color-balance-rgb/"><em>color balance RGB</em></a>.</p>
+    </li>
+  </ol>
+
+  <p>Имейте в виду, что эти элементы управления служат базовым ориентиром для достижения цветовой гармонии — не пытайтесь принудительно
+подгонять цвета под направляющие в ущерб общему виду снимка. Полезные примеры использования этой функциональности можно найти
+в <a href="https://github.com/darktable-org/darktable/pull/13275">пулл-ре­к­вес­те</a>, который реализовал первоначальное изменение.</p>
+
+  <h3 id="section-1">
+<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Предостережения</h3>
+
+  <ul>
+    <li>
+      <p>Кольцо оттенков не является
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/darkroom/gamut/">проверкой цветового охвата</a>,
+так как цвет может находиться внутри кольца, но быть вне охвата из-за своей яркости или затемнения.</p>
+    </li>
+    <li>
+      <p>При настройке снимка с использованием цветового эталона более быстрые и точные результаты достигаются с помощью
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/color-calibration/#extracting-settings-using-a-color-checker">калибровки с цве­то­вым
+эта­ло­ном</a> в модуле <em>color calibration</em>.</p>
+    </li>
+    <li>
+      <p>Вектороскоп не имеет «линии тона кожи», которая является ошибочным обобщением, а не универсальным стандартом.</p>
+    </li>
+    <li>
+      <p>Вектороскоп представляет колориметрическое кодирование снимка, которое неизбежно отличается от восприятия изображения зрителем.</p>
+    </li>
+  </ul>
+
+  <h2 id="section-2">
+<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Настройка экспозиции</h2>
+
+  <p>Гистограмма, осциллограмма и парад каналов RGB могут использоваться для непосредственного изменения <em>экспозиции</em> и <em>уровня чёрного</em>
+модуля <a href="https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/exposure/"><em>ex­po­su­re</em></a>.</p>
+
+  <p>Для гистограммы кликните в правой части гистограммы и перетаскивайте вправо для увеличения или влево для уменьшения экспозиции.
+Аналогично можно управлять уровнем чёрного, кликнув и перетаскивая в левой части.</p>
+
+  <p>Для горизонтальной осциллограммы и парада каналов RGB перетаскивайте верхнюю часть графика вверх или вниз для увеличения или уменьшения
+экспозиции. Перетаскивайте нижнюю часть вверх или вниз для увеличения или уменьшения уровня чёрного.</p>
+
+  <p>Для вертикальной осциллограммы и парада каналов RGB соответствующие области находятся справа (экспозиция) и слева (уровень чёрного).</p>
+
+  <p>Также можно прокручивать колёсико мыши в соответствующей области — вместо перетаскивания — для настройки экспозиции и уровня чёрного.</p>
+
+  <p>Наконец, можно изменить поведение настройки следующим образом:</p>
+
+  <ul>
+    <li>
+      <p>Удерживайте <code class="language-plaintext highlighter-rouge">Ctrl</code>+<code class="language-plaintext highlighter-rouge">Shift</code> при настройке, чтобы обойти мягкие ограничения (например, для значительного переэкспонирования снимка).</p>
+    </li>
+    <li>
+      <p>Удерживайте <code class="language-plaintext highlighter-rouge">Ctrl</code> при настройке для более точной настройки. Ли­бо щёлкните правой кнопкой мыши, чтобы ввести точное значение настройки.</p>
+    </li>
+    <li>
+      <p>Дважды щёлкните по нужной области, чтобы сбросить значение до ис­ход­но­го.</p>
+    </li>
+  </ul>
+
+  <h2 id="section-3">
+<a class="anchor" href="#section-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Профиль гистограммы</h2>
+
+  <p>Данные снимка преобразуются в <em>профиль гистограммы</em> перед расчётом данных анализаторов. Вы можете выбрать этот профиль,
+щёлкнув правой кнопкой мыши на значках
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/darkroom/soft-proof/">программной цветопробы</a> или
+<a href="https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/darkroom/gamut/">проверки цветового ох­ва­та</a>
+в ниж­ней панели и выбрав нужный профиль. Когда программная цветопроба или проверка цветового охвата включены, анализаторы отображаются
+в про­фи­ле цветопробы.</p>
+
+  <p>Поскольку модуль «scopes» работает в конце конвейера предварительного просмотра, он получает данные в цветовом пространстве дисплея.
+Если используется цветовое пространство дисплея, которое не является «хорошо ведущим себя» (что часто встречается для профилей устройств),
+цвета, выходящие за пределы охвата профиля дисплея, могут быть обрезаны или искажены.</p>
+
+</section>
+
+
+
+
+<hr style="border: 2px; margin: 20px auto; width: 40%;">
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-matter">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#histogram">histogram (гистограмма)</a></li>
+<li class="toc-entry toc-h2"><a href="#waveform">waveform (осциллограмма)</a></li>
+<li class="toc-entry toc-h2"><a href="#rgb-parade">RGB parade (парад каналов RGB)</a></li>
+<li class="toc-entry toc-h2"><a href="#vectorscope">vectorscope (вектороскоп)</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#section">Цветовая гармония и дополнительные элементы управления вектороскопом</a></li>
+<li class="toc-entry toc-h3"><a href="#section-1">Предостережения</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#section-2">Настройка экспозиции</a></li>
+<li class="toc-entry toc-h2"><a href="#section-3">Профиль гистограммы</a></li>
+</ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file"><a href="/lib/darktable/pg/1_base_processing/" title="Глава 1: Базовая обработка">Глава 1: Базовая обработка</a></li></ul>
+    </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li><li><a href="/feed/pub.xml" title="Публикации в СМИ">Публикации</a></li><li><a href="/feed/photo.xml" title="Тексты о фотографии">О фото</a></li><li><a href="/feed/life.xml" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a></li><li><a href="/feed/text.xml" title="Попытки литературного творчества">Тексты</a></li><li><a href="/feed/best.xml" title="«Самому себе он наиболее симпатичен» ©">Избранное</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <!-- <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a> -->
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <!-- <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a> -->
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2026 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

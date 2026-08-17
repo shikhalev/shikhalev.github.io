@@ -151,6 +151,7 @@
 
       <div class="no_toc_section">
 
+      
       <figure id="fig-1" class="logo __is_images_figure __is_images_single __is_images_shaped __is_images_width_300 __is_images__right" style="shape-outside:url(/img/58/7f/23eb82f2.webp);--is-images-width:256px;" data-modes="grid,slides">
 <span class="__is_images_wrapper"><img src="/img/58/7f/23eb82f2.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:256px;--is-images-aspect-ratio:1/1;" data-scale="1"></span>
 </figure>
@@ -191,6 +192,7 @@
 
       <div class="no_toc_section">
 
+      
       <figure id="fig-2" class="logo __is_images_figure __is_images_single __is_images_width_350 __is_images__right" style="--is-images-width:320px;" data-modes="grid,slides">
 <a href="/img/ce/20/c2c0cbt1.webp" class="__is_images_wrapper"><img src="/img/01/4e/6c8733b1.webp" alt="" class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:80/57;" data-scale="1"></a>
 </figure>
@@ -225,6 +227,7 @@
 
       <div class="no_toc_section">
 
+      
       <figure id="fig-3" class="__is_images_figure __is_images_single __is_images_width_350 __is_images__right" style="--is-images-width:320px;" data-modes="grid,slides">
 <a href="/img/33/c4/6854ttcf.webp" title="Окно установщика FPC для Win32" class="__is_images_wrapper"><img src="/img/2c/fb/024t8794.webp" alt="Окно установщика FPC для Win32" class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:160/123;" data-scale="1"></a>
 </figure>
@@ -232,18 +235,18 @@
 а не <strong><a href="/tech/2011/10/fpc-hello-world.html">«Hello, World!»</a></strong></p>
 
 <p>Очевидно, чтобы использовать Free Pascal, первым делом нам надо откуда-то его взять и установить на свой компьютер.
-Для этого нужно зайти на официальный сайт в раздел «Download» <a href="#cite-download">[1]</a> и выбрать дистрибутив для своей системы.
+Для этого нужно зайти на официальный сайт в раздел «Download» <a href="/tech/2011/11/fpc-start.html#cite-download">[1]</a> и выбрать дистрибутив для своей системы.
 Далее следовать инструкциям на сайте. Для разных систем предусмотрены различные адекватные системы установки (на врезке
 показан установщик для Win32), в том числе deb- и rpm-пакеты для распространенных дистрибутивов Linux, dmg-образ
 для Mac OS X и т.д.</p>
 
 <p>Таким образом вы получите последний стабильный релиз. Пользователям Linux имеет смысл предварительно выяснить, нет ли пакета
-<code class="language-plaintext highlighter-rouge">fpc</code> в репозиториях родного дистрибутива… Скорее всего он там найдется, но далеко не факт, что свежей версии<sup id="fnref:packages"><a href="#fn:packages" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>.</p>
+<code class="language-plaintext highlighter-rouge">fpc</code> в репозиториях родного дистрибутива… Скорее всего он там найдется, но далеко не факт, что свежей версии<sup id="fnref:packages"><a href="/tech/2011/11/fpc-start.html#fn:packages" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>.</p>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:packages">
-      <p>Так, например, на момент написания этих строк в основном дереве портежей Gentoo самая новая версия — 2.4.0, <a href="#fnref:packages" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>Так, например, на момент написания этих строк в основном дереве портежей Gentoo самая новая версия — 2.4.0, <a href="/tech/2011/11/fpc-start.html#fnref:packages" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>
@@ -273,6 +276,7 @@
 
       <div class="no_toc_section">
 
+      
       <div class="right" style="max-width:320px;margin:0px;">
 
   <figure class="highlight">
@@ -298,23 +302,23 @@ Linking hello
 
 <p>Начнем по традиции с простейшей программы, делающей хоть что-то… Кто сказал «что-то полезное»? До чего-то
 полезного нам еще пилить и пилить. Достаточно типовой «Hello, World!» можно увидеть во врезке. Теперь можно
-сохранить этот текст в файл (например, <code class="language-plaintext highlighter-rouge">hello.pp</code><sup id="fnref:pp"><a href="#fn:pp" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>), скомпилировать командой <code class="language-plaintext highlighter-rouge">fpc hello</code> и запустить.
+сохранить этот текст в файл (например, <code class="language-plaintext highlighter-rouge">hello.pp</code><sup id="fnref:pp"><a href="/tech/2011/10/fpc-hello-world.html#fn:pp" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>), скомпилировать командой <code class="language-plaintext highlighter-rouge">fpc hello</code> и запустить.
 См. консольный фрагмент — если вы работаете в Linux или FreeBSD, результат должен быть похож. Да и в других
 системах отличия не особо существенны. Еще тут может выпасть предупреждение от компоновщика — на него внимания
 обращать не надо. Получилось? Теперь будем разбираться, что именно.</p>
 
 <p>В действительности, это не самый минимальный пример — я таки оставил одну <em>необязательную</em> строку, а именно — первую…
 Но давайте по порядку. Исходный код программы начинается с необязательного заголовка, состоящего из ключевого слова
-<code class="language-plaintext highlighter-rouge">program</code> и идентификатора. Заканчиваться <del>идентификатор</del> <ins>заголовок</ins><sup id="fnref:fix"><a href="#fn:fix" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> должен точкой с запятой,
+<code class="language-plaintext highlighter-rouge">program</code> и идентификатора. Заканчиваться <del>идентификатор</del> <ins>заголовок</ins><sup id="fnref:fix"><a href="/tech/2011/10/fpc-hello-world.html#fn:fix" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> должен точкой с запятой,
 как и любое предложение языка. Впрочем, не совсем так.</p>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:pp">
-      <p>FPC ищет исходные тексты по имени, подставляя расширения <code class="language-plaintext highlighter-rouge">.pas</code>, <code class="language-plaintext highlighter-rouge">.pp</code> и <code class="language-plaintext highlighter-rouge">.p</code>. Второй вариант указывает, что исходник предназначен именно для FPC, а не для произвольного компилятора Pascal. Именно его мы и будем использовать. <a href="#fnref:pp" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>FPC ищет исходные тексты по имени, подставляя расширения <code class="language-plaintext highlighter-rouge">.pas</code>, <code class="language-plaintext highlighter-rouge">.pp</code> и <code class="language-plaintext highlighter-rouge">.p</code>. Второй вариант указывает, что исходник предназначен именно для FPC, а не для произвольного компилятора Pascal. Именно его мы и будем использовать. <a href="/tech/2011/10/fpc-hello-world.html#fnref:pp" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:fix">
-      <p>Исправил грубую ошибку при переносе поста на shikhalev.org. Была бы не столь грубая, оставил бы. 2021.04.14. <a href="#fnref:fix" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>Исправил грубую ошибку при переносе поста на shikhalev.org. Была бы не столь грубая, оставил бы. 2021.04.14. <a href="/tech/2011/10/fpc-hello-world.html#fnref:fix" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>
@@ -344,21 +348,22 @@ Linking hello
 
       <div class="no_toc_section">
 
+      
       <figure id="fig-4" class="__is_images_figure __is_images_single __is_images_width_300 __is_images__right" style="--is-images-width:300px;" data-modes="grid,slides">
 <a href="/img/6t/tt/1etc1te3.webp" title="Скриншот IDE Lazarus" class="__is_images_wrapper"><img src="/img/co/f0/0ctbeco3.webp" alt="Скриншот IDE Lazarus" class="__is_images_image __is_images_single" style="--is-images-width:300px;--is-images-aspect-ratio:4/3;" data-scale="1"></a>
 </figure>
-<p><strong>Free Pascal</strong> <a href="#site-fpc">[1]</a>, точнее Free Pascal Compiler aka FPC — это свободный<sup id="fnref:fpc-free"><a href="#fn:fpc-free" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> кроссплатформенный компилятор
+<p><strong>Free Pascal</strong> <a href="/tech/2011/10/what-is-free-pascal.html#site-fpc">[1]</a>, точнее Free Pascal Compiler aka FPC — это свободный<sup id="fnref:fpc-free"><a href="/tech/2011/10/what-is-free-pascal.html#fn:fpc-free" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> кроссплатформенный компилятор
 языка программирования Pascal. В отличие от другой свободной реализации этого языка — GNU Pascal, FPC ориентирован
 не на стандарт, а на популярные диалекты — то, что когда-то называлось Object Pascal, а теперь Delphi Language.</p>
 
-<p>Существует также проект <strong>Lazarus</strong> <a href="#site-lazarus">[2]</a> — основанная на FPC свободная среда программирования, реализующая
+<p>Существует также проект <strong>Lazarus</strong> <a href="/tech/2011/10/what-is-free-pascal.html#site-lazarus">[2]</a> — основанная на FPC свободная среда программирования, реализующая
 значительную часть функционала собственно среды Borland Delphi (см. врезку). Простые проекты можно переносить практически
 без ру­ч­ной работы, после чего они могут быть скомпилированы для систем, отличных от Win32.</p>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:fpc-free">
-      <p>GNU General Public License, см. подраздел <a href="#licenses">«Лицензии»</a>. <a href="#fnref:fpc-free" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>GNU General Public License, см. подраздел <a href="/tech/2011/10/what-is-free-pascal.html#licenses">«Лицензии»</a>. <a href="/tech/2011/10/what-is-free-pascal.html#fnref:fpc-free" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>
