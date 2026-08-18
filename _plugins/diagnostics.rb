@@ -1,4 +1,7 @@
 
+require 'date'
+require 'time'
+
 class DiagnosticReport < Jekyll::Generator
 
   safe true
@@ -50,14 +53,22 @@ class DiagnosticReport < Jekyll::Generator
 
     def recommendations
       vals = @site.posts.docs.select { it.data['recommend'] }.select { no_image(it) }.map do |post|
-        "+ [#{ post.data['title'] }](#{ post.url })"
+        date = post.date
+        if date.is_a?(Time) || date.is_a?(Date)
+          date = date.strftime '%Y'
+        end
+        "+ [#{ post.data['title'] }](#{ post.url }) // #{ date }"
       end.to_a
       [ vals.join("\n\n"), vals.size ]
     end
 
     def bests
       vals = @site.categories['best'].select { no_image(it) }.map do |post|
-        "+ [#{ post.data['title'] }](#{ post.url })"
+        date = post.date
+        if date.is_a?(Time) || date.is_a?(Date)
+          date = date.strftime '%Y'
+        end
+        "+ [#{ post.data['title'] }](#{ post.url }) // #{ date }"
       end.to_a
       [ vals.join("\n\n"), vals.size ]
     end
