@@ -335,6 +335,10 @@ figure.__is_images_slide_figure {
   break-inside: avoid-column;
 }
 
+.__is_images_wrapper .__is_images_image {
+  vertical-align: bottom;
+}
+
 @media screen and (min-width: 779px) {
   .twocolumns {
     columns: 2;

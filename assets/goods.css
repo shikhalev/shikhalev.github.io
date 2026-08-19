@@ -335,6 +335,10 @@ figure.__is_images_slide_figure {
   break-inside: avoid-column;
 }
 
+.__is_images_wrapper .__is_images_image {
+  vertical-align: bottom;
+}
+
 /* Адаптивная сетка */
 .goods-min-grid {
   display: grid;
