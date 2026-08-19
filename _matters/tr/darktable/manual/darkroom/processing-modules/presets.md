@@ -1,6 +1,6 @@
 ---
 title: Пресеты
-date: 2027-08-17
+date: 2025-10-26
 source: https://docs.darktable.org/usermanual/development/en/darkroom/processing-modules/presets/
 ---
 

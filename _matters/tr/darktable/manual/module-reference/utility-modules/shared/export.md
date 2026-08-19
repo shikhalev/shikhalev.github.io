@@ -1,7 +1,7 @@
 ---
 title: Модуль export (экспорт)
 source: https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/export/
-date: 2026-08-16T01:40:52+05:00
+date: 2025-10-26
 ---
 
 {:.origlink}

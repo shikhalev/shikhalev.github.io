@@ -1,6 +1,6 @@
 ---
 title: Модуль rotate and perspective (поворот и перспектива)
-date: 2026-08-16
+date: 2025-10-26
 source: https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/rotate-perspective/
 ---
 

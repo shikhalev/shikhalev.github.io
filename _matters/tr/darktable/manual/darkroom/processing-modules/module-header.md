@@ -1,6 +1,6 @@
 ---
 title: Заголовок модуля
-date: 2026-08-17
+date: 2025-10-26
 source: https://docs.darktable.org/usermanual/development/en/darkroom/processing-modules/module-header/
 ---
 

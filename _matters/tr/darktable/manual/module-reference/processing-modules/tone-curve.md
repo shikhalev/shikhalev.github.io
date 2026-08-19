@@ -1,6 +1,6 @@
 ---
 title: Модуль tone curve (тоновая кривая)
-date: 2026-08-17
+date: 2025-10-26
 source: https://docs.darktable.org/usermanual/development/en/module-reference/processing-modules/tone-curve/
 ---
 

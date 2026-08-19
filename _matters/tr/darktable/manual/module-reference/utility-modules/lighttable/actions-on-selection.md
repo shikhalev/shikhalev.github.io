@@ -1,6 +1,6 @@
 ---
 title: Модуль actions on selection (действия над выбранными)
-date: 2026-08-14T20:38:10+05:00
+date: 2025-10-26
 source: https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/selected-image/
 ---
 

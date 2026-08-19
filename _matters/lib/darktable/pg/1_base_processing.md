@@ -4,12 +4,6 @@ date: 2025-10-26
 redirect_from: pages/books/darktable/pg/1_base_processing.html
 ---
 
-<hr style="border: 2px; margin: 20px auto; width: 40%;">
-
-{% include book/gpl.html %}
-
------
-
 Во **[«Введении»][intro]** мы рассмотрели просмотр, отбор и конвертацию по умолчанию raw-файлов, а также основные принципы ус­т­рой­с­т­ва
 интерфейса **[darktable][darktable]**. Теперь перейдем к случаям, когда конвертация по умолчанию не подходит.
 
@@ -642,10 +636,6 @@ display encoding
 + Использовать пресеты.
 
 А также знаем, где выставляется баланс белого, и в каких случаях его следует менять.
-
------
-
-{% include book/gpl.html %}
 
 [darktable]: https://www.darktable.org/
 [intro]: {% link _matters/lib/darktable/pg/0_intro.md %}
