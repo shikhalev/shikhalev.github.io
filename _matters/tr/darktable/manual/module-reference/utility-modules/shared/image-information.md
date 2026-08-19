@@ -1,6 +1,6 @@
 ---
 title: Модуль image information (информация об изображении)
-date: 2026-08-16
+date: 2025-10-26
 source: https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/image-information/
 ---
 

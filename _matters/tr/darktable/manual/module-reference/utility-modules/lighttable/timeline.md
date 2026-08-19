@@ -1,7 +1,7 @@
 ---
 title: Модуль timeline (таймлайн)
 source: https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/lighttable/timeline/
-date: 2026-08-16
+date: 2025-10-26
 ---
 
 {:.origlink}

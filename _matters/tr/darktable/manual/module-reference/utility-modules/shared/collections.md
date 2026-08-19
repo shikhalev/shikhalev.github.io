@@ -1,6 +1,6 @@
 ---
 title: Модуль collections (коллекции)
-date: 2026-08-16T01:11:05+05:00
+date: 2025-10-26
 source: https://docs.darktable.org/usermanual/development/en/module-reference/utility-modules/shared/collections/
 ---
 
