@@ -4,12 +4,6 @@ date: 2025-10-26
 redirect_from: pages/books/darktable/pg/0_intro.html
 ---
 
-<hr style="border: 2px; margin: 20px auto; width: 40%;">
-
-{% include book/gpl.html %}
-
------
-
 **darktable** представляет собой *свободное* программное обеспечение для обработки RAW-фото с неразрушающим
 редактированием, распространяемое под лицензией [GPL v3](https://www.gnu.org/licenses/gpl-3.0.en.html). Программа
 ориентирована на сохранение оригиналов изображений и пре­до­став­ле­ние инструментов для их обработки. **darktable**
@@ -40,18 +34,18 @@ redirect_from: pages/books/darktable/pg/0_intro.html
 там содержится версия 4.6.1, а для установки свежей версии нужно добавить PPA в менеджере приложений или посредством
 командной строки:
 
-```shell
+{% highlight bash %}
 $ sudo add-apt-repository ppa:ubuntuhandbook1/darktable
 $ sudo apt update
 $ sudo apt install darktable
-```
+{% endhighlight %}
 
 Другой вариант — включить в менеджере приложений непроверенные flatpak-пакеты и установить **darktable** с FlatHub.
 Опять же это можно сделать как через менеджер приложений, так и в командной строке:
 
-```shell
+{% highlight bash %}
 $ sudo flatpak install org.darktable.Darktable
-```
+{% endhighlight %}
 
 Если у вас Gentoo, рекомендуется перед установкой добавить USE-флаг `opencl`, чтобы можно было задействовать GPU, что
 дает существенное ускорение многих операций обработки.
@@ -449,7 +443,3 @@ geotagging
 [^piwigo]: <https://ru.piwigo.org/>
 
 [^recent]: В версии 5.2.1 (возможно, и в более ранних) отдельный модуль для истории коллекций отсутствует, только кнопка в модуле collections. А документация обновляется с некоторым запозданием.
-
------
-
-{% include book/gpl.html %}
