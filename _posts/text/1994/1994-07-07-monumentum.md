@@ -3,6 +3,7 @@ layout: verse
 title: Памятник
 caption: "* * *"
 category: [ text, verses, best ]
+image: _src/covers/monum96.png
 ---
 Поставьте памятник людям,
 Чья совесть чиста.
