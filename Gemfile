@@ -32,7 +32,7 @@ group :jekyll_plugins do
   gem "jekyll-remote-theme"
   gem "jekyll-redirect-from"
   gem "jekyll-is-announcer", '~> 0.8.3' # path: '/home/ivan/wrk/projects/site/jekyll-is/jekyll-is-announcer'
-  gem 'jekyll-is-images', '~> 0.8.2'
+  gem 'jekyll-is-images', '~> 0.8.2.4'
 end
 
 gem 'jekyll-theme-shikhalev', '>= 0.1.0.20'
