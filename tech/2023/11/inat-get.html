@@ -73,8 +73,8 @@
 </script>
 
 <!-- jekyll-is-images plugin stuff -->
-<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.14.css" />
-<script type="module" src="/js/is-images-0.8.0.14.js"></script>
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.2.css" />
+<script type="module" src="/js/is-images-0.8.2.js"></script>
 <!-- end of jekyll-is-images stuff -->
 
 </head>
@@ -126,8 +126,8 @@
 как из любопытства и желания поучаствовать. Тем не ме­нее делаю пост уже сейчас в на­деж­де, что любопытные желающие найдутся.
 Со сво­ей стороны готов подробно отвечать на во­про­сы и учитывать пожелания.</p>
 
-<h2 id="section">
-<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Зачем?</h2>
+<h2 id="зачем">
+<a class="anchor" href="#%D0%B7%D0%B0%D1%87%D0%B5%D0%BC" aria-hidden="true"><span class="octicon octicon-link"></span></a>Зачем?</h2>
 
 <p><strong><a href="https://www.inaturalist.org/" class="img-icon-inaturalist">iNaturalist</a></strong> предоставляет открытый доступ к ог­ром­но­му массиву наблюдений, а также
 по су­ти к по­сто­ян­но ак­ту­али­зи­ру­ему таксономическому справочнику (тут можно обсуждать нюансы, но для лю­би­тель­с­ких целей
@@ -154,16 +154,18 @@
 </ul>
 
 <p>Эти посты были сформированы по дан­ным выгрузок, а не API, посредством мною же написанного <strong><a href="https://github.com/shikhalev/inat-script" class="img-icon-github">inat-script</a></strong>,
-в про­цес­се работы с ко­то­рым (и над ко­то­рым) я осознал все недостатки механизма выгрузок:
-* ограниченность данных;
-* необходимость ручного создания процесса выгрузки и, потом, загрузки файла;
-* и глав­ное — неизвестный заранее срок го­тов­нос­ти — некоторые выгрузки делались вовсе несколько дней.</p>
+в про­цес­се работы с ко­то­рым (и над ко­то­рым) я осознал все недостатки механизма выгрузок:</p>
+<ul>
+  <li>ограниченность данных;</li>
+  <li>необходимость ручного создания процесса выгрузки и, потом, загрузки файла;</li>
+  <li>и глав­ное — неизвестный заранее срок го­тов­нос­ти — некоторые выгрузки делались вовсе несколько дней.</li>
+</ul>
 
 <p>Кроме того, сам скрипт, как всякий первый блин, требовал существенной переработки для то­го, чтобы удобно внедрять в не­го новые
 варианты выборок и отчетов, и я решил написать с ну­ля новый инструмент, работающий непосредственно с API.</p>
 
-<h2 id="section-1">
-<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Принцип действия</h2>
+<h2 id="принцип-действия">
+<a class="anchor" href="#%D0%BF%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF-%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D1%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>Принцип действия</h2>
 
 <p>На са­мом деле я сначала пытался сделать как-то так, чтобы отчеты формировались через конфигурационные файлы. Однако гибкости
 в та­ком подходе никакой (ну или потребуется senior-yaml-de­ve­lo­per для ис­поль­зо­ва­ния, ЕВПОЧЯ). В ито­ге пришел к вы­во­ду, что
@@ -222,8 +224,8 @@
 этого ограничения мы не ви­дим и работаем с пол­ны­ми да­та­се­та­ми (объемом 3k+ и 4k+) — <strong>организация последовательной постраничной загрузки</strong>
 так же находится под капотом.</p>
 
-<h3 id="section-2">
-<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Некоторые детали</h3>
+<h3 id="некоторые-детали">
+<a class="anchor" href="#%D0%BD%D0%B5%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Некоторые детали</h3>
 
 <ul>
   <li>
@@ -283,8 +285,8 @@
   </li>
 </ul>
 
-<h2 id="section-3">
-<a class="anchor" href="#section-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Установка</h2>
+<h2 id="установка">
+<a class="anchor" href="#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Установка</h2>
 
 <p>Установка максимально проста:</p>
 
@@ -295,14 +297,14 @@
 <p>Правда, <em>на дан­ный момент все это гарантированно работает только под Li­nux</em>. Тестирование под Win­dows в пла­нах есть, но скорее ближе
 к весне.</p>
 
-<h2 id="section-4">
-<a class="anchor" href="#section-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Планы</h2>
+<h2 id="планы">
+<a class="anchor" href="#%D0%BF%D0%BB%D0%B0%D0%BD%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Планы</h2>
 
 <p>Вообще, на гит­ха­бе есть такой замечательный раздел <strong><a href="https://github.com/shikhalev/inat-get/issues" class="img-icon-github">«Issues»</a></strong>, где можно посмотреть процесс планирования в ре­аль­ном времени.
 Здесь постараюсь дать сводную картину.</p>
 
-<h3 id="section-5">
-<a class="anchor" href="#section-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>К версии 1.0</h3>
+<h3 id="к-версии-10">
+<a class="anchor" href="#%D0%BA-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8-10" aria-hidden="true"><span class="octicon octicon-link"></span></a>К версии 1.0</h3>
 
 <dl>
   <dt>Документация</dt>
@@ -330,8 +332,8 @@
   </dd>
 </dl>
 
-<h3 id="section-6">
-<a class="anchor" href="#section-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Дальнейшее развитие</h3>
+<h3 id="дальнейшее-развитие">
+<a class="anchor" href="#%D0%B4%D0%B0%D0%BB%D1%8C%D0%BD%D0%B5%D0%B9%D1%88%D0%B5%D0%B5-%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Дальнейшее развитие</h3>
 
 <dl>
   <dt>Разнообразные возможности вывода</dt>
@@ -349,8 +351,8 @@
   </dd>
 </dl>
 
-<h2 id="section-7">
-<a class="anchor" href="#section-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>Обратная связь</h2>
+<h2 id="обратная-связь">
+<a class="anchor" href="#%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Обратная связь</h2>
 
 <p>Буду рад вопросам, замечаниям и предложениям, как в ком­мен­та­ри­ях к это­му посту, так и в <a href="https://github.com/shikhalev/inat-get/discussions">со­от­вет­с­т­ву­ю­щем разделе на <strong class="img-icon-github">Git­Hub</strong></a>.
 Можно так же писать в лич­ные сообщения на iNa­tu­ra­list, хотя предпочтительно все же общаться в от­кры­тых комментариях, чтобы не воз­ни­ка­ло
@@ -398,20 +400,20 @@
 </aside><aside id="toc" class="toc toc-post">
   <h4>Содержание</h4>
   <ul id="toc_list" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#section">Зачем?</a></li>
-<li class="toc-entry toc-h2"><a href="#section-1">Принцип действия</a>
+<li class="toc-entry toc-h2"><a href="#зачем">Зачем?</a></li>
+<li class="toc-entry toc-h2"><a href="#принцип-действия">Принцип действия</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#section-2">Некоторые детали</a></li>
+<li class="toc-entry toc-h3"><a href="#некоторые-детали">Некоторые детали</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#section-3">Установка</a></li>
-<li class="toc-entry toc-h2"><a href="#section-4">Планы</a>
+<li class="toc-entry toc-h2"><a href="#установка">Установка</a></li>
+<li class="toc-entry toc-h2"><a href="#планы">Планы</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#section-5">К версии 1.0</a></li>
-<li class="toc-entry toc-h3"><a href="#section-6">Дальнейшее развитие</a></li>
+<li class="toc-entry toc-h3"><a href="#к-версии-10">К версии 1.0</a></li>
+<li class="toc-entry toc-h3"><a href="#дальнейшее-развитие">Дальнейшее развитие</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#section-7">Обратная связь</a></li>
+<li class="toc-entry toc-h2"><a href="#обратная-связь">Обратная связь</a></li>
 </ul>
 </aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/tech/2026/03/inat-get-0-9.html" title="Релизнул таки новую, полностью переписанную, версию...">iNatGet v0.9.0</a></li></ul>
     </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>

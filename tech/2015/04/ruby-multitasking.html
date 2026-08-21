@@ -73,8 +73,8 @@
 </script>
 
 <!-- jekyll-is-images plugin stuff -->
-<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.14.css" />
-<script type="module" src="/js/is-images-0.8.0.14.js"></script>
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.2.css" />
+<script type="module" src="/js/is-images-0.8.2.js"></script>
 <!-- end of jekyll-is-images stuff -->
 
 </head>
@@ -134,8 +134,8 @@
 
 <!--more-->
 
-<h2 id="section">
-<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Многопоточность</h2>
+<h2 id="многопоточность">
+<a class="anchor" href="#%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%D0%BF%D0%BE%D1%82%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Многопоточность</h2>
 
 <p>Потоки позволяют программисту распараллелить выполнение задачи в рамках одного процесса. Это дает заметный выигрыш в двух основных
 случаях: во-первых, когда есть аппаратные ресурсы для параллельных вычислений, т.е. многоядерная или многопроцессорная архитектура
@@ -218,8 +218,8 @@ terminate</span></code></pre>
 
 <p>Причем, если мы закомментируем строку «<code class="language-plaintext highlighter-rouge">sleep 0</code>», то до «<code class="language-plaintext highlighter-rouge">continued</code>» дело может и не дойти.</p>
 
-<h3 id="section-1">
-<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Обмен данными между потоками</h3>
+<h3 id="обмен-данными-между-потоками">
+<a class="anchor" href="#%D0%BE%D0%B1%D0%BC%D0%B5%D0%BD-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-%D0%BF%D0%BE%D1%82%D0%BE%D0%BA%D0%B0%D0%BC%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Обмен данными между потоками</h3>
 
 <p><em>Во-первых,</em> мы можем передавать блоку аргументы при создании потока:</p>
 
@@ -332,8 +332,8 @@ terminate</span></code></pre>
 
 <p>И, <em>в-пятых,</em> для потоков применимы описываемые ниже способы взаимодействия между процессами.</p>
 
-<h3 id="section-2">
-<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Отступление о «волокнах»</h3>
+<h3 id="отступление-о-волокнах">
+<a class="anchor" href="#%D0%BE%D1%82%D1%81%D1%82%D1%83%D0%BF%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BE-%D0%B2%D0%BE%D0%BB%D0%BE%D0%BA%D0%BD%D0%B0%D1%85" aria-hidden="true"><span class="octicon octicon-link"></span></a>Отступление о «волокнах»</h3>
 
 <p>«Волокна» (fibers) имеют косвенное отношение к теме статьи, но не упомянуть их нельзя, хотя бы
 из-за вышеописанного обращения к fiber-local переменным. По сути это сопрограммы, переключение
@@ -362,8 +362,8 @@ terminate</span></code></pre>
 <p>В целом, это довольно экзотический инструмент, которому в явном виде не так-то просто найти
 практическое применение.</p>
 
-<h3 id="section-3">
-<a class="anchor" href="#section-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Дополнительно о потоках</h3>
+<h3 id="дополнительно-о-потоках">
+<a class="anchor" href="#%D0%B4%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE-%D0%BE-%D0%BF%D0%BE%D1%82%D0%BE%D0%BA%D0%B0%D1%85" aria-hidden="true"><span class="octicon octicon-link"></span></a>Дополнительно о потоках</h3>
 
 <p>Для группировки потоков существует класс <code class="language-plaintext highlighter-rouge">ThreadGroup</code>, который не предоставляет никакой особой функциональности,
 кроме контроля за тем, что каждый поток принадлежит одной и только одной группе. Не добавленный ни в какую группу
@@ -377,8 +377,8 @@ terminate</span></code></pre>
 <p>Еще одна полезная библиотека («<code class="language-plaintext highlighter-rouge">require 'thwait'</code>» и класс <code class="language-plaintext highlighter-rouge">ThreadsWait</code>) позволяет ожидать завершения некоего набора
 потоков, как всех вместе, так и по очереди.</p>
 
-<h2 id="ruby">
-<a class="anchor" href="#ruby" aria-hidden="true"><span class="octicon octicon-link"></span></a>Процессы в Ruby</h2>
+<h2 id="процессы-в-ruby">
+<a class="anchor" href="#%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D1%8B-%D0%B2-ruby" aria-hidden="true"><span class="octicon octicon-link"></span></a>Процессы в Ruby</h2>
 
 <p>Собственно запуск программы на Ruby, как и на любом другом языке — есть запуск процесса. Который, в свою очередь,
 может порождать дочерние и общаться как с ними, так и с совершенно независимыми от него. Ключевое отличие дочернего
@@ -453,8 +453,8 @@ Child [9034]: 2</span></code></pre>
 правами доступа, текущим каталогом и, самое главное, перенаправлениями ввода-вывода. В самом же простом случае достаточно указать
 только команду.</p>
 
-<h3 id="section-4">
-<a class="anchor" href="#section-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Сигналы</h3>
+<h3 id="сигналы">
+<a class="anchor" href="#%D1%81%D0%B8%D0%B3%D0%BD%D0%B0%D0%BB%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Сигналы</h3>
 
 <p>Процессы могут посылать друг другу сигналы и как-то на них реагировать. Вообще говоря, сигналы — это скорее механизм
 для общения операционной системы с процессами, и большинство из них зарезервировано под специальные нужды, однако
@@ -506,8 +506,8 @@ Child died.</span></code></pre>
 <p>К сожалению, посредством сигналов мы можем сообщить процессу только о наступлении некоторого события, без подробной
 информации. А всю информацию между процессами нужно передавать средствами ввода-вывода.</p>
 
-<h3 id="section-5">
-<a class="anchor" href="#section-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Каналы ввода-вывода</h3>
+<h3 id="каналы-ввода-вывода">
+<a class="anchor" href="#%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D1%8B-%D0%B2%D0%B2%D0%BE%D0%B4%D0%B0-%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Каналы ввода-вывода</h3>
 
 <p>Общим способом для любых дочерних процессов будет перенаправление ввода-вывода посредством каналов (pipes).
 Для внутренних подпроцессов это выглядит так:</p>
@@ -551,8 +551,8 @@ Child died.</span></code></pre>
 <p>В приведенных примерах использовалась передача данных только в одну сторону, что, конечно, необязательно. Можно создавать
 произвольное количество каналов и назначать их как выводу, так и вводу.</p>
 
-<h3 id="section-6">
-<a class="anchor" href="#section-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Сокеты</h3>
+<h3 id="сокеты">
+<a class="anchor" href="#%D1%81%D0%BE%D0%BA%D0%B5%D1%82%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Сокеты</h3>
 
 <p>Сокеты — это совсем универсальный механизм взаимодействия произвольных программ между собою, в том числе и по сети.
 Здесь уже не важно, как и где запускается процесс-собеседник, нужно только знать адрес и протокол обмена (формат данных).
@@ -563,8 +563,8 @@ Child died.</span></code></pre>
 о которой я писал в одной из предыдущих статей<sup id="fnref:druby"><a href="#fn:druby" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>. Здесь же стоит сказать, что dRuby позволяет обращаться к объекту
 в другом процессе (и, возможно, на другой машине) как к локальному объекту Ruby со всеми его методами, свойствами и т.д.</p>
 
-<h2 id="section-7">
-<a class="anchor" href="#section-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>Применение</h2>
+<h2 id="применение">
+<a class="anchor" href="#%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Применение</h2>
 
 <p>Подведем некоторые итоги.</p>
 
@@ -642,21 +642,21 @@ Child died.</span></code></pre>
 </aside><aside id="toc" class="toc toc-post">
   <h4>Содержание</h4>
   <ul id="toc_list" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#section">Многопоточность</a>
+<li class="toc-entry toc-h2"><a href="#многопоточность">Многопоточность</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#section-1">Обмен данными между потоками</a></li>
-<li class="toc-entry toc-h3"><a href="#section-2">Отступление о «волокнах»</a></li>
-<li class="toc-entry toc-h3"><a href="#section-3">Дополнительно о потоках</a></li>
+<li class="toc-entry toc-h3"><a href="#обмен-данными-между-потоками">Обмен данными между потоками</a></li>
+<li class="toc-entry toc-h3"><a href="#отступление-о-волокнах">Отступление о «волокнах»</a></li>
+<li class="toc-entry toc-h3"><a href="#дополнительно-о-потоках">Дополнительно о потоках</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#ruby">Процессы в Ruby</a>
+<li class="toc-entry toc-h2"><a href="#процессы-в-ruby">Процессы в Ruby</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#section-4">Сигналы</a></li>
-<li class="toc-entry toc-h3"><a href="#section-5">Каналы ввода-вывода</a></li>
-<li class="toc-entry toc-h3"><a href="#section-6">Сокеты</a></li>
+<li class="toc-entry toc-h3"><a href="#сигналы">Сигналы</a></li>
+<li class="toc-entry toc-h3"><a href="#каналы-ввода-вывода">Каналы ввода-вывода</a></li>
+<li class="toc-entry toc-h3"><a href="#сокеты">Сокеты</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#section-7">Применение</a></li>
+<li class="toc-entry toc-h2"><a href="#применение">Применение</a></li>
 </ul>
 </aside><aside id="backs" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
 

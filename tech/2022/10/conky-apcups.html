@@ -73,8 +73,8 @@
 </script>
 
 <!-- jekyll-is-images plugin stuff -->
-<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.14.css" />
-<script type="module" src="/js/is-images-0.8.0.14.js"></script>
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.2.css" />
+<script type="module" src="/js/is-images-0.8.2.js"></script>
 <!-- end of jekyll-is-images stuff -->
 
 </head>
@@ -135,8 +135,8 @@
 
 <p>Вообще, по идее, п. 2 должен идти до п. 1, но… Впрочем, по порядку.</p>
 
-<h2 id="section">
-<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Настройка сервисов</h2>
+<h2 id="настройка-сервисов">
+<a class="anchor" href="#%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D0%BE%D0%B2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Настройка сервисов</h2>
 
 <p>Я как гентушник и ретроград использую OpenRC и понятия не имею, как это все делается при использовании systemd. Впрочем, это должно легко гуглиться.</p>
 
@@ -164,8 +164,8 @@
 прописать в конфиги в переменную <code class="language-plaintext highlighter-rouge">DEVICE</code> в виде <code class="language-plaintext highlighter-rouge">DEVICE /dev/usb/hiddev0</code>, например. Это будет работать, но номер <code class="language-plaintext highlighter-rouge">hiddev</code> может смениться. Поэтому
 переходим к следующему пункту.</p>
 
-<h2 id="hid-">
-<a class="anchor" href="#hid-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Постоянные симлинки на HID-устройства</h2>
+<h2 id="постоянные-симлинки-на-hid-устройства">
+<a class="anchor" href="#%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%BD%D1%8B%D0%B5-%D1%81%D0%B8%D0%BC%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8-%D0%BD%D0%B0-hid-%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Постоянные симлинки на HID-устройства</h2>
 
 <p>В каталоге <code class="language-plaintext highlighter-rouge">/etc/udev/rules.d</code> создаем файл правил (например, <code class="language-plaintext highlighter-rouge">80-ups-hiddev.rules</code>):</p>
 
@@ -181,8 +181,8 @@ KERNEL=="hiddev*", ATTRS{serial}=="4B1813P15017", SYMLINK="usb_xs1400u"</code></
 
 <p>Перезагружаемся.</p>
 
-<h2 id="conky">
-<a class="anchor" href="#conky" aria-hidden="true"><span class="octicon octicon-link"></span></a>Настройка Conky</h2>
+<h2 id="настройка-conky">
+<a class="anchor" href="#%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-conky" aria-hidden="true"><span class="octicon octicon-link"></span></a>Настройка Conky</h2>
 
 <p>С одной стороны, в Conky есть специальные выражения для получения данных от сервиса <code class="language-plaintext highlighter-rouge">apcupsd</code>, причем есть даже и специальный вызов <code class="language-plaintext highlighter-rouge">${apcupsd host}</code>
 для выбора хоста и порта… Но, с другой стороны, работает этот вызов один раз, т.е. мы можем выводить данные по любому UPS, но только по одному. Что
@@ -190,14 +190,14 @@ KERNEL=="hiddev*", ATTRS{serial}=="4B1813P15017", SYMLINK="usb_xs1400u"</code></
 
 <p>В итоге я опять же решил это дело скриптом. Модуль для этого, как обычно, помещен на <strong><a href="https://github.com/shikhalev/conky" class="img-icon-github">GitHub</a></strong>, модуль <a href="https://github.com/shikhalev/conky/blob/main/lua/apcups.lua"><code class="language-plaintext highlighter-rouge">apcups</code></a>.</p>
 
-<h3 id="section-1">
-<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Как это работает</h3>
+<h3 id="как-это-работает">
+<a class="anchor" href="#%D0%BA%D0%B0%D0%BA-%D1%8D%D1%82%D0%BE-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82" aria-hidden="true"><span class="octicon octicon-link"></span></a>Как это работает</h3>
 
 <p>Используется вызов внешней утилиты — <code class="language-plaintext highlighter-rouge">apcaccess</code>, выдача которой парсится и помещается в таблицу в памяти, чтобы не дергать внешний вызов на каждое
 свойство.</p>
 
-<h3 id="section-2">
-<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Как использовать</h3>
+<h3 id="как-использовать">
+<a class="anchor" href="#%D0%BA%D0%B0%D0%BA-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Как использовать</h3>
 
 <p>Все работает по сути через одну функцию:</p>
 
@@ -273,12 +273,12 @@ ${lua apcups localhost:3551 bcharge}%</code></pre>
 </aside><aside id="toc" class="toc toc-post">
   <h4>Содержание</h4>
   <ul id="toc_list" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#section">Настройка сервисов</a></li>
-<li class="toc-entry toc-h2"><a href="#hid-">Постоянные симлинки на HID-устройства</a></li>
-<li class="toc-entry toc-h2"><a href="#conky">Настройка Conky</a>
+<li class="toc-entry toc-h2"><a href="#настройка-сервисов">Настройка сервисов</a></li>
+<li class="toc-entry toc-h2"><a href="#постоянные-симлинки-на-hid-устройства">Постоянные симлинки на HID-устройства</a></li>
+<li class="toc-entry toc-h2"><a href="#настройка-conky">Настройка Conky</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#section-1">Как это работает</a></li>
-<li class="toc-entry toc-h3"><a href="#section-2">Как использовать</a></li>
+<li class="toc-entry toc-h3"><a href="#как-это-работает">Как это работает</a></li>
+<li class="toc-entry toc-h3"><a href="#как-использовать">Как использовать</a></li>
 </ul>
 </li>
 </ul>

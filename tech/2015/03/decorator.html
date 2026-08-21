@@ -73,8 +73,8 @@
 </script>
 
 <!-- jekyll-is-images plugin stuff -->
-<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.14.css" />
-<script type="module" src="/js/is-images-0.8.0.14.js"></script>
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.2.css" />
+<script type="module" src="/js/is-images-0.8.2.js"></script>
 <!-- end of jekyll-is-images stuff -->
 
 </head>
@@ -187,8 +187,8 @@
 третьими лицами. Поскольку исходный код имеющихся библиотек не модифицируется, мы не создаем себе никаких препятствий к установке
 обновлений и исправлений, что важно для проектов с длительным жизненным циклом.</p>
 
-<h2 id="proc">
-<a class="anchor" href="#proc" aria-hidden="true"><span class="octicon octicon-link"></span></a>Блоки, методы и объекты Proc</h2>
+<h2 id="блоки-методы-и-объекты-proc">
+<a class="anchor" href="#%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D1%8B-%D0%B8-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B-proc" aria-hidden="true"><span class="octicon octicon-link"></span></a>Блоки, методы и объекты Proc</h2>
 
 <p class="note"><em>Здесь и далее я описываю сложные, но хорошо документированные, особенности языка применительно к основной теме статьи, кратко,
 не всегда формально точно и, по возможности, просто. Для изучения языка лучше всего обратиться к более-менее официальным<sup id="fnref:ppg"><a href="#fn:ppg" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>
@@ -252,8 +252,8 @@
 
 <p>Теперь, определившись, что у нас есть, можно перейти к рассмотрению того, что можно из этого сделать…</p>
 
-<h2 id="section">
-<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Шаг первый — функция-обертка</h2>
+<h2 id="шаг-первый--функция-обертка">
+<a class="anchor" href="#%D1%88%D0%B0%D0%B3-%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B9--%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8F-%D0%BE%D0%B1%D0%B5%D1%80%D1%82%D0%BA%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Шаг первый — функция-обертка</h2>
 
 <p>Очевидно, что там, где в Python функция, принимающая и возвращающая функцию, у нас будет метод, принимающий объект класса
 <code class="language-plaintext highlighter-rouge">Proc</code>, а лучше — для универсальности — блок, и возвращающий объект класса <code class="language-plaintext highlighter-rouge">Proc</code>.</p>
@@ -325,8 +325,8 @@ deco2.rb:16:in `/': divided by 0 (ZeroDivisionError)
 <span class="n">alpha</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span></code></pre>
 </figure>
 
-<h2 id="section-1">
-<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Шаг второй — в правильном контексте</h2>
+<h2 id="шаг-второй--в-правильном-контексте">
+<a class="anchor" href="#%D1%88%D0%B0%D0%B3-%D0%B2%D1%82%D0%BE%D1%80%D0%BE%D0%B9--%D0%B2-%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C%D0%BD%D0%BE%D0%BC-%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Шаг второй — в правильном контексте</h2>
 
 <p>Примеры выше даны для глобального контекста, в котором, однако, на практике методы определяют редко. Нормальное
 расположение методов — в контексте класса или модуля. Или попросту модуля, поскольку класс в данном случае есть
@@ -490,8 +490,8 @@ OK: ♯‹Alpha:0x00000001e7c510›.gamma [] =› :gamma</span></code></pre>
 
 <p>Аналогично можно модифицировать и <code class="language-plaintext highlighter-rouge">wrap_singleton_method</code>, если очень хочется.</p>
 
-<h2 id="section-2">
-<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Шаг третий — фабрика генераторов</h2>
+<h2 id="шаг-третий--фабрика-генераторов">
+<a class="anchor" href="#%D1%88%D0%B0%D0%B3-%D1%82%D1%80%D0%B5%D1%82%D0%B8%D0%B9--%D1%84%D0%B0%D0%B1%D1%80%D0%B8%D0%BA%D0%B0-%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BE%D0%B2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Шаг третий — фабрика генераторов</h2>
 
 <p>Ну и наконец, давайте решим задачу в более-менее общем виде. Пусть у нас будет способ генерировать различные «декораторы»,
 задав имя и блок, возвращающий <code class="language-plaintext highlighter-rouge">proc</code>-обертку. Блок будет принимать <code class="language-plaintext highlighter-rouge">UnboundMethod</code> и произвольные именованные параметры.
@@ -593,8 +593,8 @@ echo: result = "BETA: 1"
 [*] result = 6</span></code></pre>
 </figure>
 
-<h2 id="section-3">
-<a class="anchor" href="#section-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Идем дальше?</h2>
+<h2 id="идем-дальше">
+<a class="anchor" href="#%D0%B8%D0%B4%D0%B5%D0%BC-%D0%B4%D0%B0%D0%BB%D1%8C%D1%88%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Идем дальше?</h2>
 
 <p>Как видим, все работает. Кроме того, определения декораторов прекрасно наследуются. Для дальнейшего развития можно
 поработать над тем, чтобы они еще и «включались» при добавлении mixin-модуля, предусмотреть отмену и/или переключение
@@ -679,11 +679,11 @@ echo: result = "BETA: 1"
 </aside><aside id="toc" class="toc toc-post">
   <h4>Содержание</h4>
   <ul id="toc_list" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#proc">Блоки, методы и объекты Proc</a></li>
-<li class="toc-entry toc-h2"><a href="#section">Шаг первый — функция-обертка</a></li>
-<li class="toc-entry toc-h2"><a href="#section-1">Шаг второй — в правильном контексте</a></li>
-<li class="toc-entry toc-h2"><a href="#section-2">Шаг третий — фабрика генераторов</a></li>
-<li class="toc-entry toc-h2"><a href="#section-3">Идем дальше?</a></li>
+<li class="toc-entry toc-h2"><a href="#блоки-методы-и-объекты-proc">Блоки, методы и объекты Proc</a></li>
+<li class="toc-entry toc-h2"><a href="#шаг-первый--функция-обертка">Шаг первый — функция-обертка</a></li>
+<li class="toc-entry toc-h2"><a href="#шаг-второй--в-правильном-контексте">Шаг второй — в правильном контексте</a></li>
+<li class="toc-entry toc-h2"><a href="#шаг-третий--фабрика-генераторов">Шаг третий — фабрика генераторов</a></li>
+<li class="toc-entry toc-h2"><a href="#идем-дальше">Идем дальше?</a></li>
 </ul>
 </aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/tech/2016/01/metaprogramming.html" title="Добавление собственных абстракций в объектную модель — это просто. И интересно.">Мета­программи­ро­вание в Ruby: разбор примера</a></li></ul>
     </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>

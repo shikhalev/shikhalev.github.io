@@ -73,8 +73,8 @@
 </script>
 
 <!-- jekyll-is-images plugin stuff -->
-<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.14.css" />
-<script type="module" src="/js/is-images-0.8.0.14.js"></script>
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.2.css" />
+<script type="module" src="/js/is-images-0.8.2.js"></script>
 <!-- end of jekyll-is-images stuff -->
 
 </head>
@@ -166,7 +166,7 @@ does not mean that the reader will always no longer be able to produce bytes.</l
   <pre><code class="language-rust" data-lang="rust"><span class="k">let</span> <span class="k">mut</span> <span class="n">buffer</span> <span class="o">=</span> <span class="nn">Vec</span><span class="p">::</span><span class="o">&lt;</span><span class="nb">u8</span><span class="o">&gt;</span><span class="p">::</span><span class="nf">with_capacity</span><span class="p">(</span><span class="n">buffer_size</span><span class="p">);</span></code></pre>
 </figure>
 
-<p>~~<em>(Слава <a href="https://turbo.fish/">турборыбе</a>!)</em>~~ Ну, в самом деле, мне же нужно выделить память, а не проинициализировать ее — все равно перезапишется
+<p><del><em>(Слава <a href="https://turbo.fish/">турборыбе</a>!)</em></del> Ну, в самом деле, мне же нужно выделить память, а не проинициализировать ее — все равно перезапишется
 при чтении. В чем тут подвох? Подвох в том, что превращаясь в <code class="language-plaintext highlighter-rouge">&amp;mut [u8]</code> такой вектор демонстрирует именно что нулевую
 длину. И никаких ошибок я при этом не получаю, просто все файлы почему-то кончаются, не успев начаться. Хорошо, что у меня
 была достаточно простая в целом задача, я логировал множество промежуточных моментов и заметил, что контрольные суммы как-то

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-08-21T08:21:56+00:00</updated><id>https://shikhalev.github.io/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Мерч: Большой крохаль</title><link href="https://shikhalev.github.io/life/2026/08/mergus.html" rel="alternate" type="text/html" title="Мерч: Большой крохаль" /><published>2026-08-15T00:00:00+00:00</published><updated>2026-08-15T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/08/mergus</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/08/mergus.html"><![CDATA[<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_900" style="--is-images-width:900px;" data-modes="grid,slides">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-08-21T12:30:50+00:00</updated><id>https://shikhalev.github.io/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Мерч: Большой крохаль</title><link href="https://shikhalev.github.io/life/2026/08/mergus.html" rel="alternate" type="text/html" title="Мерч: Большой крохаль" /><published>2026-08-15T00:00:00+00:00</published><updated>2026-08-15T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/08/mergus</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/08/mergus.html"><![CDATA[<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_900" style="--is-images-width:900px;" data-modes="grid,slides">
 <a href="/merch/photo/birds/20260518-mergus/" title="Фото самца большого крохаля (Mergus merganser). 18 мая 2026 года, Дружино-Бардымский пруд." class="__is_images_wrapper"><img src="/img/8c/40/87ce7t5e.avif" alt="Фото самца большого крохаля (Mergus merganser). 18 мая 2026 года, Дружино-Бардымский пруд." class="__is_images_image __is_images_single" style="--is-images-width:900px;--is-images-aspect-ratio:225/118;" data-scale="1" data-caption="Фото самца большого крохаля (Mergus merganser). 18 мая 2026 года, Дружино-Бардымский пруд."></a>
 <figcaption>Фото самца большого крохаля (Mergus merganser). 18 мая 2026 года, Дружино-Бардымский пруд.</figcaption>
 </figure>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;life&quot;, &quot;dybr&quot;, &quot;web&quot;, &quot;about&quot;]" /><category term="мерч" /><category term="принтшопы" /><category term="ВсеМайки" /><category term="PrintDirect" /><summary type="html"><![CDATA[Продолжаю пополнять каталог мерча... Теперь с фото самца большого крохаля в полёте.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/t3/b0/o7eb62eo.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/t3/b0/o7eb62eo.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Мерч: Паук и еще один пейзаж</title><link href="https://shikhalev.github.io/life/2026/08/spider.html" rel="alternate" type="text/html" title="Мерч: Паук и еще один пейзаж" /><published>2026-08-09T00:00:00+00:00</published><updated>2026-08-09T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/08/spider</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/08/spider.html"><![CDATA[<figure id="fig-1" class="__is_images_figure __is_images_gallery" data-modes="slides">
@@ -25,7 +25,7 @@
 
 <p>Подробности можно почитать в <strong><a href="https://github.com/jekyll-is/jekyll-is-images/blob/main/README-ru.md">README-ru</a></strong> <a href="https://github.com/jekyll-is/jekyll-is-images">проекта на Github</a>. Здесь коротко.</p>
 
-<h2 id="section">Зависимости и ограничения</h2>
+<h2 id="зависимости-и-ограничения">Зависимости и ограничения</h2>
 
 <ul>
   <li>
@@ -55,7 +55,7 @@ kramdown:
 
 <p>Далее о хорошем.</p>
 
-<h2 id="section-1">Синтаксис</h2>
+<h2 id="синтаксис">Синтаксис</h2>
 
 <p><strong>Стандартный.</strong> Т.е. пишем, как это в Markdown принято, <code class="language-plaintext highlighter-rouge">![Text](url){: атрибуты }</code> и радуемся. Вся кастомизация сидит в ат­ри­бу­тах
 и контексте.</p>
@@ -69,27 +69,27 @@ kramdown:
 как раз на тот случай, если нет возможности использовать Kramdown с кастомным парсером. Правда, Kramdown все равно подтянется
 по зависимостям, и именно он будет разбирать параметры тегов.</p>
 
-<h2 id="section-2">Превьюшки для соцсетей</h2>
+<h2 id="превьюшки-для-соцсетей">Превьюшки для соцсетей</h2>
 
 <p>Штатно Jekyll позволяет указать картинку, которую соцсети будут использовать для превью. Плагин позволяет кропнуть и отресайзить
 эту картинку, а также накладывает на нее заголовок поста, дату и название сайта.</p>
 
 <p>Кстати, именно это и занимает большую часть времени работы — формирование и наложение текста ImageMagick’ом.</p>
 
-<h2 id="section-3">Статус и планы</h2>
+<h2 id="статус-и-планы">Статус и планы</h2>
 
 <p>Текущая версия — <strong>0.8.0.2</strong>, т.е., как и все 0.8.xxx у меня — это скорее публичная альфа, чем что-то еще.</p>
 
 <p>Далее буду допиливать фичи и, главное, шлифовать стилизацию. Но делать это получится не быстро, поскольку проверять буду не на сферическом
 в вакууме сайте, а на своем живом — параллельно с редизайном…</p>
 
-<h2 id="upd--github-actions">Upd по GitHub Actions</h2>
+<h2 id="upd-по-github-actions">Upd по GitHub Actions</h2>
 
 <p>Так и не удалось пока подружить плагин с ImageMagick v6. Пришлось через одно место ставить v7. Вероятно, буду все-таки уже в ближайшее время
 делать сборку через собственный контейнер, иначе слишком много бубнов сотрется…</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;web&quot;]" /><category term="Jekyll" /><category term="CSS" /><category term="HTML" /><summary type="html"><![CDATA[Реализовал таки...]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/t0/94/t39ff83b.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/t0/94/t39ff83b.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Tg: июль 2026</title><link href="https://shikhalev.github.io/life/2026/08/channels-jul.html" rel="alternate" type="text/html" title="Tg: июль 2026" /><published>2026-08-02T00:00:00+00:00</published><updated>2026-08-02T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/08/channels-jul</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/08/channels-jul.html"><![CDATA[<p><em>Сбоев</em> при автопостинге вроде бы не было. Зато начались пропуски птиц, не хватает свежих <em>видов</em>… Видимо, я немного оптимистично
 выставил лимиты. Но ничего страш­но­го — потихоньку со временем идем на новый круг.</p>
 
-<h2 id="tg">Биоразнообразие Свердловской области в TG</h2>
+<h2 id="биоразнообразие-свердловскойобласти-вtg">Биоразнообразие Свердловской области в TG</h2>
 
 <p>Просто красивые щеглы. Обычные, но очень симпатичные птицы.</p>
 
@@ -99,7 +99,7 @@ kramdown:
 
 <hr />
 
-<h2 id="inaturalist">Природа Урала — наблюдения с iNaturalist</h2>
+<h2 id="природаурала-наблюдения-сinaturalist">Природа Урала — наблюдения с iNaturalist</h2>
 
 <p>Красивый цветок, интересно вглядываться.</p>
 
@@ -125,7 +125,7 @@ kramdown:
 
 <hr />
 
-<h2 id="section">С миру по нитке</h2>
+<h2 id="смиру-понитке">С миру по нитке</h2>
 
 <script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="daily_flowers_of_the_world/655" data-width="100%"></script>
 
@@ -153,7 +153,7 @@ kramdown:
 увеличение картинки) и маски. Маски я пока не смотрел — я ими как-то вообще не пользуюсь и не очень понимаю, что проверять.
 Шумодавами и апскейлом я, правда, тоже почти не пользуюсь, но куда смотреть — представляю.</p>
 
-<h2 id="section">Что дают?</h2>
+<h2 id="что-дают">Что дают?</h2>
 
 <p>Итак. «raw denoise», «denoise» и «upscale». Как можно видеть на скриншоте, они объединены в один модуль, и это <em>не модуль
 обработки</em>, он не участвует цепочке обработки и не попадает в историю, это <em>служебный модуль</em>, и находится он в <em>левой</em>
@@ -167,7 +167,7 @@ kramdown:
 должно быть внутри цепочки, ближе к началу… Я недоучел этот момент, когда делал свои тесты (о чем ниже), но переделывать
 не буду — «правильный» порядок действий слишком заморочный, чтобы реальный пользователь им занимался.</p>
 
-<h3 id="section-1">Где взять?</h3>
+<h3 id="где-взять">Где взять?</h3>
 
 <p>Тут есть засада: если вы как порядочный человек просто обновитесь из своего дистрибутива, не факт, что новые фичи у вас появятся.
 У меня в Gentoo, например, не появились. Требуется сборка с дополнительным флагом, и когда мейнтейнеры разберутся — неизвестно.
@@ -194,7 +194,7 @@ kramdown:
 но он не цепляется. Для пробы это не критично, да и для использования — не так, чтобы очень — если нужно обработать небольшое количество
 фотографий, скорость на CPU вполне терпима.</p>
 
-<h2 id="section-2">Что получилось?</h2>
+<h2 id="что-получилось">Что получилось?</h2>
 
 <dl>
   <dt>TL;DR</dt>
@@ -220,7 +220,7 @@ kramdown:
 
 <!--more-->
 
-<h3 id="section-3">Шумодавы</h3>
+<h3 id="шумодавы">Шумодавы</h3>
 
 <p>Ниже на разных ISO показаны результаты работы шумоподавления. Порядок такой: без шумодава, AI raw denoise, AI denoise. стандартный модуль raw denoise,
 стандартный модуль denoise (profiled). В посте я показываю кроп, по клику откроется большая картинка, ужатая до 1800x1800px.</p>
@@ -284,7 +284,7 @@ kramdown:
 </figure>
 <p>Разница как бы есть… Но не особо понятна. Но учитывая, что я видел и такие ai-апскейлеры, которые делают <em>хуже</em>, чем простое увеличение…</p>
 
-<h2 id="section-4">Итого</h2>
+<h2 id="итого">Итого</h2>
 
 <p>В общем, неплохо. Хотя для себя интересным я вижу только <em>raw denoise</em>, да и тем буду пользоваться редко.</p>
 
@@ -317,7 +317,7 @@ kramdown:
 что влезло, то влезло.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;life&quot;, &quot;dybr&quot;, &quot;web&quot;, &quot;about&quot;]" /><category term="мерч" /><category term="принтшопы" /><category term="ВсеМайки" /><category term="PrintDirect" /><category term="птицы" /><category term="животные" /><category term="«определитель»" /><category term="Fringilla coelebs" /><summary type="html"><![CDATA[Начал выкладывать «мерч», оформленный в стиле старинного определителя.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/ec/0o/f92547o9.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/ec/0o/f92547o9.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Tg: июнь 2026</title><link href="https://shikhalev.github.io/life/2026/07/channels-jun.html" rel="alternate" type="text/html" title="Tg: июнь 2026" /><published>2026-07-11T00:00:00+00:00</published><updated>2026-07-11T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/07/channels-jun</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/07/channels-jun.html"><![CDATA[<p>Кажется, тьфу-тьфу-тьфу, проблемы с автопостингом закончились. Так что, если где-то что-то про­пу­ще­но — это реально
 не нашлось подходящих под условия наблюдений (и та­кое пару раз было).</p>
 
-<h2 id="tg">Биоразнообразие Свердловской области в TG</h2>
+<h2 id="биоразнообразие-свердловскойобласти-вtg">Биоразнообразие Свердловской области в TG</h2>
 
 <p>Абсолютно шикарная сова. Лучше, конечно, открыть фото в полном размере.</p>
 
@@ -327,7 +327,7 @@ kramdown:
 
 <hr />
 
-<h2 id="inaturalist">Природа Урала — наблюдения с iNaturalist</h2>
+<h2 id="природаурала-наблюдения-сinaturalist">Природа Урала — наблюдения с iNaturalist</h2>
 
 <p>Никогда не встречал белую форму иван-чая… А он есть.</p>
 
@@ -353,7 +353,7 @@ kramdown:
 
 <hr />
 
-<h2 id="section">С миру по нитке</h2>
+<h2 id="смиру-понитке">С миру по нитке</h2>
 
 <script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="daily_flowers_of_the_world/555" data-width="100%"></script>
 

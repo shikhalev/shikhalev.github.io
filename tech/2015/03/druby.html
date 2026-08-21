@@ -73,8 +73,8 @@
 </script>
 
 <!-- jekyll-is-images plugin stuff -->
-<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.14.css" />
-<script type="module" src="/js/is-images-0.8.0.14.js"></script>
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.2.css" />
+<script type="module" src="/js/is-images-0.8.2.js"></script>
 <!-- end of jekyll-is-images stuff -->
 
 </head>
@@ -160,8 +160,8 @@ CORBA не входит в стандартную библиотеку Ruby, с
 к совместимости версий и т.д.). В общем, если не требуется взаимодействие с программами, написанными на других языках,
 dRuby — очень хороший выбор, а с чем его едят и как правильно готовить, мы и рассмотрим в данной статье.</p>
 
-<h2 id="section">
-<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Минимальный пример</h2>
+<h2 id="минимальный-пример">
+<a class="anchor" href="#%D0%BC%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80" aria-hidden="true"><span class="octicon octicon-link"></span></a>Минимальный пример</h2>
 
 <p>Рассмотрим код<sup id="fnref:gist"><a href="#fn:gist" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> простейшего сервера:</p>
 
@@ -222,8 +222,8 @@ Alpha called with "beta"</span></code></pre>
 
 <p>Что свидетельствует о выполнении метода именно на той стороне.</p>
 
-<h2 id="section-1">
-<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Передача данных</h2>
+<h2 id="передача-данных">
+<a class="anchor" href="#%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B0%D1%87%D0%B0-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85" aria-hidden="true"><span class="octicon octicon-link"></span></a>Передача данных</h2>
 
 <p>Уже из вышеприведенного можно видеть, что обмен данными простых стандартных классов происходит полностью прозрачно —
 мы использовали число, строку, <code class="language-plaintext highlighter-rouge">nil</code> и массив — все они выглядят на стороне клиента и сервера совершенно одинаково.
@@ -318,8 +318,8 @@ cln1.rb:11:in `‹main›': undefined method `dummy' for ♯‹DRb::DRbUnknown:0
 
 <p>И вызвав на клиенте <code class="language-plaintext highlighter-rouge">s.gamma.dummy</code>, мы увидим вывод строки «Dummy called» в серверной, а не клиентской консоли.</p>
 
-<h2 id="section-2">
-<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Клиентская часть</h2>
+<h2 id="клиентская-часть">
+<a class="anchor" href="#%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B0%D1%8F-%D1%87%D0%B0%D1%81%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Клиентская часть</h2>
 
 <p>Несмотря на то, что работа в целом идет по асимметричной схеме клиент-сервер, обмен данными вполне симметричен,
 и мы вполне можем передать серверу объект, методы которого будут выполняться на клиенте. Самый простой способ
@@ -374,8 +374,8 @@ cln1.rb:11:in `‹main›': undefined method `dummy' for ♯‹DRb::DRbUnknown:0
 <p>Первой строчкой мы удаляем метод <code class="language-plaintext highlighter-rouge">instance_eval</code> объекта-посредника, что заставляет его в дальнейшем передавать вызов серверу,
 ну а дальше выполняем произвольную строку… Что плавно подводит нас к следующей теме.</p>
 
-<h2 id="section-3">
-<a class="anchor" href="#section-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Безопасность</h2>
+<h2 id="безопасность">
+<a class="anchor" href="#%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Безопасность</h2>
 
 <p>Очевидно, что сервер, работающий по приципу: «ходи, кто хочет, бери, что хочет» — это плохой сервер, и надо бы как-то
 это дело ограничить. Начнем со второй части — запретим выполнять произвольный код. Можно, например, поудалять у серверного
@@ -469,8 +469,8 @@ cln1.rb:11:in `‹main›': undefined method `dummy' for ♯‹DRb::DRbUnknown:0
 передать ключи шифрования и сертификаты, которыми эти ключи подписаны… А еще сами сертификаты должны быть подписаны удостоверяющим
 центром и т.д. — по большому счету, эта тема заслуживает отдельного рассмотрения<sup id="fnref:ssl"><a href="#fn:ssl" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>.</p>
 
-<h2 id="section-4">
-<a class="anchor" href="#section-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Сценарии использования</h2>
+<h2 id="сценарии-использования">
+<a class="anchor" href="#%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B8-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>Сценарии использования</h2>
 
 <p>Итак, с чем же его едят? Что полезного мы можем сделать, используя технологию dRuby?</p>
 
@@ -558,11 +558,11 @@ cln1.rb:11:in `‹main›': undefined method `dummy' for ♯‹DRb::DRbUnknown:0
 </aside><aside id="toc" class="toc toc-post">
   <h4>Содержание</h4>
   <ul id="toc_list" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#section">Минимальный пример</a></li>
-<li class="toc-entry toc-h2"><a href="#section-1">Передача данных</a></li>
-<li class="toc-entry toc-h2"><a href="#section-2">Клиентская часть</a></li>
-<li class="toc-entry toc-h2"><a href="#section-3">Безопасность</a></li>
-<li class="toc-entry toc-h2"><a href="#section-4">Сценарии использования</a></li>
+<li class="toc-entry toc-h2"><a href="#минимальный-пример">Минимальный пример</a></li>
+<li class="toc-entry toc-h2"><a href="#передача-данных">Передача данных</a></li>
+<li class="toc-entry toc-h2"><a href="#клиентская-часть">Клиентская часть</a></li>
+<li class="toc-entry toc-h2"><a href="#безопасность">Безопасность</a></li>
+<li class="toc-entry toc-h2"><a href="#сценарии-использования">Сценарии использования</a></li>
 </ul>
 </aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/tech/2015/04/ruby-multitasking.html" title="В статье рассматриваются основные средства работы с потоками (threads) и процессами в языке и стандартной библиотеке Ruby.">Ruby и многозадачность</a></li><li class="fa-icon-li-file-alt"><a href="/tech/2015/04/ruby-context.html" title="Статья рассказывает о программном контексте в Ruby: какие переменные и другие объекты доступны в конкретном месте программы, и как интерпретатор их ищет.">Блоки и контекст в Ruby</a></li></ul>
     </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>

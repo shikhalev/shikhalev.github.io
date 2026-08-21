@@ -73,8 +73,8 @@
 </script>
 
 <!-- jekyll-is-images plugin stuff -->
-<link rel="stylesheet" href="/css/is-images-200-1920-0.8.0.14.css" />
-<script type="module" src="/js/is-images-0.8.0.14.js"></script>
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.2.css" />
+<script type="module" src="/js/is-images-0.8.2.js"></script>
 <!-- end of jekyll-is-images stuff -->
 
 </head>
@@ -145,8 +145,8 @@
 языках), а определяются в момент инициализации — первого присваивания значения. Все это может привести к недопониманию
 и кажущейся неоднозначности.</p>
 
-<h2 id="section">
-<a class="anchor" href="#section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Из чего состоит контекст?</h2>
+<h2 id="из-чего-состоит-контекст">
+<a class="anchor" href="#%D0%B8%D0%B7-%D1%87%D0%B5%D0%B3%D0%BE-%D1%81%D0%BE%D1%81%D1%82%D0%BE%D0%B8%D1%82-%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BA%D1%81%D1%82" aria-hidden="true"><span class="octicon octicon-link"></span></a>Из чего состоит контекст?</h2>
 
 <p>В Ruby в любой точке программы мы имеем доступ к трем слоям контекста: локальный контекст, контекст объекта и глобальный.
 Рассмотрим их, так сказать, сверху вниз — от глобального к локальному.</p>
@@ -190,8 +190,8 @@
 
 <p>Атрибут после вызова <code class="language-plaintext highlighter-rouge">beta</code> будет равен единице, поскольку строчка без <code class="language-plaintext highlighter-rouge">self</code> к нему отношения не имеет.</p>
 
-<h2 id="section-1">
-<a class="anchor" href="#section-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Блоки</h2>
+<h2 id="блоки">
+<a class="anchor" href="#%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Блоки</h2>
 
 <p>Блоком в Ruby называется конструкция вида:</p>
 
@@ -330,8 +330,8 @@
 если метод, которому передан блок, не подразумевает иное (как, в частности, <code class="language-plaintext highlighter-rouge">define_singleton_method</code>). К методам, изменяющим
 контекст, мы еще вернемся, а сейчас рассмотрим подробнее контекст объекта как таковой.</p>
 
-<h2 id="section-2">
-<a class="anchor" href="#section-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Контекст объекта</h2>
+<h2 id="контекст-объекта">
+<a class="anchor" href="#%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BA%D1%81%D1%82-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Контекст объекта</h2>
 
 <p>Как уже говорилось выше, в Ruby мы всегда действуем в контексте некоего объекта, причем доступные методы полностью определяются
 его классом. Но, в общем случае, это не тот класс, который был использован при создании объекта и возвращается методом <code class="language-plaintext highlighter-rouge">class</code>,
@@ -429,8 +429,8 @@
 "B"</span></code></pre>
 </figure>
 
-<h2 id="section-3">
-<a class="anchor" href="#section-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Константы и пространства имен</h2>
+<h2 id="константы-и-пространства-имен">
+<a class="anchor" href="#%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D1%8B-%D0%B8-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%B0-%D0%B8%D0%BC%D0%B5%D0%BD" aria-hidden="true"><span class="octicon octicon-link"></span></a>Константы и пространства имен</h2>
 
 <p>Константы в Ruby отличаются от всего остального заглавной первой буквой. Имена классов и модулей — это тоже константы,
 значением которых является соответствующий объект класса <code class="language-plaintext highlighter-rouge">Class</code> или <code class="language-plaintext highlighter-rouge">Module</code>.</p>
@@ -504,8 +504,8 @@
 и переопределением уже использованных идентификаторов. Как и любыми другими возможностями языка: Ruby очень гибок и позволяет
 переопределить так много, что, образно выражаясь, вы можете выстрелить себе в ногу из самой этой ноги. Картечью.</p>
 
-<h2 id="section-4">
-<a class="anchor" href="#section-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Замена контекста</h2>
+<h2 id="замена-контекста">
+<a class="anchor" href="#%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD%D0%B0-%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Замена контекста</h2>
 
 <p>Локальный контекст, равно как и контекст объекта, может быть указан явно. Для этого существует несколько разнородных техник,
 о которых мы сейчас и поговорим.</p>
@@ -629,8 +629,8 @@
 (по сравнению с нормальным, предварительно разобранным кодом), использовать эту технику как-либо, кроме как в отладке,
 наверное, не стоит. С другой стороны, локальный контекст на то и локальный, чтобы не заботиться о нем снаружи.</p>
 
-<h2 id="section-5">
-<a class="anchor" href="#section-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Замыкания и многозадачность</h2>
+<h2 id="замыкания-и-многозадачность">
+<a class="anchor" href="#%D0%B7%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B8-%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Замыкания и многозадачность</h2>
 
 <p>Если мы пишем многопоточную программу, надо помнить, что замыкания содержат переменные, а не их значения. Т.е. значения
 могут поменяться со времени старта потока.</p>
@@ -675,8 +675,8 @@
 процессами как таковое, однако скриптовые языки, и Ruby в частности, нередко используют люди, в недавнем прошлом далекие
 от программирования… А задач, которые можно распараллелить — множество, тем более, что в Ruby это очень просто.</p>
 
-<h2 id="section-6">
-<a class="anchor" href="#section-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Итого</h2>
+<h2 id="итого">
+<a class="anchor" href="#%D0%B8%D1%82%D0%BE%D0%B3%D0%BE" aria-hidden="true"><span class="octicon octicon-link"></span></a>Итого</h2>
 
 <p>Надеюсь, понимание вышеизложенного поможет избегать ошибок при написании программ. Впрочем, еще важнее это понимание
 при чтении чужих исходников — чтобы не возникало вопросов: а что у нас тут обозначает этот идентификатор, откуда он берется?
@@ -738,13 +738,13 @@
 </aside><aside id="toc" class="toc toc-post">
   <h4>Содержание</h4>
   <ul id="toc_list" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#section">Из чего состоит контекст?</a></li>
-<li class="toc-entry toc-h2"><a href="#section-1">Блоки</a></li>
-<li class="toc-entry toc-h2"><a href="#section-2">Контекст объекта</a></li>
-<li class="toc-entry toc-h2"><a href="#section-3">Константы и пространства имен</a></li>
-<li class="toc-entry toc-h2"><a href="#section-4">Замена контекста</a></li>
-<li class="toc-entry toc-h2"><a href="#section-5">Замыкания и многозадачность</a></li>
-<li class="toc-entry toc-h2"><a href="#section-6">Итого</a></li>
+<li class="toc-entry toc-h2"><a href="#из-чего-состоит-контекст">Из чего состоит контекст?</a></li>
+<li class="toc-entry toc-h2"><a href="#блоки">Блоки</a></li>
+<li class="toc-entry toc-h2"><a href="#контекст-объекта">Контекст объекта</a></li>
+<li class="toc-entry toc-h2"><a href="#константы-и-пространства-имен">Константы и пространства имен</a></li>
+<li class="toc-entry toc-h2"><a href="#замена-контекста">Замена контекста</a></li>
+<li class="toc-entry toc-h2"><a href="#замыкания-и-многозадачность">Замыкания и многозадачность</a></li>
+<li class="toc-entry toc-h2"><a href="#итого">Итого</a></li>
 </ul>
 </aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/tech/2016/03/introspection.html" title="Что программа может знать о самой себе?">Средства самопознания в Ruby</a></li><li class="fa-icon-li-file-alt"><a href="/tech/2016/01/metaprogramming.html" title="Добавление собственных абстракций в объектную модель — это просто. И интересно.">Мета­программи­ро­вание в Ruby: разбор примера</a></li><li class="fa-icon-li-file-alt"><a href="/tech/2015/04/ruby-multitasking.html" title="В статье рассматриваются основные средства работы с потоками (threads) и процессами в языке и стандартной библиотеке Ruby.">Ruby и многозадачность</a></li></ul>
     </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
