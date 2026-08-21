@@ -33,11 +33,11 @@ excerpt_separator: <!--more-->
 
 permalink: /:year/:month/:title:output_ext
 
-markdown: kramdown
+markdown: Hookdown
 kramdown:
   parse_block_html: true
   auto_ids: true
-  input: ISKram
+  # input: ISKram
 
 plugins:
   - jekyll-feed
