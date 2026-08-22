@@ -1,1 +1,22 @@
-{}
+{
+  "telegram": {
+    "config": {
+      "method": "telegram",
+      "chat_id": "@shikhalev_blog"
+    },
+    "posts": {
+      "_posts/tech/2026/2026-08-22-jekyll-is-august.md": {
+        "url": "https://shikhalev.github.io/tech/2026/08/jekyll-is-august.html",
+        "date": "2026/08/22",
+        "title": "Плагины jekyll‑is‑hookdown и jekyll‑is‑images v0.8.2",
+        "description": "Развитие плагина jekyll-is-images и некоторые замечания по ходу дела.",
+        "categories": [
+          "технологии",
+          "программирование",
+          "ruby",
+          "веб"
+        ]
+      }
+    }
+  }
+}
