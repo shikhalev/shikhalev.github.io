@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="CC BY-SA 4.0">
+  <meta name="license" content="CC BY-SA 4.0">
+  <link rel="icon" href="https://shikhalev.github.io/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+  
+  <link rel="stylesheet" href="/assets/local.css" type="text/css">
+  
+
+  <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Плагины jekyll‑is‑hookdown и jekyll‑is‑images v0.8.2 | Иван Шихалев</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Плагины jekyll‑is‑hookdown и jekyll‑is‑images v0.8.2" />
+<meta name="author" content="Иван Шихалев" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Развитие плагина jekyll-is-images и некоторые замечания по ходу дела." />
+<meta name="twitter:description" property="og:description" content="Развитие плагина jekyll-is-images и некоторые замечания по ходу дела." />
+<link rel="canonical" href="https://shikhalev.github.io/tech/2026/08/jekyll-is-august.html" />
+<meta property="og:url" content="https://shikhalev.github.io/tech/2026/08/jekyll-is-august.html" />
+<meta property="og:site_name" content="Иван Шихалев" />
+<meta property="og:image" content="https://shikhalev.github.io/img/54/17/7bftf276.webp" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2026-08-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://shikhalev.github.io/img/54/17/7bftf276.webp" />
+<meta name="twitter:title" content="Плагины jekyll‑is‑hookdown и jekyll‑is‑images v0.8.2" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Иван Шихалев"},"dateModified":"2026-08-22T00:00:00+00:00","datePublished":"2026-08-22T00:00:00+00:00","description":"Развитие плагина jekyll-is-images и некоторые замечания по ходу дела.","headline":"Плагины jekyll‑is‑hookdown и jekyll‑is‑images v0.8.2","image":"https://shikhalev.github.io/img/54/17/7bftf276.webp","mainEntityOfPage":{"@type":"WebPage","@id":"https://shikhalev.github.io/tech/2026/08/jekyll-is-august.html"},"url":"https://shikhalev.github.io/tech/2026/08/jekyll-is-august.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCHKX2MX1B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCHKX2MX1B');
+</script>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym");
+
+   ym(72960469, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/72960469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "u2gczedmo7");
+</script>
+
+<!-- jekyll-is-images plugin stuff -->
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.2.4.css" />
+<script type="module" src="/js/is-images-0.8.2.4.js"></script>
+<!-- end of jekyll-is-images stuff -->
+
+</head>
+
+<body>
+
+<div id="global-box">
+
+<div id="watermark-container">
+  <div id="watermark">shikhalev.*</div>
+</div>
+
+<div id="grid">
+
+<header id="site-header"><p class="logo"><a href="/">Иван Шихалев</a></p></header>
+
+<nav id="navy"><div class="wrapper">
+  <input type="checkbox" id="navy-check">
+  <label for="navy-check">
+    <span id="menu-icon" class="fas">&#xf0c9;</span>
+  </label>
+  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-credit-card" href="/merch/">Мерч</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+</div></nav>
+
+<main id="main"><aside class="categories">
+  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-globe" href="/tech/web/" title="HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.">Web</a></aside>
+<article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">Плагины jekyll‑is‑hookdown и jekyll‑is‑images v0.8.2</h1><aside class="share">
+  <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.github.io%2Ftech%2F2026%2F08%2Fjekyll-is-august.html">&#xf189;</a>
+  <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.github.io%2Ftech%2F2026%2F08%2Fjekyll-is-august.html">&#xf39e;</a>
+  <a class="fab" target="_blank" title="Поделиться в Телеграме" href="https://t.me/share/url?url=https%3A%2F%2Fshikhalev.github.io%2Ftech%2F2026%2F08%2Fjekyll-is-august.html">&#xf3fe;</a>
+  <a class="fab" target="_blank" title="Поделиться в Твиттере" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fshikhalev.github.io%2Ftech%2F2026%2F08%2Fjekyll-is-august.html&text=%D0%9F%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD%D1%8B+jekyll%E2%80%91is%E2%80%91hookdown+%D0%B8%C2%A0jekyll%E2%80%91is%E2%80%91images%C2%A0v0.8.2">&#xf099;</a>
+  <a class="fab" target="_blank" title="Сохранить ссылку в Evernote" href="https://www.evernote.com/clip.action?title=%D0%9F%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD%D1%8B+jekyll%E2%80%91is%E2%80%91hookdown+%D0%B8%C2%A0jekyll%E2%80%91is%E2%80%91images%C2%A0v0.8.2&url=https%3A%2F%2Fshikhalev.github.io%2Ftech%2F2026%2F08%2Fjekyll-is-august.html">&#xf839;</a>
+</aside>
+<p class="meta">
+  <time datetime="2026-08-22T00:00:00+00:00" itemprop="datePublished">2026.08.22
+  </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#CSS">CSS</a>​<a class="tag" href="/tags#HTML">HTML</a>​<a class="tag" href="/tags#Jekyll">Jekyll</a></aside></header><div itemprop="articleBody">
+  <h2 id="jekyll-is-images">
+<a class="anchor" href="#jekyll-is-images" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/jekyll-is/jekyll-is-images" class="img-icon-github">jekyll-is-images</a>
+</h2>
+
+<p>Сначала коротко про <strong><a href="https://github.com/jekyll-is/jekyll-is-images" class="img-icon-github">jekyll-is-images</a></strong>. По срав­не­нию с со­сто­я­ни­ем на <a href="/tech/2026/08/jekyll-is-images-alpha.html">прош­лый пост</a> в ос­нов­ном
+произошло много мелких правок мелких багов, из от­но­си­тель­но су­щес­т­вен­но­го — довел до ума работу галерей в ре­жи­ме слайд-шоу (впрочем, и там
+есть куда расти). А третью цифру я поднял при сме­не зависимости с <a href="https://github.com/jekyll-is/is-kramdown-hooked" class="img-icon-github">is-kramdown-hooked</a>
+на <strong><a href="https://github.com/jekyll-is/jekyll-is-hookdown" class="img-icon-github">jekyll-is-hookdown</a></strong>, о ко­то­ром и поговорим далее. Это повлияло на то, что следует указывать
+в <code class="language-plaintext highlighter-rouge">_config.yml</code> — вместо <code class="language-plaintext highlighter-rouge">input: ISKram</code> в под­раз­де­ле <code class="language-plaintext highlighter-rouge">kramdown</code> следует указывать <code class="language-plaintext highlighter-rouge">markdown: Hookdown</code> в кор­не конфига. А под­раз­дел
+<code class="language-plaintext highlighter-rouge">kramdown</code> остается полностью рабочим, и там можно указывать любой <code class="language-plaintext highlighter-rouge">input</code>, на­при­мер — <code class="language-plaintext highlighter-rouge">GFM</code><sup id="fnref:GFM"><a href="#fn:GFM" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> (что я и собираюсь сделать на сай­те
+в бли­жай­шее время).</p>
+
+<h2 id="jekyll-is-hookdown">
+<a class="anchor" href="#jekyll-is-hookdown" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/jekyll-is/jekyll-is-hookdown" class="img-icon-github">jekyll-is-hookdown</a>
+</h2>
+
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_350 __is_images__right" style="border-radius:15px;--is-images-width:320px;--is-images-up:20px;" data-modes="grid,slides">
+<a href="/img/6e/c2/12f604e7.webp" title="Сгенерированная картинка чисто для красоты" class="__is_images_wrapper"><img src="/img/fo/25/86to890b.webp" alt="Сгенерированная картинка чисто для красоты" class="__is_images_image __is_images_single" style="border-radius:15px;--is-images-width:320px;--is-images-aspect-ratio:40/21;--is-images-up:20px;" data-scale="1"></a>
+</figure>
+<p>Итак, что же это такое? Это специальный гем, который «хакает» процесс обработки markdown в Je­kyll, добавляя хук на тот момент, когда
+страница уже распарсена во внут­рен­нее AST-представление и еще не пре­об­ра­зо­ва­на во что-то другое. Зачем это надо? Чтобы не де­лать лишней
+работы по пар­син­гу исходного markdown или фи­наль­но­го HTML.</p>
+
+<!--more-->
+
+<p>Поскольку я планирую этот подход использовать не толь­ко в jekyll-is-images,
+вполне логично было вынести этот механизм в от­дель­ный гем. Более того, подобный хак плохо дублируется, и втыкать его в каж­дый функциональный
+плагин по отдельности потребует много хитрых оберток и постоянного разруливания конфликтов…</p>
+
+<p>В общем, <em>главный недостаток</em> такого подхода в том, что он по су­ти формирует экосистему, несовместимую с дру­ги­ми экосистемами, использующими
+тот же хак… Поэтому я планирую отдельно пройтись по jekyll-is-images и четко разделить возможности, требующие хака, т.е. пе­ре­ин­тер­пре­та­цию
+стандартного markdown-синтаксиса, и тот же функционал в li­quid-тегах, хака соответственно не требующий.</p>
+
+<dl>
+  <dt>Небольшое историческое отступление</dt>
+  <dd>
+    <p>Сначала я запихнул хук внутрь собственно Kramdown через кастомный пар­сер — в ге­ме <a href="https://github.com/jekyll-is/is-kramdown-hooked" class="img-icon-github">is-kramdown-hooked</a>.
+Причем это решение не тре­бо­ва­ло зависимости от Je­kyll, но — обратная сторона медали — и не осо­бо-то интегрировалось с сис­те­мой хуков в Je­kyll.
+Кроме того, использование кас­том­но­го пар­се­ра не поз­во­ля­ло использовать другие кастомные пар­се­ры…</p>
+
+    <p>А еще в про­цес­се работы я понял, что
+нужный мне момент вполне доступен и извне Kram­down — это момент между созданием <code class="language-plaintext highlighter-rouge">Kramdown::Document</code> и вызовом его <code class="language-plaintext highlighter-rouge">to_html</code> (или <code class="language-plaintext highlighter-rouge">to_latex</code>, etc).</p>
+  </dd>
+</dl>
+
+<h3 id="принцип-работы">
+<a class="anchor" href="#%D0%BF%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Принцип работы</h3>
+
+<p><em>Во-первых,</em> определен кастомный конвертер в Jekyll. Естественно, он просто унаследован от стандартного, и всего один метод переопределен.
+В <code class="language-plaintext highlighter-rouge">_config.yml</code> требуется указать <code class="language-plaintext highlighter-rouge">markdown: Hookdown</code> чтобы использовать этот конвертер вместо стандартного.</p>
+
+<p><em>Во-вторых,</em> и это уже чистый хак (или грязный…) к стандартному набору хуков Jekyll добавлено событие <code class="language-plaintext highlighter-rouge">:post_parse</code> для страниц, документов
+и постов. Тут на самом деле довольно интересно: почему-то Jekyll легко позволяет расширять систему хуков в разрезе объектов, но не дает этого
+делать в разрезе событий… Приходится хакать, благо в Ruby это сделать легко, но проблема тут, конечно, в том, что хак полагается на внутреннюю
+структуру, а не интерфейс.</p>
+
+<p>Зато теперь можно писать:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="no">Jekyll</span><span class="o">::</span><span class="no">Hooks</span><span class="o">::</span><span class="n">register</span> <span class="p">[</span> <span class="ss">:pages</span><span class="p">,</span> <span class="ss">:documents</span> <span class="p">],</span> <span class="ss">:post_parse</span> <span class="k">do</span> <span class="o">|</span><span class="n">page</span><span class="p">,</span> <span class="n">document</span><span class="o">|</span>
+  <span class="c1"># Тут что-то делаем с document (это Kramdown::Document)</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>И <em>в-третьих,</em> уже в порядке дополнительного расширения имеется хук на элементы по типам. Он уже вешается не через стандартный механизм, поскольку
+у стандартного параметров не хватает.</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="no">JekyllIS</span><span class="o">::</span><span class="no">Hookdown</span><span class="o">::</span><span class="n">register_element_hook</span> <span class="p">[</span> <span class="ss">:pages</span><span class="p">,</span> <span class="ss">:documents</span> <span class="p">],</span> <span class="ss">:img</span> <span class="k">do</span> <span class="o">|</span><span class="n">page</span><span class="p">,</span> <span class="n">element</span><span class="o">|</span>
+  <span class="c1"># Делаем что-то с element (Kramdown::Element)</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>При этом важно, что ваш обработчик <em>возвращает</em>:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Kramdown::Element</code> — заменит элемент, на котором был вызван хук, в дереве документа.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">nil</code> — не приведет к изменениям в документе (если вы сами внутри обработчика не модифицировали дочерние элементы данного).</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">:delete</code> — удалит элемент, на котором вызван хук из дерева документа.</p>
+  </li>
+  <li>
+    <p>Любые другие значения трактуются как ошибочные.</p>
+  </li>
+</ul>
+
+<h3 id="использование">
+<a class="anchor" href="#%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Использование</h3>
+
+<p>Думаю, уже понятно, что данный гем используется из других плагинов — расположенных в каталоге <code class="language-plaintext highlighter-rouge">_plugins</code> или в отдельных гемах — неважно.</p>
+
+<p>При этом чтобы он работал, нужно включить кастомный конвертер в <code class="language-plaintext highlighter-rouge">_config.yml</code>, что делается конечным пользователем, а не разработчиком
+плагина… Зато разработчик плагина может это проверить посредством <code class="language-plaintext highlighter-rouge">JekyllIS::Hookdown::enabled?</code>, что <em>крайне рекомендуется</em> делать, чтобы
+конечный пользователь не получил неожиданных и непонятных для него ошибок.</p>
+
+<h2 id="что-дальше">
+<a class="anchor" href="#%D1%87%D1%82%D0%BE-%D0%B4%D0%B0%D0%BB%D1%8C%D1%88%D0%B5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Что дальше?</h2>
+
+<ul>
+  <li>
+    <p>По <strong>jekyll-is-hookdown</strong> я не вижу направлений для расширения функциональности без потери логики. Буду писать документацию и править баги, если
+вдруг появятся.</p>
+  </li>
+  <li>
+    <p>По <strong>jekyll-is-images</strong> планов полно, приглашаю в <strong><a href="https://github.com/jekyll-is/jekyll-is-images/issues" class="img-icon-github">Issues</a></strong>.</p>
+  </li>
+  <li>
+    <p><strong>is-kramdown-hooked</strong> отправится в архив.</p>
+  </li>
+</ul>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:GFM">
+      <p>GitHub Flavored Markdown. Конкретно мне это нужно для того, чтобы использовать ``` (тройной бэктик) для блоков кода вместо окружения {% highlight %}. <a href="#fnref:GFM" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+
+<div markdown="span" class="announcer-block announcer-channel-telegram" style="display:none;" data-key="_posts/tech/2026/2026-08-22-jekyll-is-august.md" data-channel="telegram"></div>
+<script src="/js/announcer.js"></script>
+
+</div>
+
+<div class="__new_recommends" data-main="/data/recommends.json" data-categories="tech,programming,ruby,web" data-goods="/data/recommended-goods.json" data-flag="categories">
+    <figure class="__new_recommends_article" title="Перейти к посту">
+        <a href="" class="__new_recommends_image_link"><img class="__new_recommends_image"></a>
+        <aside class="__new_recommends_date"><a href="" class="__new_recommends_date_place"> </a></aside>
+        <figcaption class="__new_recommends_caption"><a href="" class="__new_recommends_title_place"> </a></figcaption>
+    </figure>
+    <figure class="__new_recommends_article" title="Перейти к посту">
+        <a href="" class="__new_recommends_image_link"><img class="__new_recommends_image"></a>
+        <aside class="__new_recommends_date"><a href="" class="__new_recommends_date_place"> </a></aside>
+        <figcaption class="__new_recommends_caption"><a href="" class="__new_recommends_title_place"> </a></figcaption>
+    </figure>
+    <figure class="__new_recommends_good">
+        <a href="" class="__new_recommends_image_link" title="Перейти в магазин" target="_blank"><img class="__new_recommends_good_image"></a>
+        <aside class="__new_recommends_date"><a href="" target="_blank" title="Перейти к виду товара" class="__new_recommends_date_place"> </a></aside>
+        <figcaption class="__new_recommends_caption"><a href="" target="_blank" title="Перейти к коллекции" class="__new_recommends_title_place"> </a></figcaption>
+    </figure>
+</div>
+<script src="/assets/js/recommends.js"></script>
+
+
+<script src="https://giscus.app/client.js" data-repo="shikhalev/shikhalev.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI=" data-category="General" data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="ru" crossorigin="anonymous" async>
+</script>
+
+
+
+
+</article>
+
+</main><aside id="search">
+<script async src="https://cse.google.com/cse.js?cx=757997bbb3ada06b9"></script>
+<div class="gcse-search"></div>
+
+</aside><aside id="toc" class="toc toc-post">
+  <h4>Содержание</h4>
+  <ul id="toc_list" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#jekyll-is-images">jekyll-is-images</a></li>
+<li class="toc-entry toc-h2"><a href="#jekyll-is-hookdown">jekyll-is-hookdown</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#принцип-работы">Принцип работы</a></li>
+<li class="toc-entry toc-h3"><a href="#использование">Использование</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#что-дальше">Что дальше?</a></li>
+</ul>
+</aside><aside id="backs" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+
+</aside><!-- скрываем через style, чтоб не менять макет полностью -->
+<aside id="ga" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside><aside id="feeds"><h4>Atom Feeds</h4>
+<ul>
+  <li>
+    <a href="/feed.xml" title="Иван Шихалев">Все записи</a>
+    <ul><li><a href="/feed/tech.xml" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a></li></ul>
+  </li>
+</ul>
+</aside><aside id="contacts"><h4>О себе</h4>
+
+<ul>
+  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa-icon-li-keyboard">Программист</li>
+  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
+  <li class="fa-icon-li-camera">Хобби — фотография</li>
+</ul>
+
+<p class="social">
+  <a href="https://www.twitter.com/shikhalev" title="Twitter">&#xf099;</a>
+  <!-- <a href="https://www.facebook.com/shikhalev" title="Facebook">&#xf39e;</a> -->
+  <a href="https://vk.com/shikhalev" title="VK">&#xf189;</a>
+  <a href="https://github.com/shikhalev" title="GitHub">&#xf09b;</a>
+  <!-- <a href="https://instagram.com/ivanshikhalev" title="Instagram">&#xf16d;</a>
+  <a href="https://www.linkedin.com/in/shikhalev" title="LinkedIn">&#xf08c;</a> -->
+</p>
+</aside><aside id="sidebar" style="border:none;box-shadow:none;"></aside><footer id="site-footer"><!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=72960469&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://metrika-informer.com/informer/72960469/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="72960469" data-lang="ru" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<p style="font-weight: bold;">© 1993–2026 <a href="/about/">Иван Шихалев</a></p>
+
+<p>Материалы сайта опубликованы под лицензией
+<a style="font-weight: bold;" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
+если не оговорено иное. <a href="https://github.com/shikhalev/jekyll-theme">Программный код</a> непосредственно сайта — под лицензией
+<a style="font-weight: bold;" href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+<p>Сайт сформирован статическим генератором <a style="font-weight: bold;" href="https://jekyllrb.com/">Jekyll</a>, комментарии —
+<a style="font-weight: bold;" href="https://staticman.net/">Staticman</a>. Отдельная благодарность автору <a style="font-weight: bold;" href="https://github.com/allejo/jekyll-toc">allejo/jekyll-toc</a>.</p>
+</footer>
+
+<div id="hl"></div>
+<div id="hr"></div>
+<div id="hb"></div>
+<div id="fl"></div>
+<div id="fr"></div>
+
+</div> <!-- #grid -->
+
+<div id="topper" title="Вернуться наверх страницы"><span class="fas">&#xf35b;</span></div>
+<script async src="/assets/js/topper.js"></script>
+
+</div> <!-- #global-box -->
+
+</body>
+
+</html>

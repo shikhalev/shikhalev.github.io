@@ -1,4 +1,118 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-08-21T18:00:23+00:00</updated><id>https://shikhalev.github.io/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Мерч: Большой крохаль</title><link href="https://shikhalev.github.io/life/2026/08/mergus.html" rel="alternate" type="text/html" title="Мерч: Большой крохаль" /><published>2026-08-15T00:00:00+00:00</published><updated>2026-08-15T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/08/mergus</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/08/mergus.html"><![CDATA[<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_900" style="--is-images-width:900px;" data-modes="grid,slides">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-08-22T09:09:36+00:00</updated><id>https://shikhalev.github.io/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Плагины jekyll‑is‑hookdown и jekyll‑is‑images v0.8.2</title><link href="https://shikhalev.github.io/tech/2026/08/jekyll-is-august.html" rel="alternate" type="text/html" title="Плагины jekyll‑is‑hookdown и jekyll‑is‑images v0.8.2" /><published>2026-08-22T00:00:00+00:00</published><updated>2026-08-22T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2026/08/jekyll-is-august</id><content type="html" xml:base="https://shikhalev.github.io/tech/2026/08/jekyll-is-august.html"><![CDATA[<h2 id="jekyll-is-images"><a href="https://github.com/jekyll-is/jekyll-is-images" class="img-icon-github">jekyll-is-images</a></h2>
+
+<p>Сначала коротко про <strong><a href="https://github.com/jekyll-is/jekyll-is-images" class="img-icon-github">jekyll-is-images</a></strong>. По срав­не­нию с со­сто­я­ни­ем на <a href="/tech/2026/08/jekyll-is-images-alpha.html">прош­лый пост</a> в ос­нов­ном
+произошло много мелких правок мелких багов, из от­но­си­тель­но су­щес­т­вен­но­го — довел до ума работу галерей в ре­жи­ме слайд-шоу (впрочем, и там
+есть куда расти). А третью цифру я поднял при сме­не зависимости с <a href="https://github.com/jekyll-is/is-kramdown-hooked" class="img-icon-github">is-kramdown-hooked</a>
+на <strong><a href="https://github.com/jekyll-is/jekyll-is-hookdown" class="img-icon-github">jekyll-is-hookdown</a></strong>, о ко­то­ром и поговорим далее. Это повлияло на то, что следует указывать
+в <code class="language-plaintext highlighter-rouge">_config.yml</code> — вместо <code class="language-plaintext highlighter-rouge">input: ISKram</code> в под­раз­де­ле <code class="language-plaintext highlighter-rouge">kramdown</code> следует указывать <code class="language-plaintext highlighter-rouge">markdown: Hookdown</code> в кор­не конфига. А под­раз­дел
+<code class="language-plaintext highlighter-rouge">kramdown</code> остается полностью рабочим, и там можно указывать любой <code class="language-plaintext highlighter-rouge">input</code>, на­при­мер — <code class="language-plaintext highlighter-rouge">GFM</code><sup id="fnref:GFM"><a href="#fn:GFM" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> (что я и собираюсь сделать на сай­те
+в бли­жай­шее время).</p>
+
+<h2 id="jekyll-is-hookdown"><a href="https://github.com/jekyll-is/jekyll-is-hookdown" class="img-icon-github">jekyll-is-hookdown</a></h2>
+
+<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_350 __is_images__right" style="border-radius:15px;--is-images-width:320px;--is-images-up:20px;" data-modes="grid,slides">
+<a href="/img/6e/c2/12f604e7.webp" title="Сгенерированная картинка чисто для красоты" class="__is_images_wrapper"><img src="/img/fo/25/86to890b.webp" alt="Сгенерированная картинка чисто для красоты" class="__is_images_image __is_images_single" style="border-radius:15px;--is-images-width:320px;--is-images-aspect-ratio:40/21;--is-images-up:20px;" data-scale="1"></a>
+</figure>
+<p>Итак, что же это такое? Это специальный гем, который «хакает» процесс обработки markdown в Je­kyll, добавляя хук на тот момент, когда
+страница уже распарсена во внут­рен­нее AST-представление и еще не пре­об­ра­зо­ва­на во что-то другое. Зачем это надо? Чтобы не де­лать лишней
+работы по пар­син­гу исходного markdown или фи­наль­но­го HTML.</p>
+
+<!--more-->
+
+<p>Поскольку я планирую этот подход использовать не толь­ко в jekyll-is-images,
+вполне логично было вынести этот механизм в от­дель­ный гем. Более того, подобный хак плохо дублируется, и втыкать его в каж­дый функциональный
+плагин по отдельности потребует много хитрых оберток и постоянного разруливания конфликтов…</p>
+
+<p>В общем, <em>главный недостаток</em> такого подхода в том, что он по су­ти формирует экосистему, несовместимую с дру­ги­ми экосистемами, использующими
+тот же хак… Поэтому я планирую отдельно пройтись по jekyll-is-images и четко разделить возможности, требующие хака, т.е. пе­ре­ин­тер­пре­та­цию
+стандартного markdown-синтаксиса, и тот же функционал в li­quid-тегах, хака соответственно не требующий.</p>
+
+<dl>
+  <dt>Небольшое историческое отступление</dt>
+  <dd>
+    <p>Сначала я запихнул хук внутрь собственно Kramdown через кастомный пар­сер — в ге­ме <a href="https://github.com/jekyll-is/is-kramdown-hooked" class="img-icon-github">is-kramdown-hooked</a>.
+Причем это решение не тре­бо­ва­ло зависимости от Je­kyll, но — обратная сторона медали — и не осо­бо-то интегрировалось с сис­те­мой хуков в Je­kyll.
+Кроме того, использование кас­том­но­го пар­се­ра не поз­во­ля­ло использовать другие кастомные пар­се­ры…</p>
+
+    <p>А еще в про­цес­се работы я понял, что
+нужный мне момент вполне доступен и извне Kram­down — это момент между созданием <code class="language-plaintext highlighter-rouge">Kramdown::Document</code> и вызовом его <code class="language-plaintext highlighter-rouge">to_html</code> (или <code class="language-plaintext highlighter-rouge">to_latex</code>, etc).</p>
+  </dd>
+</dl>
+
+<h3 id="принцип-работы">Принцип работы</h3>
+
+<p><em>Во-первых,</em> определен кастомный конвертер в Jekyll. Естественно, он просто унаследован от стандартного, и всего один метод переопределен.
+В <code class="language-plaintext highlighter-rouge">_config.yml</code> требуется указать <code class="language-plaintext highlighter-rouge">markdown: Hookdown</code> чтобы использовать этот конвертер вместо стандартного.</p>
+
+<p><em>Во-вторых,</em> и это уже чистый хак (или грязный…) к стандартному набору хуков Jekyll добавлено событие <code class="language-plaintext highlighter-rouge">:post_parse</code> для страниц, документов
+и постов. Тут на самом деле довольно интересно: почему-то Jekyll легко позволяет расширять систему хуков в разрезе объектов, но не дает этого
+делать в разрезе событий… Приходится хакать, благо в Ruby это сделать легко, но проблема тут, конечно, в том, что хак полагается на внутреннюю
+структуру, а не интерфейс.</p>
+
+<p>Зато теперь можно писать:</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="no">Jekyll</span><span class="o">::</span><span class="no">Hooks</span><span class="o">::</span><span class="n">register</span> <span class="p">[</span> <span class="ss">:pages</span><span class="p">,</span> <span class="ss">:documents</span> <span class="p">],</span> <span class="ss">:post_parse</span> <span class="k">do</span> <span class="o">|</span><span class="n">page</span><span class="p">,</span> <span class="n">document</span><span class="o">|</span>
+  <span class="c1"># Тут что-то делаем с document (это Kramdown::Document)</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>И <em>в-третьих,</em> уже в порядке дополнительного расширения имеется хук на элементы по типам. Он уже вешается не через стандартный механизм, поскольку
+у стандартного параметров не хватает.</p>
+
+<figure class="highlight">
+  <pre><code class="language-ruby" data-lang="ruby"><span class="no">JekyllIS</span><span class="o">::</span><span class="no">Hookdown</span><span class="o">::</span><span class="n">register_element_hook</span> <span class="p">[</span> <span class="ss">:pages</span><span class="p">,</span> <span class="ss">:documents</span> <span class="p">],</span> <span class="ss">:img</span> <span class="k">do</span> <span class="o">|</span><span class="n">page</span><span class="p">,</span> <span class="n">element</span><span class="o">|</span>
+  <span class="c1"># Делаем что-то с element (Kramdown::Element)</span>
+<span class="k">end</span></code></pre>
+</figure>
+
+<p>При этом важно, что ваш обработчик <em>возвращает</em>:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Kramdown::Element</code> — заменит элемент, на котором был вызван хук, в дереве документа.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">nil</code> — не приведет к изменениям в документе (если вы сами внутри обработчика не модифицировали дочерние элементы данного).</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">:delete</code> — удалит элемент, на котором вызван хук из дерева документа.</p>
+  </li>
+  <li>
+    <p>Любые другие значения трактуются как ошибочные.</p>
+  </li>
+</ul>
+
+<h3 id="использование">Использование</h3>
+
+<p>Думаю, уже понятно, что данный гем используется из других плагинов — расположенных в каталоге <code class="language-plaintext highlighter-rouge">_plugins</code> или в отдельных гемах — неважно.</p>
+
+<p>При этом чтобы он работал, нужно включить кастомный конвертер в <code class="language-plaintext highlighter-rouge">_config.yml</code>, что делается конечным пользователем, а не разработчиком
+плагина… Зато разработчик плагина может это проверить посредством <code class="language-plaintext highlighter-rouge">JekyllIS::Hookdown::enabled?</code>, что <em>крайне рекомендуется</em> делать, чтобы
+конечный пользователь не получил неожиданных и непонятных для него ошибок.</p>
+
+<h2 id="что-дальше">Что дальше?</h2>
+
+<ul>
+  <li>
+    <p>По <strong>jekyll-is-hookdown</strong> я не вижу направлений для расширения функциональности без потери логики. Буду писать документацию и править баги, если
+вдруг появятся.</p>
+  </li>
+  <li>
+    <p>По <strong>jekyll-is-images</strong> планов полно, приглашаю в <strong><a href="https://github.com/jekyll-is/jekyll-is-images/issues" class="img-icon-github">Issues</a></strong>.</p>
+  </li>
+  <li>
+    <p><strong>is-kramdown-hooked</strong> отправится в архив.</p>
+  </li>
+</ul>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:GFM">
+      <p>GitHub Flavored Markdown. Конкретно мне это нужно для того, чтобы использовать ``` (тройной бэктик) для блоков кода вместо окружения {% highlight %}. <a href="#fnref:GFM" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;web&quot;]" /><category term="Jekyll" /><category term="CSS" /><category term="HTML" /><summary type="html"><![CDATA[Развитие плагина jekyll-is-images и некоторые замечания по ходу дела.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/54/17/7bftf276.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/54/17/7bftf276.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Мерч: Большой крохаль</title><link href="https://shikhalev.github.io/life/2026/08/mergus.html" rel="alternate" type="text/html" title="Мерч: Большой крохаль" /><published>2026-08-15T00:00:00+00:00</published><updated>2026-08-15T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/08/mergus</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/08/mergus.html"><![CDATA[<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_900" style="--is-images-width:900px;" data-modes="grid,slides">
 <a href="/merch/photo/birds/20260518-mergus/" title="Фото самца большого крохаля (Mergus merganser). 18 мая 2026 года, Дружино-Бардымский пруд." class="__is_images_wrapper"><img src="/img/8c/40/87ce7t5e.avif" alt="Фото самца большого крохаля (Mergus merganser). 18 мая 2026 года, Дружино-Бардымский пруд." class="__is_images_image __is_images_single" style="--is-images-width:900px;--is-images-aspect-ratio:225/118;" data-scale="1" data-caption="Фото самца большого крохаля (Mergus merganser). 18 мая 2026 года, Дружино-Бардымский пруд."></a>
 <figcaption>Фото самца большого крохаля (Mergus merganser). 18 мая 2026 года, Дружино-Бардымский пруд.</figcaption>
 </figure>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;life&quot;, &quot;dybr&quot;, &quot;web&quot;, &quot;about&quot;]" /><category term="мерч" /><category term="принтшопы" /><category term="ВсеМайки" /><category term="PrintDirect" /><summary type="html"><![CDATA[Продолжаю пополнять каталог мерча... Теперь с фото самца большого крохаля в полёте.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/t3/b0/o7eb62eo.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/t3/b0/o7eb62eo.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Мерч: Паук и еще один пейзаж</title><link href="https://shikhalev.github.io/life/2026/08/spider.html" rel="alternate" type="text/html" title="Мерч: Паук и еще один пейзаж" /><published>2026-08-09T00:00:00+00:00</published><updated>2026-08-09T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/08/spider</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/08/spider.html"><![CDATA[<figure id="fig-1" class="__is_images_figure __is_images_gallery" data-modes="slides">
@@ -367,16 +481,4 @@ kramdown:
 
 <hr />
 
-<p>Присоединяйтесь, если интересно.</p>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="nature" /><category term="web" /><category term="iNaturalist" /><category term="Telegram" /><category term="птицы" /><category term="цветы" /><category term="бабочки" /><category term="растения" /><category term="животные" /><category term="насекомые" /><category term="грибы" /><category term="жуки" /><category term="попугаи" /><category term="совы" /><summary type="html"><![CDATA[Подборка наблюдений за июнь]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/41/68/37o51867.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/41/68/37o51867.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Обновление каталога мерча</title><link href="https://shikhalev.github.io/life/2026/07/catalog-update.html" rel="alternate" type="text/html" title="Обновление каталога мерча" /><published>2026-07-04T00:00:00+00:00</published><updated>2026-07-04T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/07/catalog-update</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/07/catalog-update.html"><![CDATA[<p>Добавил в каталог еще три коллекции.</p>
-
-<figure id="fig-1" class="logo __is_images_figure __is_images_single __is_images_width_350" style="--is-images-width:320px;" data-modes="grid,slides">
-<a href="/merch/jokes/20260528-chto-sovoy/" title="«Что совой об пень...»" class="__is_images_wrapper"><img src="/img/ot/30/e425905f.webp" alt="«Что совой об пень...»" class="__is_images_image __is_images_single" style="--is-images-width:320px;--is-images-aspect-ratio:64/73;" data-scale="1"></a>
-</figure>
-<!--more-->
-
-<figure id="fig-2" class="__is_images_figure __is_images_single __is_images_width_650" style="border-radius:25px;--is-images-width:640px;" data-modes="grid,slides">
-<a href="/merch/photo/landscapes/20260511-arti/" title="Арти, май 2026" class="__is_images_wrapper"><img src="/img/45/09/fc42763o.avif" alt="Арти, май 2026" class="__is_images_image __is_images_single" style="border-radius:25px;--is-images-width:640px;--is-images-aspect-ratio:640/427;" data-scale="1"></a>
-</figure>
-<figure id="fig-3" class="__is_images_figure __is_images_single __is_images_width_650" style="border-radius:25px;--is-images-width:640px;" data-modes="grid,slides">
-<a href="/merch/photo/birds/20260102-passer/" title="Зимний воробей" class="__is_images_wrapper"><img src="/img/6o/00/590ob7t8.avif" alt="Зимний воробей" class="__is_images_image __is_images_single" style="border-radius:25px;--is-images-width:640px;--is-images-aspect-ratio:640/427;" data-scale="1"></a>
-</figure>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;life&quot;, &quot;dybr&quot;, &quot;web&quot;, &quot;about&quot;]" /><category term="мерч" /><category term="принтшопы" /><category term="ВсеМайки" /><category term="PrintDirect" /><category term="FUN" /><summary type="html"><![CDATA[Добавил еще три коллекции...]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/92/88/2bb0ttot.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/92/88/2bb0ttot.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>Присоединяйтесь, если интересно.</p>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="nature" /><category term="web" /><category term="iNaturalist" /><category term="Telegram" /><category term="птицы" /><category term="цветы" /><category term="бабочки" /><category term="растения" /><category term="животные" /><category term="насекомые" /><category term="грибы" /><category term="жуки" /><category term="попугаи" /><category term="совы" /><summary type="html"><![CDATA[Подборка наблюдений за июнь]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/41/68/37o51867.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/41/68/37o51867.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
