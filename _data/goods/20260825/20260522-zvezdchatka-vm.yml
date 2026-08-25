@@ -1,0 +1,66 @@
+design: _designs/merch/photo/flowers/20260522-zvezdchatka.md
+date: 2026-08-25
+items:
+  - good: _goods/type/clothes/men/hoodie/vm-man_hoodie_oversize.md
+    url: https://shikhalev.vsemaykishop.ru/article/man_hoodie_oversize/4101565?size=oversizeM&color=khaki
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_1039_man_hoodie_oversize_front_khaki_936.webp
+  - good: _goods/type/clothes/women/hoodie/vm-woman_hoodie_oversize.md
+    url: https://shikhalev.vsemaykishop.ru/article/woman_hoodie_oversize/4101565?size=xxxl_56&color=khaki
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_1010_woman_hoodie_oversize_front_khaki_936.webp
+  - good: _goods/type/clothes/kids/hoodie/vm-child_hoodie_oversize.md
+    url: https://shikhalev.vsemaykishop.ru/article/child_hoodie_oversize/4101565?size=116sm&color=khaki
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_90_child_hoodie_oversize_front_khaki_936.webp
+  - good: _goods/type/clothes/women/suit/vm-woman_suit_over.md
+    url: https://shikhalev.vsemaykishop.ru/article/woman_suit_over/4101565?color=khaki
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_1002_woman_suit_over_front_khaki_936.webp
+  - good: _goods/type/clothes/men/suit/vm-man_knit_suit_over.md
+    url: https://shikhalev.vsemaykishop.ru/article/man_knit_suit_over/4101565?color=darkblue
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_1001_man_knit_suit_over_front_darkblue_936.webp
+  - good: _goods/type/clothes/kids/suit/vm-childrens_suits_oversize.md
+    url: https://shikhalev.vsemaykishop.ru/article/childrens_suits_oversize/4101565?color=khaki
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_10_childrens_suits_oversize_front_khaki_936.webp
+  - good: _goods/type/clothes/men/sweatshirt/vm-sweatshirt_without_fleece_man.md
+    url: https://shikhalev.vsemaykishop.ru/article/sweatshirt_without_fleece_man/4101565?size=s_44-46&color=virid
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_1000_sweatshirt_without_fleece_man_front_virid_936.webp
+  - good: _goods/type/clothes/women/sweatshirt/vm-sweatshirt_without_fleece_woman_vm.md
+    url: https://shikhalev.vsemaykishop.ru/article/sweatshirt_without_fleece_woman_vm/4101565?size=xxs_42&color=graphite
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_1000_sweatshirt_without_fleece_woman_vm_front_graphite_936.webp
+  - good: _goods/type/clothes/men/t-shirt/vm-manshort.md
+    url: https://shikhalev.vsemaykishop.ru/article/manshort/4101565?color=black
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_1000_manshort_front_black_936.webp
+  - good: _goods/type/clothes/men/hoodie/vm-hoodie.md
+    url: https://shikhalev.vsemaykishop.ru/article/hoodie/4101565?size=xxs_42&color=black
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_1000_hoodie_front_black_936.webp
+  - good: _goods/type/clothes/men/longsleeve/vm-manlong.md
+    url: https://shikhalev.vsemaykishop.ru/article/manlong/4101565?color=black
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_1000_manlong_front_black_936.webp
+  - good: _goods/type/clothes/men/sweatshirt/vm-smock.md
+    url: https://shikhalev.vsemaykishop.ru/article/smock/4101565?color=black
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_1001_smock_front_black_936.webp
+  - good: _goods/type/clothes/men/t-shirt/vm-man_tshirt_premium.md
+    url: https://shikhalev.vsemaykishop.ru/article/man_tshirt_premium/4101565?color=black
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_1010_man_tshirt_premium_front_black_936.webp
+  - good: _goods/type/clothes/men/t-shirt/vm-tshirt_oversize.md
+    url: https://shikhalev.vsemaykishop.ru/article/tshirt_oversize/4101565?size=xs_42-44&color=black
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_1000_tshirt_oversize_front_black_936.webp
+  - good: _goods/type/clothes/unisex/hoodie/vm-hoodie_superoversize.md
+    url: https://shikhalev.vsemaykishop.ru/article/hoodie_superoversize/4101565?color=black
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_1000_hoodie_superoversize_front_black_936.webp
+  - good: _goods/type/clothes/men/pajamas/vm-man_pajamas.md
+    url: https://shikhalev.vsemaykishop.ru/article/man_pajamas/4101565?color=black
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_1001_man_pajamas_front_black_936.webp
+  - good: _goods/type/clothes/men/pajamas/vm-mens_pajamas_longsleeve.md
+    url: https://shikhalev.vsemaykishop.ru/article/mens_pajamas_longsleeve/4101565?color=black
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_1000_mens_pajamas_longsleeve_front_black_936.webp
+  - good: _goods/type/clothes/men/hoodie/vm-mens_hoodies_zip.md
+    url: https://shikhalev.vsemaykishop.ru/article/mens_hoodies_zip/4101565?color=black
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_20_mens_hoodies_zip_front_black_936.webp
+  - good: _goods/type/clothes/men/polo/vm-man_tshirt_polo.md
+    url: https://shikhalev.vsemaykishop.ru/article/man_tshirt_polo/4101565?size=xxs_42&color=darkblue
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_1000_man_tshirt_polo_front_darkblue_936.webp
+  - good: _goods/type/clothes/men/t-shirt/vm-tshirt_oversize_man_premium.md
+    url: https://shikhalev.vsemaykishop.ru/article/tshirt_oversize_man_premium/4101565?size=xs_42-44&color=grey
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_1000_tshirt_oversize_man_premium_front_grey_936.webp
+  - good: _goods/type/clothes/men/bottom/vm-men_shorts_footer.md
+    url: https://shikhalev.vsemaykishop.ru/article/men_shorts_footer/4101565?color=black
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_1000_men_shorts_footer_front_black_936.webp
