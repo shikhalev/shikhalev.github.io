@@ -3,6 +3,7 @@ layout: verse
 title: Волчий пастух
 write_date: зима-весна 2000
 category: [ text, verses, best ]
+image: _src/covers/pater00.png
 tags:
   - suno
 suno:
