@@ -89,7 +89,7 @@ class DataMaker
     @context ||= JekyllIS::Images::Context[@site, @page]
     width = @context.config('goods', 'width') || 210
     height = @context.config('goods', 'height') || 210
-    params = { width:, height:, format: 'webp', fit: 'contain' }
+    params = { width:, height:, format: 'avif', fit: 'contain' }
     result = JekyllIS::Images::Image::Transform::transform @context, source, **params
     result.url
   end
