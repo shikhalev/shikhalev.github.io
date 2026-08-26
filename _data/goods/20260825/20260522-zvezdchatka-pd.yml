@@ -64,6 +64,7 @@ items:
   - good: _goods/type/home/dish/bottle/plastic/pd-plastic.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487034
     img: https://cdn99.printdirect.ru/cache/product/74/c4/9487034/tov/all/480z480_front_3420_0_0_0_c7962c6645cee6adb01408c8b22e.jpg
+    recommend: true
   - good: _goods/type/home/dish/bottle/metal/carabine/pd-carabine-500.md
     url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487035
     img: https://cdn99.printdirect.ru/cache/product/55/39/9487035/tov/all/480z480_front_1802_0_0_0_d58bba76d26b9d2ed692efd115ca.jpg
