@@ -17,9 +17,8 @@ items:
     url: https://shikhalev.vsemaykishop.ru/article/man_knit_suit_over/4101565?color=darkblue
     img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_1001_man_knit_suit_over_front_darkblue_936.webp
   - good: _goods/type/clothes/kids/suit/vm-childrens_suits_oversize.md
-    url: https://shikhalev.vsemaykishop.ru/article/childrens_suits_oversize/4101565?color=khaki
-    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_10_childrens_suits_oversize_front_khaki_936.webp
-    disabled: true
+    url: https://shikhalev.vsemaykishop.ru/article/childrens_suits_oversize/4101565?size=116sm&color=darkblue
+    img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_10_childrens_suits_oversize_front_darkblue_936.webp
   - good: _goods/type/clothes/men/sweatshirt/vm-sweatshirt_without_fleece_man.md
     url: https://shikhalev.vsemaykishop.ru/article/sweatshirt_without_fleece_man/4101565?size=s_44-46&color=virid
     img: https://storage.vsemayki.ru/images/0/4/4101/4101565/previews/people_1000_sweatshirt_without_fleece_man_front_virid_936.webp
