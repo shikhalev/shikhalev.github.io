@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-08-26T12:21:44+00:00</updated><id>https://shikhalev.github.io/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Плагины jekyll‑is‑hookdown и jekyll‑is‑images v0.8.2</title><link href="https://shikhalev.github.io/tech/2026/08/jekyll-is-august.html" rel="alternate" type="text/html" title="Плагины jekyll‑is‑hookdown и jekyll‑is‑images v0.8.2" /><published>2026-08-22T00:00:00+00:00</published><updated>2026-08-22T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2026/08/jekyll-is-august</id><content type="html" xml:base="https://shikhalev.github.io/tech/2026/08/jekyll-is-august.html"><![CDATA[<h2 id="jekyll-is-images"><a href="https://github.com/jekyll-is/jekyll-is-images" class="img-icon-github">jekyll-is-images</a></h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-08-27T07:50:03+00:00</updated><id>https://shikhalev.github.io/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Где берёзы сыплют свои медяки в реку чёрной воды…</title><link href="https://shikhalev.github.io/text/2026/08/birch.html" rel="alternate" type="text/html" title="Где берёзы сыплют свои медяки в реку чёрной воды…" /><published>2026-08-26T00:00:00+00:00</published><updated>2026-08-26T00:00:00+00:00</updated><id>https://shikhalev.github.io/text/2026/08/birch</id><content type="html" xml:base="https://shikhalev.github.io/text/2026/08/birch.html"><![CDATA[<p>Там, где берёзы сыплют свои медяки в реку чёрной воды,
+Когда дорога окончательно повернёт на север,
+Сойди на сухую обочину, тебя здесь найдут следы
+Тех, кто носит за лацканом четырёхлистный клевер.</p>
+
+<p>Не выбирай тропы́, жди, пусть она сама
+Бросит тебе под ноги край распрямлённой пружины.
+Не перешагивай камни — это ступени на
+Старом пути под гору через ветра́ вершины.</p>
+
+<p>Там, где промеж камней начинает белеть первый снег,
+Когда старый вяз, кряхтя, обнимет края поляны,
+Остановись, послушай тихий закатный свет,
+Принюхайся к тонким краскам высохшего бурьяна.</p>
+
+<p>Не покидай тропы, долго на месте не стой,
+Выйти в подлунный мир нужно успеть до ночи.
+В сумерках пробираясь, ты не заметишь то,
+Что видеть тебе не положено, рано, да и не хочешь.</p>
+
+<p>Там где луна освещает, нехотя, неровную дорогу домой,
+Когда придорожный куст выглядит тенью семи животных,
+Выдохни и расслабься — теперь ты снова такой,
+Каким был всегда. И будешь… до поворота.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;text&quot;, &quot;verses&quot;]" /><summary type="html"><![CDATA[Там, где берёзы сыплют свои медяки в реку чёрной воды, Когда дорога окончательно повернёт на север, Сойди на сухую обочину, тебя здесь найдут следы Тех, кто носит за лацканом четырёхлистный клевер. Не выбирай тропы́, жди, пусть она сама Бросит тебе под ноги край распрямлённой пружины. Не перешагивай камни — это ступени на Старом пути под гору через ветра́ вершины. Там, где промеж камней начинает белеть первый снег, Когда старый вяз, кряхтя, обнимет края поляны, Остановись, послушай тихий закатный свет, Принюхайся к тонким краскам высохшего бурьяна. Не покидай тропы, долго на месте не стой, Выйти в подлунный мир нужно успеть до ночи. В сумерках пробираясь, ты не заметишь то, Что видеть тебе не положено, рано, да и не хочешь. Там где луна освещает, нехотя, неровную дорогу домой, Когда придорожный куст выглядит тенью семи животных, Выдохни и расслабься — теперь ты снова такой, Каким был всегда. И будешь… до поворота.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/42/3t/22f4b384.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/42/3t/22f4b384.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Плагины jekyll‑is‑hookdown и jekyll‑is‑images v0.8.2</title><link href="https://shikhalev.github.io/tech/2026/08/jekyll-is-august.html" rel="alternate" type="text/html" title="Плагины jekyll‑is‑hookdown и jekyll‑is‑images v0.8.2" /><published>2026-08-22T00:00:00+00:00</published><updated>2026-08-22T00:00:00+00:00</updated><id>https://shikhalev.github.io/tech/2026/08/jekyll-is-august</id><content type="html" xml:base="https://shikhalev.github.io/tech/2026/08/jekyll-is-august.html"><![CDATA[<h2 id="jekyll-is-images"><a href="https://github.com/jekyll-is/jekyll-is-images" class="img-icon-github">jekyll-is-images</a></h2>
 
 <p>Сначала коротко про <strong><a href="https://github.com/jekyll-is/jekyll-is-images" class="img-icon-github">jekyll-is-images</a></strong>. По срав­не­нию с со­сто­я­ни­ем на <a href="/tech/2026/08/jekyll-is-images-alpha.html">прош­лый пост</a> в ос­нов­ном
 произошло много мелких правок мелких багов, из от­но­си­тель­но су­щес­т­вен­но­го — довел до ума работу галерей в ре­жи­ме слайд-шоу (впрочем, и там
@@ -428,57 +451,4 @@ kramdown:
 
 <p>В любом случае, всё, что есть, можно посмотреть на странице «<strong><a href="/merch/guide/Fringilla_coelebs/">Зяблик (Fringilla coelebs)</a></strong>». А отдельно хочу обратить внимание
 на <strong><a href="https://shikhalev.printdirect.ru/index.php?action=addtocart&amp;product=9495095" class="img-icon-printdirect">большой постер</a></strong> (на пенокартоне опционально): там максимум информационных блоков, на остальных то­ва­рах —
-что влезло, то влезло.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;life&quot;, &quot;dybr&quot;, &quot;web&quot;, &quot;about&quot;]" /><category term="мерч" /><category term="принтшопы" /><category term="ВсеМайки" /><category term="PrintDirect" /><category term="птицы" /><category term="животные" /><category term="«определитель»" /><category term="Fringilla coelebs" /><summary type="html"><![CDATA[Начал выкладывать «мерч», оформленный в стиле старинного определителя.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/ec/0o/f92547o9.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/ec/0o/f92547o9.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Tg: июнь 2026</title><link href="https://shikhalev.github.io/life/2026/07/channels-jun.html" rel="alternate" type="text/html" title="Tg: июнь 2026" /><published>2026-07-11T00:00:00+00:00</published><updated>2026-07-11T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/07/channels-jun</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/07/channels-jun.html"><![CDATA[<p>Кажется, тьфу-тьфу-тьфу, проблемы с автопостингом закончились. Так что, если где-то что-то про­пу­ще­но — это реально
-не нашлось подходящих под условия наблюдений (и та­кое пару раз было).</p>
-
-<h2 id="биоразнообразие-свердловскойобласти-вtg">Биоразнообразие Свердловской области в TG</h2>
-
-<p>Абсолютно шикарная сова. Лучше, конечно, открыть фото в полном размере.</p>
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="inat_sverdlobl/547" data-width="100%"></script>
-
-<!--more-->
-
-<hr />
-
-<h2 id="природаурала-наблюдения-сinaturalist">Природа Урала — наблюдения с iNaturalist</h2>
-
-<p>Никогда не встречал белую форму иван-чая… А он есть.</p>
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="urals_nature/3331" data-width="100%"></script>
-
-<hr />
-
-<p>А вот кому съедобного трутовика?..</p>
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="urals_nature/3274" data-width="100%"></script>
-
-<hr />
-
-<p>Вах, какой красавец!</p>
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="urals_nature/3252" data-width="100%"></script>
-
-<hr />
-
-<p>Редкая южная птица…</p>
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="urals_nature/3245" data-width="100%"></script>
-
-<hr />
-
-<h2 id="смиру-понитке">С миру по нитке</h2>
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="daily_flowers_of_the_world/555" data-width="100%"></script>
-
-<hr />
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="daily_birds_of_the_world/413" data-width="100%"></script>
-
-<hr />
-
-<script async="" src="https://telegram.org/js/telegram-widget.js?23" data-telegram-post="daily_butterflies_of_the_world/350" data-width="100%"></script>
-
-<hr />
-
-<p>Присоединяйтесь, если интересно.</p>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="nature" /><category term="web" /><category term="iNaturalist" /><category term="Telegram" /><category term="птицы" /><category term="цветы" /><category term="бабочки" /><category term="растения" /><category term="животные" /><category term="насекомые" /><category term="грибы" /><category term="жуки" /><category term="попугаи" /><category term="совы" /><summary type="html"><![CDATA[Подборка наблюдений за июнь]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/41/68/37o51867.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/41/68/37o51867.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+что влезло, то влезло.</p>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;life&quot;, &quot;dybr&quot;, &quot;web&quot;, &quot;about&quot;]" /><category term="мерч" /><category term="принтшопы" /><category term="ВсеМайки" /><category term="PrintDirect" /><category term="птицы" /><category term="животные" /><category term="«определитель»" /><category term="Fringilla coelebs" /><summary type="html"><![CDATA[Начал выкладывать «мерч», оформленный в стиле старинного определителя.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/ec/0o/f92547o9.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/ec/0o/f92547o9.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
