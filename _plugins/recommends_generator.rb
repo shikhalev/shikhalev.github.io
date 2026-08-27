@@ -32,7 +32,7 @@ class Jekyll::RecommendsGenerator < Jekyll::Generator
     width = context.config('recommends', 'width') || 340
     height = context.config('recommends', 'width') || 180
     crop = context.config('recommends', 'crop') || context.config('seo_image', 'crop')
-    params = { width:, height:, format: 'webp', fit: 'cover' }
+    params = { width:, height:, format: 'avif', fit: 'cover' }
     params[:crop] = crop if crop
     result = JekyllIS::Images::Image::transform context, source, **params
     result.url
@@ -68,7 +68,7 @@ class Jekyll::RecommendsGenerator < Jekyll::Generator
     context = JekyllIS::Images::Context[site, @fake_page]
     width = context.config('recommends', 'good_width') || 180
     height = context.config('recommends', 'good_height') || 180
-    params = { width:, height:, format: 'webp', fit: 'contain' }
+    params = { width:, height:, format: 'avif', fit: 'contain' }
     result = JekyllIS::Images::Image::Transform::transform context, source, **params
     result.url
   end
