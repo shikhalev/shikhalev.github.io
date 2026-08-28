@@ -4,10 +4,6 @@ description: Нечастый случай, когда Rust (его станда
 category: [ tech, programming, rust ]
 tags:
   - грабли
-image: _src/2021/03/2021-03-16/rust-logo-512x512.png
-is_images:
-  seo_image:
-    crop: "500:261+0+107"
 recommend: true
 ---
 
