@@ -1,6 +1,7 @@
 ---
 title: Женские джоггеры оверсайз 3D
 shop: vsemayki
+recommend: true
 ---
 
 ## Описание
