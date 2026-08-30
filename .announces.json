@@ -1,1 +1,22 @@
-{}
+{
+  "telegram": {
+    "config": {
+      "method": "telegram",
+      "chat_id": "@shikhalev_blog"
+    },
+    "posts": {
+      "_posts/blog/2026/2026-08-30-boletus.md": {
+        "url": "https://shikhalev.github.io/life/2026/08/boletus.html",
+        "date": "2026/08/30",
+        "title": "Мерч: гриб, жук и цветок",
+        "description": "Добавил на сайт еще три коллекции на базе фото: «Белый гриб», «Листоед гладкий» «Звездчатка ланцетолистная».",
+        "categories": [
+          "жизнь",
+          "дыбр",
+          "веб",
+          "сайт"
+        ]
+      }
+    }
+  }
+}
