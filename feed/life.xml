@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed/life.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-08-30T10:36:19+00:00</updated><id>https://shikhalev.github.io/feed/life.xml</id><title type="html">Иван Шихалев | Life</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Мерч: Большой крохаль</title><link href="https://shikhalev.github.io/life/2026/08/mergus.html" rel="alternate" type="text/html" title="Мерч: Большой крохаль" /><published>2026-08-15T00:00:00+00:00</published><updated>2026-08-15T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/08/mergus</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/08/mergus.html"><![CDATA[<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_900" style="--is-images-width:900px;" data-modes="grid,slides">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.github.io/feed/life.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.github.io/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-08-30T13:16:45+00:00</updated><id>https://shikhalev.github.io/feed/life.xml</id><title type="html">Иван Шихалев | Life</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Мерч: гриб, жук и цветок</title><link href="https://shikhalev.github.io/life/2026/08/boletus.html" rel="alternate" type="text/html" title="Мерч: гриб, жук и цветок" /><published>2026-08-30T00:00:00+00:00</published><updated>2026-08-30T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/08/boletus</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/08/boletus.html"><![CDATA[<p>Добавил на сайт еще три коллекции:</p>
+
+<figure id="fig-1" class="__is_images_figure __is_images_gallery" data-modes="slides">
+<div class="__is_images_slides_container __is_images_tab_block __is_images_only" style="--is-images-slide-width:800px;--is-images-slide-height:600px;--is-images-display:flex;"><figure class="__is_images_slide_figure" id="fig-1-slides-1"><a href="/merch/photo/other/20260613-bely/" title="Белый гриб (Boletus edulis)" class="__is_images_wrapper"><img src="/img/93/8b/73790087.avif" alt="Белый гриб (Boletus edulis)" class="__is_images_image __is_images_slide" style="--is-images-width:800px;--is-images-aspect-ratio:4/3;" data-scale="1" data-caption="Белый гриб (Boletus edulis)"></a>
+<figcaption>Белый гриб (Boletus edulis)</figcaption></figure>
+<figure class="__is_images_slide_figure" id="fig-1-slides-2"><a href="/merch/photo/insecta/20260522-listoed/" title="Листоед гладкий (Chrysolina polita)" class="__is_images_wrapper"><img src="/img/e4/29/9bocf6tb.avif" alt="Листоед гладкий (Chrysolina polita)" class="__is_images_image __is_images_slide" style="--is-images-width:800px;--is-images-aspect-ratio:4/3;" data-scale="1" data-caption="Листоед гладкий (Chrysolina polita)"></a>
+<figcaption>Листоед гладкий (Chrysolina polita)</figcaption></figure>
+<figure class="__is_images_slide_figure" id="fig-1-slides-3"><a href="/img/9o/t1/14ee4b6c.avif" title="Звездчатка ланцетолистная (Rabelera holostea)" class="__is_images_wrapper"><img src="/img/29/b9/9813ct32.avif" alt="Звездчатка ланцетолистная (Rabelera holostea)" class="__is_images_image __is_images_slide" style="--is-images-width:800px;--is-images-aspect-ratio:4/3;" data-scale="1" data-caption="Звездчатка ланцетолистная (Rabelera holostea)"></a>
+<figcaption>Звездчатка ланцетолистная (Rabelera holostea)</figcaption></figure></div><nav class="__is_images_gallery_navbar __is_images_only"><a href="#fig-1-slides-1">1</a><a href="#fig-1-slides-2">2</a><a href="#fig-1-slides-3">3</a></nav>
+</figure>
+<!--more-->
+
+<hr />
+
+<p>Ну и по паре рекомендаций с каждого — на что можно обратить внимание. На этот раз я выбрал то, что имеет некоторое отношение к 1 сентября…</p>
+
+<div class="goods-min-grid"><div class="product-min-card card-back-vsemayki" id="b560e532" data-kind="_goods/type/accessories/bag/backpack/vm-woman_backpack.md" data-design="_designs/merch/photo/flowers/20260522-zvezdchatka.md" data-order="2118000">
+    <a href="https://shikhalev.vsemaykishop.ru/article/woman_backpack/4098473?color=white" title="Перейти в магазин"><img src="/img/ft/57/415c8591.avif" alt="Звездчатка ланцетолистная" loading="lazy" /></a>
+    <span class="product-kind vsemayki"><a title="Перейти к виду товара" href="/merch/type/accessories/bag/backpack/vm-woman_backpack/">Сумка-рюкзак 3D</a></span>
+    <span class="product-design"><a title="Перейти к коллекции" href="/merch/photo/flowers/20260522-zvezdchatka/">Звездчатка ланцетолистная</a></span>
+    </div><div class="product-min-card card-back-vsemayki" id="b866e0b0" data-kind="_goods/type/office/vm-pencil_case.md" data-design="_designs/merch/photo/insecta/20260522-listoed.md" data-order="2118000">
+    <a href="https://shikhalev.vsemaykishop.ru/article/pencil_case/4098563?color=white" title="Перейти в магазин"><img src="/img/70/b7/0tc69obo.avif" alt="Листоед гладкий" loading="lazy" /></a>
+    <span class="product-kind vsemayki"><a title="Перейти к виду товара" href="/merch/type/office/vm-pencil_case/">Пенал школьный 3D</a></span>
+    <span class="product-design"><a title="Перейти к коллекции" href="/merch/photo/insecta/20260522-listoed/">Листоед гладкий</a></span>
+    </div><div class="product-min-card card-back-vsemayki" id="cdef34f6" data-kind="_goods/type/accessories/bag/backpack/vm-child_backpack_full.md" data-design="_designs/merch/photo/flowers/20260522-zvezdchatka.md" data-order="2118000">
+    <a href="https://shikhalev.vsemaykishop.ru/article/child_backpack_full/4098473?color=white" title="Перейти в магазин"><img src="/img/21/80/36418e0e.avif" alt="Звездчатка ланцетолистная" loading="lazy" /></a>
+    <span class="product-kind vsemayki"><a title="Перейти к виду товара" href="/merch/type/accessories/bag/backpack/vm-child_backpack_full/">Детский рюкзак 3D</a></span>
+    <span class="product-design"><a title="Перейти к коллекции" href="/merch/photo/flowers/20260522-zvezdchatka/">Звездчатка ланцетолистная</a></span>
+    </div><div class="product-min-card card-back-vsemayki" id="ad05f225" data-kind="_goods/type/accessories/cover/vm-cover_student.md" data-design="_designs/merch/photo/other/20260613-bely.md" data-order="2118000">
+    <a href="https://shikhalev.vsemaykishop.ru/article/cover_student/4104431?size=one_size&amp;color=green" title="Перейти в магазин"><img src="/img/o0/43/f658c7e2.avif" alt="Белый гриб" loading="lazy" /></a>
+    <span class="product-kind vsemayki"><a title="Перейти к виду товара" href="/merch/type/accessories/cover/vm-cover_student/">Обложка для студенческого билета</a></span>
+    <span class="product-design"><a title="Перейти к коллекции" href="/merch/photo/other/20260613-bely/">Белый гриб</a></span>
+    </div><div class="product-min-card card-back-vsemayki" id="ef04ff3e" data-kind="_goods/type/accessories/bag/backpack/vm-backpack_full.md" data-design="_designs/merch/photo/insecta/20260522-listoed.md" data-order="2118000">
+    <a href="https://shikhalev.vsemaykishop.ru/article/backpack_full/4098563?color=white" title="Перейти в магазин"><img src="/img/t0/co/c97e8387.avif" alt="Листоед гладкий" loading="lazy" /></a>
+    <span class="product-kind vsemayki"><a title="Перейти к виду товара" href="/merch/type/accessories/bag/backpack/vm-backpack_full/">Рюкзак 3D</a></span>
+    <span class="product-design"><a title="Перейти к коллекции" href="/merch/photo/insecta/20260522-listoed/">Листоед гладкий</a></span>
+    </div><div class="product-min-card card-back-vsemayki" id="2c2b612d" data-kind="_goods/type/home/dish/flask/vm-flask.md" data-design="_designs/merch/photo/other/20260613-bely.md" data-order="2118000">
+    <a href="https://shikhalev.vsemaykishop.ru/article/flask/4104431?color=metal" title="Перейти в магазин"><img src="/img/89/0c/e8t8718c.avif" alt="Белый гриб" loading="lazy" /></a>
+    <span class="product-kind vsemayki"><a title="Перейти к виду товара" href="/merch/type/home/dish/flask/vm-flask/">Фляга</a></span>
+    <span class="product-design"><a title="Перейти к коллекции" href="/merch/photo/other/20260613-bely/">Белый гриб</a></span>
+    </div></div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;life&quot;, &quot;dybr&quot;, &quot;web&quot;, &quot;about&quot;]" /><category term="мерч" /><category term="принтшопы" /><category term="ВсеМайки" /><category term="PrintDirect" /><summary type="html"><![CDATA[Добавил на сайт еще три коллекции на базе фото: «Белый гриб», «Листоед гладкий» «Звездчатка ланцетолистная».]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/02/9t/29255f6o.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/02/9t/29255f6o.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Мерч: Большой крохаль</title><link href="https://shikhalev.github.io/life/2026/08/mergus.html" rel="alternate" type="text/html" title="Мерч: Большой крохаль" /><published>2026-08-15T00:00:00+00:00</published><updated>2026-08-15T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/08/mergus</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/08/mergus.html"><![CDATA[<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_900" style="--is-images-width:900px;" data-modes="grid,slides">
 <a href="/merch/photo/birds/20260518-mergus/" title="Фото самца большого крохаля (Mergus merganser). 18 мая 2026 года, Дружино-Бардымский пруд." class="__is_images_wrapper"><img src="/img/8c/40/87ce7t5e.avif" alt="Фото самца большого крохаля (Mergus merganser). 18 мая 2026 года, Дружино-Бардымский пруд." class="__is_images_image __is_images_single" style="--is-images-width:900px;--is-images-aspect-ratio:225/118;" data-scale="1" data-caption="Фото самца большого крохаля (Mergus merganser). 18 мая 2026 года, Дружино-Бардымский пруд."></a>
 <figcaption>Фото самца большого крохаля (Mergus merganser). 18 мая 2026 года, Дружино-Бардымский пруд.</figcaption>
 </figure>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;life&quot;, &quot;dybr&quot;, &quot;web&quot;, &quot;about&quot;]" /><category term="мерч" /><category term="принтшопы" /><category term="ВсеМайки" /><category term="PrintDirect" /><summary type="html"><![CDATA[Продолжаю пополнять каталог мерча... Теперь с фото самца большого крохаля в полёте.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/t3/b0/o7eb62eo.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/t3/b0/o7eb62eo.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Мерч: Паук и еще один пейзаж</title><link href="https://shikhalev.github.io/life/2026/08/spider.html" rel="alternate" type="text/html" title="Мерч: Паук и еще один пейзаж" /><published>2026-08-09T00:00:00+00:00</published><updated>2026-08-09T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/08/spider</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/08/spider.html"><![CDATA[<figure id="fig-1" class="__is_images_figure __is_images_gallery" data-modes="slides">
@@ -250,344 +290,4 @@
 
 <hr />
 
-<p>Присоединяйтесь, если интересно.</p>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="nature" /><category term="web" /><category term="iNaturalist" /><category term="Telegram" /><category term="птицы" /><category term="цветы" /><category term="бабочки" /><category term="растения" /><category term="животные" /><category term="насекомые" /><category term="пиявки" /><category term="змеи" /><summary type="html"><![CDATA[Подборка наблюдений за май]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/c7/51/365b592f.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/c7/51/365b592f.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Принтшопы, первые опыты</title><link href="https://shikhalev.github.io/life/2026/06/merch.html" rel="alternate" type="text/html" title="Принтшопы, первые опыты" /><published>2026-06-05T00:00:00+00:00</published><updated>2026-06-05T00:00:00+00:00</updated><id>https://shikhalev.github.io/life/2026/06/merch</id><content type="html" xml:base="https://shikhalev.github.io/life/2026/06/merch.html"><![CDATA[<blockquote>
-  <p><em>Шьём да порем — нитки портим…</em></p>
-</blockquote>
-
-<hr />
-
-<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_400 __is_images__right" style="border-radius:10px;--is-images-width:360px;" data-modes="grid,slides">
-<a href="https://shikhalev.vsemaykishop.ru/article/womens_dresses_t_shirts_fullprint/4095963" title="Скриншот со VseMayki.ru: Платье-футболка 3D" class="__is_images_wrapper"><img src="/img/cc/50/688ce934.webp" alt="Скриншот со VseMayki.ru: Платье-футболка 3D" class="__is_images_image __is_images_single" style="border-radius:10px;--is-images-width:360px;--is-images-aspect-ratio:360/229;" data-scale="1"></a>
-</figure>
-<p>Таки начали мои фо­точ­ки проходить модерацию уже и на <strong><a href="https://shikhalev.vsemaykishop.ru/" class="img-icon-vsemayki">Все­Май­ки</a></strong>. Наверное, теперь можно и поподробнее о мер­че написать.</p>
-
-<p>Кроме самого факта публикации, это еще и дало возможность посмотреть витринные рендеры. Это, конечно, не то же самое, что вживую, но все-таки дает
-больше информации, чем то, что есть в конструкторе. Так что понимания, как что нужно делать, добавилось (см. эпиграф).</p>
-
-<p>Тем не менее, всё, что написано ниже — это <em>первые впечатления</em>, а не итоги какого-то существенного опыта. И да, <em>пока не мо­гу что-то определенное
-сказать о финансовой стороне вопроса</em> — была только одна продажа на <strong><a href="https://shikhalev.printdirect.ru/" class="img-icon-printdirect">Print­Di­rect</a></strong>, недостаточная для то­го,
-чтобы что-то вывести. И, насколько
-я понимаю, это нор­маль­но — такие вещи раскручиваются медленно, нужно большое количество «дизайнов» (и, в мо­ем случае, нужно их дорабатывать: прохождение
-мо­де­ра­ции — это минимальная планка, а не гарантия успеха).</p>
-
-<h2 id="площадки-и-товары">Площадки и товары</h2>
-
-<p>Погуглив, почитав отзывы и так далее, разместился я на трех площадках: <strong><a href="https://shikhalev.vsemaykishop.ru/" class="img-icon-vsemayki">Все­Май­ки</a></strong>,
-<strong><a href="https://shikhalev.printdirect.ru/" class="img-icon-printdirect">Print­Di­rect</a></strong> и <strong><a href="https://fun.ru/designer/shikhalev" class="img-icon-fun">FUN.ru</a></strong>. У них разный набор товаров, разные плюсы и минусы,
-так что ограничиваться чем-то одним я пока не собираюсь. Что касается международных площадок,
-то там нужна, как минимум, иностранная банковская карта, что, конечно, не то чтобы непреодолимое препятствие, но само по себе затратно
-и не факт, что окупится. Может быть, когда-нибудь в неопределенном будущем…</p>
-
-<!--more-->
-
-<h3 id="всемайки"><a href="https://shikhalev.vsemaykishop.ru/" class="img-icon-vsemayki">Все­Май­ки</a></h3>
-
-<p>Наверное, самый популярный в рунете принтшоп, активно рекламируется, множество людей пользуется… Ключевые особенности, которые мне хо­те­лось бы отметить:</p>
-
-<ul>
-  <li>
-    <p><strong>Большая аудитория.</strong> Если принт попадает в основной каталог, его потенциально там могут найти люди, ничего о вас до это­го не знавшие.
-То есть, чисто теоретически, можно не за­мо­ра­чи­вать­ся продвижением самому.</p>
-
-    <p>В справке написано, что не всё, прошедшее модерацию в принципе, в основной каталог попадает. Что-то может быть доступным через собственный
-магазин. Кри­те­рий — потенциальный интерес широкой аудитории. Как он определяется, мне сложно сказать — у меня все «дизайны», прошедшие модерацию
-в принципе, прошли в основной каталог. Но полагаю, отсекается в первую очередь именно <em>мерч</em> малоизвестных групп / ав­то­ров / ком­па­ний и прочие
-ни­ше­вые штуки.</p>
-  </li>
-</ul>
-
-<figure id="fig-2" class="logo __is_images_figure __is_images_single __is_images_shaped __is_images_width_200 __is_images__right" style="shape-outside:url(/img/o3/o1/0c7207b6.webp);--is-images-width:160px;--is-images-shift:50px;" data-modes="grid,slides">
-<a href="https://shikhalev.vsemaykishop.ru/article/backpack_full/4095037" title="Рюкзак с пеночкой-весничкой" class="__is_images_wrapper"><img src="/img/o3/o1/0c7207b6.webp" alt="Рюкзак с пеночкой-весничкой" class="__is_images_image __is_images_single" style="--is-images-width:160px;--is-images-aspect-ratio:160/199;--is-images-shift:50px;" data-scale="1"></a>
-</figure>
-<ul>
-  <li>
-    <p><strong>Довольно широкий ассортимент.</strong> В первую очередь это касается разнообразия фасонов <a href="https://shikhalev.vsemaykishop.ru/catalogue/v/odezhda">одежды</a>, но не толь­ко. Я бы обратил внимание вот
-на что:</p>
-
-    <ul>
-      <li>
-        <p>Разнообразные <em><a href="https://shikhalev.vsemaykishop.ru/catalogue/g/backpacks">рюкзаки</a></em> и <em><a href="https://shikhalev.vsemaykishop.ru/catalogue/g/accessory_bag">сумки</a></em>, в част­нос­ти — <em><a href="https://shikhalev.vsemaykishop.ru/catalogue/t/laptop_bags">сумки для ноутбуков</a></em>.</p>
-      </li>
-      <li>
-        <p><em><a href="https://shikhalev.vsemaykishop.ru/catalogue/g/plaids">Пледы</a></em> и <em><a href="https://shikhalev.vsemaykishop.ru/catalogue/t/photoshtora">фо­то­што­ры</a></em> (а так же <em><a href="https://shikhalev.vsemaykishop.ru/catalogue/t/shower_curtain">занавески для ван­ной</a></em>).</p>
-      </li>
-      <li>
-        <p><em><a href="https://shikhalev.vsemaykishop.ru/catalogue/t/passport_cover_leather_matt">Обложки для паспорта</a></em> и <em><a href="https://shikhalev.vsemaykishop.ru/catalogue/t/cardholder_print">картхолдеры</a></em>.</p>
-      </li>
-      <li>
-        <p><em><a href="https://shikhalev.vsemaykishop.ru/catalogue/g/accessory_apron">Фартуки</a></em>.</p>
-      </li>
-      <li>
-        <p><em><a href="https://shikhalev.vsemaykishop.ru/catalogue/g/accessory_pad">Коврики для мыши</a></em> — обычные и круглые.</p>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>Вещи с полной запечаткой.</strong> Это и вышеперечисленное, и <em><a href="https://shikhalev.vsemaykishop.ru/catalogue/g/verhnjaja">верхняя одежда</a></em>, и <em><a href="https://shikhalev.vsemaykishop.ru/catalogue/g/3dfutbolki">футболки</a></em>, и прочее разное…
-В тер­ми­но­ло­гии «Все­Ма­ек» полная запечатка как правило отмечается в наз­ва­нии как «3D».</p>
-
-    <p class="note italic">Замечу, что полная запечатка в одеж­де делается только на син­те­ти­чес­ких материалах. На хлоп­ке печать делается по дру­гой технологии и область
-печати ог­ра­ни­че­на — так же, как и на дру­гих площадках.</p>
-  </li>
-</ul>
-
-<figure id="fig-3" class="logo __is_images_figure __is_images_single __is_images_shaped __is_images_width_200 __is_images__right" style="shape-outside:url(/img/b2/83/0c35bcc6.webp);--is-images-width:160px;--is-images-shift:30px;" data-modes="grid,slides">
-<a href="https://shikhalev.vsemaykishop.ru/article/cardholder_print/4098789?color=blue" title="Картхолдер с махаоном" class="__is_images_wrapper"><img src="/img/b2/83/0c35bcc6.webp" alt="Картхолдер с махаоном" class="__is_images_image __is_images_single" style="--is-images-width:160px;--is-images-aspect-ratio:160/113;--is-images-shift:30px;" data-scale="1"></a>
-</figure>
-<ul>
-  <li>
-    <p><strong>Конструктор макетов.</strong></p>
-
-    <p>С одной стороны, сам по себе конструктор из использованных трех площадок самый «богатый» и удобный. Но с дру­гой — нет возможности конструировать
-каждый предмет в отдельности, подгоняя картинку под его особенности, как это можно сделать при заказе вещей со своим дизайном. Частично это
-решаемо через предварительную подготовку нескольких исходных файлов из одной картинки, но в не­ко­то­рых случаях то, что возможно при индивидуальном
-заказе, оказывается недоступно в ре­жи­ме дизайнера (или я что-то не понял).</p>
-  </li>
-  <li>
-    <p><strong>Представление в каталоге.</strong> Разные и разносторонние рендеры, более подробные и естественные, чем у других сервисов (см. за­глав­ную картинку).
-Одно обидно — такие подробные рендеры видны только в итоге у уже прошедших модерацию дизайнов, при кон­стру­и­ро­ва­нии — только простой вид спереди
-и сзади, плоский, без моделей.</p>
-
-    <p>Двойная система категоризации: с одной сто­ро­ны — тематический рубрикатор дизайнов; с дру­гой — классификатор товаров. Это действительно логично
-и довольно удобно.</p>
-  </li>
-  <li>
-    <p><strong>Модерация…</strong> Тут что-то странное: в справке написано 5 рабочих дней, однако я ждал намного дольше, и дело сдвинулось с мертвой точки только
-после обращения в поддержку. После обращения макеты стали проходить модерацию небольшими пачками каждый день, причем не в порядке загрузки, а случайно.
-Я надеюсь, в дальнейшем будут проходить оперативно…</p>
-  </li>
-  <li>
-    <p><strong>Роялти.</strong> Авторский процент ма­лень­кий — всего 1.5%. И он мною никак не регулируется, в отличие от прочих сервисов. Правда, если покупка идет
-не с ос­нов­но­го каталога, а из моего собственного «магазина», добавляется аж 20% за привлечение… Но добавляются они <em>поверх</em> цены, то есть —
-в пер­со­наль­ном «магазине» всё <em>дороже</em>, чем в ос­нов­ном каталоге. Почему временами на од­но наименование с раз­ны­ми дизайнами цены разные внутри
-одного магазина, а также, как определяются скид­ки — я понятия не имею.</p>
-
-    <p><em>То есть, хотите купить по­де­шев­ле — ищите в об­щем каталоге. А если хотите поддержать ав­то­ра — покупайте с его субдомена.</em></p>
-  </li>
-</ul>
-
-<p>В целом понятно, кто тут лидер рынка. Очевидный кандидат на основную площадку.</p>
-
-<h3 id="printdirect"><a href="https://shikhalev.printdirect.ru/" class="img-icon-printdirect">Print­Di­rect</a></h3>
-
-<p>Где-то встречал утверждение, что это старейший принт­шоп в ру­не­те. Возможно, во всяком слу­чае — дизайн навевает ностальгию… Не нулевые, конечно,
-но сейчас так не делают. <em>Рубрикация только по типам товаров</em>, в своей «витрине» можно категории настроить самостоятельно, но это одно дерево (и одна
-позиция не может входить в две категории одновременно).</p>
-
-<p>Что можно отметить:</p>
-
-<figure id="fig-4" class="logo __is_images_figure __is_images_single __is_images_shaped __is_images_width_200 __is_images__right" style="shape-outside:url(/img/ff/58/300b60t3.webp);--is-images-width:160px;" data-modes="grid,slides">
-<a href="https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9487710" title="Пивная кружка с картинкой" class="__is_images_wrapper"><img src="/img/ff/58/300b60t3.webp" alt="Пивная кружка с картинкой" class="__is_images_image __is_images_single" style="--is-images-width:160px;--is-images-aspect-ratio:40/47;" data-scale="1"></a>
-</figure>
-<ul>
-  <li>
-    <p><strong>Ассортимент:</strong> в целом уступает предыдущему, но по некоторым категориям превосходит — большее разнообразие посуды и разные полиграфические
-штуки. На что я обратил внимание:</p>
-
-    <ul>
-      <li>
-        <p><em>Постеры и холсты</em> до 120×80 см. Это немного многовато для моих фотографий, но во-первых, в принципе приемлемо (никто такой размер по­пик­сель­но
-не рассматривает), а во-вторых, <em><a href="https://shikhalev.printdirect.ru/?cat_id=51130">90×60 см</a></em> уже прекрасно подходит.</p>
-
-        <p>А вот что касается холстов небольших размеров (прямоугольник до А3 или <em><a href="https://shikhalev.printdirect.ru/?cat_id=51133">квадрат до 40 см</a></em> включительно), то «ВсеМайки» будут
-<em><a href="https://shikhalev.vsemaykishop.ru/catalogue/g/canvas?sort=new">дешевле</a></em>…</p>
-      </li>
-      <li>
-        <p><em><a href="https://shikhalev.printdirect.ru/?cat_id=51135">Календари на стену</a></em> (до А2 формата). Не знаю, пользуется ли кто ими еще, но вот есть.</p>
-      </li>
-      <li>
-        <p><em><a href="https://shikhalev.printdirect.ru/?cat_id=51140">Пазлы</a></em>. В форматах A3 и A4.</p>
-      </li>
-      <li>
-        <p><em><a href="https://shikhalev.printdirect.ru/?cat_id=51196">Стеклянная посуда</a></em>: пивные кружки и стопарики. А также странная по­зи­ция — стакан для вис­ки, странность в том, что ее можно
-создать, но нельзя добавить ни в ка­та­лог, ни на свою витрину… Можно ли продавать по пря­мой ссылке? Не знаю, не пробовал.</p>
-      </li>
-      <li>
-        <p><em><a href="https://shikhalev.printdirect.ru/?cat_id=51148">Магниты на холодильник</a></em> и <em><a href="https://shikhalev.printdirect.ru/?cat_id=51150">брелки</a></em> — открывашки.</p>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<figure id="fig-5" class="logo __is_images_figure __is_images_single __is_images_shaped __is_images_width_200 __is_images__right" style="shape-outside:url(/img/e1/95/9ot691o3.webp);--is-images-width:160px;--is-images-shift:40px;--is-images-up:10px;" data-modes="grid,slides">
-<a href="https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9483864" title="Магнит-открывашка с косулей" class="__is_images_wrapper"><img src="/img/e1/95/9ot691o3.webp" alt="Магнит-открывашка с косулей" class="__is_images_image __is_images_single" style="--is-images-width:160px;--is-images-aspect-ratio:1/1;--is-images-shift:40px;--is-images-up:10px;" data-scale="1"></a>
-</figure>
-<ul>
-  <li>
-    <p><strong>Конструктор:</strong> каждую позицию нужно формировать индивидуально. Это и плюс в плане гибкости, и минус в плане количества работы. Впрочем,
-если не убирать одну галочку, то он будет предлагать использовать дизайн по образу и подобию для схожих товаров… Но там есть свои нюансы.
-Кроме того, для каждой позиции по отдельности нужно задавать заголовок, описание, категорию для каталога, наценку… В об­щем, есть много
-мест, которые можно бы­ло бы сделать удобнее.</p>
-
-    <p>Сам конструктор менее удобен, чем у «ВсеМаек». А вот в плюсы можно отнести то, что почти у каж­дой позиции можно со страницы конструктора скачать
-шаблон ма­ке­та — у «ВсеМаек» с этим похуже, шаблоны есть, но их надо еще найти, и они там не все.</p>
-  </li>
-  <li>
-    <p><strong>Модерация и каталог:</strong> всё грустно. Я связался с поддержкой и получил ответ, что каталог обновляется и модерация пока приостановлена.
-Причем «Скорее всего заработает уже не в этом году»… Довольно неожиданно видеть такой ответ <em>в мае</em>.</p>
-
-    <p>С одной стороны — продавать со своей витрины можно и без модерации (в отличие от других площадок). С дру­гой — опять эта проклятая неопределенность…</p>
-  </li>
-  <li>
-    <p><strong>Роялти:</strong> наценку можно (и нужно) выставлять для каж­дой позиции на своё усмотрение, по умол­ча­нию в этом поле пусто, т.е. ноль. Суммой,
-что достаточно неудобно, хоть и не принципиально. Если бы можно было пакетно выставлять процентом, бы­ло бы, на мой взгляд, намного удобнее.</p>
-  </li>
-</ul>
-
-<p>В моем субъективном пред­став­ле­нии — пло­щад­ка №2, закрывающая лакуны основной, но некоторые такие лакуны важ­ные — большие форматы и пазлы.
-Неопределенность, конечно, смущает, да…</p>
-
-<h3 id="funru"><a href="https://fun.ru/designer/shikhalev" class="img-icon-fun">FUN.ru</a></h3>
-
-<figure id="fig-6" class="logo __is_images_figure __is_images_single __is_images_shaped __is_images_width_150 __is_images__right" style="shape-outside:url(/img/86/2o/5e9209f8.webp);--is-images-width:150px;" data-modes="grid,slides">
-<a href="https://fun.ru/thermos/samets_sibirskoy_kosuli" title="Термос с косулей" class="__is_images_wrapper"><img src="/img/86/2o/5e9209f8.webp" alt="Термос с косулей" class="__is_images_image __is_images_single" style="--is-images-width:150px;--is-images-aspect-ratio:50/83;" data-scale="1"></a>
-</figure>
-<p>Мало вариантов товаров (вообще мало). Модно-молодежный дизайн сайта, и в данном случае это скорее плюс. А вот модно-молодежный запрет контекстного
-меню и всякая прочая «защита от ко­пи­ро­ва­ния» — жЫр­ный минус.</p>
-
-<p>Конструктор средний, рубрикации практически нет как UX-понятия, но можно фильтровать по типу товара, благо их, как сказано выше, совсем мало.
-Однозначные достоинства:</p>
-
-<ul>
-  <li>
-    <p><strong>Быстрая модерация</strong> — в рабочее время это буквально пара часов или быстрее.</p>
-  </li>
-  <li>
-    <p><strong>Маркетплейсы</strong> — размещает (на свое усмотрение) на Ozon, Wildberries и Яндекс.Маркете. Цены там сильно задраны относительно самого сайта.
-Зато выход на боль­шую (и как бы сказали наши младшие друзья, «нор­мис­ную») аудиторию.</p>
-
-    <p><em>Так что, если встречаете на маркетплейсе что-то от про­дав­ца FUN или FUN.ru, имеет смысл поискать
-по на­име­но­ва­нию на са­мом <strong><a href="https://fun.ru" class="img-icon-fun">FUN.ru</a></strong>.</em></p>
-  </li>
-  <li>
-    <p><strong><a href="https://fun.ru/designer/shikhalev/thermos?sort=new">Термосы</a></strong> классического вида — единственное, что реально привлекло моё внимание и что не имеет аналогов в пре­ды­ду­щих принт­шо­пах.</p>
-  </li>
-</ul>
-
-<p>В поддержке говорят, что принты на основе фотографий не пользуются спросом… Что ж, будем посмотреть. Пока их ассортимент выглядит как довольно
-узкая ниша, возможно, мне не очень подходящая.</p>
-
-<hr />
-
-<p>Кстати, мне довелось пообщаться с поддержкой всех трех, и к поддержке всех трех претензий нет, там реальные люди, и есть реакция.
-Что в наше время уже круто. Хотя было бы еще лучше не сталкиваться с ситуациями, когда требуется обращение в поддержку…</p>
-
-<h2 id="картинки-и-макеты">Картинки и макеты</h2>
-
-<h3 id="фотографии">Фотографии</h3>
-
-<p>Это мой основной исходный материал. Применять его получается в трех формах:</p>
-
-<dl>
-  <dt>Как есть (только кадрирование)</dt>
-  <dd>
-    <p>Это разные интерьерные штуки типа постеров, холстов и пе­но­кар­то­на, а так­же пазлов, календарей и всяких там магнитиков. Я пока не делаю
-в этих случаях каких-то подписей, хотя и подумываю об этом (размещение тут не представляет какой-либо сложности, вопрос скорее эстетический).</p>
-
-    <p><a href="https://shikhalev.printdirect.ru/index.php?action=addtocart&amp;product=9484473" target="_blank" title="Пазл А4 с пеночкой"><img width="150" height="150" alt="Пазл А4 с пеночкой" src="https://cdn99.printdirect.ru/cache/product/43/8f/9484473/tov/all/480z480_front_711_0_0_0_dab4655725935359c026abb6403e.jpg" /></a>
-<a href="https://shikhalev.vsemaykishop.ru/article/holst_rectangle/4096325?size=a3&amp;color=white" target="_blank" title="Холст А3 с серой цаплей в полёте"><img width="150" height="150" alt="Холст А3 с серой цаплей в полёте" src="https://storage.vsemayki.ru/images/0/4/4096/4096325/previews/people_10_holst_rectangle_front_white_700.jpg" /></a>
-<a href="https://shikhalev.printdirect.ru/index.php?action=addtocart&amp;product=9487118" target="_blank" title="Брелок-открывашка с жуком-листоедом"><img width="150" height="150" alt="Брелок-открывашка с жуком-листоедом" src="https://cdn99.printdirect.ru/cache/product/24/70/9487118/tov/all/480z480_front_575_0_0_0_48377a8a550f064fb0745744ef38.jpg" /></a>
-<a href="https://shikhalev.vsemaykishop.ru/article/flag_banner/4095133?color=white" target="_blank" title="Флаг-баннер с косулей"><img width="150" height="150" alt="Флаг-баннер с косулей" src="https://storage.vsemayki.ru/images/0/4/4095/4095133/previews/people_10_flag_banner_front_white_700.jpg" /></a></p>
-  </dd>
-  <dt>Полная запечатка предметов</dt>
-  <dd>
-    <p>Одежда, сумки/рюкзаки и прочее.</p>
-
-    <p>Здесь уже возникают нюансы, нужно следить, куда именно на предметах попадают значимые элементы картинки. Пока я ограничиваюсь невключением
-проблемных вещей, но, вероятно, следует готовить несколько макетов для запечатки из одной фотографии. Благо требуемый формат — 4800×3301px —
-меньше, чем 24-ме­га­пик­сель­ный кадр, который можно как уменьшить, так и кропнуть. А вот куда и как разместить над­пи­си — боль­шой-боль­шой во­п­рос —
-готовить отдельный макет почти на каж­дый тип вещи?..</p>
-
-    <p><a href="https://shikhalev.vsemaykishop.ru/article/flask/4098789?color=metal" target="_blank" title="Фляжка с махаоном"><img width="150" height="150" alt="Фляжка с махаоном" src="https://storage.vsemayki.ru/images/0/4/4098/4098789/previews/people_10_flask_front_metal_700.jpg" /></a>
-<a href="https://shikhalev.vsemaykishop.ru/article/man_jacket/4095183?color=black" target="_blank" title="Куртка с сухим деревом"><img width="150" height="150" alt="Куртка с сухим деревом" src="https://storage.vsemayki.ru/images/0/4/4095/4095183/previews/people_20_man_jacket_front_black_700.jpg" /></a>
-<a href="https://shikhalev.vsemaykishop.ru/article/woman_backpack/4095067?color=white" target="_blank" title="Сумка-рюкзак с горихвосткой"><img width="150" height="150" alt="Сумка-рюкзак с горихвосткой" src="https://storage.vsemayki.ru/images/0/4/4095/4095067/previews/people_91_woman_backpack_front_white_700.jpg" /></a></p>
-
-    <p>Что интересно: во многих случаях хорошо выглядят абстрактные <em><a href="https://shikhalev.vsemaykishop.ru/catalogue/nature/pattern">ква­зи­пат­тер­ны</a></em> (как я их обо­звал) — переплетения ветвей, листва,
-заросли чего-нибудь…</p>
-  </dd>
-  <dt>Печать в определенной области</dt>
-  <dd>
-    <p>В первую очередь — одежда и посуда.</p>
-
-    <p>Не самый подходящий вариант для фотографий. Я пришел к вы­во­ду, что в та­ких случаях следует формировать рамку<sup id="fnref:frame"><a href="#fn:frame" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>. Причем, в двух вариантах:
-темную и свет­лую — для разных фонов. Были мысли насчет фигурных
-рамок, но это сложно. Пока остановился на кру­ге и пря­мо­у­голь­ни­ке 4:5. А раз рамка задана, то и разместить аккуратную подпись не сос­та­в­ля­ет
-проблемы.</p>
-
-    <p><a href="https://shikhalev.printdirect.ru/index.php?action=addtocart&amp;product=9488399" target="_blank" title="Пивная кружка с косулей"><img width="150" height="150" alt="Пивная кружка с косулей" src="https://cdn99.printdirect.ru/cache/product/bf/30/9488399/tov/all/480z480_front_3410_0_0_0_ae5184ab2e4324a199a23eebaeb8.jpg" /></a>
-<a href="https://shikhalev.vsemaykishop.ru/article/woman_tshirt/4101371?color=darkblue" target="_blank" title="Женская майка с воробьем"><img width="150" height="150" alt="Женская майка с воробьем" src="https://storage.vsemayki.ru/images/0/4/4101/4101371/previews/people_1_woman_tshirt_front_darkblue_700.jpg" /></a>
-<a href="https://shikhalev.vsemaykishop.ru/article/set_of_dishes/4101377?color=white" target="_blank" title="Тарелка+кружка с воробьем"><img width="150" height="150" alt="Тарелка+кружка с воробьем" src="https://storage.vsemayki.ru/images/0/4/4101/4101377/previews/people_10_set_of_dishes_front_white_700.jpg" /></a></p>
-  </dd>
-</dl>
-
-<p>На данный момент я клепаю всё, сколь-нибудь подходящее. Просто потому, что пока не знаю, что именно стоит делать, а что не стоит. Потом, думаю,
-устаканится какой-то ограниченный набор.</p>
-
-<h3 id="веселые-картинки">Веселые картинки</h3>
-
-<p>Довольно случайно решил попробовать. Ниже всё, что есть, и я понятия не имею, будет ли продолжение.</p>
-
-<p style="text-align:center;"><a href="https://shikhalev.vsemaykishop.ru/article/tshirt_oversize_woman_pike/4098749?color=lightpink" target="_blank" title="Женская oversize футболка «Это енот. А чего добился ты?»"><img width="270" height="270" alt="Женская oversize футболка «Это енот. А чего добился ты?»" style="margin-top:5px;" src="https://storage.vsemayki.ru/images/0/4/4098/4098749/previews/people_1001_tshirt_oversize_woman_pike_front_lightpink_700.jpg" /></a>
-<a href="https://shikhalev.printdirect.ru/index.php?action=addtocart&amp;product=9487711" target="_blank" title="Рюмка «Делу — время, потехе ЩАС!»"><img width="270" height="270" alt="Рюмка «Делу — время, потехе ЩАС!»" style="margin-top:5px;" src="https://cdn99.printdirect.ru/cache/product/77/cb/9487711/tov/all/480z480_front_3408_0_0_0_d67e05d5fc5196a6747e05cd7e66.jpg" /></a>
-<a href="https://shikhalev.vsemaykishop.ru/article/keychain_35_50/4099887?color=transparent" title="Брелок «Свет — всему голова!»"><img width="270" height="270" alt="Брелок «Свет — всему голова!»" style="margin-top:5px;" src="https://storage.vsemayki.ru/images/0/4/4099/4099887/previews/people_2_keychain_35_50_front_transparent_700.jpg" /></a>
-<a href="https://shikhalev.vsemaykishop.ru/article/cropped_tank_top/4099959?color=white" target="_blank" title="Женская майка-топ «Что совой об пень, что пнём об сову...»"><img width="270" height="270" alt="Женская майка-топ «Что совой об пень, что пнём об сову...»" style="margin-top:5px;" src="https://storage.vsemayki.ru/images/0/4/4099/4099959/previews/people_1000_cropped_tank_top_front_white_700.jpg" /></a>
-<a href="https://shikhalev.printdirect.ru/index.php?action=addtocart&amp;product=9487981" target="_blank" title="Кружка-хамелеон «Поймал мыша — ешь не спеша!»"><img width="270" height="270" alt="Кружка-хамелеон «Поймал мыша — ешь не спеша!»" style="margin-top:5px;" src="https://cdn99.printdirect.ru/cache/product/89/8b/9487981/tov/all/480z480_front_709_0_0_0_f8877acc8152df2d8f3fb16a5964.jpg" /></a>
-<a href="https://shikhalev.vsemaykishop.ru/article/mug_beer_matte/4100297?color=transparent_matte" target="_blank" title="Матовая пивная кружка «Каждый суслик в поле агроном»"><img width="270" height="270" alt="Матовая пивная кружка «Каждый суслик в поле агроном»" style="margin-top:5px;" src="https://storage.vsemayki.ru/images/0/4/4100/4100297/previews/people_2_mug_beer_matte_front_transparent_matte_700.jpg" /></a>
-<a href="https://shikhalev.printdirect.ru/index.php?action=addtocart&amp;product=9488347" target="_blank" title="Шоппер «Рыба ищет, где глубже»"><img width="270" height="270" alt="Шоппер «Рыба ищет, где глубже»" style="margin-top:5px;" src="https://cdn99.printdirect.ru/cache/product/5e/fb/9488347/tov/all/480z480_front_52_0_0_0_9331cd253d8a1f416acfd59e8f96.jpg" /></a>
-<a href="https://shikhalev.vsemaykishop.ru/article/bionature_bag/4101261?color=natural" target="_blank" title="Шоппер «Старому коню в борозду не смотрят»"><img width="270" height="270" alt="Шоппер «Старому коню в борозду не смотрят»" style="margin-top:5px;" src="https://storage.vsemayki.ru/images/0/4/4101/4101261/previews/people_10_bionature_bag_front_natural_700.jpg" /></a>
-<a href="https://shikhalev.printdirect.ru/index.php?action=addtocart&amp;product=9489037" target="_blank" title="Фляжка «Не всё то золото, что молчит»"><img width="270" height="270" alt="Фляжка «Не всё то золото, что молчит»" style="margin-top:5px;" src="https://cdn99.printdirect.ru/cache/product/e6/e8/9489037/tov/all/480z480_front_3655_0_0_0_c74c9f083d2bce1298fcc8872c04.jpg" /></a></p>
-
-<hr />
-
-<h3 id="guide">Винтажный «определитель»</h3>
-
-<figure id="fig-7" class="logo __is_images_figure __is_images_single __is_images_shaped __is_images_width_200 __is_images__right" style="shape-outside:url(/img/32/t7/53cf2o88.webp);--is-images-width:180px;--is-images-up:20px;" data-modes="grid,slides">
-<a href="https://shikhalev.vsemaykishop.ru/article/flask/4096381?color=metal" title="Фляжка с определителем зяблика" class="__is_images_wrapper"><img src="/img/32/t7/53cf2o88.webp" alt="Фляжка с определителем зяблика" class="__is_images_image __is_images_single" style="--is-images-width:180px;--is-images-aspect-ratio:20/31;--is-images-up:20px;" data-scale="1"></a>
-</figure>
-<p>А вот это направление я развить хочу… Кажется, некоторые ИИшки научились генерировать адекватные картинки птиц, а заодно и стилизовать
-их под XIX век… Но в том <em><a href="https://shikhalev.vsemaykishop.ru/catalogue/styled/field_guide">виде, который есть</a></em>, меня оно не вполне устраивает. Нужно эту концепцию дорабатывать.</p>
-
-<p>Думаю, генерировать придется каждый элемент определителя (общий вид, отдельные признаки, перья и так далее) отдельно и затем вручную
-компоновать макеты на раз­ные предметы. До­фи­га делов, но задача интересная. Скорее всего, один вид будет делаться месяц-два, если не мед­лен­нее.
-И это при том, что набор подходящих предметов сильно ограничен.</p>
-
-<p>Не знаю, правда, сто­ит ли оставлять всю текстовую информацию исключительно на ла­ты­ни — оно ан­ту­раж­но, но современному человеку
-неинформативно. И еще, конечно, остро стоит вопрос, как впихнуть невпихуемое, но это ладно, по ходу дела в кон­к­рет­ных компоновках буду
-ре­шать — очевидно, что на пос­те­ре А3, на фляж­ке и на брел­ке поместятся разные количества информации, и это нормально.</p>
-
-<p>В общем, следите за обновлениями. Эту идею я точно буду развивать, но не знаю пока, насколько быстро. Мне она кажется даже более
-перспективной, чем принты на ос­но­ве фотографий. И думаю, буду анонсировать «страницы определителя» здесь и в соц­се­тях.</p>
-
-<h2 id="техническое">Техническое</h2>
-
-<p>Понял, что сейчас стоит еще одна задача — сделать общий каталог (здесь, на сайте). Иначе я сам запутаюсь в том, где какую вариацию какой картинки
-уже выложил. Заодно можно будет подробные описания и комментарии к фотографиям здесь же разместить. Надеюсь, за пару недель управлюсь.</p>
-
-<hr />
-
-<h2 id="подытоги">Подытоги</h2>
-
-<ul>
-  <li>
-    <p>Технически и организационно фотографии в принтшопах использовать <em>можно</em>.</p>
-  </li>
-  <li>
-    <p>Не всё так просто и некоторое время на подготовку макетов потратить придется.</p>
-  </li>
-  <li>
-    <p>В принципе это весело.</p>
-  </li>
-</ul>
-
-<p>Из всего, что я прочитал и просмотрел на тему, явственно следует, что какие-то выводы можно будет делать только по прошествии времени
-и опубликовав пару сотен «дизайнов». Так что к итогам вернусь сначала через полгода, а затем через год.</p>
-
-<p>Если буду жив, а главное, если будет жив интернет…</p>
-
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:frame">
-      <p>Выяснилось, кстати, что с рамками и надписями удобнее работать в Ink­sca­pe, чем в GIMP. Хотя базовое изображение и растровое, его растровое редактирование не требуется, только «фигурная» обрезка. <a href="#fnref:frame" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-  </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="dybr" /><category term="photo" /><category term="мерч" /><category term="принтшопы" /><category term="ВсеМайки" /><category term="PrintDirect" /><category term="FUN" /><summary type="html"><![CDATA[О том, как я начал выкладывать фото на принтшопы: варианты и первые впечатления.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/4c/16/1fcef9f7.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/4c/16/1fcef9f7.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>Присоединяйтесь, если интересно.</p>]]></content><author><name>Иван Шихалев</name></author><category term="life" /><category term="nature" /><category term="web" /><category term="iNaturalist" /><category term="Telegram" /><category term="птицы" /><category term="цветы" /><category term="бабочки" /><category term="растения" /><category term="животные" /><category term="насекомые" /><category term="пиявки" /><category term="змеи" /><summary type="html"><![CDATA[Подборка наблюдений за май]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.github.io/img/c7/51/365b592f.webp" /><media:content medium="image" url="https://shikhalev.github.io/img/c7/51/365b592f.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
