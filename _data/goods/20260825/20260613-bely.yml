@@ -1,0 +1,106 @@
+design: _designs/merch/photo/other/20260613-bely.md
+date: 2026-08-25
+items:
+  - good: _goods/type/home/wall/foam/pd-foam-90x60.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9490180
+    img: https://cdn99.printdirect.ru/cache/product/54/ab/9490180/tov/all/400z400_front_2864_0_0_0_5f64f141403bccf7acc0bc7a7c5c.jpg
+  - good: _goods/type/home/wall/canvas/pd-holst-60x60.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9490182
+    img: https://cdn99.printdirect.ru/cache/product/34/cb/9490182/tov/3d/400z400_front_1187_0_0_0_cf1ccf443e490ca8ca9e2e03ecd4.jpg
+  - good: _goods/type/office/pad/pd-mousepad.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9490183
+    img: https://cdn99.printdirect.ru/cache/product/b7/29/9490183/tov/all/480z480_front_26_0_0_0_e44bb698c9862d994f4f84e19cbd.jpg
+  - good: _goods/type/home/puzzle/carton/pd-puzzle-a3.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9490185
+    img: https://cdn99.printdirect.ru/cache/product/4d/b8/9490185/tov/all/480z480_front_719_0_0_0_1a57074c40b675c53febe8e4b022.jpg
+  - good: _goods/type/home/puzzle/carton/pd-puzzle-a4.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9490187
+    img: https://cdn99.printdirect.ru/cache/product/9f/84/9490187/tov/all/480z480_front_718_0_0_0_4de057f1b88c87f8598bab58f20c.jpg
+  - good: _goods/type/home/textile/cushion/pd-cushion-47x35.md
+    url: https://shikhalev.printdirect.ru/index.php?action=addtocart&product=9490189
+    img: https://cdn99.printdirect.ru/cache/product/1c/a6/9490189/tov/all/480z480_front_2085_0_0_0_d07415458050a84ede14b3a5afb2.jpg
+
+  - good: _goods/type/accessories/bag/shopper/vm-shopper.md
+    url: https://shikhalev.vsemaykishop.ru/article/shopper/4104431?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_1002_shopper_front_white_936.webp
+  - good: _goods/type/accessories/bag/vm-laptop_bags.md
+    url: https://shikhalev.vsemaykishop.ru/article/laptop_bags/4104431?size=l&color=white
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_1001_laptop_bags_front_white_936.webp
+  - good: _goods/type/accessories/bag/vm-sport_bags.md
+    url: https://shikhalev.vsemaykishop.ru/article/sport_bags/4104431?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_10_sport_bags_back_white_936.webp
+  - good: _goods/type/accessories/bag/vm-cosmetic_bag.md
+    url: https://shikhalev.vsemaykishop.ru/article/cosmetic_bag/4104431?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_11_cosmetic_bag_front_white_936.webp
+
+  - good: _goods/type/accessories/badge/vm-sign.md
+    url: https://shikhalev.vsemaykishop.ru/article/sign/4104431?size=56mm&color=white
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_10_sign_front_white_936.webp
+  - good: _goods/type/home/magnet/acryl/vm-magnet_45_70.md
+    url: https://shikhalev.vsemaykishop.ru/article/magnet_45_70/4104431?size=one_size&color=transparent
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_2_magnet_45_70_front_transparent_936.webp
+  - good: _goods/type/home/puzzle/vm-puzzle_rect.md
+    url: https://shikhalev.vsemaykishop.ru/article/puzzle_rect/4104431?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_2_puzzle_rect_front_white_936.webp
+  - good: _goods/type/home/magnet/vinyl/vm-magnet_poster_3x2.md
+    url: https://shikhalev.vsemaykishop.ru/article/magnet_poster_3x2/4104431?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_1000_magnet_poster_3x2_front_white_936.webp
+  - good: _goods/type/home/textile/apron/vm-apron_fullprint.md
+    url: https://shikhalev.vsemaykishop.ru/article/apron_fullprint/4104431?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_10_apron_fullprint_front_white_936.webp
+  - good: _goods/type/accessories/cover/vm-passport_cover_leather_matt.md
+    url: https://shikhalev.vsemaykishop.ru/article/passport_cover_leather_matt/4104431?size=one_size&color=orange
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_11_passport_cover_leather_matt_front_orange_936.webp
+  - good: _goods/type/home/wall/flag/vm-flag_big.md
+    url: https://shikhalev.vsemaykishop.ru/article/flag_big/4104431?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_10_flag_big_front_white_936.webp
+  - good: _goods/type/accessories/other/vm-wrapping_paper.md
+    url: https://shikhalev.vsemaykishop.ru/article/wrapping_paper/4104431?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_3_wrapping_paper_front_white_936.webp
+  - good: _goods/type/accessories/cover/vm-cover_student.md
+    url: https://shikhalev.vsemaykishop.ru/article/cover_student/4104431?size=one_size&color=green
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_10_cover_student_front_green_936.webp
+  - good: _goods/type/accessories/cover/vm-cover_auto.md
+    url: https://shikhalev.vsemaykishop.ru/article/cover_auto/4104431?size=one_size&color=green
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_5_cover_auto_front_green_936.webp
+  - good: _goods/type/home/wall/flag/vm-flag_banner.md
+    url: https://shikhalev.vsemaykishop.ru/article/flag_banner/4104431?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_10_flag_banner_front_white_936.webp
+  - good: _goods/type/accessories/cover/vm-cardholder_print.md
+    url: https://shikhalev.vsemaykishop.ru/article/cardholder_print/4104431?size=one_size&color=green
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_12_cardholder_print_front_green_936.webp
+
+  - good: _goods/type/home/textile/cushion/vm-cushion_full.md
+    url: https://shikhalev.vsemaykishop.ru/article/cushion_full/4104431?color=3D_wellsoft
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_10_cushion_full_front_3D_wellsoft_936.webp
+  - good: _goods/type/home/textile/cushion/vm-cushion_antistress.md
+    url: https://shikhalev.vsemaykishop.ru/article/cushion_antistress/4104431?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_2_cushion_antistress_front_white_936.webp
+  - good: _goods/type/home/textile/plaid/vm-plaid.md
+    url: https://shikhalev.vsemaykishop.ru/article/plaid/4104431?color=3D_wellsoft
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_1000_plaid_front_3D_wellsoft_936.webp
+
+  - good: _goods/type/home/dish/flask/vm-flask.md
+    url: https://shikhalev.vsemaykishop.ru/article/flask/4104431?color=metal
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_11_flask_front_metal_936.webp
+
+  - good: _goods/type/home/wall/canvas/vm-holst_rectangle.md
+    url: https://shikhalev.vsemaykishop.ru/article/holst_rectangle/4104431?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_10_holst_rectangle_front_white_936.webp
+
+  - good: _goods/type/office/pad/vm-pad.md
+    url: https://shikhalev.vsemaykishop.ru/article/pad/4104431?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_2_pad_front_white_936.webp
+  - good: _goods/type/office/pad/vm-pad2.md
+    url: https://shikhalev.vsemaykishop.ru/article/pad2/4104431?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_3_pad2_front_white_936.webp
+  - good: _goods/type/office/vm-postcard_a6.md
+    url: https://shikhalev.vsemaykishop.ru/article/postcard_a6/4104431?size=a6&color=white
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_10_postcard_a6_front_white_936.webp
+  - good: _goods/type/office/paper/vm-album.md
+    url: https://shikhalev.vsemaykishop.ru/article/album/4104431?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_1_album_front_white_936.webp
+
+  - good: _goods/type/accessories/bag/vm-beach_bag.md
+    url: https://shikhalev.vsemaykishop.ru/article/beach_bag/4104431?color=white
+    img: https://storage.vsemayki.ru/images/0/4/4104/4104431/previews/people_1003_beach_bag_front_white_936.webp

@@ -24,7 +24,6 @@
       {%- else -%}
         {%- assign disabled_class = '' -%}
       {%- endif -%}
-      {%- comment -%}<div>{{ product_recommend | inspect }}: {{ product.recommend | inspect }}, {{ product_good.recommend | inspect }}</div>{%- endcomment -%}
     <div class="product-min-card card-back-{{ product_shop }}{{ recommended_class }}{{ disabled_class }}" id="{{ product.digest }}" data-kind="{{ product.good }}" data-design="{{ product.design }}" data-order="{{ product.order }}" >
     <a href="{{ product.url }}" title="Перейти в магазин">
       {%- if product.img -%}

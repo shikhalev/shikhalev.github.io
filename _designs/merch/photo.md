@@ -7,4 +7,5 @@ children:
   - _designs/merch/photo/insecta.md
   - _designs/merch/photo/landscapes.md
   - _designs/merch/photo/patterns.md
+  - _designs/merch/photo/other.md
 ---
