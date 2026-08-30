@@ -1,0 +1,2 @@
+{%- assign selected = site.data.flat_goods |  where_exp: 'item', 'include.list contains item.url' | sample: 6 -%}
+{%- include goods/products.liquid sorted_goods=selected -%}

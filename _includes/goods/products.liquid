@@ -1,4 +1,4 @@
-<div class="goods-min-grid">
+<div class="goods-min-grid" markdown="0">
   {%- for product in include.sorted_goods -%}
     {%- assign product_design = site.designs | where: 'path', product.design | first -%}
     {%- assign product_title = product_design.title -%}
