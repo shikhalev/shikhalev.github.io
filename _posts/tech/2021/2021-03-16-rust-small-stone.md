@@ -5,6 +5,7 @@ category: [ tech, programming, rust ]
 tags:
   - грабли
 recommend: true
+image: _src/covers/rust21.png
 ---
 
 ![Логотип Rust](_src/2021/03/2021-03-16/rust-logo.png){: right width="256" .logo href="none" }
