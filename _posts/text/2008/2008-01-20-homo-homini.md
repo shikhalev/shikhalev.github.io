@@ -2,6 +2,7 @@
 layout: verse
 title: Homo homini
 category: [ text, verses, best ]
+image: _src/covers/homini08.png
 tags:
   - suno
 suno:
