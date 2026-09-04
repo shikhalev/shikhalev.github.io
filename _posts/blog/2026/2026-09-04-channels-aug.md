@@ -11,8 +11,6 @@ tags:
   - растения
   - животные
   - насекомые
-  - грибы
-  - попугаи
 announce: true
 image: _src/2026/09/dig8/original.jpg
 is_images:
