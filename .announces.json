@@ -1,1 +1,21 @@
-{}
+{
+  "telegram": {
+    "config": {
+      "method": "telegram",
+      "chat_id": "@shikhalev_blog"
+    },
+    "posts": {
+      "_posts/blog/2026/2026-09-04-channels-aug.md": {
+        "url": "https://shikhalev.github.io/life/2026/09/channels-aug.html",
+        "date": "2026/09/04",
+        "title": "Tg: август 2026",
+        "description": "Подборка наблюдений за август",
+        "categories": [
+          "жизнь",
+          "природа",
+          "веб"
+        ]
+      }
+    }
+  }
+}
