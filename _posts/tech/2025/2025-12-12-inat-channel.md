@@ -2,6 +2,7 @@
 title: iNaturalist + Telegram
 description: Написал скрипт для автопостинга выборок из iNaturalist в tg-каналы
 categories: [ tech, programming, ruby, web, nature, social ]
+image: _src/covers/sort25.png
 tags:
   - iNaturalist
   - Telegram
