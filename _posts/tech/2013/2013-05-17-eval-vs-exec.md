@@ -2,12 +2,12 @@
 title: Об оптимизациях скриптовых языков...
 description: Вычисление вместо исполнения
 category: [ tech, programming, abs]
+image: _src/covers/ee-13.png
 tags:
   - оптимизация
   - языки программирования
   - размышлизмы
   - скриптовые языки
-image: _src/2013/05/scr/screen.png
 ---
 
 ![](_src/2013/05/scr/form.png){: right width="319" .logo href="none" }
