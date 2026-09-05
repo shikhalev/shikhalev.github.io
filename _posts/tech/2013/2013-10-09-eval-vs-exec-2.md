@@ -12,7 +12,7 @@ image: _src/covers/ee-2-13.png
 ---
 
 {: style="border-radius:15px;" }
-![КДПВ](_src/covers/ee-2-13.png){: right width="320" style="border-radius:15px;" }
+![КДПВ](_src/covers/ee-2-13.png){: right width="320" format="avif" style="border-radius:15px;" href="false" }
 
 Или снова об оптимизации скриптовых языков. В [предыдущей заметке][pred] я это всё как-то сумбурно описал.
 Вкратце: для условного веб-сервиса минута инициализации много «дешевле», чем секунда обработки запроса.
