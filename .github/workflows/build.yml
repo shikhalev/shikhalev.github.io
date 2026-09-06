@@ -36,7 +36,7 @@ jobs:
       - name: Build
         run: |
           echo "Build..."
-          JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build
+          RUBYOPT="--yjit" JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build
       - name: Images to Cache
         uses: actions/cache/save@v6
         with:
