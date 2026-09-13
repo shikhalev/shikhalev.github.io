@@ -1,10 +1,11 @@
 ---
-title: "Мета­программи­ро­вание в Ruby: разбор примера"
+title: "Метапрограммирование в Ruby: разбор примера"
 description: Добавление собственных абстракций в объектную модель — это просто. И интересно.
 category: [ tech, programming, ruby, pub, samag ]
 tags:
   - метапрограммирование
-image: _src/2016/01/samag/screen-meta.png
+# image: _src/2016/01/samag/screen-meta.png
+image: _src/covers/meta16.png
 recommend: true
 ---
 [Оригинал этой статьи опубликован в журнале «Системный администратор» №12 (145) за декабрь 2014][samag].
