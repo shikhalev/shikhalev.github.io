@@ -2,6 +2,10 @@
 title: Зяблик (Fringilla coelebs)
 description: Лист псевдо-определителя для Fringilla coelebs
 recommend: true
+image: _src/goods/fringilla_coelebs.jpg
+is_images:
+  seo_image:
+    crop: 2271x1185+0+0
 ---
 
 ## Описание

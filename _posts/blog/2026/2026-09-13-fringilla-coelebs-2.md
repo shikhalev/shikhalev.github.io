@@ -26,7 +26,7 @@ is_images:
 ---
 
 {: style="border-radius:25px;" }
-[![Фляжка из коллекции «Зяблик (Fringilla coelebs)»](_src/2026/09/zyablo/people_11_flask_front_metal_936.webp){: figure right width="220" crop="702x702+0+128" style="border-radius:25px;" }][zyab]
+[![Фляжка из коллекции «Зяблик (Fringilla coelebs)»](_src/2026/09/zyablo/people_11_flask_front_metal_936.webp){: figure right width="220" crop="702x702+0+128" style="border-radius:25px;" format="avif" }][zyab]
 
 Ровне через два месяца после **[первой части][prev]** выкладываю, что там на **[Всех­Майках][vm]{: .img-icon-vsemayki }**.
 Во­об­ще-то, модерацию **[«Зяблик»][zyab]** прошел еще в первых числах сентября, но тут уже у меня руки не доходили...
