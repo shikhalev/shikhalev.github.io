@@ -1,1 +1,22 @@
-{}
+{
+  "telegram": {
+    "config": {
+      "method": "telegram",
+      "chat_id": "@shikhalev_blog"
+    },
+    "posts": {
+      "_posts/blog/2026/2026-09-13-fringilla-coelebs-2.md": {
+        "url": "https://shikhalev.github.io/life/2026/09/fringilla-coelebs-2.html",
+        "date": "2026/09/13",
+        "title": "Полностью выложен мерч с зябликом",
+        "description": "Зябликовый псевдо-определитель полностью прошел модерацию и добавлен на сайт.",
+        "categories": [
+          "жизнь",
+          "дыбр",
+          "веб",
+          "сайт"
+        ]
+      }
+    }
+  }
+}
