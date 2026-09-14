@@ -5,7 +5,7 @@ category: [ tech, programming, ruby, pub, samag ]
 tags:
   - метапрограммирование
 # image: _src/2016/01/samag/screen-meta.png
-image: _src/covers/meta16.png
+image: _src/covers/metap16.png
 recommend: true
 ---
 [Оригинал этой статьи опубликован в журнале «Системный администратор» №12 (145) за декабрь 2014][samag].

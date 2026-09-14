@@ -5,7 +5,8 @@ category: [ tech, programming, ruby, pub, samag ]
 tags:
   - интроспекция
   - метапрограммирование
-image: _src/2016/03/samag/screen-introspection.png
+# image: _src/2016/03/samag/screen-introspection.png
+image: _src/covers/reflect16.png
 recommend: true
 ---
 [Оригинал этой статьи опубликован в журнале «Системный администратор» №1-2 (146-147) за февраль 2015][samag].
