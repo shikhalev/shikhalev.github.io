@@ -6,7 +6,8 @@ tags:
   - многопоточность
   - оптимизация
   - многозадачность
-image: _src/2015/04/samag/screen-multitask.png
+# image: _src/2015/04/samag/screen-multitask.png
+image: _src/covers/mult15.png
 recommend: true
 ---
 [Оригинал этой статьи опубликован в журнале «Системный администратор» №3 (136) за март 2014][samag].

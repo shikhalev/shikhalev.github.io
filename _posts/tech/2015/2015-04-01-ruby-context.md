@@ -5,7 +5,8 @@ category: [ tech, programming, ruby, pub, samag ]
 tags:
   - контекст
   - замыкания
-image: _src/2015/04/samag/screen-context.png
+# image: _src/2015/04/samag/screen-context.png
+image: _src/covers/context15.png
 recommend: true
 ---
 [Оригинал этой статьи опубликован в журнале «Системный администратор» №1–2 (134–135) за январь–февраль 2014][samag].
