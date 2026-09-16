@@ -4,7 +4,8 @@ description: Реализация паттерна «декоратор» на �
 category: [ tech, programming, ruby, pub, samag ]
 tags:
   - метапрограммирование
-image: _src/2015/03/samag/screen-decos.png
+# image: _src/2015/03/samag/screen-decos.png
+image: _src/covers/deco15.png
 recommend: true
 ---
 [Оригинал этой статьи опубликован в журнале «Системный администратор» №9 (130) за сентябрь 2013][samag].

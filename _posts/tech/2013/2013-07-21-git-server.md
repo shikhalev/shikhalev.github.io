@@ -6,7 +6,8 @@ tags:
   - администрирование
   - Gentoo
   - Git
-image: _src/2013/07/git/gitweb.png
+# image: _src/2013/07/git/gitweb.png
+image: _src/covers/git13.png
 recommend: true
 ---
 
