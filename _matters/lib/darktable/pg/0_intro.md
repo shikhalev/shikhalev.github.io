@@ -2,6 +2,7 @@
 title: "Введение"
 date: 2025-10-26
 redirect_from: pages/books/darktable/pg/0_intro.html
+image: _src/covers/dt-00.png
 ---
 
 **darktable** представляет собой *свободное* программное обеспечение для обработки RAW-фото с неразрушающим
