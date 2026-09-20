@@ -8,6 +8,7 @@ tags:
   - Linux
   - RAW
 announce: true
+image: _src/covers/dt-01.png
 ---
 
 ![Картинка для привлечения внимания](_src/2025/10/cover.png){: right width="240" }

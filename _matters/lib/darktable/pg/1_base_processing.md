@@ -2,6 +2,7 @@
 title: "Глава 1: Базовая обработка"
 date: 2025-10-26
 redirect_from: pages/books/darktable/pg/1_base_processing.html
+image: _src/covers/dt-01.png
 ---
 
 Во **[«Введении»][intro]** мы рассмотрели просмотр, отбор и конвертацию по умолчанию raw-файлов, а также основные принципы ус­т­рой­с­т­ва
