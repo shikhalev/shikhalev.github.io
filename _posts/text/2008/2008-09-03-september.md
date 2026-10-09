@@ -4,6 +4,9 @@ title: Сентябрь...
 caption: "* * *"
 category: [ text, verses, best ]
 image: _src/covers/sep08.png
+suno:
+  - id: fdf73448-1abd-4f51-8ec2-fd7d84abd83c
+    title: Сентябрь (08.10.2026)
 ---
 Сентябрь: и дождь, и ветер, и прохлада,
 Чуть подтянулась диафрагма дня.
