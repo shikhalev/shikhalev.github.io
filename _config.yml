@@ -24,7 +24,7 @@ email: shikhalev@gmail.com
 author: Иван Шихалев
 description: Блог. Склад текстов. И прочее городу и миру...
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://shikhalev.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://shikhalev.org" # the base hostname & protocol for your site, e.g. http://example.com
 show_excerpts: true
 rss: rss
 future: true
@@ -249,6 +249,7 @@ announcer:
     prose: проза
     verses: стихи
     tales: сказочки
+    suno: suno
   telegram:
     method: telegram
     chat_id: "@shikhalev_blog"
