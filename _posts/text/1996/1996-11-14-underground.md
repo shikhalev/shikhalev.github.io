@@ -5,21 +5,6 @@ category: [ text, verses, best ]
 image: _src/covers/underground96.png
 tags:
   - песенка
-  - suno
-suno:
-  - id: 1606a107-a07e-4b67-ada8-948014ab70bc
-    title: Подземный город (02.09.2024)
-  - id: d8946d5a-cd5f-4b11-af12-c7ff3f87b14d
-    title: Подземный город (24.12.2024)
-  - id: 94b331b9-42d2-4846-b106-08282766fff4
-    title: Подземный город (24.01.2025)
-  - id: d2cd1c8e-40e8-47e6-9951-58bb485194e7
-    title: Подземный город (08.02.2025)
-suno_en:
-  - id: 04840add-1182-4946-9e70-5cd8d6a38a7b
-    title: Underground town (18.01.2025)
-  - id: d13d3ab5-8d3c-41e9-b1da-067a03664e23
-    title: The City Beneath (13.03.2025)
 ---
 На земле грязно, и идут дожди,
 На земле холод, и падает снег,

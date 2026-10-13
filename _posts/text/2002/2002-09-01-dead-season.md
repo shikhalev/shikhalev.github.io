@@ -4,15 +4,6 @@ title: Мёртвый сезон
 write_date: лето-осень 2002
 category: [ text, verses, best ]
 image: _src/covers/season02.png
-tags:
-  - suno
-suno:
-  - id: c9febd33-c7ab-4db8-84ef-7549e4a6c5ed
-    title: Мёртвый сезон (24.10.2024)
-  - id: 294dad48-4a54-49dd-a731-8da2fbedcdc7
-    title: Мёртвый сезон (18.12.2024)
-  - id: a8b09a27-9447-4231-a54d-7d2edc86f88a
-    title: Мёртвый сезон (05.01.2024)
 ---
 За окном матом ругается,
 Рассыпает дешёвый звон,

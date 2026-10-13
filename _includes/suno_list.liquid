@@ -1,0 +1,78 @@
+{%- assign list_link = nil -%}
+{%- assign list_title = include.title | default: nil -%}
+{%- if include.album -%}
+  {%- assign list_link = "https://suno.com/album/" | append: include.album -%}
+  {%- assign album = site.data.suno.albums | where: 'id', include.album | first -%}
+  {%- if album -%}
+    {%- assign list_title = album.title -%}
+  {%- endif -%}
+  {%- assign list_data = site.data.suno.tracks | where: 'album', include.album | sort: 'track' -%}
+{%- elsif include.tag -%}
+  {%- assign list_tag = include.tag -%}
+  {%- assign list_data = site.data.suno.tracks | where_exp: 'item', 'item.tags contains list_tag' | sort: 'date' | reverse -%}
+{%- elsif include.ids -%}
+  {%- assign list_data = '' | split: ',' -%}
+  {%- for item in include.ids -%}
+    {%- assign current_data = site.data.suno.tracks | where: 'id', item -%}
+    {%- assign list_data = list_data | concat: current_data -%}
+  {%- endfor -%}
+{%- else -%}
+  {%- assign main_data = site.data.suno.tracks | where: 'lyrics', page.path | sort: 'date' | reverse -%}
+  {%- assign tran_data = site.data.suno.tracks | where: 'original', page.path | sort: 'date' | reverse -%}
+  {%- assign list_data = main_data | concat: tran_data -%}
+{%- endif -%}
+{%- assign list_data = list_data | where_exp: 'item', 'item.disabled != true' -%}
+
+{%- if list_data.size > 0 -%}
+  <div class="suno_box" markdown="0">
+  {%- assign title_tag = include.level | default: 'h2' -%}
+  {%- if list_title -%}
+    {%- if list_link -%}
+      <{{- title_tag }} class="suno_title no_toc"><a href="{{- list_link -}}">{{- list_title -}}</a></{{- title_tag -}}>
+    {%- else -%}
+      <{{- title_tag }} class="suno_title no_toc">{{- list_title -}}</{{- title_tag -}}>
+    {%- endif -%}
+  {%- endif -%}
+  {%- assign list_group = include.group | default: 'suno' -%}
+
+  {%- for item in list_data -%}
+    {%- if item.recommend -%}
+      {%- assign add_class = ' recommended' -%}
+    {%- else -%}
+      {%- assign add_class = '' -%}
+    {%- endif -%}
+    {%- assign item_album = '' -%}
+    {%- if item.album -%}
+      {%- unless include.album -%}
+        {%- assign album = site.data.suno.albums | where: 'id', item.album | first -%}
+        {%- if album -%}
+          {%- assign item_album = ' <i>/ ' | append: album.title | append: ' [' | append: item.track | append: ']' | append: '</i> ' -%}
+        {%- endif -%}
+      {%- endunless -%}
+    {%- endif -%}
+    {%- if item.caption -%}
+      {% assign item_caption = '<i>' | append: item.caption | append: '</i>, ' %}
+    {%- else -%}
+      {% assign item_caption = '' %}
+    {%- endif -%}
+    {%- assign self_link = '' -%}
+    {%- if item.lyrics -%}
+      {%- unless item.lyrics == page.path -%}
+        {%- assign self_page = site.documents | where: 'path', item.lyrics | first -%}
+        {%- if self_page -%}
+          {%- assign self_url = self.page.url -%}
+          {%- assign self_link = ' <a href="' | append: self_page.url | append: '" class="suno_self" title="Перейти к странице текста"> 📄</a>' -%}
+        {%- endif -%}
+      {%- endunless -%}
+    {%- endif -%}
+    <details name="{{- list_group -}}" class="suno_track{{- add_class -}}">
+      <summary>{{ item.title }}{{ item_album }} ({{ item_caption  }}{{ item.date | date: '%d.%m.%Y' }}) <a href="https://suno.com/song/{{- item.id -}}" class="suno_link" target="_blank" title="Перейти на сайт Suno"> 🎧</a>{{ self_link }}</summary>
+      <iframe src="https://suno.com/embed/{{- item.id -}}" width="480" height="120" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </details>
+  {%- endfor -%}
+  </div>
+  {%- unless suno_script_included -%}
+    <script src="/assets/js/suno.js"></script>
+    {%- assign suno_script_included = true -%}
+  {%- endunless -%}
+{%- endif -%}

@@ -254,6 +254,56 @@ div.verse {
   }
 }
 
+.suno_track {
+
+  margin: 5px auto;
+
+  &.recommended {
+    summary {
+      font-weight: bold;
+    }
+  }
+
+  summary {
+    color: #333;
+    font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+    cursor: default;
+
+    &::before {
+      content: '🎵 '
+    }
+
+    .suno_link, .suno_link:link, .suno_link:visited, .suno_self, .suno_self:link, .suno_self:visited {
+      // font-weight: bold;
+      // font-size: 150%;
+      text-decoration: none;
+      vertical-align: middle;
+    }
+  }
+}
+
+.suno_title::before {
+  content: '🎶 ';
+}
+
+.suno_box {
+  margin: 1em auto;
+}
+
+.img-icon-suno {
+
+  &::before {
+    content: ' ';
+    background-image: url(/assets/img/suno-192x192.png);
+    background-size: contain;
+    vertical-align: -0.125em;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    margin-right: 0.3em;
+  }
+}
+
 figure.__is_images_slide_figure {
   display: flex;
   border: none;

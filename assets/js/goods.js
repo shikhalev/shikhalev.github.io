@@ -1,4 +1,3 @@
-console.log({kinds: window.goodKinds});
 document.addEventListener('DOMContentLoaded', () => {
   if (window.goodKinds) {
     const container = document.getElementById('filter-container');

@@ -1,0 +1,957 @@
+- id: bb74e9de-6e98-4b12-92c3-9e4babd69f2b
+  title: Екатеринбургский вальс
+  caption: мужской вариант
+  date: 2024-08-31
+  lyrics: _posts/text/1996/1996-09-13-walz.md
+
+- id: 1606a107-a07e-4b67-ada8-948014ab70bc
+  title: Подземный город
+  caption: стимпанк
+  date: 2024-09-02
+  lyrics: _posts/text/1996/1996-11-14-underground.md
+- id: 75a96d9b-1b4d-4f56-b67a-ac0046baa118
+  title: Рок-н-ролл
+  caption: панк-рок
+  date: 2024-09-03
+  lyrics: _posts/text/1997/1997-05-01-rock-n-roll.md
+- id: 3cadedab-343a-445b-9aa0-5569704309a7
+  title: Сорок сердитых хорьков
+  date: 2024-09-03
+  lyrics: _posts/text/1997/1997-05-02-40.md
+- id: 41538b24-7bfb-4759-8e6b-a8c611e229a8
+  title: Коробка малых дел
+  date: 2024-09-04
+  lyrics: _posts/text/2002/2002-09-01-box.md
+- id: b2b007ac-dd17-4fe3-9ffb-599532197f52
+  title: Конан – искатель приключений
+  date: 2024-09-04
+  lyrics: _posts/text/1995/1995-04-28-konan.md
+
+- id: 9dcd10a3-443a-4e6f-b95e-47bf31be9a4e
+  title: Старая история
+  date: 2024-09-05
+  lyrics: _posts/text/1996/1996-09-30-story.md
+- id: 8a7c8391-1704-4df7-8fc4-22378cb1a844
+  title: Большая прогулка
+  date: 2024-09-07
+  lyrics: _posts/text/1996/1996-09-18-walk.md
+- id: 0604493b-9fed-438f-9b3b-1c7e7f42af73
+  title: Этот поезд
+  date: 2024-09-07
+  lyrics: _posts/text/2009/2009-03-20-blues.md
+- id: f970c349-9f19-4fcc-89a3-2c5255e81a89
+  title: Усталый человек
+  date: 2024-09-07
+  lyrics: _posts/text/2009/2009-04-15-man.md
+- id: 47bba361-617f-44c3-839c-4ea635e443bc
+  title: Метелица
+  date: 2024-09-08
+  lyrics: _posts/text/1996/1996-08-07-metel.md
+
+- id: 75f51bf8-f40b-465c-b652-84a22c671a41
+  title: Про судьбу
+  caption: pagan metal
+  date: 2024-09-08
+  lyrics: _posts/text/2009/2009-08-06-rock.md
+- id: 5475fab3-1e79-4a1f-8e42-516f20d6c079
+  title: Екатеринбургский вальс
+  caption: не дуэт
+  date: 2024-09-13
+  lyrics: _posts/text/1996/1996-09-13-walz.md
+- id: ede76838-1014-4af4-ac93-581645c183ea
+  title: Екатеринбургский вальс
+  caption: дуэт
+  date: 2024-09-14
+  lyrics: _posts/text/1996/1996-09-13-walz.md
+- id: 0508de8d-5028-49db-a83c-9d1b708f3fe7
+  title: Екатеринбургский вальс
+  caption: женский вариант
+  date: 2024-09-14
+  lyrics: _posts/text/1996/1996-09-13-walz.md
+- id: 1169fced-0a6f-4d96-94fa-d1ee49a1a86d
+  title: Про бегемота
+  caption: стимпанк
+  date: 2024-09-15
+  lyrics: _posts/text/1994/1994-11-24-begemot.md
+
+- id: 91f90c6b-6b72-4186-9e9f-5f0cf4a6524f
+  title: Рок-н-ролл
+  caption: буги-вуги
+  date: 2024-09-16
+  lyrics: _posts/text/1997/1997-05-01-rock-n-roll.md
+
+- id: 59eea676-b7e5-4362-8cc3-e8889614f180
+  title: Бесконечная змея
+  date: 2024-09-28
+  lyrics: _posts/text/1996/1996-12-20-jungle.md
+- id: f489edce-12dc-4b41-8b92-18d2914a6b1f
+  title: Бесконечная змея
+  caption: версия
+  date: 2024-09-28
+  lyrics: _posts/text/1996/1996-12-20-jungle.md
+- id: 2c2c7590-5805-40ee-9f02-2f3a31511b93
+  title: Всё по кругу
+  date: 2024-09-28
+  lyrics: _posts/text/1997/1997-07-04-circle.md
+- id: 7d56b7f7-fec6-4a57-8734-2770cc6d8c37
+  title: Песня без слов
+  date: 2024-09-30
+  lyrics: _posts/text/1996/1996-08-30-wolf-song.md
+- id: ccc20005-f60b-4113-a5fe-9ad8759c5a97
+  title: Волчий пастух
+  caption: v1
+  date: 2024-09-30
+  lyrics: _posts/text/2000/2000-03-01-wolf-pater.md
+
+- id: 10aa6261-a820-4e01-822c-9fd99b7755c2
+  title: Одуванчик
+  caption: v1
+  date: 2024-10-02
+  lyrics: _posts/text/1996/1996-12-08-oduvan.md
+- id: ad814934-bd3f-4852-9b3d-99e671644b88
+  title: Чёртики (матерное)
+  date: 2024-10-02
+  lyrics: _posts/text/1996/1996-11-24-chort.md
+- id: 4c913807-0a46-4c4a-9998-3b6d106e26f3
+  title: Человек из тумана
+  date: 2024-10-03
+  lyrics: _posts/text/2012/2012-03-21-fog.md
+- id: c02dc4dd-74e7-4097-9907-3835a3ca79f3
+  title: Август
+  caption: v1
+  date: 2024-10-06
+  lyrics: _posts/text/1996/1996-09-01-august.md
+
+- id: adbd7637-ff3d-462b-a8ee-6b019bd037d3
+  title: Блюз неслипшихся душ
+  date: 2024-10-07
+  lyrics: _posts/text/2000/2000-03-01-blues.md
+- id: 4708e2a1-57e4-4fe4-8391-817bea35d12a
+  title: Русь
+  date: 2024-10-09
+  lyrics: _posts/text/1996/1996-09-09-rus.md
+- id: 32a9fc57-588d-45b0-b291-2767d14ad064
+  title: И коротко о погоде...
+  date: 2024-10-11
+  lyrics: _posts/text/2012/2012-06-04-weather.md
+- id: 5f6818e9-6065-49a0-8721-a0fabe9dd84b
+  title: И коротко о погоде...
+  caption: женская версия
+  date: 2024-10-12
+  lyrics: _posts/text/2012/2012-06-04-weather.md
+- id: 8040db2d-9323-4ea5-a05d-d3c9cf0850a4
+  title: Романс
+  date: 2024-10-13
+  lyrics: _posts/text/1996/1996-08-16-romance.md
+
+- id: 70532992-6340-4e4d-b27e-bafe6108cb49
+  title: Буколистическое
+  date: 2024-10-20
+  lyrics: _posts/text/1997/1997-05-02-buko.md
+- id: ccae61a4-bc89-41f2-a143-a62e4b6f70ee
+  title: Там...
+  caption: v1
+  date: 2024-10-20
+  lyrics: _posts/text/2008/2008-01-22-tam.md
+- id: ec2f8722-2715-4eac-ae23-e5d72b0d5f55
+  title: День открытых кулис
+  date: 2024-10-21
+  lyrics: _posts/text/2011/2011-04-03-day.md
+- id: 3543c741-8db7-47c3-9dd6-cbba22d1f701
+  title: Я вспоминаю...
+  date: 2024-10-21
+  lyrics: _posts/text/1996/1996-07-23-alone.md
+- id: 1fea4b09-d701-4363-a171-abd0c6c6159e
+  title: Голосатая птица
+  date: 2024-10-22
+  lyrics: _posts/text/1996/1996-11-14-bird.md
+
+- id: 1da29715-6172-414e-92f5-5a56b0aa9e49
+  title: Тёмное время года
+  date: 2024-10-23
+  lyrics: _posts/text/2011/2011-12-12-bio.md
+- id: c9febd33-c7ab-4db8-84ef-7549e4a6c5ed
+  title: Мёртвый сезон
+  date: 2024-10-24
+  lyrics: _posts/text/2002/2002-09-01-dead-season.md
+- id: 5b52a01e-fd6c-4900-926c-718f5721f2ec
+  title: Палачи наших душ
+  date: 2024-10-25
+  lyrics: _posts/text/1996/1996-10-10-cut.md
+- id: f120349f-21f4-4a70-9911-f3541405352a
+  title: Ветер и мокрый снег
+  date: 2024-10-26
+  lyrics: _posts/text/2010/2010-03-24-wind-and-wet-snow.md
+- id: 01888f57-fd5a-4c96-a80e-2cfa023430a8
+  title: Коррида
+  caption: v1
+  date: 2024-10-27
+  lyrics: _posts/text/1996/1996-09-30-korrida.md
+
+- id: 41a374c2-5ca7-4fa8-9ccd-2dd5064822a3
+  title: Опереться о воздух
+  date: 2024-10-28
+  lyrics: _posts/text/2011/2011-10-30-air.md
+- id: 23704890-3453-4ac2-b0cc-67c5bbf70289
+  title: Шабаш
+  caption: halloween edition var. 4
+  date: 2024-10-31
+  lyrics: _posts/text/1996/1996-08-29-shabash.md
+- id: fc8303ed-832c-43b9-a3f7-673cc822a82b
+  title: Шабаш
+  caption: halloween edition var. 3
+  date: 2024-10-31
+  lyrics: _posts/text/1996/1996-08-29-shabash.md
+- id: 9669c14e-1c1e-4e83-8edb-78f603339f14
+  title: Ковыль
+  caption: v1
+  date: 2024-11-01
+  lyrics: _posts/text/1996/1996-08-29-kovyl.md
+- id: f34bd300-c22b-4b26-b3d3-a0ee53b41a4f
+  title: Там...
+  date: 2024-11-01
+  lyrics: _posts/text/2008/2008-01-22-tam.md
+
+- id: 9e9fe22c-c427-4467-a150-650aec6b5b61
+  title: Одуванчик
+  caption: вариант
+  date: 2024-11-02
+  lyrics: _posts/text/1996/1996-12-08-oduvan.md
+- id: 3a616bc5-0275-44c5-8fc2-c83b693733ca
+  title: Одуванчик
+  date: 2024-11-02
+  lyrics: _posts/text/1996/1996-12-08-oduvan.md
+- id: 1474b4df-96c6-40bb-aca4-af5614cda373
+  title: Душа нараспашку
+  date: 2024-11-04
+  lyrics: _posts/text/2012/2012-01-11-house.md
+- id: 8d82847c-539a-48ea-a6e7-c897d67fdf92
+  title: Душа нараспашку
+  date: 2024-11-04
+  lyrics: _posts/text/2012/2012-01-11-house.md
+- id: b9297f28-562e-4414-840b-2fb7d15e553d
+  title: Душа нараспашку
+  date: 2024-11-06
+  lyrics: _posts/text/2012/2012-01-11-house.md
+
+- id: eaa9eeb4-ec51-473c-8065-74a4783654a8
+  title: Сколько мук...
+  date: 2024-11-07
+  lyrics: _posts/text/1996/1996-08-29-sui.md
+- id: 7a4deb88-77fc-43f9-8235-a578ade81ec6
+  title: Давай напишем книгу...
+  date: 2024-11-08
+  lyrics: _posts/text/2009/2009-04-03-book.md
+- id: f7680db3-feb5-49be-811b-ca31f1ed1c06
+  title: Август
+  date: 2024-11-08
+  lyrics: _posts/text/1996/1996-09-01-august.md
+- id: 6ddfed2c-0c33-4cfc-bb2f-a4639f7e38b4
+  title: Август
+  caption: аниме версия
+  date: 2024-11-08
+  lyrics: _posts/text/1996/1996-09-01-august.md
+- id: f2d44df5-7c3b-4fda-8f9a-f736b17ece91
+  title: Ковыль
+  date: 2024-11-10
+  lyrics: _posts/text/1996/1996-08-29-kovyl.md
+
+- id: c31ed452-4aa8-436b-b685-8179a7c258ae
+  title: Страх
+  date: 2024-11-10
+  lyrics: _posts/text/1996/1996-08-29-fear.md
+- id: 942a90d5-03d4-46a7-a0da-a6bdad4fa838
+  title: Душа Города
+  date: 2024-11-11
+  lyrics: _posts/text/2002/2002-11-30-soul.md
+- id: 034fbc72-9618-4970-abd6-384834be9bec
+  title: Коррида
+  date: 2024-11-12
+  lyrics: _posts/text/1996/1996-09-30-korrida.md
+- id: c7c90fe6-3bdb-4dea-b5ad-e13621abda57
+  title: Жёлтый пласт времени
+  date: 2024-11-12
+  lyrics: _posts/text/2002/2002-09-01-oil.md
+- id: 119b5902-0513-432d-b821-9542a95a4ffc
+  title: Неслучившееся
+  date: 2024-11-14
+  lyrics: _posts/text/2002/2002-09-01-unex.md
+
+- id: 4510ee2f-2425-41d4-9f4b-4c1967fa1b86
+  title: Волчий пастух
+  date: 2024-11-17
+  lyrics: _posts/text/2000/2000-03-01-wolf-pater.md
+- id: e1474627-2a12-4b23-b781-1d33def5a91e
+  title: Серенада
+  date: 2024-11-19
+  lyrics: _posts/text/1997/1997-12-23-balkon.md
+- id: 2baf71ed-38d5-46e4-8640-46bf9585c50f
+  title: Серенада
+  caption: «режиссёрская версия»
+  date: 2024-11-20
+  lyrics: _posts/text/1997/1997-12-23-balkon.md
+- id: 02010533-8b39-4ed4-977c-0fed450d51b5
+  title: Большая прогулка
+  caption: v4 remastered
+  date: 2024-11-20
+  lyrics: _posts/text/1996/1996-09-18-walk.md
+
+- id: 2fb24fee-a57c-4896-b1f6-0c60f4cb81bd
+  title: Рагнарёк
+  date: 2024-11-21
+  lyrics: _posts/text/2014/2014-04-04-ragnarok.md
+- id: 38c17d01-13b2-4464-9078-d89e10bb675c
+  title: Рагнарёк
+  caption: вариант
+  date: 2024-11-21
+  lyrics: _posts/text/2014/2014-04-04-ragnarok.md
+- id: 1385d8a5-b51a-420b-96ec-ee29c4896757
+  title: Ragnarök
+  date: 2024-11-25
+  original: _posts/text/2014/2014-04-04-ragnarok.md
+- id: 656392a7-8dbc-4777-900d-2ed546315f99
+  title: Open Soul
+  date: 2024-11-26
+  original: _posts/text/2012/2012-01-11-house.md
+- id: 6317ce11-f7d1-4c7d-bddb-3e4135d1dc20
+  title: A man from the mist
+  date: 2024-11-26
+  original: _posts/text/2012/2012-03-21-fog.md
+
+- id: 2d9d65d8-26fa-4da9-b6d7-6f29480b0f2c
+  title: A man from the mist
+  date: 2024-11-26
+  original: _posts/text/2012/2012-03-21-fog.md
+- id: dc049e53-1276-45c3-8565-82105136c08e
+  title: Однажды...
+  date: 2024-11-26
+  lyrics: _posts/text/1997/1997-12-23-onetimes.md
+- id: 0ca6d30f-da9d-43d6-910c-949f5e8a2240
+  title: Что-то плохое
+  date: 2024-11-28
+  lyrics: _posts/text/2011/2011-11-21-arche.md
+- id: 8f5507aa-ac9b-4122-86da-76d9ef3367ce
+  title: Зима
+  date: 2024-11-29
+  lyrics: _posts/text/2008/2008-01-22-winter.md
+- id: 81f8aa1e-db22-434c-bb4b-7d34ee56d849
+  title: Homo homini
+  date: 2024-11-29
+  lyrics: _posts/text/2008/2008-01-20-homo-homini.md
+
+- id: 59866f4e-687f-42fe-8fb5-e583a1375ac8
+  title: Магу недоступны тропы смертных...
+  date: 2024-11-29
+  lyrics: _posts/text/2007/2007-12-07-mag.md
+
+- id: 05f10e32-bd90-46cb-9de9-89c4edbc34f2
+  title: Ragnarök
+  caption: instrumental
+  date: 2024-12-08
+  original: _posts/text/2014/2014-04-04-ragnarok.md
+- id: 5f45a96d-125e-4231-b506-57452e6d9b26
+  title: Прокрастинационное
+  date: 2024-12-10
+  lyrics: _posts/text/2011/2011-03-19-think.md
+- id: d188ef8d-387f-43af-82b8-0ac4627944c2
+  title: Лирическому...
+  date: 2024-12-10
+  lyrics: _posts/text/2011/2011-09-14-lg.md
+- id: a05970dc-b80d-42dd-8184-0392e56375c6
+  title: Мартовские просини
+  date: 2024-12-11
+  lyrics: _posts/text/1997/1997-03-15-prosini.md
+
+- id: 294dad48-4a54-49dd-a731-8da2fbedcdc7
+  title: Мёртвый сезон
+  date: 2024-12-18
+  lyrics: _posts/text/2002/2002-09-01-dead-season.md
+- id: 228595db-76e9-4423-8546-cd4ce03b4679
+  title: Про бегемота
+  date: 2024-12-18
+  lyrics: _posts/text/1994/1994-11-24-begemot.md
+- id: e92bd1d8-2d98-4483-845f-c2ae35735977
+  title: Рагнарёк
+  date: 2024-12-18
+  lyrics: _posts/text/2014/2014-04-04-ragnarok.md
+
+- id: e025626f-10b0-466c-a5bc-32ab6ece3b93
+  title: Буколистическое
+  date: 2024-12-19
+  lyrics: _posts/text/1997/1997-05-02-buko.md
+- id: 07940632-e644-4b61-a08b-1cfab8905a09
+  title: Голосатая птица
+  date: 2024-12-19
+  lyrics: _posts/text/1996/1996-11-14-bird.md
+- id: 87577744-eee3-4219-957e-7aa1dfd99f74
+  title: Рагнарёк
+  caption: remastered
+  date: 2024-12-20
+  lyrics: _posts/text/2014/2014-04-04-ragnarok.md
+- id: 8758f27a-af92-4d31-a0cb-047e23fb1868
+  title: Шабаш
+  caption: remake
+  date: 2024-12-20
+  lyrics: _posts/text/1996/1996-08-29-shabash.md
+- id: c83a66f1-4e57-4d8c-b67a-240085366cb6
+  title: Большая прогулка
+  caption: remake
+  date: 2024-12-20
+  lyrics: _posts/text/1996/1996-09-18-walk.md
+
+- id: 35e69139-9e1d-4404-a375-84a6c7d55701
+  title: Екатеринбургский вальс
+  date: 2024-12-20
+  lyrics: _posts/text/1996/1996-09-13-walz.md
+- id: 96173aa1-9172-4981-be9a-b8a97f8a006d
+  title: Песня без слов
+  date: 2024-12-20
+  lyrics: _posts/text/1996/1996-08-30-wolf-song.md
+- id: 7a22be4a-2143-4bdd-bca8-33cb84915b57
+  title: Палачи наших душ
+  caption: remake
+  date: 2024-12-20
+  lyrics: _posts/text/1996/1996-10-10-cut.md
+- id: 4505e060-5cff-4280-8343-0aead2a5014e
+  title: Голосатая птица
+  date: 2024-12-20
+  lyrics: _posts/text/1996/1996-11-14-bird.md
+- id: 34a37879-8a82-4ad0-9143-7761e1be2905
+  title: Рок-н-ролл
+  caption: remake
+  date: 2024-12-20
+  lyrics: _posts/text/1997/1997-05-01-rock-n-roll.md
+
+- id: a271b0a8-f063-4e48-b905-b0fdf55c2b59
+  title: Про бегемота
+  date: 2024-12-20
+  lyrics: _posts/text/1994/1994-11-24-begemot.md
+- id: 324e6f27-8e55-4c54-b85f-7ea5a836ca9a
+  title: Чёртики (матерное)
+  date: 2024-12-20
+  lyrics: _posts/text/1996/1996-11-24-chort.md
+- id: 58794240-3363-4175-8b0c-62758b499b55
+  title: Одуванчик
+  date: 2024-12-23
+  lyrics: _posts/text/1996/1996-12-08-oduvan.md
+- id: 90929d7b-ad01-4d0b-b042-1ad93f1e5d7f
+  title: Одуванчик
+  date: 2024-12-23
+  lyrics: _posts/text/1996/1996-12-08-oduvan.md
+- id: eafdf99f-cbf6-4c69-966a-8fd2e587ce62
+  title: Екатеринбургский вальс
+  caption: remake
+  date: 2024-12-23
+  lyrics: _posts/text/1996/1996-09-13-walz.md
+
+- id: f6c7180b-b494-46ab-a9cb-167ed7e2e13b
+  title: Шабаш
+  date: 2024-12-23
+  lyrics: _posts/text/1996/1996-08-29-shabash.md
+- id: a93640c4-fbc5-4ede-be91-9e99fabf9fcd
+  title: Душа Города
+  date: 2024-12-24
+  lyrics: _posts/text/2002/2002-11-30-soul.md
+- id: 26b0acef-ab3e-4601-a9b8-788172425134
+  title: Душа Города
+  date: 2024-12-24
+  lyrics: _posts/text/2002/2002-11-30-soul.md
+- id: 3e99312c-91e3-4b9d-8d99-a71c59400ae0
+  title: Коробка малых дел
+  caption: remake
+  date: 2024-12-24
+  lyrics: _posts/text/2002/2002-09-01-box.md
+- id: 7d961464-d9ef-4389-9c66-d782bd399e48
+  title: Про судьбу
+  caption: remake
+  date: 2024-12-24
+  lyrics: _posts/text/2009/2009-08-06-rock.md
+
+- id: d86e43e8-5034-4ccc-aef8-8506cc36f7c6
+  title: Конан – искатель приключений
+  date: 2024-12-24
+  lyrics: _posts/text/1995/1995-04-28-konan.md
+- id: d8946d5a-cd5f-4b11-af12-c7ff3f87b14d
+  title: Подземный город
+  date: 2024-12-24
+  lyrics: _posts/text/1996/1996-11-14-underground.md
+- id: 20c2c034-7bb8-4047-910d-ab7aa4cbe3d2
+  title: Сорок сердитых хорьков
+  date: 2024-12-24
+  lyrics: _posts/text/1997/1997-05-02-40.md
+- id: 19627695-35c8-4074-99b8-2097427d44ed
+  title: Про бегемота
+  date: 2024-12-24
+  lyrics: _posts/text/1994/1994-11-24-begemot.md
+- id: 18ccc47a-1f36-4188-9c1a-d3e83121a0a2
+  title: Усталый человек
+  date: 2024-12-24
+  lyrics: _posts/text/2009/2009-04-15-man.md
+
+- id: 66238006-5447-403d-942f-4d6d0b92b5a4
+  title: Усталый человек
+  date: 2024-12-24
+  lyrics: _posts/text/2009/2009-04-15-man.md
+- id: fac4e2eb-d959-438a-8133-6b8dd89d3887
+  title: Этот поезд
+  date: 2024-12-29
+  lyrics: _posts/text/2009/2009-03-20-blues.md
+- id: 07b969eb-0bf4-4424-9896-ed293301e2a2
+  title: Ragnarök
+  date: 2024-12-29
+  original: _posts/text/2014/2014-04-04-ragnarok.md
+- id: fbf2f72a-8f20-435e-945b-36104de2a7b5
+  title: Что-то плохое...
+  date: 2025-01-05
+  lyrics: _posts/text/2011/2011-11-21-arche.md
+  album: 4c7309c4-68b0-41ea-8c05-edbe2f889f69
+  track: 8
+- id: 5f70eee0-104a-4a86-a1d0-1cf2b69fe821
+  title: Тёмное время года
+  date: 2025-01-05
+  lyrics: _posts/text/2011/2011-12-12-bio.md
+  album: 4c7309c4-68b0-41ea-8c05-edbe2f889f69
+  track: 9
+
+- id: 365f16d9-168b-46b8-9eda-6a274b175529
+  title: Ветер и мокрый снег
+  date: 2025-01-05
+  lyrics: _posts/text/2010/2010-03-24-wind-and-wet-snow.md
+  album: 4c7309c4-68b0-41ea-8c05-edbe2f889f69
+  track: 7
+- id: a8b09a27-9447-4231-a54d-7d2edc86f88a
+  title: Мёртвый сезон
+  date: 2025-01-05
+  lyrics: _posts/text/2002/2002-09-01-dead-season.md
+  album: 4c7309c4-68b0-41ea-8c05-edbe2f889f69
+  track: 1
+- id: a504aa14-b018-4f8b-bf9d-8ac4b221910e
+  title: Усталый человек
+  date: 2025-01-05
+  lyrics: _posts/text/2009/2009-04-15-man.md
+  album: 4c7309c4-68b0-41ea-8c05-edbe2f889f69
+  track: 6
+- id: 0137f1e6-ccd4-435c-bb58-5b03385b28db
+  title: Homo homini
+  date: 2025-01-05
+  lyrics: _posts/text/2008/2008-01-20-homo-homini.md
+  album: 4c7309c4-68b0-41ea-8c05-edbe2f889f69
+  track: 4
+- id: 6203e43f-f1f7-4880-9a6b-1f9bc6721a70
+  title: Неслучившееся
+  date: 2025-01-05
+  lyrics: _posts/text/2002/2002-09-01-unex.md
+  album: 4c7309c4-68b0-41ea-8c05-edbe2f889f69
+  track: 2
+
+- id: 2b751cc8-c83c-4c3b-bcab-35da31976bbb
+  title: Зима
+  date: 2025-01-05
+  lyrics: _posts/text/2008/2008-01-22-winter.md
+  album: 4c7309c4-68b0-41ea-8c05-edbe2f889f69
+  track: 5
+- id: a1a050f8-607c-4416-ab0d-4af9f585fe9d
+  title: Опереться о воздух
+  date: 2025-01-05
+  lyrics: _posts/text/2011/2011-10-30-air.md
+  album: 4c7309c4-68b0-41ea-8c05-edbe2f889f69
+  track: 10
+- id: 5b0a44e5-ef7b-4206-8f01-3ae399b02baa
+  title: Душа нараспашку
+  date: 2025-01-05
+  lyrics: _posts/text/2012/2012-01-11-house.md
+  album: 4c7309c4-68b0-41ea-8c05-edbe2f889f69
+  track: 11
+- id: 5c8cfb84-d146-4bf0-ba5b-a63ec4327740
+  title: Тропы смертных
+  date: 2025-01-05
+  lyrics: _posts/text/2007/2007-12-07-mag.md
+  album: 4c7309c4-68b0-41ea-8c05-edbe2f889f69
+  track: 3
+- id: 04840add-1182-4946-9e70-5cd8d6a38a7b
+  title: Underground town
+  date: 2025-01-18
+  original: _posts/text/1996/1996-11-14-underground.md
+
+- id: 94b331b9-42d2-4846-b106-08282766fff4
+  title: Подземный город
+  date: 2025-01-24
+  lyrics: _posts/text/1996/1996-11-14-underground.md
+- id: 237cb068-8bbd-4b36-abb1-dec9a3a045af
+  title: Шабаш
+  date: 2025-02-02
+  lyrics: _posts/text/1996/1996-08-29-shabash.md
+- id: 86e61ed9-82dc-4316-9611-1a1c13f0e99a
+  title: Шабаш
+  date: 2025-02-05
+  lyrics: _posts/text/1996/1996-08-29-shabash.md
+  album: 788a03d7-aff4-41b2-b6f6-01cbf2bbd89f
+  track: 4
+- id: 80b0049c-9213-4345-bc89-4c91e4d80957
+  title: Август
+  date: 2025-02-05
+  lyrics: _posts/text/1996/1996-09-01-august.md
+  album: 788a03d7-aff4-41b2-b6f6-01cbf2bbd89f
+  track: 5
+- id: 0e116ad9-73fb-4ccc-9900-41ff86711b87
+  title: Буколистическое
+  date: 2025-02-05
+  lyrics: _posts/text/1997/1997-05-02-buko.md
+  album: 788a03d7-aff4-41b2-b6f6-01cbf2bbd89f
+  track: 9
+
+- id: a5e07974-ccd1-4284-8b6f-480c08a09e45
+  title: Ковыль
+  date: 2025-02-06
+  lyrics: _posts/text/1996/1996-08-29-kovyl.md
+  album: 788a03d7-aff4-41b2-b6f6-01cbf2bbd89f
+  track: 3
+- id: f466c0be-5c17-42a4-a6c6-1fd8115b0232
+  title: Мартовские просини
+  date: 2025-02-06
+  lyrics: _posts/text/1997/1997-03-15-prosini.md
+  album: 788a03d7-aff4-41b2-b6f6-01cbf2bbd89f
+  track: 8
+- id: f408ad26-2d0b-46f1-b07e-05fa5bfff31d
+  title: Одуванчик
+  date: 2025-02-07
+  lyrics: _posts/text/1996/1996-12-08-oduvan.md
+  album: 788a03d7-aff4-41b2-b6f6-01cbf2bbd89f
+  track: 7
+- id: da96e25f-ed2f-4ca6-9ea5-b07b0a045ddc
+  title: Буколистическое
+  date: 2025-02-07
+  lyrics: _posts/text/1997/1997-05-02-buko.md
+- id: 3c18a424-d29b-4ae5-aa27-de91db1ae18f
+  title: Человек из тумана
+  date: 2025-02-07
+  lyrics: _posts/text/2012/2012-03-21-fog.md
+  album: 788a03d7-aff4-41b2-b6f6-01cbf2bbd89f
+  track: 12
+
+- id: af0b9f74-23b8-4da6-9868-b1338ec3fd28
+  title: Страх
+  date: 2025-02-07
+  lyrics: _posts/text/1996/1996-08-29-fear.md
+  album: 788a03d7-aff4-41b2-b6f6-01cbf2bbd89f
+  track: 2
+- id: 33dec573-474a-408b-a1e4-4f00cfd3609f
+  title: Лирическому...
+  date: 2025-02-07
+  lyrics: _posts/text/2011/2011-09-14-lg.md
+  album: 788a03d7-aff4-41b2-b6f6-01cbf2bbd89f
+  track: 11
+- id: 64b325b1-cc2a-495e-a46d-e1ac90d6c963
+  title: Голосатая птица
+  date: 2025-02-07
+  lyrics: _posts/text/1996/1996-11-14-bird.md
+  album: 788a03d7-aff4-41b2-b6f6-01cbf2bbd89f
+  track: 6
+- id: fc07572f-3c7f-43ff-9f86-5957a3adefd2
+  title: Рагнарёк
+  date: 2025-02-07
+  lyrics: _posts/text/2014/2014-04-04-ragnarok.md
+  album: 788a03d7-aff4-41b2-b6f6-01cbf2bbd89f
+  track: 13
+- id: d27a34d7-7ff1-4136-be1e-08f34ae8886e
+  title: Там...
+  date: 2025-02-08
+  lyrics: _posts/text/2008/2008-01-22-tam.md
+  album: 788a03d7-aff4-41b2-b6f6-01cbf2bbd89f
+  track: 10
+
+- id: c8373734-62a9-459d-a8cc-e625b0719038
+  title: Коробка малых дел
+  date: 2025-02-08
+  lyrics: _posts/text/2002/2002-09-01-box.md
+- id: cb8c2dcf-1d75-490b-a428-4db01fc2fbe8
+  title: Интерлюдия
+  caption: инструментал
+  date: 2025-02-08
+  album: 788a03d7-aff4-41b2-b6f6-01cbf2bbd89f
+  track: 1
+- id: d2cd1c8e-40e8-47e6-9951-58bb485194e7
+  title: Подземный город
+  date: 2025-02-08
+  lyrics: _posts/text/1996/1996-11-14-underground.md
+  album: 57b41187-d9ac-4a3c-8725-f6db342d877e
+  track: 3
+- id: 5cb19377-4637-4a2b-8369-f353d53d9178
+  title: Конан – искатель приключений
+  date: 2025-02-08
+  lyrics: _posts/text/1995/1995-04-28-konan.md
+  album: 57b41187-d9ac-4a3c-8725-f6db342d877e
+  track: 2
+- id: a0878383-aadb-4fe2-88ce-8363fb60e478
+  title: Про бегемота
+  date: 2025-02-08
+  lyrics: _posts/text/1994/1994-11-24-begemot.md
+  album: 57b41187-d9ac-4a3c-8725-f6db342d877e
+  track: 1
+
+- id: fbf47889-e436-497f-b2a7-f0ce1b6087cf
+  title: Сорок сердитых хорьков
+  date: 2025-02-08
+  lyrics: _posts/text/1997/1997-05-02-40.md
+  album: 57b41187-d9ac-4a3c-8725-f6db342d877e
+  track: 6
+- id: e6439942-bf9a-4bee-8eeb-5d5e51cc30a2
+  title: Про судьбу
+  date: 2025-02-08
+  lyrics: _posts/text/2009/2009-08-06-rock.md
+  album: 57b41187-d9ac-4a3c-8725-f6db342d877e
+  track: 8
+- id: efb99776-a0d0-40c4-82ea-fc8f14750b19
+  title: Ragnarök
+  date: 2025-02-08
+  original: _posts/text/2014/2014-04-04-ragnarok.md
+  album: 57b41187-d9ac-4a3c-8725-f6db342d877e
+  track: 10
+- id: 546ff94f-425f-474b-9086-830ea6fb4d3c
+  title: Серенада (бонус-трек)
+  date: 2025-02-09
+  lyrics: _posts/text/1997/1997-12-23-balkon.md
+  album: 57b41187-d9ac-4a3c-8725-f6db342d877e
+  track: 11
+- id: 2a20c53f-4362-48e4-9d5c-8361b41a1d26
+  title: Серенада
+  date: 2025-02-09
+  lyrics: _posts/text/1997/1997-12-23-balkon.md
+  album: 57b41187-d9ac-4a3c-8725-f6db342d877e
+  track: 7
+
+- id: 9ec50b03-2022-4f55-9018-ef62a190b7ac
+  title: Чёртики (матерное)
+  date: 2025-02-09
+  lyrics: _posts/text/1996/1996-11-24-chort.md
+  album: 57b41187-d9ac-4a3c-8725-f6db342d877e
+  track: 4
+- id: 42359b1c-9d3f-4571-941f-8a49a9a76ad2
+  title: Рок-н-ролл
+  date: 2025-02-09
+  lyrics: _posts/text/1997/1997-05-01-rock-n-roll.md
+  album: 57b41187-d9ac-4a3c-8725-f6db342d877e
+  track: 5
+- id: 55822a7b-a3ed-4375-92bf-437494c41e9a
+  title: День открытых кулис
+  date: 2025-02-10
+  lyrics: _posts/text/2011/2011-04-03-day.md
+  album: 57b41187-d9ac-4a3c-8725-f6db342d877e
+  track: 9
+- id: b055f9e7-ae5f-4384-afea-b9433083393d
+  title: Waltz O'Clock
+  caption: instrumental
+  date: 2025-02-20
+- id: 22a07f87-6cd1-4ea2-93a2-8c534a29af97
+  title: Словно запоздалый анекдот...
+  date: 2025-02-27
+  lyrics: _posts/text/1996/1996-10-04-anekdot.md
+
+- id: 1b5c88d7-3e22-47d8-b8d7-0087e5ef6fd1
+  title: Bucolistic
+  date: 2025-03-12
+  original: _posts/text/1997/1997-05-02-buko.md
+  album: 27ceffe8-2028-4268-8e99-4b87fc2ec363
+  track: 7
+- id: 0c4b09fd-8f07-4c8b-92fe-2453b858f245
+  title: Sabbath
+  date: 2025-03-12
+  original: _posts/text/1996/1996-08-29-shabash.md
+  album: 27ceffe8-2028-4268-8e99-4b87fc2ec363
+  track: 1
+- id: d13d3ab5-8d3c-41e9-b1da-067a03664e23
+  title: The City Beneath
+  date: 2025-03-13
+  original: _posts/text/1996/1996-11-14-underground.md
+  album: 27ceffe8-2028-4268-8e99-4b87fc2ec363
+  track: 4
+- id: 873f1694-918c-4d09-93c5-524557e2c7b4
+  title: August
+  date: 2025-03-13
+  original: _posts/text/1996/1996-09-01-august.md
+  album: 27ceffe8-2028-4268-8e99-4b87fc2ec363
+  track: 2
+- id: f5bb0cb1-8711-4ea8-8014-e6156561cdfa
+  title: Ragnarǫkkr
+  date: 2025-03-13
+  original: _posts/text/2014/2014-04-04-ragnarok.md
+  album: 27ceffe8-2028-4268-8e99-4b87fc2ec363
+  track: 10
+
+- id: 3bb3aa20-98aa-486e-95ad-7cd06623c86d
+  title: Loud-voiced bird
+  date: 2025-03-14
+  original: _posts/text/1996/1996-11-14-bird.md
+  album: 27ceffe8-2028-4268-8e99-4b87fc2ec363
+  track: 3
+- id: e423984e-d530-4f49-a1c4-da1623eb8d16
+  title: The Man from the Mist
+  date: 2025-03-22
+  original: _posts/text/2012/2012-03-21-fog.md
+  album: 27ceffe8-2028-4268-8e99-4b87fc2ec363
+  track: 9
+- id: 99a53353-ebbe-4af2-a945-3d772c490676
+  title: To the Lyrical…
+  date: 2025-03-23
+  original: _posts/text/2011/2011-09-14-lg.md
+  album: 27ceffe8-2028-4268-8e99-4b87fc2ec363
+  track: 8
+- id: 3ae78365-bb57-467a-aa08-23eba873b1c2
+  title: Dandelion
+  date: 2025-03-28
+  original: _posts/text/1996/1996-12-08-oduvan.md
+  album: 27ceffe8-2028-4268-8e99-4b87fc2ec363
+  track: 5
+- id: 16bf2aa5-0ce9-42fd-b19b-70088349f665
+  title: March Blue-Gleams
+  date: 2025-04-25
+  original: _posts/text/1997/1997-03-15-prosini.md
+  album: 27ceffe8-2028-4268-8e99-4b87fc2ec363
+  track: 6
+
+- id: aff99a23-a8e6-4f56-a6ba-b4a675869b80
+  title: Покрышка
+  date: 2026-08-08
+  lyrics: _posts/text/1994/1994-09-20-fire.md
+- id: 3e52687e-b5a3-49b6-849d-daf3971fa89d
+  title: Там, когда...
+  date: 2026-08-26
+  recommend: true
+  lyrics: _posts/text/2026/2026-08-26-birch.md
+- id: 59f8b074-3994-42a8-93ca-a8309c6eac14
+  title: До поворота
+  date: 2026-09-17
+  lyrics: _posts/text/2026/2026-08-26-birch.md
+- id: cb9af2c3-2c80-4a7f-8535-b0ee464b0fc7
+  title: The Sublunary World
+  date: 2026-10-06
+  original: _posts/text/2026/2026-08-26-birch.md
+- id: 3d9efe49-b39e-477e-9a44-30a08286682b
+  title: The Uncoiled Spring
+  date: 2026-10-06
+  recommend: true
+  original: _posts/text/2026/2026-08-26-birch.md
+
+- id: 2abc61ae-f773-4132-8ca4-59068152f4f8
+  title: Август
+  date: 2026-10-07
+  recommend: true
+  lyrics: _posts/text/1996/1996-09-01-august.md
+- id: 39f3f236-bd59-4eff-988b-de0bf29b88e0
+  title: Большая прогулка
+  date: 2026-10-07
+  recommend: true
+  lyrics: _posts/text/1996/1996-09-18-walk.md
+- id: b62002d5-8c94-4f4f-890b-b4a9c7205b03
+  title: История
+  date: 2026-10-07
+  lyrics: _posts/text/1996/1996-09-30-story.md
+  album: 4989b6e2-ba43-4b90-a269-5d49fc81400f
+  track: 1
+- id: f335a83c-525d-4918-9cf3-2ea3f5c6a236
+  title: Русь
+  date: 2026-10-07
+  lyrics: _posts/text/1996/1996-09-09-rus.md
+  album: 4989b6e2-ba43-4b90-a269-5d49fc81400f
+  track: 2
+- id: bf60472a-01cf-4285-83b0-b80b8443cf88
+  title: Палачи
+  date: 2026-10-07
+  lyrics: _posts/text/1996/1996-10-10-cut.md
+  album: 4989b6e2-ba43-4b90-a269-5d49fc81400f
+  track: 3
+
+- id: dbf6d484-f6d2-4ae2-83a2-0f886ca40b8b
+  title: Судьба
+  date: 2026-10-07
+  lyrics: _posts/text/2009/2009-08-06-rock.md
+  album: 4989b6e2-ba43-4b90-a269-5d49fc81400f
+  track: 4
+- id: ad5400dc-c65e-4a3d-aa14-f452a8dea519
+  title: Мост
+  date: 2026-10-07
+  lyrics: _posts/text/2008/2008-01-22-tam.md
+  album: 4989b6e2-ba43-4b90-a269-5d49fc81400f
+  track: 5
+- id: 75a9bed6-7a99-4a70-8829-a608a0bd2eca
+  title: Рагнарёк
+  date: 2026-10-08
+  lyrics: _posts/text/2014/2014-04-04-ragnarok.md
+  album: 4989b6e2-ba43-4b90-a269-5d49fc81400f
+  track: 6
+- id: ed789f96-50c8-4a5e-b515-fb116a74fd39
+  title: Эпиграф
+  date: 2026-10-08
+  lyrics: _posts/text/2000/2000-03-01-epigraph.md
+  album: c6aa656e-8486-405f-8456-ccd82615c063
+  track: 1
+- id: 2cd3ce48-e647-4749-9adc-b8426e478000
+  title: Счастье
+  date: 2026-10-08
+  lyrics: _posts/text/2000/2000-07-15-hap.md
+  album: c6aa656e-8486-405f-8456-ccd82615c063
+  track: 2
+
+- id: d173c089-fc61-4a68-bb38-7ce7d2d660be
+  title: Новый день
+  date: 2026-10-08
+  lyrics: _posts/text/2002/2002-09-01-new-day.md
+  album: c6aa656e-8486-405f-8456-ccd82615c063
+  track: 3
+- id: fdf73448-1abd-4f51-8ec2-fd7d84abd83c
+  title: Сентябрь
+  date: 2026-10-08
+  lyrics: _posts/text/2008/2008-09-03-september.md
+  album: c6aa656e-8486-405f-8456-ccd82615c063
+  track: 4
+- id: 9b4711fd-d11b-4848-bf1d-bc1145a9ef81
+  title: Прямые пути
+  date: 2026-10-08
+  lyrics: _posts/text/2009/2009-08-02-right.md
+  album: c6aa656e-8486-405f-8456-ccd82615c063
+  track: 5
+- id: b0ccc416-8492-4a4a-824e-28207540b4fa
+  title: Мелкими следами...
+  date: 2026-10-08
+  lyrics: _posts/text/2011/2011-08-19-steps.md
+  album: c6aa656e-8486-405f-8456-ccd82615c063
+  track: 6
+- id: 949fff61-47ff-40c9-8b7b-d5b979faf954
+  title: Пепел на зубах
+  date: 2026-10-08
+  lyrics: _posts/text/2011/2011-12-19-winter.md
+  album: c6aa656e-8486-405f-8456-ccd82615c063
+  track: 7
+
+- id: d67f966f-cc3e-46f1-ac3d-db156010e518
+  title: Жить...
+  date: 2026-10-08
+  lyrics: _posts/text/2010/2010-04-14-live.md
+  album: c6aa656e-8486-405f-8456-ccd82615c063
+  track: 8
+- id: 00bee03e-030f-4198-8b6f-ded5291d454d
+  title: Ночное
+  date: 2026-10-08
+  lyrics: _posts/text/2010/2010-08-02-august.md
+  album: c6aa656e-8486-405f-8456-ccd82615c063
+  track: 9
+- id: d5605924-9aa3-4044-8e72-8bc0090199af
+  title: Кругом тишина...
+  date: 2026-10-08
+  lyrics: _posts/text/2013/2013-11-10-silence.md
+  album: c6aa656e-8486-405f-8456-ccd82615c063
+  track: 10
+
+- id: 6cbc23a6-7946-477a-a065-dfc1ac3723ba
+  title: До поворота
+  date: 2026-10-09
+  lyrics: _posts/text/2026/2026-08-26-birch.md
+- id: febaf78b-c44b-413a-9f65-f9c725ba4bda
+  title: Подземный город
+  date: 2026-10-10
+  lyrics: _posts/text/1996/1996-11-14-underground.md
+- id: 5e942d76-22ea-4557-8b0f-5e3cc3dd5f13
+  title: Коробка малых дел
+  date: 2026-10-10
+  recommend: true
+  lyrics: _posts/text/2002/2002-09-01-box.md
