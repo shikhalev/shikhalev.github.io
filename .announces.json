@@ -1,1 +1,23 @@
-{}
+{
+  "telegram": {
+    "config": {
+      "method": "telegram",
+      "chat_id": "@shikhalev_blog"
+    },
+    "posts": {
+      "_posts/about/2026-10-13-suno.md": {
+        "url": "https://shikhalev.github.io/about/2026/10/suno.html",
+        "date": "2026/10/13",
+        "title": "Чо там у Suno?",
+        "description": "Точнее — что там у меня на Suno новенького...",
+        "categories": [
+          "сайт",
+          "технологии",
+          "веб",
+          "тексты",
+          "suno"
+        ]
+      }
+    }
+  }
+}
