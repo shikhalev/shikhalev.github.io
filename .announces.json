@@ -1,1 +1,22 @@
-{}
+{
+  "telegram": {
+    "config": {
+      "method": "telegram",
+      "chat_id": "@shikhalev_blog"
+    },
+    "posts": {
+      "_posts/text/2026/2026-10-16-in-forest.md": {
+        "url": "https://shikhalev.github.io/text/2026/10/in-forest.html",
+        "date": "2026/10/16",
+        "title": "Те, кто в лесу",
+        "description": "Смерть кощеева не в яйце, эту сказку ты можешь забыть...",
+        "categories": [
+          "тексты",
+          "стихи",
+          "избранное",
+          "suno"
+        ]
+      }
+    }
+  }
+}
