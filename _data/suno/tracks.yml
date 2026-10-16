@@ -966,3 +966,12 @@
   title: Те, кто ходит в лесу
   date: 2026-10-16
   lyrics: _posts/text/2026/2026-10-16-in-forest.md
+- id: d26c36a1-edfb-4396-8cf2-eaf382b3c8d2
+  title: Those Who Walk the Forest
+  date: 2026-10-16
+  original: _posts/text/2026/2026-10-16-in-forest.md
+  disabled: true
+- id: 645453d6-a034-49cf-a203-857e16545ff9
+  title: Those Who Walk in the Woods
+  date: 2026-10-17
+  original: _posts/text/2026/2026-10-16-in-forest.md
