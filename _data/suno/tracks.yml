@@ -47,15 +47,18 @@
   date: 2024-09-07
   lyrics: _posts/text/2009/2009-03-20-blues.md
 - id: f970c349-9f19-4fcc-89a3-2c5255e81a89
+  disabled: true
   title: Усталый человек
   date: 2024-09-07
   lyrics: _posts/text/2009/2009-04-15-man.md
 - id: 47bba361-617f-44c3-839c-4ea635e443bc
+  disabled: true
   title: Метелица
   date: 2024-09-08
   lyrics: _posts/text/1996/1996-08-07-metel.md
 
 - id: 75f51bf8-f40b-465c-b652-84a22c671a41
+  disabled: true
   title: Про судьбу
   caption: pagan metal
   date: 2024-09-08
@@ -77,6 +80,7 @@
   date: 2024-09-14
   lyrics: _posts/text/1996/1996-09-13-walz.md
 - id: 1169fced-0a6f-4d96-94fa-d1ee49a1a86d
+  disabled: true
   title: Про бегемота
   caption: стимпанк
   date: 2024-09-15
@@ -376,6 +380,7 @@
   date: 2024-12-18
   lyrics: _posts/text/2002/2002-09-01-dead-season.md
 - id: 228595db-76e9-4423-8546-cd4ce03b4679
+  disabled: true
   title: Про бегемота
   date: 2024-12-18
   lyrics: _posts/text/1994/1994-11-24-begemot.md
@@ -435,6 +440,7 @@
   lyrics: _posts/text/1997/1997-05-01-rock-n-roll.md
 
 - id: a271b0a8-f063-4e48-b905-b0fdf55c2b59
+  disabled: true
   title: Про бегемота
   date: 2024-12-20
   lyrics: _posts/text/1994/1994-11-24-begemot.md
@@ -476,6 +482,7 @@
   date: 2024-12-24
   lyrics: _posts/text/2002/2002-09-01-box.md
 - id: 7d961464-d9ef-4389-9c66-d782bd399e48
+  disabled: true
   title: Про судьбу
   caption: remake
   date: 2024-12-24
@@ -497,15 +504,18 @@
   date: 2024-12-24
   lyrics: _posts/text/1997/1997-05-02-40.md
 - id: 19627695-35c8-4074-99b8-2097427d44ed
+  disabled: true
   title: Про бегемота
   date: 2024-12-24
   lyrics: _posts/text/1994/1994-11-24-begemot.md
 - id: 18ccc47a-1f36-4188-9c1a-d3e83121a0a2
+  disabled: true
   title: Усталый человек
   date: 2024-12-24
   lyrics: _posts/text/2009/2009-04-15-man.md
 
 - id: 66238006-5447-403d-942f-4d6d0b92b5a4
+  disabled: true
   title: Усталый человек
   date: 2024-12-24
   lyrics: _posts/text/2009/2009-04-15-man.md
@@ -1005,3 +1015,11 @@
   title: Этот поезд
   date: 2026-10-18
   lyrics: _posts/text/2009/2009-03-20-blues.md
+- id: b6881dc7-fdce-4ded-b168-3e3d8d9cc376
+  title: Зимняя метелица
+  date: 2026-10-18
+  lyrics: _posts/text/1996/1996-08-07-metel.md
+- id: ab9727a8-209a-49a0-86f8-e17a1ea79fb2
+  title: Толстокожий бегемот
+  date: 2026-10-19
+  lyrics: _posts/text/1994/1994-11-24-begemot.md
