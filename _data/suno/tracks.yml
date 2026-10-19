@@ -98,6 +98,7 @@
   date: 2024-09-28
   lyrics: _posts/text/1996/1996-12-20-jungle.md
 - id: f489edce-12dc-4b41-8b92-18d2914a6b1f
+  disabled: true
   title: Бесконечная змея
   caption: версия
   date: 2024-09-28
@@ -107,35 +108,42 @@
   date: 2024-09-28
   lyrics: _posts/text/1997/1997-07-04-circle.md
 - id: 7d56b7f7-fec6-4a57-8734-2770cc6d8c37
+  disabled: true
   title: Песня без слов
   date: 2024-09-30
   lyrics: _posts/text/1996/1996-08-30-wolf-song.md
 - id: ccc20005-f60b-4113-a5fe-9ad8759c5a97
+  disabled: true
   title: Волчий пастух
   caption: v1
   date: 2024-09-30
   lyrics: _posts/text/2000/2000-03-01-wolf-pater.md
 
 - id: 10aa6261-a820-4e01-822c-9fd99b7755c2
+  disabled: true
   title: Одуванчик
   caption: v1
   date: 2024-10-02
   lyrics: _posts/text/1996/1996-12-08-oduvan.md
 - id: ad814934-bd3f-4852-9b3d-99e671644b88
+  disabled: true
   title: Чёртики (матерное)
   date: 2024-10-02
   lyrics: _posts/text/1996/1996-11-24-chort.md
 - id: 4c913807-0a46-4c4a-9998-3b6d106e26f3
+  disabled: true
   title: Человек из тумана
   date: 2024-10-03
   lyrics: _posts/text/2012/2012-03-21-fog.md
 - id: c02dc4dd-74e7-4097-9907-3835a3ca79f3
+  disabled: true
   title: Август
   caption: v1
   date: 2024-10-06
   lyrics: _posts/text/1996/1996-09-01-august.md
 
 - id: adbd7637-ff3d-462b-a8ee-6b019bd037d3
+  disabled: true
   title: Блюз неслипшихся душ
   date: 2024-10-07
   lyrics: _posts/text/2000/2000-03-01-blues.md
@@ -144,6 +152,7 @@
   date: 2024-10-09
   lyrics: _posts/text/1996/1996-09-09-rus.md
 - id: 32a9fc57-588d-45b0-b291-2767d14ad064
+  disabled: true
   title: И коротко о погоде...
   date: 2024-10-11
   lyrics: _posts/text/2012/2012-06-04-weather.md
@@ -153,28 +162,34 @@
   date: 2024-10-12
   lyrics: _posts/text/2012/2012-06-04-weather.md
 - id: 8040db2d-9323-4ea5-a05d-d3c9cf0850a4
+  disabled: true
   title: Романс
   date: 2024-10-13
   lyrics: _posts/text/1996/1996-08-16-romance.md
 
 - id: 70532992-6340-4e4d-b27e-bafe6108cb49
+  disabled: true
   title: Буколистическое
   date: 2024-10-20
   lyrics: _posts/text/1997/1997-05-02-buko.md
 - id: ccae61a4-bc89-41f2-a143-a62e4b6f70ee
+  disabled: true
   title: Там...
   caption: v1
   date: 2024-10-20
   lyrics: _posts/text/2008/2008-01-22-tam.md
 - id: ec2f8722-2715-4eac-ae23-e5d72b0d5f55
+  disabled: true
   title: День открытых кулис
   date: 2024-10-21
   lyrics: _posts/text/2011/2011-04-03-day.md
 - id: 3543c741-8db7-47c3-9dd6-cbba22d1f701
+  disabled: true
   title: Я вспоминаю...
   date: 2024-10-21
   lyrics: _posts/text/1996/1996-07-23-alone.md
 - id: 1fea4b09-d701-4363-a171-abd0c6c6159e
+  disabled: true
   title: Голосатая птица
   date: 2024-10-22
   lyrics: _posts/text/1996/1996-11-14-bird.md
@@ -221,6 +236,7 @@
   date: 2024-11-01
   lyrics: _posts/text/1996/1996-08-29-kovyl.md
 - id: f34bd300-c22b-4b26-b3d3-a0ee53b41a4f
+  disabled: true
   title: Там...
   date: 2024-11-01
   lyrics: _posts/text/2008/2008-01-22-tam.md
@@ -231,6 +247,7 @@
   date: 2024-11-02
   lyrics: _posts/text/1996/1996-12-08-oduvan.md
 - id: 3a616bc5-0275-44c5-8fc2-c83b693733ca
+  disabled: true
   title: Одуванчик
   date: 2024-11-02
   lyrics: _posts/text/1996/1996-12-08-oduvan.md
@@ -256,10 +273,12 @@
   date: 2024-11-08
   lyrics: _posts/text/2009/2009-04-03-book.md
 - id: f7680db3-feb5-49be-811b-ca31f1ed1c06
+  disabled: true
   title: Август
   date: 2024-11-08
   lyrics: _posts/text/1996/1996-09-01-august.md
 - id: 6ddfed2c-0c33-4cfc-bb2f-a4639f7e38b4
+  disabled: true
   title: Август
   caption: аниме версия
   date: 2024-11-08
@@ -291,6 +310,7 @@
   lyrics: _posts/text/2002/2002-09-01-unex.md
 
 - id: 4510ee2f-2425-41d4-9f4b-4c1967fa1b86
+  disabled: true
   title: Волчий пастух
   date: 2024-11-17
   lyrics: _posts/text/2000/2000-03-01-wolf-pater.md
@@ -327,11 +347,13 @@
   date: 2024-11-26
   original: _posts/text/2012/2012-01-11-house.md
 - id: 6317ce11-f7d1-4c7d-bddb-3e4135d1dc20
+  disabled: true
   title: A man from the mist
   date: 2024-11-26
   original: _posts/text/2012/2012-03-21-fog.md
 
 - id: 2d9d65d8-26fa-4da9-b6d7-6f29480b0f2c
+  disabled: true
   title: A man from the mist
   date: 2024-11-26
   original: _posts/text/2012/2012-03-21-fog.md
@@ -390,10 +412,12 @@
   lyrics: _posts/text/2014/2014-04-04-ragnarok.md
 
 - id: e025626f-10b0-466c-a5bc-32ab6ece3b93
+  disabled: true
   title: Буколистическое
   date: 2024-12-19
   lyrics: _posts/text/1997/1997-05-02-buko.md
 - id: 07940632-e644-4b61-a08b-1cfab8905a09
+  disabled: true
   title: Голосатая птица
   date: 2024-12-19
   lyrics: _posts/text/1996/1996-11-14-bird.md
@@ -420,6 +444,7 @@
   date: 2024-12-20
   lyrics: _posts/text/1996/1996-09-13-walz.md
 - id: 96173aa1-9172-4981-be9a-b8a97f8a006d
+  disabled: true
   title: Песня без слов
   date: 2024-12-20
   lyrics: _posts/text/1996/1996-08-30-wolf-song.md
@@ -429,6 +454,7 @@
   date: 2024-12-20
   lyrics: _posts/text/1996/1996-10-10-cut.md
 - id: 4505e060-5cff-4280-8343-0aead2a5014e
+  disabled: true
   title: Голосатая птица
   date: 2024-12-20
   lyrics: _posts/text/1996/1996-11-14-bird.md
@@ -445,14 +471,17 @@
   date: 2024-12-20
   lyrics: _posts/text/1994/1994-11-24-begemot.md
 - id: 324e6f27-8e55-4c54-b85f-7ea5a836ca9a
+  disabled: true
   title: Чёртики (матерное)
   date: 2024-12-20
   lyrics: _posts/text/1996/1996-11-24-chort.md
 - id: 58794240-3363-4175-8b0c-62758b499b55
+  disabled: true
   title: Одуванчик
   date: 2024-12-23
   lyrics: _posts/text/1996/1996-12-08-oduvan.md
 - id: 90929d7b-ad01-4d0b-b042-1ad93f1e5d7f
+  disabled: true
   title: Одуванчик
   date: 2024-12-23
   lyrics: _posts/text/1996/1996-12-08-oduvan.md
@@ -751,7 +780,7 @@
   track: 7
 
 - id: 9ec50b03-2022-4f55-9018-ef62a190b7ac
-  title: Чёртики (матерное)
+  title: Чёртики
   date: 2025-02-09
   lyrics: _posts/text/1996/1996-11-24-chort.md
   album: 57b41187-d9ac-4a3c-8725-f6db342d877e
@@ -1023,3 +1052,21 @@
   title: Толстокожий бегемот
   date: 2026-10-19
   lyrics: _posts/text/1994/1994-11-24-begemot.md
+- id: b7a5cdba-7bbe-4a1c-8a7c-82b8a1a4c78c
+  title: Песня без слов
+  date: 2026-10-19
+  lyrics: _posts/text/1996/1996-08-30-wolf-song.md
+
+- id: eb1371cb-3d20-4ea6-a645-9c0cd6bd6e6b
+  recommend: true
+  title: Человек из тумана
+  date: 2026-10-19
+  lyrics: _posts/text/2012/2012-03-21-fog.md
+- id: d3f40c09-aba4-41ea-a7e1-0a71f97e3dbb
+  title: Блюз одиноких душ
+  date: 2026-10-19
+  lyrics: _posts/text/2000/2000-03-01-blues.md
+- id: 92460a88-348e-43e3-9642-bdddbf12185a
+  title: Романс...
+  date: 2026-10-19
+  lyrics: _posts/text/1996/1996-08-16-romance.md
