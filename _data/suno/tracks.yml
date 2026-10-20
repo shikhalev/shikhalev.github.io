@@ -195,32 +195,39 @@
   lyrics: _posts/text/1996/1996-11-14-bird.md
 
 - id: 1da29715-6172-414e-92f5-5a56b0aa9e49
+  disabled: true
   title: Тёмное время года
   date: 2024-10-23
   lyrics: _posts/text/2011/2011-12-12-bio.md
 - id: c9febd33-c7ab-4db8-84ef-7549e4a6c5ed
+  disabled: true
   title: Мёртвый сезон
   date: 2024-10-24
   lyrics: _posts/text/2002/2002-09-01-dead-season.md
 - id: 5b52a01e-fd6c-4900-926c-718f5721f2ec
+  disabled: true
   title: Палачи наших душ
   date: 2024-10-25
   lyrics: _posts/text/1996/1996-10-10-cut.md
 - id: f120349f-21f4-4a70-9911-f3541405352a
+  disabled: true
   title: Ветер и мокрый снег
   date: 2024-10-26
   lyrics: _posts/text/2010/2010-03-24-wind-and-wet-snow.md
 - id: 01888f57-fd5a-4c96-a80e-2cfa023430a8
+  disabled: true
   title: Коррида
   caption: v1
   date: 2024-10-27
   lyrics: _posts/text/1996/1996-09-30-korrida.md
 
 - id: 41a374c2-5ca7-4fa8-9ccd-2dd5064822a3
+  disabled: true
   title: Опереться о воздух
   date: 2024-10-28
   lyrics: _posts/text/2011/2011-10-30-air.md
 - id: 23704890-3453-4ac2-b0cc-67c5bbf70289
+  disabled: true
   title: Шабаш
   caption: halloween edition var. 4
   date: 2024-10-31
@@ -231,6 +238,7 @@
   date: 2024-10-31
   lyrics: _posts/text/1996/1996-08-29-shabash.md
 - id: 9669c14e-1c1e-4e83-8edb-78f603339f14
+  disabled: true
   title: Ковыль
   caption: v1
   date: 2024-11-01
@@ -252,19 +260,23 @@
   date: 2024-11-02
   lyrics: _posts/text/1996/1996-12-08-oduvan.md
 - id: 1474b4df-96c6-40bb-aca4-af5614cda373
+  disabled: true
   title: Душа нараспашку
   date: 2024-11-04
   lyrics: _posts/text/2012/2012-01-11-house.md
 - id: 8d82847c-539a-48ea-a6e7-c897d67fdf92
+  disabled: true
   title: Душа нараспашку
   date: 2024-11-04
   lyrics: _posts/text/2012/2012-01-11-house.md
 - id: b9297f28-562e-4414-840b-2fb7d15e553d
+  disabled: true
   title: Душа нараспашку
   date: 2024-11-06
   lyrics: _posts/text/2012/2012-01-11-house.md
 
 - id: eaa9eeb4-ec51-473c-8065-74a4783654a8
+  disabled: true
   title: Сколько мук...
   date: 2024-11-07
   lyrics: _posts/text/1996/1996-08-29-sui.md
@@ -289,6 +301,7 @@
   lyrics: _posts/text/1996/1996-08-29-kovyl.md
 
 - id: c31ed452-4aa8-436b-b685-8179a7c258ae
+  disabled: true
   title: Страх
   date: 2024-11-10
   lyrics: _posts/text/1996/1996-08-29-fear.md
@@ -305,6 +318,7 @@
   date: 2024-11-12
   lyrics: _posts/text/2002/2002-09-01-oil.md
 - id: 119b5902-0513-432d-b821-9542a95a4ffc
+  disabled: true
   title: Неслучившееся
   date: 2024-11-14
   lyrics: _posts/text/2002/2002-09-01-unex.md
@@ -315,6 +329,7 @@
   date: 2024-11-17
   lyrics: _posts/text/2000/2000-03-01-wolf-pater.md
 - id: e1474627-2a12-4b23-b781-1d33def5a91e
+  disabled: true
   title: Серенада
   date: 2024-11-19
   lyrics: _posts/text/1997/1997-12-23-balkon.md
@@ -334,6 +349,7 @@
   date: 2024-11-21
   lyrics: _posts/text/2014/2014-04-04-ragnarok.md
 - id: 38c17d01-13b2-4464-9078-d89e10bb675c
+  disabled: true
   title: Рагнарёк
   caption: вариант
   date: 2024-11-21
@@ -358,18 +374,22 @@
   date: 2024-11-26
   original: _posts/text/2012/2012-03-21-fog.md
 - id: dc049e53-1276-45c3-8565-82105136c08e
+  disabled: true
   title: Однажды...
   date: 2024-11-26
   lyrics: _posts/text/1997/1997-12-23-onetimes.md
 - id: 0ca6d30f-da9d-43d6-910c-949f5e8a2240
+  disabled: true
   title: Что-то плохое
   date: 2024-11-28
   lyrics: _posts/text/2011/2011-11-21-arche.md
 - id: 8f5507aa-ac9b-4122-86da-76d9ef3367ce
+  disabled: true
   title: Зима
   date: 2024-11-29
   lyrics: _posts/text/2008/2008-01-22-winter.md
 - id: 81f8aa1e-db22-434c-bb4b-7d34ee56d849
+  disabled: true
   title: Homo homini
   date: 2024-11-29
   lyrics: _posts/text/2008/2008-01-20-homo-homini.md
@@ -398,6 +418,7 @@
   lyrics: _posts/text/1997/1997-03-15-prosini.md
 
 - id: 294dad48-4a54-49dd-a731-8da2fbedcdc7
+  disabled: true
   title: Мёртвый сезон
   date: 2024-12-18
   lyrics: _posts/text/2002/2002-09-01-dead-season.md
@@ -407,6 +428,7 @@
   date: 2024-12-18
   lyrics: _posts/text/1994/1994-11-24-begemot.md
 - id: e92bd1d8-2d98-4483-845f-c2ae35735977
+  disabled: true
   title: Рагнарёк
   date: 2024-12-18
   lyrics: _posts/text/2014/2014-04-04-ragnarok.md
@@ -422,11 +444,13 @@
   date: 2024-12-19
   lyrics: _posts/text/1996/1996-11-14-bird.md
 - id: 87577744-eee3-4219-957e-7aa1dfd99f74
+  disabled: true
   title: Рагнарёк
   caption: remastered
   date: 2024-12-20
   lyrics: _posts/text/2014/2014-04-04-ragnarok.md
 - id: 8758f27a-af92-4d31-a0cb-047e23fb1868
+  disabled: true
   title: Шабаш
   caption: remake
   date: 2024-12-20
@@ -493,14 +517,17 @@
   lyrics: _posts/text/1996/1996-09-13-walz.md
 
 - id: f6c7180b-b494-46ab-a9cb-167ed7e2e13b
+  disabled: true
   title: Шабаш
   date: 2024-12-23
   lyrics: _posts/text/1996/1996-08-29-shabash.md
 - id: a93640c4-fbc5-4ede-be91-9e99fabf9fcd
+  disabled: true
   title: Душа Города
   date: 2024-12-24
   lyrics: _posts/text/2002/2002-11-30-soul.md
 - id: 26b0acef-ab3e-4601-a9b8-788172425134
+  disabled: true
   title: Душа Города
   date: 2024-12-24
   lyrics: _posts/text/2002/2002-11-30-soul.md
@@ -554,6 +581,7 @@
   date: 2024-12-29
   lyrics: _posts/text/2009/2009-03-20-blues.md
 - id: 07b969eb-0bf4-4424-9896-ed293301e2a2
+  disabled: true
   title: Ragnarök
   date: 2024-12-29
   original: _posts/text/2014/2014-04-04-ragnarok.md
@@ -636,6 +664,7 @@
   date: 2025-01-24
   lyrics: _posts/text/1996/1996-11-14-underground.md
 - id: 237cb068-8bbd-4b36-abb1-dec9a3a045af
+  disabled: true
   title: Шабаш
   date: 2025-02-02
   lyrics: _posts/text/1996/1996-08-29-shabash.md
@@ -1070,3 +1099,12 @@
   title: Романс...
   date: 2026-10-19
   lyrics: _posts/text/1996/1996-08-16-romance.md
+- id: 84710341-0187-480c-89cb-a06e75a86c9f
+  title: Душа нараспашку
+  caption: banshee
+  date: 2026-10-19
+  lyrics: _posts/text/2012/2012-01-11-house.md
+- id: 2faf9501-09c4-4588-be57-3fa8aec5ac2e
+  title: Душа нараспашку
+  date: 2026-10-19
+  lyrics: _posts/text/2012/2012-01-11-house.md
