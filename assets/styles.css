@@ -263,7 +263,7 @@
   src: url("/assets/fa/webfonts/fa-brands-400.eot");
   src: url("/assets/fa/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("/assets/fa/webfonts/fa-brands-400.woff2") format("woff2"), url("/assets/fa/webfonts/fa-brands-400.woff") format("woff"), url("/assets/fa/webfonts/fa-brands-400.ttf") format("truetype"), url("/assets/fa/webfonts/fa-brands-400.svg#fontawesome") format("svg");
 }
-.fab, .subcategories li.fa-icon-li-youtube::marker, .subcategories li.fa-icon-li-rust::marker, .subcategories li.fa-icon-li-linux::marker, .subcategories li.fa-icon-li-linkedin::marker, .subcategories li.fa-icon-li-instagram::marker, .subcategories li.fa-icon-li-github::marker, .subcategories li.fa-icon-li-facebook-f::marker, .subcategories li.fa-icon-li-twitter::marker, .subcategories li.fa-icon-li-vk::marker, #contacts p.social, li.fa-icon-li-youtube::marker, .fa-icon-youtube::before, .fa-li-include-youtube, li.fa-icon-li-rust::marker, .fa-icon-rust::before, .fa-li-include-rust, li.fa-icon-li-linux::marker, .fa-icon-linux::before, .fa-li-include-linux, li.fa-icon-li-linkedin::marker, .fa-icon-linkedin::before, .fa-li-include-linkedin, li.fa-icon-li-instagram::marker, .fa-icon-instagram::before, .fa-li-include-instagram, li.fa-icon-li-github::marker, .fa-icon-github::before, .fa-li-include-github, li.fa-icon-li-facebook-f::marker, .fa-icon-facebook-f::before, .fa-li-include-facebook-f, li.fa-icon-li-twitter::marker, .fa-icon-twitter::before, .fa-li-include-twitter, li.fa-icon-li-vk::marker, .fa-icon-vk::before, .fa-li-include-vk {
+.fab, .fa-li-include-vk, .fa-icon-vk::before, li.fa-icon-li-vk::marker, .fa-li-include-twitter, .fa-icon-twitter::before, li.fa-icon-li-twitter::marker, .fa-li-include-facebook-f, .fa-icon-facebook-f::before, li.fa-icon-li-facebook-f::marker, .fa-li-include-github, .fa-icon-github::before, li.fa-icon-li-github::marker, .fa-li-include-instagram, .fa-icon-instagram::before, li.fa-icon-li-instagram::marker, .fa-li-include-linkedin, .fa-icon-linkedin::before, li.fa-icon-li-linkedin::marker, .fa-li-include-linux, .fa-icon-linux::before, li.fa-icon-li-linux::marker, .fa-li-include-rust, .fa-icon-rust::before, li.fa-icon-li-rust::marker, .fa-li-include-youtube, .fa-icon-youtube::before, li.fa-icon-li-youtube::marker, .subcategories li.fa-icon-li-vk::marker, .subcategories li.fa-icon-li-twitter::marker, .subcategories li.fa-icon-li-facebook-f::marker, .subcategories li.fa-icon-li-github::marker, .subcategories li.fa-icon-li-instagram::marker, .subcategories li.fa-icon-li-linkedin::marker, .subcategories li.fa-icon-li-linux::marker, .subcategories li.fa-icon-li-rust::marker, .subcategories li.fa-icon-li-youtube::marker, #contacts p.social {
   font-family: "Font Awesome 5 Brands";
   font-weight: 400;
 }
@@ -280,7 +280,7 @@
   src: url("/assets/fa/webfonts/fa-regular-400.eot");
   src: url("/assets/fa/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("/assets/fa/webfonts/fa-regular-400.woff2") format("woff2"), url("/assets/fa/webfonts/fa-regular-400.woff") format("woff"), url("/assets/fa/webfonts/fa-regular-400.ttf") format("truetype"), url("/assets/fa/webfonts/fa-regular-400.svg#fontawesome") format("svg");
 }
-.far, .subcategories li.fa-icon-li-credit-card::marker, .subcategories li.fa-icon-li-check-square::marker, .subcategories li.fa-icon-li-square::marker, .subcategories li.fa-icon-li-comment::marker, .subcategories li.fa-icon-li-comments::marker, .subcategories li.fa-icon-li-comment-dots::marker, .subcategories li.fa-icon-li-star::marker, .subcategories li.fa-icon-li-gem::marker, .subcategories li.fa-icon-li-keyboard::marker, .subcategories li.fa-icon-li-envelope::marker, .subcategories li.fa-icon-li-folder-open::marker, .subcategories li.fa-icon-li-calendar-alt::marker, .subcategories li.fa-icon-li-bookmark::marker, .subcategories li.fa-icon-li-file-alt::marker, .subcategories li.fa-icon-li-file::marker, .subcategories li.fa-icon-li-id-card::marker, .subcategories li.fa-icon-li-newspaper::marker, li.fa-icon-li-credit-card::marker, .fa-icon-credit-card::before, .fa-li-include-credit-card, li.fa-icon-li-check-square::marker, .fa-icon-check-square::before, .fa-li-include-check-square, li.fa-icon-li-square::marker, .fa-icon-square::before, .fa-li-include-square, li.fa-icon-li-comment::marker, .fa-icon-comment::before, .fa-li-include-comment, li.fa-icon-li-comments::marker, .fa-icon-comments::before, .fa-li-include-comments, li.fa-icon-li-comment-dots::marker, .fa-icon-comment-dots::before, .fa-li-include-comment-dots, li.fa-icon-li-star::marker, .fa-icon-star::before, .fa-li-include-star, li.fa-icon-li-gem::marker, .fa-icon-gem::before, .fa-li-include-gem, li.fa-icon-li-keyboard::marker, .fa-icon-keyboard::before, .fa-li-include-keyboard, li.fa-icon-li-envelope::marker, .fa-icon-envelope::before, .fa-li-include-envelope, li.fa-icon-li-folder-open::marker, .subcategories li::marker, .fa-icon-folder-open::before, .fa-li-include-folder-open, li.fa-icon-li-calendar-alt::marker, .fa-icon-calendar-alt::before, .fa-li-include-calendar-alt, #toc.toc-calendar ul li::marker, li.fa-icon-li-bookmark::marker, .fa-icon-bookmark::before, .fa-li-include-bookmark, #toc.toc-post ul li::marker, #toc.toc-page ul li::marker, #toc.toc-stream ul li ul li ul li::marker, li.fa-icon-li-file-alt::marker, .fa-icon-file-alt::before, .fa-li-include-file-alt, #backs ul li.back-post::marker, #toc.toc-stream ul li ul li::marker, li.fa-icon-li-file::marker, .fa-icon-file::before, .fa-li-include-file, #backs ul li.back-page::marker, li.fa-icon-li-id-card::marker, .fa-icon-id-card::before, .fa-li-include-id-card, li.fa-icon-li-newspaper::marker, .fa-icon-newspaper::before, .fa-li-include-newspaper {
+.far, .fa-li-include-newspaper, .fa-icon-newspaper::before, li.fa-icon-li-newspaper::marker, .fa-li-include-id-card, .fa-icon-id-card::before, li.fa-icon-li-id-card::marker, .fa-li-include-file, .fa-icon-file::before, li.fa-icon-li-file::marker, .fa-li-include-file-alt, .fa-icon-file-alt::before, li.fa-icon-li-file-alt::marker, .fa-li-include-bookmark, .fa-icon-bookmark::before, li.fa-icon-li-bookmark::marker, .fa-li-include-calendar-alt, .fa-icon-calendar-alt::before, li.fa-icon-li-calendar-alt::marker, .fa-li-include-folder-open, .fa-icon-folder-open::before, li.fa-icon-li-folder-open::marker, .fa-li-include-envelope, .fa-icon-envelope::before, li.fa-icon-li-envelope::marker, .fa-li-include-keyboard, .fa-icon-keyboard::before, li.fa-icon-li-keyboard::marker, .fa-li-include-gem, .fa-icon-gem::before, li.fa-icon-li-gem::marker, .fa-li-include-star, .fa-icon-star::before, li.fa-icon-li-star::marker, .fa-li-include-comment-dots, .fa-icon-comment-dots::before, li.fa-icon-li-comment-dots::marker, .fa-li-include-comments, .fa-icon-comments::before, li.fa-icon-li-comments::marker, .fa-li-include-comment, .fa-icon-comment::before, li.fa-icon-li-comment::marker, .fa-li-include-square, .fa-icon-square::before, li.fa-icon-li-square::marker, .fa-li-include-check-square, .fa-icon-check-square::before, li.fa-icon-li-check-square::marker, .fa-li-include-credit-card, .fa-icon-credit-card::before, li.fa-icon-li-credit-card::marker, .subcategories li.fa-icon-li-newspaper::marker, .subcategories li.fa-icon-li-id-card::marker, .subcategories li.fa-icon-li-file::marker, .subcategories li.fa-icon-li-file-alt::marker, .subcategories li.fa-icon-li-bookmark::marker, .subcategories li.fa-icon-li-calendar-alt::marker, .subcategories li.fa-icon-li-folder-open::marker, .subcategories li::marker, .subcategories li.fa-icon-li-envelope::marker, .subcategories li.fa-icon-li-keyboard::marker, .subcategories li.fa-icon-li-gem::marker, .subcategories li.fa-icon-li-star::marker, .subcategories li.fa-icon-li-comment-dots::marker, .subcategories li.fa-icon-li-comments::marker, .subcategories li.fa-icon-li-comment::marker, .subcategories li.fa-icon-li-square::marker, .subcategories li.fa-icon-li-check-square::marker, .subcategories li.fa-icon-li-credit-card::marker, #toc.toc-stream ul li ul li::marker, #backs ul li.back-post::marker, #toc.toc-stream ul li ul li ul li::marker, #toc.toc-post ul li::marker, #toc.toc-page ul li::marker, #toc.toc-calendar ul li::marker, #backs ul li.back-page::marker {
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
 }
@@ -299,137 +299,136 @@
 }
 .fa,
 .fas,
-.subcategories li.fa-icon-li-copy::marker,
-.subcategories li.fa-icon-li-language::marker,
-.subcategories li.fa-icon-li-share-alt::marker,
-.subcategories li.fa-icon-li-feather-alt::marker,
-.subcategories li.fa-icon-li-server::marker,
-.subcategories li.fa-icon-li-biohazard::marker,
-.subcategories li.fa-icon-li-university::marker,
-.subcategories li.fa-icon-li-book-open::marker,
-.subcategories li.fa-icon-li-book::marker,
-.subcategories li.fa-icon-li-microchip::marker,
-.subcategories li.fa-icon-li-photo-video::marker,
-.subcategories li.fa-icon-li-magic::marker,
-.subcategories li.fa-icon-li-brain::marker,
-.subcategories li.fa-icon-li-globe::marker,
-.subcategories li.fa-icon-li-yin-yang::marker,
-.subcategories li.fa-icon-li-dove::marker,
-.subcategories li.fa-icon-li-icons::marker,
-.subcategories li.fa-icon-li-bullhorn::marker,
-.subcategories li.fa-icon-li-map-marked-alt::marker,
-.subcategories li.fa-icon-li-rss-square::marker,
-.subcategories li.fa-icon-li-tag::marker,
-.subcategories li.fa-icon-li-star-of-life::marker,
-.subcategories li.fa-icon-li-folder-open-black::marker,
-.subcategories li.fa-icon-li-users::marker,
-.subcategories li.fa-icon-li-leaf::marker,
-.subcategories li.fa-icon-li-home::marker,
-.subcategories li.fa-icon-li-hashtag::marker,
-.subcategories li.fa-icon-li-link::marker,
-.subcategories li.fa-icon-li-feather::marker,
-.subcategories li.fa-icon-li-camera::marker,
-.subcategories li.fa-icon-li-laptop-code::marker,
-li.fa-icon-li-copy::marker,
-.fa-icon-copy::before,
-.fa-li-include-copy,
-li.fa-icon-li-language::marker,
-.fa-icon-language::before,
-.fa-li-include-language,
-li.fa-icon-li-share-alt::marker,
-.fa-icon-share-alt::before,
-.fa-li-include-share-alt,
-li.fa-icon-li-feather-alt::marker,
-.fa-icon-feather-alt::before,
-.fa-li-include-feather-alt,
-li.fa-icon-li-server::marker,
-.fa-icon-server::before,
-.fa-li-include-server,
-li.fa-icon-li-biohazard::marker,
-.fa-icon-biohazard::before,
-.fa-li-include-biohazard,
-li.fa-icon-li-university::marker,
-.fa-icon-university::before,
-.fa-li-include-university,
-li.fa-icon-li-book-open::marker,
-.fa-icon-book-open::before,
-.fa-li-include-book-open,
-li.fa-icon-li-book::marker,
-.fa-icon-book::before,
-.fa-li-include-book,
-li.fa-icon-li-microchip::marker,
-.fa-icon-microchip::before,
-.fa-li-include-microchip,
-li.fa-icon-li-photo-video::marker,
-.fa-icon-photo-video::before,
-.fa-li-include-photo-video,
-li.fa-icon-li-magic::marker,
-.fa-icon-magic::before,
-.fa-li-include-magic,
-li.fa-icon-li-brain::marker,
-.fa-icon-brain::before,
-.fa-li-include-brain,
-li.fa-icon-li-globe::marker,
-.fa-icon-globe::before,
-.fa-li-include-globe,
-li.fa-icon-li-yin-yang::marker,
-.fa-icon-yin-yang::before,
-.fa-li-include-yin-yang,
-li.fa-icon-li-dove::marker,
-.fa-icon-dove::before,
-.fa-li-include-dove,
-li.fa-icon-li-icons::marker,
-.fa-icon-icons::before,
-.fa-li-include-icons,
-li.fa-icon-li-bullhorn::marker,
-.fa-icon-bullhorn::before,
-.fa-li-include-bullhorn,
-li.fa-icon-li-map-marked-alt::marker,
-.fa-icon-map-marked-alt::before,
-.fa-li-include-map-marked-alt,
-li.fa-icon-li-rss-square::marker,
-.fa-icon-rss-square::before,
-.feed-box a::before,
-.fa-li-include-rss-square,
-#feeds ul li::marker,
-li.fa-icon-li-tag::marker,
+.fa-li-include-laptop-code,
+.fa-icon-laptop-code::before,
+li.fa-icon-li-laptop-code::marker,
+.fa-li-include-camera,
+.fa-icon-camera::before,
+li.fa-icon-li-camera::marker,
+.fa-li-include-feather,
+.fa-icon-feather::before,
+li.fa-icon-li-feather::marker,
+.fa-li-include-link,
+.fa-icon-link::before,
+li.fa-icon-li-link::marker,
+.fa-li-include-hashtag,
+.fa-icon-hashtag::before,
+li.fa-icon-li-hashtag::marker,
+.fa-li-include-home,
+.fa-icon-home::before,
+li.fa-icon-li-home::marker,
+.fa-li-include-leaf,
+.fa-icon-leaf::before,
+li.fa-icon-li-leaf::marker,
+.fa-li-include-users,
+.fa-icon-users::before,
+li.fa-icon-li-users::marker,
+.fa-li-include-folder-open-black,
+.fa-icon-folder-open-black::before,
+li.fa-icon-li-folder-open-black::marker,
+.fa-li-include-star-of-life,
+.fa-icon-star-of-life::before,
+li.fa-icon-li-star-of-life::marker,
+.fa-li-include-tag,
 .fa-icon-tag::before,
+li.fa-icon-li-tag::marker,
+.fa-li-include-rss-square,
+.fa-icon-rss-square::before,
+li.fa-icon-li-rss-square::marker,
+.fa-li-include-map-marked-alt,
+.fa-icon-map-marked-alt::before,
+li.fa-icon-li-map-marked-alt::marker,
+.fa-li-include-bullhorn,
+.fa-icon-bullhorn::before,
+li.fa-icon-li-bullhorn::marker,
+.fa-li-include-icons,
+.fa-icon-icons::before,
+li.fa-icon-li-icons::marker,
+.fa-li-include-dove,
+.fa-icon-dove::before,
+li.fa-icon-li-dove::marker,
+.fa-li-include-yin-yang,
+.fa-icon-yin-yang::before,
+li.fa-icon-li-yin-yang::marker,
+.fa-li-include-globe,
+.fa-icon-globe::before,
+li.fa-icon-li-globe::marker,
+.fa-li-include-brain,
+.fa-icon-brain::before,
+li.fa-icon-li-brain::marker,
+.fa-li-include-magic,
+.fa-icon-magic::before,
+li.fa-icon-li-magic::marker,
+.fa-li-include-photo-video,
+.fa-icon-photo-video::before,
+li.fa-icon-li-photo-video::marker,
+.fa-li-include-microchip,
+.fa-icon-microchip::before,
+li.fa-icon-li-microchip::marker,
+.fa-li-include-book,
+.fa-icon-book::before,
+li.fa-icon-li-book::marker,
+.fa-li-include-book-open,
+.fa-icon-book-open::before,
+li.fa-icon-li-book-open::marker,
+.fa-li-include-university,
+.fa-icon-university::before,
+li.fa-icon-li-university::marker,
+.fa-li-include-biohazard,
+.fa-icon-biohazard::before,
+li.fa-icon-li-biohazard::marker,
+.fa-li-include-server,
+.fa-icon-server::before,
+li.fa-icon-li-server::marker,
+.fa-li-include-feather-alt,
+.fa-icon-feather-alt::before,
+li.fa-icon-li-feather-alt::marker,
+.fa-li-include-share-alt,
+.fa-icon-share-alt::before,
+li.fa-icon-li-share-alt::marker,
+.fa-li-include-language,
+.fa-icon-language::before,
+li.fa-icon-li-language::marker,
+.fa-li-include-copy,
+.fa-icon-copy::before,
+li.fa-icon-li-copy::marker,
+.subcategories li.fa-icon-li-laptop-code::marker,
+.subcategories li.fa-icon-li-camera::marker,
+.subcategories li.fa-icon-li-feather::marker,
+.subcategories li.fa-icon-li-link::marker,
+.subcategories li.fa-icon-li-hashtag::marker,
+.subcategories li.fa-icon-li-home::marker,
+.subcategories li.fa-icon-li-leaf::marker,
+.subcategories li.fa-icon-li-users::marker,
+.subcategories li.fa-icon-li-folder-open-black::marker,
+.subcategories li.fa-icon-li-star-of-life::marker,
+.subcategories li.fa-icon-li-tag::marker,
+.subcategories li.fa-icon-li-rss-square::marker,
+.subcategories li.fa-icon-li-map-marked-alt::marker,
+.subcategories li.fa-icon-li-bullhorn::marker,
+.subcategories li.fa-icon-li-icons::marker,
+.subcategories li.fa-icon-li-dove::marker,
+.subcategories li.fa-icon-li-yin-yang::marker,
+.subcategories li.fa-icon-li-globe::marker,
+.subcategories li.fa-icon-li-brain::marker,
+.subcategories li.fa-icon-li-magic::marker,
+.subcategories li.fa-icon-li-photo-video::marker,
+.subcategories li.fa-icon-li-microchip::marker,
+.subcategories li.fa-icon-li-book::marker,
+.subcategories li.fa-icon-li-book-open::marker,
+.subcategories li.fa-icon-li-university::marker,
+.subcategories li.fa-icon-li-biohazard::marker,
+.subcategories li.fa-icon-li-server::marker,
+.subcategories li.fa-icon-li-feather-alt::marker,
+.subcategories li.fa-icon-li-share-alt::marker,
+.subcategories li.fa-icon-li-language::marker,
+.subcategories li.fa-icon-li-copy::marker,
 .layout-tags h5::before,
 .stream-item .meta .tag::before,
-.stream-item h1 + aside + .meta + .tags .tag::before,
 aside.tags a::before,
-.fa-li-include-tag,
-li.fa-icon-li-star-of-life::marker,
-.fa-icon-star-of-life::before,
-.fa-li-include-star-of-life,
-li.fa-icon-li-folder-open-black::marker,
-.fa-icon-folder-open-black::before,
-.fa-li-include-folder-open-black,
-li.fa-icon-li-users::marker,
-.fa-icon-users::before,
-.fa-li-include-users,
-li.fa-icon-li-leaf::marker,
-.fa-icon-leaf::before,
-.fa-li-include-leaf,
-li.fa-icon-li-home::marker,
-.fa-icon-home::before,
-.fa-li-include-home,
-li.fa-icon-li-hashtag::marker,
-.fa-icon-hashtag::before,
-.fa-li-include-hashtag,
+.feed-box a::before,
 #toc ul li::marker,
-li.fa-icon-li-link::marker,
-.fa-icon-link::before,
-.fa-li-include-link,
-li.fa-icon-li-feather::marker,
-.fa-icon-feather::before,
-.fa-li-include-feather,
-li.fa-icon-li-camera::marker,
-.fa-icon-camera::before,
-.fa-li-include-camera,
-li.fa-icon-li-laptop-code::marker,
-.fa-icon-laptop-code::before,
-.fa-li-include-laptop-code {
+#feeds ul li::marker {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }
@@ -443,7 +442,6 @@ body {
 h1,
 h2,
 h3,
-#add-comment,
 h4,
 h5,
 h6,
@@ -465,7 +463,7 @@ h4 {
   font-size: 20.64px;
 }
 
-h3, #add-comment {
+h3 {
   font-size: 26.6256px;
 }
 
@@ -582,7 +580,7 @@ li.fa-icon-li-file::marker {
   content: "\f15b ";
 }
 
-.fa-li-include-file-alt, #backs ul li.back-post::marker, #toc.toc-stream ul li ul li::marker {
+.fa-li-include-file-alt, #toc.toc-stream ul li ul li::marker, #backs ul li.back-post::marker {
   content: "\f15c ";
 }
 
@@ -594,7 +592,7 @@ li.fa-icon-li-file-alt::marker {
   content: "\f15c ";
 }
 
-.fa-li-include-bookmark, #toc.toc-post ul li::marker, #toc.toc-page ul li::marker, #toc.toc-stream ul li ul li ul li::marker {
+.fa-li-include-bookmark, #toc.toc-stream ul li ul li ul li::marker, #toc.toc-post ul li::marker, #toc.toc-page ul li::marker {
   content: "\f02e ";
 }
 
@@ -694,7 +692,7 @@ li.fa-icon-li-star-of-life::marker {
   content: "\f02b ";
 }
 
-.fa-icon-tag::before, .layout-tags h5::before, .stream-item .meta .tag::before, .stream-item h1 + aside + .meta + .tags .tag::before, aside.tags a::before {
+.fa-icon-tag::before, .layout-tags h5::before, .stream-item .meta .tag::before, aside.tags a::before {
   content: "\f02b ";
 }
 
@@ -2905,32 +2903,30 @@ article p {
 article p a:link,
 article dt a:link,
 article li a:link,
-article h2 a:link, article h3 a:link, article #add-comment a:link, article h4 a:link, article h5 a:link, article h6 a:link {
+article h2 a:link, article h3 a:link, article h4 a:link, article h5 a:link, article h6 a:link {
   color: #129;
   text-decoration: none;
 }
 article p a:visited,
 article dt a:visited,
 article li a:visited,
-article h2 a:visited, article h3 a:visited, article #add-comment a:visited, article h4 a:visited, article h5 a:visited, article h6 a:visited {
+article h2 a:visited, article h3 a:visited, article h4 a:visited, article h5 a:visited, article h6 a:visited {
   color: #246;
   text-decoration: none;
 }
 article p a:link:hover,
 article dt a:link:hover,
 article li a:link:hover,
-article h2 a:link:hover, article h3 a:link:hover, article #add-comment a:link:hover, article h4 a:link:hover, article h5 a:link:hover, article h6 a:link:hover {
+article h2 a:link:hover, article h3 a:link:hover, article h4 a:link:hover, article h5 a:link:hover, article h6 a:link:hover {
   text-decoration: underline;
 }
-article.layout-stream h3 a:link, article.layout-stream #add-comment a:link,
-article.layout-stream h3 a:visited,
-article.layout-stream #add-comment a:visited, article.layout-home h3 a:link, article.layout-home #add-comment a:link,
-article.layout-home h3 a:visited,
-article.layout-home #add-comment a:visited {
+article.layout-stream h3 a:link,
+article.layout-stream h3 a:visited, article.layout-home h3 a:link,
+article.layout-home h3 a:visited {
   color: #3e5662;
   text-decoration: none;
 }
-article.layout-stream h3 a:link:hover, article.layout-stream #add-comment a:link:hover, article.layout-home h3 a:link:hover, article.layout-home #add-comment a:link:hover {
+article.layout-stream h3 a:link:hover, article.layout-home h3 a:link:hover {
   text-decoration: underline;
 }
 
@@ -3695,7 +3691,7 @@ aside.tags a:hover {
   border: solid rgb(77.181372549%, 82.7696078431%, 85.5637254902%) 1px;
   box-shadow: 1px 1px 3px rgb(77.181372549%, 82.7696078431%, 85.5637254902%);
 }
-.recommendations .random-item .meta, .recommendations .random-item h1 + aside + .meta + .tags {
+.recommendations .random-item .meta {
   font-size: 15px;
   font-family: "PT Sans Narrow", gnarrow, "Arial Narrow", sans-serif;
 }
@@ -3930,7 +3926,7 @@ aside.tags a:hover {
   clear: both;
   max-width: 100%;
 }
-.stream-item h3, .stream-item #add-comment {
+.stream-item h3 {
   margin-top: 0.2em;
 }
 .stream-item hr {
@@ -3939,26 +3935,26 @@ aside.tags a:hover {
 .stream-item .share {
   padding-top: 20px;
 }
-.stream-item .meta, .stream-item h1 + aside + .meta + .tags {
+.stream-item .meta {
   color: #3e5662;
   text-align: left;
   hyphens: manual;
 }
-.stream-item .meta a, .stream-item h1 + aside + .meta + .tags a,
+.stream-item .meta a,
 .stream-item .meta a:link,
 .stream-item .meta a:visited {
   margin: 2px 10px 3px 0px;
   color: #3e5662;
   text-decoration: none;
 }
-.stream-item .meta a:link:hover, .stream-item h1 + aside + .meta + .tags a:link:hover {
+.stream-item .meta a:link:hover {
   text-decoration: underline;
 }
-.stream-item .meta .tag, .stream-item h1 + aside + .meta + .tags .tag {
+.stream-item .meta .tag {
   display: inline-block;
   word-wrap: nowrap;
 }
-.stream-item .meta .tag::before, .stream-item h1 + aside + .meta + .tags .tag::before {
+.stream-item .meta .tag::before {
   font-size: 80%;
   width: 0.8em;
   color: rgb(77.181372549%, 82.7696078431%, 85.5637254902%);
@@ -4035,7 +4031,7 @@ aside.tags a:hover {
   page-break-inside: avoid;
   margin: 0px 0px 20px;
 }
-.layout-calendar .box h3, .layout-calendar .box #add-comment {
+.layout-calendar .box h3 {
   margin: 0px 0px 10px;
   break-inside: avoid;
   page-break-inside: avoid;
@@ -4049,29 +4045,29 @@ aside.tags a:hover {
   break-inside: avoid;
   page-break-inside: avoid;
 }
-.layout-calendar .box p.meta, .layout-calendar .box h1 + aside + .meta + p.tags {
+.layout-calendar .box p.meta {
   margin-bottom: 10px;
 }
 .layout-calendar .box p.link-title {
   text-indent: -66px;
 }
-.layout-calendar .meta, .layout-calendar h1 + aside + .meta + .tags {
+.layout-calendar .meta {
   font-family: "PT Sans Narrow", gnarrow, "Arial Narrow", sans-serif;
   font-size: 14px;
   color: #3e5662;
   text-align: left;
   hyphens: manual;
 }
-.layout-calendar .meta a, .layout-calendar h1 + aside + .meta + .tags a,
+.layout-calendar .meta a,
 .layout-calendar .meta a:link,
 .layout-calendar .meta a:visited {
   color: #3e5662;
   text-decoration: none;
 }
-.layout-calendar .meta a:link:hover, .layout-calendar h1 + aside + .meta + .tags a:link:hover {
+.layout-calendar .meta a:link:hover {
   text-decoration: underline;
 }
-.layout-calendar .meta a, .layout-calendar h1 + aside + .meta + .tags a {
+.layout-calendar .meta a {
   padding: 1px 10px 1px 0px;
 }
 
@@ -4110,7 +4106,7 @@ aside.tags a:hover {
   padding-left: 56px;
   text-indent: -56px;
 }
-.layout-tags p .meta, .layout-tags p h1 + aside + .meta + .tags {
+.layout-tags p .meta {
   color: rgb(36.6666666667%, 36.6666666667%, 36.6666666667%);
   font-size: 12px;
   vertical-align: top;
