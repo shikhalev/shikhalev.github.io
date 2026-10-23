@@ -1,3 +1,5 @@
+@use "nova/preset" as *;
+
 .share {
   float: right;
   font-size: $share-font-size;

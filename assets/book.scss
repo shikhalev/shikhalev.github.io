@@ -1,5 +1,5 @@
 ---
 ---
 
-@import "site";
-@import "bookst";
+@use "site" as *;
+@use "bookst" as *;

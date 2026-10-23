@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "nova/preset" as *;
+@use "nova/base" as *;
+
 article {
   font-optical-sizing: auto;
 
@@ -193,11 +197,11 @@ p img {
 }
 
 .marker {
-  background-color: lighten($highlight-color, 25);
+  background-color: color.adjust($highlight-color, $lightness: 25%);
 }
 
 .cold-marker {
-  background-color: lighten($cold-highlight-color, 25);
+  background-color: color.adjust($cold-highlight-color, $lightness: 25%);
 }
 
 abbr {
@@ -210,7 +214,7 @@ abbr {
 }
 
 .label {
-  background-color: lighten($highlight-color, 25);
+  background-color: color.adjust($highlight-color, $lightness: 25%);
   padding: 3px;
   border-radius: 3px;
   display: inline-block;

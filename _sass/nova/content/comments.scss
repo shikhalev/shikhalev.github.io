@@ -1,3 +1,5 @@
+@use "nova/preset" as *;
+
 .comment {
   padding-left: 10px;
   border-left: 10px solid $frame-color-back;

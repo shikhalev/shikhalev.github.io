@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "fonts/awesome" as *;
+
 $icons: (
   "laptop-code": (
     "symbol": "\f5fc",
@@ -231,20 +234,20 @@ $icons: (
 
 @each $name, $data in $icons {
   .fa-li-include-#{$name} {
-    content: "#{map-get($data, "symbol")} ";
-    @extend .#{map-get($data, "font")};
+    content: "#{map.get($data, "symbol")} ";
+    @extend .#{map.get($data, "font")};
   }
 
   .fa-icon-#{$name} {
     &::before {
-      content: "#{map-get($data, "symbol")} ";
-      @extend .#{map-get($data, "font")};
+      content: "#{map.get($data, "symbol")} ";
+      @extend .#{map.get($data, "font")};
     }
   }
   li.fa-icon-li-#{$name} {
     &::marker {
-      content: "#{map-get($data, "symbol")} ";
-      @extend .#{map-get($data, "font")};
+      content: "#{map.get($data, "symbol")} ";
+      @extend .#{map.get($data, "font")};
     }
   }
 }
@@ -260,8 +263,8 @@ $icons: (
   @each $name, $data in $icons {
     li.fa-icon-li-#{$name} {
       &::marker {
-        content: "#{map-get($data, "symbol")} ";
-        @extend .#{map-get($data, "font")};
+        content: "#{map.get($data, "symbol")} ";
+        @extend .#{map.get($data, "font")};
       }
     }
   }

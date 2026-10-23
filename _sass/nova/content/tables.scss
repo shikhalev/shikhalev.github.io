@@ -1,3 +1,5 @@
+@use "nova/preset" as *;
+
 article table {
   border-collapse: collapse;
   color: $dark-gray-color;

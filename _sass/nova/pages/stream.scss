@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "nova/preset" as *;
+@use "nova/icons" as *;
+
 .subcategories {
   color: $frame-color-dark;
   font-family: $caption-font-family;
@@ -89,8 +93,8 @@
 }
 
 .feed-box {
-  $hf-color: darken($frame-color-dark, 20%);
-  $hh-color: darken($highlight-color, 20%);
+  $hf-color: color.adjust($frame-color-dark, $lightness: -20%);
+  $hh-color: color.adjust($highlight-color, $lightness: -20%);
 
   float: right;
   padding: 3px 7px 2px;

@@ -1,5 +1,5 @@
 ---
 ---
 
-@import "site";
-@import "goods_styles";
+@use "site" as *;
+@use "goods_styles" as *;

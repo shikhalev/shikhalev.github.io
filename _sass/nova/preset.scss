@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@use "sass:color";
+
 $base-font-size: 16px !default;
 $small-font-size: 15px !default;
 $notes-font-size: 14px !default;
@@ -14,16 +16,16 @@ $mono-font-family: "PT Mono", gmono, monospace !default;
 $far-font-family: "Font Awesome 5 Free";
 
 $base-font-color: #444;
-$base-gray-color: lighten($base-font-color, 50%) !default;
-$light-gray-color: lighten($base-font-color, 60%) !default;
-$lightest-gray-color: lighten($base-font-color, 70%) !default;
-$dark-gray-color: lighten($base-font-color, 10%) !default;
-$semidark-gray-color: lighten($base-font-color, 20%) !default;
+$base-gray-color: color.adjust($base-font-color, $lightness: 50%) !default;
+$light-gray-color: color.adjust($base-font-color, $lightness: 60%) !default;
+$lightest-gray-color: color.adjust($base-font-color, $lightness: 70%) !default;
+$dark-gray-color: color.adjust($base-font-color, $lightness: 10%) !default;
+$semidark-gray-color: color.adjust($base-font-color, $lightness: 20%) !default;
 
 $frame-color-dark: #3e5662 !default;
-$frame-color-semilight: lighten($frame-color-dark, 25%) !default;
-$frame-color-light: lighten($frame-color-dark, 50%) !default;
-$frame-color-back: lighten($frame-color-dark, 63%) !default;
+$frame-color-semilight: color.adjust($frame-color-dark, $lightness: 25%) !default;
+$frame-color-light: color.adjust($frame-color-dark, $lightness: 50%) !default;
+$frame-color-back: color.adjust($frame-color-dark, $lightness: 63%) !default;
 
 $base-link-color: #129 !default;
 $visited-link-color: #246 !default;
