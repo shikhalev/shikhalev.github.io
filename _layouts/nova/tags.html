@@ -1,0 +1,30 @@
+---
+layout: nova/default
+description: true
+---
+{{ content }}
+
+{%- assign h_flag = content | strip -%}
+{%- if h_flag != '' -%}
+  <h2 id="tags">Список тегов</h2>
+{%- endif -%}
+
+<div class="tag-list">
+
+{% assign tags = site.tags | sort %}
+
+{% for tag in tags %}
+  {% assign tag_name = tag[0] %}
+  {% assign tag_posts = tag[1] %}
+  <div class="tag-box">
+    <h5 id="{{ tag_name }}">{{ tag_name }}</h5>
+    {% for post in tag_posts %}
+      <p class="post-link">
+        <span class="meta">{{ post.date | date: "%Y.%m.%d" }} |</span>
+        <a href="{{ post.url | relative_url }}" title="{{ post.description }}">{{ post.title }}</a>
+      </p>
+    {% endfor %}
+  </div>
+{% endfor %}
+
+</div>

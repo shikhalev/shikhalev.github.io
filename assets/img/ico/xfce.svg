@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.0" width="205" height="205" id="svg2" sodipodi:version="0.32" inkscape:version="0.44+devel" sodipodi:docname="Xfce logo free.svg" inkscape:output_extension="org.inkscape.output.svg.inkscape" sodipodi:docbase="C:\Wiki">
+  <metadata id="metadata2248">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview inkscape:window-height="712" inkscape:window-width="1024" inkscape:pageshadow="2" inkscape:pageopacity="0.0" guidetolerance="10.0" gridtolerance="10000" objecttolerance="10.0" borderopacity="1.0" bordercolor="#666666" pagecolor="#ffffff" id="base" showgrid="false" inkscape:zoom="1.576" inkscape:cx="252.95252" inkscape:cy="111.81548" inkscape:window-x="-4" inkscape:window-y="-4" inkscape:current-layer="svg2" width="205px" height="205px" inkscape:grid-points="true" inkscape:grid-bbox="false" inkscape:object-paths="false" inkscape:guide-bbox="false"/>
+  <defs id="defs4">
+    <linearGradient id="linearGradient4046">
+      <stop style="stop-color:#5d0000;stop-opacity:1;" offset="0" id="stop4048"/>
+      <stop style="stop-color:red;stop-opacity:1;" offset="1" id="stop4050"/>
+    </linearGradient>
+    <linearGradient id="linearGradient9081">
+      <stop style="stop-color:white;stop-opacity:1" offset="0" id="stop9083"/>
+      <stop style="stop-color:white;stop-opacity:0" offset="1" id="stop9085"/>
+    </linearGradient>
+    <linearGradient id="linearGradient7290">
+      <stop style="stop-color:white;stop-opacity:0.71134019" offset="0" id="stop7292"/>
+      <stop style="stop-color:white;stop-opacity:0" offset="1" id="stop7294"/>
+    </linearGradient>
+    <linearGradient id="linearGradient4609">
+      <stop style="stop-color:white;stop-opacity:1" offset="0" id="stop4611"/>
+      <stop style="stop-color:red;stop-opacity:1" offset="1" id="stop4613"/>
+    </linearGradient>
+    <filter inkscape:collect="always" id="filter3157">
+      <feGaussianBlur inkscape:collect="always" stdDeviation="5" id="feGaussianBlur3159"/>
+    </filter>
+    <linearGradient inkscape:collect="always" xlink:href="#linearGradient9081" id="linearGradient4094" gradientUnits="userSpaceOnUse" gradientTransform="translate(-102.5,-62.5)" x1="205" y1="85" x2="205" y2="174.9375"/>
+    <radialGradient inkscape:collect="always" xlink:href="#linearGradient7290" id="radialGradient4097" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1,0,0,0.502618,-102.5,43.1937)" cx="205" cy="212.5" fx="205" fy="212.5" r="95.5"/>
+  </defs>
+  <path id="path9984" style="fill:black;fill-opacity:0.68047339;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3157)" d="M 43,13.000002 L 13,43.000003 L 78,108 L 13,173 L 43,203 L 108,138 L 173,203 L 203,173 L 138,108 L 203,43.000003 L 173,13.000002 L 108,78.000003 L 43,13.000002 z "/>
+  <path id="path3712" style="fill:#afdde9;fill-opacity:1;fill-rule:evenodd;stroke:#505050;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 37.5,7.5 L 7.5,37.5 L 72.5,102.5 L 7.5,167.5 L 37.5,197.5 L 102.5,132.5 L 167.5,197.5 L 197.5,167.5 L 132.5,102.5 L 197.5,37.5 L 167.5,7.5 L 102.5,72.5 L 37.5,7.5 z "/>
+  <path id="path3722" style="fill:url(#radialGradient4097);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="M 72.5,102.5 L 77.5,107.5 L 17.5,167.5 L 37.5,187.5 L 102.5,122.5 L 167.5,187.5 L 187.5,167.5 L 127.5,107.5 L 132.5,102.5 L 197.5,167.5 L 167.5,197.5 L 102.5,132.5 L 37.5,197.5 L 7.5,167.5 L 72.5,102.5 z "/>
+  <path id="path8186" style="fill:url(#linearGradient4094);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="M 37.5,22.5 L 22.5,37.5 L 97.46875,112.4375 C 97.08423,111.79663 95.3125,105.9375 137.5,82.5 L 182.5,37.5 L 167.5,22.5 L 102.5,87.5 L 37.5,22.5 z "/>
+</svg>

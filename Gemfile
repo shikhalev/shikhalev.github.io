@@ -29,10 +29,10 @@ group :jekyll_plugins do
   gem "jekyll-sitemap"
   gem "jekyll-seo-tag"
   gem "jekyll-toc"
-  gem "jekyll-remote-theme"
+  # gem "jekyll-remote-theme"
   gem "jekyll-redirect-from"
   gem "jekyll-is-announcer", '~> 0.8.3' # path: '/home/ivan/wrk/projects/site/jekyll-is/jekyll-is-announcer'
   gem 'jekyll-is-images', '~> 0.8.2.6'
 end
 
-gem 'jekyll-theme-shikhalev', '>= 0.1.0.20'
+# gem 'jekyll-theme-shikhalev', '>= 0.1.0.20'

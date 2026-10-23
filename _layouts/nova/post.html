@@ -1,0 +1,34 @@
+---
+layout: nova/default
+itemtype: http://schema.org/BlogPosting
+sharing: true
+meta: true
+toc: true
+---
+<div itemprop="articleBody">
+  {{ content }}
+</div>
+
+{% include nova/utils/recommendations.liquid %}
+
+<script src="https://giscus.app/client.js"
+        data-repo="shikhalev/shikhalev.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkzMjI2NTAyNDI="
+        data-category="General"
+        data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMTgzNDIw"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="ru"
+        crossorigin="anonymous"
+        async>
+</script>
+
+{% comment %}{% include nova/comments/section.liquid %}{% endcomment %}
+
+{% if jekyll.environment == 'development' %}
+  {% include nova/utils/announcement.liquid %}
+{% endif %}

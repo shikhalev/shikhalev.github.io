@@ -1,0 +1,58 @@
+{%- assign empty_backs = true -%}
+{%- assign item = include.item | default: page -%}
+{%- unless item.service -%}
+{%- if item.backlinks != false -%}
+  {%- assign substr = 'link ' | append: item.path -%}
+  {%- assign url = item.url | relative_url -%}
+  {%- assign substr2 = 'href="' | append: url | append: '"' -%}
+  {%- assign substr3 = 'href="' | append: url | append: '#' -%}
+  {%- assign list = "" | split: '///' -%}
+  {%- for ps in site.posts -%}
+    {%- if ps.content contains substr or ps.content contains substr2 or ps.content contains substr3 -%}
+      {%- assign list = list | push: ps -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- for col in site.collections -%}
+    {%- if col.label and col.label != 'posts' and col.label != '_posts' -%}
+      {%- for im in col.docs -%}
+        {%- unless im.service or im.url == nil -%}
+          {%- if im.content contains substr or im.content contains substr2 or im.content contains substr3 -%}
+            {%- assign list = list | push: im -%}
+          {%- endif -%}
+        {%- endunless -%}
+      {%- endfor -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- for pg in site.pages | sort: 'path' -%}
+    {%- unless pg.service -%}
+      {%- if pg.content contains substr or pg.content contains substr2 or pg.content contains substr3 -%}
+        {%- assign list = list | push: pg -%}
+      {%- endif -%}
+    {%- endunless -%}
+  {%- endfor -%}
+  {%- if list.size > 0 -%}
+    {%- assign empty_backs = false -%}
+    <aside class="backlinks" id="backs">
+    {%- if include.header_level -%}
+      <h{{- include.header_level -}}>{{- include.header_title | default: 'Ссылки сюда' -}}</h{{- include.header_level -}}>
+    {%- endif -%}
+    <ul>
+    {%- for pp in list -%}
+      {%- comment -%}
+      {%- if pp.date -%}
+        {%- assign icon = 'post' -%}
+      {%- else -%}
+        {%- assign icon = 'page' -%}
+      {%- endif -%}
+      {%- endcomment -%}
+      {%- assign icon = pp.icon | default: 'file' -%}
+      <li class="fa-icon-li-{{- icon -}}"><a href="{{- pp.url | relative_url -}}" title="{{- pp.description | default: pp.title -}}">{{- pp.title | default: pp.path -}}</a></li>
+    {%- endfor -%}
+    </ul>
+    </aside>
+  {%- endif -%}
+{%- endif -%}
+{%- endunless -%}
+{%- if empty_backs -%}
+ <aside id="backs" style="visibility:hidden;height:0px;width:0px;margin:0px;padding:0px;"></aside>
+{%- endif -%}

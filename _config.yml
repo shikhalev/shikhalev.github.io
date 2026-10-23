@@ -48,7 +48,7 @@ plugins:
   - jekyll-is-images
   - jekyll-is-announcer
 
-theme: jekyll-theme-shikhalev
+# theme: jekyll-theme-shikhalev
 
 shi_images:
   image_bounds: fhd

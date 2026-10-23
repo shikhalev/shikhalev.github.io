@@ -1,0 +1,16 @@
+{%- assign url = include.url | default: page.url -%}
+{%- assign next_url = url | split: '/' | pop | join: '/' | append: '/' -%}
+{%- if next_url != '/' -%}
+  {%- include nova/utils/breadcrumbs.liquid url = next_url collection = include.collection -%}
+{%- endif -%}
+{%- if include.url -%}
+  {%- if include.collection -%}
+    {%- assign col = site.collections | where: 'label', include.collection | first -%}
+    {%- assign pg = col.docs | where: 'url', include.url | first -%}
+  {%- else -%}
+    {%- assign pg = site.pages | where: 'url', include.url | first -%}
+  {%- endif -%}
+  {%- if pg -%}
+    ​<a class="fa-icon-{{- pg.icon | default: 'folder-open-black' -}}" href="{{- pg.url | relative_url -}}" title="{{ pg.description | default: pg.title }}">{{- pg.short | default: pg.title -}}</a>
+  {%- endif -%}
+{%- endif -%}
