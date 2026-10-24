@@ -1,0 +1,307 @@
+---
+---
+
+@use "sass:map";
+
+.icon {
+  &::before {
+    display: inline-block;
+    content: '';
+    width: var(--icon-width, 1em);
+    height: var(--icon-height, 1em);
+    margin-right: var(--icon-margin, 0.2em);
+    background-image: var(--icon-image, url(/css/icons/face-dizzy.svg));
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: var(--icon-shift, -0.125em);
+  }
+}
+
+$icons: (
+  'camera': (
+    'image': 'camera.svg',
+    'width': 1.23em
+  ),
+  'cinnamon': (
+    'image': 'cinnamon.svg'
+  ),
+  'csharp': (
+    'image': 'csharp.svg',
+    'width': 0.87em
+  ),
+  'css3': (
+    'image': 'css3.svg',
+    'width': 0.88em
+  ),
+  'darktable': (
+    'image': 'darktable.svg',
+    'links': ( 'darktable.org' )
+  ),
+  'dolphin': (
+    'image': 'dolphin.svg'
+  ),
+  'exiftool': (
+    'image': 'exiftool.svg',
+    'width': 0.95em,
+    'links': ( 'exiftool.org' )
+  ),
+  'firefox': (
+    'image': 'firefox.svg',
+    'width': 1.04em,
+    'links': ( 'firefox.com', 'addons.mozilla.org' )
+  ),
+  'fontawesome': (
+    'image': 'fontawesome.svg',
+    'links': ( 'fontawesome.com' )
+  ),
+  'fun': (
+    'image': 'fun.png',
+    'links': ( 'fun.ru' )
+  ),
+  'gbif': (
+    'image': 'gbif.svg',
+    'width': 1.03em,
+    'links': ( 'gbif.org' )
+  ),
+  'gentoo': (
+    'image': 'gentoo.svg',
+    'width': 0.95em,
+    'links': ( 'gentoo.org' )
+  ),
+  'giscus': (
+    'image': 'giscus.svg',
+    'width': 1.17em,
+    'links': ( 'giscus.app' )
+  ),
+  'git': (
+    'image': 'git.svg',
+    'links': ( 'git-scm.com' )
+  ),
+  'github': (
+    'image': 'github.svg',
+    'aliases': ( 'gh' ),
+    'links': ( 'github.com' )
+  ),
+  'gitlab': (
+    'image': 'gitlab.svg',
+    'width': 1.04em,
+    'links': ( 'gitlab.com' )
+  ),
+  'gnome': (
+    'image': 'gnome.svg',
+    'width': 0.83em,
+    'links': ( 'gnome.org' )
+  ),
+  'google': (
+    'image': 'google.svg',
+    'links': ( 'google.com' )
+  ),
+  'google-analytics': (
+    'image': 'analytics.svg',
+    'links': ( 'analytics.google.com' )
+  ),
+  'google-fonts': (
+    'image': 'google-fonts.svg',
+    'width': 1.36em,
+    'links': ( 'fonts.google.com' )
+  ),
+  'google-mail': (
+    'image': 'gmail.svg',
+    'width': 1.33em,
+    'aliases': ( 'gmail' ),
+    'links': ( 'mail.google.com' )
+  ),
+  'gpsbabel': (
+    'image': 'gpsbabel.png',
+    'links': ( 'gpsbabel.org' )
+  ),
+  'heroku': (
+    'image': 'heroku.svg',
+    'width': 0.9em,
+    'links': ( 'heroku.com' )
+  ),
+  'html5': (
+    'image': 'html5.svg',
+    'width': 0.88em
+  ),
+  'hugin': (
+    'image': 'hugin.svg',
+    'links': ( 'hugin.sourceforge.net', 'hugin.sourceforge.io' )
+  ),
+  'imagemagick': (
+    'image': 'imagemagick.svg',
+    'aliases': ( 'im' ),
+    'links': ( 'imagemagick.org' )
+  ),
+  'inaturalist': (
+    'image': 'inaturalist.svg',
+    'width': 1.14em,
+    'aliases': ( 'inat' ),
+    'links': ( 'inaturalist.org' )
+  ),
+  'instagram': (
+    'image': 'instagram.svg',
+    'links': ( 'instagram.com' )
+  ),
+  'javascript': (
+    'image': 'javascript.svg'
+  ),
+  'jekyll': (
+    'image': 'jekyll.svg',
+    'width': 0.56em,
+    'links': ( 'jekyll.org' )
+  ),
+  'kate': (
+    'image': 'kate.svg',
+    'links': ( 'kate-editor.org' )
+  ),
+  'kde': (
+    'image': 'kde.svg',
+    'links': ( 'kde.org' )
+  ),
+  'kdeconnect': (
+    'image': 'kdeconnect.svg',
+    'width': 0.58em,
+    'links': ( 'kdeconnect.kde.org' )
+  ),
+  'kdeneon': (
+    'image': 'kdeneon.svg',
+    'links': ( 'neon.kde.org' )
+  ),
+  'konqueror': (
+    'image': 'konqueror.svg'
+  ),
+  'kontact': (
+    'image': 'kontact.svg'
+  ),
+  'kopete': (
+    'image': 'kopete.svg'
+  ),
+  'kwave': (
+    'image': 'kwave.svg',
+    'width': 1.28em
+  ),
+  'linuxmint': (
+    'image': 'linuxmint.svg',
+    'links': ( 'linuxmint.com' )
+  ),
+  'liquid': (
+    'image': 'liquid.png'
+  ),
+  'locus-map': (
+    'image': 'locus-map.png',
+    'links': ( 'locusmap.app' )
+  ),
+  'luminance-hdr': (
+    'image': 'luminance-hdr.svg',
+    'links': ( 'qtpfsgui.sourceforge.net', 'luminancehdr.com' )
+  ),
+  'merlin': (
+    'image': 'merlin.svg',
+    'width': 1.78em,
+    'links': ( 'merlin.allaboutbirds.org', 'merlinbirds.org' )
+  ),
+  'paratype': (
+    'image': 'paratype.png',
+    'links': ( 'paratype.ru' )
+  ),
+  'printdirect': (
+    'image': 'printdirect.png',
+    'links': ( 'printdirect.ru' )
+  ),
+  'ruby': (
+    'image': 'ruby.svg',
+    'links': ( 'ruby-lang.org' )
+  ),
+  'rubygems': (
+    'image': 'rubygems.svg',
+    'width': 0.87em,
+    'aliases': ( 'gem' ),
+    'links': ( 'rubygems.org' )
+  ),
+  'rust': (
+    'image': 'rust.svg',
+    'links': ( 'rust-lang.org' )
+  ),
+  'soundkonverter': (
+    'image': 'soundkonverter.png'
+  ),
+  'staticman': (
+    'image': 'staticman.svg',
+    'width': 1.34em,
+    'links': ( 'staticman.net' )
+  ),
+  'suno': (
+    'image': 'suno.png',
+    'links': ( 'suno.com' )
+  ),
+  'telegram': (
+    'image': 'telegram.svg',
+    'aliases': ( 'tg' ),
+    'links': ( 'telegram.org', 't.me' )
+  ),
+  'vsemayki': (
+    'image': 'vsemayki.png',
+    'links': ( 'vsemayki.ru' )
+  ),
+  'xfce': (
+    'image': 'xfce.svg',
+    'width': 1.91em,
+    'links': ( 'xfce.org' )
+  ),
+  'yandex-metrika': (
+    'image': 'metrika.svg',
+    'links': ( 'metrika.yandex.ru' )
+  ),
+  'yandex-webmaster': (
+    'image': 'webmaster.svg',
+    'width': 1.08em,
+    'links': ( 'webmaster.yandex.ru' )
+  ),
+  'yoomoney': (
+    'image': 'io.svg',
+    'width': 1.4em,
+    'links': ( 'yoomoney.ru' )
+  )
+);
+
+@each $name, $icon in $icons {
+  $selectors: ".img-#{$name}";
+  @if map.has-key($icon, 'aliases') {
+    @each $alias in map.get($icon, 'aliases') {
+      $selectors: "#{$selectors}, .img-#{$alias}"
+    }
+  }
+  @if map.has-key($icon, 'links') {
+    @each $link in map.get($icon, 'links') {
+      $selectors: "#{$selectors}, :where(a[href*='#{$link}'])";
+    }
+  }
+
+  #{$selectors} {
+    @if map.has-key($icon, 'image') {
+      --icon-image: url("/css/icons/#{map.get($icon, 'image')}");
+    }
+    @if map.has-key($icon, 'width') {
+      --icon-width: #{map.get($icon, 'width')};
+    } @else {
+      --icon-width: 1em;
+    }
+    @if map.has-key($icon, 'height') {
+      --icon-height: #{map.get($icon, 'height')};
+    } @else {
+      --icon-height: 1em;
+    }
+    @if map.has-key($icon, 'margin') {
+      --icon-margin: #{map.get($icon, 'margin')};
+    } @else {
+      --icon-margin: 0.2em;
+    }
+    @if map.has-key($icon, 'shift') {
+      --icon-shift: #{map.get($icon, 'shift')};
+    } @else {
+      --icon-shift: -0.125em;
+    }
+  }
+}
