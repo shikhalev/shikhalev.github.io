@@ -1,0 +1,470 @@
+.icon::before {
+  display: inline-block;
+  content: "";
+  width: var(--icon-width, 1em);
+  height: var(--icon-height, 1em);
+  margin-right: var(--icon-margin, 0.2em);
+  background-image: var(--icon-image, url(/css/icons/face-dizzy.svg));
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: var(--icon-shift, -0.125em);
+}
+
+.img-camera {
+  --icon-image: url("/css/icons/camera.svg");
+  --icon-width: 1.23em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-cinnamon {
+  --icon-image: url("/css/icons/cinnamon.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-csharp {
+  --icon-image: url("/css/icons/csharp.svg");
+  --icon-width: 0.87em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-css3 {
+  --icon-image: url("/css/icons/css3.svg");
+  --icon-width: 0.88em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-darktable, :where(a[href*="darktable.org"]) {
+  --icon-image: url("/css/icons/darktable.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-dolphin {
+  --icon-image: url("/css/icons/dolphin.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-exiftool, :where(a[href*="exiftool.org"]) {
+  --icon-image: url("/css/icons/exiftool.svg");
+  --icon-width: 0.95em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-firefox, :where(a[href*="firefox.com"]), :where(a[href*="addons.mozilla.org"]) {
+  --icon-image: url("/css/icons/firefox.svg");
+  --icon-width: 1.04em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-fontawesome, :where(a[href*="fontawesome.com"]) {
+  --icon-image: url("/css/icons/fontawesome.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-fun, :where(a[href*="fun.ru"]) {
+  --icon-image: url("/css/icons/fun.png");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-gbif, :where(a[href*="gbif.org"]) {
+  --icon-image: url("/css/icons/gbif.svg");
+  --icon-width: 1.03em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-gentoo, :where(a[href*="gentoo.org"]) {
+  --icon-image: url("/css/icons/gentoo.svg");
+  --icon-width: 0.95em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-giscus, :where(a[href*="giscus.app"]) {
+  --icon-image: url("/css/icons/giscus.svg");
+  --icon-width: 1.17em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-git, :where(a[href*="git-scm.com"]) {
+  --icon-image: url("/css/icons/git.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-github, .img-gh, :where(a[href*="github.com"]) {
+  --icon-image: url("/css/icons/github.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-gitlab, :where(a[href*="gitlab.com"]) {
+  --icon-image: url("/css/icons/gitlab.svg");
+  --icon-width: 1.04em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-gnome, :where(a[href*="gnome.org"]) {
+  --icon-image: url("/css/icons/gnome.svg");
+  --icon-width: 0.83em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-google, :where(a[href*="google.com"]) {
+  --icon-image: url("/css/icons/google.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-google-analytics, :where(a[href*="analytics.google.com"]) {
+  --icon-image: url("/css/icons/analytics.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-google-fonts, :where(a[href*="fonts.google.com"]) {
+  --icon-image: url("/css/icons/google-fonts.svg");
+  --icon-width: 1.36em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-google-mail, .img-gmail, :where(a[href*="mail.google.com"]) {
+  --icon-image: url("/css/icons/gmail.svg");
+  --icon-width: 1.33em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-gpsbabel, :where(a[href*="gpsbabel.org"]) {
+  --icon-image: url("/css/icons/gpsbabel.png");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-heroku, :where(a[href*="heroku.com"]) {
+  --icon-image: url("/css/icons/heroku.svg");
+  --icon-width: 0.9em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-html5 {
+  --icon-image: url("/css/icons/html5.svg");
+  --icon-width: 0.88em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-hugin, :where(a[href*="hugin.sourceforge.net"]), :where(a[href*="hugin.sourceforge.io"]) {
+  --icon-image: url("/css/icons/hugin.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-imagemagick, .img-im, :where(a[href*="imagemagick.org"]) {
+  --icon-image: url("/css/icons/imagemagick.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-inaturalist, .img-inat, :where(a[href*="inaturalist.org"]) {
+  --icon-image: url("/css/icons/inaturalist.svg");
+  --icon-width: 1.14em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-instagram, :where(a[href*="instagram.com"]) {
+  --icon-image: url("/css/icons/instagram.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-javascript {
+  --icon-image: url("/css/icons/javascript.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-jekyll, :where(a[href*="jekyll.org"]) {
+  --icon-image: url("/css/icons/jekyll.svg");
+  --icon-width: 0.56em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-kate, :where(a[href*="kate-editor.org"]) {
+  --icon-image: url("/css/icons/kate.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-kde, :where(a[href*="kde.org"]) {
+  --icon-image: url("/css/icons/kde.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-kdeconnect, :where(a[href*="kdeconnect.kde.org"]) {
+  --icon-image: url("/css/icons/kdeconnect.svg");
+  --icon-width: 0.58em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-kdeneon, :where(a[href*="neon.kde.org"]) {
+  --icon-image: url("/css/icons/kdeneon.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-konqueror {
+  --icon-image: url("/css/icons/konqueror.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-kontact {
+  --icon-image: url("/css/icons/kontact.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-kopete {
+  --icon-image: url("/css/icons/kopete.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-kwave {
+  --icon-image: url("/css/icons/kwave.svg");
+  --icon-width: 1.28em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-linuxmint, :where(a[href*="linuxmint.com"]) {
+  --icon-image: url("/css/icons/linuxmint.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-liquid {
+  --icon-image: url("/css/icons/liquid.png");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-locus-map, :where(a[href*="locusmap.app"]) {
+  --icon-image: url("/css/icons/locus-map.png");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-luminance-hdr, :where(a[href*="qtpfsgui.sourceforge.net"]), :where(a[href*="luminancehdr.com"]) {
+  --icon-image: url("/css/icons/luminance-hdr.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-merlin, :where(a[href*="merlin.allaboutbirds.org"]), :where(a[href*="merlinbirds.org"]) {
+  --icon-image: url("/css/icons/merlin.svg");
+  --icon-width: 1.78em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-paratype, :where(a[href*="paratype.ru"]) {
+  --icon-image: url("/css/icons/paratype.png");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-printdirect, :where(a[href*="printdirect.ru"]) {
+  --icon-image: url("/css/icons/printdirect.png");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-ruby, :where(a[href*="ruby-lang.org"]) {
+  --icon-image: url("/css/icons/ruby.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-rubygems, .img-gem, :where(a[href*="rubygems.org"]) {
+  --icon-image: url("/css/icons/rubygems.svg");
+  --icon-width: 0.87em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-rust, :where(a[href*="rust-lang.org"]) {
+  --icon-image: url("/css/icons/rust.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-soundkonverter {
+  --icon-image: url("/css/icons/soundkonverter.png");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-staticman, :where(a[href*="staticman.net"]) {
+  --icon-image: url("/css/icons/staticman.svg");
+  --icon-width: 1.34em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-suno, :where(a[href*="suno.com"]) {
+  --icon-image: url("/css/icons/suno.png");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-telegram, .img-tg, :where(a[href*="telegram.org"]), :where(a[href*="t.me"]) {
+  --icon-image: url("/css/icons/telegram.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-vsemayki, :where(a[href*="vsemayki.ru"]) {
+  --icon-image: url("/css/icons/vsemayki.png");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-xfce, :where(a[href*="xfce.org"]) {
+  --icon-image: url("/css/icons/xfce.svg");
+  --icon-width: 1.91em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-yandex-metrika, :where(a[href*="metrika.yandex.ru"]) {
+  --icon-image: url("/css/icons/metrika.svg");
+  --icon-width: 1em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-yandex-webmaster, :where(a[href*="webmaster.yandex.ru"]) {
+  --icon-image: url("/css/icons/webmaster.svg");
+  --icon-width: 1.08em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-yoomoney, :where(a[href*="yoomoney.ru"]) {
+  --icon-image: url("/css/icons/io.svg");
+  --icon-width: 1.4em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+/*# sourceMappingURL=icons.css.map */
