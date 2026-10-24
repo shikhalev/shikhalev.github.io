@@ -1,0 +1,95 @@
+---
+---
+
+@use "sass:map";
+
+.icon {
+  &::before {
+    display: inline-block;
+    content: '';
+    width: var(--icon-width, 1em);
+    height: var(--icon-height, 1em);
+    margin-right: var(--icon-margin, 0.2em);
+    background-image: var(--icon-image, url(/css/icons/face-dizzy.svg));
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: var(--icon-shift, -0.125em);
+  }
+}
+
+$icons: (
+  'darktable': (
+    'image': 'darktable.svg',
+    'links': ( 'darktable.org' )
+  ),
+  'firefox': (
+    'image': 'firefox.svg',
+    'width': 1.04em,
+    'links': ( 'firefox.com', 'addons.mozilla.org' )
+  ),
+  'gbif': (
+    'image': 'gbif.svg',
+    'width': 1.03em,
+    'links': ( 'gbif.org' )
+  ),
+  'gentoo': (
+    'image': 'gentoo.svg',
+    'width': 0.95em,
+    'links': ( 'gentoo.org' )
+  ),
+  'github': (
+    'image': 'github.svg',
+    'links': ( 'github.com' )
+  ),
+  'inaturalist': (
+    'image': 'inaturalist.svg',
+    'width': 1.14em,
+    'links': ( 'inaturalist.org' )
+  ),
+  'jekyll': (
+    'image': 'jekyll.svg',
+    'width': 0.56em,
+    'links': ( 'jekyll.org' )
+  ),
+  'ruby': (
+    'image': 'ruby.svg',
+    'links': ( 'ruby-lang.org' )
+  ),
+  'rubygems': (
+    'image': 'rubygems.svg',
+    'width': 0.87em,
+    'links': ( 'rubygems.org' )
+  ),
+  'rust': (
+    'image': 'rust.svg',
+    'links': ( 'rust-lang.org' )
+  )
+);
+
+@each $name, $icon in $icons {
+  $selectors: ".img-#{$name}";
+  @if map.has-key($icon, 'links') {
+    @each $link in map.get($icon, 'links') {
+      $selectors: "#{$selectors}, a[href*='#{$link}']";
+    }
+  }
+
+  #{$selectors} {
+    @if map.has-key($icon, 'image') {
+      --icon-image: url("/css/icons/#{map.get($icon, 'image')}");
+    }
+    @if map.has-key($icon, 'width') {
+      --icon-width: #{map.get($icon, 'width')};
+    }
+    @if map.has-key($icon, 'height') {
+      --icon-height: #{map.get($icon, 'height')};
+    }
+    @if map.has-key($icon, 'margin') {
+      --icon-margin: #{map.get($icon, 'margin')};
+    }
+    @if map.has-key($icon, 'shift') {
+      --icon-shift: #{map.get($icon, 'shift')};
+    }
+  }
+}
