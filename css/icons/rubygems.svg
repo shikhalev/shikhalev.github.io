@@ -35,14 +35,14 @@
      fill="#010101"
      id="g2"
      transform="translate(-21.7,-10.6)"
-     style="fill:#a65100;fill-opacity:1">
+     style="fill:#f74c27;fill-opacity:1">
     <path
        d="M 68.8,69.9 68.7,69.8 46.5,92 100.4,145.8 122.6,123.7 154.3,92 132.1,69.8 V 69.7 H 68.7"
        id="path1"
-       style="fill:#a65100;fill-opacity:1" />
+       style="fill:#f74c27;fill-opacity:1" />
     <path
        d="m 100.2,10.6 -78.5,45 v 90 l 78.5,45 78.5,-45 v -90 z M 163.7,137 100.2,173.6 36.7,137 V 64 L 100.2,27.4 163.7,64 Z"
        id="path2"
-       style="fill:#a65100;fill-opacity:1" />
+       style="fill:#f74c27;fill-opacity:1" />
   </g>
 </svg>
