@@ -6,7 +6,7 @@
 </url>
 <url>
 <loc>https://shikhalev.org/all</loc>
-<lastmod>2026-10-25T06:04:28+00:00</lastmod>
+<lastmod>2026-10-26T13:02:39+00:00</lastmod>
 </url>
 <url>
 <loc>https://shikhalev.org/life/all</loc>
@@ -58,7 +58,7 @@
 </url>
 <url>
 <loc>https://shikhalev.org/tech/all</loc>
-<lastmod>2026-10-13T00:00:00+00:00</lastmod>
+<lastmod>2026-10-25T00:00:00+00:00</lastmod>
 </url>
 <url>
 <loc>https://shikhalev.org/tech/db/all</loc>
@@ -70,7 +70,7 @@
 </url>
 <url>
 <loc>https://shikhalev.org/tech/programming/all</loc>
-<lastmod>2026-08-22T00:00:00+00:00</lastmod>
+<lastmod>2026-10-25T00:00:00+00:00</lastmod>
 </url>
 <url>
 <loc>https://shikhalev.org/tech/programming/abs/all</loc>
@@ -82,7 +82,7 @@
 </url>
 <url>
 <loc>https://shikhalev.org/tech/programming/ruby/all</loc>
-<lastmod>2026-08-22T00:00:00+00:00</lastmod>
+<lastmod>2026-10-25T00:00:00+00:00</lastmod>
 </url>
 <url>
 <loc>https://shikhalev.org/tech/programming/rust/all</loc>
@@ -1674,7 +1674,7 @@
 </url>
 <url>
 <loc>https://shikhalev.org/merch/type/home/wall/calendar/2026/pd-calendar-2026-A4/</loc>
-<lastmod>2026-10-25T06:04:28+00:00</lastmod>
+<lastmod>2026-10-26T13:02:39+00:00</lastmod>
 </url>
 <url>
 <loc>https://shikhalev.org/merch/type/home/wall/canvas/</loc>
@@ -1722,7 +1722,7 @@
 </url>
 <url>
 <loc>https://shikhalev.org/merch/type/home/wall/foam/pd-foam-30x45/</loc>
-<lastmod>2026-10-25T06:04:28+00:00</lastmod>
+<lastmod>2026-10-26T13:02:39+00:00</lastmod>
 </url>
 <url>
 <loc>https://shikhalev.org/merch/type/home/wall/foam/pd-foam-40x60/</loc>
@@ -1854,7 +1854,7 @@
 </url>
 <url>
 <loc>https://shikhalev.org/tr/darktable/manual/darkroom/darkroom-view-layout/</loc>
-<lastmod>2026-10-25T06:04:28+00:00</lastmod>
+<lastmod>2026-10-26T13:02:39+00:00</lastmod>
 </url>
 <url>
 <loc>https://shikhalev.org/tr/darktable/manual/darkroom/processing-modules/</loc>
@@ -1878,15 +1878,15 @@
 </url>
 <url>
 <loc>https://shikhalev.org/tr/darktable/manual/lighttable/</loc>
-<lastmod>2026-10-25T06:04:28+00:00</lastmod>
+<lastmod>2026-10-26T13:02:39+00:00</lastmod>
 </url>
 <url>
 <loc>https://shikhalev.org/tr/darktable/manual/lighttable/lighttable-view-layout/</loc>
-<lastmod>2026-10-25T06:04:28+00:00</lastmod>
+<lastmod>2026-10-26T13:02:39+00:00</lastmod>
 </url>
 <url>
 <loc>https://shikhalev.org/tr/darktable/manual/map/</loc>
-<lastmod>2026-10-25T06:04:28+00:00</lastmod>
+<lastmod>2026-10-26T13:02:39+00:00</lastmod>
 </url>
 <url>
 <loc>https://shikhalev.org/tr/darktable/manual/module-reference/</loc>
@@ -2034,7 +2034,7 @@
 </url>
 <url>
 <loc>https://shikhalev.org/tr/darktable/manual/overview/user-interface/bottom-panel/</loc>
-<lastmod>2026-10-25T06:04:28+00:00</lastmod>
+<lastmod>2026-10-26T13:02:39+00:00</lastmod>
 </url>
 <url>
 <loc>https://shikhalev.org/tr/darktable/manual/overview/user-interface/screen-layout/</loc>
@@ -2042,7 +2042,7 @@
 </url>
 <url>
 <loc>https://shikhalev.org/tr/darktable/manual/overview/user-interface/top-panel/</loc>
-<lastmod>2026-10-25T06:04:28+00:00</lastmod>
+<lastmod>2026-10-26T13:02:39+00:00</lastmod>
 </url>
 <url>
 <loc>https://shikhalev.org/tr/darktable/manual/overview/user-interface/views/</loc>
@@ -2050,15 +2050,15 @@
 </url>
 <url>
 <loc>https://shikhalev.org/tr/darktable/manual/print/</loc>
-<lastmod>2026-10-25T06:04:28+00:00</lastmod>
+<lastmod>2026-10-26T13:02:39+00:00</lastmod>
 </url>
 <url>
 <loc>https://shikhalev.org/tr/darktable/manual/slideshow/</loc>
-<lastmod>2026-10-25T06:04:28+00:00</lastmod>
+<lastmod>2026-10-26T13:02:39+00:00</lastmod>
 </url>
 <url>
 <loc>https://shikhalev.org/tr/darktable/manual/tethering/</loc>
-<lastmod>2026-10-25T06:04:28+00:00</lastmod>
+<lastmod>2026-10-26T13:02:39+00:00</lastmod>
 </url>
 <url>
 <loc>https://shikhalev.org/text/1993/06/velo.html</loc>
@@ -3473,6 +3473,10 @@
 <lastmod>2026-10-16T00:00:00+00:00</lastmod>
 </url>
 <url>
+<loc>https://shikhalev.org/tech/2026/10/is-module-reset.html</loc>
+<lastmod>2026-10-25T00:00:00+00:00</lastmod>
+</url>
+<url>
 <loc>https://shikhalev.org/about/</loc>
 <lastmod>2026-10-13T00:00:00+00:00</lastmod>
 </url>
@@ -3530,7 +3534,7 @@
 </url>
 <url>
 <loc>https://shikhalev.org/tech/</loc>
-<lastmod>2026-10-13T00:00:00+00:00</lastmod>
+<lastmod>2026-10-25T00:00:00+00:00</lastmod>
 </url>
 <url>
 <loc>https://shikhalev.org/tech/db/</loc>
@@ -3542,7 +3546,7 @@
 </url>
 <url>
 <loc>https://shikhalev.org/tech/programming/</loc>
-<lastmod>2026-08-22T00:00:00+00:00</lastmod>
+<lastmod>2026-10-25T00:00:00+00:00</lastmod>
 </url>
 <url>
 <loc>https://shikhalev.org/tech/programming/abs/</loc>
@@ -3554,7 +3558,7 @@
 </url>
 <url>
 <loc>https://shikhalev.org/tech/programming/ruby/</loc>
-<lastmod>2026-08-22T00:00:00+00:00</lastmod>
+<lastmod>2026-10-25T00:00:00+00:00</lastmod>
 </url>
 <url>
 <loc>https://shikhalev.org/tech/programming/rust/</loc>
@@ -3607,6 +3611,6 @@
 </url>
 <url>
 <loc>https://shikhalev.org/yandex_54175314902cbb17.html</loc>
-<lastmod>2026-10-25T06:03:53+00:00</lastmod>
+<lastmod>2026-10-26T13:02:10+00:00</lastmod>
 </url>
 </urlset>

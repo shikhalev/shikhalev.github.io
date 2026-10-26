@@ -243,7 +243,7 @@
   --icon-shift: -0.125em;
 }
 
-.img-jekyll, :where(a[href*="jekyll.org"]) {
+.img-jekyll, :where(a[href*="jekyllrb.com"]) {
   --icon-image: url("/css/icons/jekyll.svg");
   --icon-width: 0.56em;
   --icon-height: 1em;
@@ -384,7 +384,7 @@
   --icon-width: 0.87em;
   --icon-height: 1em;
   --icon-margin: 0.2em;
-  --icon-shift: -0.125em;
+  --icon-shift: -0.19em;
 }
 
 .img-rust, :where(a[href*="rust-lang.org"]) {
