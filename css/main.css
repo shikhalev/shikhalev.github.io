@@ -1,0 +1,3 @@
+@layer theme, plugins, site;
+
+@import url(/css/icons.css) layer(plugins);
