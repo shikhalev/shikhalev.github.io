@@ -150,7 +150,7 @@ $icons: (
   'jekyll': (
     'image': 'jekyll.svg',
     'width': 0.56em,
-    'links': ( 'jekyll.org' )
+    'links': ( 'jekyllrb.com' )
   ),
   'kate': (
     'image': 'kate.svg',
@@ -217,6 +217,7 @@ $icons: (
   'rubygems': (
     'image': 'rubygems.svg',
     'width': 0.87em,
+    'shift': -0.19em,
     'aliases': ( 'gem' ),
     'links': ( 'rubygems.org' )
   ),
