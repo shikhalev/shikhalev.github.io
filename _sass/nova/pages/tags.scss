@@ -1,5 +1,5 @@
 @use "nova/preset" as *;
-@use "nova/icons" as *;
+// @use "nova/icons" as *;
 
 .layout-tags {
   $shift: 56px;
@@ -36,16 +36,25 @@
   }
 
   h5 {
-    @extend .fa-icon-tag;
     color: $frame-color-dark;
     &::before {
+      content: '\f02b';
+      font-family: var(--fa-solid-family);
+      font-weight: var(--fa-solid-weight);
+      display: inline-block;
+      opacity: 0.7;
+      margin-right: 0.3em;
       font-size: 80%;
       color: $frame-color-light;
     }
   }
 
   p {
-    font-family: $compact-font-family;
+
+    font-family: var(--main-family);
+    font-stretch: condensed;
+    font-width: condensed;
+
     text-align: left;
     hyphens: manual;
 

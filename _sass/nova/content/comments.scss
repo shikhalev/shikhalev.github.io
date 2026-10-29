@@ -17,11 +17,17 @@
   h5 {
     font-size: $base-font-size;
     font-weight: medium;
-    font-family: $caption-font-family;
+    font-family: var(--main-family);
+    font-stretch: expanded;
+    font-width: expanded;
 
     .comment-meta {
       font-size: 80%;
-      font-family: $compact-font-family;
+
+      font-family: var(--main-family);
+      font-stretch: condensed;
+      font-width: condensed;
+
       color: $frame-color-dark;
     }
 
@@ -47,13 +53,19 @@
   h6 {
     font-size: $base-font-size;
     font-weight: normal;
-    font-family: $caption-font-family;
+    font-family: var(--main-family);
+    font-stretch: expanded;
+    font-width: expanded;
   }
 }
 
 .comment-actions {
   font-size: 80%;
-  font-family: $compact-font-family;
+
+  font-family: var(--main-family);
+  font-stretch: condensed;
+  font-width: condensed;
+
   color: $frame-color-dark;
 
   a,
@@ -128,7 +140,11 @@
 
   text-align: center;
   font-size: $small-font-size;
-  font-family: $compact-font-family;
+
+  font-family: var(--main-family);
+  font-stretch: condensed;
+  font-width: condensed;
+
 }
 
 #add-comment-name-label {

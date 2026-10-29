@@ -44,7 +44,7 @@ $icons: (
   'exiftool': (
     'image': 'exiftool.svg',
     'width': 0.95em,
-    'links': ( 'exiftool.org' )
+    'links': ( 'exiftool.org', 'exiftool.sourceforge.net' )
   ),
   'firefox': (
     'image': 'firefox.svg',
@@ -244,7 +244,7 @@ $icons: (
   ),
   'vsemayki': (
     'image': 'vsemayki.png',
-    'links': ( 'vsemayki.ru' )
+    'links': ( 'vsemayki.ru', 'vsemaykishop.ru' )
   ),
   'xfce': (
     'image': 'xfce.svg',
@@ -264,6 +264,11 @@ $icons: (
     'image': 'io.svg',
     'width': 1.4em,
     'links': ( 'yoomoney.ru' )
+  ),
+  'youtube': (
+    'image': 'youtube.svg',
+    'width': 1.43em,
+    'links': ( 'youtube.com', 'youtu.be' )
   )
 );
 

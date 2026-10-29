@@ -4,9 +4,9 @@
 {%- endif -%}
 {%- for sub in subs -%}
   {%- if forloop.first -%}
-    <ul>
+    <ul class="fa">
   {%- endif -%}
-    <li class="fa-icon-li-{{- sub.icon -}}">
+    <li class="fa-{{- sub.icon -}}">
       <a href="{{- sub.url | relative_url -}}" title="{{- sub.description -}}">
         {{- sub.title | escape -}}
         {%- if site.categories[sub.category_id] and site.categories[sub.category_id].size > 0 -%} ({{- site.categories[sub.category_id].size -}}){%- endif -%}

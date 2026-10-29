@@ -1,0 +1,49 @@
+/* Font Awesome v7.3.1 */
+
+@font-face {
+  font-family: "Font Awesome 7 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("/css/fonts/fontawesome/fa-brands-400.woff2");
+}
+
+@font-face {
+  font-family: "Font Awesome 7 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("/css/fonts/fontawesome/fa-regular-400.woff2");
+}
+
+@font-face {
+  font-family: "Font Awesome 7 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("/css/fonts/fontawesome/fa-solid-900.woff2");
+}
+
+:root {
+  --fa-brands-family: 'Font Awesome 7 Brands';
+  --fa-brands-weight: 400;
+  --fa-regular-family: 'Font Awesome 7 Free';
+  --fa-regular-weight: 400;
+  --fa-solid-family: 'Font Awesome 7 Free';
+  --fa-solid-weight: 900;
+}
+
+.fab, .font-awesome-brands {
+  font-family: var(--fa-brands-family);
+  font-weight: var(--fa-brands-weight);
+}
+
+.far, .font-awesome-regular {
+  font-family: var(--fa-regular-family);
+  font-weight: var(--fa-regular-weight);
+}
+
+.fas, .font-awesome-solid {
+  font-family: var(--fa-solid-family);
+  font-weight: var(--fa-solid-weight);
+}

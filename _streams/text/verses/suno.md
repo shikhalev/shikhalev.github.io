@@ -6,7 +6,7 @@ short: Suno
 description: Стихи, для которых созданы треки на сервисе Suno
 order_no: 1
 recommendations: best
-icon: magic
+icon: music
 small: true
 hide_last_comments: true
 ---

@@ -1,8 +1,11 @@
 @use "nova/preset" as *;
 
 code {
-  font-family: $mono-font-family;
-  font-size: 85%;
+
+  font-family: var(--code-family);
+  font-size: 95%;
+  // font-size: 85%;
+
   font-style: normal;
   border: 1px solid $light-gray-color;
   padding: 1px 3px;
@@ -10,6 +13,7 @@ code {
 }
 
 pre {
+  font-family: var(--code-family);
   overflow-x: auto;
 
   @media print {
@@ -19,7 +23,7 @@ pre {
 }
 
 figure.highlight {
-  font-family: $mono-font-family;
+  font-family: var(--code-family);
   display: block;
   margin: 10px 10px;
   padding: 0px;
@@ -30,7 +34,7 @@ figure.highlight {
     padding: 8px 12px;
     max-width: 100%;
 
-    font-size: 85%;
+    font-size: 95%;
 
     code {
       padding: 0px;

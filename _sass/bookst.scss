@@ -18,7 +18,9 @@
     columns: 2;
   }
 
-  font-family: "PT Sans Narrow", gnarrow, "Arial Narrow", sans-serif;
+  font-family: var(--main-family);
+  font-stretch: condensed;
+  font-width: condensed;
 
 .left, .__left {
   @media print {
@@ -34,7 +36,9 @@
 }
 
 dt {
-    font-family: "PT Sans", gsans, Arial, sans-serif;
+    font-family: var(--main-family);
+    font-stretch: normal;
+    font-width: normal;
 }
 
 }
@@ -92,7 +96,11 @@ pre {
     list-style-position: outside;
 
     li {
-      font-family: 'PT Sans Caption', sans-serif;
+
+        font-family: var(--main-family);
+        font-stretch: expanded;
+        font-width: expanded;
+
       padding-left: 0.5em;
 
       &::marker {

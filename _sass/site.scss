@@ -188,7 +188,11 @@ figure.__is_images_viewbox {
     font-style: normal;
     display: inline-block;
     // width: 100%;
-    font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+
+    font-family: var(--main-family);
+    font-stretch: expanded;
+    font-width: expanded;
+
   }
 
   figure {
@@ -235,7 +239,11 @@ div.verse {
   summary {
     // background-color: gray;
     color: #333;
-    font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+
+    font-family: var(--main-family);
+    font-stretch: expanded;
+    font-width: expanded;
+
     cursor: default;
 
     a, a:link, a:visited, a:active {
@@ -266,7 +274,11 @@ div.verse {
 
   summary {
     color: #333;
-    font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+
+    font-family: var(--main-family);
+    font-stretch: expanded;
+    font-width: expanded;
+
     cursor: default;
 
     &::before {
@@ -358,7 +370,11 @@ figure.__is_images_slide_figure {
     bottom: 0;
     left: 0;
     right: 0;
-    font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+
+    font-family: var(--main-family);
+    font-stretch: expanded;
+    font-width: expanded;
+
     font-weight: bold !important;
 
     text-align: center;
@@ -399,7 +415,11 @@ figure.__is_images_slide_figure {
 }
 
 .submatters {
-  font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+
+  font-family: var(--main-family);
+  font-stretch: expanded;
+  font-width: expanded;
+
   font-size: 1.6rem;
 
   .submatters {
@@ -409,7 +429,11 @@ figure.__is_images_slide_figure {
     list-style-position: outside;
 
     li {
-      font-family: 'PT Sans Caption', sans-serif;
+
+      font-family: var(--main-family);
+      font-stretch: expanded;
+      font-width: expanded;
+
       padding-left: 0.5em;
       margin-top: 0.6rem;
 
@@ -437,14 +461,15 @@ figure.__is_images_slide_figure {
 
 }
 
-.toc-matter {
-
+#toc.toc-matter {
+ul{
   li {
     &::marker {
       content: "\f02e";
+      font-weight: 400;
     }
   }
-
+}
 }
 
 :has(> section.module) {
@@ -524,15 +549,19 @@ figure.__is_images_slide_figure {
         color: #333;
         line-height: 1.3;
         text-decoration: none;
-        font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+
+        font-family: var(--main-family);
+        font-stretch: expanded;
+        font-width: expanded;
+
     }
 }
 
 .product-kind {
   &.printdirect, &.vsemayki, &.fun {
     ::before {
-      font-family: 'PT Mono', gmono, monospace;
-      font-size: 60%;
+      font-family: var(--code-family);
+      font-size: 70%;
       font-weight: bold;
       padding: 4px 5px;
       margin-right: 1em;
@@ -541,7 +570,11 @@ figure.__is_images_slide_figure {
       vertical-align: middle;
     }
     background-color: white;
-    font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+
+    font-family: var(--main-family);
+    font-stretch: expanded;
+    font-width: expanded;
+
     font-weight: normal;
     vertical-align: middle;
     text-indent: -2.3em;
@@ -569,8 +602,8 @@ figure.__is_images_slide_figure {
 
 span {
   &.printdirect, &.vsemayki, &.fun {
-    font-family: 'PT Mono', gmono, monospace;
-    font-size: 60%;
+    font-family: var(--code-family);
+    font-size: 70%;
     font-weight: bold;
     padding: 4px 5px;
     color: white;
@@ -602,7 +635,11 @@ select {
   border-radius: 10px;
   border-color: silver;
   border: none;
-  font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+
+  font-family: var(--main-family);
+  font-stretch: expanded;
+  font-width: expanded;
+
   font-weight: normal;
   font-size: 1rem;
   text-align: center;

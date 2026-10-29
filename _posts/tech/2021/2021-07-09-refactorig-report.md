@@ -67,8 +67,8 @@ tags:
 
 ### Бэкенд
 
-Сайт сделан на статическом генераторе **[Jekyll][jekyll]{:.img-icon-jekyll}** и размещен на **[GitHub Pages][pages]{:.img-icon-github}**,
-чтобы не платить за хостинг. Комментарии — **[Staticman][staticman]{:.img-icon-staticman}**, размещенный на **[Heroku][heroku]{:.img-icon-heroku}**
+Сайт сделан на статическом генераторе **[Jekyll][jekyll]{:.icon}** и размещен на **[GitHub Pages][pages]{:.icon}**,
+чтобы не платить за хостинг. Комментарии — **[Staticman][staticman]{:.icon}**, размещенный на **[Heroku][heroku]{:.icon}**
 также бесплатно. Собственно, бесплатность была для меня необходимым критерием при выборе технологии, поскольку блогом я не зарабатываю.
 
 {:.note.italic}
@@ -97,7 +97,7 @@ tags:
   который можно поднять и на своем сервере, но учитывая его сложность и системные требования, быстрым и легким такой переезд
   точно не назовешь.
 
-  Еще важное пожелание — *контроль версий*. **[Git][git]{:.img-icon-git}**, развертывание сайта из репозитория, человекочитаемая история
+  Еще важное пожелание — *контроль версий*. **[Git][git]{:.icon}**, развертывание сайта из репозитория, человекочитаемая история
   изменений, и так далее, и тому подобное.
 
   В общем, *вендор-лок* и сложность/невозможность *существенной* кастомизации делают готовые блог-платформы для меня не лучшим выбором.
@@ -117,14 +117,14 @@ tags:
   и отправил на сервер», а «написал, закоммитил, запушил» — публикация происходит автоматически при фиксации изменений, исходники
   в репозитории и сайт всегда синхронизированы, то есть не возникает ситуация, когда в репозиторий закоммитил, а опубликовать забыл,
   или, что еще хуже — опубликовал, не закоммитил, и в историю изменений реально работающая версия не попала. Аналогичным образом можно
-  организовать публикацию и через **[GitLab][gitlab]{:.img-icon-gitlab}** (там, впрочем, вариантов побольше, но первичный расчет все же
+  организовать публикацию и через **[GitLab][gitlab]{:.icon}** (там, впрочем, вариантов побольше, но первичный расчет все же
   на GitHub, поскольку я им давно активно пользуюсь). На собственном хостинге эти фазы будут разделены, но во-пер­вых, см. выше про первичный
   расчет, а во-вто­рых, можно и там такое организовать через [хуки Git][git-hooks].
 
   Второй важный аспект — это то, что Jekyll является [свободным ПО][fs-wiki], [его код открыт][jekyll-code] и опубликован
   под [ли­цен­зи­ей MIT][jekyll-mit]. Что, впрочем, характерно и для многих его аналогов с точностью до конкретной лицензии...
 
-  Менее существенно, но субъективно тоже приятно, что Jekyll написан на **[Ruby][ruby-lang]{:.img-icon-ruby}** — одном из моих любимых языков.
+  Менее существенно, но субъективно тоже приятно, что Jekyll написан на **[Ruby][ruby-lang]{:.icon}** — одном из моих любимых языков.
   Что означает реальную, а не гипотетическую возможность воспользоваться преимуществами open source с моей стороны. Реализую ли я ее —
   это отдельный  вопрос, однако мое знакомство с пакетной инфраструктурой Ruby — плагины Jekyll распространяются именно как гемы — явно мне
   помогло в его установке и настройке.
@@ -183,29 +183,29 @@ tags:
   получат не совсем то визуальное представление, что задумывалось, но спокойно смогут прочитать тексты и посмотреть картинки. А большинство
   увидит именно то, что и нужно, сразу адекватное их устройству, без скачивания (и исполнения) тонн ненужных скриптов совместимости.
 
-Мы пойдем третьим путем и будем использовать: **[HTML5][html5]{:.img-icon-html5}** ради семантических тегов, **[CSS3][css3]{:.img-icon-css3}**
-ради удобной верстки посредством `flex` и `grid`, а так­же **[JavaScript][js]{:.img-icon-javascript}** по ми­ни­муму[^js].
+Мы пойдем третьим путем и будем использовать: **[HTML5][html5]{:.icon.img-html5}** ради семантических тегов, **[CSS3][css3]{:.icon.img-css3}**
+ради удобной верстки посредством `flex` и `grid`, а так­же **[JavaScript][js]{:.icon.img-javascript}** по ми­ни­муму[^js].
 
 #### Внешние ресурсы
 
-Из таковых у меня подгружаются шрифты с **[Google Fonts][google-fonts]{:.img-icon-gf}** — это
-[свободно распространяемые шрифты **Paratype**{:.img-icon-paratype}][paratype] —
+Из таковых у меня подгружаются шрифты с **[Google Fonts][google-fonts]{:.icon}** — это
+[свободно распространяемые шрифты **Paratype**{:.icon}][paratype] —
 семейство PT Sans и PT Mo­no. На то есть две причины: во-пер­вых, на разных устройствах под разными операционными системами имеющиеся шрифты сильно разные,
 а во-вто­рых зачастую ужасные и не согласованные между собой. Мне же хочется, чтобы, скажем, примеры кода (моноширинным шрифтом) не выбивались по общему виду —
 метрикам, насыщенности и т.д. из основного текста. Аналогично согласованность желательна и для шрифтов заголовков с одной стороны, и сносок —
 с другой.
 
-Еще что касается шрифтов: также как веб-шрифт я подгружаю **[Font Awesome Free][fontawesome]{:.img-icon-fa}** — уже не снаружи, а копию на сайте.
+Еще что касается шрифтов: также как веб-шрифт я подгружаю **[Font Awesome Free][fontawesome]{:.icon}** — уже не снаружи, а копию на сайте.
 Этим шрифтом сделаны монохромные иконки в оформлении сайта. Цветные в основном тексте — это уже картинки (по возможности [SVG][svg]), набранные
 из разных источников[^devicon].
 
 Кроме того, из внешних источников подгружаются следующие, условно говоря, модули:
 
-* Счетчики — **[Goog­le Ana­ly­tics][analytics]{:.img-icon-analytics}** и **[Ян<span>­декс.​Мет­ри­ка</span>][metrica]{:.img-icon-metrica}**.
+* Счетчики — **[Goog­le Ana­ly­tics][analytics]{:.icon}** и **[Ян<span>­декс.​Мет­ри­ка</span>][metrica]{:.icon}**.
 
-* Поиск по сайту от **[Goog­le][gce]{:.img-icon-gce}**.
+* Поиск по сайту от **[Goog­le][gce]{:.icon}**.
 
-* Форма-попрошайка от **[Yoo­mo­ney][yoomoney]{:.img-icon-yoomoney}**[^yoomoney].
+* Форма-попрошайка от **[Yoo­mo­ney][yoomoney]{:.icon}**[^yoomoney].
 
 Они, конечно, тянут за собой много всякого, но все-таки полезные.
 
@@ -222,7 +222,7 @@ tags:
 
 Могу заметить, что никаких проблем с неиспользованием темы не обнаружилось. Собственно, движку без разницы, что обрабатывать.
 
-*Во-вторых*, язык шаблонов **[Liquid][liquid]{:.img-icon-liquid}** — это что-то с чем-то. И мне, честно говоря, не понятно,
+*Во-вторых*, язык шаблонов **[Liquid][liquid]{:.icon.img-liquid}** — это что-то с чем-то. И мне, честно говоря, не понятно,
 почему в Jekyll используется именно он, а не, например, [ERB][erb], идущий в комплекте с Ruby, на котором сам Jekyll написан... Возможно,
 дело в том, что ERB *слишком* богат — по сути это полноценный Ruby, встраиваемый в шаблоны. А у Ruby с точки зрения встраивания
 куда-либо есть один недостаток: невозможность сделать полностью изолированную песочницу. Хотя, на мой взгляд, имеющихся уровней
@@ -293,7 +293,7 @@ tags:
 
 #### Оглавление
 
-Очень полезный модуль **[allejo/jekyll-toc][jekyll-toc]{:.fa-icon-github}**, я даже в футере на него решил ссылку сделать, если
+Очень полезный модуль **[allejo/jekyll-toc][jekyll-toc]{:.icon}**, я даже в футере на него решил ссылку сделать, если
 вы читаете эту страницу на достаточно большом экране, обратите внимание на [соответствующий блок](#toc) в правом верхнем углу
 (куда его вписать на узких экранах, я пока не решил). Также рекомендую обратить внимание на его параметры, в частности `h_max`
 и `skip_no_ids`. Последний позволяет игнорировать заголовки без атрибута `id` (или с пустым), чего можно добиться в mark­down
@@ -363,13 +363,13 @@ tags:
 
 Чтобы упростить создание стилей для иконок я воспользовался структурами `map` и циклами SASS/SCSS, что можно посмотреть
 в исходниках в файле
-**[icons.scss](https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_sass/nova/icons.scss){:.fa-icon-github}**.
+**[icons.scss](https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_sass/nova/icons.scss){:.icon}**.
 Вообще, я был раньше знаком с SASS/SCSS, но как-то недооценивал, насколько это удобно и экономит усилия, *особенно при рефакторинге*.
 
 #### Стихи
 
 Собственно, все, что относится к верстке стихов, расположено в одном файле
-**[verse.scss](https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_sass/nova/content/verse.scss){:.fa-icon-github}**,
+**[verse.scss](https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_sass/nova/content/verse.scss){:.icon}**,
 и он небольшой. А ключевая часть выглядит так:
 
 {% highlight scss %}
@@ -430,23 +430,23 @@ pre {
 -----
 
 Сделал нынче таки кнопку возврата к началу страницы,
-см. **[topper.js](https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/assets/js/topper.js){:.fa-icon-github}**,
-**[topper.scss](https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_sass/nova/dyn/topper.scss){:.fa-icon-github}**
-и **[default.html:86-87](https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_layouts/nova/default.html#L86-L87){:.fa-icon-github}**.
+см. **[topper.js](https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/assets/js/topper.js){:.icon}**,
+**[topper.scss](https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_sass/nova/dyn/topper.scss){:.icon}**
+и **[default.html:86-87](https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_layouts/nova/default.html#L86-L87){:.icon}**.
 Очень уж не хватает на мобильном кнопки `[Home]`, да и на компьютере бывает удобнее мышкой ткнуть, когда просто читаешь что-то и колесиком скроллишь.
 
 В связи с этим познакомился с `position:sticky;`.
 
 -----
 
-На этом, наверное, все. Напомню, что *исходный код сайта открыт и доступен для изучения на **[GitHub][site-gh]{:.fa-icon-github}***. Если что-то в коде непонятно,
+На этом, наверное, все. Напомню, что *исходный код сайта открыт и доступен для изучения на **[GitHub][site-gh]{:.icon}***. Если что-то в коде непонятно,
 комментарии к этому посту — подходящее место для вопросов.
 
 [^last-comments]: На самом деле — не на всех... В разделе «{% include link.liquid stream='text' %}» я этот блок отключил как отвлекающий. Но это такой очень специальный раздел.
 
 [^js]: Сейчас у меня JS используется в двух местах: это обслуживание комментариев (там без него не получится, или получится крайне неадекватно,
        организовать ответы друг другу, и плюс попытка подтягивать обновленные комментарии в фоне) и кнопка «<span class="fas dark">&#xf35b;</span>»,
-       то есть «Вернуться в начало страницы». См. [comments.js](https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/assets/js/comments.js){:.fa-icon-github} и [topper.js](https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/assets/js/topper.js){:.fa-icon-github} соответственно.
+       то есть «Вернуться в начало страницы». См. [comments.js](https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/assets/js/comments.js){:.icon} и [topper.js](https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/assets/js/topper.js){:.icon} соответственно.
 
 [^devicon]: Впрочем, один из источников стоит особой благодарности — <https://devicon.dev/>.
 
@@ -456,19 +456,19 @@ pre {
                `github-pages`, который зафиксирует и версию Jekyll, и версии используемых плагинов. Иначе может получиться так, что прекрасно
                работающий локально сайт свалится на деплое.
 
-[^rec]: Пример рекурсии см. в [chain.liquid:3](https://github.com/shikhalev/shikhalev.github.io/blob/4581f645b090fa767625dbd3da690e47d3bfcb69/_includes/nova/utils/chain.liquid#L3){:.fa-icon-github} — там я рекурсивно получаю цепочку родительских категорий от текущей к корню.
+[^rec]: Пример рекурсии см. в [chain.liquid:3](https://github.com/shikhalev/shikhalev.github.io/blob/4581f645b090fa767625dbd3da690e47d3bfcb69/_includes/nova/utils/chain.liquid#L3){:.icon} — там я рекурсивно получаю цепочку родительских категорий от текущей к корню.
 
-[^ea]: Пример такого создания пустого массива см. в [last_comments.liquid:3](https://github.com/shikhalev/shikhalev.github.io/blob/4581f645b090fa767625dbd3da690e47d3bfcb69/_includes/nova/aside/last_comments.liquid#L3){:.fa-icon-github} — дело в том, что комментарии хранятся сгруппированные по постам, тогда как в данном месте мне нужно получить их общий список. Возможно, имеет смысл переделать саму схему хранения, но пока так.
+[^ea]: Пример такого создания пустого массива см. в [last_comments.liquid:3](https://github.com/shikhalev/shikhalev.github.io/blob/4581f645b090fa767625dbd3da690e47d3bfcb69/_includes/nova/aside/last_comments.liquid#L3){:.icon} — дело в том, что комментарии хранятся сгруппированные по постам, тогда как в данном месте мне нужно получить их общий список. Возможно, имеет смысл переделать саму схему хранения, но пока так.
 
-[^img]: См. исходники [image.liquid:39-50](https://github.com/shikhalev/shikhalev.github.io/blob/4581f645b090fa767625dbd3da690e47d3bfcb69/_includes/image.liquid#L39-L50){:.fa-icon-github}.
+[^img]: См. исходники [image.liquid:39-50](https://github.com/shikhalev/shikhalev.github.io/blob/4581f645b090fa767625dbd3da690e47d3bfcb69/_includes/image.liquid#L39-L50){:.icon}.
 
-[^cfg]: См. [файл в репозитории](https://github.com/shikhalev/shikhalev.github.io/blob/main/_config.yml){:.fa-icon-github}.
+[^cfg]: См. [файл в репозитории](https://github.com/shikhalev/shikhalev.github.io/blob/main/_config.yml){:.icon}.
 
 [^gm]: Пример внедрения гуглокарты см. в посте «{% include link.liquid post="_posts/blog/2021/2021-06-17-walk.md" %}».
 
-[^pp]: См. исходники [code.scss:10-17](https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_sass/nova/content/code.scss#L10-L17){:.fa-icon-github}.
+[^pp]: См. исходники [code.scss:10-17](https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_sass/nova/content/code.scss#L10-L17){:.icon}.
 
-[^water]: Сейчас не могу найти, откуда срисовывал, но практически то же самое тут: <https://csslayout.io/patterns/watermark/>. Как это выглядит у меня можно посмотреть в файлах: [watermark.scss](https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_sass/nova/dyn/watermark.scss){:.fa-icon-github} — стили, и, великом и ужасном [default.html:25-31](https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_layouts/nova/default.html#L25-L31){:.fa-icon-github} — разметку.
+[^water]: Сейчас не могу найти, откуда срисовывал, но практически то же самое тут: <https://csslayout.io/patterns/watermark/>. Как это выглядит у меня можно посмотреть в файлах: [watermark.scss](https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_sass/nova/dyn/watermark.scss){:.icon} — стили, и, великом и ужасном [default.html:25-31](https://github.com/shikhalev/shikhalev.github.io/blob/7725eab44ec440277e4830d070dcd1e4727a5fdb/_layouts/nova/default.html#L25-L31){:.icon} — разметку.
 
 [jekyll]: https://jekyllrb.com/ "Официальный сайт Jekyll"
 [pages]: https://pages.github.com/ "GitHub Pages"

@@ -16,7 +16,9 @@
   }
 
   .post-title {
-    font-family: $caption-font-family;
+    font-family: var(--main-family);
+    font-stretch: expanded;
+    font-width: expanded;
   }
 
   .box {
@@ -53,7 +55,11 @@
   }
 
   .meta {
-    font-family: $compact-font-family;
+
+    font-family: var(--main-family);
+    font-stretch: condensed;
+    font-width: condensed;
+
     font-size: $notes-font-size;
     color: $frame-color-dark;
     text-align: left;

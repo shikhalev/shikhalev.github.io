@@ -34,7 +34,7 @@
       <p class="meta">{{ item.date | date: site.date_format }} • {{ item.author | default: site.author }}</p>
 
       {%- if jekyll.environment == 'development' and item.recommend -%}
-        {%- assign h_cls = ' class="fa-icon-star"' -%}
+        {%- assign h_cls = ' class="fa fa-star"' -%}
       {%- else -%}
         {%- assign h_cls = '' -%}
       {%- endif -%}

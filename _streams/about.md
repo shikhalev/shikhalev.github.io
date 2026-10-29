@@ -20,18 +20,18 @@ date: 2021-01-01
 
 Программирую с двенадцати лет, профессионально, то есть за день­ги — с двадцати – два­д­ца­ти одного года (в любом случае,
 еще с прошлого тысячелетия). Языков и тех­но­ло­гий успел узнать много и разных. В последнее время из языков программирования
-предпочитаю **[C#][csharp]{:.img-icon-csharp}**, **[Ruby][ruby]{:.img-icon-ruby}** и **[Rust][rust]{:.img-icon-rust}**.
+предпочитаю **[C#][csharp]{:.icon.img-csharp}**, **[Ruby][ruby]{:.icon}** и **[Rust][rust]{:.icon}**.
 
-В качестве основной системы для себя использую **[Gen­too Li­nux][gentoo]{:.img-icon-gentoo}** со средой рабочего стола **[KDE][kde]{:.img-icon-kde}**, хотя знакомым,
-не специализирующимся в IT, рекомендую **[Li­nux Mint][mint]{:.img-icon-linux-mint}** (от сре­ды Cinnamon у меня очень хорошие впечатления, но все привычки
-уже заточены под KDE) или **[KDE Neon][neon]{:.img-icon-kde-neon}**. Вообще в целом предпочитаю Linux и свободное ПО везде, где это возможно.
+В качестве основной системы для себя использую **[Gen­too Li­nux][gentoo]{:.icon}** со средой рабочего стола **[KDE][kde]{:.icon}**, хотя знакомым,
+не специализирующимся в IT, рекомендую **[Li­nux Mint][mint]{:.icon}** (от сре­ды Cinnamon у меня очень хорошие впечатления, но все привычки
+уже заточены под KDE) или **[KDE Neon][neon]{:.icon}**. Вообще в целом предпочитаю Linux и свободное ПО везде, где это возможно.
 
-Мой профиль на GitHub: <a href="https://github.com/shikhalev" class="img-icon-github"><span style="font-weight:bold;">https://github.com/shi­kha­lev</span></a>
+Мой профиль на GitHub: <a href="https://github.com/shikhalev" class="icon"><span style="font-weight:bold;">https://github.com/shi­kha­lev</span></a>
 
 В качестве хобби — фотографирую. В основном птичек и вообще природу. Грибник. Не рыбак. Сейчас снимаю
-на **[<span>Canon EOS 77D</span>][77d]{:.img-icon-camera}** — подробнее, наверное, стоит отдельным постом...
+на **[<span>Canon EOS 77D</span>][77d]{:.icon.img-camera}** — подробнее, наверное, стоит отдельным постом...
 
-Мои фотографии можно посмотреть в Instagram — **<https://www.instagram.com/ivanshikhalev>{:.img-icon-instagram}**
+<!-- Мои фотографии можно посмотреть в Instagram — **<https://www.instagram.com/ivanshikhalev>{:.icon}** -->
 
 {:.note}
 Отдельно хочу заметить, что хотя и пишу довольно часто о фотографии и графике вообще, это именно хобби — я могу очень многого не знать,
@@ -39,7 +39,8 @@ date: 2021-01-01
 
 ## Контакты
 
-Для связи со мной для начала лучше всего использовать электронную почту — **<a class="img-icon-gmail" href="mailto:{{ site.email }}"><span>shi­kha­lev​@gmail.​com</span></a>**.
+Для связи со мной для начала лучше всего использовать электронную почту —
+**<a class="icon img-gmail" href="mailto:{{ site.email }}"><span>shi­kha­lev​@gmail.​com</span></a>**.
 А для вопросов по кон­к­рет­ным постам можно и нужно использовать комментарии прямо под ними.
 
 Впрочем, в блоке на правой панели есть и ссылки на соцсети, но они далеко не всегда удобней.
@@ -51,12 +52,10 @@ date: 2021-01-01
 а не бороться в каждом посте с нагромождениями стилей и скриптов, выданных площадкой же; ну, и в третью — просто
 «чтобы в одном месте» и с полной копией у меня на диске.
 
-Исходя из последнего и выбирал технологию — сайт на **[Jekyll][jekyll]{:.img-icon-jekyll}** с локальной копии я всегда смогу поднять в считанные
-часы, если с текущим хостингом что-то случится (сейчас это **[GitHub Pages][pages]{:.img-icon-github}**, ибо бесплатно).
+Исходя из последнего и выбирал технологию — сайт на **[Jekyll][jekyll]{:.icon}** с локальной копии я всегда смогу поднять в считанные
+часы, если с текущим хостингом что-то случится (сейчас это **[GitHub Pages][pages]{:.icon}**, ибо бесплатно).
 
-Исходники сайта можно посмотреть по адресу **[https://github.com/​<span>shi­kha­lev/​shi­kha­lev.​git­hub​.io</span>][source]{:.img-icon-github}**.
-
-[icon]: /assets/img/icon.jpg
+Исходники сайта можно посмотреть по адресу **[https://github.com/​<span>shi­kha­lev/​shi­kha­lev.​git­hub​.io</span>][source]{:.icon}**.
 
 [csharp]: https://docs.microsoft.com/ru-ru/dotnet/csharp/
 [ruby]: https://www.ruby-lang.org/ru/

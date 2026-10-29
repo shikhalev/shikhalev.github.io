@@ -1,10 +1,12 @@
 @use "sass:color";
 @use "nova/preset" as *;
-@use "nova/icons" as *;
+// @use "nova/icons" as *;
 
 .subcategories {
   color: $frame-color-dark;
-  font-family: $caption-font-family;
+  font-family: var(--main-family);
+  font-stretch: expanded;
+  font-width: expanded;
   line-height: 1.5;
   columns: 2;
 
@@ -23,10 +25,10 @@
     break-inside: avoid;
     page-break-inside: avoid;
 
-    @extend .fa-icon-li-folder-open;
+    // - @extend .fa-icon-li-folder-open;
   }
 
-  @include icon-fix;
+  // @include icon-fix;
 
   ul {
     padding-left: 35px;
@@ -81,9 +83,13 @@
       display: inline-block;
       word-wrap: nowrap;
 
-      @extend .fa-icon-tag;
-
       &::before {
+        content: '\f02b';
+        font-family: var(--fa-solid-family);
+        font-weight: var(--fa-solid-weight);
+        display: inline-block;
+        opacity: 0.7;
+        margin-right: 0.4em;
         font-size: 80%;
         width: 0.8em;
         color: $frame-color-light;
@@ -100,13 +106,23 @@
   padding: 3px 7px 2px;
   border-radius: 5px;
   font-size: $base-font-size * 1.2;
-  font-family: $compact-font-family;
+
+  font-family: var(--main-family);
+  font-stretch: condensed;
+  font-width: condensed;
+
   border: 1px solid $frame-color-light;
   box-shadow: $base-shadow $frame-color-light;
 
   a {
-    @extend .fa-icon-rss-square;
     &::before {
+      content: '\f143';
+      font-family: var(--fa-solid-family);
+      font-weight: var(--fa-solid-weight);
+      display: inline-block;
+      opacity: 0.7;
+      margin-right: 0.3em;
+
       color: $highlight-color;
     }
   }

@@ -2,18 +2,12 @@
 
 @use "sass:color";
 
-$base-font-size: 16px !default;
+$base-font-size: 1rem !default;
 $small-font-size: 15px !default;
 $notes-font-size: 14px !default;
 $index-font-size: 12px !default;
 $header-font-size: 24px !default;
 $share-font-size: 18px !default;
-
-$base-font-family: "PT Sans", gsans, Arial, sans-serif !default;
-$caption-font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif !default;
-$compact-font-family: "PT Sans Narrow", gnarrow, "Arial Narrow", sans-serif !default;
-$mono-font-family: "PT Mono", gmono, monospace !default;
-$far-font-family: "Font Awesome 5 Free";
 
 $base-font-color: #444;
 $base-gray-color: color.adjust($base-font-color, $lightness: 50%) !default;

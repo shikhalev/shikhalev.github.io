@@ -55,15 +55,19 @@
         color: #333;
         line-height: 1.3;
         text-decoration: none;
-        font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+
+        font-family: var(--main-family);
+        font-stretch: expanded;
+        font-width: expanded;
+
     }
 }
 
 .product-kind {
   &.printdirect, &.vsemayki, &.fun {
     ::before {
-      font-family: 'PT Mono', gmono, monospace;
-      font-size: 60%;
+      font-family: var(--code-family);
+      font-size: 70%;
       font-weight: bold;
       padding: 4px 5px;
       margin-right: 1em;
@@ -72,7 +76,11 @@
       vertical-align: middle;
     }
     background-color: white;
-    font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+
+    font-family: var(--main-family);
+    font-stretch: expanded;
+    font-width: expanded;
+
     font-weight: normal;
     vertical-align: middle;
     text-indent: -2.3em;
@@ -100,8 +108,8 @@
 
 span {
   &.printdirect, &.vsemayki, &.fun {
-    font-family: 'PT Mono', gmono, monospace;
-    font-size: 60%;
+    font-family: var(--code-family);
+    font-size: 70%;
     font-weight: bold;
     padding: 4px 5px;
     color: white;
@@ -133,7 +141,11 @@ select {
   border-radius: 10px;
   border-color: silver;
   border: none;
-  font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+
+  font-family: var(--main-family);
+  font-stretch: expanded;
+  font-width: expanded;
+
   font-weight: normal;
   font-size: 1rem;
   text-align: center;

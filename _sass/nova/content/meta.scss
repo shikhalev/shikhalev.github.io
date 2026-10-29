@@ -1,5 +1,5 @@
 @use "nova/preset" as *;
-@use "nova/icons" as *;
+// @use "nova/icons" as *;
 
 aside.categories {
   a {
@@ -21,7 +21,9 @@ aside.categories {
 h1 + aside + .meta {
   margin-bottom: 2em;
 
-  font-family: $caption-font-family;
+  font-family: var(--main-family);
+  font-stretch: expanded;
+  font-width: expanded;
   font-size: $small-font-size;
 }
 
@@ -31,7 +33,9 @@ h1 + aside + .meta + .tags {
   margin-top: -1.5em;
   margin-bottom: 2em;
 
-  font-family: $caption-font-family;
+  font-family: var(--main-family);
+  font-stretch: expanded;
+  font-width: expanded;
   font-size: $small-font-size;
 }
 
@@ -44,7 +48,12 @@ aside.tags {
     }
 
     &::before {
-      @extend .fa-icon-tag;
+      content: '\f02b';
+      font-family: var(--fa-solid-family);
+      font-weight: var(--fa-solid-weight);
+      display: inline-block;
+      opacity: 0.7;
+      margin-right: 0.3em;
       font-size: 80%;
       color: $frame-color-light;
     }

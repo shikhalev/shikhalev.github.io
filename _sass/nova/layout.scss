@@ -1,5 +1,6 @@
+@use "sass:string";
 @use "nova/preset" as *;
-@use "nova/icons" as *;
+// @use "nova/icons" as *;
 
 body {
   padding: 0px;
@@ -115,7 +116,9 @@ body {
 #site-header {
   grid-area: header;
   font-size: $header-font-size;
-  font-family: $caption-font-family;
+  font-family: var(--main-family);
+  font-stretch: expanded;
+  font-width: expanded;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 5px;
@@ -156,7 +159,9 @@ body {
   }
 
   .wrapper {
-    font-family: $caption-font-family;
+    font-family: var(--main-family);
+    font-stretch: expanded;
+    font-width: expanded;
 
     #navy-check {
       display: none;
@@ -262,7 +267,10 @@ body {
 
   padding: 5px;
 
-  font-family: $compact-font-family;
+  font-family: var(--main-family);
+  font-stretch: condensed;
+  font-width: condensed;
+
   font-size: $small-font-size;
   color: $frame-color-dark;
 
@@ -302,7 +310,9 @@ body {
 
   .gsc-input {
     padding-right: 5px;
-    font-family: $base-font-family;
+    font-family: var(--main-family);
+    font-stretch: condensed;
+    font-width: condensed;
     color: $frame-color-dark;
   }
 
@@ -341,18 +351,41 @@ aside {
   }
 }
 
+@mixin fa-glyph($code, $style: 'regular') {
+  content: #{string.unquote('"\\#{$code}"')};
+  @if $style == 'regular' {
+    font-family: var(--fa-regular-family);
+    font-weight: var(--fa-regular-weight);
+  } @else if $style == 'solid' {
+    font-family: var(--fa-solid-family);
+    font-weight: var(--fa-solid-weight);
+  } @else if $style == 'brands' {
+    font-family: var(--fa-brands-family);
+    font-weight: var(--fa-brands-weight);
+  }
+  color: rgb(from var(--navigation-color, #3e5662) r g b / 0.7);
+}
+
 #toc {
   grid-area: toc;
 
   padding: 10px;
 
   ul {
-    font-family: $compact-font-family;
+
+    font-family: var(--main-family);
+    font-stretch: condensed;
+    font-width: condensed;
+
     padding-left: 20px;
 
     li::marker {
-      @extend .fa-li-include-hashtag;
+      @include fa-glyph(0023, solid);
     }
+  }
+
+  li {
+    padding-left: 0.3em;
   }
 
   &.toc-stream {
@@ -361,12 +394,12 @@ aside {
         ul {
           li {
             &::marker {
-              @extend .fa-li-include-file-alt;
+              @include fa-glyph(f15c);
             }
 
             ul {
               li::marker {
-                @extend .fa-li-include-bookmark;
+                @include fa-glyph(f02e);
               }
             }
           }
@@ -378,7 +411,7 @@ aside {
   &.toc-post, &.toc-page {
     ul {
       li::marker {
-        @extend .fa-li-include-bookmark;
+        @include fa-glyph(f02e);
       }
     }
   }
@@ -387,7 +420,7 @@ aside {
     ul {
       li {
         &::marker {
-          @extend .fa-li-include-calendar-alt;
+          @include fa-glyph(f073);
         }
         ul {
           columns: 2;
@@ -405,14 +438,18 @@ aside {
   grid-area: backs;
   padding: 10px;
   ul {
-    font-family: $compact-font-family;
+
+    font-family: var(--main-family);
+    font-stretch: condensed;
+    font-width: condensed;
+
     padding-left: 20px;
 
     li.back-page::marker {
-      @extend .fa-li-include-file;
+      // - @extend .fa-li-include-file;
     }
     li.back-post::marker {
-      @extend .fa-li-include-file-alt;
+      // - @extend .fa-li-include-file-alt;
     }
   }
 
@@ -458,11 +495,15 @@ aside {
 
   padding: 10px;
 
+  li {
+    padding-left: 0.3em;
+  }
+
   ul {
     padding-left: 20px;
 
     li::marker {
-      @extend .fa-li-include-rss-square;
+      @include fa-glyph(f143, solid);
       color: $highlight-color;
     }
 
@@ -481,7 +522,9 @@ aside {
   padding: 10px;
 
   .person {
-    font-family: $caption-font-family;
+    font-family: var(--main-family);
+    font-stretch: expanded;
+    font-width: expanded;
     margin-bottom: 5px;
   }
 
@@ -490,7 +533,9 @@ aside {
   }
 
   p.social {
-    @extend .fab;
+    font-family: var(--fa-brands-family);
+    font-weight: var(--fa-brands-weight);
+
     margin-top: 10px;
     font-size: $share-font-size;
 
@@ -518,7 +563,10 @@ aside {
 #sidebar {
   grid-area: extra;
   padding: 10px;
-  font-family: $compact-font-family;
+
+  font-family: var(--main-family);
+  font-stretch: condensed;
+  font-width: condensed;
 
   h4 {
     margin-bottom: 0px;

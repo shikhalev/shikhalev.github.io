@@ -1,0 +1,146 @@
+/* Iosevka Sans v34.9.0 */
+
+@font-face {
+	font-family: 'Iosevka Sans Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+  font-width: normal;
+  font-style: normal;
+	src: url('/css/fonts/iosevka-sans/IosevkaSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Iosevka Sans Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: expanded;
+  font-width: expanded;
+  font-style: normal;
+	src: url('/css/fonts/iosevka-sans/IosevkaSans-Expanded.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Iosevka Sans Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: condensed;
+  font-width: condensed;
+  font-style: normal;
+	src: url('/css/fonts/iosevka-sans/IosevkaSans-Condensed.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Iosevka Sans Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+  font-width: normal;
+  font-style: italic;
+	src: url('/css/fonts/iosevka-sans/IosevkaSans-Italic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Iosevka Sans Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: expanded;
+  font-width: expanded;
+  font-style: italic;
+	src: url('/css/fonts/iosevka-sans/IosevkaSans-ExpandedItalic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Iosevka Sans Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: condensed;
+  font-width: condensed;
+  font-style: italic;
+	src: url('/css/fonts/iosevka-sans/IosevkaSans-CondensedItalic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Iosevka Sans Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+  font-width: normal;
+  font-style: normal;
+	src: url('/css/fonts/iosevka-sans/IosevkaSans-Bold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Iosevka Sans Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: expanded;
+  font-width: expanded;
+  font-style: normal;
+	src: url('/css/fonts/iosevka-sans/IosevkaSans-ExpandedBold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Iosevka Sans Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: condensed;
+  font-width: condensed;
+  font-style: normal;
+	src: url('/css/fonts/iosevka-sans/IosevkaSans-CondensedBold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Iosevka Sans Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+  font-width: normal;
+  font-style: italic;
+	src: url('/css/fonts/iosevka-sans/IosevkaSans-BoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Iosevka Sans Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: expanded;
+  font-width: expanded;
+  font-style: italic;
+	src: url('/css/fonts/iosevka-sans/IosevkaSans-ExpandedBoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Iosevka Sans Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: condensed;
+  font-width: condensed;
+  font-style: italic;
+	src: url('/css/fonts/iosevka-sans/IosevkaSans-CondensedBoldItalic.woff2') format('woff2');
+}
+
+:root {
+  --iosevka-sans-family: 'Iosevka Sans Web';
+  --main-family: var(--iosevka-sans-family), ui-sans-serif, system-ui, sans-serif;
+	--figcaption-family: var(--iosevka-sans-family);
+	--figcaption-stretch: expanded;
+}
+
+.main-font {
+  font-family: var(--main-family);
+  font-stretch: normal;
+  font-width: normal;
+}
+
+.caption-font {
+  font-family: var(--main-family);
+  font-stretch: expanded;
+  font-width: expanded;
+}
+
+.note-font {
+  font-family: var(--main-family);
+  font-stretch: condensed;
+  font-width: condensed;
+}

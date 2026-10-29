@@ -4,6 +4,6 @@ parent: home
 title: Публикации
 description: Публикации в СМИ
 recommendations: false
-icon: university
+icon: pub
 order_no: 5
 ---

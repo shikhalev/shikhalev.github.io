@@ -18,7 +18,11 @@
 
     .meta {
       font-size: $small-font-size;
-      font-family: $compact-font-family;
+
+      font-family: var(--main-family);
+      font-stretch: condensed;
+      font-width: condensed;
+
     }
 
     dl {

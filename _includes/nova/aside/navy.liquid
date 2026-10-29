@@ -18,7 +18,7 @@
         {%- endfor -%}
       {%- endif -%}
       {%- if item and item.title -%}
-        <a class="navy-item fa-icon-{{- item.icon -}}" href="{{- item.url | relative_url -}}">{{- item.short | default: item.title | escape -}}</a>
+        <a class="navy-item fa fa-{{- item.icon -}}" href="{{- item.url | relative_url -}}">{{- item.short | default: item.title | escape -}}</a>
       {%- endif -%}
     {%- endfor -%}
   </div>

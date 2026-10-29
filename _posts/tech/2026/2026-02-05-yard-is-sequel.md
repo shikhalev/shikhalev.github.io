@@ -17,7 +17,7 @@ is_images:
 {: style="border-radius:25px;" }
 ![КДПВ сгенерирована по запросу «(yard) is (sequel) in winter fantasy style, detailed eyes»](_src/2026/02/yard-is-sequel.jpg){: right width="380" style="border-radius:25px;" }
 
-Набросал предварительную версию [YARD][yd]-плагина для автодокументирования [Sequel][sq]-моделей — **[yard-is-sequel][gh]{:.img-icon-github}**.
+Набросал предварительную версию [YARD][yd]-плагина для автодокументирования [Sequel][sq]-моделей — **[yard-is-sequel][gh]{:.icon}**.
 Су­щес­т­ву­ю­щий [`yard-sequel`][old] с современными версиями YARD/Ruby/Sequel не работает.
 
 Мой вариант, конечно, не может пока похвастаться полнофункциональностью (версия 0.8.0 — это ранняя альфа), но кое-что самое важное умеет:

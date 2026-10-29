@@ -14,17 +14,17 @@ image: _src/2026/08/22/hook.png
 announce: true
 ---
 
-## [jekyll-is-images][jis-images]{:.img-icon-github}
+## [jekyll-is-images][jis-images]{:.icon}
 
-Сначала коротко про **[jekyll-is-images][jis-images]{:.img-icon-github}**. По срав­не­нию с со­сто­я­ни­ем на [прош­лый пост][previous] в ос­нов­ном
+Сначала коротко про **[jekyll-is-images][jis-images]{:.icon}**. По срав­не­нию с со­сто­я­ни­ем на [прош­лый пост][previous] в ос­нов­ном
 произошло много мелких правок мелких багов, из от­но­си­тель­но су­щес­т­вен­но­го — довел до ума работу галерей в ре­жи­ме слайд-шоу (впрочем, и там
-есть куда расти). А третью цифру я поднял при сме­не зависимости с [is-kramdown-hooked][isk-hooked]{:.img-icon-github}
-на **[jekyll-is-hookdown][jis-hookdown]{:.img-icon-github}**, о ко­то­ром и поговорим далее. Это повлияло на то, что следует указывать
+есть куда расти). А третью цифру я поднял при сме­не зависимости с [is-kramdown-hooked][isk-hooked]{:.icon}
+на **[jekyll-is-hookdown][jis-hookdown]{:.icon}**, о ко­то­ром и поговорим далее. Это повлияло на то, что следует указывать
 в `_config.yml` — вместо `input: ISKram` в под­раз­де­ле `kramdown` следует указывать `markdown: Hookdown` в кор­не конфига. А под­раз­дел
 `kramdown` остается полностью рабочим, и там можно указывать любой `input`, на­при­мер — `GFM`[^GFM] (что я и собираюсь сделать на сай­те
 в бли­жай­шее время).
 
-## [jekyll-is-hookdown][jis-hookdown]{:.img-icon-github}
+## [jekyll-is-hookdown][jis-hookdown]{:.icon}
 
 {: style="border-radius:15px;" }
 ![Сгенерированная картинка чисто для красоты](_src/2026/08/22/hook.png){: right format="avif" width="320" up="20" style="border-radius:15px;" }
@@ -45,7 +45,7 @@ announce: true
 
 Небольшое историческое отступление
 
-: Сначала я запихнул хук внутрь собственно Kramdown через кастомный пар­сер — в ге­ме [is-kramdown-hooked][isk-hooked]{:.img-icon-github}.
+: Сначала я запихнул хук внутрь собственно Kramdown через кастомный пар­сер — в ге­ме [is-kramdown-hooked][isk-hooked]{:.icon}.
   Причем это решение не тре­бо­ва­ло зависимости от Je­kyll, но — обратная сторона медали — и не осо­бо-то интегрировалось с сис­те­мой хуков в Je­kyll.
   Кроме того, использование кас­том­но­го пар­се­ра не поз­во­ля­ло использовать другие кастомные пар­се­ры...
 
@@ -102,7 +102,7 @@ end
 + По **jekyll-is-hookdown** я не вижу направлений для расширения функциональности без потери логики. Буду писать документацию и править баги, если
   вдруг появятся.
 
-+ По **jekyll-is-images** планов полно, приглашаю в **[Issues][jis-images-issues]{:.img-icon-github}**.
++ По **jekyll-is-images** планов полно, приглашаю в **[Issues][jis-images-issues]{:.icon}**.
 
 + **is-kramdown-hooked** отправится в архив.
 

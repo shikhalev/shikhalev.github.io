@@ -5,7 +5,7 @@ title: «Системный администратор»
 description: Публикации в журнале «Системный администратор»
 order_no: 1
 recommendations: false
-icon: university
+icon: pub
 small: true
 date: 2021-01-01
 ---

@@ -1,0 +1,70 @@
+/* Iosevka Mono Sans v34.9.0 */
+
+@font-face {
+	font-family: 'Iosevka Mono Sans Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+  font-width: normal;
+  font-style: normal;
+	src: url('/css/fonts/iosevka-mono/IosevkaMonoSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Iosevka Mono Sans Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: expanded;
+  font-width: expanded;
+  font-style: normal;
+	src: url('/css/fonts/iosevka-mono/IosevkaMonoSans-Expanded.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Iosevka Mono Sans Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: condensed;
+  font-width: condensed;
+  font-style: normal;
+	src: url('/css/fonts/iosevka-mono/IosevkaMonoSans-Condensed.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Iosevka Mono Sans Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+  font-width: normal;
+  font-style: italic;
+	src: url('/css/fonts/iosevka-mono/IosevkaMonoSans-Italic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Iosevka Mono Sans Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+  font-width: normal;
+  font-style: normal;
+	src: url('/css/fonts/iosevka-mono/IosevkaMonoSans-Bold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Iosevka Mono Sans Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+  font-width: normal;
+  font-style: italic;
+	src: url('/css/fonts/iosevka-mono/IosevkaMonoSans-BoldItalic.woff2') format('woff2');
+}
+
+:root {
+  --iosevka-mono-family: 'Iosevka Mono Sans Web';
+  --code-family: var(--iosevka-mono-family), ui-monospace, monospace;
+}
+
+.code-font {
+  font-family: var(--code-family);
+}

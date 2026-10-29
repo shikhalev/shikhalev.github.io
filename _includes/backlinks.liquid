@@ -36,7 +36,7 @@
     {%- if include.header_level -%}
       <h{{- include.header_level -}}>{{- include.header_title | default: 'Ссылки сюда' -}}</h{{- include.header_level -}}>
     {%- endif -%}
-    <ul>
+    <ul class="fa">
     {%- for pp in list -%}
       {%- comment -%}
       {%- if pp.date -%}
@@ -46,7 +46,7 @@
       {%- endif -%}
       {%- endcomment -%}
       {%- assign icon = pp.icon | default: 'file' -%}
-      <li class="fa-icon-li-{{- icon -}}"><a href="{{- pp.url | relative_url -}}" title="{{- pp.description | default: pp.title -}}">{{- pp.title | default: pp.path -}}</a></li>
+      <li class="fa-{{- icon -}}"><a href="{{- pp.url | relative_url -}}" title="{{- pp.description | default: pp.title -}}">{{- pp.title | default: pp.path -}}</a></li>
     {%- endfor -%}
     </ul>
     </aside>

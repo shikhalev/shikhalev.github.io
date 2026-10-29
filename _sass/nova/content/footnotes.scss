@@ -1,11 +1,21 @@
 @use "nova/preset" as *;
 
-a.footnote::after {
+a.footnote {
+
+  font-stretch: condensed;
+  font-width: condensed;
+
+&::after {
   content: ")";
+}
 }
 
 .footnotes {
-  font-family: $compact-font-family;
+
+  font-family: var(--main-family);
+  font-stretch: condensed;
+  font-width: condensed;
+
   font-size: $small-font-size;
 
   padding-top: 10px;

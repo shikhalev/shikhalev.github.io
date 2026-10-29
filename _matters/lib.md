@@ -1,11 +1,11 @@
 ---
 title: Книжная полка (большие тексты)
 short: Библиотека
-icon: university
+icon: pub
 date: 2025-10-26
 ---
 
-## [darktable]({%- link _matters/lib/darktable.md -%}){:.img-icon-darktable}
+## [darktable]({%- link _matters/lib/darktable.md -%}){:.icon .img-darktable}
 
 <section class="booktoc">
 
