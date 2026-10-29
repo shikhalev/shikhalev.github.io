@@ -1,0 +1,4 @@
+@layer theme, plugins, site;
+
+@import url(/css/fonts.css) layer(theme);
+@import url(/css/icons.css) layer(plugins);

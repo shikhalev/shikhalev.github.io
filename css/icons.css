@@ -59,7 +59,7 @@
   --icon-shift: -0.125em;
 }
 
-.img-exiftool, :where(a[href*="exiftool.org"]) {
+.img-exiftool, :where(a[href*="exiftool.org"]), :where(a[href*="exiftool.sourceforge.net"]) {
   --icon-image: url("/css/icons/exiftool.svg");
   --icon-width: 0.95em;
   --icon-height: 1em;
@@ -427,7 +427,7 @@
   --icon-shift: -0.125em;
 }
 
-.img-vsemayki, :where(a[href*="vsemayki.ru"]) {
+.img-vsemayki, :where(a[href*="vsemayki.ru"]), :where(a[href*="vsemaykishop.ru"]) {
   --icon-image: url("/css/icons/vsemayki.png");
   --icon-width: 1em;
   --icon-height: 1em;
@@ -462,6 +462,14 @@
 .img-yoomoney, :where(a[href*="yoomoney.ru"]) {
   --icon-image: url("/css/icons/io.svg");
   --icon-width: 1.4em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
+.img-youtube, :where(a[href*="youtube.com"]), :where(a[href*="youtu.be"]) {
+  --icon-image: url("/css/icons/youtube.svg");
+  --icon-width: 1.43em;
   --icon-height: 1em;
   --icon-margin: 0.2em;
   --icon-shift: -0.125em;

@@ -11,7 +11,7 @@
   <link rel="icon" href="https://shikhalev.org/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="/assets/styles.css" type="text/css">
-  <link rel="stylesheet" href="/css/icons.css" type="text/css">
+  <link rel="stylesheet" href="/css/main.css" type="text/css">
   
   <link rel="stylesheet" href="/assets/local.css" type="text/css">
   
@@ -74,8 +74,8 @@
 </script>
 
 <!-- jekyll-is-images plugin stuff -->
-<link rel="stylesheet" href="/css/is-images-200-1920-0.8.2.8.css" />
-<script type="module" src="/js/is-images-0.8.2.8.js"></script>
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.2.10.css" />
+<script type="module" src="/js/is-images-0.8.2.10.js"></script>
 <!-- end of jekyll-is-images stuff -->
 
 </head>
@@ -97,17 +97,17 @@
   <label for="navy-check">
     <span id="menu-icon" class="fas">&#xf0c9;</span>
   </label>
-  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-credit-card" href="/merch/">Мерч</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+  <div id="navy-menu"><a class="navy-item fa fa-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa fa-camera" href="/photo/">Фото</a><a class="navy-item fa fa-newspaper" href="/life/">Жизнь</a><a class="navy-item fa fa-feather" href="/text/">Тексты</a><a class="navy-item fa fa-credit-card" href="/merch/">Мерч</a><a class="navy-item fa fa-id-card" href="/about/">О себе</a></div>
 </div></nav>
 
 <main id="main"><aside class="categories">
-  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a></aside>
+  <a class="fa fa-home" href="/" title="Главная страница сайта"></a>​<a class="fa fa-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa fa-social" href="/life/social/" title="Заметки на общественные темы">Общество</a></aside>
 <article class="layout-stream" itemscope itemtype="https://schema.org/Blog"><header class="page-header"><h1 class="title-stream" itemprop="name headline">Общество</h1><p class="description" itemprop="description">Заметки на общественные темы</p></header>
 
 
   <h2 id="rubricator">
 <a class="anchor" href="#rubricator" aria-hidden="true"><span class="octicon octicon-link"></span></a>Рубрикатор</h2>
-  <div class="subcategories"><ul><li class="fa-icon-li-bullhorn">
+  <div class="subcategories"><ul class="fa"><li class="fa-bullhorn">
       <a href="/life/social/politics/" title="Посты о политике">Политика (28)</a>
 </li></ul></div>
 
@@ -149,7 +149,7 @@
 
       
       
-        <p class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-globe" href="/tech/web/" title="HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.">Web</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a></p>
+        <p class="meta">​<a class="fa fa-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa fa-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa fa-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa fa-globe" href="/tech/web/" title="HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.">Web</a>​<a class="fa fa-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>​<a class="fa fa-social" href="/life/social/" title="Заметки на общественные темы">Общество</a></p>
       
       <p class="meta">2025.12.12 • Иван Шихалев</p>
 <h3 id="tech-2025-12-inat-channel-html">
@@ -164,11 +164,11 @@
 </figure>
 <h4 id="анонс">Анонс</h4>
 
-<p>Написал скрипт для автопостинга выборок из <strong><a href="https://www.inaturalist.org/" class="img-icon-inaturalist">iNaturalist</a></strong> в tg-каналы. Скрипт делает выборку по произвольно
+<p>Написал скрипт для автопостинга выборок из <strong><a href="https://www.inaturalist.org/" class="icon">iNaturalist</a></strong> в tg-каналы. Скрипт делает выборку по произвольно
 сконфигурированным параметрам (которые, разумеется, должны поддерживаться iNaturalist API), затем берет случайное наблюдение, постит его,
 а остальные складывает в пул, который будет задействован, если свежие кончатся. Это если коротко.</p>
 
-<p>Более подробно, как это все работает, а главное — как настраивается, я описал в <a href="https://github.com/inat-get/inat-channel/blob/main/README.md">README</a> проекта <strong><a href="https://github.com/inat-get/inat-channel" class="img-icon-github">inat-get/inat-channel</a></strong>.
+<p>Более подробно, как это все работает, а главное — как настраивается, я описал в <a href="https://github.com/inat-get/inat-channel/blob/main/README.md">README</a> проекта <strong><a href="https://github.com/inat-get/inat-channel" class="icon">inat-get/inat-channel</a></strong>.
 В том числе и <a href="https://github.com/inat-get/inat-channel/blob/main/README-ru.md">на русском</a>. Здесь пара моментов:</p>
 
 <ul>
@@ -186,7 +186,7 @@
 которые хранятся в JSON-файлах, сохранялись в репозитории между сеансами.</p>
   </li>
   <li>
-    <p>Используется <a href="https://api.inaturalist.org/v2/docs/" class="img-icon-inaturalist">iNaturalist API <strong>v2</strong></a>, которое находится в ранней бете и может поломаться. Однако, на первой версии
+    <p>Используется <a href="https://api.inaturalist.org/v2/docs/" class="icon">iNaturalist API <strong>v2</strong></a>, которое находится в ранней бете и может поломаться. Однако, на первой версии
 пришлось бы вытягивать в десятки, если не в сотни раз бо́льшие объемы данных, что малоприемлемо.</p>
   </li>
 </ul>
@@ -197,18 +197,18 @@
 
 <ul>
   <li>
-    <p>Во-первых, я оживил канал <strong>«<a href="https://t.me/urals_nature" class="img-icon-tg wrapable">Природа Урала — наблюдения с iNa­tu­ra­list</a>»</strong>. Там, напомню, наблюдения
+    <p>Во-первых, я оживил канал <strong>«<a href="https://t.me/urals_nature" class="icon">Природа Урала — наблюдения с iNa­tu­ra­list</a>»</strong>. Там, напомню, наблюдения
 со всего Урала и прилегающих районов — от Оренбуржья до ЯНАО. Ни один регион не входит в выборку целиком, только отдельные районы, относящиеся
 непосредственно к Уральским горам, или прилегающие. В канале выходит до четырех постов в день по разным группам таксонов.</p>
 
     <p>Все настройки и workflow
-для Actions доступны в ре­по­зи­то­рии <strong><a href="https://github.com/inat-get/channel-ural" class="img-icon-github">inat-get/channel-ural</a></strong>.</p>
+для Actions доступны в ре­по­зи­то­рии <strong><a href="https://github.com/inat-get/channel-ural" class="icon">inat-get/channel-ural</a></strong>.</p>
   </li>
   <li>
-    <p>Во-вторых, для проекта <strong>«<a href="https://www.inaturalist.org/projects/bioraznoobrazie-rayonov-sverdlovskoy-oblasti" class="img-icon-inaturalist wrapable">Биоразнообразие районов Свердловской области</a>»</strong> тоже завел канал,
-под немудреным названием <strong>«<a href="https://t.me/inat_sverdlobl" class="img-icon-tg wrapable">Био­раз­но­об­ра­зие Свердловской области в TG</a>»</strong>. Там один пост в день (да и выборка поменьше).</p>
+    <p>Во-вторых, для проекта <strong>«<a href="https://www.inaturalist.org/projects/bioraznoobrazie-rayonov-sverdlovskoy-oblasti" class="icon">Биоразнообразие районов Свердловской области</a>»</strong> тоже завел канал,
+под немудреным названием <strong>«<a href="https://t.me/inat_sverdlobl" class="icon">Био­раз­но­об­ра­зие Свердловской области в TG</a>»</strong>. Там один пост в день (да и выборка поменьше).</p>
 
-    <p>Все его настройки и workflow также доступны на GitHub — <strong><a href="https://github.com/inat-get/channel-sverdlobl" class="img-icon-github wrapable">inat-get/channel-sverdlobl</a></strong>.</p>
+    <p>Все его настройки и workflow также доступны на GitHub — <strong><a href="https://github.com/inat-get/channel-sverdlobl" class="icon">inat-get/channel-sverdlobl</a></strong>.</p>
   </li>
 </ul>
 
@@ -231,7 +231,7 @@
 
       
       
-        <p class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a>​<a class="fa-icon-yin-yang" href="/life/psi/" title="Заметки на психологические темы (не научные)">Психология</a>​<a class="fa-icon-brain" href="/life/psi/mind/" title="Заметки о том, как мы думаем">Мышление</a></p>
+        <p class="meta">​<a class="fa fa-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa fa-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa fa-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa fa-social" href="/life/social/" title="Заметки на общественные темы">Общество</a>​<a class="fa fa-yin-yang" href="/life/psi/" title="Заметки на психологические темы (не научные)">Психология</a>​<a class="fa fa-brain" href="/life/psi/mind/" title="Заметки о том, как мы думаем">Мышление</a></p>
       
       <p class="meta">2025.11.21 • Иван Шихалев</p>
 <h3 id="tech-2025-11-llm-html">
@@ -248,7 +248,8 @@
 <p>За последнее время (особенно последний год) мне довелось довольно активно поработать с боль­ши­ми языковыми моделями (LLM), которые сейчас
 модно называть искусственным интеллектом. Захотелось кое-что сформулировать и подытожить.</p>
 
-<p>По этому поводу перечитал свои старые посты: <strong><a href="/tech/2023/01/chatgpt.html" class="fa-icon-file-alt">«Отставить панику…»</a></strong> и <strong><a href="/tech/2023/01/evil-ai.html" class="fa-icon-file-alt">«Па­ни­ку­ем иначе»</a></strong>,
+<p>По этому поводу перечитал свои старые посты: <strong><a href="/tech/2023/01/chatgpt.html" class="fa fa-file-lines">«Отставить панику…»</a></strong> и
+<strong><a href="/tech/2023/01/evil-ai.html" class="fa fa-file-lines">«Па­ни­ку­ем иначе»</a></strong>,
 с удовлетворением убедился, что основной посыл остался верным и на текущий момент, хотя, конечно, за это время многое стало яснее и накопился
 <em>реальный</em> опыт использования — как у ме­ня лично, так и, не по­бо­юсь этого слова, у человечества в целом.</p>
 
@@ -275,7 +276,7 @@
 
       
       
-        <p class="meta">​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a></p>
+        <p class="meta">​<a class="fa fa-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa fa-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa fa-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa fa-social" href="/life/social/" title="Заметки на общественные темы">Общество</a></p>
       
       <p class="meta">2023.01.07 • Иван Шихалев</p>
 <h3 id="tech-2023-01-evil-ai-html">
@@ -317,7 +318,7 @@
 
       
       
-        <p class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a>​<a class="fa-icon-bullhorn" href="/life/social/politics/" title="Посты о политике">Политика</a></p>
+        <p class="meta">​<a class="fa fa-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa fa-social" href="/life/social/" title="Заметки на общественные темы">Общество</a>​<a class="fa fa-bullhorn" href="/life/social/politics/" title="Посты о политике">Политика</a></p>
       
       <p class="meta">2021.07.17 • Иван Шихалев</p>
 <h3 id="life-2021-07-free-speech-html">
@@ -374,7 +375,7 @@
 
       
       
-        <p class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a></p>
+        <p class="meta">​<a class="fa fa-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa fa-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>​<a class="fa fa-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa fa-birdwatching" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa fa-social" href="/life/social/" title="Заметки на общественные темы">Общество</a></p>
       
       <p class="meta">2021.05.24 • Иван Шихалев</p>
 <h3 id="life-2021-05-inaturalist-html">
@@ -388,7 +389,7 @@
 <a href="https://www.inaturalist.org/" title="iNaturalist.org" class="__is_images_wrapper"><img src="/img/t6/c6/e986608o.webp" alt="Логотип iNaturalist" class="__is_images_image __is_images_single" style="--is-images-width:420px;--is-images-aspect-ratio:30/11;" data-scale="1"></a>
 </figure>
 <p>Я уже неоднократно упоминал<sup id="fnref:birds"><a href="/life/2021/05/inaturalist.html#fn:birds" class="footnote" rel="footnote" role="doc-noteref">1</a></sup><sup id="fnref:bshot"><a href="/life/2021/05/inaturalist.html#fn:bshot" class="footnote" rel="footnote" role="doc-noteref">2</a></sup><sup id="fnref:city"><a href="/life/2021/05/inaturalist.html#fn:city" class="footnote" rel="footnote" role="doc-noteref">3</a></sup> о сай­те
-<strong><a href="https://www.inaturalist.org/" title="Сайт iNaturalist.org" class="img-icon-inaturalist">iNa­tu­ra­list.org</a></strong>
+<strong><a href="https://www.inaturalist.org/" title="Сайт iNaturalist.org" class="icon">iNa­tu­ra­list.org</a></strong>
 и, на­до полагать, буду упоминать еще. Проект по мно­гим параметрам интересный и значимый. В этом посте я постараюсь рассказать,
 как о про­ек­те в це­лом, так и о том, как я лично с ним обращаюсь и что об этом думаю.</p>
 
@@ -447,7 +448,7 @@
 
       
       
-        <p class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a></p>
+        <p class="meta">​<a class="fa fa-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa fa-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a>​<a class="fa fa-social" href="/life/social/" title="Заметки на общественные темы">Общество</a></p>
       
       <p class="meta">2021.05.23 • Иван Шихалев</p>
 <h3 id="life-2021-05-birds-in-the-city-html">
@@ -505,7 +506,7 @@
 
       
       
-        <p class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a>​<a class="fa-icon-bullhorn" href="/life/social/politics/" title="Посты о политике">Политика</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a></p>
+        <p class="meta">​<a class="fa fa-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa fa-social" href="/life/social/" title="Заметки на общественные темы">Общество</a>​<a class="fa fa-bullhorn" href="/life/social/politics/" title="Посты о политике">Политика</a>​<a class="fa fa-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa fa-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a></p>
       
       <p class="meta">2021.04.08 • Иван Шихалев</p>
 <h3 id="life-2021-04-rms-html">
@@ -585,7 +586,7 @@ Fo­un­da­ti­on опубликовали заявление, в которо
 
       
       
-        <p class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-yin-yang" href="/life/psi/" title="Заметки на психологические темы (не научные)">Психология</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a></p>
+        <p class="meta">​<a class="fa fa-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa fa-yin-yang" href="/life/psi/" title="Заметки на психологические темы (не научные)">Психология</a>​<a class="fa fa-social" href="/life/social/" title="Заметки на общественные темы">Общество</a></p>
       
       <p class="meta">2020.10.29 • Иван Шихалев</p>
 <h3 id="life-2020-10-burn-html">
@@ -656,7 +657,7 @@ Fo­un­da­ti­on опубликовали заявление, в которо
 
       
       
-        <p class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a>​<a class="fa-icon-bullhorn" href="/life/social/politics/" title="Посты о политике">Политика</a></p>
+        <p class="meta">​<a class="fa fa-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa fa-social" href="/life/social/" title="Заметки на общественные темы">Общество</a>​<a class="fa fa-bullhorn" href="/life/social/politics/" title="Посты о политике">Политика</a></p>
       
       <p class="meta">2014.09.02 • Иван Шихалев</p>
 <h3 id="life-2014-09-fascism-html">
@@ -682,7 +683,7 @@ Fo­un­da­ti­on опубликовали заявление, в которо
 
       
       
-        <p class="meta">​<a class="fa-icon-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa-icon-users" href="/life/social/" title="Заметки на общественные темы">Общество</a>​<a class="fa-icon-bullhorn" href="/life/social/politics/" title="Посты о политике">Политика</a>​<a class="fa-icon-yin-yang" href="/life/psi/" title="Заметки на психологические темы (не научные)">Психология</a>​<a class="fa-icon-brain" href="/life/psi/mind/" title="Заметки о том, как мы думаем">Мышление</a></p>
+        <p class="meta">​<a class="fa fa-newspaper" href="/life/" title="О жизни, обществе и всяком прочем — просто блог">Жизнь</a>​<a class="fa fa-social" href="/life/social/" title="Заметки на общественные темы">Общество</a>​<a class="fa fa-bullhorn" href="/life/social/politics/" title="Посты о политике">Политика</a>​<a class="fa fa-yin-yang" href="/life/psi/" title="Заметки на психологические темы (не научные)">Психология</a>​<a class="fa fa-brain" href="/life/psi/mind/" title="Заметки о том, как мы думаем">Мышление</a></p>
       
       <p class="meta">2014.06.08 • Иван Шихалев</p>
 <h3 id="life-2014-06-povs-html">
@@ -743,11 +744,11 @@ Fo­un­da­ti­on опубликовали заявление, в которо
 </aside><aside id="contacts"><h4>О себе</h4>
 
 <ul>
-  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
-  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
-  <li class="fa-icon-li-keyboard">Программист</li>
-  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
-  <li class="fa-icon-li-camera">Хобби — фотография</li>
+  <li class="fa fa-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa fa-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa fa-keyboard">Программист</li>
+  <li class="fa fa-map-location-dot">Живу на Урале</li>
+  <li class="fa fa-camera">Хобби — фотография</li>
 </ul>
 
 <p class="social">

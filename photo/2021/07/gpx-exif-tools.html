@@ -11,7 +11,7 @@
   <link rel="icon" href="https://shikhalev.org/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="/assets/styles.css" type="text/css">
-  <link rel="stylesheet" href="/css/icons.css" type="text/css">
+  <link rel="stylesheet" href="/css/main.css" type="text/css">
   
   <link rel="stylesheet" href="/assets/local.css" type="text/css">
   
@@ -74,8 +74,8 @@
 </script>
 
 <!-- jekyll-is-images plugin stuff -->
-<link rel="stylesheet" href="/css/is-images-200-1920-0.8.2.8.css" />
-<script type="module" src="/js/is-images-0.8.2.8.js"></script>
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.2.10.css" />
+<script type="module" src="/js/is-images-0.8.2.10.js"></script>
 <!-- end of jekyll-is-images stuff -->
 
 </head>
@@ -97,11 +97,11 @@
   <label for="navy-check">
     <span id="menu-icon" class="fas">&#xf0c9;</span>
   </label>
-  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-credit-card" href="/merch/">Мерч</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+  <div id="navy-menu"><a class="navy-item fa fa-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa fa-camera" href="/photo/">Фото</a><a class="navy-item fa fa-newspaper" href="/life/">Жизнь</a><a class="navy-item fa fa-feather" href="/text/">Тексты</a><a class="navy-item fa fa-credit-card" href="/merch/">Мерч</a><a class="navy-item fa fa-id-card" href="/about/">О себе</a></div>
 </div></nav>
 
 <main id="main"><aside class="categories">
-  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa-icon-magic" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a></aside>
+  <a class="fa fa-home" href="/" title="Главная страница сайта"></a>​<a class="fa fa-camera" href="/photo/" title="Тексты о фотографии">Фото</a>​<a class="fa fa-processing" href="/photo/processing/" title="Софт для обработки фотографий">Обработка</a>​<a class="fa fa-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa fa-icons" href="/tech/soft/" title="Программы, приложения, софт, ПО...">Софт</a>​<a class="fa fa-birdwatching" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a></aside>
 <article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">Как я ставлю геометки к фотографиям</h1><aside class="share">
   <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.org%2Fphoto%2F2021%2F07%2Fgpx-exif-tools.html">&#xf189;</a>
   <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.org%2Fphoto%2F2021%2F07%2Fgpx-exif-tools.html">&#xf39e;</a>
@@ -119,7 +119,7 @@
 <a href="/img/61/74/fb573of2.avif" title="Скриншот Locus Map" class="__is_images_wrapper"><img src="/img/64/cf/ftt4e7fo.avif" alt="Скриншот Locus Map" class="__is_images_image __is_images_single" style="--is-images-width:200px;--is-images-aspect-ratio:200/349;" data-scale="1"></a>
 </figure>
 <p>Фотокамера у меня недорогая, и <abbr title="Global Positioning System">GPS</abbr> в ней, конечно, нет. Зато есть в телефоне. Поэтому треки я записываю приложением
-<strong><a href="https://www.locusmap.app/" class="img-icon-locus-map">Locus<span> Map Free</span></a></strong> (не Pro) — большую часть его возможностей (даже бесплатной
+<strong><a href="https://www.locusmap.app/" class="icon">Locus<span> Map Free</span></a></strong> (не Pro) — большую часть его возможностей (даже бесплатной
 версии) я не использую, но треки пи­шет хорошо, меня устраивает. И, кста­ти, весьма скромно использует батарею.</p>
 
 <p><em>Перед выходом</em>, сразу после проверки заряда во всех устройствах и места на флешке, <em>крайне желательно убедиться, что время
@@ -134,7 +134,7 @@ Locus Map проверяет эти разрешения и выдает под
 
 <p>Трек пишется в <abbr title="GPS eXchange Format">GPX</abbr>-файл, и это хорошо, поскольку данный формат понимают если не все, то очень многие программы, с ко­то­ры­ми
 нужно взаимодействовать. Я его отправляю прямо из при­ло­же­ния кнопкой шаринга «<span class="fas"></span>»,
-из предлагаемых вариантов выбирая <strong><a href="https://kdeconnect.kde.org/" class="img-icon-kdeconnect">KDE<span> Con­nect</span></a></strong> — архиполезная вещь, хоть
+из предлагаемых вариантов выбирая <strong><a href="https://kdeconnect.kde.org/" class="icon img-kdeconnect">KDE<span> Con­nect</span></a></strong> — архиполезная вещь, хоть
 и глюч­ная (впрочем, каким путем передать файл на компьютер — непринципиально).</p>
 
 <!--more-->
@@ -150,8 +150,8 @@ Locus Map проверяет эти разрешения и выдает под
 </figure>
 <p>Теперь нужно почистить трек: <abbr title="Global Positioning System">GPS</abbr> — штука тонкая, и слу­ча­ют­ся вылеты типа показанного на скрин­шо­те — там аж несколько точек,
 образующих «треугольную» петлю, явно лажовые. Вообще, существуют программы, ищущие и вы­чи­ща­ю­щие такие точки автоматически
-(например, <strong><a href="https://www.gpsbabel.org/" class="img-icon-gpsbabel">GPSBabel</a></strong>),
-но мне проще глазами посмотреть и руками удалить. Для этой цели хорошо подходит <strong><a href="https://github.com/BourgeoisLab/GPXLab" class="img-icon-gpxlab">GPXLab</a></strong>.
+(например, <strong><a href="https://www.gpsbabel.org/" class="icon">GPSBabel</a></strong>),
+но мне проще глазами посмотреть и руками удалить. Для этой цели хорошо подходит <strong><a href="https://github.com/BourgeoisLab/GPXLab" class="icon img-gpxlab">GPXLab</a></strong>.
 Можно ориентироваться прямо по карте, можно просмотреть список точек справа внизу, обращая внимание на не­су­раз­ные значения шага
 и ско­рос­ти — ну, не мог я передвигаться пешком по ле­су со ско­рос­тью почти 80 км/ч… Такие точки просто удаляем. Можно еще
 обратить внимание на слиш­ком резкие перепады высот (верхний правый угол) и вычистить их тоже.</p>
@@ -161,7 +161,7 @@ Locus Map проверяет эти разрешения и выдает под
 </h2>
 
 <p>Сохраняем очищенный трек в тот же каталог, где у нас лежат фотографии, и даль­ше все просто, запись делается одним вызовом
-<strong><a href="https://exiftool.org/" class="img-icon-phil-harvey">ExifTool</a></strong>:</p>
+<strong><a href="https://exiftool.org/" class="icon">ExifTool</a></strong>:</p>
 
 <figure class="highlight">
   <pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>exiftool <span class="nt">-progress</span> <span class="nt">-overwrite_original</span> <span class="nt">-geotag</span><span class="o">=</span>‹файл трека›.gpx ./</code></pre>
@@ -173,7 +173,7 @@ Locus Map проверяет эти разрешения и выдает под
 <abbr title="Extensible Metadata Platform">XMP</abbr>-файлами. Однако для этого понадобится сначала скопировать в них время съемки, а потом вызвать <code class="language-plaintext highlighter-rouge">exiftool</code> с аргументом
 вроде <code class="language-plaintext highlighter-rouge">./*.xmp</code>. Возможно, ког­да-ни­будь я не поленюсь и за­го­ню такую последовательность действий в скрипт…</p>
 
-<p>А что с <strong><a href="https://www.darktable.org/" class="img-icon-darktable">Darktable</a></strong>? У не­го же есть модуль загрузки <abbr title="GPS eXchange Format">GPX</abbr>… Есть, но мне пока ни ра­зу
+<p>А что с <strong><a href="https://www.darktable.org/" class="icon">Darktable</a></strong>? У не­го же есть модуль загрузки <abbr title="GPS eXchange Format">GPX</abbr>… Есть, но мне пока ни ра­зу
 не уда­лось им воспользоваться — судя по все­му, он ожидает файл с точками, полностью соответствующими по вре­ме­ни фотографиям,
 что возможно только при ис­поль­зо­ва­нии специального <abbr title="Global Positioning System">GPS</abbr>-устройства для горячего башмака, которое будет писать точки синхронно.
 А стоит такое устройство, как пол-камеры… Тогда как <strong>ExifTool</strong> <em>вычисляет</em> положение, где была сделана фотография
@@ -194,10 +194,10 @@ Locus Map проверяет эти разрешения и выдает под
 
 <p>Основная цепочка в моем случае выглядит так:</p>
 
-<p class="bold"><a href="https://www.locusmap.app/" class="img-icon-locus-map">Locus Map</a> → <a href="https://github.com/BourgeoisLab/GPXLab" class="img-icon-gpxlab">GPXLab</a> → <a href="https://exiftool.org/" class="img-icon-phil-harvey">ExifTool</a> →
-<a href="https://www.darktable.org/" class="img-icon-darktable">Darktable</a></p>
+<p class="bold"><a href="https://www.locusmap.app/" class="icon">Locus Map</a> → <a href="https://github.com/BourgeoisLab/GPXLab" class="icon img-gpxlab">GPXLab</a> → <a href="https://exiftool.org/" class="icon">ExifTool</a> →
+<a href="https://www.darktable.org/" class="icon">Darktable</a></p>
 
-<p>Дополнительно можно на этапе подготовки файла задействовать <strong><a href="https://www.gpsbabel.org/" class="img-icon-gpsbabel">GPSBabel</a></strong> — до или вмес­то GPXLab,
+<p>Дополнительно можно на этапе подготовки файла задействовать <strong><a href="https://www.gpsbabel.org/" class="icon">GPSBabel</a></strong> — до или вмес­то GPXLab,
 особенно, если у вас <abbr title="Global Positioning System">GPS</abbr>-лог­гер пишет не <abbr title="GPS eXchange Format">GPX</abbr>, а ка­кой-то другой формат — GPSBabel знает их несколько и умеет конвертировать.
 А уже в Dark­table можно разместить фотографии на кар­те вручную.</p>
 
@@ -252,7 +252,7 @@ ExifTool имеет параметры сдвига времени, можно �
 <li class="toc-entry toc-h2"><a href="#запись-вexif">Запись в EXIF</a></li>
 <li class="toc-entry toc-h2"><a href="#итого">Итого</a></li>
 </ul>
-</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/life/2023/10/merlin.html" title="Приложение для рас­поз­на­ва­ния птиц по го­ло­су">Merlin Bird ID</a></li></ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul class="fa"><li class="fa-file-lines"><a href="/life/2023/10/merlin.html" title="Приложение для рас­поз­на­ва­ния птиц по го­ло­су">Merlin Bird ID</a></li></ul>
     </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
 
 </aside><!-- скрываем через style, чтоб не менять макет полностью -->
@@ -266,11 +266,11 @@ ExifTool имеет параметры сдвига времени, можно �
 </aside><aside id="contacts"><h4>О себе</h4>
 
 <ul>
-  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
-  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
-  <li class="fa-icon-li-keyboard">Программист</li>
-  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
-  <li class="fa-icon-li-camera">Хобби — фотография</li>
+  <li class="fa fa-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa fa-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa fa-keyboard">Программист</li>
+  <li class="fa fa-map-location-dot">Живу на Урале</li>
+  <li class="fa fa-camera">Хобби — фотография</li>
 </ul>
 
 <p class="social">

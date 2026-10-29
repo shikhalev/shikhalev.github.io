@@ -11,7 +11,7 @@
   <link rel="icon" href="https://shikhalev.org/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="/assets/styles.css" type="text/css">
-  <link rel="stylesheet" href="/css/icons.css" type="text/css">
+  <link rel="stylesheet" href="/css/main.css" type="text/css">
   
   <link rel="stylesheet" href="/assets/local.css" type="text/css">
   
@@ -74,8 +74,8 @@
 </script>
 
 <!-- jekyll-is-images plugin stuff -->
-<link rel="stylesheet" href="/css/is-images-200-1920-0.8.2.8.css" />
-<script type="module" src="/js/is-images-0.8.2.8.js"></script>
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.2.10.css" />
+<script type="module" src="/js/is-images-0.8.2.10.js"></script>
 <!-- end of jekyll-is-images stuff -->
 
 </head>
@@ -97,11 +97,11 @@
   <label for="navy-check">
     <span id="menu-icon" class="fas">&#xf0c9;</span>
   </label>
-  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-credit-card" href="/merch/">Мерч</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+  <div id="navy-menu"><a class="navy-item fa fa-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa fa-camera" href="/photo/">Фото</a><a class="navy-item fa fa-newspaper" href="/life/">Жизнь</a><a class="navy-item fa fa-feather" href="/text/">Тексты</a><a class="navy-item fa fa-credit-card" href="/merch/">Мерч</a><a class="navy-item fa fa-id-card" href="/about/">О себе</a></div>
 </div></nav>
 
 <main id="main"><aside class="categories">
-  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-globe" href="/tech/web/" title="HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.">Web</a></aside>
+  <a class="fa fa-home" href="/" title="Главная страница сайта"></a>​<a class="fa fa-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa fa-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa fa-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa fa-globe" href="/tech/web/" title="HTML, CSS, JavaScript, а также backend-технологии. Программирование и не только.">Web</a></aside>
 <article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">Плагины jekyll‑is‑hookdown и jekyll‑is‑images v0.8.2</h1><aside class="share">
   <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.org%2Ftech%2F2026%2F08%2Fjekyll-is-august.html">&#xf189;</a>
   <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.org%2Ftech%2F2026%2F08%2Fjekyll-is-august.html">&#xf39e;</a>
@@ -113,19 +113,19 @@
   <time datetime="2026-08-22T00:00:00+00:00" itemprop="datePublished">2026.08.22
   </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Иван Шихалев</span></span></p><aside class="tags">​<a class="tag" href="/tags#CSS">CSS</a>​<a class="tag" href="/tags#HTML">HTML</a>​<a class="tag" href="/tags#Jekyll">Jekyll</a></aside></header><div itemprop="articleBody">
   <h2 id="jekyll-is-images">
-<a class="anchor" href="#jekyll-is-images" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/jekyll-is/jekyll-is-images" class="img-icon-github">jekyll-is-images</a>
+<a class="anchor" href="#jekyll-is-images" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/jekyll-is/jekyll-is-images" class="icon">jekyll-is-images</a>
 </h2>
 
-<p>Сначала коротко про <strong><a href="https://github.com/jekyll-is/jekyll-is-images" class="img-icon-github">jekyll-is-images</a></strong>. По срав­не­нию с со­сто­я­ни­ем на <a href="/tech/2026/08/jekyll-is-images-alpha.html">прош­лый пост</a> в ос­нов­ном
+<p>Сначала коротко про <strong><a href="https://github.com/jekyll-is/jekyll-is-images" class="icon">jekyll-is-images</a></strong>. По срав­не­нию с со­сто­я­ни­ем на <a href="/tech/2026/08/jekyll-is-images-alpha.html">прош­лый пост</a> в ос­нов­ном
 произошло много мелких правок мелких багов, из от­но­си­тель­но су­щес­т­вен­но­го — довел до ума работу галерей в ре­жи­ме слайд-шоу (впрочем, и там
-есть куда расти). А третью цифру я поднял при сме­не зависимости с <a href="https://github.com/jekyll-is/is-kramdown-hooked" class="img-icon-github">is-kramdown-hooked</a>
-на <strong><a href="https://github.com/jekyll-is/jekyll-is-hookdown" class="img-icon-github">jekyll-is-hookdown</a></strong>, о ко­то­ром и поговорим далее. Это повлияло на то, что следует указывать
+есть куда расти). А третью цифру я поднял при сме­не зависимости с <a href="https://github.com/jekyll-is/is-kramdown-hooked" class="icon">is-kramdown-hooked</a>
+на <strong><a href="https://github.com/jekyll-is/jekyll-is-hookdown" class="icon">jekyll-is-hookdown</a></strong>, о ко­то­ром и поговорим далее. Это повлияло на то, что следует указывать
 в <code class="language-plaintext highlighter-rouge">_config.yml</code> — вместо <code class="language-plaintext highlighter-rouge">input: ISKram</code> в под­раз­де­ле <code class="language-plaintext highlighter-rouge">kramdown</code> следует указывать <code class="language-plaintext highlighter-rouge">markdown: Hookdown</code> в кор­не конфига. А под­раз­дел
 <code class="language-plaintext highlighter-rouge">kramdown</code> остается полностью рабочим, и там можно указывать любой <code class="language-plaintext highlighter-rouge">input</code>, на­при­мер — <code class="language-plaintext highlighter-rouge">GFM</code><sup id="fnref:GFM"><a href="#fn:GFM" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> (что я и собираюсь сделать на сай­те
 в бли­жай­шее время).</p>
 
 <h2 id="jekyll-is-hookdown">
-<a class="anchor" href="#jekyll-is-hookdown" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/jekyll-is/jekyll-is-hookdown" class="img-icon-github">jekyll-is-hookdown</a>
+<a class="anchor" href="#jekyll-is-hookdown" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/jekyll-is/jekyll-is-hookdown" class="icon">jekyll-is-hookdown</a>
 </h2>
 
 <figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_350 __is_images__right" style="border-radius:15px;--is-images-width:320px;--is-images-up:20px;" data-modes="grid,slides">
@@ -148,7 +148,7 @@
 <dl>
   <dt>Небольшое историческое отступление</dt>
   <dd>
-    <p>Сначала я запихнул хук внутрь собственно Kramdown через кастомный пар­сер — в ге­ме <a href="https://github.com/jekyll-is/is-kramdown-hooked" class="img-icon-github">is-kramdown-hooked</a>.
+    <p>Сначала я запихнул хук внутрь собственно Kramdown через кастомный пар­сер — в ге­ме <a href="https://github.com/jekyll-is/is-kramdown-hooked" class="icon">is-kramdown-hooked</a>.
 Причем это решение не тре­бо­ва­ло зависимости от Je­kyll, но — обратная сторона медали — и не осо­бо-то интегрировалось с сис­те­мой хуков в Je­kyll.
 Кроме того, использование кас­том­но­го пар­се­ра не поз­во­ля­ло использовать другие кастомные пар­се­ры…</p>
 
@@ -220,7 +220,7 @@
 вдруг появятся.</p>
   </li>
   <li>
-    <p>По <strong>jekyll-is-images</strong> планов полно, приглашаю в <strong><a href="https://github.com/jekyll-is/jekyll-is-images/issues" class="img-icon-github">Issues</a></strong>.</p>
+    <p>По <strong>jekyll-is-images</strong> планов полно, приглашаю в <strong><a href="https://github.com/jekyll-is/jekyll-is-images/issues" class="icon">Issues</a></strong>.</p>
   </li>
   <li>
     <p><strong>is-kramdown-hooked</strong> отправится в архив.</p>
@@ -285,7 +285,7 @@
 </li>
 <li class="toc-entry toc-h2"><a href="#что-дальше">Что дальше?</a></li>
 </ul>
-</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/tech/2026/10/is-module-reset.html" title="Как тестировать плагины для Jekyll и не только...">Гемы is-module-reset и is-deep</a></li></ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul class="fa"><li class="fa-file-lines"><a href="/tech/2026/10/is-module-reset.html" title="Как тестировать плагины для Jekyll и не только...">Гемы is-module-reset и is-deep</a></li></ul>
     </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
 
 </aside><!-- скрываем через style, чтоб не менять макет полностью -->
@@ -299,11 +299,11 @@
 </aside><aside id="contacts"><h4>О себе</h4>
 
 <ul>
-  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
-  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
-  <li class="fa-icon-li-keyboard">Программист</li>
-  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
-  <li class="fa-icon-li-camera">Хобби — фотография</li>
+  <li class="fa fa-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa fa-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa fa-keyboard">Программист</li>
+  <li class="fa fa-map-location-dot">Живу на Урале</li>
+  <li class="fa fa-camera">Хобби — фотография</li>
 </ul>
 
 <p class="social">

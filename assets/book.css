@@ -163,7 +163,9 @@ figure.__is_images_viewbox {
   text-decoration: none !important;
   font-style: normal;
   display: inline-block;
-  font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+  font-family: var(--main-family);
+  font-stretch: expanded;
+  font-width: expanded;
 }
 .__new_recommends figure {
   border-radius: 5px;
@@ -198,7 +200,9 @@ div.verse {
 
 .suno_details summary {
   color: #333;
-  font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+  font-family: var(--main-family);
+  font-stretch: expanded;
+  font-width: expanded;
   cursor: default;
 }
 .suno_details summary a, .suno_details summary a:link, .suno_details summary a:visited, .suno_details summary a:active {
@@ -222,7 +226,9 @@ div.verse {
 }
 .suno_track summary {
   color: #333;
-  font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+  font-family: var(--main-family);
+  font-stretch: expanded;
+  font-width: expanded;
   cursor: default;
 }
 .suno_track summary::before {
@@ -299,7 +305,9 @@ figure.__is_images_slide_figure {
   bottom: 0;
   left: 0;
   right: 0;
-  font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+  font-family: var(--main-family);
+  font-stretch: expanded;
+  font-width: expanded;
   font-weight: bold !important;
   text-align: center;
   background-color: rgba(102, 102, 102, 0.4) !important;
@@ -331,7 +339,9 @@ figure.__is_images_slide_figure {
 }
 
 .submatters {
-  font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+  font-family: var(--main-family);
+  font-stretch: expanded;
+  font-width: expanded;
   font-size: 1.6rem;
 }
 .submatters .submatters {
@@ -341,7 +351,9 @@ figure.__is_images_slide_figure {
   list-style-position: outside;
 }
 .submatters li {
-  font-family: "PT Sans Caption", sans-serif;
+  font-family: var(--main-family);
+  font-stretch: expanded;
+  font-width: expanded;
   padding-left: 0.5em;
   margin-top: 0.6rem;
 }
@@ -358,8 +370,9 @@ figure.__is_images_slide_figure {
   margin-top: 0.2rem;
 }
 
-.toc-matter li::marker {
+#toc.toc-matter ul li::marker {
   content: "\f02e";
+  font-weight: 400;
 }
 
 :has(> section.module) {
@@ -437,12 +450,14 @@ figure.__is_images_slide_figure {
   color: #333;
   line-height: 1.3;
   text-decoration: none;
-  font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+  font-family: var(--main-family);
+  font-stretch: expanded;
+  font-width: expanded;
 }
 
 .product-kind.printdirect ::before, .product-kind.vsemayki ::before, .product-kind.fun ::before {
-  font-family: "PT Mono", gmono, monospace;
-  font-size: 60%;
+  font-family: var(--code-family);
+  font-size: 70%;
   font-weight: bold;
   padding: 4px 5px;
   margin-right: 1em;
@@ -452,7 +467,9 @@ figure.__is_images_slide_figure {
 }
 .product-kind.printdirect, .product-kind.vsemayki, .product-kind.fun {
   background-color: white;
-  font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+  font-family: var(--main-family);
+  font-stretch: expanded;
+  font-width: expanded;
   font-weight: normal;
   vertical-align: middle;
   text-indent: -2.3em;
@@ -472,8 +489,8 @@ figure.__is_images_slide_figure {
 }
 
 span.printdirect, span.vsemayki, span.fun {
-  font-family: "PT Mono", gmono, monospace;
-  font-size: 60%;
+  font-family: var(--code-family);
+  font-size: 70%;
   font-weight: bold;
   padding: 4px 5px;
   color: white;
@@ -503,7 +520,9 @@ select {
   border-radius: 10px;
   border-color: silver;
   border: none;
-  font-family: "PT Sans Caption", gcaption, "Trebuchet MS", sans-serif;
+  font-family: var(--main-family);
+  font-stretch: expanded;
+  font-width: expanded;
   font-weight: normal;
   font-size: 1rem;
   text-align: center;
@@ -531,7 +550,9 @@ select {
   }
 }
 .module {
-  font-family: "PT Sans Narrow", gnarrow, "Arial Narrow", sans-serif;
+  font-family: var(--main-family);
+  font-stretch: condensed;
+  font-width: condensed;
 }
 @media print {
   .module .left, .module .__left {
@@ -546,7 +567,9 @@ select {
   }
 }
 .module dt {
-  font-family: "PT Sans", gsans, Arial, sans-serif;
+  font-family: var(--main-family);
+  font-stretch: normal;
+  font-width: normal;
 }
 
 .unbreakable {
@@ -595,7 +618,9 @@ pre code {
   list-style-position: outside;
 }
 .booktoc ul li {
-  font-family: "PT Sans Caption", sans-serif;
+  font-family: var(--main-family);
+  font-stretch: expanded;
+  font-width: expanded;
   padding-left: 0.5em;
 }
 .booktoc ul li::marker {

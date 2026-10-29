@@ -11,7 +11,7 @@
   <link rel="icon" href="https://shikhalev.org/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="/assets/styles.css" type="text/css">
-  <link rel="stylesheet" href="/css/icons.css" type="text/css">
+  <link rel="stylesheet" href="/css/main.css" type="text/css">
   
   <link rel="stylesheet" href="/assets/local.css" type="text/css">
   
@@ -74,8 +74,8 @@
 </script>
 
 <!-- jekyll-is-images plugin stuff -->
-<link rel="stylesheet" href="/css/is-images-200-1920-0.8.2.8.css" />
-<script type="module" src="/js/is-images-0.8.2.8.js"></script>
+<link rel="stylesheet" href="/css/is-images-200-1920-0.8.2.10.css" />
+<script type="module" src="/js/is-images-0.8.2.10.js"></script>
 <!-- end of jekyll-is-images stuff -->
 
 </head>
@@ -97,11 +97,11 @@
   <label for="navy-check">
     <span id="menu-icon" class="fas">&#xf0c9;</span>
   </label>
-  <div id="navy-menu"><a class="navy-item fa-icon-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa-icon-camera" href="/photo/">Фото</a><a class="navy-item fa-icon-newspaper" href="/life/">Жизнь</a><a class="navy-item fa-icon-feather" href="/text/">Тексты</a><a class="navy-item fa-icon-credit-card" href="/merch/">Мерч</a><a class="navy-item fa-icon-id-card" href="/about/">О себе</a></div>
+  <div id="navy-menu"><a class="navy-item fa fa-laptop-code" href="/tech/">Технологии</a><a class="navy-item fa fa-camera" href="/photo/">Фото</a><a class="navy-item fa fa-newspaper" href="/life/">Жизнь</a><a class="navy-item fa fa-feather" href="/text/">Тексты</a><a class="navy-item fa fa-credit-card" href="/merch/">Мерч</a><a class="navy-item fa fa-id-card" href="/about/">О себе</a></div>
 </div></nav>
 
 <main id="main"><aside class="categories">
-  <a class="fa-icon-home" href="/" title="Главная страница сайта"></a>​<a class="fa-icon-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa-icon-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa-icon-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa-icon-dove" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa-icon-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a></aside>
+  <a class="fa fa-home" href="/" title="Главная страница сайта"></a>​<a class="fa fa-laptop-code" href="/tech/" title="Цифровой мир, как он есть, и немного, каким должен быть">Технологии</a>​<a class="fa fa-keyboard" href="/tech/programming/" title="Языки программирования, алгоритмы, фреймворки, библиотеки и тому подобное">Программирование</a>​<a class="fa fa-gem" href="/tech/programming/ruby/" title="Язык программирования Ruby">Ruby</a>​<a class="fa fa-birdwatching" href="/photo/birdwatching/" title="(Фото-)наблюдения за птицами и прочей мелкой живностью.">Бёрдвотчинг</a>​<a class="fa fa-leaf" href="/life/nature/" title="О лесах, полях и реках...">Природа</a></aside>
 <article class="layout-post" itemscope itemtype="http://schema.org/BlogPosting"><header class="page-header"><h1 class="title-post" itemprop="name headline">INat::Get — ранняя альфа</h1><aside class="share">
   <a class="fab" target="_blank" title="Поделиться во ВКонтакте" href="https://vk.com/share.php?url=https%3A%2F%2Fshikhalev.org%2Ftech%2F2023%2F11%2Finat-get.html">&#xf189;</a>
   <a class="fab" target="_blank" title="Поделиться в Фейсбуке" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fshikhalev.org%2Ftech%2F2023%2F11%2Finat-get.html">&#xf39e;</a>
@@ -119,8 +119,8 @@
   <p>— Я зделяль. ©</p>
 </blockquote>
 
-<p>Итак, прошу любить и жаловать — <strong><a href="https://github.com/shikhalev/inat-get" class="img-icon-github">INat::Get</a></strong> — софтина для по­лу­че­ния и обработки данных
-с <strong><a href="https://www.inaturalist.org/" class="img-icon-inaturalist">iNaturalist</a></strong>. Основное изначальное пред­наз­на­че­ние — подбивать всякую статистику
+<p>Итак, прошу любить и жаловать — <strong><a href="https://github.com/shikhalev/inat-get" class="icon">INat::Get</a></strong> — софтина для по­лу­че­ния и обработки данных
+с <strong><a href="https://www.inaturalist.org/" class="icon">iNaturalist</a></strong>. Основное изначальное пред­наз­на­че­ние — подбивать всякую статистику
 для про­ек­тов на том же iNaturalist’е, но варианты использования гораздо шире.</p>
 
 <p>Первым делом хочу отметить, что текущее со­сто­я­ние — это ранняя альфа. Я <em>не ре­ко­мен­дую</em> никому этим пользоваться иначе
@@ -130,7 +130,7 @@
 <h2 id="зачем">
 <a class="anchor" href="#%D0%B7%D0%B0%D1%87%D0%B5%D0%BC" aria-hidden="true"><span class="octicon octicon-link"></span></a>Зачем?</h2>
 
-<p><strong><a href="https://www.inaturalist.org/" class="img-icon-inaturalist">iNaturalist</a></strong> предоставляет открытый доступ к ог­ром­но­му массиву наблюдений, а также
+<p><strong><a href="https://www.inaturalist.org/" class="icon">iNaturalist</a></strong> предоставляет открытый доступ к ог­ром­но­му массиву наблюдений, а также
 по су­ти к по­сто­ян­но ак­ту­али­зи­ру­ему таксономическому справочнику (тут можно обсуждать нюансы, но для лю­би­тель­с­ких целей
 это очень хорошие данные). Интерфейс самого сайта не по­кры­ва­ет и, конечно, не мо­жет покрывать все возможные варианты
 запросов и выборок, но мы можем получить сами данные через <a href="https://www.inaturalist.org/observations/export">механизм выгрузок</a> или посредством <a href="https://api.inaturalist.org/v1/docs/">открытого API</a>,
@@ -154,7 +154,7 @@
   </li>
 </ul>
 
-<p>Эти посты были сформированы по дан­ным выгрузок, а не API, посредством мною же написанного <strong><a href="https://github.com/shikhalev/inat-script" class="img-icon-github">inat-script</a></strong>,
+<p>Эти посты были сформированы по дан­ным выгрузок, а не API, посредством мною же написанного <strong><a href="https://github.com/shikhalev/inat-script" class="icon">inat-script</a></strong>,
 в про­цес­се работы с ко­то­рым (и над ко­то­рым) я осознал все недостатки механизма выгрузок:</p>
 <ul>
   <li>ограниченность данных;</li>
@@ -301,7 +301,7 @@
 <h2 id="планы">
 <a class="anchor" href="#%D0%BF%D0%BB%D0%B0%D0%BD%D1%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>Планы</h2>
 
-<p>Вообще, на гит­ха­бе есть такой замечательный раздел <strong><a href="https://github.com/shikhalev/inat-get/issues" class="img-icon-github">«Issues»</a></strong>, где можно посмотреть процесс планирования в ре­аль­ном времени.
+<p>Вообще, на гит­ха­бе есть такой замечательный раздел <strong><a href="https://github.com/shikhalev/inat-get/issues" class="icon">«Issues»</a></strong>, где можно посмотреть процесс планирования в ре­аль­ном времени.
 Здесь постараюсь дать сводную картину.</p>
 
 <h3 id="к-версии-10">
@@ -355,7 +355,7 @@
 <h2 id="обратная-связь">
 <a class="anchor" href="#%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D0%B0%D1%8F-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Обратная связь</h2>
 
-<p>Буду рад вопросам, замечаниям и предложениям, как в ком­мен­та­ри­ях к это­му посту, так и в <a href="https://github.com/shikhalev/inat-get/discussions">со­от­вет­с­т­ву­ю­щем разделе на <strong class="img-icon-github">Git­Hub</strong></a>.
+<p>Буду рад вопросам, замечаниям и предложениям, как в ком­мен­та­ри­ях к это­му посту, так и в <a href="https://github.com/shikhalev/inat-get/discussions">со­от­вет­с­т­ву­ю­щем разделе на <strong class="icon img-github">Git­Hub</strong></a>.
 Можно так же писать в лич­ные сообщения на iNa­tu­ra­list, хотя предпочтительно все же общаться в от­кры­тых комментариях, чтобы не воз­ни­ка­ло
 дублирования.</p>
 
@@ -416,7 +416,7 @@
 </li>
 <li class="toc-entry toc-h2"><a href="#обратная-связь">Обратная связь</a></li>
 </ul>
-</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul><li class="fa-icon-li-file-alt"><a href="/tech/2026/03/inat-get-0-9.html" title="Релизнул таки новую, полностью переписанную, версию...">iNatGet v0.9.0</a></li></ul>
+</aside><aside class="backlinks" id="backs"><h4>Ссылки сюда</h4><ul class="fa"><li class="fa-file-lines"><a href="/tech/2026/03/inat-get-0-9.html" title="Релизнул таки новую, полностью переписанную, версию...">iNatGet v0.9.0</a></li></ul>
     </aside><aside id="donate"><iframe loading="lazy" src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0&targets-hint=&default-sum=314&button-text=14&comment=on&hint=%D1%82%D0%B5%D0%BC%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%B2%20%D0%B7%D0%B0%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%87%D0%B5%D0%B5&successURL=https%3A%2F%2Fshikhalev.org%2F&quickpay=shop&account=410012630934713" width="100%" height="323" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
 
 </aside><!-- скрываем через style, чтоб не менять макет полностью -->
@@ -430,11 +430,11 @@
 </aside><aside id="contacts"><h4>О себе</h4>
 
 <ul>
-  <li class="fa-icon-li-id-card person"><a href="/about/">Иван Шихалев</a></li>
-  <li class="fa-icon-li-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
-  <li class="fa-icon-li-keyboard">Программист</li>
-  <li class="fa-icon-li-map-marked-alt">Живу на Урале</li>
-  <li class="fa-icon-li-camera">Хобби — фотография</li>
+  <li class="fa fa-id-card person"><a href="/about/">Иван Шихалев</a></li>
+  <li class="fa fa-envelope"><a href="mailto:shikhalev@gmail.com">shikhalev@gmail.com</a></li>
+  <li class="fa fa-keyboard">Программист</li>
+  <li class="fa fa-map-location-dot">Живу на Урале</li>
+  <li class="fa fa-camera">Хобби — фотография</li>
 </ul>
 
 <p class="social">

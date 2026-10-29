@@ -1,0 +1,695 @@
+/* Font Awesome v7.3.1 */
+@font-face {
+  font-family: "Font Awesome 7 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("/css/fonts/fontawesome/fa-brands-400.woff2");
+}
+@font-face {
+  font-family: "Font Awesome 7 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("/css/fonts/fontawesome/fa-regular-400.woff2");
+}
+@font-face {
+  font-family: "Font Awesome 7 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("/css/fonts/fontawesome/fa-solid-900.woff2");
+}
+:root {
+  --fa-brands-family: 'Font Awesome 7 Brands';
+  --fa-brands-weight: 400;
+  --fa-regular-family: 'Font Awesome 7 Free';
+  --fa-regular-weight: 400;
+  --fa-solid-family: 'Font Awesome 7 Free';
+  --fa-solid-weight: 900;
+}
+
+.fab, .font-awesome-brands {
+  font-family: var(--fa-brands-family);
+  font-weight: var(--fa-brands-weight);
+}
+
+.far, .font-awesome-regular {
+  font-family: var(--fa-regular-family);
+  font-weight: var(--fa-regular-weight);
+}
+
+.fas, .font-awesome-solid {
+  font-family: var(--fa-solid-family);
+  font-weight: var(--fa-solid-weight);
+}
+
+/* Icons (marks) from Font Awesome  */
+.fa:not(li):not(ul)::before, li.fa::marker, ul.fa > li::marker {
+  content: var(--fa-content, "\f2b4");
+  font-family: var(--fa-family, "Font Awesome 7 Free");
+  font-weight: var(--fa-weight, 400);
+}
+
+li.fa::marker, ul.fa > li::marker {
+  color: rgb(from var(--navigation-color, #3e5662) r g b/0.7);
+}
+li.fa, ul.fa > li {
+  padding-left: 0.3em;
+}
+
+.fa:not(li):not(ul)::before {
+  display: inline-block;
+  opacity: 0.7;
+  margin-right: 0.3em;
+}
+
+.fa-binoculars, .fa-birdwatching {
+  --fa-content: "\f1e5";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-book {
+  --fa-content: "\f02d";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-book-open {
+  --fa-content: "\f518";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-bookmark {
+  --fa-content: "\f02e";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-brain, .fa-mind {
+  --fa-content: "\f5dc";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-building-columns, .fa-pub {
+  --fa-content: "\f19c";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-bullhorn, .fa-politics {
+  --fa-content: "\f0a1";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-calendar {
+  --fa-content: "\f133";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-calendar-days, .fa-dybr {
+  --fa-content: "\f073";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-camera, .fa-photo {
+  --fa-content: "\f030";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-circle {
+  --fa-content: "\f111";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-circle-check {
+  --fa-content: "\f058";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-circle-dot {
+  --fa-content: "\f192";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-circle-xmark {
+  --fa-content: "\f057";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-coins {
+  --fa-content: "\f51e";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-comment {
+  --fa-content: "\f075";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-comment-dots {
+  --fa-content: "\f4ad";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-comments {
+  --fa-content: "\f086";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-compact-disc {
+  --fa-content: "\f51f";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-credit-card {
+  --fa-content: "\f09d";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-envelope {
+  --fa-content: "\f0e0";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-feather, .fa-text {
+  --fa-content: "\f52d";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-feather-pointed, .fa-verses {
+  --fa-content: "\f56b";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-file {
+  --fa-content: "\f15b";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-file-audio {
+  --fa-content: "\f1c7";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-file-lines {
+  --fa-content: "\f15c";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-folder {
+  --fa-content: "\f07b";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-folder-black {
+  --fa-content: "\f07b";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-folder-closed {
+  --fa-content: "\e185";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-folder-closed-black {
+  --fa-content: "\e185";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-folder-open {
+  --fa-content: "\f07c";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-folder-open-black {
+  --fa-content: "\f07c";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-gem, .fa-ruby {
+  --fa-content: "\f3a5";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-globe, .fa-web {
+  --fa-content: "\f0ac";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-hashtag {
+  --fa-content: "\23";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-house, .fa-home {
+  --fa-content: "\f015";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-icons, .fa-soft {
+  --fa-content: "\f86d";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-id-card, .fa-about {
+  --fa-content: "\f2c2";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-keyboard, .fa-programming {
+  --fa-content: "\f11c";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-language {
+  --fa-content: "\f1ab";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-laptop-code, .fa-tech {
+  --fa-content: "\f5fc";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-leaf, .fa-nature {
+  --fa-content: "\f06c";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-link {
+  --fa-content: "\f0c1";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-map-location-dot {
+  --fa-content: "\f5a0";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-message {
+  --fa-content: "\f27a";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-microchip, .fa-hard {
+  --fa-content: "\f2db";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-microscope, .fa-science {
+  --fa-content: "\f610";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-music, .fa-suno {
+  --fa-content: "\f001";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-newspaper, .fa-life {
+  --fa-content: "\f1ea";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-people-group, .fa-social {
+  --fa-content: "\e533";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-photo-film, .fa-graphics {
+  --fa-content: "\f87c";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-server, .fa-db {
+  --fa-content: "\f233";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-share {
+  --fa-content: "\f064";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-share-nodes {
+  --fa-content: "\f1e0";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-square {
+  --fa-content: "\f0c8";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-square-check {
+  --fa-content: "\f14a";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-square-envelope, .fa-mail {
+  --fa-content: "\f199";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-square-rss {
+  --fa-content: "\f143";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-star, .fa-best, .fa-favorites {
+  --fa-content: "\f005";
+  --fa-family: var(--fa-regular-family);
+  --fa-weight: var(--fa-regular-weight);
+}
+
+.fa-star-of-life {
+  --fa-content: "\f621";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-tag {
+  --fa-content: "\f02b";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-tags {
+  --fa-content: "\f02c";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-wand-magic-sparkles, .fa-processing {
+  --fa-content: "\e2ca";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-yin-yang, .fa-psi {
+  --fa-content: "\f6ad";
+  --fa-family: var(--fa-solid-family);
+  --fa-weight: var(--fa-solid-weight);
+}
+
+.fa-linux, .fa-penguin {
+  --fa-content: "\f17c";
+  --fa-family: var(--fa-brands-family);
+  --fa-weight: var(--fa-brands-weight);
+}
+
+.fa-rust {
+  --fa-content: "\e07a";
+  --fa-family: var(--fa-brands-family);
+  --fa-weight: var(--fa-brands-weight);
+}
+
+.fa-square-x-twitter, .fa-x {
+  --fa-content: "\e61a";
+  --fa-family: var(--fa-brands-family);
+  --fa-weight: var(--fa-brands-weight);
+}
+
+.fa-square-linkedin, .fa-in {
+  --fa-content: "\e7d0";
+  --fa-family: var(--fa-brands-family);
+  --fa-weight: var(--fa-brands-weight);
+}
+
+.fa-square-github, .fa-gh {
+  --fa-content: "\f092";
+  --fa-family: var(--fa-brands-family);
+  --fa-weight: var(--fa-brands-weight);
+}
+
+.fa-telegram, .fa-tg {
+  --fa-content: "\f2c6";
+  --fa-family: var(--fa-brands-family);
+  --fa-weight: var(--fa-brands-weight);
+}
+
+.fa-vk {
+  --fa-content: "\f189";
+  --fa-family: var(--fa-brands-family);
+  --fa-weight: var(--fa-brands-weight);
+}
+
+.fa-youtube {
+  --fa-content: "\f167";
+  --fa-family: var(--fa-brands-family);
+  --fa-weight: var(--fa-brands-weight);
+}
+
+/* Iosevka Sans v34.9.0 */
+@font-face {
+  font-family: "Iosevka Sans Web";
+  font-display: swap;
+  font-weight: 400;
+  font-stretch: normal;
+  font-width: normal;
+  font-style: normal;
+  src: url("/css/fonts/iosevka-sans/IosevkaSans-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Sans Web";
+  font-display: swap;
+  font-weight: 400;
+  font-stretch: expanded;
+  font-width: expanded;
+  font-style: normal;
+  src: url("/css/fonts/iosevka-sans/IosevkaSans-Expanded.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Sans Web";
+  font-display: swap;
+  font-weight: 400;
+  font-stretch: condensed;
+  font-width: condensed;
+  font-style: normal;
+  src: url("/css/fonts/iosevka-sans/IosevkaSans-Condensed.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Sans Web";
+  font-display: swap;
+  font-weight: 400;
+  font-stretch: normal;
+  font-width: normal;
+  font-style: italic;
+  src: url("/css/fonts/iosevka-sans/IosevkaSans-Italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Sans Web";
+  font-display: swap;
+  font-weight: 400;
+  font-stretch: expanded;
+  font-width: expanded;
+  font-style: italic;
+  src: url("/css/fonts/iosevka-sans/IosevkaSans-ExpandedItalic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Sans Web";
+  font-display: swap;
+  font-weight: 400;
+  font-stretch: condensed;
+  font-width: condensed;
+  font-style: italic;
+  src: url("/css/fonts/iosevka-sans/IosevkaSans-CondensedItalic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Sans Web";
+  font-display: swap;
+  font-weight: 700;
+  font-stretch: normal;
+  font-width: normal;
+  font-style: normal;
+  src: url("/css/fonts/iosevka-sans/IosevkaSans-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Sans Web";
+  font-display: swap;
+  font-weight: 700;
+  font-stretch: expanded;
+  font-width: expanded;
+  font-style: normal;
+  src: url("/css/fonts/iosevka-sans/IosevkaSans-ExpandedBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Sans Web";
+  font-display: swap;
+  font-weight: 700;
+  font-stretch: condensed;
+  font-width: condensed;
+  font-style: normal;
+  src: url("/css/fonts/iosevka-sans/IosevkaSans-CondensedBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Sans Web";
+  font-display: swap;
+  font-weight: 700;
+  font-stretch: normal;
+  font-width: normal;
+  font-style: italic;
+  src: url("/css/fonts/iosevka-sans/IosevkaSans-BoldItalic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Sans Web";
+  font-display: swap;
+  font-weight: 700;
+  font-stretch: expanded;
+  font-width: expanded;
+  font-style: italic;
+  src: url("/css/fonts/iosevka-sans/IosevkaSans-ExpandedBoldItalic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Sans Web";
+  font-display: swap;
+  font-weight: 700;
+  font-stretch: condensed;
+  font-width: condensed;
+  font-style: italic;
+  src: url("/css/fonts/iosevka-sans/IosevkaSans-CondensedBoldItalic.woff2") format("woff2");
+}
+:root {
+  --iosevka-sans-family: 'Iosevka Sans Web';
+  --main-family: var(--iosevka-sans-family), ui-sans-serif, system-ui, sans-serif;
+  --figcaption-family: var(--iosevka-sans-family);
+  --figcaption-stretch: expanded;
+}
+
+.main-font {
+  font-family: var(--main-family);
+  font-stretch: normal;
+  font-width: normal;
+}
+
+.caption-font {
+  font-family: var(--main-family);
+  font-stretch: expanded;
+  font-width: expanded;
+}
+
+.note-font {
+  font-family: var(--main-family);
+  font-stretch: condensed;
+  font-width: condensed;
+}
+
+/* Iosevka Mono Sans v34.9.0 */
+@font-face {
+  font-family: "Iosevka Mono Sans Web";
+  font-display: swap;
+  font-weight: 400;
+  font-stretch: normal;
+  font-width: normal;
+  font-style: normal;
+  src: url("/css/fonts/iosevka-mono/IosevkaMonoSans-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Mono Sans Web";
+  font-display: swap;
+  font-weight: 400;
+  font-stretch: expanded;
+  font-width: expanded;
+  font-style: normal;
+  src: url("/css/fonts/iosevka-mono/IosevkaMonoSans-Expanded.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Mono Sans Web";
+  font-display: swap;
+  font-weight: 400;
+  font-stretch: condensed;
+  font-width: condensed;
+  font-style: normal;
+  src: url("/css/fonts/iosevka-mono/IosevkaMonoSans-Condensed.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Mono Sans Web";
+  font-display: swap;
+  font-weight: 400;
+  font-stretch: normal;
+  font-width: normal;
+  font-style: italic;
+  src: url("/css/fonts/iosevka-mono/IosevkaMonoSans-Italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Mono Sans Web";
+  font-display: swap;
+  font-weight: 700;
+  font-stretch: normal;
+  font-width: normal;
+  font-style: normal;
+  src: url("/css/fonts/iosevka-mono/IosevkaMonoSans-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Iosevka Mono Sans Web";
+  font-display: swap;
+  font-weight: 700;
+  font-stretch: normal;
+  font-width: normal;
+  font-style: italic;
+  src: url("/css/fonts/iosevka-mono/IosevkaMonoSans-BoldItalic.woff2") format("woff2");
+}
+:root {
+  --iosevka-mono-family: 'Iosevka Mono Sans Web';
+  --code-family: var(--iosevka-mono-family), ui-monospace, monospace;
+}
+
+.code-font {
+  font-family: var(--code-family);
+}
