@@ -265,8 +265,8 @@ is_images:
   seo_image:
     salt: 0
     font:
-      caption: _src/fonts/PTC55F.ttf
-      date: _src/fonts/PTC55F.ttf
+      caption: _src/fonts/IosevkaSans-Expanded.ttf
+      date: _src/fonts/IosevkaSans-Regular.ttf
     date_format: '%Y / %m / %d'
     overlay:
       background: '#66666699'
