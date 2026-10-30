@@ -1,4 +1,8 @@
-@layer theme, plugins, site;
+@layer old, theme, plugins, site;
 
+@import url(/assets/styles.css) layer(site);
+@import url(/assets/local.css) layer(site);
+@import url(/assets/book.css) layer(site);
+@import url(/assets/goods.css) layer(site);
 @import url(/css/fonts.css) layer(theme);
 @import url(/css/icons.css) layer(plugins);

@@ -51,7 +51,7 @@
 }
 .announcer-block a::before {
   content: "\f1d8  ";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 7 Free";
   font-weight: 400;
 }
 .announcer-block iframe {
@@ -308,7 +308,6 @@ figure.__is_images_slide_figure {
   font-family: var(--main-family);
   font-stretch: expanded;
   font-width: expanded;
-  font-weight: bold !important;
   text-align: center;
   background-color: rgba(102, 102, 102, 0.4) !important;
 }
@@ -359,7 +358,7 @@ figure.__is_images_slide_figure {
 }
 .submatters li::marker {
   content: "\f02e";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 7 Free";
   font-weight: 400;
   color: silver;
 }
@@ -661,3 +660,5 @@ select {
   font-size: 1rem;
   text-align: center;
 }
+
+/*# sourceMappingURL=goods.css.map */
