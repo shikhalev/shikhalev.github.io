@@ -6,4 +6,3 @@ User-Agent: *
 Disallow: /admin/*
 
 Sitemap: {{ site.url }}/sitemap.xml
-Sitemap: {{ site.url }}/addsitemap.xml
