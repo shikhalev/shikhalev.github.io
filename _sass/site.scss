@@ -57,7 +57,7 @@
 
     &::before {
       content: "\f1d8  ";
-      font-family: "Font Awesome 5 Free";
+      font-family: "Font Awesome 7 Free";
       font-weight: 400;
     }
   }
@@ -375,7 +375,7 @@ figure.__is_images_slide_figure {
     font-stretch: expanded;
     font-width: expanded;
 
-    font-weight: bold !important;
+    // font-weight: bold !important;
 
     text-align: center;
     background-color: #66666666 !important;
@@ -440,7 +440,7 @@ figure.__is_images_slide_figure {
       &::marker {
         // content: "\f15b";
         content: "\f02e";
-        font-family: "Font Awesome 5 Free";
+        font-family: "Font Awesome 7 Free";
         font-weight: 400;
         color: silver;
       }

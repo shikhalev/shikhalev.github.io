@@ -50,9 +50,9 @@ plugins:
 
 # theme: jekyll-theme-shikhalev
 
-sass:
+# sass:
   # style: compressed
-  sourcemap: never
+  # sourcemap: never
 
 shi_images:
   image_bounds: fhd
