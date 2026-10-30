@@ -2,4 +2,3 @@ User-Agent: *
 Disallow: /admin/*
 
 Sitemap: https://shikhalev.org/sitemap.xml
-Sitemap: https://shikhalev.org/addsitemap.xml

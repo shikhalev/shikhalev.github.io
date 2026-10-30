@@ -1,0 +1,16 @@
+{
+  "name": "Иван Шихалев | Блог. Склад текстов. И прочее городу и миру...",
+  "short_name": "Иван Шихалев",
+  "icons": [
+    {
+      "src": "/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#CCCCCC",
+  "background_color": "#CCCCCC",
+  "display": "standalone",
+  "start_url": "/"
+}
