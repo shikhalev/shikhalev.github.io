@@ -371,6 +371,14 @@
   --icon-shift: -0.125em;
 }
 
+.img-raven, :where(a[href*="shikhalev.org"]), :where(a[href*="shikhalev.github.io"]), :where(a[href*="localhost:4000"]) {
+  --icon-image: url("/css/icons/raven.svg");
+  --icon-width: 1.2em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
 .img-ruby, :where(a[href*="ruby-lang.org"]) {
   --icon-image: url("/css/icons/ruby.svg");
   --icon-width: 1em;
