@@ -1,0 +1,9 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+{% assign title = page.title -%}
+{%- if title -%}
+  {%- assign title = title | append: ' | ' | append: site.title -%}
+{%- else -%}
+  {%- assign title = site.title | append: ' | ' | append: site.description -%}
+{%- endif -%}
+<title>{{- title -}}</title>

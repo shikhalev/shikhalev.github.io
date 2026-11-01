@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% assign lang = page.lang -%}
+{%- unless lang -%}
+  {%- assign lang = layout.lang -%}
+{%- endunless -%}
+{%- unless lang -%}
+  {%- assign lang = site.lang -%}
+{%- endunless -%}
+<html lang="{{- lang -}}">
+
+<head>
+
+{% include 2026/head.html %}
+
+</head>
+
+<body>
+
+
+</body>
+
+</html>
