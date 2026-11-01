@@ -1,1 +1,21 @@
-{}
+{
+  "telegram": {
+    "config": {
+      "method": "telegram",
+      "chat_id": "@shikhalev_blog"
+    },
+    "posts": {
+      "_posts/text/2026/2026-11-01-summer.md": {
+        "url": "https://shikhalev.github.io/text/2026/11/summer.html",
+        "date": "2026/11/01",
+        "title": "Лето...",
+        "description": "«Прости, что что-то долго не писал...»",
+        "categories": [
+          "тексты",
+          "стихи",
+          "suno"
+        ]
+      }
+    }
+  }
+}
