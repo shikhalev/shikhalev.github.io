@@ -1,1 +1,21 @@
-{}
+{
+  "telegram": {
+    "config": {
+      "method": "telegram",
+      "chat_id": "@shikhalev_blog"
+    },
+    "posts": {
+      "_posts/blog/2026/2026-11-02-channels-oct.md": {
+        "url": "https://shikhalev.github.io/life/2026/11/channels-oct.html",
+        "date": "2026/11/02",
+        "title": "Tg: октябрь 2026",
+        "description": "Подборка наблюдений за октябрь",
+        "categories": [
+          "жизнь",
+          "природа",
+          "веб"
+        ]
+      }
+    }
+  }
+}
