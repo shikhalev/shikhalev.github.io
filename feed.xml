@@ -1,4 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.org/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-10-31T10:29:14+00:00</updated><id>https://shikhalev.org/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Гемы is-module-reset и is-deep</title><link href="https://shikhalev.org/tech/2026/10/is-module-reset.html" rel="alternate" type="text/html" title="Гемы is-module-reset и is-deep" /><published>2026-10-25T00:00:00+00:00</published><updated>2026-10-25T00:00:00+00:00</updated><id>https://shikhalev.org/tech/2026/10/is-module-reset</id><content type="html" xml:base="https://shikhalev.org/tech/2026/10/is-module-reset.html"><![CDATA[<figure id="fig-1" class="logo __is_images_figure __is_images_single __is_images_shaped __is_images_width_250 __is_images__right" style="shape-margin:10px;shape-outside:url(/img/b8/70/t2872149.svg);--is-images-width:240px;--is-images-up:30px;" data-modes="grid,slides">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.org/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-11-01T03:21:17+00:00</updated><id>https://shikhalev.org/feed.xml</id><title type="html">Иван Шихалев</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Лето…</title><link href="https://shikhalev.org/text/2026/11/summer.html" rel="alternate" type="text/html" title="Лето…" /><published>2026-11-01T00:00:00+00:00</published><updated>2026-11-01T00:00:00+00:00</updated><id>https://shikhalev.org/text/2026/11/summer</id><content type="html" xml:base="https://shikhalev.org/text/2026/11/summer.html"><![CDATA[<p>Прости, что что-то долго не писал —
+Тут просто уходило лето, не прощаясь.
+И вроде бы ушло. Ну, то есть я не знаю,
+Но всё ж наклон оси никто не отменял.</p>
+
+<p>Ты спрашивал, что нового у нас…
+Да, в общем, ничего, что не было бы ране:
+Чума, медведи, ну а главное — мы сами,
+Пытаясь задержать себя на грани,
+Один и тот же строим медный таз.</p>
+
+<p>У вас же там, я слышал, всё не так —
+Творят безумства исключительно чужие…
+Иль рыжие… Или ещё какие…
+Нам не понять, мы всё-таки простые,
+Но если честно, в этом видится бардак.</p>
+
+<p>Ах, да, из нового: тут нынче снегири
+Уж в октябре вовсю шныряли по двору,
+Знать, кончилась еда у них в бору…
+Вот чудится мне — это не к добру.
+И в том же октябре сирени зацвели…</p>
+
+<p>Какая-то неявственная дрожь
+Тихонько пробирает климат и природы,
+Сейчас застыли ясные погоды…</p>
+
+<p>А лета нынче не было, был дождь.</p>]]></content><author><name>Иван Шихалев</name></author><category term="text" /><category term="verses" /><category term="suno" /><summary type="html"><![CDATA[«Прости, что что-то долго не писал...»]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.org/img/t1/f1/34b58bfo.webp" /><media:content medium="image" url="https://shikhalev.org/img/t1/f1/34b58bfo.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Гемы is-module-reset и is-deep</title><link href="https://shikhalev.org/tech/2026/10/is-module-reset.html" rel="alternate" type="text/html" title="Гемы is-module-reset и is-deep" /><published>2026-10-25T00:00:00+00:00</published><updated>2026-10-25T00:00:00+00:00</updated><id>https://shikhalev.org/tech/2026/10/is-module-reset</id><content type="html" xml:base="https://shikhalev.org/tech/2026/10/is-module-reset.html"><![CDATA[<figure id="fig-1" class="logo __is_images_figure __is_images_single __is_images_shaped __is_images_width_250 __is_images__right" style="shape-margin:10px;shape-outside:url(/img/b8/70/t2872149.svg);--is-images-width:240px;--is-images-up:30px;" data-modes="grid,slides">
 <span title="Лого проекта Jekyll-IS" class="__is_images_wrapper"><img src="/img/b8/70/t2872149.svg" alt="Лого проекта Jekyll-IS" class="__is_images_image __is_images_single" style="--is-images-width:240px;--is-images-aspect-ratio:60/61;--is-images-up:30px;" data-scale="1"></span>
 </figure>
 <p>Вообще-то я сначала собирался написать только про <strong><a href="https://rubygems.org/gems/is-module-reset" title="is-module-reset @ RubyGems" class="icon">is-module-reset</a></strong>, но понял, что без упоминания ключевой
@@ -864,7 +891,4 @@ monkey-патчит те же методы (с теми же целями но 
       <p>GitHub Flavored Markdown. Конкретно мне это нужно для того, чтобы использовать ``` (тройной бэктик) для блоков кода вместо окружения {% highlight %}. <a href="#fnref:GFM" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;web&quot;]" /><category term="Jekyll" /><category term="CSS" /><category term="HTML" /><summary type="html"><![CDATA[Развитие плагина jekyll-is-images и некоторые замечания по ходу дела.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.org/img/ft/88/15752c15.webp" /><media:content medium="image" url="https://shikhalev.org/img/ft/88/15752c15.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Мерч: Большой крохаль</title><link href="https://shikhalev.org/life/2026/08/mergus.html" rel="alternate" type="text/html" title="Мерч: Большой крохаль" /><published>2026-08-15T00:00:00+00:00</published><updated>2026-08-15T00:00:00+00:00</updated><id>https://shikhalev.org/life/2026/08/mergus</id><content type="html" xml:base="https://shikhalev.org/life/2026/08/mergus.html"><![CDATA[<figure id="fig-1" class="__is_images_figure __is_images_single __is_images_width_900" style="--is-images-width:900px;" data-modes="grid,slides">
-<a href="/merch/photo/birds/20260518-mergus/" title="Фото самца большого крохаля (Mergus merganser). 18 мая 2026 года, Дружино-Бардымский пруд." class="__is_images_wrapper"><img src="/img/8c/40/87ce7t5e.avif" alt="Фото самца большого крохаля (Mergus merganser). 18 мая 2026 года, Дружино-Бардымский пруд." class="__is_images_image __is_images_single" style="--is-images-width:900px;--is-images-aspect-ratio:225/118;" data-scale="1" data-caption="Фото самца большого крохаля (Mergus merganser). 18 мая 2026 года, Дружино-Бардымский пруд."></a>
-<figcaption>Фото самца большого крохаля (Mergus merganser). 18 мая 2026 года, Дружино-Бардымский пруд.</figcaption>
-</figure>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;life&quot;, &quot;dybr&quot;, &quot;web&quot;, &quot;about&quot;]" /><category term="мерч" /><category term="принтшопы" /><category term="ВсеМайки" /><category term="PrintDirect" /><summary type="html"><![CDATA[Продолжаю пополнять каталог мерча... Теперь с фото самца большого крохаля в полёте.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.org/img/0e/o8/3bc55060.webp" /><media:content medium="image" url="https://shikhalev.org/img/0e/o8/3bc55060.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</div>]]></content><author><name>Иван Шихалев</name></author><category term="[&quot;tech&quot;, &quot;programming&quot;, &quot;ruby&quot;, &quot;web&quot;]" /><category term="Jekyll" /><category term="CSS" /><category term="HTML" /><summary type="html"><![CDATA[Развитие плагина jekyll-is-images и некоторые замечания по ходу дела.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shikhalev.org/img/ft/88/15752c15.webp" /><media:content medium="image" url="https://shikhalev.org/img/ft/88/15752c15.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
