@@ -231,9 +231,9 @@ figure.__is_images_viewbox {
   box-shadow: 0 0 10px 10px #0eec1999;
 }
 
-div.verse {
-  min-width: 480px;
-}
+// div.verse {
+//   min-width: 480px;
+// }
 
 .suno_details {
   summary {
@@ -291,6 +291,13 @@ div.verse {
       text-decoration: none;
       vertical-align: middle;
     }
+  }
+
+  iframe {
+    width: 100%;
+    height: 7.5rem;
+    //aspect-ratio: 4/1;
+
   }
 }
 
