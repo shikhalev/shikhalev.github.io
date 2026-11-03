@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.org/feed/best.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.org/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-11-02T09:18:42+00:00</updated><id>https://shikhalev.org/feed/best.xml</id><title type="html">Иван Шихалев | Best</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Лето…</title><link href="https://shikhalev.org/text/2026/11/summer.html" rel="alternate" type="text/html" title="Лето…" /><published>2026-11-01T00:00:00+00:00</published><updated>2026-11-01T00:00:00+00:00</updated><id>https://shikhalev.org/text/2026/11/summer</id><content type="html" xml:base="https://shikhalev.org/text/2026/11/summer.html"><![CDATA[<p>Прости, что что-то долго не писал —
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://shikhalev.org/feed/best.xml" rel="self" type="application/atom+xml" /><link href="https://shikhalev.org/" rel="alternate" type="text/html" hreflang="ru" /><updated>2026-11-03T01:23:43+00:00</updated><id>https://shikhalev.org/feed/best.xml</id><title type="html">Иван Шихалев | Best</title><subtitle>Блог. Склад текстов. И прочее городу и миру...</subtitle><author><name>Иван Шихалев</name></author><entry><title type="html">Лето…</title><link href="https://shikhalev.org/text/2026/11/summer.html" rel="alternate" type="text/html" title="Лето…" /><published>2026-11-01T00:00:00+00:00</published><updated>2026-11-01T00:00:00+00:00</updated><id>https://shikhalev.org/text/2026/11/summer</id><content type="html" xml:base="https://shikhalev.org/text/2026/11/summer.html"><![CDATA[<p>Прости, что что-то долго не писал —
 Тут просто уходило лето, не прощаясь.
 И вроде бы ушло. Ну, то есть я не знаю,
 Но всё ж наклон оси никто не отменял.</p>
@@ -87,7 +87,7 @@
 Сойди на сухую обочину, тебя здесь найдут следы
 Тех, кто носит за лацканом четырёхлистный клевер.</p>
 
-<p>Не выбирай тропы́, жди, пусть она сама
+<p class="i4">Не выбирай тропы́, жди, пусть она сама
 Бросит тебе под ноги край распрямлённой пружины.
 Не перешагивай камни — это ступени на
 Старом пути под гору через ветра́ вершины.</p>
@@ -97,7 +97,7 @@
 Остановись, послушай тихий закатный свет,
 Принюхайся к тонким краскам высохшего бурьяна.</p>
 
-<p>Не покидай тропы, долго на месте не стой,
+<p class="i4">Не покидай тропы, долго на месте не стой,
 Выйти в подлунный мир нужно успеть до ночи.
 В сумерках пробираясь, ты не заметишь то,
 Что видеть тебе не положено, рано, да и не хочешь.</p>

@@ -194,10 +194,6 @@ figure.__is_images_viewbox {
   box-shadow: 0 0 10px 10px rgba(14, 236, 25, 0.6);
 }
 
-div.verse {
-  min-width: 480px;
-}
-
 .suno_details summary {
   color: #333;
   font-family: var(--main-family);
@@ -237,6 +233,10 @@ div.verse {
 .suno_track summary .suno_link, .suno_track summary .suno_link:link, .suno_track summary .suno_link:visited, .suno_track summary .suno_self, .suno_track summary .suno_self:link, .suno_track summary .suno_self:visited {
   text-decoration: none;
   vertical-align: middle;
+}
+.suno_track iframe {
+  width: 100%;
+  height: 7.5rem;
 }
 
 .suno_title::before {
