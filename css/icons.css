@@ -11,6 +11,14 @@
   vertical-align: var(--icon-shift, -0.125em);
 }
 
+.img-artcraft, :where(a[href*="getartcraft.com"]) {
+  --icon-image: url("/css/icons/artcraft.svg");
+  --icon-width: 1.19em;
+  --icon-height: 1em;
+  --icon-margin: 0.2em;
+  --icon-shift: -0.125em;
+}
+
 .img-camera {
   --icon-image: url("/css/icons/camera.svg");
   --icon-width: 1.23em;

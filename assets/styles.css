@@ -591,6 +591,8 @@ aside a:hover {
 }
 body {
   font-family: var(--main-family);
+  font-stretch: normal;
+  font-width: normal;
   font-size: 1rem;
   color: #444;
 }

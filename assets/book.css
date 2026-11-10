@@ -527,6 +527,16 @@ select {
   text-align: center;
 }
 
+.narrow {
+  font-stretch: condensed;
+  font-width: condensed;
+}
+
+@media print {
+  .__new_recommends {
+    display: none;
+  }
+}
 @media screen and (min-width: 779px) {
   .twocolumns {
     columns: 2;

@@ -527,4 +527,15 @@ select {
   text-align: center;
 }
 
+.narrow {
+  font-stretch: condensed;
+  font-width: condensed;
+}
+
+@media print {
+  .__new_recommends {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=local.css.map */
