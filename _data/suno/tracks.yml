@@ -1118,6 +1118,7 @@
   title: Страх
   caption: halloween edition
   date: 2026-11-01
+  recommend: true
   lyrics: _posts/text/1996/1996-08-29-fear.md
 - id: 2720e0cc-b255-4c29-92a8-c229fcec0429
   title: Лето...
@@ -1132,3 +1133,14 @@
   title: Там, когда...
   date: 2026-11-08
   lyrics: _posts/text/2026/2026-08-26-birch.md
+
+- id: fa507f63-06c3-4dfd-a02a-7b45228f5941
+  title: И коротко о погоде...
+  caption: женский вариант
+  recommend: true
+  date: 2026-11-11
+  lyrics: _posts/text/2012/2012-06-04-weather.md
+- id: 11d1612d-1611-4a64-a615-0a20771b07ce
+  title: И коротко о погоде...
+  date: 2026-11-11
+  lyrics: _posts/text/2012/2012-06-04-weather.md
