@@ -117,10 +117,19 @@ defaults:
   - scope:
       path: "_posts/text"
     values:
+      image: _src/2026/11/verses.png
       permalink: /text/:year/:month/:title:output_ext
       is_images:
         seo_image:
           site: "Иван Шихалев / Тексты"
+  - scope:
+      path: "_streams/text"
+    values:
+      image: _src/2026/11/verses.png
+  - scope:
+      path: "_calendars/text"
+    values:
+      image: _src/2026/11/verses.png
   - scope:
       path: "_drafts"
     values:
