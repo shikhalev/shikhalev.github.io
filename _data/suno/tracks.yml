@@ -1144,3 +1144,28 @@
   title: И коротко о погоде...
   date: 2026-11-11
   lyrics: _posts/text/2012/2012-06-04-weather.md
+
+- id: c206144c-f944-4d15-b145-170c22105452
+  title: Екатеринбургский вальс
+  date: 2026-11-12
+  recommend: true
+  lyrics: _posts/text/1996/1996-09-13-walz.md
+- id: 197e1464-133d-4da8-974a-fb6cb9b03420
+  title: Екатеринбургский вальс
+  date: 2026-11-12
+  lyrics: _posts/text/1996/1996-09-13-walz.md
+- id: 1c58d1f2-a7aa-4c5b-ae3d-7a6bdeb25ca5
+  title: Подземный город
+  caption: барабаны и волынки
+  date: 2026-11-12
+  lyrics: _posts/text/1996/1996-11-14-underground.md
+- id: 36ea5973-81c5-4eae-8a01-f7298dd03f9b
+  title: City Beneath the Pall
+  caption: барабаны и волынки
+  date: 2026-11-12
+  original: _posts/text/1996/1996-11-14-underground.md
+- id: e59c8292-01b6-4606-86ec-3151adb57bee
+  title: Underground Town
+  caption: барабаны и волынки
+  date: 2026-11-12
+  original: _posts/text/1996/1996-11-14-underground.md
