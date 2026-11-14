@@ -1169,3 +1169,14 @@
   caption: барабаны и волынки
   date: 2026-11-12
   original: _posts/text/1996/1996-11-14-underground.md
+
+- id: 440054d0-4588-4047-8729-d5773a328d4b
+  title: Голосатая птица
+  recommend: true
+  date: 2026-11-14
+  lyrics: _posts/text/1996/1996-11-14-bird.md
+- id: 80075ff0-880c-4292-b0b1-809a2ce0f971
+  title: Мартовские просини
+  date: 2026-11-14
+  recommend: true
+  lyrics: _posts/text/1997/1997-03-15-prosini.md
