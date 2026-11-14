@@ -67,7 +67,7 @@
     {%- endif -%}
     <details name="{{- list_group -}}" class="suno_track{{- add_class -}}">
       <summary>{{ item.title }}{{ item_album }} ({{ item_caption  }}{{ item.date | date: '%d.%m.%Y' }}) <a href="https://suno.com/song/{{- item.id -}}" class="suno_link" target="_blank" title="Перейти на сайт Suno"> 🎧</a>{{ self_link }}</summary>
-      <iframe src="https://suno.com/embed/{{- item.id -}}" width="480" height="120" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://suno.com/embed/{{- item.id -}}" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </details>
   {%- endfor -%}
   </div>
