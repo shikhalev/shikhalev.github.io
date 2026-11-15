@@ -360,8 +360,7 @@ aside a:hover {
 #donate {
   grid-area: donate;
   place-self: center;
-  margin-bottom: -8px;
-  height: 243px;
+  padding: 10px;
 }
 #donate:target {
   border-color: #ffdb4d;
@@ -556,7 +555,8 @@ aside a:hover {
 #feeds,
 #contacts,
 #sidebar,
-#backs {
+#backs,
+#donate {
   border: solid rgb(77.181372549%, 82.7696078431%, 85.5637254902%) 1px;
   box-shadow: 1px 1px 3px rgb(77.181372549%, 82.7696078431%, 85.5637254902%);
 }
@@ -564,7 +564,8 @@ aside a:hover {
 #feeds:target,
 #contacts:target,
 #sidebar:target,
-#backs:target {
+#backs:target,
+#donate:target {
   border-color: #ffdb4d;
   box-shadow: 1px 1px 3px #ffdb4d;
 }

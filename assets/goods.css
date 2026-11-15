@@ -537,6 +537,33 @@ select {
     display: none;
   }
 }
+#money_container {
+  display: flex; /* элементы в ряд */
+  width: 100%; /* ширина одного кода */
+  overflow: hidden; /* всё, что правее, обрезается */
+}
+
+.money_figure {
+  flex: 0 0 100%; /* каждый занимает всю ширину контейнера */
+  margin: 0;
+  text-align: center;
+  border: none;
+  box-shadow: none;
+}
+.money_figure figcaption {
+  font-size: 120%;
+  font-style: normal;
+  margin-bottom: 5px;
+}
+
+.money_figure img {
+  display: block;
+  max-width: 100%;
+  aspect-ratio: 1;
+  height: auto;
+  opacity: 0.75;
+}
+
 /* Адаптивная сетка */
 .goods-min-grid {
   display: grid;
