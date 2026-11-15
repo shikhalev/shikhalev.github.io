@@ -10,3 +10,7 @@
   title: На продление домена
   url: https://finance.ozon.ru/apps/sbp/ozonbankpay/2c55c1dc-d658-4a43-9162-1ac490ce122f
   image: img/qr/domain.png
+- key: creator
+  title: На творческие нейросети
+  url: https://finance.ozon.ru/apps/sbp/ozonbankpay/01a1decb-1ecb-7ee5-8bd1-cd7cc24c0cfc
+  image: img/qr/creator.png

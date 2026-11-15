@@ -8,5 +8,5 @@ order_no: 4
 recommendations: best
 hide_last_comments: true
 image: _src/2026/11/verses.png
-moneys: [ verses ]
+moneys: [ verses, creator ]
 ---

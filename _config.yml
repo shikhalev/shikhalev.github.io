@@ -121,7 +121,7 @@ defaults:
   - scope:
       path: "_posts/text"
     values:
-      moneys: [ verses ]
+      moneys: [ verses, creator ]
       image: _src/2026/11/verses.png
       permalink: /text/:year/:month/:title:output_ext
       is_images:
@@ -130,12 +130,12 @@ defaults:
   - scope:
       path: "_streams/text"
     values:
-      moneys: [ verses ]
+      moneys: [ verses, creator ]
       image: _src/2026/11/verses.png
   - scope:
       path: "_calendars/text"
     values:
-      moneys: [ verses ]
+      moneys: [ verses, creator ]
       image: _src/2026/11/verses.png
   - scope:
       path: "_drafts"
