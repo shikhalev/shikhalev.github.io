@@ -1,0 +1,30 @@
+{% if page.moneys and page.moneys.size > 0 %}
+  {% assign moneys = page.moneys %}
+{% else %}
+  {% assign moneys = site.moneys %}
+{% endif %}
+
+{% assign money_data = site.data.moneys |  where_exp: 'item', 'moneys contains item.key' %}
+
+{% if money_data and money_data.size > 0 %}
+  <div id="money_container">
+  {% for data in money_data %}
+    <figure class="money_figure">
+      <figcaption><a href="{{ data.url }}" target="_blank">{{ data.title }}</a></figcaption>
+      <a href="{{ data.url }}" title="{{ data.title }}" target="_blank"><img src="/{{ data.image }}" alt="Донат: {{ data.title }}"></a>
+    </figure>
+  {% endfor %}
+  </div>
+  <script>
+    (() => {
+      const box = document.getElementById('money_container');
+      const items = [...box.children];
+      if (items.length < 2) return;
+      const pick = items[Math.floor(Math.random() * items.length)];
+      box.prepend(pick);
+      items.forEach(el => {
+        if (el !== pick) el.setAttribute('aria-hidden', 'true');
+      });
+    })();
+  </script>
+{% endif %}

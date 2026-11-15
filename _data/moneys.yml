@@ -1,0 +1,12 @@
+- key: verses
+  title: Поддержать автора
+  url: https://finance.ozon.ru/apps/sbp/ozonbankpay/01a1d849-ca81-7991-aef8-e954dbe67ed5
+  image: img/qr/verses.png
+- key: donate
+  title: Поддержать сайт
+  url: https://finance.ozon.ru/apps/sbp/ozonbankpay/01a19349-0c28-799a-9114-07b819befe93
+  image: img/qr/donate.png
+- key: domain
+  title: На продление домена
+  url: https://finance.ozon.ru/apps/sbp/ozonbankpay/2c55c1dc-d658-4a43-9162-1ac490ce122f
+  image: img/qr/domain.png

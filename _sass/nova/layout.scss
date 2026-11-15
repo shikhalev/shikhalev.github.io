@@ -458,8 +458,9 @@ aside {
 #donate {
   grid-area: donate;
   place-self: center;
-  margin-bottom: -8px;
-  height: 243px;
+  padding: 10px;
+  // margin-bottom: -8px;
+  // height: 243px;
 
   &:target {
     border-color: $highlight-color;
@@ -664,7 +665,8 @@ aside {
 #feeds,
 #contacts,
 #sidebar,
-#backs {
+#backs,
+#donate {
   border: solid $frame-color-light 1px;
   box-shadow: $base-shadow $frame-color-light;
 
