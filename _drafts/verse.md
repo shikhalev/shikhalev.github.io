@@ -1,7 +1,7 @@
 ---
 layout: verse
 caption: "* * *"
-title: "---"
+title: "* * **"
 description: "---"
 category: [ text, verses ]
 ---
