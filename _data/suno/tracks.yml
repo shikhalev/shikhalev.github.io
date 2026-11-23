@@ -1194,3 +1194,34 @@
   title: Odin Walks Softly
   date: 2026-11-20
   original: _posts/text/2014/2014-04-04-ragnarok.md
+
+- id: 0513318a-777d-481d-914c-b1a46da492b6
+  title: Буколистическое
+  caption: мужской вокал
+  date: 2026-11-22
+  lyrics: _posts/text/1997/1997-05-02-buko.md
+- id: 2d078437-20ef-4081-b2b5-9a49389175e2
+  title: Буколистическое
+  caption: женский вокал
+  date: 2026-11-22
+  lyrics: _posts/text/1997/1997-05-02-buko.md
+- id: 713397f8-415b-4dab-b121-3dd444514da1
+  title: Тропы смертных
+  recommend: true
+  date: 2026-11-23
+  lyrics: _posts/text/2007/2007-12-07-mag.md
+- id: fd1255f6-bcd3-4ea4-b843-b7b02126f159
+  title: Опереться о воздух
+  recommend: true
+  date: 2026-11-23
+  lyrics: _posts/text/2011/2011-10-30-air.md
+- id: ef710d1c-da75-4ff9-ba02-22f71adc4dcc
+  title: Мёртвый сезон
+  date: 2026-11-23
+  recommend: true
+  lyrics: _posts/text/2002/2002-09-01-dead-season.md
+- id: ace55f5f-ab37-4dce-af52-0c67aa3b258a
+  title: Усталый человек
+  recommend: true
+  date: 2026-11-23
+  lyrics: _posts/text/2009/2009-04-15-man.md
