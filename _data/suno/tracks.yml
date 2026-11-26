@@ -1225,3 +1225,48 @@
   recommend: true
   date: 2026-11-23
   lyrics: _posts/text/2009/2009-04-15-man.md
+
+- id: a33bd7bf-e10f-484a-b52b-878b9f18e801
+  title: Неслучившееся
+  date: 2026-11-23
+  lyrics: _posts/text/2002/2002-09-01-unex.md
+- id: 77d2b640-52c7-43f0-a70f-489eba4897a2
+  title: Ветер и мокрый снег
+  date: 2026-11-23
+  lyrics: _posts/text/2010/2010-03-24-wind-and-wet-snow.md
+- id: 23d9e7ae-5b14-4f8f-b9d8-f2f875a13cc8
+  title: День открытых кулис
+  date: 2026-11-23
+  lyrics: _posts/text/2011/2011-04-03-day.md
+- id: ad4f9352-5f71-4826-8f9c-22a500da5634
+  title: Коррида
+  date: 2026-11-24
+  lyrics: _posts/text/1996/1996-09-30-korrida.md
+- id: 62167863-8504-4855-971d-2cfd523c1ecb
+  title: Душа Города
+  date: 2026-11-25
+  lyrics: _posts/text/2002/2002-11-30-soul.md
+- id: 7bd4fd2d-9f72-4a5f-88d0-f39500540bc2
+  title: Одуванчик
+  date: 2026-11-25
+  lyrics: _posts/text/1996/1996-12-08-oduvan.md
+- id: 4f124d93-45fb-4501-a4fa-beb558835616
+  title: Шабаш
+  date: 2026-11-25
+  lyrics: _posts/text/1996/1996-08-29-shabash.md
+- id: 024268dc-fd46-43d4-8fa4-d4f908f99712
+  title: Давай напишем книгу
+  date: 2026-11-26
+  lyrics: _posts/text/2009/2009-04-03-book.md
+- id: 49eecad9-aa0d-47b2-a03f-21795d267ad8
+  title: Конан – искатель приключений
+  date: 2026-11-26
+  lyrics: _posts/text/1995/1995-04-28-konan.md
+- id: 4b0e2045-53b1-47d5-a76d-5ced87ad0dd3
+  title: Жёлтый пласт времени
+  date: 2026-11-26
+  lyrics: _posts/text/2002/2002-09-01-oil.md
+- id: b4d9a6a9-5694-4058-a4bf-b9b3058c2231
+  title: Серенада
+  date: 2026-11-26
+  lyrics: _posts/text/1997/1997-12-23-balkon.md
